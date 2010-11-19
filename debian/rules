@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --builddirectory=_build
+
+override_dh_auto_build:
+	make latexpdf
+	make html
+	make singlehtml
+	make epub

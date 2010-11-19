@@ -1,0 +1,17 @@
+Source: ubuntu-packaging-guide
+Priority: optional
+Section: doc
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~), python-sphinx (>= 1.1~), doc-base, 
+ texlive-latex-base, texlive-latex-recommended, texlive-latex-extra, texlive-fonts-recommended
+Standards-Version: 3.9.1
+
+Package: ubuntu-packaging-guide
+Depends: ${misc:Depends}
+Architecture: all
+Description: Ubuntu Packaging Guide
+ The Ubuntu Packaging Guide is a set of articles that should help you to get
+ involved with packaging and development of Ubuntu. It's not meant to replace
+ other great documentation like the Debian New Maintainer's Guide or the 
+ Debian policy, but serve as a starting point with easy and simple to 
+ understand articles.
