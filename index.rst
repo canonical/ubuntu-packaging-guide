@@ -12,6 +12,8 @@ Contents:
    :maxdepth: 2
 
    introduction-to-ubuntu-development
+   getting-set-up
+   fixing-a-bug
 
 Indices and tables
 ==================
