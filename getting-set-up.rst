@@ -139,6 +139,45 @@ Debian maybe `sid`. This will take a while as it will download all the
 necessary packages for a "minimal installation". These will be cached though.
 
 
+Setting up your development environment
+---------------------------------------
+
+Teaching Bazaar about you
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Bazaar is the tool we use to store code changes in a logical way, to exchange
+proposed changes and merge them, even if development is done concurrently.
+
+To tell Bazaar who you are, simply run::
+
+  bzr whoami "Frank Chu <fchu@example.com>"
+  bzr launchpad-login fchu
+
+`whoami` will tell Bazaar which name and email address it should use for your 
+commit messages. With `launchpad-login` you set your Launchpad ID. This way 
+code that you publish in Launchpad will be associated with you.
+
+Note: If you can not remember the ID, go to https://launchpad.net/people/+me 
+and see where it redirects you. The part after the "~" in the URL is your 
+Launchpad ID.)
+
+
+Introducing you to the development tools
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you
+as well. Simply open your `~/.bashrc` in a text editor and add something like 
+this to the bottom of it::
+
+  export DEBFULNAME="Frank Chu"
+  export DEBEMAIL="fchu@example.com"
+
+
+Now save the file and either restart your terminal or run::
+
+  source ~/.bashrc
+
+(If you use a different than the default shell, which is `bash`, please edit
+the configuration file for that shell accordingly.)
 
 
 Launchpad
