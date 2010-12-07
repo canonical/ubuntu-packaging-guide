@@ -111,6 +111,36 @@ can choose to use a passphrase or not.
 We will use the SSH key to securely push code changes to Launchpad.
 
 
+Setting up pbuilder
+-------------------
+
+``pbuilder`` allows you to build packages locally on your machine. It serves
+a couple of purposes:
+
+* the build will be done in a minimal and clean environment, where you can
+  see if it succeeds in a reproducible way (with no modifications of the local
+  system
+* there is no need to install all necessary `build-dependencs` locally
+* you can set up multiple instances for various Ubuntu and Debian releases
+
+Setting ``pbuilder`` up is very easy. Edit `~/.pbuilderrc` and add the 
+following line to it::
+
+  COMPONENTS="main universe multiverse restricted"
+
+This will ensure that `build-dependends` are satisfied using all components.
+
+Then run::
+
+  pbuilder-dist <release> create
+
+where <release> is for example `natty`, `maverick`, `lucid` or in the case of
+Debian maybe `sid`. This will take a while as it will download all the 
+necessary packages for a "minimal installation". These will be cached though.
+
+
+
+
 Launchpad
 ---------
 Launchpad is the central piece of infrastructure we use in Ubuntu. It stores
