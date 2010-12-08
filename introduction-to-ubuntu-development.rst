@@ -1,4 +1,4 @@
-Introduction to Ubuntu Development
+ntroduction to Ubuntu Development
 ==================================
 
 Ubuntu is made up of thousands of different components, written in many 
@@ -75,10 +75,10 @@ The most important Upstream for Ubuntu is Debian. Debian is the distribution
 that Ubuntu is based on and many of the design decisions regarding the 
 packaging infrastructure are made there. Traditionally, Debian has always had
 dedicated maintainers for every single package or dedicated maintenance teams.
-In Ubuntu there are teams that are interested in a subset of packages too, and
-surely every developer has some special area of expertise, but participation
-(and upload rights) is generally open to everyone who demonstrates ability and
-willingness.
+In Ubuntu there are teams that have an interest in a subset of packages too, 
+and naturally every developer has a special area of expertise, but 
+participation (and upload rights) generally is open to everyone who 
+demonstrates ability and willingness.
 
 Getting a change into Ubuntu as a new contributor is not as daunting as it 
 seems and a very rewarding experience. It is not only about learning something
