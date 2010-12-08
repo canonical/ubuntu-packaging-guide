@@ -4,8 +4,8 @@ ntroduction to Ubuntu Development
 Ubuntu is made up of thousands of different components, written in many 
 different programming languages. Every component -  be it a software library, 
 a tool or a graphical application - is available as a source package. Source 
-packages in most cases consist of two parts: the actual source code and meta 
-data. Meta data includes the dependencies of the package, copyright and 
+packages in most cases consist of two parts: the actual source code and 
+metadata. Meta data includes the dependencies of the package, copyright and 
 licensing information, and instructions on how to build the package. Once 
 this source package is compiled, it builds binary packages, which are the 
 .deb files users can install.
