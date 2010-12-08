@@ -44,12 +44,12 @@ plan the features of the next releases. Every feature is discussed by its
 stakeholders and a specification is written that contains detailed 
 information about its assumptions, implementation, the necessary changes in 
 other places, how to test it and so on. This is all done in an open and 
-transparent fashion, so even if you can't attend the event in person, you can 
-participate remotely and listen to a streamcast, chat with attendants and 
+transparent fashion, so even if you can not attend the event in person, you 
+can participate remotely and listen to a streamcast, chat with attendants and 
 subscribe to changes of specifications, so you are always up to date.
 
 Not every single change can be discussed in a meeting though, particularly 
-because Ubuntu relies on changes that are done in other projects. That's why 
+because Ubuntu relies on changes that are done in other projects. That is why 
 contributors to Ubuntu constantly stay in touch. Most teams or projects use 
 dedicated mailing lists to avoid too much unrelated noise. For more immediate 
 coordination, developers and contributers use Internet Relay Chat (IRC). All 
@@ -67,7 +67,7 @@ developers themselves. Most of it is written by developers of other Open
 Source projects and then integrated into Ubuntu. These projects are called
 "Upstreams", because their source code flows into Ubuntu, where we "just" 
 integrate it. The relationship to Upstreams is critically important to Ubuntu.
-It's not just code that Ubuntu gets from Upstreams, but it's also that 
+It is not just code that Ubuntu gets from Upstreams, but it is also that 
 Upstreams get users, bug reports and patches from Ubuntu (and other 
 distributions).
 
@@ -81,7 +81,7 @@ surely every developer has some special area of expertise, but participation
 willingness.
 
 Getting a change into Ubuntu as a new contributor is not as daunting as it 
-seems and a very rewarding experience. It's not only about learning something
+seems and a very rewarding experience. It is not only about learning something
 new and exciting, but also about sharing the solution and solving a problem 
 for millions of users out there.
 
@@ -89,29 +89,29 @@ Open Source Development happens in a distributed world with different goals
 and different areas of focus. For example there might be the case that a 
 particular Upstream might be interested in working on a new big feature while
 Ubuntu, because of the tight release schedule, might be interested in shipping 
-a solid version with just an additional bug fix. That's why we make use of 
+a solid version with just an additional bug fix. That is why we make use of 
 "Distributed Development", where code is being worked on in various branches
 that are merged with each other after code reviews and sufficient discussion.
 
 .. image:: images/cycle-branching.png
 
-In the example mentioned above it'd make sense to ship Ubuntu with the 
+In the example mentioned above it would make sense to ship Ubuntu with the 
 existing version of the project, add the bugfix, get it into Upstream for 
 their next release and ship that (if suitable) in the next Ubuntu release. 
-It'd be the best possible compromise and a situation where everybody wins.
+It would be the best possible compromise and a situation where everybody wins.
 
-To fix a bug in Ubuntu, you'd first get the source code for the package, then 
-work on the fix, document it so it's easy to understand for other developers 
-and users, then build the package to test it. After you've tested it, you can 
-easily propose the change to be included in the current Ubuntu development 
-release. A developer with upload rights will review it for you and then get it
-integrated into Ubuntu.
+To fix a bug in Ubuntu, you would first get the source code for the package, 
+then work on the fix, document it so it is easy to understand for other 
+developers and users, then build the package to test it. After you have 
+tested it, you can easily propose the change to be included in the current 
+Ubuntu development release. A developer with upload rights will review it for 
+you and then get it integrated into Ubuntu.
 
 .. image:: images/cycle-process.png
 
-When trying to find a solution it's usually a good idea to check with Upstream
-and see if the problem (or a possible solution) is known already and, if not,
-do your best to make the solution a concerted effort.
+When trying to find a solution it is usually a good idea to check with 
+Upstream and see if the problem (or a possible solution) is known already 
+and, if not, do your best to make the solution a concerted effort.
 
 Additional steps might involve getting the change backported to an older, 
 still supported version of Ubuntu and forwarding it to Upstream.

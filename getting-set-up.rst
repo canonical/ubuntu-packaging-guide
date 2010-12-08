@@ -20,9 +20,9 @@ When you followed all the steps in this article,
 Running the development version
 -------------------------------
 
-It's advisable to run the current development version of Ubuntu. It will allow
-you to test changes in a "live environment" where they are actually built and 
-tested in the development release you uploade them to.
+It is advisable to run the current development version of Ubuntu. It will 
+allow you to test changes in a "live environment" where they are actually 
+built and tested in the development release you uploade them to.
 
 https://wiki.ubuntu.com/UsingDevelopmentReleases shows a variety of ways to 
 use the development release in a safe way.
@@ -67,7 +67,7 @@ To generate a new GPG key, run::
 GnuPG will first ask you which kind of key you want to generate. Choosing the 
 default (RSA and DSA) is fine. Next it will ask you about the keysize. The 
 default (currently 2048) is fine, but 4096 is more secure. Afterwards it will
-ask you if you want it to expire the key at some stage. It's safe to say "0",
+ask you if you want it to expire the key at some stage. It is safe to say "0",
 which means the key will never expire. The last questions will be about your
 name and email address. Just pick the ones you are going to use for Ubuntu
 development here, you can add additional email addresses later on. Adding a 
@@ -197,7 +197,7 @@ Setting up a profile
 
 Generally it should be enough to head to https://launchpad.net/+login and 
 enter your email address. It will send back an email to you with a link you
-need to open in your browser. (If you don't receive it, check in your Spam
+need to open in your browser. (If you don not receive it, check in your Spam
 folder too.)
 
 Next you will have to choose a display name. Almost everybody just uses their
@@ -235,7 +235,7 @@ you for the password you chose for the key when GPG generated it. Enter the
 password, then click the link to confirm that the key is yours.`
 
 Launchpad encrypts the email, using your public key, so that it can be sure 
-that the key is yours. If your email software doesn't support OpenPGP 
+that the key is yours. If your email software does not support OpenPGP 
 encryption, copy the encrypted email's contents, type ``gpg`` in your 
 terminal, then paste the email contents into your terminal window. 
 
