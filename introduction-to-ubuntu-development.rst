@@ -7,32 +7,31 @@ a tool or a graphical application - is available as a source package. Source
 packages in most cases consist of two parts: the actual source code and 
 metadata. Meta data includes the dependencies of the package, copyright and 
 licensing information, and instructions on how to build the package. Once 
-this source package is compiled, it builds binary packages, which are the 
-.deb files users can install.
+this source package is compiled, the build process provides binary packages, 
+which are the .deb files users can install.
 
 Every time a new version of an application is released, or when someone makes
 a change to the source code that goes into Ubuntu, the source package must be
-uploaded to the build machines, which then do the compilation. The resulting
-binary packages then are distributed to the archive and its mirrors in
-different countries.  The URLs in ``/etc/apt/sources.list`` point to an 
-archive or mirror.  Every day CD images are built for a selection of 
-different Ubuntu flavours.  Ubuntu Desktop, Ubuntu Server, Kubuntu and others 
-specify a list of required packages that get on the CD. These CD images are 
-then used for installation tests and provide the feedback for further release 
-planning.
+uploaded to the build machines to be compiled. The resulting binary packages 
+then are distributed to the archive and its mirrors in different countries. 
+The URLs in ``/etc/apt/sources.list`` point to an archive or mirror.  Every 
+day CD images are built for a selection of different Ubuntu flavours.  Ubuntu 
+Desktop, Ubuntu Server, Kubuntu and others specify a list of required 
+packages that get on the CD. These CD images are then used for installation 
+tests and provide the feedback for further release planning.
 
 Ubuntu's development is very much dependent on the current stage of the 
 release cycle. A new version of Ubuntu is released every six months, which is 
 only possible because strict freeze dates are established. With every freeze 
 date that is reached developers are expected to make fewer, less intrusive 
 changes. Feature Freeze is the first big freeze date after the first half of 
-the cycle has passed. At this stage features must be available in a 
-rudimentary form. The rest of the cycle is supposed to be focused on fixing 
-bugs. After that the user interface, then the documentation, the kernel, etc. 
-are frozen, then the beta release is put out which receives a lot of testing. 
-From the beta release onwards, only critical bugs get fixed and a release 
-candidate release is made and if it does not contain any serious problems, it 
-becomes the final release.
+the cycle has passed. At this stage features must be largely implemented. The 
+rest of the cycle is supposed to be focused on fixing bugs. After that the 
+user interface, then the documentation, the kernel, etc. are frozen, then the 
+beta release is put out which receives a lot of testing. From the beta 
+release onwards, only critical bugs get fixed and a release candidate release 
+is made and if it does not contain any serious problems, it becomes the final 
+release.
 
 .. image:: images/cycle-items.png
 
@@ -81,9 +80,9 @@ participation (and upload rights) generally is open to everyone who
 demonstrates ability and willingness.
 
 Getting a change into Ubuntu as a new contributor is not as daunting as it 
-seems and a very rewarding experience. It is not only about learning something
-new and exciting, but also about sharing the solution and solving a problem 
-for millions of users out there.
+seems and can be a very rewarding experience. It is not only about learning 
+something new and exciting, but also about sharing the solution and solving a 
+problem for millions of users out there.
 
 Open Source Development happens in a distributed world with different goals
 and different areas of focus. For example there might be the case that a 
