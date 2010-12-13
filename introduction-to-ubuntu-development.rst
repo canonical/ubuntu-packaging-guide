@@ -5,7 +5,7 @@ Ubuntu is made up of thousands of different components, written in many
 different programming languages. Every component -  be it a software library, 
 a tool or a graphical application - is available as a source package. Source 
 packages in most cases consist of two parts: the actual source code and 
-metadata. Meta data includes the dependencies of the package, copyright and 
+metadata. Metadata includes the dependencies of the package, copyright and 
 licensing information, and instructions on how to build the package. Once 
 this source package is compiled, the build process provides binary packages, 
 which are the .deb files users can install.
@@ -21,17 +21,17 @@ packages that get on the CD. These CD images are then used for installation
 tests and provide the feedback for further release planning.
 
 Ubuntu's development is very much dependent on the current stage of the 
-release cycle. A new version of Ubuntu is released every six months, which is 
-only possible because strict freeze dates are established. With every freeze 
-date that is reached developers are expected to make fewer, less intrusive 
-changes. Feature Freeze is the first big freeze date after the first half of 
-the cycle has passed. At this stage features must be largely implemented. The 
-rest of the cycle is supposed to be focused on fixing bugs. After that the 
-user interface, then the documentation, the kernel, etc. are frozen, then the 
-beta release is put out which receives a lot of testing. From the beta 
-release onwards, only critical bugs get fixed and a release candidate release 
-is made and if it does not contain any serious problems, it becomes the final 
-release.
+release cycle. We release a new version of Ubuntu every six months, which is 
+only possible because we have established strict freeze dates. With every 
+freeze date that is reached developers are expected to make fewer, less 
+intrusive changes. Feature Freeze is the first big freeze date after the 
+first half of the cycle has passed. At this stage features must be largely 
+implemented. The rest of the cycle is supposed to be focused on fixing bugs. 
+After that the user interface, then the documentation, the kernel, etc. are 
+frozen, then the beta release is put out which receives a lot of testing. 
+From the beta release onwards, only critical bugs get fixed and a release 
+candidate release is made and if it does not contain any serious problems, it 
+becomes the final release.
 
 .. image:: images/cycle-items.png
 
