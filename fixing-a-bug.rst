@@ -90,7 +90,82 @@ Once the build succeeded, install the package from
 
 
 
+Documenting the fix
+-------------------
+
+It's very important to document your change sufficiently so developers who 
+look at the code in the future won't have to guess what your reasong was and
+what your assumptions were. Every Debian and Ubuntu package source includes 
+``debian/changelog``, where changes of each uploaded package are tracked.
+
+The easiest way to do this is to run::
+
+  dch -i
+
+This will add a boiletplate changelog entry for you and launch an editor 
+where you can fill out the blanks. An example of this could be::
+
+  specialpackage (1.2-3ubuntu4) natty; urgency=low
+
+    * debian/control: updated description to include frobnicator (LP: #123456)
+
+   -- Emma Adams <emma.adams@isp.com>  Sat, 17 Jul 2010 02:53:39 +0200
+
+``dch`` should fill out the first and last line of such a changelog entry for
+you already. Line 1 consists of the source package name, the version number,
+which Ubuntu release it is uploaded to, the urgency (which almost always is 
+'low'). The last line always contains the name, email address and timestamp
+(in RFC 2822 format) of the change.
+
+With that out of the way, let's focus on the actual changelog entry itself: 
+it's very important to document:
+
+  #. where the change was done
+  #. what was changed
+  #. where the discussion of the change happened
+
+In our (very sparse) example the last point is covered by "(LP: #123456)" 
+which refers to Launchpad bug 123456. Bug reports or mailing list threads
+or specifications are usually good information to provide as a rationale for a
+change. As a bonus, if you use the ``LP: #<number>`` notation for Launchpad
+bugs, the bug will be automatically closed when the package is uploaded to 
+Ubuntu.
 
 
+Committing the fix
+------------------
 
+With the changelog entry written and saved, you can just run::
+
+  debcommit
+
+and the change will be committed (locally) with your changelog entry as a 
+commit message.
+
+To push it to Launchpad, as the remote branch name, you need to stick to the 
+following nomenclature::
+
+  lp:~<yourlpid>/ubuntu/<release>/<package>/<branchname>
+
+This could for example be::
+
+  lp:~emmaadams/ubuntu/natty/specialpackage/fix-for-123456
+
+So if you just run::
+
+  bzr push lp:~emmaadams/ubuntu/natty/specialpackage/fix-for-123456
+  bzr lp-open
+
+you should be all set. The push command should push it to Launchpad and the 
+second command will open the Launchpad page of the remote branch in your 
+browser. There find the "(+) Propose for merging" link, click it to get the
+change reviewed by somebody and included in Ubuntu.
+
+
+Conclusion
+----------
+
+.. XXX: link to 'forwarding patches' article
+.. XXX: link to 'debdiff' article (in case of slow internet, package not 
+        imported, etc.)
 
