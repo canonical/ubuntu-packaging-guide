@@ -18,7 +18,7 @@ merged. In this guide we will go through all the necessary steps one by one.
 Finding the problem
 -------------------
 
-There's a lot of different ways to find things to work on. It might be a bug
+There is a lot of different ways to find things to work on. It might be a bug
 report you are encountering yourself (which gives you a good opportunity to
 test the fix), or a problem you noted elsewhere, maybe in a bug report.
 
@@ -31,14 +31,14 @@ it out and find your first bug to work on.
 Get the code
 ------------
 
-If you know which source package contains the code that shows the problem, it's
-trivial. Just type in::
+If you know which source package contains the code that shows the problem, it 
+is trivial. Just type in::
 
   bzr branch lp:ubuntu/<packagename>
 
 where ``<packagename>`` is the name of the source package. This will check out
 the code of the latest Ubuntu development release. If you need the code of a 
-stable release, let's say ``hardy``, you'd type in::
+stable release, let's say ``hardy``, you would type in::
 
   bzr branch lp:ubuntu/hardy/<packagename>
 
@@ -93,7 +93,7 @@ Once the build succeeded, install the package from
 Documenting the fix
 -------------------
 
-It's very important to document your change sufficiently so developers who 
+It is very important to document your change sufficiently so developers who 
 look at the code in the future won't have to guess what your reasong was and
 what your assumptions were. Every Debian and Ubuntu package source includes 
 ``debian/changelog``, where changes of each uploaded package are tracked.
@@ -118,7 +118,7 @@ which Ubuntu release it is uploaded to, the urgency (which almost always is
 (in RFC 2822 format) of the change.
 
 With that out of the way, let's focus on the actual changelog entry itself: 
-it's very important to document:
+it is very important to document:
 
   #. where the change was done
   #. what was changed
