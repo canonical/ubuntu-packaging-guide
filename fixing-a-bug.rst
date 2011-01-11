@@ -94,7 +94,7 @@ Documenting the fix
 -------------------
 
 It is very important to document your change sufficiently so developers who 
-look at the code in the future won't have to guess what your reasong was and
+look at the code in the future won't have to guess what your reasoning was and
 what your assumptions were. Every Debian and Ubuntu package source includes 
 ``debian/changelog``, where changes of each uploaded package are tracked.
 
