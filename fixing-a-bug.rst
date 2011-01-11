@@ -102,7 +102,7 @@ The easiest way to do this is to run::
 
   dch -i
 
-This will add a boiletplate changelog entry for you and launch an editor 
+This will add a boilerplate changelog entry for you and launch an editor 
 where you can fill out the blanks. An example of this could be::
 
   specialpackage (1.2-3ubuntu4) natty; urgency=low
