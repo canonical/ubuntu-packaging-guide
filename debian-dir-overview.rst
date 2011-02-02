@@ -35,3 +35,35 @@ Notice that the version has a ``-0ubuntu1`` appended to it, this is the distro r
 Ubuntu and Debian have slightly different package versioning schemes to avoid conflicting packages with the same source version. If a Debian package has been changed in Ubuntu, it has ``ubuntuX`` (where ``X`` is the Ubuntu revision number) appended to the end of the Debian version. So if the Debian hello ``2.4-1`` package was changed by Ubuntu, the version string would be ``2.4-1ubuntu1``. If a package for the application does not exist in Debian, then the Debian revision is ``0`` (e.g., ``2.4-0ubuntu1``).
 
 For further information, see the `changelog section <http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ of the Debian Policy Manual.
+
+
+The control file
+-------------------------------
+
+The control file contains the information that the package manager (such as ``apt-get``, ``synaptic``, and ``adept``) uses, build-time dependencies, maintainer information, and much more.
+
+For the Ubuntu hello package, the control file looks something like::
+
+ Source: hello
+ Section: devel
+ Priority: optional
+ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+ XSBC-Original-Maintainer: Captain Packager <packager@coolness.com>
+ Standards-Version: 3.7.3
+ Build-Depends: debhelper (>= 5)
+ Homepage: http://www.gnu.org/software/hello/
+ 
+ Package: hello
+ Architecture: any
+ Depends: ${shlibs:Depends}
+ Description: The classic greeting, and a good example
+  The GNU hello program produces a familiar, friendly greeting. It
+  allows non-programmers to use a classic computer science tool which
+  would otherwise be unavailable to them. Seriously, though: this is
+  an example of how to do a Debian package. It is the Debian version of
+  the GNU Project's `hello world' program (which is itself an example
+  for the GNU Project).
+ 
+In Ubuntu we set the Maintainer field to a general address because anyone can change any package (this differs from Debian where changing packages is usually restricted to an individual or a team).
+
+
