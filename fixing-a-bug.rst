@@ -29,6 +29,8 @@ in Debian already, lists small bugs (we call them 'bitesize'), and so on. Check
 it out and find your first bug to work on.
 
 
+.. _what-to-fix:
+
 Figuring out what to fix
 ========================
 
@@ -41,11 +43,11 @@ The Tomboy application can be started by running ``/usr/bin/tomboy`` on the
 command line.  To find the binary package containing this application, use
 this command::
 
-  apt-file find /usr/bin/tomboy
+    $ apt-file find /usr/bin/tomboy
 
 This would print out::
 
-  tomboy: /usr/bin/tomboy
+    tomboy: /usr/bin/tomboy
 
 Note that the part preceding the colon is the binary package name.  It's often
 the case that the source package and binary package will have different names.
@@ -53,7 +55,7 @@ This is most common when a single source package is used to build multiple
 different binary packages.  To find the source package for a particular binary
 package, type::
 
-  apt-cache show tomboy | grep -i source
+    $ apt-cache show tomboy | grep ^Source:
 
 In this case, nothing is printed, meaning that ``tomboy`` is also the name of
 the binary package.  An example where the source and binary package names
@@ -61,8 +63,8 @@ differ is ``python-vigra``.  While that is the binary package name, the source
 package is actually ``libvigraimpex`` and can be found with this command (and
 its output)::
 
-  apt-cache show python-vigra | grep -i source
-  Source: libvigraimpex
+    $ apt-cache show python-vigra | grep ^Source:
+    Source: libvigraimpex
 
 .. XXX: Link to SRU article.
 
@@ -108,7 +110,7 @@ fixed it already or is currently working on a fix. Good sources to check are:
 If you find a patch to fix the problem, say, attached to a bug report, running
 this command in the source directory should apply the patch::
 
-  patch -p1 < ../bugfix.patch
+    $ patch -p1 < ../bugfix.patch
 
 Refer to the ``patch(1)`` manpage for options and arguments such as 
 ``--dry-run``, ``-p<num>``, etc.

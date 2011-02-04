@@ -36,7 +36,7 @@ There are a number of tools that will make your life as an Ubuntu developer
 much easier.  You'll encounter these tools later in this guide.  To install
 most of the tools you'll need, run this command::
 
-    sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file apt-cache
+    $ sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file apt-cache
 
 These packages include:
 
@@ -67,7 +67,7 @@ can absolutely determine who uploaded the package.
 
 To generate a new GPG key, run::
 
-    gpg --key-gen
+    $ gpg --key-gen
 
 GPG will first ask you which kind of key you want to generate. Choosing the
 default (RSA and DSA) is fine. Next it will ask you about the keysize. The
@@ -93,7 +93,7 @@ In this case ``43CDE61D`` is the *key ID*.
 To upload (the public part of) of your key to a keyserver, so the world can
 identify messages and files as yours, just run::
 
-    gpg --send-keys <KEY ID>
+    $ gpg --send-keys <KEY ID>
 
 There is a network of keyservers that will automatically sync the key between
 themselves.
@@ -108,7 +108,7 @@ on another machine. It is also very useful to transfer files in a secure way.
 
 To generate a SSH key, run::
 
-    ssh-keygen -t rsa
+    $ ssh-keygen -t rsa
 
 The default file name usually makes sense, so you can just leave it as it is.
 For security purposes, it's highly recommended that you use a passphrase.
@@ -131,13 +131,13 @@ a couple of purposes:
 Setting ``pbuilder`` up is very easy. Edit `~/.pbuilderrc` and add the
 following line to it::
 
-  COMPONENTS="main universe multiverse restricted"
+    COMPONENTS="main universe multiverse restricted"
 
 This will ensure that build dependencies are satisfied using all components.
 
 Then run::
 
-  pbuilder-dist <release> create
+    $ pbuilder-dist <release> create
 
 where <release> is for example `natty`, `maverick`, `lucid` or in the case of
 Debian maybe `sid`. This will take a while as it will download all the
@@ -190,14 +190,14 @@ Uploading the GPG key to Launchpad
 
 To find about your GPG fingerprint, run::
 
-  gpg --fingerprint <email@address.com>
+    $ gpg --fingerprint <email@address.com>
 
 and it will print out something like::
 
-  pub   4096R/43CDE61D 2010-12-06
-        Key fingerprint = 5C28 0144 FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D
-  uid                  Daniel Holbach <dh@mailempfang.de>
-  sub   4096R/51FBE68C 2010-12-06
+    pub   4096R/43CDE61D 2010-12-06
+          Key fingerprint = 5C28 0144 FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D
+    uid                  Daniel Holbach <dh@mailempfang.de>
+    sub   4096R/51FBE68C 2010-12-06
 
 
 Head to https://launchpad.net/people/+me/+editpgpkeys and copy the part about
@@ -244,8 +244,8 @@ proposed changes and merge them, even if development is done concurrently.
 
 To tell Bazaar who you are, simply run::
 
-  bzr whoami "Frank Chu <fchu@example.com>"
-  bzr launchpad-login fchu
+    $ bzr whoami "Bob Dobbs <subgenius@example.com>"
+    $ bzr launchpad-login subgenius
 
 `whoami` will tell Bazaar which name and email address it should use for your
 commit messages. With `launchpad-login` you set your Launchpad ID. This way
@@ -262,13 +262,13 @@ Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you
 as well. Simply open your `~/.bashrc` in a text editor and add something like
 this to the bottom of it::
 
-  export DEBFULNAME="Frank Chu"
-  export DEBEMAIL="fchu@example.com"
+    $ export DEBFULNAME="Bob Dobbs"
+    $ export DEBEMAIL="subgenius@example.com"
 
 
 Now save the file and either restart your terminal or run::
 
-  source ~/.bashrc
+    $ source ~/.bashrc
 
 (If you use a different than the default shell, which is `bash`, please edit
 the configuration file for that shell accordingly.)
