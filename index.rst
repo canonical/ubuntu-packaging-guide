@@ -14,6 +14,7 @@ Contents:
    introduction-to-ubuntu-development
    getting-set-up
    fixing-a-bug
+   udd-intro
 
 Indices and tables
 ==================

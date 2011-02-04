@@ -1,8 +1,9 @@
+======================
 Fixing a bug in Ubuntu
 ======================
 
 Introduction
-------------
+============
 
 If you followed the instructions to :doc:`get set up with Ubuntu 
 Development</getting-set-up>`, you should be all set and ready to go.
@@ -16,7 +17,7 @@ merged. In this guide we will go through all the necessary steps one by one.
 
 
 Finding the problem
--------------------
+===================
 
 There is a lot of different ways to find things to work on. It might be a bug
 report you are encountering yourself (which gives you a good opportunity to
@@ -28,25 +29,67 @@ in Debian already, lists small bugs (we call them 'bitesize'), and so on. Check
 it out and find your first bug to work on.
 
 
-Get the code
-------------
+Figuring out what to fix
+========================
 
-If you know which source package contains the code that shows the problem, it 
-is trivial. Just type in::
+If you don't know the source package containing the code that has the problem,
+but you do know the path to the affected program on your system, you can
+discover the source package that you'll need to work on.
 
-  bzr branch lp:ubuntu/<packagename>
+Let's say you've found a bug in Tomboy, a note taking desktop application.
+The Tomboy application can be started by running ``/usr/bin/tomboy`` on the
+command line.  To find the binary package containing this application, use
+this command::
 
-where ``<packagename>`` is the name of the source package. This will check out
-the code of the latest Ubuntu development release. If you need the code of a 
-stable release, let's say ``hardy``, you would type in::
+  apt-file find /usr/bin/tomboy
 
-  bzr branch lp:ubuntu/hardy/<packagename>
+This would print out::
+
+  tomboy: /usr/bin/tomboy
+
+Note that the part preceding the colon is the binary package name.  It's often
+the case that the source package and binary package will have different names.
+This is most common when a single source package is used to build multiple
+different binary packages.  To find the source package for a particular binary
+package, type::
+
+  apt-cache show tomboy | grep -i source
+
+In this case, nothing is printed, meaning that ``tomboy`` is also the name of
+the binary package.  An example where the source and binary package names
+differ is ``python-vigra``.  While that is the binary package name, the source
+package is actually ``libvigraimpex`` and can be found with this command (and
+its output)::
+
+  apt-cache show python-vigra | grep -i source
+  Source: libvigraimpex
 
 .. XXX: Link to SRU article.
 
 
-Work on fix
------------
+Getting the code
+================
+
+Once you know the source package to work on, you will want to get a copy of
+the code on your system, so that you can debug it.  This is done by
+*branching* the source package branch corresponding to the source package.
+Launchpad maintains source package branches for all the packages in Ubuntu.
+
+Once you've got a local branch of the source package, you can investigate the
+bug, create a fix, and upload your proposed fix to Launchpad, in the form of a
+Bazaar branch.  When you are happy with your fix, you can submit a *merge
+proposal*, which asks other Ubuntu developers to review and approve your
+change.  If they agree with your changes, an Ubuntu developer will upload the
+new version of the package to Ubuntu so that everyone gets the benefit or your
+excellent fix - and you get a little bit of credit.  You're now on your way to
+becoming an Ubuntu developer!
+
+We'll describe specifics on how to branch the code, push your fix, and request
+a review in the following sections.
+
+
+Work on a fix
+=============
 
 There are entire books written about finding bugs, fixing them, testing them, 
 etc. If you are completely new to programming, try to fix easy bugs such as
@@ -62,110 +105,10 @@ fixed it already or is currently working on a fix. Good sources to check are:
 
 .. XXX: Link to 'update to a new version' article.
 
-
-If you find a patch to fix the problem, running this command in the source 
-directory should apply the patch::
+If you find a patch to fix the problem, say, attached to a bug report, running
+this command in the source directory should apply the patch::
 
   patch -p1 < ../bugfix.patch
 
 Refer to the ``patch(1)`` manpage for options and arguments such as 
 ``--dry-run``, ``-p<num>``, etc.
-
-
-Testing the fix
----------------
-
-To build a test package with your changes, run these commands::
-
-  bzr bd -- -S -us -uc
-  pbuilder-dist <release> build ../<package>_<version>.dsc
-
-This will create a source package from the branch contents (``-us -uc`` will 
-just omit the step to sign the source package) and pbuilder-dist will build
-the package from source for whatever ``release`` you choose.
-
-Once the build succeeded, install the package from 
-``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i 
-<package>_<version>.deb``). Then test to see if the bug is fixed.
-
-
-
-Documenting the fix
--------------------
-
-It is very important to document your change sufficiently so developers who 
-look at the code in the future won't have to guess what your reasoning was and
-what your assumptions were. Every Debian and Ubuntu package source includes 
-``debian/changelog``, where changes of each uploaded package are tracked.
-
-The easiest way to do this is to run::
-
-  dch -i
-
-This will add a boilerplate changelog entry for you and launch an editor 
-where you can fill out the blanks. An example of this could be::
-
-  specialpackage (1.2-3ubuntu4) natty; urgency=low
-
-    * debian/control: updated description to include frobnicator (LP: #123456)
-
-   -- Emma Adams <emma.adams@isp.com>  Sat, 17 Jul 2010 02:53:39 +0200
-
-``dch`` should fill out the first and last line of such a changelog entry for
-you already. Line 1 consists of the source package name, the version number,
-which Ubuntu release it is uploaded to, the urgency (which almost always is 
-'low'). The last line always contains the name, email address and timestamp
-(in RFC 2822 format) of the change.
-
-With that out of the way, let's focus on the actual changelog entry itself: 
-it is very important to document:
-
-  #. where the change was done
-  #. what was changed
-  #. where the discussion of the change happened
-
-In our (very sparse) example the last point is covered by "(LP: #123456)" 
-which refers to Launchpad bug 123456. Bug reports or mailing list threads
-or specifications are usually good information to provide as a rationale for a
-change. As a bonus, if you use the ``LP: #<number>`` notation for Launchpad
-bugs, the bug will be automatically closed when the package is uploaded to 
-Ubuntu.
-
-
-Committing the fix
-------------------
-
-With the changelog entry written and saved, you can just run::
-
-  debcommit
-
-and the change will be committed (locally) with your changelog entry as a 
-commit message.
-
-To push it to Launchpad, as the remote branch name, you need to stick to the 
-following nomenclature::
-
-  lp:~<yourlpid>/ubuntu/<release>/<package>/<branchname>
-
-This could for example be::
-
-  lp:~emmaadams/ubuntu/natty/specialpackage/fix-for-123456
-
-So if you just run::
-
-  bzr push lp:~emmaadams/ubuntu/natty/specialpackage/fix-for-123456
-  bzr lp-open
-
-you should be all set. The push command should push it to Launchpad and the 
-second command will open the Launchpad page of the remote branch in your 
-browser. There find the "(+) Propose for merging" link, click it to get the
-change reviewed by somebody and included in Ubuntu.
-
-
-Conclusion
-----------
-
-.. XXX: link to 'forwarding patches' article
-.. XXX: link to 'debdiff' article (in case of slow internet, package not 
-        imported, etc.)
-
