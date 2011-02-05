@@ -22,6 +22,7 @@ Contents:
    udd-merging
    udd-patchsys
    udd-newpackage
+   testing
 
 
 Indices and tables

@@ -109,7 +109,7 @@ package.
 
 If you don't have an existing branch, but you know you would like to make
 changes based on what the contributor provides then you should start by
-grabbing their branch.
+grabbing their branch::
 
     $ bzr branch lp:~subgenius/ubuntu/natty/tomboy/bug-12345
 

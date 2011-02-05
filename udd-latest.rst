@@ -36,7 +36,7 @@ the harder may be, so doing it regularly should keep each merge simple.  Even
 if there are many merges the total effort would hopefully be less.
 
 To merge the changes you just need to use `bzr merge-package`, but you must
-have committed your current work first.
+have committed your current work first::
 
     $ cd tomboy/bug-12345
     $ bzr merge-package ../natty

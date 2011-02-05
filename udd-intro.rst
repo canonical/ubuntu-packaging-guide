@@ -105,8 +105,8 @@ Once you've determined which source package to work on, you should ensure that
 the source branch for that package on Launchpad is up-to-date.  Some package
 imports fail for various reasons, and the `status of the package importer`_ is
 always available online.  If the source branch for a package you want to work
-on is out of sync, you can use :doc:`the old way of working on a
-package</apt-get-source>` until the import of that package is fixed.
+on is out of sync, you'll have to use ``apt-get source`` until the import of
+that package is fixed.
 
 Let's say you want to fix a problem in Tomboy in Natty.  First, find out the
 latest binary package versions that are available::
