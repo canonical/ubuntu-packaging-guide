@@ -140,4 +140,4 @@ Each time dh is run, it examines the log, and finds the last logged command that
 
 If debian/rules contains a target with a name like "override_dh_command", then when it gets to that command in the sequence, dh will run that target from the rules file, rather than running the actual command. The override target can then run the command with additional options, or run entirely different commands instead. (Note that to use this feature, you should Build-Depend on debhelper 7.0.50 or above.)
 
-Have a look at ``/usr/share/doc/debhelper/examples/`` for more examples.
+Have a look at ``/usr/share/doc/debhelper/examples/`` for more examples. Also see `the rules section <http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ of the Debian Policy Manual.
