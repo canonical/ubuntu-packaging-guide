@@ -110,3 +110,34 @@ Generally, copyright information is found in the COPYING file in the program's s
  License: GPL-2+
  
 This example follows the `DEP-5: Machine-parseable debian/copyright <http://dep.debian.net/deps/dep5/>`_ proposal. You are encouraged to use this format as well.
+
+
+The rules file
+-------------------------------
+
+The last file we need to look at is rules. This does all the work for creating our package. It is a Makefile with targets to compile and install the application, then create the .deb file from the installed files. It also has a target to clean up all the build files so you end up with just a source package again.
+
+Here is a simplified version of the rules file created by dh_make::
+
+ #!/usr/bin/make -f
+ # -*- makefile -*-
+ 
+ # Uncomment this to turn on verbose mode.
+ #export DH_VERBOSE=1
+ 
+ %:
+ 	dh  $@
+
+Let us go through this file in some detail. What this does is pass every build target that debian/rules is called with as an argument to ``/usr/bin/dh``, which itself will call all the necessary dh_* commands.
+
+dh runs a sequence of debhelper commands. The supported sequences correspond to the targets of a debian/rules file: "build", "clean", "install", "binary-arch", "binary-indep", and "binary".
+
+Commands in the binary-indep sequence are passed the "-i" option to ensure they only work on binary independent packages, and commands in the binary-arch sequences are passed the "-a" option to ensure they only work on architecture dependent packages.
+
+Each debhelper command will record when it's successfully run in debian/package.debhelper.log. (Which dh_clean deletes.) So dh can tell which commands have already been run, for which packages, and skip running those commands again.
+
+Each time dh is run, it examines the log, and finds the last logged command that is in the specified sequence. It then continues with the next command in the sequence. The --until, --before, --after, and --remaining options can override this behavior.
+
+If debian/rules contains a target with a name like "override_dh_command", then when it gets to that command in the sequence, dh will run that target from the rules file, rather than running the actual command. The override target can then run the command with additional options, or run entirely different commands instead. (Note that to use this feature, you should Build-Depend on debhelper 7.0.50 or above.)
+
+Have a look at ``/usr/share/doc/debhelper/examples/`` for more examples.
