@@ -72,32 +72,41 @@ For further information, see the `control file section <http://www.debian.org/do
 The copyright file
 -------------------------------
 
-This file gives the copyright information. Generally, copyright information is found in the COPYING file in the program's source directory. This file should include such information as the names of the author and the packager, the URL from which the source came, a Copyright line with the year and copyright holder, and the text of the copyright itself. An example template would be::
+This file gives the copyright information for both the upstream source and the packaging. Ubuntu and `Debian Policy <http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_ require that each package installs a verbatim copy of its copyright and license information to ``/usr/share/doc/$(package_name)/copyright``.
+
+Generally, copyright information is found in the COPYING file in the program's source directory. This file should include such information as the names of the author and the packager, the URL from which the source came, a Copyright line with the year and copyright holder, and the text of the copyright itself. An example template would be::
 
 
- This package was debianized by {Your Name} <your email address>
- {Date}
+ Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=166
+ Upstream-Name: Hello
+ Source: ftp://ftp.example.com/pub/games
  
- It was downloaded from: {URL of webpage} 
+ Files: *
+ Copyright: Copyright 1998 John Doe <jdoe@example.com>
+ License: GPL-2+
+  This program is free software; you can redistribute it
+  and/or modify it under the terms of the GNU General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later
+  version.
+  .
+  This program is distributed in the hope that it will be
+  useful, but WITHOUT ANY WARRANTY; without even the implied
+  warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+  PURPOSE.  See the GNU General Public License for more
+  details.
+  .
+  You should have received a copy of the GNU General Public
+  License along with this package; if not, write to the Free
+  Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+  Boston, MA  02110-1301 USA
+  .
+  On Debian systems, the full text of the GNU General Public
+  License version 2 can be found in the file
+  `/usr/share/common-licenses/GPL-2'.
  
- Upstream Author(s): {Name(s) and email address(es) of author(s)}
+ Files: debian/*
+ Copyright: Copyright 1998 Captain Packager <packager@coolness.com>
+ License: GPL-2+
  
- Copyright:
-         Copyright (C) {Year(s)} by {Author(s)} {Email address(es)}
-
- License:
- 
-         {Add licence text here.  For GNU licences add the licence header
-           and a link to the appropriate file in /usr/share/common-licences.}
- 
- Packaging:
-         Copyright (C) {Year(s)} by {Your Name} <your email address>
-         released under {the licence you choose for your packaging}
-         
-As one can imagine, hello is released under the GPL license. In this case it is easiest to just copy the copyright file from the Ubuntu package::
-
- cp ../../ubuntu/hello-debhelper-2.2/debian/copyright .
-
-Notice that the Ubuntu package's copyright includes a license statement for the manual. It is important that all the files in the source be covered by a license statement.
-
-
+This example follows the `DEP-5: Machine-parseable debian/copyright <http://dep.debian.net/deps/dep5/>`_ proposal. You are encouraged to use this format as well.
