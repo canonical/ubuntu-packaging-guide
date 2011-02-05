@@ -66,4 +66,4 @@ For the Ubuntu hello package, the control file looks something like::
  
 In Ubuntu we set the Maintainer field to a general address because anyone can change any package (this differs from Debian where changing packages is usually restricted to an individual or a team).
 
-
+For further information, see the `control file section <http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the Debian Policy Manual.
