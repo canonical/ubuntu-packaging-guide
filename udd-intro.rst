@@ -96,6 +96,8 @@ more efficient later.  Once you are used to the process you will learn when it
 makes sense to skip these steps.
 
 
+.. _up-to-date:
+
 Ensure the source branch is up-to-date
 --------------------------------------
 
@@ -155,7 +157,7 @@ project`_ to get the issue resolved.
 
 
 Creating a shared repository
-============================
+----------------------------
 
 Okay, you want to work on the Tomboy package in Natty, and you've verified
 that the source package is up-to-date.  Before actually branching the code for
@@ -174,7 +176,7 @@ area.  Change to this new directory for the rest of your work::
 
 
 Getting the trunk branch
-========================
+------------------------
 
 We use the `bzr branch` command to create a local branch of the package.
 We'll name the target directory `natty` just to keep things easy to remember::
@@ -187,7 +189,7 @@ updates.
 
 
 Getting a branch for a particular release
-=========================================
+-----------------------------------------
 
 When you want to do something like a `stable release update`_ (SRU), or you
 just want to examine the code in an old release, you'll want to grab the
@@ -198,7 +200,7 @@ For example, to get the Tomboy package for Maverick do::
 
 
 Importing a Debian source package
-=================================
+---------------------------------
 
 If the package you want to work on is available in Debian but not Ubuntu, it's
 still easy to import the code to a local bzr branch for development.  Let's

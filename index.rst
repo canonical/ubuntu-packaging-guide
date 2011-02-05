@@ -15,6 +15,14 @@ Contents:
    getting-set-up
    fixing-a-bug
    udd-intro
+   udd-working
+   udd-sponsorship
+   udd-uploading
+   udd-latest
+   udd-merging
+   udd-patchsys
+   udd-newpackage
+
 
 Indices and tables
 ==================
