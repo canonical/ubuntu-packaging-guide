@@ -67,3 +67,37 @@ For the Ubuntu hello package, the control file looks something like::
 In Ubuntu we set the Maintainer field to a general address because anyone can change any package (this differs from Debian where changing packages is usually restricted to an individual or a team).
 
 For further information, see the `control file section <http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the Debian Policy Manual.
+
+
+The copyright file
+-------------------------------
+
+This file gives the copyright information. Generally, copyright information is found in the COPYING file in the program's source directory. This file should include such information as the names of the author and the packager, the URL from which the source came, a Copyright line with the year and copyright holder, and the text of the copyright itself. An example template would be::
+
+
+ This package was debianized by {Your Name} <your email address>
+ {Date}
+ 
+ It was downloaded from: {URL of webpage} 
+ 
+ Upstream Author(s): {Name(s) and email address(es) of author(s)}
+ 
+ Copyright:
+         Copyright (C) {Year(s)} by {Author(s)} {Email address(es)}
+
+ License:
+ 
+         {Add licence text here.  For GNU licences add the licence header
+           and a link to the appropriate file in /usr/share/common-licences.}
+ 
+ Packaging:
+         Copyright (C) {Year(s)} by {Your Name} <your email address>
+         released under {the licence you choose for your packaging}
+         
+As one can imagine, hello is released under the GPL license. In this case it is easiest to just copy the copyright file from the Ubuntu package::
+
+ cp ../../ubuntu/hello-debhelper-2.2/debian/copyright .
+
+Notice that the Ubuntu package's copyright includes a license statement for the manual. It is important that all the files in the source be covered by a license statement.
+
+
