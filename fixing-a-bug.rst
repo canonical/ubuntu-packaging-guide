@@ -74,17 +74,18 @@ Getting the code
 
 Once you know the source package to work on, you will want to get a copy of
 the code on your system, so that you can debug it.  This is done by
-*branching* the source package branch corresponding to the source package.
-Launchpad maintains source package branches for all the packages in Ubuntu.
+:ref:`*branching* the source package <branching>` branch corresponding to the
+source package.  Launchpad maintains source package branches for all the
+packages in Ubuntu.
 
 Once you've got a local branch of the source package, you can investigate the
 bug, create a fix, and upload your proposed fix to Launchpad, in the form of a
-Bazaar branch.  When you are happy with your fix, you can submit a *merge
-proposal*, which asks other Ubuntu developers to review and approve your
-change.  If they agree with your changes, an Ubuntu developer will upload the
-new version of the package to Ubuntu so that everyone gets the benefit or your
-excellent fix - and you get a little bit of credit.  You're now on your way to
-becoming an Ubuntu developer!
+Bazaar branch.  When you are happy with your fix, you can :ref:`submit a
+*merge proposal* <merge-proposal>`, which asks other Ubuntu developers to
+review and approve your change.  If they agree with your changes, an Ubuntu
+developer will upload the new version of the package to Ubuntu so that
+everyone gets the benefit or your excellent fix - and you get a little bit of
+credit.  You're now on your way to becoming an Ubuntu developer!
 
 We'll describe specifics on how to branch the code, push your fix, and request
 a review in the following sections.

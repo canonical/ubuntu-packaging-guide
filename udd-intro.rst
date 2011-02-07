@@ -155,6 +155,7 @@ http://package-import.ubuntu.com/status/sysvinit.html.
 When you find such out-of-date packages, be sure to `file a bug on the UDD
 project`_ to get the issue resolved.
 
+.. _branching:
 
 Creating a shared repository
 ----------------------------

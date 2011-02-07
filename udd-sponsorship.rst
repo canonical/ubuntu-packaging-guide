@@ -13,6 +13,8 @@ issue, and create a *merge proposal* for others to review, and sponsors to
 upload.
 
 
+.. _merge-proposal:
+
 Pushing to Launchpad
 ====================
 
