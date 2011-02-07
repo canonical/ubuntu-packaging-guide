@@ -41,7 +41,7 @@ where you can fill out the blanks. An example of this could be::
 you already. Line 1 consists of the source package name, the version number,
 which Ubuntu release it is uploaded to, the urgency (which almost always is 
 'low'). The last line always contains the name, email address and timestamp
-(in :rfc:5322 format) of the change.
+(in :rfc:`5322` format) of the change.
 
 With that out of the way, let's focus on the actual changelog entry itself: 
 it is very important to document:
