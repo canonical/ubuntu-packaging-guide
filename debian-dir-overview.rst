@@ -34,7 +34,7 @@ Notice that the version has a ``-0ubuntu1`` appended to it, this is the distro r
 
 Ubuntu and Debian have slightly different package versioning schemes to avoid conflicting packages with the same source version. If a Debian package has been changed in Ubuntu, it has ``ubuntuX`` (where ``X`` is the Ubuntu revision number) appended to the end of the Debian version. So if the Debian hello ``2.4-1`` package was changed by Ubuntu, the version string would be ``2.4-1ubuntu1``. If a package for the application does not exist in Debian, then the Debian revision is ``0`` (e.g., ``2.4-0ubuntu1``).
 
-For further information, see the `changelog section <http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ of the Debian Policy Manual.
+For further information, see the `changelog section (Section 4.4) <http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ of the Debian Policy Manual.
 
 
 The control file
@@ -66,13 +66,13 @@ For the Ubuntu hello package, the control file looks something like::
  
 In Ubuntu we set the Maintainer field to a general address because anyone can change any package (this differs from Debian where changing packages is usually restricted to an individual or a team).
 
-For further information, see the `control file section <http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the Debian Policy Manual.
+For further information, see the `control file section (Chapter 5) <http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the Debian Policy Manual.
 
 
 The copyright file
 -------------------------------
 
-This file gives the copyright information for both the upstream source and the packaging. Ubuntu and `Debian Policy <http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_ require that each package installs a verbatim copy of its copyright and license information to ``/usr/share/doc/$(package_name)/copyright``.
+This file gives the copyright information for both the upstream source and the packaging. Ubuntu and `Debian Policy (Section 12.5) <http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_ require that each package installs a verbatim copy of its copyright and license information to ``/usr/share/doc/$(package_name)/copyright``.
 
 Generally, copyright information is found in the COPYING file in the program's source directory. This file should include such information as the names of the author and the packager, the URL from which the source came, a Copyright line with the year and copyright holder, and the text of the copyright itself. An example template would be::
 
@@ -140,4 +140,4 @@ Each time dh is run, it examines the log, and finds the last logged command that
 
 If debian/rules contains a target with a name like "override_dh_command", then when it gets to that command in the sequence, dh will run that target from the rules file, rather than running the actual command. The override target can then run the command with additional options, or run entirely different commands instead. (Note that to use this feature, you should Build-Depend on debhelper 7.0.50 or above.)
 
-Have a look at ``/usr/share/doc/debhelper/examples/`` for more examples. Also see `the rules section <http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ of the Debian Policy Manual.
+Have a look at ``/usr/share/doc/debhelper/examples/`` for more examples. Also see `the rules section (Section 4.9) <http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ of the Debian Policy Manual.
