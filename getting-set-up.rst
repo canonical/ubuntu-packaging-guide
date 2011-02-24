@@ -262,7 +262,7 @@ Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you
 as well. Simply open your `~/.bashrc` in a text editor and add something like
 this to the bottom of it::
 
-    $ export DEBFULNAME="Bob Dobbs"
+    $ export DEBFULLNAME="Bob Dobbs"
     $ export DEBEMAIL="subgenius@example.com"
 
 
