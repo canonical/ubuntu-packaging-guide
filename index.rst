@@ -14,6 +14,16 @@ Contents:
    introduction-to-ubuntu-development
    getting-set-up
    fixing-a-bug
+   udd-intro
+   udd-working
+   udd-sponsorship
+   udd-uploading
+   udd-latest
+   udd-merging
+   udd-patchsys
+   udd-newpackage
+   testing
+
 
 Indices and tables
 ==================
@@ -21,4 +31,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
