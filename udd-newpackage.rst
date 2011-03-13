@@ -25,19 +25,25 @@ simple::
     $ bzr branch trunk debianize
     $ cd debianize
 
+.. TODO explain what each of these commands does
+
 
 Bootstrapping
 =============
 
-You need to get the initial ``debian`` directory created somehow, along with
-all the expected files inside that.  There are many ways to bootstrap that,
-and hopefully there will eventually be `some convergence`_ in the methods,
+You need to create the initial ``debian`` directory, as well as the necessary 
+files inside the ``debian`` directory.  Currently, there are many ways to set up 
+this directory, but hopefully there will be `some convergence`_ in the methods,
 especially if you're building standard Python setuptools-based libraries and
 applications.
 
+.. COMMENT  Is "Bootstrapping" the technical / commonly-used developer term? Also, please list the files needed in the debian directory.
+  
 
 The bzr-builddeb way
 --------------------
+
+.. This section seems a bit too casual, and assumes to much prior knowledge (re: use of "of course").
 
 You could of course just use `dh_make(8)` to get things going, or you could
 use `bzr dh-make`.  The latter might provide some benefits, and can be run
