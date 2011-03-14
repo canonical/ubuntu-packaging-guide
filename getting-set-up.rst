@@ -36,7 +36,7 @@ There are a number of tools that will make your life as an Ubuntu developer
 much easier.  You'll encounter these tools later in this guide.  To install
 most of the tools you'll need, run this command::
 
-    $ sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file apt-cache
+    $ sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file
 
 These packages include:
 
@@ -52,7 +52,8 @@ These packages include:
   same code while keeping it trivial to merge each others work.
 * ``apt-file`` provides an easy way to find the binary package that contains a
   given file.
-* ``apt-cache`` provides even more information about packages on Ubuntu.
+* ``apt-cache`` (part of the ``apt`` packageprovides even more information 
+  about packages on Ubuntu.
 
 
 Setting up a GPG key
