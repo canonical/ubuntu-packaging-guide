@@ -67,7 +67,7 @@ can absolutely determine who uploaded the package.
 
 To generate a new GPG key, run::
 
-    $ gpg --key-gen
+    $ gpg --gen-key
 
 GPG will first ask you which kind of key you want to generate. Choosing the
 default (RSA and DSA) is fine. Next it will ask you about the keysize. The
