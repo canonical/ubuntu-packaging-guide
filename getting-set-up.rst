@@ -52,7 +52,7 @@ These packages include:
   same code while keeping it trivial to merge each others work.
 * ``apt-file`` provides an easy way to find the binary package that contains a
   given file.
-* ``apt-cache`` (part of the ``apt`` packageprovides even more information 
+* ``apt-cache`` (part of the ``apt`` package) provides even more information 
   about packages on Ubuntu.
 
 
