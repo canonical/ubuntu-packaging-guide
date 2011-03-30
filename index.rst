@@ -6,7 +6,11 @@
 Welcome to ubuntu-packaging-guide's documentation!
 ==================================================
 
-Contents:
+The guide is split up into two sections:
+
+* A list of articles based on tasks, so things you want to get done.
+* A set of :doc:`knowledge base</knowledge-base>` articles that dig deeper 
+  into specific bits of our tools and workflows.
 
 .. toctree::
    :maxdepth: 2
@@ -14,15 +18,7 @@ Contents:
    introduction-to-ubuntu-development
    getting-set-up
    fixing-a-bug
-   udd-intro
-   udd-working
-   udd-sponsorship
-   udd-uploading
-   udd-latest
-   udd-merging
-   udd-patchsys
-   udd-newpackage
-   testing
+   knowledge-base
 
 
 Indices and tables
