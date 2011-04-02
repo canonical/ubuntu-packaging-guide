@@ -2,35 +2,34 @@
 Getting Set Up
 ==============
 
-There are a number of things you need to do in the beginning to enable you to
-do Ubuntu development. A few of them you have to do locally on your system.
-In addition to that you also need to inform Launchpad_ about yourself, so it
-accepts changes you want to make.
+There are a number of things you need to do to get started developing for Ubuntu.
+This article is designed to get your computer set up so that you can start 
+working with packages, and upload your packages to Launchpad. Here's what we'll 
+cover:
 
-When you followed all the steps in this article,
+* Installing packaging-related software. This includes:
 
-* you have all the tools to do Ubuntu development installed on your machine,
-* your local developer tools know about you, which simplifies work a lot,
-* you can do local builds of packages,
-* you can interact with other developers and propose your changes on Launchpad
-  to get merged,
-* you can upload packages to Launchpad, so they are hosted in your Personal
-  Package Archive (PPA).
+  * Ubuntu-specific packaging utilities
+  * Encryption software so your work can be verified as being done by you
+  * Additional encryption software so you can securely transfer files
+
+* Creating and configuring your account on Launchpad
+* Setting up your development environment to help you do local builds of packages,
+  interact with other developers, and propose your changes on Launchpad.
+ 
+
+.. note:: 
+  It is advisable to do packaging work using the current development version of 
+  Ubuntu. Doing so will allow you to test changes in the same environment where 
+  those changes will actually be applied and used. 
+
+  Don't worry, though, the `Ubuntu development release wiki page 
+  <https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways to 
+  safely use the development release.
 
 
-Run the development version
-===========================
-
-It is advisable to run the current development version of Ubuntu. It will
-allow you to test changes in a "live environment" where they are actually
-built and tested in the development release you upload them to.
-
-https://wiki.ubuntu.com/UsingDevelopmentReleases shows a variety of ways to
-use the development release in a safe way.
-
-
-Install the tools locally
-=========================
+Install basic packaging software
+================================
 
 There are a number of tools that will make your life as an Ubuntu developer
 much easier.  You'll encounter these tools later in this guide.  To install
@@ -38,7 +37,7 @@ most of the tools you'll need, run this command::
 
     $ sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file
 
-These packages include:
+This command will install the following software:
 
 * ``gnupg`` -- `GNU Privacy Guard`_ contains tools you will need to create a
   cryptographic key with which you will sign files you want to upload to
@@ -56,13 +55,13 @@ These packages include:
   about packages on Ubuntu.
 
 
-Setting up a GPG key
-====================
+Create your GPG key
+-------------------
 
 GPG stands for `GNU Privacy Guard`_ and it implements the OpenPGP standard
 which allows you to sign and encrypt messages and files. This is useful for a
 number of purposes. In our case it is important that you can sign files with
-your key, so they can be identified as something that you worked on. If you
+your key so they can be identified as something that you worked on. If you
 upload a source package to Launchpad, it will only accept the package if it
 can absolutely determine who uploaded the package.
 
@@ -78,9 +77,11 @@ which means the key will never expire. The last questions will be about your
 name and email address. Just pick the ones you are going to use for Ubuntu
 development here, you can add additional email addresses later on. Adding a
 comment is not necessary. Then you will have to set a passphrase. Choose a
-safe one. Now GPG will create a key for you, which can take a little bit of
-time; it needs random bytes, so if you give the system some work to do it will
-be just fine.  Move the cursor around!
+safe one. 
+
+Now GPG will create a key for you, which can take a little bit of time; it 
+needs random bytes, so if you give the system some work to do it will be 
+just fine.  Move the cursor around!
 
 Once this is done, you will get a message similar to this one::
 
@@ -91,43 +92,45 @@ Once this is done, you will get a message similar to this one::
 
 In this case ``43CDE61D`` is the *key ID*.
 
-To upload (the public part of) of your key to a keyserver, so the world can
-identify messages and files as yours, just run::
+Next, you need to upload the public part of your key to a keyserver so the 
+world can identify messages and files as yours. To do so, enter::
 
     $ gpg --send-keys <KEY ID>
 
-There is a network of keyservers that will automatically sync the key between
-themselves.
+This will send your key to one keyserver, but a network of keyservers will 
+automatically sync the key between themselves. Once this syncing is complete, 
+your signed public key will be ready to verify your your contributions 
+around the world.
 
 
-Setting up an SSH key
-=====================
+Create your SSH key
+-------------------
 
-SSH_ is a network protocol that allows you to exchange data in a secure way
-over the network. In a lot of cases you will use it to access and open a shell
-on another machine. It is also very useful to transfer files in a secure way.
+SSH_ stands for *Secure Shell*, and it is a protocol that allows you to 
+exchange data in a secure way over a network. It is common to use SSH to access 
+and open a shell on another computer, and to use it to securely transfer files. 
+For our purposes, we will mainly be using SSH to securely communicate with 
+Launchpad. 
 
-To generate a SSH key, run::
+To generate a SSH key, enter::
 
     $ ssh-keygen -t rsa
 
 The default file name usually makes sense, so you can just leave it as it is.
 For security purposes, it's highly recommended that you use a passphrase.
 
-We will use the SSH key to securely push code changes to Launchpad.
 
-
-Setting up pbuilder
-===================
+Set up pbuilder
+---------------
 
 ``pbuilder`` allows you to build packages locally on your machine. It serves
 a couple of purposes:
 
-* the build will be done in a minimal and clean environment, where you can
-  see if it succeeds in a reproducible way (with no modifications of the local
-  system
-* there is no need to install all necessary *build dependencies* locally
-* you can set up multiple instances for various Ubuntu and Debian releases
+* The build will be done in a minimal and clean environment. This helps you
+  make sure your builds succeed in a reproducible way, but without modifying 
+  your local system
+* There is no need to install all necessary *build dependencies* locally
+* You can set up multiple instances for various Ubuntu and Debian releases
 
 Setting ``pbuilder`` up is very easy. Edit `~/.pbuilderrc` and add the
 following line to it::
@@ -145,29 +148,35 @@ Debian maybe `sid`. This will take a while as it will download all the
 necessary packages for a "minimal installation". These will be cached though.
 
 
-Set up your development environment
-===================================
+Get set up to work with Launchpad
+=================================
 
-There are a few things you'll need to set up in your development environment
-before you can start working on packages.
+With a basic local configuration in place, your next step will be to 
+configure your system to work with Launchpad. This section will focus
+on the following topics:
+
+ * What Launchpad is, and creating a Launchpad account
+ * Uploading your GPG and SSH keys to Launchpad
+ * Configuring Bazaar to work with Launchpad
+ * Configuring Bash to work with Bazaar
 
 
-Launchpad
----------
+About Launchpad
+---------------
 
-Launchpad is the central piece of infrastructure we use in Ubuntu. It stores
-not only our packages and our code, but also things like translations, bug
-reports, information about the people who work on Ubuntu and which teams they
-are part of.  You'll also use Launchpad to publish your proposed fixes, and
+Launchpad is the central piece of infrastructure we use in Ubuntu. It not only 
+stores our packages and our code, but also things like translations, bug
+reports, and information about the people who work on Ubuntu and their team 
+memberships.  You'll also use Launchpad to publish your proposed fixes, and
 get other Ubuntu developers to review and sponsor them.
 
 You will need to register with Launchpad and provide a minimal amount of
-information, so that you can download and upload code, submit bug reports, and
-more.
+information. This will allow you to download and upload code, submit bug 
+reports, and more.
 
 
-Setting up an account
----------------------
+Get a Launchpad account
+--------------------------
 
 If you don't already have a Launchpad account, you can easily `create one`_.
 If you have a Launchpad account but cannot remember your Launchpad id, you can
@@ -175,18 +184,19 @@ find this out by going to https://launchpad.net/people/+me and looking for the
 part after the `~` in the URL.
 
 Launchpad's registration process will ask you to choose a display name. It's
-encouraged for you to use your real name here. so that your Ubuntu developer
+encouraged for you to use your real name here so that your Ubuntu developer
 colleagues will be able to get to know you better.
 
 When you register a new account, Launchpad will send you an email with a link
-you need to open in your browser, in order to verify your email address. If
+you need to open in your browser in order to verify your email address. If
 you don't receive it, check in your spam folder.
 
-https://help.launchpad.net/YourAccount/NewAccount has more information about
-the process and additional settings you can change.
+`The new account help page <https://help.launchpad.net/YourAccount/NewAccount>`_ 
+on Launchpad has more information about the process and additional settings you 
+can change.
+ 
 
-
-Uploading the GPG key to Launchpad
+Upload your GPG key to Launchpad
 ----------------------------------
 
 To find about your GPG fingerprint, run::
@@ -224,21 +234,22 @@ complete the import of your OpenPGP key.
 Find more information at
 https://help.launchpad.net/YourAccount/ImportingYourPGPKey
 
-Uploading your SSH key
-----------------------
+Upload your SSH key to Launchpad
+--------------------------------
 
 Open https://launchpad.net/people/+me/+editsshkeys in a web browser, also open
-``~/.ssh/id_rsa.pub`` in a text editor. It is the public part of your SSH key,
+``~/.ssh/id_rsa.pub`` in a text editor. This is the public part of your SSH key,
 so it is safe to share it with Launchpad. Copy the contents of the file and
 paste them into the text box on the web page that says "Add an SSH key". Now
 click "Import Public Key".
 
-More information is available at
-https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair
+For more information on this process, visit the `<creating an SSH keypair 
+<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on 
+Launchpad.
 
 
-Teaching Bazaar about you
--------------------------
+Configure Bazaar
+----------------
 
 Bazaar is the tool we use to store code changes in a logical way, to exchange
 proposed changes and merge them, even if development is done concurrently.
@@ -257,8 +268,8 @@ and see where it redirects you. The part after the "~" in the URL is your
 Launchpad ID.)
 
 
-Introducing you to the development tools
-----------------------------------------
+Configure your shell
+--------------------
 Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you
 as well. Simply open your `~/.bashrc` in a text editor and add something like
 this to the bottom of it::
