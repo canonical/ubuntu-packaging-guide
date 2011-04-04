@@ -32,8 +32,8 @@ Install basic packaging software
 ================================
 
 There are a number of tools that will make your life as an Ubuntu developer
-much easier.  You'll encounter these tools later in this guide.  To install
-most of the tools you'll need, run this command::
+much easier.  You will encounter these tools later in this guide.  To install
+most of the tools you will need, run this command::
 
     $ sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file
 
@@ -117,7 +117,7 @@ To generate a SSH key, enter::
     $ ssh-keygen -t rsa
 
 The default file name usually makes sense, so you can just leave it as it is.
-For security purposes, it's highly recommended that you use a passphrase.
+For security purposes, it is highly recommended that you use a passphrase.
 
 
 Set up pbuilder
@@ -167,7 +167,7 @@ About Launchpad
 Launchpad is the central piece of infrastructure we use in Ubuntu. It not only 
 stores our packages and our code, but also things like translations, bug
 reports, and information about the people who work on Ubuntu and their team 
-memberships.  You'll also use Launchpad to publish your proposed fixes, and
+memberships.  You will also use Launchpad to publish your proposed fixes, and
 get other Ubuntu developers to review and sponsor them.
 
 You will need to register with Launchpad and provide a minimal amount of
@@ -183,7 +183,7 @@ If you have a Launchpad account but cannot remember your Launchpad id, you can
 find this out by going to https://launchpad.net/people/+me and looking for the
 part after the `~` in the URL.
 
-Launchpad's registration process will ask you to choose a display name. It's
+Launchpad's registration process will ask you to choose a display name. It is
 encouraged for you to use your real name here so that your Ubuntu developer
 colleagues will be able to get to know you better.
 
