@@ -13,7 +13,7 @@ The guide is split up into two sections:
   into specific bits of our tools and workflows.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    introduction-to-ubuntu-development
    getting-set-up

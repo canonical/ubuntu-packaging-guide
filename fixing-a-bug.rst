@@ -107,6 +107,7 @@ fixed it already or is currently working on a fix. Good sources to check are:
 * bugs or package uploads of Debian or other distributions.
 
 .. XXX: Link to 'update to a new version' article.
+.. XXX: Link to 'send stuff upstream/Debian' article. (Launchpad bug 704845)
 
 If you find a patch to fix the problem, say, attached to a bug report, running
 this command in the source directory should apply the patch::
