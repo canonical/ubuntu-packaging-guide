@@ -69,16 +69,23 @@ upload to the archive in the normal way.
 Merging a new upstream version
 ==============================
 
-When upstream releases a new version (or you want to package a snapshot) then
-you have to merge a tarball into your branch.
+When upstream releases a new version (or you want to package a snapshot), you
+have to merge a tarball into your branch.
 
-This is done using the `bzr merge-upstream` command.  From inside the branch
-that you want to merge to you run something like::
+This is done using the `bzr merge-upstream` command.  If your package has a
+valid `debian/watch` file, from inside the branch that you want to merge to,
+just type this::
 
-    $ bzr merge-upstream --version 1.2 http://example.org/releases/foobar-1.2.tar.gz
+    $ bzr merge-upstream
 
-This will download the tarball at the specified URL, and merge it in to your
-branch, automatically adding a `debian/changelog` entry for you.
+This will download the tarball and merge it into your branch, automatically
+adding a `debian/changelog` entry for you.  `bzr-builddeb` looks at the
+`debian/watch` file for the upstream tarball location.
+
+If you do *not* have a `debian/watch` file, you'll need to specify the location
+of the upstream tarball, and the version manually::
+
+    $ bzr merge-upstream --version 1.2 http://example.org/releases/foo-1.2.tar.gz
 
 The `--version` option is used to specify the upstream version that is being
 merged in, as the command isn't able to infer that (yet).
@@ -87,10 +94,7 @@ The last parameter is the location of the tarball that you are upgrading to;
 this can either be a local filesystem path, or a http, ftp, sftp, etc. URI as
 shown.  The command will automatically download the tarball for you.  If you
 point to a `.tar.bz2` or similar tarball then it will recompress it as needed,
-or convert it if you pass it a `.zip` or similar.  If your package is v3
-(quilt) format and so can support `.tar.bz2` upstream tarballs then pass a
-`--v3` option to prevent the repacking (this should be `automatically
-detected`_).
+or convert it if you pass it a `.zip` or similar.
 
 The `merge-upstream` command will either tell you that it completed
 successfully, or that there were conflicts.  Either way you will be able to
@@ -108,4 +112,3 @@ want to use as the tip of the upstream branch.
 
 .. _`package importer`:  http://package-import.ubuntu.com/status/
 .. _Squeeze: http://wiki.debian.org/DebianSqueeze
-.. _`automatically detected`: https://bugs.edge.launchpad.net/bzr-builddeb/+bug/627718
