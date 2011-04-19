@@ -2,7 +2,7 @@ Source: ubuntu-packaging-guide
 Priority: optional
 Section: doc
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 7.0.50~), python-sphinx (>= 1.1~), doc-base, 
+Build-Depends: debhelper (>= 7.0.50~), python-sphinx, doc-base, 
  texlive-latex-base, texlive-latex-recommended, texlive-latex-extra, texlive-fonts-recommended
 Standards-Version: 3.9.1
 
