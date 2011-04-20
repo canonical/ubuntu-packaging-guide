@@ -13,11 +13,11 @@
    height="242.8331"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.1 r9760"
    sodipodi:docname="cycle-items.svg"
-   inkscape:export-filename="/home/doctormo/Desktop/cycle-items.png"
-   inkscape:export-xdpi="42.150002"
-   inkscape:export-ydpi="42.150002">
+   inkscape:export-filename="cycle-items.png"
+   inkscape:export-xdpi="87.599998"
+   inkscape:export-ydpi="87.599998">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -37,10 +37,10 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1280"
-     inkscape:window-height="723"
+     inkscape:window-width="1024"
+     inkscape:window-height="744"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -59,13 +59,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-21.874269,-322.42798)">
-    <rect
-       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect3935"
-       width="651.46051"
-       height="240.8331"
-       x="22.874269"
-       y="323.42798" />
     <path
        style="color:#000000;fill:#aaff00;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 590.27583,351.02257 0,41.70289 c -12.71439,-2.52625 -25.6342,-4.36081 -38.69873,-5.68893 l 0,87.04763 c 13.01326,0.64584 25.93241,1.78337 38.69873,3.54665 l 0,45.24953 62.75726,-90.73709 -62.75726,-81.12068 z"
@@ -175,7 +168,7 @@
        sodipodi:linespacing="125%"
        x="463.82773"
        y="522.06232"><tspan
-   style="font-size:22px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Ubuntu Bold"
-   id="tspan3886">6 Months time frame</tspan></text>
+         style="font-size:22px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Ubuntu Bold"
+         id="tspan3886">6 Months time frame</tspan></text>
   </g>
 </svg>
