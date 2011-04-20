@@ -14,32 +14,13 @@
    height="214.84375"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.1 r9760"
    sodipodi:docname="cycle-branching.svg"
-   inkscape:export-filename="/home/doctormo/Graphics/Memes/cycle-branching.png"
+   inkscape:export-filename="cycle-branching.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
-     id="defs4">
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.04166667"
-       d="m 103.69774,234.73887 c 61.27458,-13.28969 134.58662,-23.53234 230.30734,-27.31014"
-       id="path3882-5"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.05555558"
-       d="M 97.700788,205.96188 C 161.30189,192.97177 243.0381,184.46621 336.00813,180.65174"
-       id="path3882-4-8"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.04166667"
-       d="m 127.66828,223.65225 c 61.27458,-13.28969 88.58662,-17.53234 184.30734,-21.31014"
-       id="path3882-3"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-  </defs>
+     id="defs4" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -57,10 +38,10 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1280"
-     inkscape:window-height="723"
+     inkscape:window-width="1024"
+     inkscape:window-height="744"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true" />
@@ -81,15 +62,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-58.46875,-55.40625)">
-    <rect
-       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect3935"
-       width="634.48663"
-       height="212.8331"
-       x="57.126648"
-       y="56.65744"
-       inkscape:export-xdpi="42.150002"
-       inkscape:export-ydpi="42.150002" />
     <path
        style="color:#000000;fill:#72cd00;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 477.28116,184.97462 c -6.21441,0.2882 -11.7315,3.7291 -14.86469,8.8568 -41.42159,-2.62724 -79.90332,-3.33253 -118.91754,-2.52128 2.01964,5.10815 2.16835,10.95337 -0.12925,16.00041 37.51241,-0.51184 74.71055,0.38674 113.94108,2.9738 1.27262,0.084 2.54132,0.13938 3.81312,0.22628 2.5238,6.07036 8.18973,10.58154 15.18785,11.28109 10.14189,1.01381 19.18306,-6.37271 20.19658,-16.51759 1.01352,-10.1449 -6.37084,-19.18872 -16.51273,-20.20254 -0.91119,-0.0911 -1.82664,-0.13813 -2.71442,-0.097 z"
@@ -235,6 +207,6 @@
        x="678.42645"
        y="133.42302"
        transform="matrix(0.99041876,0.13706822,-0.13702792,0.99071006,0,0)"><tspan
-   id="tspan3880-5">New dev release</tspan></text>
+         id="tspan3880-5">New dev release</tspan></text>
   </g>
 </svg>

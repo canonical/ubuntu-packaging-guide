@@ -13,11 +13,11 @@
    height="162.16356"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.1 r9760"
    sodipodi:docname="cycle-process.svg"
-   inkscape:export-filename="/home/doctormo/Graphics/Memes/cycle-process.png"
-   inkscape:export-xdpi="42.150002"
-   inkscape:export-ydpi="42.150002">
+   inkscape:export-filename="cycle-process.png"
+   inkscape:export-xdpi="89.93119"
+   inkscape:export-ydpi="89.93119">
   <defs
      id="defs4">
     <marker
@@ -34,32 +34,6 @@
          transform="matrix(-0.4,0,0,-0.4,-4,0)"
          inkscape:connector-curvature="0" />
     </marker>
-    <marker
-       inkscape:stockid="Arrow2Mend"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="Arrow2Mend"
-       style="overflow:visible">
-      <path
-         id="path4282"
-         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
-         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
-         transform="scale(-0.6,-0.6)"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.04166667"
-       d="m 103.69774,234.73887 c 61.27458,-13.28969 134.58662,-23.53234 230.30734,-27.31014"
-       id="path3882-5"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.05555558"
-       d="M 97.700788,205.96188 C 161.30189,192.97177 243.0381,184.46621 336.00813,180.65174"
-       id="path3882-4-8"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -78,10 +52,10 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1280"
-     inkscape:window-height="723"
+     inkscape:window-width="1024"
+     inkscape:window-height="744"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -100,15 +74,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-58.463455,-81.748367)">
-    <rect
-       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.99999976;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect3935"
-       width="634.48663"
-       height="160.16356"
-       x="59.463455"
-       y="82.748367"
-       inkscape:export-xdpi="42.150002"
-       inkscape:export-ydpi="42.150002" />
     <path
        style="color:#000000;fill:#ff9500;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 84.46875,128.8125 0,45.875 116.15211,0 14.24953,-23.58476 -14.14437,-22.29024 -116.25727,0 z"
