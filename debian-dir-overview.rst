@@ -128,16 +128,18 @@ Here is a simplified version of the rules file created by dh_make::
  %:
  	dh  $@
 
-Let us go through this file in some detail. What this does is pass every build target that debian/rules is called with as an argument to ``/usr/bin/dh``, which itself will call all the necessary dh_* commands.
+Let us go through this file in some detail. What this does is pass every build target that debian/rules is called with as an argument to ``/usr/bin/dh``, which itself will call all the necessary dh_* commands. 
 
-dh runs a sequence of debhelper commands. The supported sequences correspond to the targets of a debian/rules file: "build", "clean", "install", "binary-arch", "binary-indep", and "binary".
+dh runs a sequence of debhelper commands. The supported sequences correspond to the targets of a debian/rules file: "build", "clean", "install", "binary-arch", "binary-indep", and "binary". In order to see what commands are run in each target, run::
+
+ $ dh binary-arch --no-act
 
 Commands in the binary-indep sequence are passed the "-i" option to ensure they only work on binary independent packages, and commands in the binary-arch sequences are passed the "-a" option to ensure they only work on architecture dependent packages.
 
-Each debhelper command will record when it's successfully run in debian/package.debhelper.log. (Which dh_clean deletes.) So dh can tell which commands have already been run, for which packages, and skip running those commands again.
+Each debhelper command will record when it's successfully run in ``debian/package.debhelper.log``. (Which dh_clean deletes.) So dh can tell which commands have already been run, for which packages, and skip running those commands again.
 
-Each time dh is run, it examines the log, and finds the last logged command that is in the specified sequence. It then continues with the next command in the sequence. The --until, --before, --after, and --remaining options can override this behavior.
+Each time dh is run, it examines the log, and finds the last logged command that is in the specified sequence. It then continues with the next command in the sequence. The ``--until``, ``--before``, ``--after``, and ``--remaining`` options can override this behavior.
 
 If debian/rules contains a target with a name like "override_dh_command", then when it gets to that command in the sequence, dh will run that target from the rules file, rather than running the actual command. The override target can then run the command with additional options, or run entirely different commands instead. (Note that to use this feature, you should Build-Depend on debhelper 7.0.50 or above.)
 
-Have a look at ``/usr/share/doc/debhelper/examples/`` for more examples. Also see `the rules section (Section 4.9) <http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ of the Debian Policy Manual.
+Have a look at ``/usr/share/doc/debhelper/examples/`` and ``man dh`` for more examples. Also see `the rules section (Section 4.9) <http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ of the Debian Policy Manual.
