@@ -147,6 +147,17 @@ If debian/rules contains a target with a name like "override_dh_command", then w
 
 Have a look at ``/usr/share/doc/debhelper/examples/`` and ``man dh`` for more examples. Also see `the rules section (Section 4.9) <http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ of the Debian Policy Manual.
 
+Additional Files
+-------------------------------
+
+The install file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The watch file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The source/format file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Additional Resources
 -------------------------------
