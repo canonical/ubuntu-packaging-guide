@@ -24,15 +24,15 @@ If you are packaging from scratch, ``dch --create`` (dch is in the devscripts pa
 Here is a sample changelog file for hello::
 
 
- hello (2.4-0ubuntu1) jaunty; urgency=low
+ hello (2.6-0ubuntu1) natty; urgency=low
 
    * New upstream release with lots of bug fixes and feature improvements.
 
- -- Jane Doe <packager@example.com>  Wed,  5 Jan 2009 22:38:49 -0700
+ -- Jane Doe <packager@example.com>  Thu, 21 Apr 2011 11:12:00 -0400
  
 Notice that the version has a ``-0ubuntu1`` appended to it, this is the distro revision, used so that the packaging can be updated (to fix bugs for example) with new uploads within the same source release version.
 
-Ubuntu and Debian have slightly different package versioning schemes to avoid conflicting packages with the same source version. If a Debian package has been changed in Ubuntu, it has ``ubuntuX`` (where ``X`` is the Ubuntu revision number) appended to the end of the Debian version. So if the Debian hello ``2.4-1`` package was changed by Ubuntu, the version string would be ``2.4-1ubuntu1``. If a package for the application does not exist in Debian, then the Debian revision is ``0`` (e.g., ``2.4-0ubuntu1``).
+Ubuntu and Debian have slightly different package versioning schemes to avoid conflicting packages with the same source version. If a Debian package has been changed in Ubuntu, it has ``ubuntuX`` (where ``X`` is the Ubuntu revision number) appended to the end of the Debian version. So if the Debian hello ``2.6-1`` package was changed by Ubuntu, the version string would be ``2.6-1ubuntu1``. If a package for the application does not exist in Debian, then the Debian revision is ``0`` (e.g., ``2.6-0ubuntu1``).
 
 For further information, see the `changelog section (Section 4.4) <http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ of the Debian Policy Manual.
 
@@ -49,8 +49,8 @@ For the Ubuntu hello package, the control file looks something like::
  Priority: optional
  Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
  XSBC-Original-Maintainer: Jane Doe <packager@example.com>
- Standards-Version: 3.7.3
- Build-Depends: debhelper (>= 5)
+ Standards-Version: 3.9.1
+ Build-Depends: debhelper (>= 7)
  Homepage: http://www.gnu.org/software/hello/
  
  Package: hello
