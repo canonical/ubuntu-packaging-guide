@@ -28,7 +28,7 @@ Here is a sample changelog file for hello::
 
    * New upstream release with lots of bug fixes and feature improvements.
 
- -- Captain Packager <packager@coolness.com>  Wed,  5 Jan 2009 22:38:49 -0700
+ -- Jane Doe <packager@example.com>  Wed,  5 Jan 2009 22:38:49 -0700
  
 Notice that the version has a ``-0ubuntu1`` appended to it, this is the distro revision, used so that the packaging can be updated (to fix bugs for example) with new uploads within the same source release version.
 
@@ -48,7 +48,7 @@ For the Ubuntu hello package, the control file looks something like::
  Section: devel
  Priority: optional
  Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
- XSBC-Original-Maintainer: Captain Packager <packager@coolness.com>
+ XSBC-Original-Maintainer: Jane Doe <packager@example.com>
  Standards-Version: 3.7.3
  Build-Depends: debhelper (>= 5)
  Homepage: http://www.gnu.org/software/hello/
@@ -106,7 +106,7 @@ Generally, copyright information is found in the COPYING file in the program's s
   `/usr/share/common-licenses/GPL-2'.
  
  Files: debian/*
- Copyright: Copyright 1998 Captain Packager <packager@coolness.com>
+ Copyright: Copyright 1998 Jane Doe <packager@example.com>
  License: GPL-2+
  
 This example follows the `DEP-5: Machine-parseable debian/copyright <http://dep.debian.net/deps/dep5/>`_ proposal. You are encouraged to use this format as well.
