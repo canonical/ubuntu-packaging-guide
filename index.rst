@@ -6,15 +6,20 @@
 Welcome to ubuntu-packaging-guide's documentation!
 ==================================================
 
-Contents:
+The guide is split up into two sections:
+
+* A list of articles based on tasks, so things you want to get done.
+* A set of :doc:`knowledge base</knowledge-base>` articles that dig deeper 
+  into specific bits of our tools and workflows.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    introduction-to-ubuntu-development
    getting-set-up
    fixing-a-bug
-   debian-dir-overview
+   knowledge-base
+
 
 Indices and tables
 ==================
@@ -22,4 +27,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
