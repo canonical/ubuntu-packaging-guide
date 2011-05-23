@@ -44,3 +44,18 @@ have committed your current work first::
 Any conflicts will be reported, and you can fix them up.  To review the
 changes that you just merged use `bzr diff`.  To undo the merge use `bzr
 revert`.  Once you are happy with the changes then use `bzr commit`.
+
+
+Referring to versions of a package
+==================================
+
+You will often think in terms of versions of a package, rather than the
+underlying Bazaar revision numbers.  `bzr-builddeb` provides a revision
+specifier that makes this convenient.  Any command that takes a ``-r``
+argument to specify a revision or revision range will work with this
+specifier, e.g. ``bzr log``, ``bzr diff``, and so on.  To view the versions of
+a package, use the ``package:`` specifier::
+
+    $ bzr diff -r package:0.1-1..package:0.1-2
+
+This shows you the difference between package version 0.1-1 and 0.1-2.
