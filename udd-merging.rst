@@ -65,6 +65,15 @@ see all available versions run::
 After testing and committing the merge, you will need to seek sponsorship or
 upload to the archive in the normal way.
 
+If you are going to build the source package from this merged branch, you
+would use the ``-S`` option to the ``bd`` command.  One other thing you'll
+want to consider is also using the ``--package-merge`` option.  This will add
+the appropriate ``-v`` and ``-sa`` options to the source package so that all
+the changelog entries since the last Ubuntu change will be included in your
+``_source.changes`` file.   For example::
+
+    $ bzr bd -S --package-merge
+
 
 Merging a new upstream version
 ==============================
