@@ -155,6 +155,32 @@ Additional Files
 The install file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The install file is used by ``dh_install`` to install files into the binary package. It has two standard use cases:
+
+* To install files into your package that are not handled by the upstream build system.
+* Splitting a single large source package into multiple binary packages.
+
+In the first case, the install file should have one line per file installed, specifying both the the file and the installation directory. For example, the following install file would install the script ``foo`` in the source package's root directory to ``usr/bin`` and a desktop file in the debian directory to ``usr/share/applications``::
+
+ foo usr/bin
+ debian/bar.desktop usr/share/applications
+
+In the second case, files installed into ``debian/tmp`` can then be moved into separate binary packages using multiple ``$package_name.install`` files. This is often done to split large amounts of architecture independent data out of architecture dependent packages and into ``Architecture: all`` packages. In this case, only the name of the files (or directories) to be installed are needed without the installation directory. For example, ``foo.install`` containing only the architecture dependent files might look like::
+
+ usr/bin/
+ usr/lib/foo/*.so
+
+While ``foo-common.install`` containing only the architecture independent file might look like::
+
+ /usr/share/doc/
+ /usr/share/icons/
+ /usr/share/foo/
+ /usr/share/locale/
+
+This would create two binary packages, ``foo`` and ``foo-common``. Both would require their own paragraph in ``debian/control``.
+
+See ``man dh_install`` and the `install file section (Section 5.11) <http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_  of the Debian New Maintainers' Guide for additional details.
+
 The watch file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -188,7 +214,7 @@ If for some reason, you wish to keep using the old format, please create this fi
 
 http://wiki.debian.org/Projects/DebSrc3.0 summarizes information concerning and the benefits of the switch to the 3.0 source package formats.
 
-See ``man dpkg-source``, the `source/format section (Section 5.21) <http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of the Debian New Maintainers' Guide, and for additional details.
+See ``man dpkg-source`` and the `source/format section (Section 5.21) <http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of the Debian New Maintainers' Guide for additional details.
 
 Additional Resources
 -------------------------------
