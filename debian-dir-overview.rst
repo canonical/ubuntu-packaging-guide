@@ -178,7 +178,17 @@ For further information, see ``man uscan`` and the `watch file section (Section 
 The source/format file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+This file indicates the format of the source package. Currently, the package source format defaults to 1.0 if this file does not exist. You are encouraged to use the newer 3.0 source format. In this case, the file should contain a single line indicating the desired format:
 
+* ``3.0 (native)`` for Debian native packages or
+
+* ``3.0 (quilt)`` for packages with a separate upstream tarball
+
+If for some reason, you wish to keep using the old format, please create this file and put ``1.0`` in it to be explicit about the source package version. This allows for the future removal of the 1.0 default for the package source format.
+
+http://wiki.debian.org/Projects/DebSrc3.0 summarizes information concerning and the benefits of the switch to the 3.0 source package formats.
+
+See ``man dpkg-source``, the `source/format section (Section 5.21) <http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of the Debian New Maintainers' Guide, and for additional details.
 
 Additional Resources
 -------------------------------
