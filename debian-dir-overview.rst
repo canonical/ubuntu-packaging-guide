@@ -158,6 +158,23 @@ The install file
 The watch file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The debian/watch file allows us to check automatically for new upstream versions using the tool ``uscan``. The first line of the watch file must be the format version (3, at the time of this writing), while the following lines contain any URLs to parse. For example::
+
+ version=3
+ 
+ http://ftp.gnu.org/gnu/hello/hello-(.*).tar.gz
+
+Running ``uscan`` in the root source directory will now compare the upstream version number in debian/changelog with the latest available upstream version. If a new upstream version is found, it will be automatically downloaded. For example::
+
+ $ uscan 
+ hello: Newer version (2.7) available on remote site:
+   http://ftp.gnu.org/gnu/hello/hello-2.7.tar.gz
+   (local version is 2.6)
+ hello: Successfully downloaded updated package hello-2.7.tar.gz
+     and symlinked hello_2.7.orig.tar.gz to it
+
+For further information, see ``man uscan`` and the `watch file section (Section 4.11) <http://www.debian.org/doc/debian-policy/ch-source.html#s-debianwatch>`_ of the Debian Policy Manual.
+
 The source/format file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
