@@ -1,6 +1,8 @@
 Basic Overview of the ``debian/`` Directory
 ==================================================
 
+This article will briefly explain the different files important to the packaging of Ubuntu packages which are contained in the ``debian/`` directory. The most important of them are changelog, control, copyright, and rules. These are required for all packages. A number of additional files in the ``debian/`` may be used in order to customize and configure the behavior of the package. Some of these files are discussed in this article, but this is not meant to be a complete list.
+
 The changelog
 -------------------------------
 
