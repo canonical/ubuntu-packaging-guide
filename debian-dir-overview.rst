@@ -65,7 +65,9 @@ For the Ubuntu hello package, the control file looks something like::
   the GNU Project's `hello world' program (which is itself an example
   for the GNU Project).
  
-The first paragraph describes the source package including the list of packages required to build the package from source in the Build-Depends field. It also contains some meta-information such as the maintainer's name, the version of Debian Policy that the package complies with, the location of the packaging version control repository, and the upstream home page. Note that in Ubuntu, we set the Maintainer field to a general address because anyone can change any package (this differs from Debian where changing packages is usually restricted to an individual or a team).
+The first paragraph describes the source package including the list of packages required to build the package from source in the Build-Depends field. It also contains some meta-information such as the maintainer's name, the version of Debian Policy that the package complies with, the location of the packaging version control repository, and the upstream home page.
+
+Note that in Ubuntu, we set the Maintainer field to a general address because anyone can change any package (this differs from Debian where changing packages is usually restricted to an individual or a team). Packages in Ubuntu should generally have the Maintainer field set to ``Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>``. If the Maintainer field is modified, the old value should be saved in the ``XSBC-Original-Maintainer`` field. This can be done automatically with the  ``update-maintainer`` script available in the ``ubuntu-dev-tools`` package. For further information, see the `Debian Maintainer Field spec <https://wiki.ubuntu.com/DebianMaintainerField>`_ on the Ubuntu wiki.
 
 Each additional paragraph describes a binary package built.
 
