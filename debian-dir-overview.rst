@@ -158,7 +158,7 @@ The install file
 The watch file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The debian/watch file allows us to check automatically for new upstream versions using the tool ``uscan``. The first line of the watch file must be the format version (3, at the time of this writing), while the following lines contain any URLs to parse. For example::
+The debian/watch file allows us to check automatically for new upstream versions using the tool ``uscan`` found in the ``devscripts`` package. The first line of the watch file must be the format version (3, at the time of this writing), while the following lines contain any URLs to parse. For example::
 
  version=3
  
@@ -177,6 +177,8 @@ For further information, see ``man uscan`` and the `watch file section (Section 
 
 The source/format file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 
 Additional Resources
 -------------------------------
