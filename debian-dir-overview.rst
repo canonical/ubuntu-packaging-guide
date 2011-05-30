@@ -180,7 +180,8 @@ application, then create the .deb file from the installed files. It also has a
 target to clean up all the build files so you end up with just a source package 
 again.
 
-Here is a simplified version of the rules file created by dh_make::
+Here is a simplified version of the rules file created by ``dh_make`` (which 
+can be found in the ``dh-make`` package)::
 
  #!/usr/bin/make -f
  # -*- makefile -*-
