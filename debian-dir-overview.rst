@@ -3,7 +3,8 @@ Basic Overview of the ``debian/`` Directory
 
 This article will briefly explain the different files important to the 
 packaging of Ubuntu packages which are contained in the ``debian/`` directory. 
-The most important of them are changelog, control, copyright, and rules. These 
+The most important of them are ``changelog``, ``control``, ``copyright``, and 
+rules``. These 
 are required for all packages. A number of additional files in the ``debian/`` 
 may be used in order to customize and configure the behavior of the package. 
 Some of these files are discussed in this article, but this is not meant to be 
@@ -12,11 +13,13 @@ a complete list.
 The changelog
 -------------------------------
 
-The changelog file is, as its name implies, a listing of the changes made in 
+The ``changelog`` file is, as its name implies, a listing of the changes made 
+in 
 each version. It has a specific format that gives the package name, version, 
 distribution, changes, and who made the changes at a given time. If you have a 
-GPG key, make sure to use the same name and email address in changelog as you 
-have in your key. The following is a template changelog::
+GPG key, make sure to use the same name and email address in ``changelog`` as 
+you 
+have in your key. The following is a template ``changelog``::
 
 
  package (version) distribution; urgency=urgency
@@ -35,10 +38,11 @@ the date automatically.
 Minor bullet points are indicated by a dash "-", while major points use an 
 asterisk "*".
 
-If you are packaging from scratch, ``dch --create`` (dch is in the devscripts 
+If you are packaging from scratch, ``dch --create`` (``dch`` is in the 
+``devscripts`` 
 package) will create a standard ``debian/changelog`` for you.
 
-Here is a sample changelog file for hello::
+Here is a sample ``changelog`` file for hello::
 
 
  hello (2.6-0ubuntu1) natty; urgency=low
@@ -59,7 +63,7 @@ number) appended to the end of the Debian version. So if the Debian hello
 ``2.6-1ubuntu1``. If a package for the application does not exist in Debian, 
 then the Debian revision is ``0`` (e.g., ``2.6-0ubuntu1``).
 
-For further information, see the `changelog section (Section 4.4) 
+For further information, see the ```changelog`` section (Section 4.4) 
 <http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ of 
 the Debian Policy Manual.
 
@@ -67,11 +71,11 @@ the Debian Policy Manual.
 The control file
 -------------------------------
 
-The control file contains the information that the package manager (such as 
+The ``control`` file contains the information that the package manager (such as 
 ``apt-get``, ``synaptic``, and ``adept``) uses, build-time dependencies, 
 maintainer information, and much more.
 
-For the Ubuntu hello package, the control file looks something like::
+For the Ubuntu ``hello`` package, the ``control`` file looks something like::
 
  Source: hello
  Section: devel
@@ -95,15 +99,17 @@ For the Ubuntu hello package, the control file looks something like::
   for the GNU Project).
  
 The first paragraph describes the source package including the list of packages 
-required to build the package from source in the Build-Depends field. It also 
+required to build the package from source in the ``Build-Depends`` field. It 
+also 
 contains some meta-information such as the maintainer's name, the version of 
 Debian Policy that the package complies with, the location of the packaging 
 version control repository, and the upstream home page.
 
-Note that in Ubuntu, we set the Maintainer field to a general address because 
+Note that in Ubuntu, we set the ``Maintainer`` field to a general address 
+because 
 anyone can change any package (this differs from Debian where changing packages 
 is usually restricted to an individual or a team). Packages in Ubuntu should 
-generally have the Maintainer field set to ``Ubuntu Developers 
+generally have the ``Maintainer`` field set to ``Ubuntu Developers 
 <ubuntu-devel-discuss@lists.ubuntu.com>``. If the Maintainer field is modified, 
 the old value should be saved in the ``XSBC-Original-Maintainer`` field. This 
 can be done automatically with the  ``update-maintainer`` script available in 
@@ -127,7 +133,8 @@ packaging. Ubuntu and `Debian Policy (Section 12.5)
 require that each package installs a verbatim copy of its copyright and license 
 information to ``/usr/share/doc/$(package_name)/copyright``.
 
-Generally, copyright information is found in the COPYING file in the program's 
+Generally, copyright information is found in the ``COPYING`` file in the 
+program's 
 source directory. This file should include such information as the names of the 
 author and the packager, the URL from which the source came, a Copyright line 
 with the year and copyright holder, and the text of the copyright itself. An 
@@ -174,9 +181,11 @@ format as well.
 The rules file
 -------------------------------
 
-The last file we need to look at is rules. This does all the work for creating 
+The last file we need to look at is ``rules``. This does all the work for 
+creating 
 our package. It is a Makefile with targets to compile and install the 
-application, then create the .deb file from the installed files. It also has a 
+application, then create the ``.deb`` file from the installed files. It also 
+has a 
 target to clean up all the build files so you end up with just a source package 
 again.
 
@@ -193,11 +202,13 @@ can be found in the ``dh-make`` package)::
  	dh  $@
 
 Let us go through this file in some detail. What this does is pass every build 
-target that debian/rules is called with as an argument to ``/usr/bin/dh``, 
-which itself will call all the necessary dh_* commands. 
+target that ``debian/rules`` is called with as an argument to ``/usr/bin/dh``, 
+which itself will call all the necessary ``dh_*`` commands. 
 
-dh runs a sequence of debhelper commands. The supported sequences correspond to 
-the targets of a debian/rules file: "build", "clean", "install", "binary-arch", 
+``dh`` runs a sequence of debhelper commands. The supported sequences 
+correspond to 
+the targets of a ``debian/rules`` file: "build", "clean", "install", 
+"binary-arch", 
 "binary-indep", and "binary". In order to see what commands are run in each 
 target, run::
 
@@ -213,13 +224,15 @@ Each debhelper command will record when it's successfully run in
 which commands have already been run, for which packages, and skip running 
 those commands again.
 
-Each time dh is run, it examines the log, and finds the last logged command 
+Each time ``dh`` is run, it examines the log, and finds the last logged command 
 that is in the specified sequence. It then continues with the next command in 
 the sequence. The ``--until``, ``--before``, ``--after``, and ``--remaining`` 
 options can override this behavior.
 
-If debian/rules contains a target with a name like "override_dh_command", then 
-when it gets to that command in the sequence, dh will run that target from the 
+If ``debian/rules`` contains a target with a name like ``override_dh_command``, 
+then 
+when it gets to that command in the sequence, ``dh`` will run that target from 
+the 
 rules file, rather than running the actual command. The override target can 
 then run the command with additional options, or run entirely different 
 commands instead. (Note that to use this feature, you should Build-Depend on 
@@ -236,16 +249,18 @@ Additional Files
 The install file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The install file is used by ``dh_install`` to install files into the binary 
+The ``install`` file is used by ``dh_install`` to install files into the binary 
 package. It has two standard use cases:
 
 * To install files into your package that are not handled by the upstream build system.
 * Splitting a single large source package into multiple binary packages.
 
-In the first case, the install file should have one line per file installed, 
+In the first case, the ``install`` file should have one line per file 
+installed, 
 specifying both the the file and the installation directory. For example, the 
-following install file would install the script ``foo`` in the source package's 
-root directory to ``usr/bin`` and a desktop file in the debian directory to 
+following ``install`` file would install the script ``foo`` in the source 
+package's 
+root directory to ``usr/bin`` and a desktop file in the ``debian`` directory to 
 ``usr/share/applications``::
 
  foo usr/bin
@@ -280,7 +295,7 @@ the Debian New Maintainers' Guide for additional details.
 The watch file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The debian/watch file allows us to check automatically for new upstream 
+The ``debian/watch`` file allows us to check automatically for new upstream 
 versions using the tool ``uscan`` found in the ``devscripts`` package. The 
 first line of the watch file must be the format version (3, at the time of this 
 writing), while the following lines contain any URLs to parse. For example::
@@ -290,7 +305,8 @@ writing), while the following lines contain any URLs to parse. For example::
  http://ftp.gnu.org/gnu/hello/hello-(.*).tar.gz
 
 Running ``uscan`` in the root source directory will now compare the upstream 
-version number in debian/changelog with the latest available upstream version. 
+version number in ``debian/changelog`` with the latest available upstream 
+version. 
 If a new upstream version is found, it will be automatically downloaded. For 
 example::
 
