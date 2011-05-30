@@ -45,9 +45,13 @@ would.  Once you are happy with the upload then you should `dput` the
 source package.  For example, if you want to upload your changes to your PPA,
 then you'd do::
 
-    $ dput ppa:imasponsor/myppa tomboy_1.5.2-1ubuntu5.dsc
+    $ dput ppa:imasponsor/myppa tomboy_1.5.2-1ubuntu5_source.changes
 
-You might want to do one more `bzr commit` to make sure all your changes are
+or, if you have permission to upload to the primary archive::
+
+    $ dput tomboy_1.5.2-1ubuntu5_source.changes
+
+You might want to do one more `debcommit` to make sure all your changes are
 committed in your working tree.
 
 The last step is to mark the change as being the same as the source package
