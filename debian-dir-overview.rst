@@ -63,7 +63,7 @@ number) appended to the end of the Debian version. So if the Debian hello
 ``2.6-1ubuntu1``. If a package for the application does not exist in Debian, 
 then the Debian revision is ``0`` (e.g., ``2.6-0ubuntu1``).
 
-For further information, see the ```changelog`` section (Section 4.4) 
+For further information, see the `changelog section (Section 4.4) 
 <http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ of 
 the Debian Policy Manual.
 
