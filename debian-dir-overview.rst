@@ -30,7 +30,7 @@ have in your key. The following is a template ``changelog``::
 
  -- maintainer name <email address>[two spaces]  date
  
-The format (especially of the date) is important. The date should be in RFC822 
+The format (especially of the date) is important. The date should be in :rfc:`5322` 
 format, which can be obtained by using the command ``date -R``. For 
 convenience, the command ``dch`` may be used to edit changelog. It will update 
 the date automatically.
