@@ -2,18 +2,26 @@
 Knowledge base of the Ubuntu Packaging Guide
 ============================================
 
-Contents:
+Table of Contents:
 
-.. toctree::
-   :maxdepth: 1
+* General
 
-   udd-intro
-   udd-working
-   udd-sponsorship
-   udd-uploading
-   udd-latest
-   udd-merging
-   udd-patchsys
-   udd-newpackage
-   testing
-   debian-dir-overview
+  .. toctree::
+     :maxdepth: 1
+
+     debian-dir-overview
+     testing
+
+* Ubuntu Distributed Development
+  
+  .. toctree::
+     :maxdepth: 1
+
+     udd-intro
+     udd-working
+     udd-sponsorship
+     udd-uploading
+     udd-latest
+     udd-merging
+     udd-patchsys
+     udd-newpackage
