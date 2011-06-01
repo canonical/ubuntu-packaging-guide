@@ -16,3 +16,4 @@ Contents:
    udd-patchsys
    udd-newpackage
    testing
+   debian-dir-overview
