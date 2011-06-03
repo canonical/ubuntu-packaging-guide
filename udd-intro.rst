@@ -194,8 +194,8 @@ Getting a branch for a particular release
 
 When you want to do something like a `stable release update`_ (SRU), or you
 just want to examine the code in an old release, you'll want to grab the
-branch corresponding to a particular pocket in a particular Ubuntu release.
-For example, to get the Tomboy package for Maverick do::
+branch corresponding to a particular Ubuntu release.  For example, to get the
+Tomboy package for Maverick do::
 
     $ bzr branch ubuntu:m/tomboy maverick
 
