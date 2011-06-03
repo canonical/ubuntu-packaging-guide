@@ -12,7 +12,7 @@ Table of Contents:
      debian-dir-overview
      testing
 
-* Ubuntu Distributed Development
+* Development Processes
   
   .. toctree::
      :maxdepth: 1
