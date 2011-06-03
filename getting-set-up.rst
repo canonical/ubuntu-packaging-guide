@@ -282,7 +282,7 @@ Now save the file and either restart your terminal or run::
 
     $ source ~/.bashrc
 
-(If you use a different than the default shell, which is `bash`, please edit
+(If you do not use the default shell, which is `bash`, please edit
 the configuration file for that shell accordingly.)
 
 
