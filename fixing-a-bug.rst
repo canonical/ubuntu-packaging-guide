@@ -129,7 +129,7 @@ This will create a source package from the branch contents (``-us -uc`` will
 just omit the step to sign the source package) and ``pbuilder-dist`` will
 build the package from source for whatever ``release`` you choose.
 
-Once the build succeeded, install the package from 
+Once the build succeeds, install the package from 
 ``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i 
 <package>_<version>.deb``).  Then test to see if the bug is fixed.
 
@@ -143,12 +143,12 @@ look at the code in the future won't have to guess what your reasoning was and
 what your assumptions were. Every Debian and Ubuntu package source includes 
 ``debian/changelog``, where changes of each uploaded package are tracked.
 
-The easiest way to do this is to run::
+The easiest way to update this is to run::
 
   $ dch -i
 
 This will add a boilerplate changelog entry for you and launch an editor 
-where you can fill out the blanks. An example of this could be::
+where you can fill in the blanks. An example of this could be::
 
   specialpackage (1.2-3ubuntu4) natty; urgency=low
 
