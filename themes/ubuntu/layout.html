@@ -27,7 +27,6 @@
 	        <a class="sub-nav-item" {% if loop.first %}style="margin-right: 10px"{% endif %} 
 	        href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}"
 	        {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
-          {%- if not loop.first %}{{ reldelim2 }}{% endif %}
         {%- endfor %}
         {%- block rootrellink %}
         <a class="sub-nav-item" href="{{ pathto(master_doc) }}">{{ shorttitle|e }} {{ reldelim1 }}</a>
@@ -207,24 +206,25 @@
         <section id="content"> 
       {%- endif %}
           <div class="body">
+		{%- block sidebar2 %}{{ sidebar() }}{% endblock %}          	
             {% block body %} {% endblock %}
+
           </div>
       {%- if render_sidebar %}
         </section>
       {%- endif %}
       </div>
   {%- endblock %}
-
-  {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
       <div class="clearer"></div>
     </section>
 {%- endblock %}
 
-{%- block relbar2 %}{{ relbar() }}{% endblock %}
-
 {%- block footer %}
    <footer id="page-footer"> 
    <div class="container">
+   	<div class="copyright"> 
+&copy; 2008-2011 Canonical Ltd., Ubuntu Community. Ubuntu is a registered trademark of Canonical Ltd.<br /> 
+</div> 
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}

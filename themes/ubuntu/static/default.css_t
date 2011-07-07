@@ -1590,4 +1590,8 @@ ul.indent li {
 
 div.sphinxsidebar {
     float:right;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
 }
