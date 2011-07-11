@@ -19,7 +19,7 @@ merged. In this guide we will go through all the necessary steps one by one.
 Finding the problem
 ===================
 
-There is a lot of different ways to find things to work on. It might be a bug
+There are a lot of different ways to find things to work on. It might be a bug
 report you are encountering yourself (which gives you a good opportunity to
 test the fix), or a problem you noted elsewhere, maybe in a bug report.
 
@@ -55,7 +55,7 @@ This is most common when a single source package is used to build multiple
 different binary packages.  To find the source package for a particular binary
 package, type::
 
-    $ apt-cache show tomboy | grep ^Source:
+    $ apt-cache showsrc tomboy | grep ^Package:
 
 In this case, nothing is printed, meaning that ``tomboy`` is also the name of
 the binary package.  An example where the source and binary package names
