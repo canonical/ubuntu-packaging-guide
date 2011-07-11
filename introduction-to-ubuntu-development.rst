@@ -13,11 +13,11 @@ which are the .deb files users can install.
 
 Every time a new version of an application is released, or when someone makes
 a change to the source code that goes into Ubuntu, the source package must be
-uploaded to the build machines to be compiled. The resulting binary packages 
-then are distributed to the archive and its mirrors in different countries. 
-The URLs in ``/etc/apt/sources.list`` point to an archive or mirror.  Every 
-day CD images are built for a selection of different Ubuntu flavours.  Ubuntu 
-Desktop, Ubuntu Server, Kubuntu and others specify a list of required 
+uploaded to Launchpad's build machines to be compiled. The resulting binary
+packages then are distributed to the archive and its mirrors in different
+countries. The URLs in ``/etc/apt/sources.list`` point to an archive or mirror. 
+Every day CD images are built for a selection of different Ubuntu flavours. 
+Ubuntu Desktop, Ubuntu Server, Kubuntu and others specify a list of required 
 packages that get on the CD. These CD images are then used for installation 
 tests and provide the feedback for further release planning.
 

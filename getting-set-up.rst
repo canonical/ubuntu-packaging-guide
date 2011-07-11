@@ -4,8 +4,8 @@ Getting Set Up
 
 There are a number of things you need to do to get started developing for Ubuntu.
 This article is designed to get your computer set up so that you can start 
-working with packages, and upload your packages to Launchpad. Here's what we'll 
-cover:
+working with packages, and upload your packages to Ubuntu's hosting
+platform, Launchpad. Here's what we'll cover:
 
 * Installing packaging-related software. This includes:
 
@@ -33,7 +33,7 @@ Install basic packaging software
 
 There are a number of tools that will make your life as an Ubuntu developer
 much easier.  You will encounter these tools later in this guide.  To install
-most of the tools you will need, run this command::
+most of the tools you will need run this command::
 
     $ sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file
 
