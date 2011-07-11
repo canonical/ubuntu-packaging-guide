@@ -40,9 +40,9 @@
       <section id="searchbox-container"> 
 <form id="site_search_form" action="/search/" method="get"> 
 		<input id="id_q" type="text" name="q" maxlength="100" /> 
-		<input type="image" src="search.png" title="Sök" alt="Sök"  /> 
+		<input type="image" src="search.png" title="Search" alt="Search"  /> 
 </form> 
-                </section> 
+</section> 
 	<!--<hr class="divide" />-->
     </div>
     </aside> 
@@ -155,42 +155,26 @@
   <body id="home">
 
 <aside id="top-nav"> 
-            <div class="container"> 
-                <section id="top-login"> 
-        <a class="top-login-item" href="/openid/login?next=/events/" title="Logga in">Logga in</a> 
-                </section> 
-                <nav id="top-related"> 
-                    <a class="top-nav-item" href="http://www.ubuntu.com">Ubuntu.com</a> 
-                    <a class="top-nav-item" href="http://www.ubuntu.com/community">Community</a> 
-                    <a class="top-nav-item" href="http://www.ubuntu.com/support">Support</a> 
-                    <a class="top-nav-item" href="http://www.ubuntu.com/partners">Partners</a>    
-                </nav> 
-            </div> 
-        </aside>
+  <div class="container">
+    <section id="top-login"> 
+      <a class="top-login-item" href="/openid/login?next=/events/" title="Login">Login</a> 
+    </section> 
+    <nav id="top-related"> 
+      <a class="top-nav-item" href="http://www.ubuntu.com">Ubuntu.com</a> 
+      <a class="top-nav-item" href="http://www.ubuntu.com/community">Community</a>
+      <a class="top-nav-item" href="http://www.ubuntu.com/support">Support</a>
+      <a class="top-nav-item" href="http://www.ubuntu.com/partners">Partners</a>
+    </nav> 
+  </div> 
+</aside>
 
-
- 
-        <header id="page-header"> 
-                <div class="container" > 
-                <nav id="main-nav"> 
-                
-    <a class="main-nav-item " title="Visa alla grupper" href="/teams/">Grupper</a> 
-    <a class="main-nav-item current" title="Visa alla evenemang" href="/events/">Evenemang</a> 
-    <a class="main-nav-item " title="Visa alla möten" href="/meetings/">Möten</a> 
-    <a class="main-nav-item " title="LoCo Council" href="/loco-council/">LoCo Council</a> 
-    <a class="main-nav-item " title="Om LoCo-grupper" href="/about-loco/">Om LoCo-grupper</a> 
-    <a class="main-nav-item " title="IRC-chatt" href="/irc/">IRC-chatt</a> 
- 
-                </nav> 
-                <h1 id="top-logo"> 
-		<a href="/"> 
-                <span id="the-logo"></span> 
-                <span id="loco">LoCo-gruppkatalog</span> 
-		</a> 
-                </h1> 
- 
-                </div> 
-        </header>
+<header id="page-header"> 
+  <div class="container" > 
+    <nav id="main-nav"> 
+      <a class="main-nav-item " title="Index" href="/">Index</a> 
+    </nav> 
+  </div> 
+</header>
 
 {%- block header %}{% endblock %}
 
@@ -207,8 +191,7 @@
       {%- endif %}
           <div class="body">
 		{%- block sidebar2 %}{{ sidebar() }}{% endblock %}          	
-            {% block body %} {% endblock %}
-
+    {% block body %} {% endblock %}
           </div>
       {%- if render_sidebar %}
         </section>
@@ -239,7 +222,7 @@
       {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     {%- endif %}
     </div>
-    </footer
+    </footer>
 {%- endblock %}
   </body>
 </html>

@@ -9,7 +9,7 @@
 #}
 {%- if pagename != "search" %}
 <div id="searchbox" style="display: none">
-  <h3>{{ _('Quick search') }}</h3>
+  <h4>{{ _('Quick search') }}</h4>
     <form class="search" action="{{ pathto('search') }}" method="get">
       <input type="text" name="q" size="18" />
       <input type="submit" value="{{ _('Go') }}" />
