@@ -37,6 +37,14 @@ most of the tools you will need, run this command::
 
     $ sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file
 
+
+Note: Since oneiric (or if you have Backports enabled on a currently supported 
+release, the following command will install the above and other tools which 
+are quite common in Ubuntu development::
+
+    $ sudo apt-get install packaging-dev
+
+
 This command will install the following software:
 
 * ``gnupg`` -- `GNU Privacy Guard`_ contains tools you will need to create a
