@@ -81,7 +81,8 @@ safe one (a passphrase is just a password which is allowed to include spaces).
 
 Now GPG will create a key for you, which can take a little bit of time; it 
 needs random bytes, so if you give the system some work to do it will be 
-just fine.  Move the cursor around!
+just fine.  Move the cursor around, type some paragraphs of random text, load
+some web page.
 
 Once this is done, you will get a message similar to this one::
 
@@ -99,8 +100,8 @@ world can identify messages and files as yours. To do so, enter::
 
 This will send your key to one keyserver, but a network of keyservers will 
 automatically sync the key between themselves. Once this syncing is complete, 
-your signed public key will be ready to verify your your contributions 
-around the world.
+your signed public key will be ready to verify your contributions around the
+world.
 
 
 Create your SSH key
@@ -109,8 +110,8 @@ Create your SSH key
 SSH_ stands for *Secure Shell*, and it is a protocol that allows you to 
 exchange data in a secure way over a network. It is common to use SSH to access 
 and open a shell on another computer, and to use it to securely transfer files. 
-For our purposes, we will mainly be using SSH to securely communicate with 
-Launchpad. 
+For our purposes, we will mainly be using SSH to securely upload source packages
+to Launchpad. 
 
 To generate a SSH key, enter::
 
