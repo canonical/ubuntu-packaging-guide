@@ -57,18 +57,6 @@ package, type::
 
     $ apt-cache showsrc tomboy | grep ^Package:
 
-In this case, nothing is printed, meaning that ``tomboy`` is also the name of
-the binary package.  An example where the source and binary package names
-differ is ``python-vigra``.  While that is the binary package name, the source
-package is actually ``libvigraimpex`` and can be found with this command (and
-its output)::
-
-    $ apt-cache show python-vigra | grep ^Source:
-    Source: libvigraimpex
-
-.. XXX: Link to SRU article.
-
-
 Getting the code
 ================
 
@@ -206,3 +194,4 @@ second command will open the Launchpad page of the remote branch in your
 browser. There find the "(+) Propose for merging" link, click it to get the
 change reviewed by somebody and included in Ubuntu.
 
+.. XXX: Link to SRU article.
