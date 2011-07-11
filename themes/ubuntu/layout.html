@@ -20,7 +20,7 @@
         
 
 {%- macro relbar() %}
-    <aside id="page-related">
+  <aside id="page-related">
     <div class="container" id="sub-nav-container" > 
        <nav id="sub-nav"> 
         {%- for rellink in rellinks %}
@@ -37,15 +37,17 @@
         {%- block relbaritems %} {% endblock %}
       </nav>
 
-      <section id="searchbox-container"> 
-<form id="site_search_form" action="/search/" method="get"> 
-		<input id="id_q" type="text" name="q" maxlength="100" /> 
-		<input type="image" src="search.png" title="Search" alt="Search"  /> 
-</form> 
-</section> 
-	<!--<hr class="divide" />-->
-    </div>
-    </aside> 
+      <section id="searchbox-container">
+      <form class="search" action="{{ pathto('search') }}" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="{{ _('Go') }}" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <script type="text/javascript">$('#searchbox').show(0);</script>
+    </section> 
+  </div>
+</aside> 
 {%- endmacro %}
 
 {%- macro sidebar() %}

@@ -876,11 +876,11 @@ FORM.search_form INPUT, #searchbox:focus {
 }
 
 #page-footer {
-    background: url("../images/footer.png") repeat-x scroll 0 0 #EEECEA
+    background: url("footer.png") repeat-x scroll 0 0 #EEECEA
 }
 
  #page-footer .container {
-     background: url("../images/footer.png") repeat-x scroll 0 0 #EEECEA;
+     background: url("footer.png") repeat-x scroll 0 0 #EEECEA;
      padding: 0px 10px;
      width: 960px;
  }
