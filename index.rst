@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ubuntu-packaging-guide's documentation!
+Ubuntu Packaging Guide
 ==================================================
 
 The guide is split up into two sections:
