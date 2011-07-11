@@ -76,8 +76,8 @@ ask you if you want it to expire the key at some stage. It is safe to say "0",
 which means the key will never expire. The last questions will be about your
 name and email address. Just pick the ones you are going to use for Ubuntu
 development here, you can add additional email addresses later on. Adding a
-comment is not necessary. Then you will have to set a passphrase. Choose a
-safe one. 
+comment is not necessary. Then you will have to set a passphrase, choose a
+safe one (a passphrase is just a password which is allowed to include spaces). 
 
 Now GPG will create a key for you, which can take a little bit of time; it 
 needs random bytes, so if you give the system some work to do it will be 
