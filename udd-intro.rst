@@ -4,22 +4,17 @@ Ubuntu Distributed Development
 
 *Ubuntu Distributed Development* (UDD) is a technique for developing Ubuntu
 packages that uses tools, processes, and workflows similar to generic
-distributed version control (dVCS) system-based software development.  The
-dVCS used for UDD is Bazaar_.
+distributed version control system (DVCS) based software development.  The
+DVCS used for UDD is Bazaar_.
 
-You should already be familiar with basic Bazaar usage and workflow.  Ubuntu
-Intrepid_ or later is required for these instructions to work.
+You should already be familiar with basic Bazaar usage and workflow.
 
 
 Source package URLs
 ===================
 
-Bazaar provides some very nice shortcuts for accessing the source branches of
-packages in both Ubuntu and Debian (on Launchpad).  These shortcuts are
-available in Bazaar version 2.3 or newer.  You can still access source
-branches in older versions of Bazaar, using a slightly more verbose syntax.
-
-The examples in this guide always use the ``ubuntu:`` prefix.
+Bazaar provides some very nice shortcuts for accessing Launchpad's source
+branches of packages in both Ubuntu and Debian.
 
 
 Source branch shortcuts
