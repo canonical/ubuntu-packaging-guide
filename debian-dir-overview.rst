@@ -59,7 +59,7 @@ changed in Ubuntu, it has ``ubuntuX`` (where ``X`` is the Ubuntu revision
 number) appended to the end of the Debian version. So if the Debian hello 
 ``2.6-1`` package was changed by Ubuntu, the version string would be 
 ``2.6-1ubuntu1``. If a package for the application does not exist in Debian, 
-then the Debian revision is ``0`` (e.g., ``2.6-0ubuntu1``).
+then the Debian revision is ``0`` (e.g. ``2.6-0ubuntu1``).
 
 For further information, see the `changelog section (Section 4.4) 
 <http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ of 
@@ -115,7 +115,7 @@ the ``ubuntu-dev-tools`` package. For further information, see the `Debian
 Maintainer Field spec <https://wiki.ubuntu.com/DebianMaintainerField>`_ on the 
 Ubuntu wiki.
 
-Each additional paragraph describes a binary package built.
+Each additional paragraph describes a binary package to be built.
 
 For further information, see the `control file section (Chapter 5) 
 <http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the Debian 
@@ -264,10 +264,12 @@ root directory to ``usr/bin`` and a desktop file in the ``debian`` directory to
  foo usr/bin
  debian/bar.desktop usr/share/applications
 
-In the second case, files installed into ``debian/tmp`` can then be moved into 
-separate binary packages using multiple ``$package_name.install`` files. This 
-is often done to split large amounts of architecture independent data out of 
-architecture dependent packages and into ``Architecture: all`` packages. In 
+When a source package is producing multiple binary packages ``dh`` will
+install the files into ``debian/tmp`` rather than directly into
+``debian/<package>``. Files installed into ``debian/tmp`` can then be moved
+into separate binary packages using multiple ``$package_name.install`` files.
+This is often done to split large amounts of architecture independent data out
+of architecture dependent packages and into ``Architecture: all`` packages. In 
 this case, only the name of the files (or directories) to be installed are 
 needed without the installation directory. For example, ``foo.install`` 
 containing only the architecture dependent files might look like::
@@ -319,6 +321,10 @@ For further information, see ``man uscan`` and the `watch file section (Section
 4.11) <http://www.debian.org/doc/debian-policy/ch-source.html#s-debianwatch>`_ 
 of the Debian Policy Manual.
 
+For a list of packages where the ``watch`` file reports they are not in sync
+with upstream see `Ubuntu External Health Status
+<http://qa.ubuntuwire.org/uehs/no_updated.html>`_.
+
 The source/format file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -327,7 +333,7 @@ source format defaults to 1.0 if this file does not exist. You are encouraged
 to use the newer 3.0 source format. In this case, the file should contain a 
 single line indicating the desired format:
 
-* ``3.0 (native)`` for Debian native packages or
+* ``3.0 (native)`` for Debian native packages (no upstream version) or
 
 * ``3.0 (quilt)`` for packages with a separate upstream tarball
 
