@@ -42,32 +42,34 @@ with `bzr diff`.  This should show you the same changes as a debdiff would
 before you upload the source package.
 
 The next step is to build and test the modified source package as you normally
-would.  Once you are happy with the upload then you should `dput` the
-source package.  For example, if you want to upload your changes to your PPA,
-then you'd do::
+would::
 
-    $ dput ppa:imasponsor/myppa tomboy_1.5.2-1ubuntu5_source.changes
-
-or, if you have permission to upload to the primary archive::
-
-    $ dput tomboy_1.5.2-1ubuntu5_source.changes
-
-You might want to do one more `debcommit` to make sure all your changes are
-committed in your working tree.
+    $ bzr bd -S
 
 The last step is to mark the change as being the same as the source package
-that was uploaded, so run::
+that was uploaded, bzr-builddeb will override the `tag` command to
+automatically tag with the version number in debian/changelog so run::
 
-    $ bzr mark-uploaded
+    $ bzr tag
 
-This also tells the package importer that what is in the Bazaar branch is the
-same as in the archive.
+This tag will tell the package importer that what is in the Bazaar branch
+is the same as in the archive.
 
 Now you can push the changes back to Launchpad::
 
     $ bzr push ubuntu:tomboy
 
 (Change the destination if you are uploading an SRU or similar.)
+
+Once you are happy with the upload then you should use `dput` to upload the
+built source package to Launchpad. For example, if you want to upload your
+changes to your PPA, then you'd do::
+
+    $ dput ppa:imasponsor/myppa tomboy_1.5.2-1ubuntu5_source.changes
+
+or, if you have permission to upload to the primary archive::
+
+    $ dput ubuntu tomboy_1.5.2-1ubuntu5_source.changes
 
 You are now free to delete your feature branch, as it is merged, and can
 be re-downloaded from Launchpad if needed.
