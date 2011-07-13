@@ -91,16 +91,5 @@ dash in it, then it's not a native package, so remove the configuration file.
 Note that while `bzr bd` has a `--native` switch, it does not have a
 `--no-native` switch.
 
-You might also see an error that looks something like this:
-
-    dpkg-source: error: Version number suggests Ubuntu changes, but
-    Maintainer: does not have Ubuntu address
-
-In a sense, this is a safeguard to ensure that ``update-maintainer`` is run
-when necessary.  However in this case, you can just temporarily set the
-``$DEBEMAIL`` environment variable to a non-@ubuntu.com address::
-
-    $ DEBEMAIL='me@example.com' bzr bd -S
-
 Once you've got the source package, you can build it as normal with
-``pbuilder`` or ``sbuild``.
+``pbuilder-dist`` (or ``pbuilder`` or ``sbuild``).

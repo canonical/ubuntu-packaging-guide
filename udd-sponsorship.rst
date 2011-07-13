@@ -1,6 +1,6 @@
-==============================
-Seeking Review and Sponsorship
-==============================
+===============================================================
+Ubuntu Distributed Development - Seeking Review and Sponsorship
+===============================================================
 
 One of the biggest advantages to using the UDD workflow is to improve quality
 by seeking review of changes by your peers.  This is true whether or not you
@@ -18,8 +18,8 @@ upload.
 Pushing to Launchpad
 ====================
 
-We previously showed you how to :ref:`link your branch to the bug
-<link-via-changelog>` using ``dch`` and ``debcommit``.  However, the branch
+We previously showed you how to :ref:`associate your branch to the bug
+<link-via-changelog>` using ``dch`` and ``bzr commit``.  However, the branch
 and bug don't actually get linked until you push the branch to Launchpad.
 
 It is not critical to have a link to a bug for every change you make,
@@ -27,14 +27,14 @@ but if you are fixing reported bugs then linking to them will be useful.
 
 The general form of the URL you should push your branch to is::
 
-    lp:~<user-id>/ubuntu/<distroseries>/<package>/bug-12345
+    lp:~<user-id>/ubuntu/<distroseries>/<package>/<branch-name>
 
 For example, to push your fix for bug 12345 in the Tomboy package for Natty,
 you'd use::
 
     $ bzr push lp:~subgenius/ubuntu/natty/tomboy/bug-12345
 
-The last component of the path is actually arbitrary; it's up to you to pick
+The last component of the path is arbitrary; it's up to you to pick
 something meaningful.
 
 However, this usually isn't enough to get Ubuntu developers to review and
@@ -66,7 +66,7 @@ bug reports instead of a merge proposal.  If you're requested to include a
 debdiff, you can generate one like this (from inside your `bug-12345`
 branch)::
 
-    $ bzr diff -rbranch:../natty
+    $ bzr diff -rbranch:../tomboy.dev
 
 Another way is to is to open the merge proposal and download the diff.
 
@@ -94,6 +94,6 @@ You can then reply to the merge proposal review explaining what you changed,
 and asking for re-review, or you can reply on the merge proposal page in
 Launchpad.
 
-Note that if you are sponsored via debdiff attached to a bug report you need
+Note that if you are sponsored via a debdiff attached to a bug report you need
 to manually update by generating a new diff and attaching that to the bug
 report.
