@@ -7,7 +7,9 @@ packages that uses tools, processes, and workflows similar to generic
 distributed version control system (DVCS) based software development.  The
 DVCS used for UDD is Bazaar_.
 
-You should already be familiar with basic Bazaar usage and workflow.
+You should already be familiar with basic Bazaar usage and workflow.  For an
+introduction to Bazaar see the `Bazaar Users Guide
+<http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_.
 
 
 Source package URLs
@@ -25,14 +27,12 @@ To refer to source branches use::
     ubuntu:package
 
 where *package* refers to the package name you're interested in.  This URL
-refers to the package in the current development version of Ubuntu.  As of
-this writing (2011-02-04) that version is Natty_ which will be released as
-Ubuntu 11.04.  Thus, to refer to the branch of Tomboy in Natty, you would
-use::
+refers to the package in the current development version of Ubuntu.  To
+refer to the branch of Tomboy in the development version, you would use::
 
     ubuntu:tomboy
 
-To refer to the version of a source package in an older release of ubuntu,
+To refer to the version of a source package in an older release of Ubuntu,
 just prefix the package name with the release's code name.  E.g. to refer to
 Tomboy's source package in Maverick_ use::
 
@@ -53,28 +53,8 @@ and to access Tomboy in Debian Lenny_ use::
     debianlp:lenny/tomboy
 
 
-Explicit source branches
-------------------------
-
-If you're using an older version of Bazaar, the ``ubuntu:`` and ``debianlp:``
-prefixes won't be available to you.  Instead use the ``lp:`` prefix to access
-the source branch.  For example, Tomboy in the latest Ubuntu development
-release is available at::
-
-    lp:ubuntu/tomboy
-
-while the Maverick version is available at::
-
-    lp:ubuntu/maverick/tomboy
-
-and the Debian Lenny version is available at::
-
-    lp:debian/lenny/tomboy
-
-
 .. _`Bazaar`: http://bazaar.canonical.com/en/
 .. _`Intrepid`: https://wiki.ubuntu.com/IntrepidIbex
-.. _Natty: https://wiki.ubuntu.com/NattyNarwhal
 .. _Maverick: https://wiki.ubuntu.com/MaverickMeerkat
 .. _Lenny: http://debian.org/releases/stable/
 
@@ -118,7 +98,7 @@ a Bazaar tag corresponding to that new version.  You can use this tag to
 ensure that the import is up-to-date.  To find the tag of the last revision
 committed by the package importer, do::
 
-    $ bzr log -l 1 ubuntu:tomboy | grep ^tags:
+    $ bzr log ubuntu:tomboy | grep ^tags | head -n 1
     tags: 1.5.2-1ubuntu4
 
 By comparing the version number returned by ``rmadison`` and the tag added by
@@ -126,20 +106,20 @@ the package importer, we can see that the ``tomboy`` source package for Natty
 is up-to-date.
 
 Here's an example of a package that is out-of-date.  Let's say you want to fix
-a problem in the ``initscripts`` binary package on Natty_.  First find out the
+a problem in the ``initscripts`` binary package.  First find out the
 latest binary package versions that are available::
 
-    $ rmadison initscripts | grep natty
-    initscripts | 2.87dsf-4ubuntu19 |         natty | amd64, i386
+    $ rmadison initscripts | tail -n 1
+    initscripts | 2.87dsf-4ubuntu25 |       oneiric | amd64, i386
 
 Then determine the source package corresponding to this binary package::
 
-    $ apt-cache show initscripts | grep ^Source:
-    Source: sysvinit
+    $ apt-cache showsrc initscripts | grep ^Package:
+    Package: sysvinit
 
 Find the latest tag added by the package importer::
 
-    $ bzr log -l 1 ubuntu:sysvinit | grep ^tags:
+    $ bzr log ubuntu:sysvinit | grep ^tags | head -n 1
     tags: 2.86.ds1-61ubuntu13
 
 Here we can see that ``2.86.ds1-61ubuntu13`` is older than
@@ -149,6 +129,9 @@ http://package-import.ubuntu.com/status/sysvinit.html.
 
 When you find such out-of-date packages, be sure to `file a bug on the UDD
 project`_ to get the issue resolved.
+
+A feature in progress is for a warning to be automatically printed when
+branching an out of date import, this will make the above obsolete.
 
 .. _branching:
 
@@ -168,20 +151,21 @@ would like to use::
 You will see that a `tomboy` directory is created in your current working
 area.  Change to this new directory for the rest of your work::
 
-    $ cd foobar
+    $ cd tomboy
 
 
 Getting the trunk branch
 ------------------------
 
 We use the `bzr branch` command to create a local branch of the package.
-We'll name the target directory `natty` just to keep things easy to remember::
+We'll name the target directory `tomboy.dev` just to keep things easy to
+remember::
 
-    $ bzr branch ubuntu:tomboy natty
+    $ bzr branch ubuntu:tomboy tomboy.dev
 
-The `natty` directory represents the version of Tomboy in Natty, and you can
-always ``cd`` into this directory and do a `bzr pull` to get any future
-updates.
+The tomboy.dev directory represents the version of Tomboy in the development
+version of Ubuntu, and you can always ``cd`` into this directory and do a `bzr
+pull` to get any future updates.
 
 
 Getting a branch for a particular release
@@ -206,7 +190,7 @@ tree to which the source package will be imported (remember to cd out of the
 `tomboy` directory created above)::
 
     $ bzr init-repo newpackage
-    $ cd new-package
+    $ cd newpackage
     $ bzr init debian
     $ cd debian
     $ bzr import-dsc http://ftp.de.debian.org/debian/pool/main/n/newpackage/newpackage_1.0-1.dsc
