@@ -12,7 +12,7 @@ Updating your main branch
 Updating your copy of a branch that corresponds to the package in a particular
 release is very simple, simply use `bzr pull` from the appropriate directory::
 
-    $ cd tomboy/natty
+    $ cd tomboy/tomboy.dev
     $ bzr pull
 
 This works wherever you have a checkout of a branch, so it will work for
@@ -39,7 +39,7 @@ To merge the changes you just need to use `bzr merge-package`, but you must
 have committed your current work first::
 
     $ cd tomboy/bug-12345
-    $ bzr merge-package ../natty
+    $ bzr merge-package ../tomboy.dev
 
 Any conflicts will be reported, and you can fix them up.  To review the
 changes that you just merged use `bzr diff`.  To undo the merge use `bzr
