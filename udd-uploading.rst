@@ -4,7 +4,7 @@ Uploading a package
 
 Once your merge proposal is reviewed and approved, you will want to upload
 your package, either to the archive (if you have permission) or to your
-*`Personal Package Archive`_* (PPA).  You might also want to do an upload if
+`Personal Package Archive`_ (PPA).  You might also want to do an upload if
 you are sponsoring someone else's changes.
 
 
@@ -16,17 +16,18 @@ get that change back on to the main source branch, build a source package, and
 then upload it.
 
 First, you need to check that you have the latest version of the package in
-your checkout of the development package::
+your checkout of the development package trunk::
 
-    $ cd tomboy/natty
+    $ cd tomboy/tomboy.dev
     $ bzr pull
 
 This pulls in any changes that may have been committed while you were working
 on your fix.  From here, you have several options.  If the changes on the
-trunk are large, and it will take a while to merge them and test the package,
-then you can merge them back into your working branch to do this.  If not,
-then you can carry on merging your working branch to the main one.  You'll
-want to use the Bazaar ``merge-package`` command rather than just ``merge``::
+trunk are large and you feel should be tested along with your change you can
+merge them into your bug fix branch and test there.  If not,
+then you can carry on merging your bug fix branch into the development trunk
+branch. You'll want to use the Bazaar ``merge-package`` command rather than just
+``merge``::
 
     $ bzr merge-package ../bug-12345
 
