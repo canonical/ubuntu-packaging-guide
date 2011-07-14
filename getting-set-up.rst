@@ -140,14 +140,7 @@ a couple of purposes:
 * There is no need to install all necessary *build dependencies* locally
 * You can set up multiple instances for various Ubuntu and Debian releases
 
-Setting ``pbuilder`` up is very easy. Edit `~/.pbuilderrc` and add the
-following line to it::
-
-    COMPONENTS="main universe multiverse restricted"
-
-This will ensure that build dependencies are satisfied using all components.
-
-Then run::
+Setting ``pbuilder`` up is very easy, run::
 
     $ pbuilder-dist <release> create
 
