@@ -19,6 +19,7 @@ Sourceforge`_ and put it in a new directory.
 Now uncompress it::
 
     $ tar xf kqrcode-0.4.tar.gz
+    $ cd kqrcode-0.4
 
 This application uses the CMake build system so we want to run cmake to prepare
 for compilation::
@@ -28,10 +29,12 @@ for compilation::
     $ cmake ..
 
 CMake will check for the required dependencies, in this case it tells us we
-need Qt and KDE libraries.  If you do not have the development files for these
-libraries installed it will fail, you can install them and run CMake again::
+need Qt and KDE libraries.  We also need GCC, packagers can install
+``build-essential`` which brings this in and is assumed to be installed for all
+packages. If you do not have the development files for these libraries installed
+it will fail, you can install them and run CMake again::
 
-    $ sudo apt-get install libqt4-dev kdelibs5-dev
+    $ sudo apt-get install build-essential libqt4-dev kdelibs5-dev
     $ cmake ..
 
 Now you can compile the source::
@@ -58,9 +61,9 @@ Starting a Package
 ------------------
 
 ``bzr-builddeb`` includes a plugin to create a new package from a template,
-the plugin is a wrapper around the ``dh-make`` command::
+the plugin is a wrapper around the ``dh_make`` command::
 
-    $ sudo apt-get install dh_make
+    $ sudo apt-get install dh-make
     $ bzr dh-make kqrcode 0.4 kqrcode-0.4.tar.gz
 
 When it asks what type of package type ``s`` for single binary.
@@ -89,7 +92,7 @@ the binary packages to be built.  We will need to add the packages needed to
 compile the application to ``Build-Depends:`` so set that to::
 
     Build-Depends: debhelper (>= 7.0.50~), cmake, libqt4-dev, kdelibs5-dev,
-    libqrencode-dev libzbar-dev libzbarqt-dev
+    libqrencode-dev, libzbar-dev, libzbarqt-dev
 
 You will also need to fill in a description of the programme in the
 ``Description:`` field.
@@ -111,11 +114,71 @@ code and turns it into a binary package.  Fortunately most of the work is
 automatically done these days by ``debhelper 7`` so the universal ``%``
 Makefile target just runs the ``dh`` script which will run everything needed.
 
+Finally commit the code to your packaging branch::
+
+    $ bzr commit
+
 Building the package
 --------------------
 
+Now we need to check that our packaging successfully compiles the package and
+builds the .deb binary package::
 
+    $ bzr builddeb
+
+This should compile the package and place the result in ``../build-area``.  You
+can view the contents of the package with::
+
+    $ lesspipe kqrcode_0.4-0ubuntu1_amd64.deb
+
+Install the package and check it works::
+
+    $ sudo dpkg --install kqrcode_0.4-0ubuntu1_amd64.deb
+
+Next Steps
+----------
+
+Even if it builds the .deb binary package, your packaging will not yet be a work
+of perfection, nothing is first time.  Many errors can be automatically
+detected by our tool ``lintian`` which can be run on both the source .dsc
+meta-data file and the .deb binary package::
+
+    $ lintian kqrcode_0.4-0ubuntu1.dsc
+    $ lintian kqrcode_0.4-0ubuntu1_amd64.deb
+
+A description of each of the problems can be found on the `lintian website`_.
+
+After making a fix to the packaging you can rebuild without having to build
+from scratch using::
+
+    $ debuild -nc
+
+FIXME is there a UDD equivalent?
+
+Having checked that the package builds locally you should ensure it builds on a
+clean system using ``pbuilder``::
+
+    $ bzr builddeb -S
+    $ cd ../build-area
+    $ pbuilder-dist oneiric build kqrcode_0.4-0ubuntu1.dsc
+
+When you are happy with your package you will want others to review it.  You
+can upload the branch to Launchpad for review::
+
+    $ bzr push lp:~<lp-username>/+junk/kqrcode-package
+
+You could also upload the source package to REVU for review::
+
+    $ bzr builddeb -S
+    $ cd ..
+    $ dput revu kqrcode_0.4-0ubuntu1.dsc
+
+You will need to log in to REVU before you can upload to it.  The package
+must also be correctly signed by the GPG key you have in Launchpad.  See the
+`REVU wiki page` for full details.
 
 .. _`posted on KDE-apps.org`: http://kde-apps.org/content/show.php/KQRCode?content=143544
 .. _`version 0.4 from Sourceforge`: http://sourceforge.net/projects/kqrcode/files/kqrcode-0.4.tar.gz/download
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
+.. _`lintian website`: http://lintian.debian.org/tags.html
+.. _`REVU wiki page`: https://wiki.kubuntu.org/MOTU/Packages/REVU
