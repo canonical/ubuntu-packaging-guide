@@ -20,6 +20,7 @@ Articles
 
    introduction-to-ubuntu-development
    getting-set-up
+   udd-intro
    fixing-a-bug
 
 Knowledge Base
@@ -30,7 +31,7 @@ Knowledge Base
 
    debian-dir-overview
    testing
-   udd-intro
+   udd-getting-the-source
    udd-working
    udd-sponsorship
    udd-uploading
