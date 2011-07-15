@@ -18,6 +18,7 @@ The guide is split up into two sections:
    introduction-to-ubuntu-development
    getting-set-up
    fixing-a-bug
+   fixing-a-bug-security
    knowledge-base
 
 
