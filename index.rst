@@ -28,6 +28,7 @@ Articles
    getting-set-up
    udd-intro
    fixing-a-bug
+   fixing-a-bug-security
 
 Knowledge Base
 --------------
