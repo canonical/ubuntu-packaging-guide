@@ -10,7 +10,7 @@ Checking the Programme
 ----------------------
 
 The first stage in packaging is to get the released tar from upstream (we call
-the authors of applications "upstream") and check it compiles and runs.
+the authors of applications "upstream") and check that it compiles and runs.
 
 This guide will take you through packaging a simple application called KQRCode
 which has been `posted on KDE-apps.org`_.  Download `version 0.4 from
@@ -55,8 +55,6 @@ If the compile completes successfully you can install and run the programme::
     $ sudo make install
     $ kqrcode
 
-A running programme, ready for packaging.
-
 Starting a Package
 ------------------
 
@@ -83,8 +81,11 @@ version number to an Ubuntu version: ``0.4-0ubuntu1`` (upstream version 0.4,
 Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current
 development Ubuntu release such as ``oneiric``.
 
-``compat`` tell the ``debhelper`` scripts which build the package what version
-to run as.  Ensure it says ``7``.
+Much of the package building work is done by a series of scripts
+called ``debhelper``.  The exact behaviour of ``debhelper`` changes
+with new major versions, the compat file instructs ``debhelper`` which
+version to act as.  You will generally want to set this to the most
+recent version which is ``8``.
 
 ``control`` contains all the meta data of the package.  The first paragraph
 describes the source package.  The second and and following paragraphs describe
