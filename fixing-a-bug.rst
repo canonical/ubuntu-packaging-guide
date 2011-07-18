@@ -56,6 +56,9 @@ different binary packages.  To find the source package for a particular binary
 package, type::
 
     $ apt-cache showsrc tomboy | grep ^Package:
+    Package: tomboy
+    $ apt-cache showsrc python-vigra | grep ^Package:
+    Package: libvigraimpex
 
 Getting the code
 ================

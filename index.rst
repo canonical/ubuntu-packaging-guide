@@ -29,6 +29,7 @@ Articles
    udd-intro
    packaging-from-scratch
    fixing-a-bug
+   fixing-a-bug-security
 
 Knowledge Base
 --------------
