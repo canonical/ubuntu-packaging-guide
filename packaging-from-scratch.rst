@@ -179,8 +179,21 @@ You will need to log in to REVU before you can upload to it.  The package
 must also be correctly signed by the GPG key you have in Launchpad.  See the
 `REVU wiki page` for full details.
 
+Uploading it to a PPA (Personal Package Archive) will ensure it builds
+and give an easy way for you and others to test the binary packages.
+You will need to set up a PPA in Launchad then upload with ``dput``::
+
+    $ dput ppa:<lp-username> kqrcode_0.4-0ubuntu1.dsc
+
+See :doc:`uploading</udd-uploading>` for more information.
+
+You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the
+`MOTU mailing list`_.  There might also be a more specific team you
+could ask such as the Kubuntu team for KDE packages.
+
 .. _`posted on KDE-apps.org`: http://kde-apps.org/content/show.php/KQRCode?content=143544
 .. _`version 0.4 from Sourceforge`: http://sourceforge.net/projects/kqrcode/files/kqrcode-0.4.tar.gz/download
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
 .. _`lintian website`: http://lintian.debian.org/tags.html
 .. _`REVU wiki page`: https://wiki.kubuntu.org/MOTU/Packages/REVU
+.. _`MOTU mailing list`: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
