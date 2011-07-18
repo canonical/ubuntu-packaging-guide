@@ -139,15 +139,16 @@ Install the package and check it works::
 Next Steps
 ----------
 
-Even if it builds the .deb binary package, your packaging will not yet be a work
-of perfection, nothing is first time.  Many errors can be automatically
-detected by our tool ``lintian`` which can be run on both the source .dsc
-metadata file and the .deb binary package::
+Even if it builds the .deb binary package, your packaging may will
+have bugs.  Many errors can be automatically detected by our tool
+``lintian`` which can be run on both the source .dsc metadata file and
+the .deb binary package::
 
     $ lintian kqrcode_0.4-0ubuntu1.dsc
     $ lintian kqrcode_0.4-0ubuntu1_amd64.deb
 
-A description of each of the problems can be found on the `lintian website`_.
+A description of each of the problems it reports can be found on the
+`lintian website`_.
 
 After making a fix to the packaging you can rebuild without having to build
 from scratch using::
