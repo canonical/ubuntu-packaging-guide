@@ -87,7 +87,7 @@ with new major versions, the compat file instructs ``debhelper`` which
 version to act as.  You will generally want to set this to the most
 recent version which is ``8``.
 
-``control`` contains all the meta data of the package.  The first paragraph
+``control`` contains all the metadata of the package.  The first paragraph
 describes the source package.  The second and and following paragraphs describe
 the binary packages to be built.  We will need to add the packages needed to
 compile the application to ``Build-Depends:`` so set that to::
@@ -142,7 +142,7 @@ Next Steps
 Even if it builds the .deb binary package, your packaging will not yet be a work
 of perfection, nothing is first time.  Many errors can be automatically
 detected by our tool ``lintian`` which can be run on both the source .dsc
-meta-data file and the .deb binary package::
+metadata file and the .deb binary package::
 
     $ lintian kqrcode_0.4-0ubuntu1.dsc
     $ lintian kqrcode_0.4-0ubuntu1_amd64.deb
