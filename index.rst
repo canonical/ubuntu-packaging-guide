@@ -21,6 +21,7 @@ Articles
    introduction-to-ubuntu-development
    getting-set-up
    fixing-a-bug
+   fixing-a-bug-security
 
 Knowledge Base
 --------------
