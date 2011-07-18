@@ -1,6 +1,6 @@
-====================
-Working on a Package
-====================
+=====================================================
+Ubuntu Distributed Development - Working on a Package
+=====================================================
 
 Once you have the source package branch in a shared repository, you'll want to
 create additional branches for the fixes or other work you plan to do.  You'll
@@ -15,7 +15,7 @@ Branching for a change
 The first thing to do is to make sure your source package branch is
 up-to-date.  It will be if you just checked it out, otherwise do this::
 
-    $ cd natty
+    $ cd tomboy.dev
     $ bzr pull
 
 Any updates to the package that have uploaded since your checkout will now be
@@ -25,7 +25,7 @@ want to fix bug 12345 for the Tomboy project.  When you're in the shared
 repository you previously created for Tomboy, you can create your bug fix
 branch like this::
 
-    $ bzr branch natty bug-12345
+    $ bzr branch tomboy.dev bug-12345
     $ cd bug-12345
 
 Now you can do all my work in the `bug-12345` directory.  You make changes
@@ -41,9 +41,8 @@ file.
 
 .. _link-via-changelog:
 
-Here's where things diverge a little from typical Bazaar usage.  When you
-added your `debian/changelog` entry, you should have included a bug fix tag
-that indicated which Launchpad bug issue you're fixing.  The format of this
+When you added your `debian/changelog` entry, you should have included a bug fix
+tag that indicated which Launchpad bug issue you're fixing.  The format of this
 textual tag is pretty strict: ``LP: #12345``.  The space between the ``:`` and
 the ``#`` is required and of course the number will be replaced by the actual
 bug number you're fixing.  Your `debian/changelog` entry might look something
@@ -55,18 +54,15 @@ like::
 
      -- Bob Dobbs <subgenius@example.com>  Mon, 10 Jan 2011 16:10:01 -0500
 
-Normally, when you want to commit changes to your branch, you just use ``bzr
-commit``, but in the case where you've made a change to ``debian/changelog``,
-you'll want to use the ``debcommit`` command instead::
+Commit with the normal::
 
-    $ debcommit
+    bzr commit
 
-The reason to use ``debcommit`` instead is that it automatically includes your
-``debian/changelog`` entry in the commit message, and it also adds the
-necessary metadata to link your branch to the bug report when you push your
-branch to Launchpad.  You can do that manually with ``bzr commit`` (and
-eventually, ``bzr commit`` may get smart enough to do it for you), but for now
-``debcommit`` is the most convenient way to do it.
+A hook in bzr-builddeb will use the debian/changelog text as the commit
+message and set the tag to mark bug #12345 as fixed.
+
+This only works with bzr-builddeb 2.7.5 and bzr 2.4, for older versions use
+`debcommit`.
 
 
 Building the package
@@ -95,16 +91,5 @@ dash in it, then it's not a native package, so remove the configuration file.
 Note that while `bzr bd` has a `--native` switch, it does not have a
 `--no-native` switch.
 
-You might also see an error that looks something like this:
-
-    dpkg-source: error: Version number suggests Ubuntu changes, but
-    Maintainer: does not have Ubuntu address
-
-In a sense, this is a safeguard to ensure that ``update-maintainer`` is run
-when necessary.  However in this case, you can just temporarily set the
-``$DEBEMAIL`` environment variable to a non-@ubuntu.com address::
-
-    $ DEBEMAIL='me@example.com' bzr bd -S
-
 Once you've got the source package, you can build it as normal with
-``pbuilder`` or ``sbuild``.
+``pbuilder-dist`` (or ``pbuilder`` or ``sbuild``).

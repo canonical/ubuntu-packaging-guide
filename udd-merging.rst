@@ -1,6 +1,6 @@
-=======
-Merging
-=======
+===========================================
+Merging - Updating from Debian and Upstream
+===========================================
 
 Merging is one of the strengths of Bazaar, and something we do often in Ubuntu
 development.  Updates can be merged from Debian, from a new upstream release,
@@ -47,7 +47,7 @@ Once any conflicts are resolved, and you have made any other changes that you
 need, you will add a new changelog entry, and commit::
 
     $ dch -i
-    $ debcommit
+    $ bzr commit
 
 as described earlier.
 
@@ -68,8 +68,8 @@ upload to the archive in the normal way.
 If you are going to build the source package from this merged branch, you
 would use the ``-S`` option to the ``bd`` command.  One other thing you'll
 want to consider is also using the ``--package-merge`` option.  This will add
-the appropriate ``-v`` and ``-sa`` options to the source package so that all
-the changelog entries since the last Ubuntu change will be included in your
+the appropriate ``-v`` and ``-sa`` options to the source package so that all the
+changelog entries since the last Ubuntu change will be included in your
 ``_source.changes`` file.   For example::
 
     $ bzr bd -S --package-merge
@@ -101,9 +101,8 @@ merged in, as the command isn't able to infer that (yet).
 
 The last parameter is the location of the tarball that you are upgrading to;
 this can either be a local filesystem path, or a http, ftp, sftp, etc. URI as
-shown.  The command will automatically download the tarball for you.  If you
-point to a `.tar.bz2` or similar tarball then it will recompress it as needed,
-or convert it if you pass it a `.zip` or similar.
+shown.  The command will automatically download the tarball for you.  The
+tarball will be renamed appropriately and, if required, converted to .gz.
 
 The `merge-upstream` command will either tell you that it completed
 successfully, or that there were conflicts.  Either way you will be able to
@@ -113,7 +112,7 @@ If you are merging an upstream release into an existing Bazaar branch that has
 not previously used the UDD layout, `bzr merge-upstream` will fail with an
 error that the tag for the previous upstream version is not available; the
 merge can't be completed without knowing what base version to merge against.
-To work around this, create a tag in your existing existing repo for the last
+To work around this, create a tag in your existing repository for the last
 upstream version present there; e.g., if the last Ubuntu release was
 *1.1-0ubuntu3*, create the tag *upstream-1.1* pointing to the bzr revision you
 want to use as the tip of the upstream branch.

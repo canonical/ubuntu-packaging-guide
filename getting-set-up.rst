@@ -4,8 +4,8 @@ Getting Set Up
 
 There are a number of things you need to do to get started developing for Ubuntu.
 This article is designed to get your computer set up so that you can start 
-working with packages, and upload your packages to Launchpad. Here's what we'll 
-cover:
+working with packages, and upload your packages to Ubuntu's hosting
+platform, Launchpad. Here's what we'll cover:
 
 * Installing packaging-related software. This includes:
 
@@ -33,7 +33,7 @@ Install basic packaging software
 
 There are a number of tools that will make your life as an Ubuntu developer
 much easier.  You will encounter these tools later in this guide.  To install
-most of the tools you will need, run this command::
+most of the tools you will need run this command::
 
     $ sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file
 
@@ -55,8 +55,9 @@ This command will install the following software:
 * ``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a
   collection of tools that make many packaging tasks easier.
 * ``bzr-builddeb`` (and ``bzr``, a dependency) -- distributed version control
-  tools that makes it easy for many developers to collaborate and work on the
-  same code while keeping it trivial to merge each others work.
+  with Bazaar, a new way of working with packages for Ubuntu that will make it
+  easy for many developers to collaborate and work on the same code while
+  keeping it trivial to merge each others work.
 * ``apt-file`` provides an easy way to find the binary package that contains a
   given file.
 * ``apt-cache`` (part of the ``apt`` package) provides even more information 
@@ -84,12 +85,13 @@ ask you if you want it to expire the key at some stage. It is safe to say "0",
 which means the key will never expire. The last questions will be about your
 name and email address. Just pick the ones you are going to use for Ubuntu
 development here, you can add additional email addresses later on. Adding a
-comment is not necessary. Then you will have to set a passphrase. Choose a
-safe one. 
+comment is not necessary. Then you will have to set a passphrase, choose a
+safe one (a passphrase is just a password which is allowed to include spaces). 
 
 Now GPG will create a key for you, which can take a little bit of time; it 
 needs random bytes, so if you give the system some work to do it will be 
-just fine.  Move the cursor around!
+just fine.  Move the cursor around, type some paragraphs of random text, load
+some web page.
 
 Once this is done, you will get a message similar to this one::
 
@@ -107,8 +109,8 @@ world can identify messages and files as yours. To do so, enter::
 
 This will send your key to one keyserver, but a network of keyservers will 
 automatically sync the key between themselves. Once this syncing is complete, 
-your signed public key will be ready to verify your your contributions 
-around the world.
+your signed public key will be ready to verify your contributions around the
+world.
 
 
 Create your SSH key
@@ -117,10 +119,10 @@ Create your SSH key
 SSH_ stands for *Secure Shell*, and it is a protocol that allows you to 
 exchange data in a secure way over a network. It is common to use SSH to access 
 and open a shell on another computer, and to use it to securely transfer files. 
-For our purposes, we will mainly be using SSH to securely communicate with 
-Launchpad. 
+For our purposes, we will mainly be using SSH to securely upload source packages
+to Launchpad. 
 
-To generate a SSH key, enter::
+To generate an SSH key, enter::
 
     $ ssh-keygen -t rsa
 
@@ -156,7 +158,7 @@ With a basic local configuration in place, your next step will be to
 configure your system to work with Launchpad. This section will focus
 on the following topics:
 
- * What Launchpad is, and creating a Launchpad account
+ * What Launchpad is and creating a Launchpad account
  * Uploading your GPG and SSH keys to Launchpad
  * Configuring Bazaar to work with Launchpad
  * Configuring Bash to work with Bazaar
@@ -174,6 +176,9 @@ get other Ubuntu developers to review and sponsor them.
 You will need to register with Launchpad and provide a minimal amount of
 information. This will allow you to download and upload code, submit bug 
 reports, and more.
+
+Besides hosting Ubuntu, Launchpad can host any Free Software project. For more
+information see the `Launchpad Help wiki <https://help.launchpad.net/>`_.
 
 
 Get a Launchpad account
@@ -212,8 +217,8 @@ and it will print out something like::
     sub   4096R/51FBE68C 2010-12-06
 
 
-Head to https://launchpad.net/people/+me/+editpgpkeys and copy the part about
-your "Key fingerprint" into the text box. In the case above this would be
+Head to https://launchpad.net/people/+me/+editpgpkeys and copy the "Key
+fingerprint" into the text box. In the case above this would be
 ``5C28 0144 FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on "Import
 Key".
 
@@ -253,7 +258,9 @@ Configure Bazaar
 ----------------
 
 Bazaar is the tool we use to store code changes in a logical way, to exchange
-proposed changes and merge them, even if development is done concurrently.
+proposed changes and merge them, even if development is done concurrently.  It
+is used for the new Ubuntu Distributed Development method of working with
+Ubuntu packages.
 
 To tell Bazaar who you are, simply run::
 
@@ -277,7 +284,6 @@ this to the bottom of it::
 
     $ export DEBFULLNAME="Bob Dobbs"
     $ export DEBEMAIL="subgenius@example.com"
-
 
 Now save the file and either restart your terminal or run::
 

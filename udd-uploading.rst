@@ -4,7 +4,7 @@ Uploading a package
 
 Once your merge proposal is reviewed and approved, you will want to upload
 your package, either to the archive (if you have permission) or to your
-*`Personal Package Archive`_* (PPA).  You might also want to do an upload if
+`Personal Package Archive`_ (PPA).  You might also want to do an upload if
 you are sponsoring someone else's changes.
 
 
@@ -16,17 +16,18 @@ get that change back on to the main source branch, build a source package, and
 then upload it.
 
 First, you need to check that you have the latest version of the package in
-your checkout of the development package::
+your checkout of the development package trunk::
 
-    $ cd tomboy/natty
+    $ cd tomboy/tomboy.dev
     $ bzr pull
 
 This pulls in any changes that may have been committed while you were working
 on your fix.  From here, you have several options.  If the changes on the
-trunk are large, and it will take a while to merge them and test the package,
-then you can merge them back into your working branch to do this.  If not,
-then you can carry on merging your working branch to the main one.  You'll
-want to use the Bazaar ``merge-package`` command rather than just ``merge``::
+trunk are large and you feel should be tested along with your change you can
+merge them into your bug fix branch and test there.  If not,
+then you can carry on merging your bug fix branch into the development trunk
+branch. You'll want to use the Bazaar ``merge-package`` command rather than just
+``merge``::
 
     $ bzr merge-package ../bug-12345
 
@@ -41,32 +42,34 @@ with `bzr diff`.  This should show you the same changes as a debdiff would
 before you upload the source package.
 
 The next step is to build and test the modified source package as you normally
-would.  Once you are happy with the upload then you should `dput` the
-source package.  For example, if you want to upload your changes to your PPA,
-then you'd do::
+would::
 
-    $ dput ppa:imasponsor/myppa tomboy_1.5.2-1ubuntu5_source.changes
-
-or, if you have permission to upload to the primary archive::
-
-    $ dput tomboy_1.5.2-1ubuntu5_source.changes
-
-You might want to do one more `debcommit` to make sure all your changes are
-committed in your working tree.
+    $ bzr bd -S
 
 The last step is to mark the change as being the same as the source package
-that was uploaded, so run::
+that was uploaded, bzr-builddeb will override the `tag` command to
+automatically tag with the version number in debian/changelog so run::
 
-    $ bzr mark-uploaded
+    $ bzr tag
 
-This also tells the package importer that what is in the Bazaar branch is the
-same as in the archive.
+This tag will tell the package importer that what is in the Bazaar branch
+is the same as in the archive.
 
 Now you can push the changes back to Launchpad::
 
     $ bzr push ubuntu:tomboy
 
 (Change the destination if you are uploading an SRU or similar.)
+
+Once you are happy with the upload then you should use `dput` to upload the
+built source package to Launchpad. For example, if you want to upload your
+changes to your PPA, then you'd do::
+
+    $ dput ppa:imasponsor/myppa tomboy_1.5.2-1ubuntu5_source.changes
+
+or, if you have permission to upload to the primary archive::
+
+    $ dput ubuntu tomboy_1.5.2-1ubuntu5_source.changes
 
 You are now free to delete your feature branch, as it is merged, and can
 be re-downloaded from Launchpad if needed.

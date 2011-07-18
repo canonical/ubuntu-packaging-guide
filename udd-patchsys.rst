@@ -1,9 +1,14 @@
-===========================
-Working with a patch system
-===========================
+==============================================================
+Ubuntu Distributed Development - Working with Patches via Loom
+==============================================================
+
+Here are some guidelines for working with Quilt_ patches using the Bazaar Loom
+plugin. A loom allows the development of multiple patches at once, while still
+giving each patch a branch of its own.  This is a work in progress for the UDD
+developers who will be working on improving this workflow.
 
 Many existing packages that have changes from upstream express those changes
-using a `patch system`_, of which there are several to choose from.  Usually,
+using a patch system, of which there are several to choose from.  Usually,
 when you make an additional change to a package, you'll want to add a patch
 file to the patch system being used, rather than editing the source code in
 place.  Note however that it is considered bad practice to add a patch system
@@ -18,11 +23,6 @@ you're currently better off playing along with the package's patch system.
 *You will want at least bzr loom version 2.2.1dev, otherwise you'll have
 problems pushing and pulling your threads to Launchpad.* Do ``bzr plugins`` to
 find the version you're using.
-
-Here are some guidelines that I've found helpful.  Clearly the existing tools
-can be improved, but for now this seems to work well enough.  This assumes
-you're using looms to develop your patch, and that the package itself uses the
-quilt_ patch system.
 
 One important thing to know: all source branches reflect the tree after a
 ``quilt push -a``.  In other words, when you branch a source branch, you get
@@ -182,7 +182,6 @@ tuned, or get involved!
 There's now `a bug` that tracks this.
 
 
-.. _`patch system`: https://wiki.ubuntu.com/DistributedDevelopment/Documentation/PatchSystem/PackagingGuide/PatchSystems
 .. _`Bazaar looms`: https://launchpad.net/bzr-loom
 .. _quilt: http://www.wzdftpd.net/blog/index.php?2008/02/05/3-quilt-a-patch-management-system-how-to-survive-with-many-patches
 .. _`currently includes any existing .pc directory`: https://bugs.launchpad.net/udd/+bug/672740

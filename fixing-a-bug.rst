@@ -19,7 +19,7 @@ merged. In this guide we will go through all the necessary steps one by one.
 Finding the problem
 ===================
 
-There is a lot of different ways to find things to work on. It might be a bug
+There are a lot of different ways to find things to work on. It might be a bug
 report you are encountering yourself (which gives you a good opportunity to
 test the fix), or a problem you noted elsewhere, maybe in a bug report.
 
@@ -55,28 +55,19 @@ This is most common when a single source package is used to build multiple
 different binary packages.  To find the source package for a particular binary
 package, type::
 
-    $ apt-cache show tomboy | grep ^Source:
-
-In this case, nothing is printed, meaning that ``tomboy`` is also the name of
-the binary package.  An example where the source and binary package names
-differ is ``python-vigra``.  While that is the binary package name, the source
-package is actually ``libvigraimpex`` and can be found with this command (and
-its output)::
-
-    $ apt-cache show python-vigra | grep ^Source:
-    Source: libvigraimpex
-
-.. XXX: Link to SRU article.
-
+    $ apt-cache showsrc tomboy | grep ^Package:
+    Package: tomboy
+    $ apt-cache showsrc python-vigra | grep ^Package:
+    Package: libvigraimpex
 
 Getting the code
 ================
 
 Once you know the source package to work on, you will want to get a copy of
-the code on your system, so that you can debug it.  This is done by
-:ref:`*branching* the source package <branching>` branch corresponding to the
-source package.  Launchpad maintains source package branches for all the
-packages in Ubuntu.
+the code on your system, so that you can debug it.  In Ubuntu Distributed
+Development this is done by :ref:`*branching* the source package <branching>`
+branch corresponding to the source package.  Launchpad maintains source package
+branches for all the packages in Ubuntu.
 
 Once you've got a local branch of the source package, you can investigate the
 bug, create a fix, and upload your proposed fix to Launchpad, in the form of a
@@ -84,7 +75,7 @@ Bazaar branch.  When you are happy with your fix, you can :ref:`submit a
 *merge proposal* <merge-proposal>`, which asks other Ubuntu developers to
 review and approve your change.  If they agree with your changes, an Ubuntu
 developer will upload the new version of the package to Ubuntu so that
-everyone gets the benefit or your excellent fix - and you get a little bit of
+everyone gets the benefit of your excellent fix - and you get a little bit of
 credit.  You're now on your way to becoming an Ubuntu developer!
 
 We'll describe specifics on how to branch the code, push your fix, and request
@@ -182,7 +173,7 @@ Committing the fix
 
 With the changelog entry written and saved, you can just run::
 
-  debcommit
+  bzr commit
 
 and the change will be committed (locally) with your changelog entry as a 
 commit message.
@@ -206,3 +197,4 @@ second command will open the Launchpad page of the remote branch in your
 browser. There find the "(+) Propose for merging" link, click it to get the
 change reviewed by somebody and included in Ubuntu.
 
+.. XXX: Link to SRU article.
