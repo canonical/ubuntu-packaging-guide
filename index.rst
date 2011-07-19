@@ -9,8 +9,8 @@ Ubuntu Packaging Guide
 The guide is split up into two sections:
 
 * A list of articles based on tasks, things you want to get done.
-* A set of :doc:`knowledge base</knowledge-base>` articles that dig deeper 
-  into specific bits of our tools and workflows.
+* A set of articles that dig deeper into specific bits of our tools
+  and workflows.
 
 Articles
 --------
