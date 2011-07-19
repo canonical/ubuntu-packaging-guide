@@ -139,8 +139,8 @@ Install the package and check it works::
 Next Steps
 ----------
 
-Even if it builds the .deb binary package, your packaging may will
-have bugs.  Many errors can be automatically detected by our tool
+Even if it builds the .deb binary package, your packaging may have
+bugs.  Many errors can be automatically detected by our tool
 ``lintian`` which can be run on both the source .dsc metadata file and
 the .deb binary package::
 
