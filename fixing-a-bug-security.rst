@@ -46,7 +46,10 @@ To create your patch using ``edit-patch``::
     $ edit-patch 99-fix-a-vulnerability
 
 This will apply the existing patches and put the packaging in a temporary
-directory. Now edit the files needed to fix the vulnerability.
+directory. Now edit the files needed to fix the vulnerability.  Often upstream
+will have provided a patch so you can apply that patch::
+
+    $ patch -p1 < /home/user/dbus-vulnerability.diff
 
 Aftering making the necessary changes, you just hit Ctrl-D or type exit to
 leave the temporary shell.
@@ -105,4 +108,9 @@ proposal and ensure you mark the bug as private.
 The filed bug should include a Test Case, i.e. a comment which clearly shows how
 to recreate the bug by running the old version then how to ensure the bug no
 longer exists in the new version.
+
+The bug report should also confirm that the issue is fixed in Ubuntu versions
+newer than the one with the proposed fix (in the above example newer than
+Lucid).  If the issue is not fixed in newer Ubuntu versions you should prepare
+updates for those versions too.
 
