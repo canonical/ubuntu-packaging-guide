@@ -63,7 +63,7 @@ Adding a New Patch
 -------------------
 
 To add a new patch you need to tell Quilt to create a new patch, tell it which
-files that patch should change, edit the files then refresh the patch.
+files that patch should change, edit the files then refresh the patch::
 
     $ quilt new kubuntu_02_programme_description.diff
     Patch kubuntu_02_programme_description.diff is now on top
@@ -146,7 +146,7 @@ Other Patch Systems
 Other patch systems used by packages include ``dpatch`` and ``cdbs
 simple-patchsys``, these work similarly to Quilt by keeping patches in
 debian/patches but have different commands to apply, unapply or create patches.
- You can use ``edit-patch``, shown in previous chapters, as a reliable way to
+You can use ``edit-patch``, shown in previous chapters, as a reliable way to
 work with all systems.
 
 Even older packages will include changes directly to sources and kept in the
@@ -154,4 +154,4 @@ Even older packages will include changes directly to sources and kept in the
 versions or differentiate between patches and is best avoided.
 
 Bazaar Loom is a way to keep patches as part of bzr trees, see :doc:`Working
-with Patches via Loom</udd-patchsys> for more information.
+with Patches via Loom</udd-patchsys>` for more information.
