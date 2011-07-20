@@ -193,6 +193,7 @@ updates::
 Update your patch to use the appropriate patch tags. Your patch should have at
 a minimum the Origin, Description and Bug-Ubuntu tags. For example, edit
 debian/patches/99-fix-a-vulnerability.patch to have something like::
+
     ## Description: [DESCRIBE VULNERABILITY HERE]
     ## Origin/Author: [COMMIT ID, URL OR EMAIL ADDRESS OF AUTHOR]
     ## Bug: [UPSTREAM BUG URL]
