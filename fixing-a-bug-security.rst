@@ -1,6 +1,9 @@
-===============================
+===================================
+Security and Stable Release Updates
+===================================
+
 Fixing a Security Bug in Ubuntu
-===============================
+-------------------------------
 
 Introduction
 ============
@@ -77,6 +80,7 @@ updates::
 Update your patch to use the appropriate patch tags. Your patch should have at
 a minimum the Origin, Description and Bug-Ubuntu tags. For example, edit
 debian/patches/99-fix-a-vulnerability.patch to have something like::
+
     ## Description: [DESCRIBE VULNERABILITY HERE]
     ## Origin/Author: [COMMIT ID, URL OR EMAIL ADDRESS OF AUTHOR]
     ## Bug: [UPSTREAM BUG URL]
@@ -114,3 +118,23 @@ newer than the one with the proposed fix (in the above example newer than
 Lucid).  If the issue is not fixed in newer Ubuntu versions you should prepare
 updates for those versions too.
 
+
+Stable Release Updates
+-------------------------------
+
+We also allow updates to releases where a package has a high impact bug such as
+a severe regression from a previous release or a bug which could cause data
+loss.  Due to the potential for such updates to themselves introduce bugs we
+only allow this where the change can be easily understood and verified.
+
+The process for Stable Release Updates is just the same as the proccess for
+security bugs except you should subscribe ``ubuntu-sru`` to the bug.
+
+The update will go into the ``proposed`` archive (for example
+``lucid-proposed``) where it will need to be checked that it fixes the problem
+and does not introduce new problems.  After a week without reported problems it
+can be moved to ``updates``.
+
+See the `Stable Release Updates wiki page`_ for more information.
+
+.. _`Stable Release Updates wiki page`: https://wiki.kubuntu.org/StableReleaseUpdates
