@@ -9,11 +9,11 @@
 @import url("newstyle.css");
 
 body {
-    background: url("dotted.png") repeat scroll 0 0 #FFFFFF;
+    background: url("images/dotted.png") repeat scroll 0 0 #FFFFFF;
 }
 
 #page-header {
-    background: url("header.png") repeat-x scroll 0 0 #DD4814;
+    background: url("images/header.png") repeat-x scroll 0 0 #DD4814;
 }
 
 div.sphinxsidebar {

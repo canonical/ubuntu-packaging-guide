@@ -41,8 +41,8 @@ nav ul {
 }
 
 td li, li li {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 :focus  /* remember to define focus styles! */ {
@@ -162,8 +162,8 @@ h3 {
 }
 
 p {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 dt {
@@ -173,8 +173,8 @@ dt {
 }
 
 li {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 strong {
@@ -183,6 +183,18 @@ strong {
 
 em {
     font-style: italic
+}
+
+table.basic {
+    font-size:0.75em;
+    line-height:1.3333em; /* 16x0.75 =12 */
+}
+table.basic thead th, table.basic thead a {
+    font-weight:bold;
+}
+
+table.basic thead a , table.basic tfoot a {
+    text-decoration:underline;
 }
 
 #top-logo {
@@ -204,6 +216,32 @@ em {
     font-size: 0.75em;
     /* 16x0.75 =12 */
 }
+
+/* Form typography */
+form .smalltext {
+    font-size:0.625em; 
+    line-height: 1.4em;
+}
+
+legend span.supporting, label, form .error {
+    font-size: 0.75em;
+    line-height: 1.2em;
+}
+
+legend {
+    font-size: 1em;
+    line-height: 1em;
+}
+
+input[type="text"], input[type="password"], select {
+    font-size: 0.75em;
+}
+
+input[type="submit"] {
+    font-size: 1em;
+    line-height: 1.25em;
+}
+/* END Form typography */
 
 .showcase-text {
     font-size: 0.875em;
@@ -229,11 +267,12 @@ em {
 #top-nav { 
     margin:0 auto; 
     line-height: 2em; 
+    height: 20px;
 }
 
 .top-nav-item { 
     display:inline-block; 
-    padding:0 8px; 
+    margin-right: 14px; 
     line-height:2em; 
 }
 
@@ -250,7 +289,7 @@ em {
 
 #top-related { 
     float:right; 
-    margin-right:15px; 
+    margin-right:2px; 
 }
 
 #main-nav {
@@ -286,10 +325,6 @@ em {
     margin: 5px 10px 5px 0px;
     padding: 10px 10px 0px 0px;
     width: 180px;
-}
-
-#the-logo {
-    float: right
 }
 
 #page-related {
@@ -353,12 +388,121 @@ em {
     width: 620px;
 }
 
+table.basic {
+    width:542px;
+    text-align:left;
+    padding:0 8px;
+    margin:20px auto;
+}
+
+table.basic.wide {
+    width:100%;
+}
+
+table.basic td, table.basic th {
+    padding:4px 8px;
+}
+
 #searchbox-container {
     float: right;
     margin: 0px 10px 5px 0px;
     padding: 0 0 0 10px;
     width: auto;
 }
+
+/* Form Layout */
+form {
+    width: 542px;
+    margin: 0 auto;
+}
+
+form ul.errorlist { 
+    display: inline-block;
+    line-height: 1em;
+    vertical-align: top;
+}
+
+form .error {
+    width: 184px; /* 224 - 30 */
+    height: 20px;
+    display: inline-block;
+    padding-left: 30px;
+    line-height: 1em;
+    vertical-align: top;
+    padding-top: 4px;
+}
+
+form .help {
+    position: absolute;
+    z-index: 10;
+    right: 16px;
+    width: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+label.inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+legend {
+    width: 100%;
+    position: relative;
+    padding: 8px;
+    margin: 0 -8px;
+}
+
+legend span.supporting {
+    position: absolute;
+    right: 8px;
+}
+
+fieldset {
+    position: relative;
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+input[type="text"], input[type="password"], select, textarea {
+    width: 286px;
+    height: 20px;
+    margin-right: 16px;
+    margin-bottom: 8px;
+}
+
+textarea, select[multiple="multiple"] {
+    min-width: 286px;
+    max-width: 286px;
+    min-height: 20px;
+    height: 100px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    width: 284px;
+    height: 18px;
+}
+
+input[type="text"].small, input[type="password"].small, select.small {
+    width: 134px;
+}
+
+input[type="text"].small:focus, input[type="password"].small:focus, select.small:focus {
+    width: 132px;
+}
+
+input[type="submit"] {
+    padding: 10px 8px;
+}
+/* END Form Layout */
 
 .showcase-item {
     float: left;
@@ -596,10 +740,10 @@ body {
 }
 
 #top-nav { 
-    background-color:#f7f7f7; 
+    background-color:#ffffff; 
 }
 
-.top-nav-item { 
+.top-nav-item, .top-nav-item:visited { 
     color:#333333; 
 }
 
@@ -631,7 +775,12 @@ body {
 }
 
 #the-logo {
-    padding-left: 4px
+    background: url("http://www.ubuntu.com/sites/default/themes/ubuntu10/logo.png");
+    width: 118px;
+    height: 27px;
+    display: block;
+    clear: both;
+    float: right
 }
 
 #loco {
@@ -699,6 +848,96 @@ body {
     color: #333
 }
 
+/* Form decoration */
+form ul {
+    list-style-type: none;
+}
+
+form .error {
+    background-image: url('../images/error.png');
+    background-repeat: no-repeat;
+}
+
+form .help {
+    background-image: url('../images/help.png');
+    background-repeat: no-repeat;
+}
+
+form .smalltext {
+    color: #333333;
+}
+
+label {
+    color: #333333;
+}
+
+label.required:after {
+    color: #DD4814;
+    content: " *";
+}
+
+legend {
+    background-color: #aea79f;
+    color: #ffffff;
+}
+
+legend span.supporting {
+    color: #ffffff;
+}
+
+legend span.supporting:before {
+    color: #DD4814;
+    content: "* ";
+}
+
+fieldset {
+    background-color: #dfdcd9;
+}
+
+input[type="text"], input[type="password"], select, textarea {
+    color: #333333;
+    border: 1px solid #ccc1c1;
+    background-color: white;
+}
+
+input[type="submit"][disabled="disabled"], input[type="submit"][disabled="disabled"]:hover { 
+    background-color:#AEA79F;
+    text-shadow: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 2px solid #dd4814;
+    color: #333333;
+}
+
+select:focus {
+    border: 2px solid #dd4814;
+    color: #333333;
+}
+
+input[type="text"].error, input[type="password"].error, select.error {
+    border: 2px solid #dd4814;
+    color: #dd4814;
+}
+
+input[type="submit"] {
+    border-radius: 4px;
+    background: #dd4814 url('../images/gradient.png') repeat-x;
+    color: #ffffff;
+    border: none;
+    text-shadow: black 0px 1px 2px;
+}
+
+input[type="submit"]:hover {
+    background-color: #b83a0f;
+}
+
+input[type="submit"]:active {
+    background-color: #962d0c;
+}
+/* END Form decoration */
+
+
 FORM.search_form INPUT, #searchbox {
     background-color: #f0f0f0;
     border: 1px solid #CCCCCC;
@@ -740,6 +979,38 @@ FORM.search_form INPUT, #searchbox:focus {
     height: 16px;
     margin: 7px 7px 7px 0px;
     padding: 1px 3px;
+}
+
+table.basic thead { 
+    background-color:#aea79f;
+}
+
+table.basic tfoot, table.basic tr.subsection {
+    background-color:#dfdcd9;
+}
+
+table.basic tbody tr {
+    border-bottom:1px dotted #cccccc;
+}
+
+table.basic thead th {
+    color:#ffffff;
+}
+
+table.basic tfoot td, table.basic tbody td {
+    color:#333333;
+}
+
+table.basic thead a {
+    color:#ffffff;
+}
+
+table.basic tfoot a {
+    color:#333333;
+}
+
+table.basic tbody a {
+    color:#dd4814;
 }
 
 .showcase-caption {
@@ -876,11 +1147,11 @@ FORM.search_form INPUT, #searchbox:focus {
 }
 
 #page-footer {
-    background: url("footer.png") repeat-x scroll 0 0 #EEECEA
+    background: url("../images/footer.png") repeat-x scroll 0 0 #EEECEA
 }
 
  #page-footer .container {
-     background: url("footer.png") repeat-x scroll 0 0 #EEECEA;
+     background: url("../images/footer.png") repeat-x scroll 0 0 #EEECEA;
      padding: 0px 10px;
      width: 960px;
  }
