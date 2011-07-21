@@ -197,13 +197,14 @@
           <div class="body">
 		{%- block sidebar2 %}{{ sidebar() }}{% endblock %}          	
     {% block body %} {% endblock %}
+	<div class="divide"></div>
+
           </div>
       {%- if render_sidebar %}
         </section>
       {%- endif %}
       </div>
   {%- endblock %}
-      <div class="clearer"></div>
     </section>
 {%- endblock %}
 
