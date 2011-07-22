@@ -202,8 +202,6 @@
    <footer id="page-footer"> 
    <div class="container">
    	<div class="copyright"> 
-&copy; 2008-2011 Canonical Ltd., Ubuntu Community. Ubuntu is a registered trademark of Canonical Ltd.<br /> 
-</div> 
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
@@ -217,6 +215,7 @@
     {%- if show_sphinx %}
       {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     {%- endif %}
+	</div> 
     </div>
     </footer>
 {%- endblock %}

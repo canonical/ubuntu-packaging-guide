@@ -23,6 +23,8 @@ div.sphinxsidebar {
     padding: 15px;
     margin: 10px;
     width: 230px;
+background: #F7F7F7;
+border-radius: 8px;
 }
 
 div.sphinxsidebar ul {
@@ -53,4 +55,8 @@ visibility: visible;
 
 form.search_form input, #searchbox {
 height: auto;
+}
+
+#page-footer .container div.copyright {
+padding: 10px;
 }
