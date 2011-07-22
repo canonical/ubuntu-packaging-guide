@@ -32,7 +32,7 @@
         <a class="sub-nav-item" href="{{ pathto(master_doc) }}">{{ shorttitle|e }} {{ reldelim1 }}</a>
         {%- endblock %}
         {%- for parent in parents %}
-          <a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }} {{ reldelim1 }}</a>
+          <a class="sub-nav-item" href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }} {{ reldelim1 }}</a>
         {%- endfor %}
         {%- block relbaritems %} {% endblock %}
       </nav>
@@ -106,9 +106,9 @@
         HAS_SOURCE:  {{ has_source|lower }}
       };
     </script>
-    {%- for scriptfile in script_files %}
+    {# %- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-    {%- endfor %}
+    {%- endfor % #}
     {%- if use_opensearch %}
     <link rel="search" type="application/opensearchdescription+xml"
           title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"

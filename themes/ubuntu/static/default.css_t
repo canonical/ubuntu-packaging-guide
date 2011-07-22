@@ -22,6 +22,7 @@ div.sphinxsidebar {
     border: 1px solid #ddd;
     padding: 15px;
     margin: 10px;
+    width: 230px;
 }
 
 div.sphinxsidebar ul {
