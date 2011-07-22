@@ -140,6 +140,17 @@ Then commit as usual::
     $ bzr commit -m "new upstream version"
 
 
+Making A Package Use Quilt
+-----------------------------
+
+Modern packages use Quilt by default, it is built into the packaging
+format.  Check in ``debian/source/format`` to ensure it says ``3.0
+(quilt)``.
+
+Older packages using source format 1.0 will need to explicity use
+Quilt, usually by including a makefile into ``debian/rules``.
+
+
 Other Patch Systems
 --------------------
 
