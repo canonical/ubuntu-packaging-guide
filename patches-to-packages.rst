@@ -175,5 +175,9 @@ versions or differentiate between patches and is best avoided.
 Bazaar Loom is a way to keep patches as part of bzr trees, see :doc:`Working
 with Patches via Loom</udd-patchsys>` for more information.
 
+Do not change a package's patch system without discussing it with the Debian
+maintainer or relevant Ubuntu team.  If there is no existing patch system then
+feel free to add Quilt.
+
 .. _`Quilt`: http://wiki.debian.org/UsingQuilt
 .. _`bug 815854`: https://bugs.launchpad.net/bzr-builddeb/+bug/815854
