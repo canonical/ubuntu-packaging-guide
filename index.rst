@@ -39,7 +39,6 @@ Knowledge Base
    :maxdepth: 1
 
    debian-dir-overview
-   testing
    udd-getting-the-source
    udd-working
    udd-sponsorship
