@@ -20,7 +20,7 @@ Let's look at an example package, ``kamoso`` in Natty::
     $ bzr branch ubuntu:natty/kamoso
 
 The patches are kept in ``debian/patches``.  This package has one patch
-``kubuntu_01_fix_qmax_on_armel.diff`` to fix a compile failue on ARM.  The
+``kubuntu_01_fix_qmax_on_armel.diff`` to fix a compile failure on ARM.  The
 patch has been given a name to describe what it does, a number to keep the
 patches in order (two patches can overlap if they change the same file) and in
 this case the Kubuntu team adds their own prefix to show the patch comes from
