@@ -78,6 +78,9 @@ files that patch should change, edit the files then refresh the patch::
     $ quilt refresh
     Refreshed patch kubuntu_02_programme_description.diff
 
+The ``quilt add`` step is important, if you forget it the files will not end up
+in the patch.
+
 The change will now be in
 ``debian/patches/kubuntu_02_programme_description.diff`` and the ``series``
 file will have had the new patch added to it.  You should add the new file to
