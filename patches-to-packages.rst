@@ -103,14 +103,15 @@ author before adding a patch.
 Upgrading to New Upstream Versions
 -----------------------------------
 
-When you upgrade to a new upstream version patches will often become out of
+When you upgrade to a new upstream version, patches will often become out of
 date.  They might need to be refreshed to match the new upstream source or they
 might need to be removed altogether.
 
-You should start by ensuring no patches are applied::
+You should start by ensuring no patches are applied.  Unfortunately a commit is
+needed before you can merge in the new upstream::
 
     $ quilt pop -a
-    $ bzr commit -m "remove patches"  #FIXME needing this is ugly
+    $ bzr commit -m "remove patches"
 
 Then upgrade to the new version
 
