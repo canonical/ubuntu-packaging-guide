@@ -1,5 +1,5 @@
 =====================================================
-Ubuntu Distributed Development - Working on a Package
+Working on a Package
 =====================================================
 
 Once you have the source package branch in a shared repository, you'll want to

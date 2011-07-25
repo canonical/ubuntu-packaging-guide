@@ -1,5 +1,5 @@
 ===============
-Testing the fix
+Testing a Fix
 ===============
 
 To build a test package with your changes, run these commands::
@@ -56,12 +56,3 @@ specifications are usually good information to provide as a rationale for a
 change. As a bonus, if you use the ``LP: #<number>`` notation for Launchpad
 bugs, the bug will be automatically closed when the package is uploaded to
 Ubuntu.
-
-
-Conclusion
-==========
-
-.. XXX: link to 'forwarding patches' article
-.. XXX: link to 'debdiff' article (in case of slow internet, package not 
-        imported, etc.)
-

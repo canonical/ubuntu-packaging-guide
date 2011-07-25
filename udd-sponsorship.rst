@@ -1,5 +1,5 @@
 ===============================================================
-Ubuntu Distributed Development - Seeking Review and Sponsorship
+Seeking Review and Sponsorship
 ===============================================================
 
 One of the biggest advantages to using the UDD workflow is to improve quality
