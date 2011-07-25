@@ -2,13 +2,17 @@
 Patches to Packages
 ===================
 
-Very often the sources from upstream need changes to work satisfactory.  Maybe
-there is a bug fix to the released version that needs added or a change to the
-build system needed only by Ubuntu.  We keep these changes as patches, also
-called diff files.
+Sometimes, Ubuntu package maintainers have to change the upstream source code
+in order to make it work properly on Ubuntu.  Examples include, patches to
+upstream that haven't yet made it into a released version, or changes to the
+upstream's build system needed only for building it on Ubuntu.  We could
+change the upstream source code directly, but doing this makes it more
+difficult to remove the patches later when upstream has incorporated them, or
+extract the change to submit to the upstream project.  Instead, we keep these
+changes as separate patches, in the form of diff files.
 
 There are a number of different ways of handling patches in Debian packages,
-fortunately we are standardising on one system, Quilt, which is now used by
+fortunately we are standardising on one system, `Quilt`_, which is now used by
 most packages.
 
 Let's look at an example package, ``kamoso`` in Natty::
@@ -166,3 +170,5 @@ versions or differentiate between patches and is best avoided.
 
 Bazaar Loom is a way to keep patches as part of bzr trees, see :doc:`Working
 with Patches via Loom</udd-patchsys>` for more information.
+
+.. _`Quilt`: http://wiki.debian.org/UsingQuilt
