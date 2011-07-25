@@ -48,6 +48,7 @@ Knowledge Base
    udd-merging
    udd-patchsys
    udd-newpackage
+   chroots
    traditional-packaging
 
 
