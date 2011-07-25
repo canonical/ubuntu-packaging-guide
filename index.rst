@@ -27,6 +27,7 @@ Articles
    introduction-to-ubuntu-development
    getting-set-up
    udd-intro
+   packaging-from-scratch
    fixing-a-bug
    fixing-a-bug-security
 
