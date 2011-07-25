@@ -57,77 +57,16 @@ more efficient later.  Once you are used to the process you will learn when it
 makes sense to skip these steps.
 
 
-.. _up-to-date:
-
-Ensure the source branch is up-to-date
---------------------------------------
-
-Once you've determined which source package to work on, you should ensure that
-the source branch for that package on Launchpad is up-to-date.  Some package
-imports fail for various reasons, and the `status of the package importer`_ is
-always available online.  If the source branch for a package you want to work
-on is out of sync, you'll have to use ``apt-get source`` until the import of
-that package is fixed.
-
-Let's say you want to fix a problem in Tomboy in Natty.  First, find out the
-latest binary package versions that are available::
-
-    $ rmadison tomboy | grep natty
-    tomboy | 1.5.2-1ubuntu4 |         natty | source, amd64, i386
-
-You've already seen how to :ref:`determine the source package corresponding to
-this binary package <what-to-fix>`.  For Tomboy, the binary and source
-packages are both named ``tomboy``.
-
-Whenever the package importer processes a new source package version, it adds
-a Bazaar tag corresponding to that new version.  You can use this tag to
-ensure that the import is up-to-date.  To find the tag of the last revision
-committed by the package importer, do::
-
-    $ bzr log ubuntu:tomboy | grep ^tags | head -n 1
-    tags: 1.5.2-1ubuntu4
-
-By comparing the version number returned by ``rmadison`` and the tag added by
-the package importer, we can see that the ``tomboy`` source package for Natty
-is up-to-date.
-
-Here's an example of a package that is out-of-date.  Let's say you want to fix
-a problem in the ``initscripts`` binary package.  First find out the
-latest binary package versions that are available::
-
-    $ rmadison initscripts | tail -n 1
-    initscripts | 2.87dsf-4ubuntu25 |       oneiric | amd64, i386
-
-Then determine the source package corresponding to this binary package::
-
-    $ apt-cache showsrc initscripts | grep ^Package:
-    Package: sysvinit
-
-Find the latest tag added by the package importer::
-
-    $ bzr log ubuntu:sysvinit | grep ^tags | head -n 1
-    tags: 2.86.ds1-61ubuntu13
-
-Here we can see that ``2.86.ds1-61ubuntu13`` is older than
-``2.87dsf-4ubuntu19`` so the source package is out of date, and in fact we can
-verify that by looking at the status package for the package at
-http://package-import.ubuntu.com/status/sysvinit.html.
-
-When you find such out-of-date packages, be sure to `file a bug on the UDD
-project`_ to get the issue resolved.
-
-A feature in progress is for a warning to be automatically printed when
-branching an out of date import, this will make the above obsolete.
-
 .. _branching:
 
 Creating a shared repository
 ----------------------------
 
-Okay, you want to work on the Tomboy package in Natty, and you've verified
-that the source package is up-to-date.  Before actually branching the code for
-Tomboy, create a shared repository to hold the branches for this package.
-The shared repository will make future work much more efficient.
+You want to work on the Tomboy package in Natty, and you've verified
+that the source package is named ``tomboy``.  Before actually
+branching the code for Tomboy, create a shared repository to hold the
+branches for this package.  The shared repository will make future
+work much more efficient.
 
 Do this using the `bzr init-repo` command, passing it the directory name we
 would like to use::
@@ -152,6 +91,19 @@ remember::
 The tomboy.dev directory represents the version of Tomboy in the development
 version of Ubuntu, and you can always ``cd`` into this directory and do a `bzr
 pull` to get any future updates.
+
+.. _up-to-date:
+
+Ensuring the version is up to date
+----------------------------------
+
+When you do your ``bzr branch`` you will get a message telling you if the packaging branch is up to date.  Occationally the importer fails and packaging branches do not match what is in the archive.  A message saying::
+
+    Packaging branch status: OUT-OF-DATE
+
+Means the importer has failed.  You can find out why on
+http://package-import.ubuntu.com/status/ and `file a bug on the UDD
+project`_ to get the issue resolved.
 
 
 Getting a branch for a particular release
