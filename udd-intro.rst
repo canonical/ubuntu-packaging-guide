@@ -1,202 +1,130 @@
 ===================================================
-Ubuntu Distributed Development - Getting the Source
+Ubuntu Distributed Development - Introduction
 ===================================================
 
-*Ubuntu Distributed Development* (UDD) is a technique for developing Ubuntu
+This guide focuses on packaging using the *Ubuntu Distributed Development* (UDD)
+method.
+
+*Ubuntu Distributed Development* (UDD) is a new technique for developing Ubuntu
 packages that uses tools, processes, and workflows similar to generic
 distributed version control system (DVCS) based software development.  The
 DVCS used for UDD is Bazaar_.
 
-You should already be familiar with basic Bazaar usage and workflow.  For an
-introduction to Bazaar see the `Bazaar Five Minute Tutorial
+Traditional Packaging Limitations
+---------------------------------
+
+Traditionally Ubuntu packages have been kept in tar archive files.  A
+traditional source package is made up of the upstream source tar, a "debian" tar
+(or compressed diff file for older packages) containing the packaging and a
+.dsc meta-data file.  To see a traditional package run::
+
+    $ apt-get source kdetoys
+
+This will download the upstream source ``kdetoys_4.6.5.orig.tar.bz2``, the
+packaging ``kdetoys_4.6.5-0ubuntu1.debian.tar.gz`` and the meta-data
+``kdetoys_4.6.5-0ubuntu1~ppa1.dsc``.  Assuming you have dpkg-dev installed it
+will extract these and give you the source package.
+
+Traditional packaging would edit these files and upload.  However this gives
+limited opportunity to collaborate with other developers, changes have to be
+passed around as diff files with no central way to track them and two developers
+can not make changes at the same time.  So most teams have moved to putting
+their packaging in a revision control system.  This makes it easier for several
+developers to work on a package together.  However there is no direct
+connection between the revision control system and the archive packages so the
+two must be manually kept in sync.  Since each team works in its own revision
+control system a prospective developer must first work out where that is and
+how to get the packaging before they can work on the package.
+
+Ubuntu Distributed Development
+------------------------------
+
+With Ubuntu Distributed Development all packages in the Ubuntu (and Debian)
+archive are automatically imported into Bazaar branches on our code hosting
+site Launchpad.  Changes can be made directly to these branches in
+incremental steps and by anyone with commit access.  Changes can also be made
+in forked branched and merged back in with Merge Proposals when they are large
+enough to need review or if they are by someone without direct commit access.
+
+UDD branches are all in a standard location so doing a checkout is easy::
+
+    $ bzr branch ubuntu:kdetoys
+
+The merge history includes two separate branches, one for the upstream source
+and one which adds the ``debian/`` packaging directory::
+
+    $ cd kdetoys
+    $ bzr qlog
+
+(This command uses *qbzr* for a GUI, run ``log`` instead of ``qlog`` for
+console output.)
+
+.. image:: images/kdetoys-udd-branch.png
+
+This UDD branch of *kdetoys* shows the full packaging for each version
+uploaded to Ubuntu with grey circles and the upstream source versions with
+green circles.  Versions are tagged with either the version in Ubuntu such as
+``4:4.2.29-0ubuntu1`` or for the upstream branch with the upstream version
+``upstream-4.2.96``.  
+
+Many Ubuntu packages are based on the packages in Debian, UDD also imports the
+Debian package into our branches.  In the *kdetoys* branch above the Debian
+versions from *unstable* are from the merge with blue circles while those from
+*Debian experimental* are from the merge with yellow circles.  Debian
+released are tagged with their version number e.g. ``4:4.2.2-1``.
+
+So from a UDD branch you can see the complete history of changes to the package
+and compare any two versions.  For example, to see the changes between version
+4.2.2 in Debian and the 4.2.2 in Ubuntu use::
+
+    $ bzr qdiff -r tag:4:4.2.2-1..tag:4:4.2.2-1ubuntu1
+
+(This command uses *qbzr* for a GUI, run ``diff`` instead of ``qdiff`` for
+console output.)
+
+.. image:: images/kdetoys-udd-diff.png
+
+From this we can clearly see what has changed in Ubuntu compared to Debian,
+very handy.
+
+Bazaar
+------
+
+UDD branches use Bazaar, a distributed revision control system intended to be
+easy to use for those familiar with popular systems such as Subversion while
+offering the power of Git.
+
+To do packaging with UDD you will need to know the basics of how to use
+Bazaar to manage files.  For an introduction to Bazaar see the `Bazaar Five
+Minute Tutorial
 <http://doc.bazaar.canonical.com/bzr.dev/en/mini-tutorial/index.html>`_ and the
 `Bazaar Users Guide
 <http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_.
 
+Limitations of UDD
+------------------
 
-Source package URLs
-===================
+Ubuntu Distributed Development is a new method for working with Ubuntu
+packages.  It currently has some notable limitations:
 
-Bazaar provides some very nice shortcuts for accessing Launchpad's source
-branches of packages in both Ubuntu and Debian.
+* Doing a full branch with history can take a lot of time and network
+  resources.  You may find it quicker to do a lightweight checkout ``bzr
+  checkout --lightweight ubuntu:kdetoys`` but this will need a network access
+  for any further bzr operations.
 
-To refer to source branches use::
+* Working with patches is fiddly.  Patches can be seen as a branched revision
+  control system, so we end up with RCS on top of RCS.
 
-    ubuntu:package
+* There is no way to build directly from branches.  You need to create a source
+  package and upload that.
 
-where *package* refers to the package name you're interested in.  This URL
-refers to the package in the current development version of Ubuntu.  To
-refer to the branch of Tomboy in the development version, you would use::
+* Some packages have not been successfully imported into UDD branches.  You
+  should check the `status of the package importer`_ before working on a branch.
 
-    ubuntu:tomboy
-
-To refer to the version of a source package in an older release of Ubuntu,
-just prefix the package name with the release's code name.  E.g. to refer to
-Tomboy's source package in Maverick_ use::
-
-    ubuntu:maverick/tomboy
-
-Since they are unique, you can also abbreviate the distro-series name::
-
-    ubuntu:m/tomboy
-
-You can use a similar scheme to access the source branches in Debian, although
-there are no shortcuts for the Debian distro-series names.  To access the
-Tomboy branch in the current development series for Debian use:
-
-    debianlp:tomboy
-
-and to access Tomboy in Debian Lenny_ use::
-
-    debianlp:lenny/tomboy
-
-
-.. _`Bazaar`: http://bazaar.canonical.com/en/
-.. _`Intrepid`: https://wiki.ubuntu.com/IntrepidIbex
-.. _Maverick: https://wiki.ubuntu.com/MaverickMeerkat
-.. _Lenny: http://debian.org/releases/stable/
-
-
-Getting the source
-==================
-
-Every source package in Ubuntu has an associated source branch on Launchpad.
-These source branches are updated automatically by Launchpad, although the
-process is not currently foolproof.
-
-There are a couple of things that we do first in order to make the workflow
-more efficient later.  Once you are used to the process you will learn when it
-makes sense to skip these steps.
-
-
-.. _up-to-date:
-
-Ensure the source branch is up-to-date
---------------------------------------
-
-Once you've determined which source package to work on, you should ensure that
-the source branch for that package on Launchpad is up-to-date.  Some package
-imports fail for various reasons, and the `status of the package importer`_ is
-always available online.  If the source branch for a package you want to work
-on is out of sync, you'll have to use ``apt-get source`` until the import of
-that package is fixed.
-
-Let's say you want to fix a problem in Tomboy in Natty.  First, find out the
-latest binary package versions that are available::
-
-    $ rmadison tomboy | grep natty
-    tomboy | 1.5.2-1ubuntu4 |         natty | source, amd64, i386
-
-You've already seen how to :ref:`determine the source package corresponding to
-this binary package <what-to-fix>`.  For Tomboy, the binary and source
-packages are both named ``tomboy``.
-
-Whenever the package importer processes a new source package version, it adds
-a Bazaar tag corresponding to that new version.  You can use this tag to
-ensure that the import is up-to-date.  To find the tag of the last revision
-committed by the package importer, do::
-
-    $ bzr log ubuntu:tomboy | grep ^tags | head -n 1
-    tags: 1.5.2-1ubuntu4
-
-By comparing the version number returned by ``rmadison`` and the tag added by
-the package importer, we can see that the ``tomboy`` source package for Natty
-is up-to-date.
-
-Here's an example of a package that is out-of-date.  Let's say you want to fix
-a problem in the ``initscripts`` binary package.  First find out the
-latest binary package versions that are available::
-
-    $ rmadison initscripts | tail -n 1
-    initscripts | 2.87dsf-4ubuntu25 |       oneiric | amd64, i386
-
-Then determine the source package corresponding to this binary package::
-
-    $ apt-cache showsrc initscripts | grep ^Package:
-    Package: sysvinit
-
-Find the latest tag added by the package importer::
-
-    $ bzr log ubuntu:sysvinit | grep ^tags | head -n 1
-    tags: 2.86.ds1-61ubuntu13
-
-Here we can see that ``2.86.ds1-61ubuntu13`` is older than
-``2.87dsf-4ubuntu19`` so the source package is out of date, and in fact we can
-verify that by looking at the status package for the package at
-http://package-import.ubuntu.com/status/sysvinit.html.
-
-When you find such out-of-date packages, be sure to `file a bug on the UDD
-project`_ to get the issue resolved.
-
-A feature in progress is for a warning to be automatically printed when
-branching an out of date import, this will make the above obsolete.
-
-.. _branching:
-
-Creating a shared repository
-----------------------------
-
-Okay, you want to work on the Tomboy package in Natty, and you've verified
-that the source package is up-to-date.  Before actually branching the code for
-Tomboy, create a shared repository to hold the branches for this package.
-The shared repository will make future work much more efficient.
-
-Do this using the `bzr init-repo` command, passing it the directory name we
-would like to use::
-
-    $ bzr init-repo tomboy
-
-You will see that a `tomboy` directory is created in your current working
-area.  Change to this new directory for the rest of your work::
-
-    $ cd tomboy
-
-
-Getting the trunk branch
-------------------------
-
-We use the `bzr branch` command to create a local branch of the package.
-We'll name the target directory `tomboy.dev` just to keep things easy to
-remember::
-
-    $ bzr branch ubuntu:tomboy tomboy.dev
-
-The tomboy.dev directory represents the version of Tomboy in the development
-version of Ubuntu, and you can always ``cd`` into this directory and do a `bzr
-pull` to get any future updates.
-
-
-Getting a branch for a particular release
------------------------------------------
-
-When you want to do something like a `stable release update`_ (SRU), or you
-just want to examine the code in an old release, you'll want to grab the
-branch corresponding to a particular Ubuntu release.  For example, to get the
-Tomboy package for Maverick do::
-
-    $ bzr branch ubuntu:m/tomboy maverick
-
-
-Importing a Debian source package
----------------------------------
-
-If the package you want to work on is available in Debian but not Ubuntu, it's
-still easy to import the code to a local bzr branch for development.  Let's
-say you want to import the `newpackage` source package.  We'll start by
-creating a shared repository as normal, but we also have to create a working
-tree to which the source package will be imported (remember to cd out of the
-`tomboy` directory created above)::
-
-    $ bzr init-repo newpackage
-    $ cd newpackage
-    $ bzr init debian
-    $ cd debian
-    $ bzr import-dsc http://ftp.de.debian.org/debian/pool/main/n/newpackage/newpackage_1.0-1.dsc
-
-As you can see, we just need to provide the remote location of the dsc file,
-and Bazaar will do the rest.  You've now got a Bazaar source branch.
-
+All of the above are being worked on and UDD is expected to become the main way
+to work on Ubuntu packages soon.  However currently most teams within Ubuntu do
+not yet work with UDD branches for their  development.  However because UDD
+branches are the same as the packages in the  archive any team should be able to
+accept merges against them.
 
 .. _`status of the package importer`: http://package-import.ubuntu.com/status
-.. _`file a bug on the UDD project`: https://bugs.launchpad.net/udd
-.. _`stable release update`: https://wiki.ubuntu.com/StableReleaseUpdates
