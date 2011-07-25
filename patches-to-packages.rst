@@ -108,7 +108,7 @@ date.  They might need to be refreshed to match the new upstream source or they
 might need to be removed altogether.
 
 You should start by ensuring no patches are applied.  Unfortunately a commit is
-needed before you can merge in the new upstream::
+needed before you can merge in the new upstream (this is `bug 815854`_::
 
     $ quilt pop -a
     $ bzr commit -m "remove patches"
@@ -176,3 +176,4 @@ Bazaar Loom is a way to keep patches as part of bzr trees, see :doc:`Working
 with Patches via Loom</udd-patchsys>` for more information.
 
 .. _`Quilt`: http://wiki.debian.org/UsingQuilt
+.. _`bug 815854`: https://bugs.launchpad.net/bzr-builddeb/+bug/815854
