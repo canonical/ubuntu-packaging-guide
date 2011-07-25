@@ -50,7 +50,7 @@ Knowledge Base
    udd-newpackage
    chroots
    traditional-packaging
-
+   kde
 
 Indices and tables
 ==================
