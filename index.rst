@@ -30,6 +30,7 @@ Articles
    packaging-from-scratch
    fixing-a-bug
    security-and-stable-release-updates
+   patches-to-packages
 
 Knowledge Base
 --------------
