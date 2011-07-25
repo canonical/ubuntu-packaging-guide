@@ -100,13 +100,19 @@ fixed it already or is currently working on a fix. Good sources to check are:
 .. XXX: Link to 'update to a new version' article.
 .. XXX: Link to 'send stuff upstream/Debian' article. (Launchpad bug 704845)
 
-If you find a patch to fix the problem, say, attached to a bug report, running
-this command in the source directory should apply the patch::
+You now want to create a patch which includes the fix.  The command
+``edit-patch`` is a simple way to add a patch to a package. Run::
+
+    $ edit-patch 99-new-patch
+
+This will copy the packaging to a temporary directory.  You can now edit files
+with a text editor or apply patches from upstream, for example::
 
     $ patch -p1 < ../bugfix.patch
 
-Refer to the ``patch(1)`` manpage for options and arguments such as 
-``--dry-run``, ``-p<num>``, etc.
+After editing the file type ``exit`` or press ``control-d`` to quit the
+temporary shell.  The new patch will have been added into ``debian/patches``.
+
 
 Testing the fix
 ===============
