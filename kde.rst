@@ -33,7 +33,7 @@ This will ensure the correct build flags are used and add options such
 as handling kdeinit stubs and translations::
 
     %:
-        dh --with=kde
+        dh $@ --with=kde
 
 Some newer KDE packages use the ``dhmk`` system, an alternative to
 ``dh`` made by the Debian Qt/KDE team.  You can read about it in
