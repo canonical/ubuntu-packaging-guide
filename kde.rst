@@ -60,7 +60,7 @@ automatically during build if you use the ``--with=kde`` option to
 ``dh``.
 
 Upstream will usually have also put the translation ``.po`` files into
-the ``po/`` directory.  If they have not check if they are in separate
+the ``po/`` directory.  If they do not check if they are in separate
 upstream language packs such as the KDE SC language packs.  If they
 are in separate language packs then Launchpad will need to associate
 these together manually, contact `dpm`_ to do this.
