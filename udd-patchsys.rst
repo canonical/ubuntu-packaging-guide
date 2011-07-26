@@ -1,5 +1,5 @@
 ==============================================================
-Ubuntu Distributed Development - Working with Patches via Loom
+Working with Patches via Loom
 ==============================================================
 
 Here are some guidelines for working with Quilt_ patches using the Bazaar Loom
