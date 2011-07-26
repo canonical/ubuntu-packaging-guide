@@ -4,7 +4,8 @@ KDE Packaging
 
 Packaging of KDE programmes in Ubuntu is managed by the Kubuntu and
 MOTU teams.  You can contact the Kubuntu team on the `Kubuntu mailing
-list`_ and ``#kubuntu-devel`` Freenode IRC channl.
+list`_ and ``#kubuntu-devel`` Freenode IRC channl.  More information
+about Kubuntu development is on the `Kubuntu wiki page`_.
 
 Our packaging follows the practices of the ``Debian Qt/KDE Team`` and
 Debian KDE Extras Team.  Most of our packages are derived from the
@@ -90,3 +91,4 @@ create and keep these files up to date.
 .. _`Debian Qt/KDE Team`: http://pkg-kde.alioth.debian.org/
 .. _`dpm`: https://launchpad.net/~dpm
 .. _`Working with symbols files`: http://pkg-kde.alioth.debian.org/symbolfiles.html
+.. _`Kubuntu wiki page`: https://wiki.kubuntu.org/Kubuntu
