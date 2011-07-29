@@ -60,6 +60,10 @@ with this library.  Header files, a config binary, the ``.la`` libtool file and
 compiling against the library do not care about the major version number
 (although the binary they compile into will).
 
+``.la`` libtool files are needed on some non-Linux systems with poor library
+support but usually cause more problems than they solve on Debian systems.  It
+is a current `Debian goal to remove .la files`_ and we should help with this.
+
 
 Static Libraries
 ----------------
@@ -130,3 +134,4 @@ Debian Qt/KDE Team maintain some scripts to handle this, see their `Working with
 symbols files`_ page for how to use them.
 
 .. _`Working with symbols files`: http://pkg-kde.alioth.debian.org/symbolfiles.html
+.. _`Debian goal to remove .la files`: http://wiki.debian.org/ReleaseGoals/LAFileRemoval
