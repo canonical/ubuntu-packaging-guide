@@ -42,10 +42,13 @@ To find the SONAME of the library run
 
 The SONAME is ``libnova-0.12.so.2``, which matches the file name (usually the
 case but not always). Here upstream has put the upstream version number as part
-of the SONAME and given is an ABI version of ``2``.  The library binary package
+of the SONAME and given is an ABI version of ``2``.  Library package names
+should follow the SONAME of the library they contain. The library binary package
 is called ``libnova-0.12-2`` where ``libnova-0.12`` is the name of the library
-and ``2`` is the ABI number. Looking in debian/libnova-0.12-2.install we see it
-includes two files::
+and ``2`` is our ABI number. Hopefully our ABI number will continue to match
+upstream's SONAME but sometimes they introduce incompatibilities without
+changing their version number and we will need to change ours. Looking in
+debian/libnova-0.12-2.install we see it includes two files::
 
     usr/lib/libnova-0.12.so.2
     usr/lib/libnova-0.12.so.2.0.0
