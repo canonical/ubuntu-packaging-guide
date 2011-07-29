@@ -31,6 +31,7 @@ Articles
    fixing-a-bug
    security-and-stable-release-updates
    patches-to-packages
+   libraries
 
 Knowledge Base
 --------------
