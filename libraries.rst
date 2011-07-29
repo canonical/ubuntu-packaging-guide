@@ -45,10 +45,17 @@ case but not always). Here upstream has put the upstream version number as part
 of the SONAME and given is an ABI version of ``2``.  Library package names
 should follow the SONAME of the library they contain. The library binary package
 is called ``libnova-0.12-2`` where ``libnova-0.12`` is the name of the library
-and ``2`` is our ABI number. Hopefully our ABI number will continue to match
-upstream's SONAME but sometimes they introduce incompatibilities without
-changing their version number and we will need to change ours. Looking in
-debian/libnova-0.12-2.install we see it includes two files::
+and ``2`` is our ABI number.
+
+If upstream makes incompatible changes to their library they will have to
+reversion their SONAME and we will have to rename our library.  Any other
+packages using our library package will need to recompiled against the new
+version, this is called a transition and can take some effort. Hopefully our ABI
+number will continue to match upstream's SONAME but sometimes they introduce
+incompatibilities without changing their version number and we will need to
+change ours. 
+
+Looking in debian/libnova-0.12-2.install we see it includes two files::
 
     usr/lib/libnova-0.12.so.2
     usr/lib/libnova-0.12.so.2.0.0
