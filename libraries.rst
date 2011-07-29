@@ -18,14 +18,16 @@ and we follow them in our binary package names called an ABI number,
 but sometimes upstreams do not use sensible version numbers and
 packagers have to keep separate version numbers.
 
-Libraries are usually distributed by upstream alone.  They should be
-split into a binary package for the library and one for the
-development files.
+Libraries are usually distributed by upstream as standalone releases. Sometimes
+they are distributed as part of a programme.  In this case they can be included
+in the binary package along with the programme (this is called bundling) if you
+do not expect any other programmes to use the library, more often they should be
+split out into separate binary packages.
 
-Sometimes they are distributed as part of a programme.  They can be
-included in the binary package along with the programme if you do not
-expect any other programmes to use the library, otherwise you should
-split out the library into its own package and -dev package.
+The libraries themselves are put into a binary package named ``libfoo1`` where
+``foo`` is the name of the library and ``1`` is the version from the SONAME. 
+Development files from the package, such as header files, needed to compile
+programmes against the library are put into a package called ``libfoo-dev``.
 
 
 An Example
