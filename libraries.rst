@@ -133,5 +133,12 @@ C++ has even more exacting standards of binary compatibility than C.  The
 Debian Qt/KDE Team maintain some scripts to handle this, see their `Working with
 symbols files`_ page for how to use them.
 
+Further Reading
+---------------
+
+Junichi Uekawa's `Debian Library Packaging Guide`_ goes into this topic in more
+detail.
+
 .. _`Working with symbols files`: http://pkg-kde.alioth.debian.org/symbolfiles.html
 .. _`Debian goal to remove .la files`: http://wiki.debian.org/ReleaseGoals/LAFileRemoval
+.. _`Debian Library Packaging Guide`: http://www.netfort.gr.jp/~dancer/column/libpkg-guide/libpkg-guide.html
