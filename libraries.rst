@@ -40,11 +40,12 @@ To find the SONAME of the library run
 
     $ readelf -a /usr/lib/libnova-0.12.so.2 | grep SONAME
 
-The SONAME is ``libnova-0.12.so.2``.  Here upstream has put the upstream
-version number as part of the SONAME and given is an ABI version of ``2``.  The
-library binary package is called ``libnova-0.12-2`` where ``libnova-0.12`` is
-the name of the library and ``2`` is the ABI number. Looking in
-debian/libnova-0.12-2.install we see it includes two files::
+The SONAME is ``libnova-0.12.so.2``, which matches the file name (usually the
+case but not always). Here upstream has put the upstream version number as part
+of the SONAME and given is an ABI version of ``2``.  The library binary package
+is called ``libnova-0.12-2`` where ``libnova-0.12`` is the name of the library
+and ``2`` is the ABI number. Looking in debian/libnova-0.12-2.install we see it
+includes two files::
 
     usr/lib/libnova-0.12.so.2
     usr/lib/libnova-0.12.so.2.0.0
