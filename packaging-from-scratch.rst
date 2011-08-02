@@ -155,7 +155,7 @@ from scratch using::
 
     $ debuild -nc
 
-FIXME is there a UDD equivalent?
+FIXME is there a UDD equivalent? Bug https://bugs.launchpad.net/bzr-builddeb/+bug/816376
 
 Having checked that the package builds locally you should ensure it builds on a
 clean system using ``pbuilder``::
