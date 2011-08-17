@@ -187,7 +187,7 @@ Get a Launchpad account
 
 If you don't already have a Launchpad account, you can easily `create one`_.
 If you have a Launchpad account but cannot remember your Launchpad id, you can
-find this out by going to https://launchpad.net/people/+me and looking for the
+find this out by going to https://launchpad.net/~ and looking for the
 part after the `~` in the URL.
 
 Launchpad's registration process will ask you to choose a display name. It is
@@ -218,7 +218,7 @@ and it will print out something like::
     sub   4096R/51FBE68C 2010-12-06
 
 
-Head to https://launchpad.net/people/+me/+editpgpkeys and copy the "Key
+Head to https://launchpad.net/~/+editpgpkeys and copy the "Key
 fingerprint" into the text box. In the case above this would be
 ``5C28 0144 FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on "Import
 Key".
@@ -244,7 +244,7 @@ https://help.launchpad.net/YourAccount/ImportingYourPGPKey
 Upload your SSH key to Launchpad
 --------------------------------
 
-Open https://launchpad.net/people/+me/+editsshkeys in a web browser, also open
+Open https://launchpad.net/~/+editsshkeys in a web browser, also open
 ``~/.ssh/id_rsa.pub`` in a text editor. This is the public part of your SSH key,
 so it is safe to share it with Launchpad. Copy the contents of the file and
 paste them into the text box on the web page that says "Add an SSH key". Now
@@ -272,7 +272,7 @@ To tell Bazaar who you are, simply run::
 commit messages. With `launchpad-login` you set your Launchpad ID. This way
 code that you publish in Launchpad will be associated with you.
 
-Note: If you can not remember the ID, go to https://launchpad.net/people/+me
+Note: If you can not remember the ID, go to https://launchpad.net/~
 and see where it redirects you. The part after the "~" in the URL is your
 Launchpad ID.)
 
