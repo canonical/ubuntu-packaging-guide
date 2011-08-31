@@ -58,7 +58,7 @@ SBuild is a system similar to PBuilder for creating an environment to run test p
 
 Full virtual machines can be useful for packaging and testing
 programmes.  TestDrive is a program to automate syncing and running
-daily ISO images, ee `the TestDrive wiki page`_ for more information.
+daily ISO images, see `the TestDrive wiki page`_ for more information.
 
 You can also set up pbuilder to pause when it comes across a build
 failure.  Copy C10shell from /usr/share/doc/pbuilder/examples into a
@@ -69,7 +69,7 @@ few US cents per hour, you can set up Ubuntu machines of any supported
 version and package on those.  This is useful when you want to compile
 many packages at the same time or to overcome bandwidth restraints.
 
-.. _`Debootstrap Chroot wiki page`: https://wiki.kubuntu.org/DebootstrapChroot
+.. _`Debootstrap Chroot wiki page`: https://wiki.ubuntu.com/DebootstrapChroot
 .. _`EC2 cloud computers`: https://help.ubuntu.com/community/EC2StartersGuide
-.. _`the TestDrive wiki page`: https://wiki.kubuntu.org/UsingDevelopmentReleases
+.. _`the TestDrive wiki page`: https://wiki.ubuntu.com/UsingDevelopmentReleases
 .. _`the Security Team Build Environment wiki page`: https://wiki.ubuntu.com/SecurityTeam/BuildEnvironment

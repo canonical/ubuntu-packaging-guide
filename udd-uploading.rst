@@ -84,9 +84,14 @@ proposal::
 
     $ bzr merge-package lp:~subgenius/ubuntu/natty/tomboy/bug-12345
 
-The difference would be that if there are lots of merge conflicts then you
-would probably want to ask the contributor to fix them up.  To do that see the
-next section.
+If there are lots of merge conflicts you would probably want to ask the 
+contributor to fix them up.  See the next section to learn how to cancel
+a pending merge.
+
+But if the changes look good, commit and then follow the rest of the uploading
+process::
+
+    $ bzr commit --author Bob Dobbs <subgenius@example.com>
 
 
 Canceling an upload

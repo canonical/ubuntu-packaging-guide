@@ -23,7 +23,7 @@ platform, Launchpad. Here's what we'll cover:
   Ubuntu. Doing so will allow you to test changes in the same environment where 
   those changes will actually be applied and used. 
 
-  Don't worry, though, the `Ubuntu development release wiki page 
+  Don't worry though, the `Ubuntu development release wiki page 
   <https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways to 
   safely use the development release.
 
@@ -296,5 +296,5 @@ the configuration file for that shell accordingly.)
 
 .. _`GNU Privacy Guard`: http://gnupg.org/
 .. _SSH: http://www.openssh.com/
-.. _Launchpad: http://launchpad.net
+.. _Launchpad: https://launchpad.net/
 .. _`create one`: https://launchpad.net/+login

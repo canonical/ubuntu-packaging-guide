@@ -195,5 +195,5 @@ could ask such as the Kubuntu team for KDE packages.
 .. _`version 0.4 from Sourceforge`: http://sourceforge.net/projects/kqrcode/files/kqrcode-0.4.tar.gz/download
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
 .. _`lintian website`: http://lintian.debian.org/tags.html
-.. _`REVU wiki page`: https://wiki.kubuntu.org/MOTU/Packages/REVU
+.. _`REVU wiki page`: https://wiki.ubuntu.com/MOTU/Packages/REVU
 .. _`MOTU mailing list`: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu

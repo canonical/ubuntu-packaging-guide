@@ -40,7 +40,6 @@ and to access Tomboy in Debian Lenny_ use::
 
 
 .. _`Bazaar`: http://bazaar.canonical.com/en/
-.. _`Intrepid`: https://wiki.ubuntu.com/IntrepidIbex
 .. _Maverick: https://wiki.ubuntu.com/MaverickMeerkat
 .. _Lenny: http://debian.org/releases/stable/
 

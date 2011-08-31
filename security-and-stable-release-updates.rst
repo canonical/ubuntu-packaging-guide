@@ -137,4 +137,4 @@ can be moved to ``updates``.
 
 See the `Stable Release Updates wiki page`_ for more information.
 
-.. _`Stable Release Updates wiki page`: https://wiki.kubuntu.org/StableReleaseUpdates
+.. _`Stable Release Updates wiki page`: https://wiki.ubuntu.com/StableReleaseUpdates

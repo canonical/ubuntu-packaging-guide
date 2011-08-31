@@ -54,16 +54,16 @@ include or make available upstream translations and handle
 ``.desktop`` file translations.
 
 To generate translation templates the package must include a
-``Messages.sh`` file, complain to the upstream if it does not.  You
+``Messages.sh`` file; complain to the upstream if it does not.  You
 can check it works by running ``extract-messages.sh`` which should
 produce one or more ``.pot`` files in ``po/``.  This will be done
 automatically during build if you use the ``--with=kde`` option to
 ``dh``.
 
 Upstream will usually have also put the translation ``.po`` files into
-the ``po/`` directory.  If they do not check if they are in separate
+the ``po/`` directory.  If they do not, check if they are in separate
 upstream language packs such as the KDE SC language packs.  If they
-are in separate language packs then Launchpad will need to associate
+are in separate language packs Launchpad will need to associate
 these together manually, contact `dpm`_ to do this.
 
 If a package is moved from universe to main it will need to be
