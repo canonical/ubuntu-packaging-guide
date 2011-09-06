@@ -118,8 +118,10 @@ packages.  It currently has some notable limitations:
 * There is no way to build directly from branches.  You need to create a source
   package and upload that.
 
-* Some packages have not been successfully imported into UDD branches.  You
-  should check the `status of the package importer`_ before working on a branch.
+* Some packages have not been successfully imported into UDD branches.  Recent
+  versions of Bazaar will automatically notify you when this is the case.
+  You can also check the `status of the package importer`_ manually before working 
+  on a branch.
 
 All of the above are being worked on and UDD is expected to become the main way
 to work on Ubuntu packages soon.  However currently most teams within Ubuntu do
