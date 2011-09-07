@@ -7,9 +7,6 @@ development.  Updates can be merged from Debian, from a new upstream release,
 and from other Ubuntu developers.  Doing it in Bazaar is pretty simple, and
 all based around the `bzr merge-package` command.
 
-The first thing to do is to check that the `package importer`_
-:ref:`hasn't failed <up-to-date>` for the package you're going to work on.
-
 When you are in any branch's working directory then you can merge from
 another.  First check you have no uncommitted changes::
 
