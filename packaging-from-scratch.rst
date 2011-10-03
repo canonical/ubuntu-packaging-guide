@@ -125,10 +125,13 @@ Building the package
 Now we need to check that our packaging successfully compiles the package and
 builds the .deb binary package::
 
-    $ bzr builddeb
+    $ debuild -us -uc
 
-This should compile the package and place the result in ``../build-area``.  You
-can view the contents of the package with::
+``debuild`` is a command to build the package in its current location.  The
+``-us -uc`` tell it there is not need to GPG sign the compile.  The result will
+be placed in ``..``.  
+
+You can view the contents of the package with::
 
     $ lesspipe kqrcode_0.4-0ubuntu1_amd64.deb
 
@@ -150,12 +153,10 @@ the .deb binary package::
 A description of each of the problems it reports can be found on the
 `lintian website`_.
 
-After making a fix to the packaging you can rebuild without having to build
-from scratch using::
+After making a fix to the packaging you can rebuild using ``-nc`` "no clean"
+without having to build from scratch::
 
     $ debuild -nc
-
-FIXME is there a UDD equivalent? Bug https://bugs.launchpad.net/bzr-builddeb/+bug/816376
 
 Having checked that the package builds locally you should ensure it builds on a
 clean system using ``pbuilder``::
