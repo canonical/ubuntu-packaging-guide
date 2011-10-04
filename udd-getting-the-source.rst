@@ -105,6 +105,22 @@ http://package-import.ubuntu.com/status/ and `file a bug on the UDD
 project`_ to get the issue resolved.
 
 
+Upstream Tar
+------------
+
+You can get the upstream tar by running::
+
+    bzr get-orig-source
+
+The works from bzr-builddeb version 2.7.10.  It will try a number of methods to
+get the upstream tar, firstly by recreating it from the ``upstream-x.y`` tag in
+the bzr archive, then by downloading from the ubuntu archive, lastly by running
+``debian/rules get-orig-source``. The upstream tar will also be recreated when
+using bzr to build the package::
+
+    bzr builddeb
+
+
 Getting a branch for a particular release
 -----------------------------------------
 

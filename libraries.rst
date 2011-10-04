@@ -44,7 +44,7 @@ To find the SONAME of the library run
 
 The SONAME is ``libnova-0.12.so.2``, which matches the file name (usually the
 case but not always). Here upstream has put the upstream version number as part
-of the SONAME and given is an ABI version of ``2``.  Library package names
+of the SONAME and given it an ABI version of ``2``.  Library package names
 should follow the SONAME of the library they contain. The library binary package
 is called ``libnova-0.12-2`` where ``libnova-0.12`` is the name of the library
 and ``2`` is our ABI number.
