@@ -44,7 +44,7 @@ before you upload the source package.
 The next step is to build and test the modified source package as you normally
 would::
 
-    $ bzr bd -S
+    $ bzr builddeb -S
 
 The last step is to mark the change as being the same as the source package
 that was uploaded, bzr-builddeb will override the `tag` command to

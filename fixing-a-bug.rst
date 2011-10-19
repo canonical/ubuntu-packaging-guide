@@ -119,7 +119,7 @@ Testing the fix
 
 To build a test package with your changes, run these commands::
 
-  $ bzr bd -- -S -us -uc
+  $ bzr builddeb -- -S -us -uc
   $ pbuilder-dist <release> build ../<package>_<version>.dsc
 
 This will create a source package from the branch contents (``-us -uc`` will

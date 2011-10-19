@@ -69,7 +69,7 @@ the appropriate ``-v`` and ``-sa`` options to the source package so that all the
 changelog entries since the last Ubuntu change will be included in your
 ``_source.changes`` file.   For example::
 
-    $ bzr bd -S --package-merge
+    $ bzr builddeb -S --package-merge
 
 
 Merging a new upstream version
