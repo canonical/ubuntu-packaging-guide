@@ -338,9 +338,9 @@ single line indicating the desired format:
 * ``3.0 (quilt)`` for packages with a separate upstream tarball
 
 If you choose to use source format 1.0, you can make this explicit in the 
-source/format file. If you choose not use this file to define the source format, 
-Lintian will warn about the missing file. This warning is informational only 
-and may be safely ignored.
+source/format file. If you choose not to use this file to define the source 
+format, Lintian will warn about the missing file. This warning is informational 
+only and may be safely ignored.
 
 http://wiki.debian.org/Projects/DebSrc3.0 summarizes information concerning and 
 the benefits of the switch to the 3.0 source package formats.
