@@ -52,7 +52,7 @@ Not every single change can be discussed in a meeting though, particularly
 because Ubuntu relies on changes that are done in other projects. That is why 
 contributors to Ubuntu constantly stay in touch. Most teams or projects use 
 dedicated mailing lists to avoid too much unrelated noise. For more immediate 
-coordination, developers and contributers use Internet Relay Chat (IRC). All 
+coordination, developers and contributors use Internet Relay Chat (IRC). All 
 discussions are open and public. 
 
 Another important tool regarding communication is bug reports. Whenever a 
