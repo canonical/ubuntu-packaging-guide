@@ -212,6 +212,8 @@
     {%- if last_updated %}
       {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
     {%- endif %}
+    <a href="https://bugs.launchpad.net/ubuntu-packaging-guide">Report bugs</a> or 
+    <a href="https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk">grab the source code</a> on Launchpad.
     {%- if show_sphinx %}
       {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     {%- endif %}
