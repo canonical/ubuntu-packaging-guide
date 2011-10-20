@@ -74,7 +74,7 @@ make sure it does actually fix the bug.
 In order to build the package you can use the `bzr builddeb` command from
 the `bzr-builddeb` package.  You can build a source package with::
 
-    $ bzr bd -S
+    $ bzr builddeb -S
 
 (`bd` is an alias for `builddeb`.)  You can leave the package unsigned by
 appending `-- -uc -us` to the command.
@@ -88,7 +88,7 @@ If you ever see an error related to trying to build a native package without a
 tarball, check to see if there is a `.bzr-builddeb/default.conf` file
 erroneously specifying the package as native.  If the changelog version has a
 dash in it, then it's not a native package, so remove the configuration file.
-Note that while `bzr bd` has a `--native` switch, it does not have a
+Note that while `bzr builddeb` has a `--native` switch, it does not have a
 `--no-native` switch.
 
 Once you've got the source package, you can build it as normal with

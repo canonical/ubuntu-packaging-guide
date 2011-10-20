@@ -162,7 +162,7 @@ Building the source package
 ===========================
 
 Now we can build the source package and publish the package as we normally
-would, with ``bzr bd -S`` and ``dput``.
+would, with ``bzr builddeb -S`` and ``dput``.
 
 
 .. _PPA: https://help.launchpad.net/Packaging/PPA
