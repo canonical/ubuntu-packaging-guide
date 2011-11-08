@@ -328,22 +328,33 @@ with upstream see `Ubuntu External Health Status
 The source/format file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This file indicates the format of the source package. Currently, the package 
-source format defaults to 1.0 if this file does not exist. You are encouraged 
-to use the newer 3.0 source format. In this case, the file should contain a 
-single line indicating the desired format:
+This file indicates the format of the source package. It should contain 
+a single line indicating the desired format:
 
-* ``3.0 (native)`` for Debian native packages (no upstream version) or
+* ``3.0 (native)`` for Debian native packages (no upstream version)
 
 * ``3.0 (quilt)`` for packages with a separate upstream tarball
 
-If you choose to use source format 1.0, you can make this explicit in the 
-source/format file. If you choose not to use this file to define the source 
-format, Lintian will warn about the missing file. This warning is informational 
-only and may be safely ignored.
+* ``1.0`` for packages wishing to explicitly declare the default format
 
-http://wiki.debian.org/Projects/DebSrc3.0 summarizes information concerning and 
-the benefits of the switch to the 3.0 source package formats.
+Currently, the package source format will default to 1.0 if this file does not 
+exist. You can make this explicit in the source/format file. If you choose not 
+to use this file to define the source format, Lintian will warn about the 
+missing file. This warning is informational only and may be safely ignored.
+
+You are encouraged to use the newer 3.0 source format. It provides
+a number of new features:
+
+* Support for additional compression formats: bzip2, lzma and xz
+
+* Support for multiple upstream tarballs
+
+* Not necessary to repack the upstream tarball to strip the debian directory
+
+* Debian-specific changes are no longer stored in a single .diff.gz but in multiple patches compatible with quilt under ``debian/patches/``
+
+http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information 
+concerning the switch to the 3.0 source package formats.
 
 See ``man dpkg-source`` and the `source/format section (Section 5.21) 
 <http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of 
