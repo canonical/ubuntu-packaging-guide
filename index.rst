@@ -39,6 +39,7 @@ Knowledge Base
 .. toctree::
    :maxdepth: 1
 
+   communication
    debian-dir-overview
    udd-getting-the-source
    udd-working
