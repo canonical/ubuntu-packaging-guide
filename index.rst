@@ -6,6 +6,15 @@
 Ubuntu Packaging Guide
 ==================================================
 
+Ubuntu is not only a free and open source operating system, its platform is 
+also open and developed in a transparent fashion. The source code for every 
+single component can be obtained easily and every single change to the Ubuntu 
+platform can be reviewed. 
+
+This means you can actively get involved in improving it and the community of 
+Ubuntu platform developers is always interested in helping peers getting 
+started.
+
 The guide is split up into two sections:
 
 * A list of articles based on tasks, things you want to get done.
