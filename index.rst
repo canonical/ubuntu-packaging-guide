@@ -36,7 +36,7 @@ Articles
    introduction-to-ubuntu-development
    getting-set-up
    udd-intro
-   packaging-from-scratch
+   packaging-new-software
    fixing-a-bug
    security-and-stable-release-updates
    patches-to-packages

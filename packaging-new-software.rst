@@ -1,10 +1,10 @@
 ======================
-Packaging From Scratch
+Packaging New Software
 ======================
 
-You have found an exciting new piece of software, it needs exposure to the
-wider world by getting it into Ubuntu or a PPA, so you have decided to package
-it.
+You have found an exciting new piece of software, it is not packaged yet, you 
+feel it needs exposure to the wider world by getting it into Ubuntu or a PPA, 
+so you have decided to package it.
 
 Checking the Programme
 ----------------------
