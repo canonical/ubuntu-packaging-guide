@@ -120,7 +120,7 @@ The most important requirements for success in Ubuntu development are: having
 a knack for "making things work again," not being afraid to read documentation
 and ask questions, being a team player and enjoying some detective work.
 
-Good places to ask your questions are ``ubuntu-motu-mentors@lists.ubuntu.com``
-and ``#ubuntu-motu`` on ``irc.freenode.net``. You will easily find a lot of 
-new friends and people with the same passion that you have: making the world 
-a better place by making better Open Source software.
+Good places to ask your questions are ``ubuntu-motu@lists.ubuntu.com`` and 
+``#ubuntu-motu`` on ``irc.freenode.net``. You will easily find a lot of new 
+friends and people with the same passion that you have: making the world a 
+better place by making better Open Source software.
