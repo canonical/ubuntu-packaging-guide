@@ -2,9 +2,11 @@
 Packaging New Software
 ======================
 
-You have found an exciting new piece of software, it is not packaged yet, you 
-feel it needs exposure to the wider world by getting it into Ubuntu or a PPA, 
-so you have decided to package it.
+While there are thousands of packages in the Ubuntu archive, there are still 
+a lot nobody has gotten to yet. If there is an exciting new piece of software 
+that you feel needs wider exposure, maybe you want to try your hand at 
+creating a package for Ubuntu or a PPA. This guide will take you through the 
+steps of packaging new software.
 
 Checking the Programme
 ----------------------
