@@ -172,16 +172,6 @@ can upload the branch to Launchpad for review::
 
     $ bzr push lp:~<lp-username>/+junk/kqrcode-package
 
-You could also upload the source package to REVU for review::
-
-    $ bzr builddeb -S
-    $ cd ..
-    $ dput revu kqrcode_0.4-0ubuntu1.dsc
-
-You will need to log in to REVU before you can upload to it.  The package
-must also be correctly signed by the GPG key you have in Launchpad.  See the
-`REVU wiki page` for full details.
-
 Uploading it to a PPA (Personal Package Archive) will ensure it builds
 and give an easy way for you and others to test the binary packages.
 You will need to set up a PPA in Launchad then upload with ``dput``::
@@ -198,5 +188,4 @@ could ask such as the Kubuntu team for KDE packages.
 .. _`version 0.4 from Sourceforge`: http://sourceforge.net/projects/kqrcode/files/kqrcode-0.4.tar.gz/download
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
 .. _`lintian website`: http://lintian.debian.org/tags.html
-.. _`REVU wiki page`: https://wiki.ubuntu.com/MOTU/Packages/REVU
 .. _`MOTU mailing list`: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
