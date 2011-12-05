@@ -172,16 +172,6 @@ can upload the branch to Launchpad for review::
 
     $ bzr push lp:~<lp-username>/+junk/kqrcode-package
 
-You could also upload the source package to REVU for review::
-
-    $ bzr builddeb -S
-    $ cd ..
-    $ dput revu kqrcode_0.4-0ubuntu1.dsc
-
-You will need to log in to REVU before you can upload to it.  The package
-must also be correctly signed by the GPG key you have in Launchpad.  See the
-`REVU wiki page` for full details.
-
 Uploading it to a PPA (Personal Package Archive) will ensure it builds
 and give an easy way for you and others to test the binary packages.
 You will need to set up a PPA in Launchad then upload with ``dput``::
@@ -194,9 +184,39 @@ You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the
 `MOTU mailing list`_.  There might also be a more specific team you
 could ask such as the Kubuntu team for KDE packages.
 
+Submitting for inclusion
+------------------------
+
+There are a number of paths that a package can take to enter Ubuntu.
+In most cases, going through Debian first can be the best path. This
+way ensures that your package will reach the largest number of users
+as it will be available in not just Debian and Ubuntu but all of their
+derivatives as well. Here are some useful links for submitting new
+packages to Debian:
+
+  - `Debian Mentors FAQ`_ - debian-mentors is for the mentoring of new and
+    prospective Debian Developers. It is where you can find a sponsor
+    to upload your package to the archive.
+
+  - `Work-Needing and Prospective Packages`_ - Information on how to file
+    "Intent to Package" and "Request for Package" bugs as well as list
+    of open ITPs and RFPs.
+
+  - `Debian Developer's Reference, 5.1. New packages`_ - The entire 
+    document is invaluable for both Ubuntu and Debian packagers. This
+    section documents processes for sumbitting new packages.
+
+In some cases, it might make sense to go directly into Ubuntu first. For
+instance, Debian might be in a freeze making it unlikely that you're
+package will make it into Ubuntu in time for the next release. This
+process is documented on the `"New Packages" section of the Ubuntu wiki`_.
+
 .. _`posted on KDE-apps.org`: http://kde-apps.org/content/show.php/KQRCode?content=143544
 .. _`version 0.4 from Sourceforge`: http://sourceforge.net/projects/kqrcode/files/kqrcode-0.4.tar.gz/download
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
 .. _`lintian website`: http://lintian.debian.org/tags.html
-.. _`REVU wiki page`: https://wiki.ubuntu.com/MOTU/Packages/REVU
 .. _`MOTU mailing list`: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
+.. _`Debian Mentors FAQ`: http://wiki.debian.org/DebianMentorsFaq
+.. _`Work-Needing and Prospective Packages`: http://www.debian.org/devel/wnpp/
+.. _`Debian Developer's Reference, 5.1. New packages`: http://www.debian.org/doc/developers-reference/pkgs.html#newpackage
+.. _`"New Packages" section of the Ubuntu wiki`: https://wiki.ubuntu.com/UbuntuDevelopment/NewPackages
