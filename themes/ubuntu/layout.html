@@ -20,24 +20,31 @@
         
 
 {%- macro relbar() %}
-  <aside id="page-related">
-    <div class="container" id="sub-nav-container" > 
-       <nav id="sub-nav"> 
+<div class="header-content">
+    <div class="clearfix">
+      <!--<img class="arrow-nav" src="http://developer.ubuntu.com/wp-content/themes/wordpress-theme-ubuntudeveloper/img/arrow-nav.png" width="9" height="5" alt="" />-->
+  <div class="header-navigation-secondary">
+    <div>
+          <nav role="navigation">
+            <ul class="clearfix">
         {%- for rellink in rellinks %}
-	        <a class="sub-nav-item" {% if loop.first %}style="margin-right: 10px"{% endif %} 
+	        <li class="page_item"><a {% if loop.first %}style="margin-right: 10px"{% endif %} 
 	        href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}"
-	        {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
+	        {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a></li>
         {%- endfor %}
         {%- block rootrellink %}
-        <a class="sub-nav-item" href="{{ pathto(master_doc) }}">{{ shorttitle|e }} {{ reldelim1 }}</a>
+        <li class="page_item"><a class="sub-nav-item" href="{{ pathto(master_doc) }}">{{ shorttitle|e }} {{ reldelim1 }}</a></li>
         {%- endblock %}
         {%- for parent in parents %}
-          <a class="sub-nav-item" href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }} {{ reldelim1 }}</a>
+          <li class="page_item"><a class="sub-nav-item" href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }} {{ reldelim1 }}</a></li>
         {%- endfor %}
         {%- block relbaritems %} {% endblock %}
-      </nav>
-    </div>
-</aside> 
+      </ul>
+    </nav>
+  </div>
+</div>
+</div>
+</div>
 {%- endmacro %}
 
 {%- macro sidebar() %}
@@ -91,8 +98,12 @@
     {%- block htmltitle %}
     <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
     {%- endblock %}
-    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
+    <!--<link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />-->
+    <link rel="stylesheet" href="{{ pathto('_static/reset.css', 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/960.css', 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/base.css', 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/home.css', 1) }}" type="text/css" />
+    <!--<link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />-->
     {%- for cssfile in css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
     {%- endfor %}
@@ -144,7 +155,7 @@
 {%- endblock %}
 {%- block extrahead %} {% endblock %}
   </head>
-  <body id="home">
+  <body class="home">
 
 <!--
 <aside id="top-nav"> 
@@ -163,6 +174,34 @@
 </aside>
 -->
 
+<div class="header-login">
+    <ul>
+      <li><a href="https://myapps.developer.ubuntu.com/openid/login/?next=/dev">Sign in or register</a></li>
+    </ul>
+</div>
+
+<div class="header-navigation">
+    <div>
+      <nav role="navigation">
+        <ul>
+          <li class="page_item current_page_item"><a title="Index" href="index.html">Index</a> 
+          <li>
+            <form id="form-search" method="get" action="/">
+              <fieldset>
+                <input id="input-search" type="text" name="s" value="Search" />
+              </fieldset>
+            </form>
+          </li>
+        </ul>
+      </nav>
+      <a class="logo-ubuntu" href="/"><img src="http://developer.ubuntu.com/wp-content/themes/wordpress-theme-ubuntudeveloper/img/logo-ubuntu.png" width="119" height="27" alt="Ubuntu logo" /></a>
+      <h2><a href="/">App Developer</a></h2>
+    </div>
+  </div>
+
+{%- block relbar1 %}{{ relbar() }}{% endblock %}
+
+<!--
 <header id="page-header"> 
   <div class="container" > 
     <nav id="main-nav"> 
@@ -170,15 +209,17 @@
     </nav> 
   </div> 
 </header>
+-->
 
 {%- block header %}{% endblock %}
-
-{%- block relbar1 %}{{ relbar() }}{% endblock %}
 
 {%- block content %}
   {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
 
-     <section id="main-section">
+<div id="content" class="container-12">
+  <div class="grid-12">
+
+     <!--<section id="main-section">-->
   {%- block document %}
       <div class="container" > 
       {%- if render_sidebar %}
@@ -195,13 +236,49 @@
       {%- endif %}
       </div>
   {%- endblock %}
-    </section>
+    <!--</section>-->
+  </div>
+</div>
 {%- endblock %}
 
 {%- block footer %}
-   <footer id="page-footer"> 
-   <div class="container">
-   	<div class="copyright"> 
+<div class="shadow"></div>
+<footer>
+  <div>
+    <nav role="navigation" class="clearfix">
+      <ul>
+        <li><a href="/get-started">Get started</a></li>
+        <li class="page_item page-item-16"><a href="http://developer.ubuntu.com/get-started/quickly-workflow/" title="Quickly workflow">Quickly workflow</a></li>
+<li class="page_item page-item-18"><a href="http://developer.ubuntu.com/get-started/qt-creator/" title="Qt Creator">Qt Creator</a></li>
+<li class="page_item page-item-20"><a href="http://developer.ubuntu.com/get-started/eclipse/" title="Eclipse">Eclipse</a></li>
+<li class="page_item page-item-22"><a href="http://developer.ubuntu.com/get-started/monodevelop/" title="MonoDevelop">MonoDevelop</a></li>
+      </ul>
+      <ul>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/resources/tools/quickly">Quickly</a></li>
+        <li><a href="/resources/platform/api">API</a></li>
+        <li><a href="/resources/platform/documentation/platform-diagram">Platform overview</a></li>
+      </ul>
+      <ul>
+        <li><a href="/publish">Publish</a></li>
+        <li class="page_item page-item-24"><a href="http://developer.ubuntu.com/publish/commercial-software-faqs/" title="Commercial software FAQs">Commercial software FAQs</a></li>
+<li class="page_item page-item-34"><a href="http://developer.ubuntu.com/publish/application-states/" title="Application states">Application states</a></li>
+<li class="page_item page-item-577"><a href="http://developer.ubuntu.com/publish/my-apps-packages/" title="My Apps packages">My Apps packages</a></li>
+<li class="page_item page-item-404"><a href="http://developer.ubuntu.com/publish/ubuntu-software-centre/" title="Ubuntu Software Centre">Ubuntu Software Centre</a></li>
+<li class="page_item page-item-427"><a href="http://developer.ubuntu.com/publish/licence-key-infrastructure/" title="Licence key infrastructure">Licence key infrastructure</a></li>
+      </ul>
+      <ul>
+        <li><a href="/community">Community</a></li>
+        <li class="page_item page-item-28"><a href="http://developer.ubuntu.com/community/app-developer-blog/" title="App Developer Blog">App Developer Blog</a></li>
+<li class="page_item page-item-30"><a href="http://developer.ubuntu.com/community/submit-a-tutorial/" title="Submit a tutorial">Submit a tutorial</a></li>
+<li class="page_item page-item-32"><a href="http://developer.ubuntu.com/community/app-review-board-charter/" title="App Review Board charter">App Review Board charter</a></li>
+      </ul>
+      <ul class="last">
+        <li><a href="https://myapps.developer.ubuntu.com/dev">My Apps</a></li>
+        <li><a href="https://myapps.developer.ubuntu.com/openid/login/?next=/dev">Sign in or register</a></li>
+        <li><a href="https://myapps.developer.ubuntu.com/dev/account">My account</a></li>
+      </ul>
+    </nav>
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
@@ -217,9 +294,10 @@
     {%- if show_sphinx %}
       {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     {%- endif %}
-	</div> 
-    </div>
-    </footer>
+
+    <!--<p>&copy; 2012 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd. <a class="link-bug" href="https://bugs.launchpad.net/ubuntudeveloperportal/+filebug">Report a bug on this site</a></p>-->
+  </div>
+</footer>
 {%- endblock %}
   </body>
 </html>
