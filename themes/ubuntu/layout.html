@@ -49,8 +49,8 @@
 
 {%- macro sidebar() %}
       {%- if render_sidebar %}
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
+      <div class="grid-3 omega">
+        <div class="container-tweet">
           {%- block sidebarlogo %}
           {%- if logo %}
             <p class="logo"><a href="{{ pathto(master_doc) }}">
@@ -214,27 +214,27 @@
 {%- block header %}{% endblock %}
 
 {%- block content %}
-  {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
-
+  
 <div id="content" class="container-12">
   <div class="grid-12">
 
+{%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
+
      <!--<section id="main-section">-->
   {%- block document %}
-      <div class="container" > 
       {%- if render_sidebar %}
-        <section id="content"> 
       {%- endif %}
-          <div class="body">
-		{%- block sidebar2 %}{{ sidebar() }}{% endblock %}          	
+
+    <div class="grid-9 alpha">
+		
     {% block body %} {% endblock %}
 	<div class="divide"></div>
 
           </div>
+
+      {%- block sidebar2 %}{{ sidebar() }}{% endblock %}            
       {%- if render_sidebar %}
-        </section>
       {%- endif %}
-      </div>
   {%- endblock %}
     <!--</section>-->
   </div>
