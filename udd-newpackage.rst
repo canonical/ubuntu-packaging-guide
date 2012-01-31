@@ -13,8 +13,7 @@ Example package
 
 I started with a Python library called `flufl.enum`_, which is a fairly
 typical setuptools-based Python package.  Fortunately, it's also maintained in
-Launchpad using Bazaar, so that makes bootstrapping much easier.  (TBD: add
-instructions for using other upstream VCSs.)
+Launchpad using Bazaar, so that makes bootstrapping much easier.
 
 Because we want to package the trunk branch, getting started is pretty
 simple::
@@ -31,11 +30,11 @@ simple::
 Bootstrapping
 =============
 
-You need to create the initial ``debian`` directory, as well as the necessary 
-files inside the ``debian`` directory.  Currently, there are many ways to set up 
-this directory, but hopefully there will be `some convergence`_ in the methods,
-especially if you're building standard Python setuptools-based libraries and
-applications.
+You need to create the initial ``debian`` directory, as well as the necessary
+files inside the ``debian`` directory.  Currently, there are many ways to set
+up this directory, but hopefully there will be `some convergence`_ in the
+methods, especially if you're building standard Python setuptools-based
+libraries and applications.
 
 .. COMMENT  Is "Bootstrapping" the technical / commonly-used developer term? Also, please list the files needed in the debian directory.
   
@@ -43,11 +42,9 @@ applications.
 The bzr-builddeb way
 --------------------
 
-.. This section seems a bit too casual, and assumes to much prior knowledge (re: use of "of course").
-
-You could of course just use `dh_make(8)` to get things going, or you could
-use `bzr dh-make`.  The latter might provide some benefits, and can be run
-like so from inside your branch::
+You could use the `dh_make` command to get things going, or similiarly the
+`bzr dh-make`.  The latter might provide some benefits, and can be run like so
+from inside your branch::
 
     $ bzr dh-make PKGNAME VERSION DOWNLOADURL
     $ bzr add debian
@@ -65,8 +62,8 @@ that.
 The stdeb way
 -------------
 
-Another way I've found useful for initializing the ``debian`` directory for
-Python setuptools-based packages, is to use the stdeb_ package.  The full
+Another way for creating the initial ``debian`` directory for Python
+setuptools-based packages, is to use the stdeb_ package.  The full
 documentation for this package is available on the `upstream home`_, but you
 won't need all of the commands.  stdeb has a command that is *exactly* what
 we're looking for!

@@ -1,11 +1,6 @@
-==============================================================
-Working with Patches via Loom
-==============================================================
-
-Here are some guidelines for working with Quilt_ patches using the Bazaar Loom
-plugin. A loom allows the development of multiple patches at once, while still
-giving each patch a branch of its own.  This is a work in progress for the UDD
-developers who will be working on improving this workflow.
+======================
+ Working with Patches
+======================
 
 Many existing packages that have changes from upstream express those changes
 using a patch system, of which there are several to choose from.  Usually,
@@ -17,91 +12,129 @@ with the Debian maintainer, or edit the files in place.  You can find out if
 your package has a patch system by using the ``what-patch`` command (from the
 ``ubuntu-dev-tools`` package).
 
-Although UDD, and in particular `Bazaar looms`_ makes it pretty easy to keep
-individual patches separated, if you're submitting changes to be uploaded,
-you're currently better off playing along with the package's patch system.
-*You will want at least bzr loom version 2.2.1dev, otherwise you'll have
-problems pushing and pulling your threads to Launchpad.* Do ``bzr plugins`` to
-find the version you're using.
+While Debian has several patch systems, Quilt_ is becoming the most popular.
+Quilt acts something like a version control system itself, and in the context
+of UDD, this can be both a good thing and a bad thing.  With Bazaar 2.5 and
+``bzr-builddeb`` 2.8.1 (in Ubuntu 12.04 Precise), handling source packages
+with quilt patches has become much easier.
 
-One important thing to know: all source branches reflect the tree after a
-``quilt push -a``.  In other words, when you branch a source branch, you get
-the tree with all patches applied, ready for you to jump right into hacking.
-You do not need to ``quilt push -a`` manually, and in fact, you'll get a tree
-with lots of distracting modifications if you push or pop all the changes.  Or
-to put it another way, once you have a branch, jump right in!
+There are two main tasks where you'll have to be aware of quilt patches, when
+developing your own patch to the upstream code, and when merging new versions
+of the package from Debian where either the Debian or Ubuntu (or both) have
+quilt patches in the source branch.
+
+Here are some guidelines for working with quilt patches in UDD in these two
+scenarios.  Some of these techniques are works-in-progress, so you should
+adapt them to your own workflow, and keep watching for improvements from the
+Bazaar teams.
+
+
+Patches are applied in source branches
+======================================
+
+One important thing to keep in mind: all source branches reflect the tree
+after a ``quilt push -a``.  In other words, when you branch a source branch
+from Launchpad, you get the tree with all patches applied, ready for you to
+jump right into hacking.  You do not need to ``quilt push -a`` manually, and
+in fact, you'll get a tree with lots of distracting modifications if you push
+or pop all the changes.  Or to put it another way, once you have a branch,
+jump right in!
+
+
+Merging from Debian with quilt patches
+======================================
+
+With newer versions of Bazaar as mentioned above, merging new Debian versions
+to Ubuntu versions should be quite easy now, even when one or both packages
+have quilt patches.  Just use ``bzr merge`` as you normally would.  Under the
+hood, Bazaar will first unapply all the patches, then do the merge, then if
+there are no conflicts, it will re-apply the patches leaving you again with a
+source branch in the ``quilt push -a`` state.
+
+For example, if we want to merge the Debian version of the ``aptitude``
+package with the Ubuntu version, we would do something like this::
+
+    $ bzr init-repo aptitude
+    $ cd aptitude
+    $ bzr branch ubuntu:aptitude precise
+    $ bzr branch debianlp:aptitude wheezy
+    $ cd precise
+    $ bzr merge ../wheezy
+
+If there are merge conflicts, the quilt patches will remain unapplied so that
+you can resolve the conflicts more easily.  You would use a combination of bzr
+and quilt commands to resolve the conflicts, until all the quilt patches are
+applied again.  Then you're ready to commit, push, and build as you normally
+would.
 
 
 Develop your patch
 ==================
 
-Start as you normally would with UDD and looms::
+There is a strong preference to fixing packages using a patch system like
+quilt, rather than modifying the source code directly.  This is because with a
+patch system, it's easier to communicate those changes to Debian or upstream
+(where UDD isn't used), and to remove patches when upstream fixes the bug the
+patch addresses (possibly in a completely different way).
 
-    $ bzr init-repo foobar
-    $ cd foobar
-    $ bzr branch ubuntu:foobar
-    $ bzr branch foobar bug-12345
+Let's say there's a bug in the ``dbus`` package that you want to fix.  You
+start the way you normally would with any package in UDD::
+
+    $ bzr init-repo dbus
+    $ cd dbus
+    $ bzr branch ubuntu:dbus precise
+    $ bzr branch precise bug-12345
     $ cd bug-12345
-    $ bzr loomify --base trunk
-    $ bzr create-thread sourcefix
 
-Now that you are in the ``sourcefix`` thread, just edit the source code,
-making whatever changes you need to fix the bug.  Don't worry about the patch
-system at this point, at least until you are happy with your changes.  If
-someone else pushes changes to the package while you're working on it, just
-``bzr commit`` your current work, ``bzr down-thread`` to ``trunk``, pull the
-updates, and ``bzr up-thread --auto`` back to the ``sourcefix`` thread,
-resolving any conflicts along the way.  You can periodically commit your
-changes, ``bzr record`` and push them to Launchpad as you go, of course
-linking your branch to the bug in Launchpad.  So far, it's just normal
-development with looms.
+Maybe the bug is pretty simple; there's a typo in the ``README`` file.  Just
+fix the typo in your favorite editor, then do a ``bzr stat`` to prove that the
+file has been edited::
 
-Once you're happy with your changes, you need to essentially import your
-thread's changes into a quilt patch.  This is fairly easy to do.  While inside
-the ``sourcefix`` thread do::
+    $ bzr stat
+    modified:
+      README
 
-    $ bzr create-thread quiltfix
-    $ bzr diff -rthread:trunk..thread:sourcefix | quilt import -p0 -P bug-12345 /dev/stdin
-    $ bzr add debian/patches/bug-12345
-    $ quilt push
-    $ quilt pop
-    $ bzr commit
+Now, in order to get this fix into a quilt patch, we need to generate a diff,
+but we need the resulting patch to have a format that is consumable by quilt.
+The way to do that is to use the ``--prefix`` (or ``-p``) option to ``bzr
+diff``::
 
-Why the last push/pop before the commit?  The push gets the imported changes
-into the quilt patch, but also leaves the tree modified, so you'll essentially
-have the changes both in the ``debian/`` directory and in the source tree.
-The pop undoes the tree changes (which are also available in the ``sourcefix``
-thread), but leaves the quilt change available.  A ``bzr commit`` at this
-point gives you a thread with just the changes to ``debian/``.
+    $ bzr diff -p "a/:b/" > ../bug-12345.patch
 
+What this actually does is to produce a *level 1* diff, which is required by
+the quilt command we're going to use below.  Normally, ``bzr diff`` produces
+*level 0* diffs which are more easily read by humans, but this won't work with
+quilt (despite the implication in the quilt documentation).
 
-Problems
-========
+The above command generates the patch and stores it in a file one level up
+from the working tree.  Note that here we're using the ``a`` and ``b``
+directory prefixes for the diff, but the actual names don't really matter.
 
-The problem comes when you want to modify the patch, e.g.::
+Now all you need to do is to import the patch into your quilt patches.  If you
+named the file above with the same name you want into your quilt stack, then
+just do this::
 
-    $ bzr down-thread
-    <hack, commit>
+    $ quilt import ../bug-12345.patch
+    $ bzr add debian/patches/bug-12345.patch
 
-This does *not* work well::
+You need the last line to inform Bazaar about the new quilt patch file.  You
+can see that the quilt patch's name is the same as the file name you generated
+above.  Of course, you can change this by using the ``-P`` option to ``quilt
+import``.
 
-    $ bzr up-thread
+One important thing to notice is that if you do the commands ``bzr stat`` and
+a ``quilt applied`` , you'll see that the ``README`` file is still modified,
+but the ``bug-12345.patch`` is not yet applied.  If you try to apply the newly
+imported quilt patch (with ``quilt push``), it will fail because you're
+applying a patch on top of the already patched file.
 
-You'd expect at this point to be able to ``quilt fold`` your new changes to
-update your ``bug-12345`` quilt patch, but in fact, this doesn't work.  You can
-end up with difficult to resolve conflicts, patch failures and rejections.  My
-recommendation is that when you make changes to your ``sourcefix`` thread,
-blow away your ``quiltfix`` thread and regenerate it.  Looms make this easy::
-
-    $ bzr up-thread
-    $ bzr revert
-    $ bzr combine-thread --force (throws away your quiltfix changes)
-    $ bzr create-thread quiltfix
-    $ bzr diff -rthread:trunk..thread:sourcefix | quilt import -p0 -P bug-12345 /dev/stdin
-    etc...
-
-So you've thrown away the original ``quiltfix`` thread and recreated it, with
-your updated ``sourcefix`` changes.
+One way around this is to revert the change to ``README`` before doing the
+``quilt push``.  However, if you think you may want to continue to develop the
+patch, and thus do not want to throw away your in-tree changes, use ``bzr
+shelve`` to save the change in the working tree to the side, then do ``quilt
+push``.  Either way, once you've pushed your top quilt patch, you can just
+edit the tree in place, and do ``quilt refresh`` commands to update the top
+quilt patch.
 
 
 Gotchas
@@ -119,36 +152,6 @@ For now, the best recommendation is to revert any changes to the ``.pc``
 directory in your branch.
 
 
-Publishing your changes
-=======================
-
-It's actually easier at this point to generate a diff for attaching to the bug
-report.  While inside the ``quiltfix`` thread, just::
-
-    $ bzr up-thread --auto
-    $ bzr diff -rthread: > bug-12345.diff
-
-The differences between the ``quiltfix`` thread and the ``sourcefix`` thread
-are the interesting bits, and totally appropriate for committing and upload.
-Because of the way looms interacts with Launchpad, you can still link your
-branch to the bug and request a merge proposal, but understand that the diff
-will include all changes between ``quiltfix`` (top) and ``trunk`` (bottom)
-threads.  So the merge proposal will include the changes in the ``debian/``
-directory, *and* the changes in the source tree.  As long as you and your
-reviewer understands this, you should be okay, but it can be confusing at
-first.
-
-If you need a sponsor to merge and upload your changes, one thing they *do
-not* want to do is::
-
-    $ bzr branch ubuntu:foobar
-    $ cd foobar
-    $ bzr merge lp:~you/ubuntu/natty/foobar/yourfix
-
-Much badness (in the form of infinite *maximum recursion depth* exceptions)
-ensues.  Yes, we need to file a bug on that.
-
-
 edit-patch
 ==========
 
@@ -162,28 +165,15 @@ theory ``edit-patch`` should solve this, but there are currently two blockers.
   * By default, ``bzr diff`` produces a ``-p0`` patch, but ``edit-patch``
     defers to the underlying patch system's default.  For quilt, this is
     ``-p1``.  ``quilt import`` takes a ``-p`` argument to specify the prefix
-    level, but this isn't yet exposed in ``edit-patch``.  If you're
-    adventurous, try changing the ``bzr diff`` command above to specify the
-    proper prefixes using its ``-p`` option.
+    level, but this isn't yet exposed in ``edit-patch``.  If you use the
+    ``--prefix`` argument to the ``bzr diff`` command as shown above, you
+    should be okay.
   * By default, ``edit-patch`` requires a path to an existing patch file, but
     it's more convenient to pipe the output of ``bzr diff`` to the stdin of
     ``edit-patch``, as shown above.  The alternative would be to save the diff
     in a temporary file, and then point ``edit-patch`` to this temporary file.
 
 
-Future
-======
-
-Ideally, it would be nice to add a ``bzr edit-patch`` or some such command
-which does the whole loom -> patch system import.  At least ``edit-patch``
-could grow a ``-p`` and ``-P`` option, as well as read from stdin.  Stay
-tuned, or get involved!
-
-There's now `a bug` that tracks this.
-
-
-.. _`Bazaar looms`: https://launchpad.net/bzr-loom
 .. _quilt: http://www.wzdftpd.net/blog/index.php?2008/02/05/3-quilt-a-patch-management-system-how-to-survive-with-many-patches
 .. _`currently includes any existing .pc directory`: https://bugs.launchpad.net/udd/+bug/672740
 .. _`a different patch system`: http://wiki.debian.org/debian/patches
-.. _`a bug`: https://launchpad.net/bugs/620721

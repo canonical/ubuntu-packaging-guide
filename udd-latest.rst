@@ -2,8 +2,8 @@
 Getting The Latest
 ==================
 
-If someone else has landed changes on a package, you will want to pull down
-those changes in your own copies of the package branches.
+If someone else has landed changes on a package, you will want to pull those
+changes in your own copies of the package branches.
 
 
 Updating your main branch
@@ -35,15 +35,15 @@ The merge does have to be done at some point though.  The longer it is left,
 the harder may be, so doing it regularly should keep each merge simple.  Even
 if there are many merges the total effort would hopefully be less.
 
-To merge the changes you just need to use `bzr merge-package`, but you must
+To merge the changes you just need to use ``bzr merge``, but you must
 have committed your current work first::
 
     $ cd tomboy/bug-12345
-    $ bzr merge-package ../tomboy.dev
+    $ bzr merge ../tomboy.dev
 
 Any conflicts will be reported, and you can fix them up.  To review the
-changes that you just merged use `bzr diff`.  To undo the merge use `bzr
-revert`.  Once you are happy with the changes then use `bzr commit`.
+changes that you just merged use ``bzr diff``.  To undo the merge use ``bzr
+revert``.  Once you are happy with the changes then use ``bzr commit``.
 
 
 Referring to versions of a package
