@@ -1,6 +1,6 @@
-===============================================================
-Seeking Review and Sponsorship
-===============================================================
+================================
+ Seeking Review and Sponsorship
+================================
 
 One of the biggest advantages to using the UDD workflow is to improve quality
 by seeking review of changes by your peers.  This is true whether or not you
@@ -44,7 +44,7 @@ To do this open the bug page in a browser, e.g.::
 
     $ bzr lp-open
 
-if that fails, then you can use
+If that fails, then you can use::
 
     $ xdg-open https://code.launchpad.net/~subgenius/ubuntu/natty/tomboy/bug-12345
 
@@ -71,8 +71,8 @@ branch)::
 Another way is to is to open the merge proposal and download the diff.
 
 You should ensure that diff has the changes you expect, no more and no less.
-Name the diff appropriately, e.g. foobar-12345.debdiff and attach it to the
-bug report.
+Name the diff appropriately, e.g. ``foobar-12345.debdiff`` and attach it to
+the bug report.
 
 
 Dealing with feedback from sponsors
@@ -85,14 +85,14 @@ make the changes requested, and then commit::
     $ bzr commit
 
 Now when you push your branch to Launchpad, Bazaar will remembered where you
-pushed to, and will only update the branch on Launchpad with your latest
-commits.  All you need to do is::
+pushed to, and will update the branch on Launchpad with your latest commits.
+All you need to do is::
 
     $ bzr push
 
-You can then reply to the merge proposal review explaining what you changed,
-and asking for re-review, or you can reply on the merge proposal page in
-Launchpad.
+You can then reply to the merge proposal review email explaining what you
+changed, and asking for re-review, or you can reply on the merge proposal page
+in Launchpad.
 
 Note that if you are sponsored via a debdiff attached to a bug report you need
 to manually update by generating a new diff and attaching that to the bug

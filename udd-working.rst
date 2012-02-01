@@ -1,6 +1,6 @@
-=====================================================
-Working on a Package
-=====================================================
+======================
+ Working on a Package
+======================
 
 Once you have the source package branch in a shared repository, you'll want to
 create additional branches for the fixes or other work you plan to do.  You'll
@@ -41,11 +41,11 @@ file.
 
 .. _link-via-changelog:
 
-When you added your `debian/changelog` entry, you should have included a bug fix
-tag that indicated which Launchpad bug issue you're fixing.  The format of this
-textual tag is pretty strict: ``LP: #12345``.  The space between the ``:`` and
-the ``#`` is required and of course the number will be replaced by the actual
-bug number you're fixing.  Your `debian/changelog` entry might look something
+When you added your `debian/changelog` entry, you should have included a bug
+fix tag that indicated which Launchpad bug issue you're fixing.  The format of
+this textual tag is pretty strict: ``LP: #12345``.  The space between the
+``:`` and the ``#`` is required and of course you should use the actual bug
+number that you're fixing.  Your `debian/changelog` entry might look something
 like::
 
     tomboy (1.5.2-1ubuntu5) natty; urgency=low
@@ -92,4 +92,6 @@ Note that while `bzr builddeb` has a `--native` switch, it does not have a
 `--no-native` switch.
 
 Once you've got the source package, you can build it as normal with
-``pbuilder-dist`` (or ``pbuilder`` or ``sbuild``).
+``pbuilder-dist`` (or ``pbuilder`` or `sbuild`_).
+
+.. _`sbuild`: https://wiki.ubuntu.com/SecurityTeam/BuildEnvironment

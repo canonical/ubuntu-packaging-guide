@@ -30,7 +30,7 @@ Since they are unique, you can also abbreviate the distro-series name::
 
 You can use a similar scheme to access the source branches in Debian, although
 there are no shortcuts for the Debian distro-series names.  To access the
-Tomboy branch in the current development series for Debian use:
+Tomboy branch in the current development series for Debian use::
 
     debianlp:tomboy
 
@@ -96,11 +96,20 @@ pull` to get any future updates.
 Ensuring the version is up to date
 ----------------------------------
 
-When you do your ``bzr branch`` you will get a message telling you if the packaging branch is up to date.  Occationally the importer fails and packaging branches do not match what is in the archive.  A message saying::
+When you do your ``bzr branch`` you will get a message telling you if the
+packaging branch is up to date.  For example::
+
+    $ bzr branch ubuntu:tomboy
+    Most recent Ubuntu version: 1.8.0-1ubuntu1.2
+    Packaging branch status: CURRENT
+    Branched 86 revisions.
+
+Occasionally the importer fails and packaging branches do not match what is in
+the archive.  A message saying::
 
     Packaging branch status: OUT-OF-DATE
 
-Means the importer has failed.  You can find out why on
+means the importer has failed.  You can find out why on
 http://package-import.ubuntu.com/status/ and `file a bug on the UDD
 project`_ to get the issue resolved.
 
@@ -112,11 +121,11 @@ You can get the upstream tar by running::
 
     bzr get-orig-source
 
-The works from bzr-builddeb version 2.7.10.  It will try a number of methods to
-get the upstream tar, firstly by recreating it from the ``upstream-x.y`` tag in
-the bzr archive, then by downloading from the ubuntu archive, lastly by running
-``debian/rules get-orig-source``. The upstream tar will also be recreated when
-using bzr to build the package::
+This will try a number of methods to get the upstream tar, firstly by
+recreating it from the ``upstream-x.y`` tag in the bzr archive, then by
+downloading from the Ubuntu archive, lastly by running ``debian/rules
+get-orig-source``. The upstream tar will also be recreated when using bzr to
+build the package::
 
     bzr builddeb
 
