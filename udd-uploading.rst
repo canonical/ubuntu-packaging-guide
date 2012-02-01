@@ -52,7 +52,8 @@ would::
 
 When you're finally happy with your branch, make sure you've committed all
 your changes, then tag the branch with the changelog's version number.  The
-``bzr tag`` command will do this for you automatically::
+``bzr tag`` command will do this for you automatically when given no
+arguments::
 
     $ bzr tag
 

@@ -42,9 +42,9 @@ libraries and applications.
 The bzr-builddeb way
 --------------------
 
-You could use the `dh_make` command to get things going, or similiarly the
-`bzr dh-make`.  The latter might provide some benefits, and can be run like so
-from inside your branch::
+You could use the ``dh_make`` command to get things going, or similarly the
+``bzr dh-make``.  The latter might provide some benefits, and can be run like
+so from inside your branch::
 
     $ bzr dh-make PKGNAME VERSION DOWNLOADURL
     $ bzr add debian

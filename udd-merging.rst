@@ -5,10 +5,10 @@ Merging - Updating from Debian and Upstream
 Merging is one of the strengths of Bazaar, and something we do often in Ubuntu
 development.  Updates can be merged from Debian, from a new upstream release,
 and from other Ubuntu developers.  Doing it in Bazaar is pretty simple, and
-all based around the ``bzr merge`` command.
+all based around the ``bzr merge`` command [#]_.
 
-When you are in any branch's working directory then you can merge from
-another.  First check that you have no uncommitted changes::
+While you are in any branch's working directory, you can merge in a branch
+from a different location.  First check that you have no uncommitted changes::
 
     $ bzr status
 
@@ -118,3 +118,10 @@ want to use as the tip of the upstream branch.
 
 .. _`package importer`:  http://package-import.ubuntu.com/status/
 .. _Squeeze: http://wiki.debian.org/DebianSqueeze
+
+.. [#] You will need newer versions of ``bzr`` and the ``bzr-builddeb`` for
+   the ``merge`` command to work.  Use the versions from Ubuntu 12.04
+   (Precise) or the development versions from the ``bzr`` PPA.  Specifically,
+   you need ``bzr`` version 2.5 beta 5 or newer, and ``bzr-builddeb`` version
+   2.8.1 or newer.  For older versions, use the ``bzr merge-package`` command
+   instead.
