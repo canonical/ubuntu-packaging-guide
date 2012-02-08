@@ -27,7 +27,7 @@ required dependencies lets install those as well.
 Install build tools::
 
     $ sudo apt-get install build-essential cmake libqt4-dev kdelibs5-dev \
-    $ libqrencode-dev libzbar-dev libzbarqt-dev
+    $ libqrencode-dev libzbar-dev libzbarqt-dev bzr
 
 
 Download main & dev package::
