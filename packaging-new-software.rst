@@ -15,10 +15,40 @@ The first stage in packaging is to get the released tar from upstream (we call
 the authors of applications "upstream") and check that it compiles and runs.
 
 This guide will take you through packaging a simple application called KQRCode
-which has been `posted on KDE-apps.org`_.  Download `version 0.6.0 from
-Sourceforge`_ and put it in a new directory.
+which has been `posted on KDE-apps.org`_.
 
-Now uncompress it::
+If you don't have the build tools lets make sure we have them first.  Also if you don't have the
+required dependencies lets install those as well.
+
+
+
+
+
+Install build tools::
+
+    $ sudo apt-get install build-essential cmake libqt4-dev kdelibs5-dev \
+    $ libqrencode-dev libzbar-dev libzbarqt-dev
+
+
+Download main & dev package::
+
+    $ wget -O kqrcode-0.6.0.tar.gz \
+    $ "https://downloads.sourceforge.net/project/kqrcode/KQRCode/kqrcode-0.6.0.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fkqrcode%2F&ts=1328730716&use_mirror=iweb" 
+    $ wget -O kqrcode-dev-0.6.0.tar.gz \
+    $ "https://downloads.sourceforge.net/project/kqrcode/KQRCode-dev/kqrcode-dev-0.6.0.tar.gz?r=&ts=1328731847&use_mirror=iweb"
+
+
+Now uncompress and install dev package::
+
+    $ tar xf tar xf kqrcode-dev-0.6.0.tar.gz
+    $ cd cd kqrcode-dev-0.6.0
+    $ mkdir build
+    $ cmake ..
+    $ make
+    $ sudo make install
+    $ cd ../../
+
+Now uncompress main package::
 
     $ tar xf kqrcode-0.6.0.tar.gz
     $ cd kqrcode-0.6.0
@@ -28,15 +58,6 @@ for compilation::
 
     $ mkdir build
     $ cd build
-    $ cmake ..
-
-CMake will check for the required dependencies, in this case it tells us we
-need Qt and KDE libraries.  We also need GCC, packagers can install
-``build-essential`` which brings this in and is assumed to be installed for all
-packages. If you do not have the development files for these libraries installed
-it will fail, you can install them and run CMake again::
-
-    $ sudo apt-get install build-essential libqt4-dev kdelibs5-dev libqrencode-dev libzbar-dev libzbarqt-dev
     $ cmake ..
 
 Now you can compile the source::
@@ -204,7 +225,6 @@ package will make it into Ubuntu in time for the next release. This
 process is documented on the `"New Packages" section of the Ubuntu wiki`_.
 
 .. _`posted on KDE-apps.org`: http://kde-apps.org/content/show.php/KQRCode?content=143544
-.. _`version 0.6.0 from Sourceforge`: http://sourceforge.net/projects/kqrcode/files/KQRCode/kqrcode-0.6.0.tar.gz/download
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
 .. _`lintian website`: http://lintian.debian.org/tags.html
 .. _`MOTU mailing list`: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
