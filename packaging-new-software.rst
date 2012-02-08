@@ -42,7 +42,7 @@ Now uncompress and install dev package::
 
     $ tar xf kqrcode-dev-0.6.0.tar.gz
     $ cd kqrcode-dev-0.6.0
-    $ mkdir build
+    $ mkdir build && cd build
     $ cmake ..
     $ make
     $ sudo make install
@@ -68,6 +68,7 @@ If the compile completes successfully you can install and run the program::
 
     $ sudo make install
     $ kqrcode
+    $ cd ../../
 
 Starting a Package
 ------------------
@@ -142,6 +143,7 @@ Now we need to check that our packaging successfully compiles the package and
 builds the .deb binary package::
 
     $ debuild -us -uc
+    $ cd ../../
 
 ``debuild`` is a command to build the package in its current location.  The
 ``-us -uc`` tell it there is not need to GPG sign the compile.  The result will
@@ -149,11 +151,11 @@ be placed in ``..``.
 
 You can view the contents of the package with::
 
-    $ lesspipe kqrcode_0.6.0-0ubuntu1_amd64.deb
+    $ lesspipe kqrcode_0.6.0-1_amd64.deb
 
 Install the package and check it works::
 
-    $ sudo dpkg --install kqrcode_0.6.0-0ubuntu1_amd64.deb
+    $ sudo dpkg --install kqrcode_0.6.0-1_amd64.deb
 
 Next Steps
 ----------
@@ -163,8 +165,8 @@ bugs.  Many errors can be automatically detected by our tool
 ``lintian`` which can be run on both the source .dsc metadata file and
 the .deb binary package::
 
-    $ lintian kqrcode_0.6.0-0ubuntu1.dsc
-    $ lintian kqrcode_0.6.0-0ubuntu1_amd64.deb
+    $ lintian kqrcode_0.6.0-1.dsc
+    $ lintian kqrcode_0.6.0-1_amd64.deb
 
 A description of each of the problems it reports can be found on the
 `lintian website`_.
@@ -179,7 +181,7 @@ clean system using ``pbuilder``::
 
     $ bzr builddeb -S
     $ cd ../build-area
-    $ pbuilder-dist oneiric build kqrcode_0.6.0-0ubuntu1.dsc
+    $ pbuilder-dist oneiric build kqrcode_0.6.0-1.dsc
 
 When you are happy with your package you will want others to review it.  You
 can upload the branch to Launchpad for review::
@@ -190,7 +192,7 @@ Uploading it to a PPA (Personal Package Archive) will ensure it builds
 and give an easy way for you and others to test the binary packages.
 You will need to set up a PPA in Launchad then upload with ``dput``::
 
-    $ dput ppa:<lp-username> kqrcode_0.6.0-0ubuntu1.dsc
+    $ dput ppa:<lp-username> kqrcode_0.6.0-1.dsc
 
 See :doc:`uploading</udd-uploading>` for more information.
 
