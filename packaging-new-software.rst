@@ -27,7 +27,7 @@ required dependencies lets install those as well.
 Install build tools::
 
     $ sudo apt-get install build-essential cmake libqt4-dev kdelibs5-dev \
-    $ libqrencode-dev libzbar-dev libzbarqt-dev bzr
+    $ libqrencode-dev libzbar-dev libzbarqt-dev bzr bzr-builddeb 
 
 
 Download main & dev package::
@@ -77,6 +77,7 @@ the plugin is a wrapper around the ``dh_make`` additionally make sure your
 in the directory where you have your kqrcode tar file. command::
 
     $ sudo apt-get install dh-make
+    $ bzr whoami your-email-address@url.com
     $ bzr dh-make kqrcode 0.6.0 kqrcode-0.6.0.tar.gz
 
 When it asks what type of package type ``s`` for single binary.
