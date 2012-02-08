@@ -40,8 +40,8 @@ Download main & dev package::
 
 Now uncompress and install dev package::
 
-    $ tar xf tar xf kqrcode-dev-0.6.0.tar.gz
-    $ cd cd kqrcode-dev-0.6.0
+    $ tar xf kqrcode-dev-0.6.0.tar.gz
+    $ cd kqrcode-dev-0.6.0
     $ mkdir build
     $ cmake ..
     $ make
