@@ -129,6 +129,8 @@ build the package::
 
     bzr builddeb
 
+The `builddeb` plugin has several `configuration options`_.
+
 
 Getting a branch for a particular release
 -----------------------------------------
@@ -164,3 +166,5 @@ and Bazaar will do the rest.  You've now got a Bazaar source branch.
 .. _`status of the package importer`: http://package-import.ubuntu.com/status
 .. _`file a bug on the UDD project`: https://bugs.launchpad.net/udd
 .. _`stable release update`: https://wiki.ubuntu.com/StableReleaseUpdates
+.. _`configuration options`: http://bazaar.launchpad.net/~bzr-builddeb-hackers/bzr-builddeb/trunk/view/head:/doc/user_manual/configuration.rst
+
