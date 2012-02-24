@@ -1,0 +1,234 @@
+/**
+* Ubuntu Developer page stylesheet
+*
+* A stylesheet for the 'home' page
+*
+* @project Ubuntu Developer
+* @version 1.0
+* @author Canonical Web Team: Steve Edwards and Ant Dillon
+* @copyright 2011 Canonical Ltd.
+*/
+
+.home header {
+	background: #fff;
+}
+.home .header-content {
+	background: url("./images/background-header-home.png") 0 0 repeat #fff;
+}
+.home .header-content h1 {
+	font-size: 36px;
+	background: #fff;
+}
+.home .header-content h2 {
+	font-size: 20px;
+	line-height: 1.4;
+	width: 440px;
+	background: #fff;
+}
+.home .header-content a .cta-center{
+	margin-top: 20px;
+	font-size: 20px;
+	line-height: 2.4;
+}
+.home .header-content a .cta-right, .home .header-content a .cta-left {
+	margin-top: 20px;
+}
+.home .header-image {
+	background: url("./images/dotted-logo.png") no-repeat scroll 122px -24px transparent;
+	float: right;
+    height: 332px;
+    margin-bottom: -35px;
+    margin-right: -163px;
+    margin-top: -53px;
+    width: 571px;
+	position: relative;
+	z-index: 1;
+}
+.home .header-image img {
+		-moz-box-shadow: 0 9px 4px 4px #e0e0e0;
+		-webkit-box-shadow: 0 9px 4px 4px #e0e0e0;
+	box-shadow: 0 9px 4px 4px #e0e0e0;
+	margin-bottom: -74px;
+    margin-left: -52px;
+    margin-top: 77px;
+}
+
+.box-steps {
+	margin-bottom: 30px;
+	border: 3px solid #dd4814;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+	border-radius: 4px;
+		-moz-box-shadow: 0 3px 1px #e0e0e0;
+		-webkit-box-shadow: 0 3px 1px #e0e0e0;
+	box-shadow: 0 3px 1px #e0e0e0;
+}
+.box-steps li {
+	padding: 15px;
+	float: left;
+	width: 203px;
+	border-right: 1px solid #dd4814;
+	text-align: center;
+	min-height: 237px;
+}
+.box-steps li.last {
+	border: 0;
+	width: 202px;
+}
+.box-steps span {
+	padding: 4px;
+	margin: 10px auto 0;
+	display: block;
+	border: 3px solid #dd4814;
+		-moz-border-radius: 40px;
+		-webkit-border-radius: 40px;
+	border-radius: 40px;
+	text-align: center;
+	font-size: 36px;
+	width: 50px;
+	color: #dd4814;
+		-moz-box-shadow: 0 2px 1px #e0e0e0;
+		-webkit-box-shadow: 0 2px 1px #e0e0e0;
+	box-shadow: 0 2px 1px #e0e0e0;
+}
+.box-steps h3 {
+	margin: 10px 0 15px;
+}
+.box-steps p {
+	padding-top: 15px;
+	text-align: left;
+	border-top: 1px dotted #aea79f;
+}
+.box-steps a {
+	color: #333;
+}
+.box-steps li:hover {
+	background-color: #fcece7;
+	cursor: pointer;
+}
+.box-steps li:hover span {
+	background-color: #dd4814;
+	color: #fff;
+}
+.box-steps li:hover a {
+	color: #dd4814;
+}
+.box ul li {
+	margin: 0 30px 20px 0;
+	width: 282px;
+	float: left;
+}
+.box ul li.last {
+	margin-right: 0;
+}
+.box ul li img {
+	margin: 0 0 10px 10px;
+	float: right;
+}
+.box h4 {
+	padding-bottom: 10px;
+}
+.box h2 {
+	margin-bottom: 30px;
+}
+.box .link-action-small {
+	float: right;
+	margin-bottom: 0px;
+}
+
+/*blockquote {
+	margin-bottom: 30px;
+	padding: 32px 10px;
+	border-top: 1px dotted #aea69e;
+	border-bottom: 1px dotted #aea69e;
+	background: url("./images/quotes.png") no-repeat scroll 5px center;
+}
+blockquote p {
+	padding: 12px 65px;
+	font-size: 24px;
+	height: 54px;
+}
+blockquote cite {
+	margin-left: 65px;
+	font-size: 16px;
+}*/
+
+.slider{
+	width:10000px;
+	margin-left:-10px;
+}
+
+.box-padded .slider-controls{
+	background-color: transparent;
+    border-radius:0px;
+    padding: 0px;
+    float:right;
+    border:0px;
+	width:200px;
+}
+
+.slider-controls .next{
+	background:url("./images/arrow-sliders.png") no-repeat scroll -29px 0;
+	height:31px;
+	width:34px;
+}
+
+.slider-controls .prev{
+	background:url("./images/arrow-sliders.png") no-repeat scroll 0 0;
+	height:31px;
+	width:29px;
+}
+
+.slider-controls div{
+	float:right;
+	padding:0px;
+	cursor: pointer;
+    border: none;
+    	-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.slider-controls .prev.disabled{
+	background-position: 0 -29px;
+	cursor: default;
+}
+
+.slider-controls .next.disabled{
+	background-position: -29px -29px;
+	cursor: default;
+}
+
+.slider-jump{
+	width:66px;
+	margin:0px auto;
+	padding-left: 33px;
+	padding-top:10px;
+}
+.slider-jump li{
+	width:9px;
+	height:9px;
+	background:transparent;
+	border:1px solid #aea79f;
+		-moz-border-radius:5px 5px 5px 5px;
+		-webkit-border-radius:5px 5px 5px 5px;
+	border-radius:5px 5px 5px 5px;
+	float:left;
+	margin-right:5px;
+	cursor: pointer;
+	padding: 0 0;
+}
+
+.slider-jump .active{
+	background:#aea79f;
+	cursor: default;
+}
+
+.box-padded li .price{
+	font-weight: bold;
+}
+
+.box-padded li.no-border{
+	border: 0 none;
+}
+
