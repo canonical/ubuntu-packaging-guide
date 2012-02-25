@@ -14,51 +14,33 @@ Checking the Program
 The first stage in packaging is to get the released tar from upstream (we call
 the authors of applications "upstream") and check that it compiles and runs.
 
-This guide will take you through packaging a simple application called KQRCode
+This guide will take you through packaging a simple application called GNU Hello
 which has been `posted on KDE-apps.org`_.
 
 If you don't have the build tools lets make sure we have them first.  Also if you don't have the
 required dependencies lets install those as well.
 
-
-
-
-
 Install build tools::
 
-    $ sudo apt-get install build-essential cmake libqt4-dev kdelibs5-dev \
+    $ sudo apt-get install build-essential cmake 
+
+libqt4-dev kdelibs5-dev \
     $ libqrencode-dev libzbar-dev libzbarqt-dev bzr bzr-builddeb 
 
 
 Download main & dev package::
 
-    $ wget -O kqrcode-0.6.0.tar.gz \
-    $ "https://downloads.sourceforge.net/project/kqrcode/KQRCode/kqrcode-0.6.0.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fkqrcode%2F&ts=1328730716&use_mirror=iweb" 
-    $ wget -O kqrcode-dev-0.6.0.tar.gz \
-    $ "https://downloads.sourceforge.net/project/kqrcode/KQRCode-dev/kqrcode-dev-0.6.0.tar.gz?r=&ts=1328731847&use_mirror=iweb"
-
-
-Now uncompress and install dev package::
-
-    $ tar xf kqrcode-dev-0.6.0.tar.gz
-    $ cd kqrcode-dev-0.6.0
-    $ mkdir build && cd build
-    $ cmake ..
-    $ make
-    $ sudo make install
-    $ cd ../../
+    $ wget -O hello-2.7.tar.gz "http://ftp.gnu.org/gnu/hello/hello-2.7.tar.gz"
 
 Now uncompress main package::
 
-    $ tar xf kqrcode-0.6.0.tar.gz
-    $ cd kqrcode-0.6.0
+    $ tar xf hello-2.7.tar.gz
+    $ cd hello-2.7
 
-This application uses the CMake build system so we want to run cmake to prepare
+This application uses the autoconf build system so we want to run ./configure to prepare
 for compilation::
 
-    $ mkdir build
-    $ cd build
-    $ cmake ..
+    $ ./configure
 
 Now you can compile the source::
 
@@ -67,8 +49,7 @@ Now you can compile the source::
 If the compile completes successfully you can install and run the program::
 
     $ sudo make install
-    $ kqrcode
-    $ cd ../../
+    $ hello
 
 Starting a Package
 ------------------
@@ -78,23 +59,23 @@ the plugin is a wrapper around the ``dh_make`` additionally make sure your
 in the directory where you have your kqrcode tar file. command::
 
     $ sudo apt-get install dh-make
-    $ bzr whoami your-email-address@url.com
-    $ bzr dh-make kqrcode 0.6.0 kqrcode-0.6.0.tar.gz
+    $ cd ..
+    $ bzr dh-make hello 2.7 hello-2.7.tar.gz
 
 When it asks what type of package type ``s`` for single binary.
-
+ls
 This will import the code into a branch and add the ``debian/`` packaging
 directory.  Have a look at the contents.  Most of the files it adds are only
 needed for specialist packages (such as Emacs modules) so you can start by
 removing the optional example files::
 
-    $ cd kqrcode/debian
+    $ cd hellorm/debian
     $ rm *ex *EX
 
 You should now customise each of the files.  
 
 In ``debian/changelog`` change the
-version number to an Ubuntu version: ``0.6.0-0ubuntu1`` (upstream version 0.6.0,
+version number to an Ubuntu version: ``2.7-0ubuntu1`` (upstream version 2.7,
 Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current
 development Ubuntu release such as ``oneiric``.
 
@@ -109,8 +90,7 @@ describes the source package. The second and and following paragraphs describe
 the binary packages to be built.  We will need to add the packages needed to
 compile the application to ``Build-Depends:`` so set that to::
 
-    Build-Depends: debhelper (>= 7.0.50~), cmake, libqt4-dev, kdelibs5-dev,
-    libqrencode-dev, libzbar-dev, libzbarqt-dev
+    Build-Depends: debhelper (>= 7.0.50~)
 
 You will also need to fill in a description of the program in the
 ``Description:`` field.
@@ -151,11 +131,11 @@ be placed in ``..``.
 
 You can view the contents of the package with::
 
-    $ lesspipe kqrcode_0.6.0-1_amd64.deb
+    $ lesspipe hello_2.7-1_amd64.deb
 
 Install the package and check it works::
 
-    $ sudo dpkg --install kqrcode_0.6.0-1_amd64.deb
+    $ sudo dpkg --install hello_2.7-1_amd64.deb
 
 Next Steps
 ----------
@@ -165,8 +145,8 @@ bugs.  Many errors can be automatically detected by our tool
 ``lintian`` which can be run on both the source .dsc metadata file and
 the .deb binary package::
 
-    $ lintian kqrcode_0.6.0-1.dsc
-    $ lintian kqrcode_0.6.0-1_amd64.deb
+    $ lintian hello_2.7-1.dsc
+    $ lintian hello_2.7-1_amd64.deb
 
 A description of each of the problems it reports can be found on the
 `lintian website`_.
@@ -181,18 +161,18 @@ clean system using ``pbuilder``::
 
     $ bzr builddeb -S
     $ cd ../build-area
-    $ pbuilder-dist oneiric build kqrcode_0.6.0-1.dsc
+    $ pbuilder-dist oneiric build hello_2.7-1.dsc
 
 When you are happy with your package you will want others to review it.  You
 can upload the branch to Launchpad for review::
 
-    $ bzr push lp:~<lp-username>/+junk/kqrcode-package
+    $ bzr push lp:~<lp-username>/+junk/hello-package
 
 Uploading it to a PPA (Personal Package Archive) will ensure it builds
 and give an easy way for you and others to test the binary packages.
 You will need to set up a PPA in Launchad then upload with ``dput``::
 
-    $ dput ppa:<lp-username> kqrcode_0.6.0-1.dsc
+    $ dput ppa:<lp-username> hello_2.7-1.dsc
 
 See :doc:`uploading</udd-uploading>` for more information.
 
@@ -227,7 +207,7 @@ instance, Debian might be in a freeze making it unlikely that you're
 package will make it into Ubuntu in time for the next release. This
 process is documented on the `"New Packages" section of the Ubuntu wiki`_.
 
-.. _`posted on KDE-apps.org`: http://kde-apps.org/content/show.php/KQRCode?content=143544
+.. _`posted on Gnu.org`: http://www.gnu.org/software/hello/
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
 .. _`lintian website`: http://lintian.debian.org/tags.html
 .. _`MOTU mailing list`: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
