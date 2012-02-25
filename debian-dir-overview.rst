@@ -139,12 +139,18 @@ with the year and copyright holder, and the text of the copyright itself. An
 example template would be::
 
 
- Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=166
+ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
  Upstream-Name: Hello
  Source: ftp://ftp.example.com/pub/games
  
  Files: *
  Copyright: Copyright 1998 John Doe <jdoe@example.com>
+ License: GPL-2+
+ 
+ Files: debian/*
+ Copyright: Copyright 1998 Jane Doe <packager@example.com>
+ License: GPL-2+
+ 
  License: GPL-2+
   This program is free software; you can redistribute it
   and/or modify it under the terms of the GNU General Public
@@ -167,13 +173,9 @@ example template would be::
   License version 2 can be found in the file
   `/usr/share/common-licenses/GPL-2'.
  
- Files: debian/*
- Copyright: Copyright 1998 Jane Doe <packager@example.com>
- License: GPL-2+
- 
-This example follows the `DEP-5: Machine-parseable debian/copyright 
-<http://dep.debian.net/deps/dep5/>`_ proposal. You are encouraged to use this 
-format as well.
+This example follows the `Machine-readable debian/copyright 
+<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ format.
+You are encouraged to use this format as well.
 
 
 The rules file
