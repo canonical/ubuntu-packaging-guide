@@ -15,7 +15,7 @@ The first stage in packaging is to get the released tar from upstream (we call
 the authors of applications "upstream") and check that it compiles and runs.
 
 This guide will take you through packaging a simple application called GNU Hello
-which has been `posted on KDE-apps.org`_.
+which has been `posted on GNU.org`_.
 
 If you don't have the build tools lets make sure we have them first.  Also if you don't have the
 required dependencies lets install those as well.
@@ -207,7 +207,7 @@ instance, Debian might be in a freeze making it unlikely that you're
 package will make it into Ubuntu in time for the next release. This
 process is documented on the `"New Packages" section of the Ubuntu wiki`_.
 
-.. _`posted on Gnu.org`: http://www.gnu.org/software/hello/
+.. _`posted on GNU.org`: http://www.gnu.org/software/hello/
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
 .. _`lintian website`: http://lintian.debian.org/tags.html
 .. _`MOTU mailing list`: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
