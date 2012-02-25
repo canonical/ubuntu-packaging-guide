@@ -24,11 +24,7 @@ Install build tools::
 
     $ sudo apt-get install build-essential cmake 
 
-libqt4-dev kdelibs5-dev \
-    $ libqrencode-dev libzbar-dev libzbarqt-dev bzr bzr-builddeb 
-
-
-Download main & dev package::
+Download main package::
 
     $ wget -O hello-2.7.tar.gz "http://ftp.gnu.org/gnu/hello/hello-2.7.tar.gz"
 
@@ -56,7 +52,7 @@ Starting a Package
 
 ``bzr-builddeb`` includes a plugin to create a new package from a template,
 the plugin is a wrapper around the ``dh_make`` additionally make sure your
-in the directory where you have your kqrcode tar file. command::
+in the directory where you have your hello tar file. command::
 
     $ sudo apt-get install dh-make
     $ cd ..
@@ -75,7 +71,7 @@ removing the optional example files::
 You should now customise each of the files.  
 
 In ``debian/changelog`` change the
-version number to an Ubuntu version: ``2.7-0ubuntu1`` (upstream version 2.7,
+version number to an Ubuntu version: ``2.7-1ubuntu1`` (upstream version 2.7,
 Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current
 development Ubuntu release such as ``oneiric``.
 
@@ -96,7 +92,7 @@ You will also need to fill in a description of the program in the
 ``Description:`` field.
 
 ``copyright`` needs to be filled in to follow the licence of the upstream
-source.  According to the kqrcode/COPYING file this is GNU GPL 3 or later.
+source.  According to the hello/COPYING file this is GNU GPL 3 or later.
 
 ``docs`` contains any upstream documentation files you think should be included
 in the final package.
@@ -178,7 +174,7 @@ See :doc:`uploading</udd-uploading>` for more information.
 
 You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the
 `MOTU mailing list`_.  There might also be a more specific team you
-could ask such as the Kubuntu team for KDE packages.
+could ask such as the GNU team for more specific questions.
 
 Submitting for inclusion
 ------------------------
