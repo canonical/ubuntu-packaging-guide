@@ -61,10 +61,3 @@ Knowledge Base
    chroots
    traditional-packaging
    kde
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
