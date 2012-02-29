@@ -21,7 +21,7 @@ import sys, os, re, glob
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-#needs_sphinx = '1.0'
+needs_sphinx = '1.1'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
@@ -37,11 +37,12 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'ubuntu-packaging-guide/index'
 
 # General information about the project.
 project = u'ubuntu-packaging-guide'
-copyright = u'2010, Ubuntu Developers'
+authors = 'Ubuntu Developers'
+copyright = u'2010-2012, '+authors
 
 
 changelog = "debian/changelog"
@@ -75,6 +76,7 @@ release = version
 exclude_patterns = ['_build']
 
 locale_dirs = ["translated/"]
+gettext_compact = True
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -242,10 +244,10 @@ texinfo_appendices = []
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'ubuntu-packaging-guide'
-epub_author = u'Ubuntu Developers'
-epub_publisher = u'Ubuntu Developers'
-epub_copyright = u'2010, Ubuntu Developers'
+epub_title = project
+epub_author = authors
+epub_publisher = authors
+epub_copyright = copyright
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

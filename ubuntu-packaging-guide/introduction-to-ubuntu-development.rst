@@ -34,7 +34,7 @@ From the beta release onwards, only critical bugs get fixed and a release
 candidate release is made and if it does not contain any serious problems, it 
 becomes the final release.
 
-.. image:: images/cycle-items.png
+.. image:: ../images/cycle-items.png
 
 Thousands of source packages, billions of lines of code, hundreds of
 contributors require a lot of communication and planning to maintain
@@ -93,7 +93,7 @@ a solid version with just an additional bug fix. That is why we make use of
 "Distributed Development", where code is being worked on in various branches
 that are merged with each other after code reviews and sufficient discussion.
 
-.. image:: images/cycle-branching.png
+.. image:: ../images/cycle-branching.png
 
 In the example mentioned above it would make sense to ship Ubuntu with the 
 existing version of the project, add the bugfix, get it into Upstream for 
@@ -107,7 +107,7 @@ tested it, you can easily propose the change to be included in the current
 Ubuntu development release. A developer with upload rights will review it for 
 you and then get it integrated into Ubuntu.
 
-.. image:: images/cycle-process.png
+.. image:: ../images/cycle-process.png
 
 When trying to find a solution it is usually a good idea to check with 
 Upstream and see if the problem (or a possible solution) is known already 

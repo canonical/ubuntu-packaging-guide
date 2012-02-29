@@ -15,7 +15,7 @@ The changelog
 This file is, as its name implies, a listing of the changes made in each 
 version. It has a specific format that gives the package name, version, 
 distribution, changes, and who made the changes at a given time. If you 
-have a GPG key (see: :doc:`Getting set up</getting-set-up/>`), make sure 
+have a GPG key (see: :doc:`Getting set up<./getting-set-up/>`), make sure 
 to use the same name and email address in ``changelog`` as you have in 
 your key. The following is a template ``changelog``::
 

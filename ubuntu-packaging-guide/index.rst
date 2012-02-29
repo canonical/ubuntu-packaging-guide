@@ -24,8 +24,8 @@ The guide is split up into two sections:
 This guide focuses on the Ubuntu Distributed Development packaging method. 
 This is a new way of packaging which uses Distributed Revision Control
 branches.  It currently has some limitations which mean many teams in Ubuntu
-use :doc:`traditional packaging</traditional-packaging>` methods.  See the
-:doc:`UDD Introduction</udd-intro>` page for an introduction to the differences.
+use :doc:`traditional packaging<./traditional-packaging>` methods.  See the
+:doc:`UDD Introduction<./udd-intro>` page for an introduction to the differences.
 
 Articles
 --------
