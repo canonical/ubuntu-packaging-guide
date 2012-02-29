@@ -178,7 +178,7 @@ You will need to set up a PPA in Launchad then upload with ``dput``::
 
     $ dput ppa:<lp-username> kqrcode_0.4-0ubuntu1.dsc
 
-See :doc:`uploading</udd-uploading>` for more information.
+See :doc:`uploading<./udd-uploading>` for more information.
 
 You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the
 `MOTU mailing list`_.  There might also be a more specific team you

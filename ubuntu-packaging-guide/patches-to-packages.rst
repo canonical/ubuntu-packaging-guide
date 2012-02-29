@@ -173,7 +173,7 @@ Even older packages will include changes directly to sources and kept in the
 versions or differentiate between patches and is best avoided.
 
 Bazaar Loom is a way to keep patches as part of bzr trees, see :doc:`Working
-with Patches via Loom</udd-patchsys>` for more information.
+with Patches via Loom<./udd-patchsys>` for more information.
 
 Do not change a package's patch system without discussing it with the Debian
 maintainer or relevant Ubuntu team.  If there is no existing patch system then

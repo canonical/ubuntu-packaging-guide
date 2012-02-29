@@ -21,7 +21,7 @@ import sys, os, re, glob
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-#needs_sphinx = '1.0'
+needs_sphinx = '1.1'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
@@ -37,7 +37,7 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'ubuntu-packaging-guide/index'
 
 # General information about the project.
 project = u'ubuntu-packaging-guide'
@@ -76,6 +76,7 @@ release = version
 exclude_patterns = ['_build']
 
 locale_dirs = ["translated/"]
+gettext_compact = True
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
