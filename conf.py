@@ -75,7 +75,7 @@ release = version
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build']
 
-locale_dirs = ["translated/"]
+locale_dirs = ["po/"]
 gettext_compact = True
 
 # The reST default role (used for this markup: `text`) to use for all documents.

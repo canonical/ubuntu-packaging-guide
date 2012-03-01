@@ -14,8 +14,12 @@ PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
+# Languages with compiled .mo files.
+mo-files = $(shell find po/ -maxdepth 1 -mindepth 1 -type d | cut -d "/" -f 2)
+# Languages with translated .po files.
+po-files = $(shell ls po/*po | cut -d "/" -f 2 | cut -d "." -f 1)
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
+.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext locale
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -42,10 +46,14 @@ help:
 clean:
 	-rm -rf $(BUILDDIR)/* $(PODIR)/.doctrees
 
-html:
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+html: $(foreach lang,$(mo-files),html-$(lang))
+	# Always build an English version, even if there are no compiled .mo files.
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/en
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/en"
+html-%:
+	$(SPHINXBUILD) -Dlanguage=$* -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$*
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/$*."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
@@ -152,3 +160,9 @@ doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
+
+locale: $(foreach lang,$(po-files),locale-$(lang))
+locale-%:
+	@echo "Compiling .mo files in $(PODIR)/$*/LC_MESSAGES"
+	mkdir -p $(PODIR)/$*/LC_MESSAGES
+	msgfmt po/$*.po -o po/$*/LC_MESSAGES/ubuntu-packaging-guide.mo
