@@ -41,7 +41,8 @@ help:
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 
 clean:
-	-rm -rf $(BUILDDIR)/* $(PODIR)/.doctrees
+	-rm -rf $(BUILDDIR)/* $(PODIR)/.doctrees \
+	$(foreach lang,$(LANGS),$(PODIR)/$(lang)/)
 
 html: $(foreach lang,$(LANGS),html-$(lang))
 	# Always build an English version, even if there are no compiled .mo files.
