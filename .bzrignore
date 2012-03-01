@@ -1,2 +1,4 @@
 _build
-po/.doctrees
+po/*
+!po/*.pot
+!po/*.po
