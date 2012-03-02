@@ -46,10 +46,11 @@ clean:
 	$(foreach lang,$(LANGS),$(PODIR)/$(lang)/)
 
 html: $(foreach lang,$(LANGS),html-$(lang))
-	# Always build an English version, even if there are no compiled .mo files.
+	# Always build an English version, even if there are no .po files.
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/en
+	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/en"
-html-%:
+html-%: locale
 	$(SPHINXBUILD) -Dlanguage=$* -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$*
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/$*."
