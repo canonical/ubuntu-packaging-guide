@@ -2,7 +2,7 @@
 KDE Packaging
 =============
 
-Packaging of KDE programmes in Ubuntu is managed by the Kubuntu and
+Packaging of KDE programs in Ubuntu is managed by the Kubuntu and
 MOTU teams.  You can contact the Kubuntu team on the `Kubuntu mailing
 list`_ and ``#kubuntu-devel`` Freenode IRC channl.  More information
 about Kubuntu development is on the `Kubuntu wiki page`_.
@@ -14,7 +14,7 @@ packaging of these Debian teams.
 Patching Policy
 ---------------
 
-Kubuntu does not add patches to KDE programmes unless they come from
+Kubuntu does not add patches to KDE programs unless they come from
 the upstream authors or submitted upstream with the expectation they
 will be merged soon or we have consulted the issue with the upstream
 authors.

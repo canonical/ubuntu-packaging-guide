@@ -3,13 +3,13 @@ Shared Libraries
 ================
 
 Shared libraries are compiled code which is intended to be shared
-among several different programmes.  They are distributed as ``.so``
+among several different programs.  They are distributed as ``.so``
 files in ``/usr/lib/``.  
 
 A library exports symbols which are the compiled versions of
 functions, classes and variables.  A library has a name called an
 SONAME which includes a version number.  This SONAME version does not
-necessarily match the public release version number.  A programme gets
+necessarily match the public release version number.  A program gets
 compiled against a given SONAME version of the library.  If any of the
 symbols is removed or changes then the version number needs to be
 changed which forces any packages using that library to be recompiled
@@ -19,15 +19,15 @@ but sometimes upstreams do not use sensible version numbers and
 packagers have to keep separate version numbers.
 
 Libraries are usually distributed by upstream as standalone releases. Sometimes
-they are distributed as part of a programme.  In this case they can be included
-in the binary package along with the programme (this is called bundling) if you
-do not expect any other programmes to use the library, more often they should be
+they are distributed as part of a program.  In this case they can be included
+in the binary package along with the program (this is called bundling) if you
+do not expect any other programs to use the library, more often they should be
 split out into separate binary packages.
 
 The libraries themselves are put into a binary package named ``libfoo1`` where
 ``foo`` is the name of the library and ``1`` is the version from the SONAME. 
 Development files from the package, such as header files, needed to compile
-programmes against the library are put into a package called ``libfoo-dev``.
+programs against the library are put into a package called ``libfoo-dev``.
 
 
 An Example
@@ -64,12 +64,12 @@ Looking in debian/libnova-0.12-2.install we see it includes two files::
 
 The last one is the actual library, complete with minor and point version
 number.  The first one is a symlink which points to the actual library.  The
-symlink is what programmes using the library will look for, the running
-programmes do not care about the minor version number.
+symlink is what programs using the library will look for, the running
+programs do not care about the minor version number.
 
-``libnova-dev.install`` includes all the files needed to compile a programme
+``libnova-dev.install`` includes all the files needed to compile a program
 with this library.  Header files, a config binary, the ``.la`` libtool file and
-``libnova.so`` which is another symlink pointing at the library, programmes
+``libnova.so`` which is another symlink pointing at the library, programs
 compiling against the library do not care about the major version number
 (although the binary they compile into will).
 
@@ -82,11 +82,11 @@ Static Libraries
 ----------------
 
 The -dev package also ships ``usr/lib/libnova.a``.  This is a static library,
-an alternative to the shared library.  Any programme compiled against the
+an alternative to the shared library.  Any program compiled against the
 static library will include the code directory into itself.  This gets round
 worrying about binary compatibility of the library.  However it also means that
 any bugs, including security issues, will not be updated along with the libary
-until the programme is recompiled.  For this reason programmes using static
+until the program is recompiled.  For this reason programs using static
 libraries are discouraged.
 
 
@@ -94,11 +94,11 @@ Symbol Files
 ------------
 
 When a package builds against a library the ``shlibs`` mechanism will add a
-package dependency on that library.  This is why most programmes will have
+package dependency on that library.  This is why most programs will have
 ``Depends: ${shlibs:Depends}`` in ``debian/control``.  That gets replaced with
 the library dependencies at build time.  However shlibs can only make it depend
 on the major ABI version number, ``2`` in our libnova example, so if new symbols
-get added in libnova 2.1 a programme using these symbols could still be
+get added in libnova 2.1 a program using these symbols could still be
 installed against libnova ABI 2.0 which would then crash.
 
 To make the library dependencies more precise we keep ``.symbols`` files that
