@@ -164,7 +164,7 @@ Other Patch Systems
 
 Other patch systems used by packages include ``dpatch`` and ``cdbs
 simple-patchsys``, these work similarly to Quilt by keeping patches in
-debian/patches but have different commands to apply, unapply or create patches.
+debian/patches but have different commands to apply, un-apply or create patches.
 You can use ``edit-patch``, shown in previous chapters, as a reliable way to
 work with all systems.
 

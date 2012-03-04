@@ -85,7 +85,7 @@ The -dev package also ships ``usr/lib/libnova.a``.  This is a static library,
 an alternative to the shared library.  Any program compiled against the
 static library will include the code directory into itself.  This gets round
 worrying about binary compatibility of the library.  However it also means that
-any bugs, including security issues, will not be updated along with the libary
+any bugs, including security issues, will not be updated along with the library
 until the program is recompiled.  For this reason programs using static
 libraries are discouraged.
 

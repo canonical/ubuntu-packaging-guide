@@ -81,7 +81,7 @@ To generate a new GPG key, run::
 
 GPG will first ask you which kind of key you want to generate. Choosing the
 default (RSA and DSA) is fine. Next it will ask you about the keysize. The
-default (currently 2048) is fine, but 4096 is more secure. Afterward, it will
+default (currently 2048) is fine, but 4096 is more secure. Afterwards, it will
 ask you if you want it to expire the key at some stage. It is safe to say "0",
 which means the key will never expire. The last questions will be about your
 name and email address. Just pick the ones you are going to use for Ubuntu

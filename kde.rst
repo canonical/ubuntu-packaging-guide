@@ -67,7 +67,7 @@ are in separate language packs Launchpad will need to associate
 these together manually, contact `dpm`_ to do this.
 
 If a package is moved from universe to main it will need to be
-reuploaded before the translations get imported into Launchpad.
+re-uploaded before the translations get imported into Launchpad.
 
 ``.desktop`` files also need translations.  We patch KDELibs to read
 translations out of ``.po`` files which are pointed to by a line

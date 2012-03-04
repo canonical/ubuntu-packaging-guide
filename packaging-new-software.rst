@@ -204,7 +204,7 @@ packages to Debian:
 
   - `Debian Developer's Reference, 5.1. New packages`_ - The entire 
     document is invaluable for both Ubuntu and Debian packagers. This
-    section documents processes for sumbitting new packages.
+    section documents processes for submitting new packages.
 
 In some cases, it might make sense to go directly into Ubuntu first. For
 instance, Debian might be in a freeze making it unlikely that you're
