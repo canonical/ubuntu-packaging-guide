@@ -47,7 +47,7 @@ Merging from Debian with quilt patches
 With newer versions of Bazaar as mentioned above, merging new Debian versions
 to Ubuntu versions should be quite easy now, even when one or both packages
 have quilt patches.  Just use ``bzr merge`` as you normally would.  Under the
-hood, Bazaar will first unapply all the patches, then do the merge, then if
+hood, Bazaar will first un-apply all the patches, then do the merge, then if
 there are no conflicts, it will re-apply the patches leaving you again with a
 source branch in the ``quilt push -a`` state.
 
@@ -61,7 +61,7 @@ package with the Ubuntu version, we would do something like this::
     $ cd precise
     $ bzr merge ../wheezy
 
-If there are merge conflicts, the quilt patches will remain unapplied so that
+If there are merge conflicts, the quilt patches will remain un-applied so that
 you can resolve the conflicts more easily.  You would use a combination of bzr
 and quilt commands to resolve the conflicts, until all the quilt patches are
 applied again.  Then you're ready to commit, push, and build as you normally
@@ -147,7 +147,7 @@ branches.  *Watch out* for changes to the ``.pc`` directory that are unrelated
 the UDD source branch importer `currently includes any existing .pc
 directory`_ in the imported branch.  This can cause conflicts, or other
 unwanted or unknown changes because you've essentially got two conflicting
-version control systems competing for the same thing (i.e. bzr and quilt3).
+version control systems competing for the same thing (i.e. bzr and quilt).
 For now, the best recommendation is to revert any changes to the ``.pc``
 directory in your branch.
 

@@ -54,7 +54,7 @@ will have provided a patch so you can apply that patch::
 
     $ patch -p1 < /home/user/dbus-vulnerability.diff
 
-Aftering making the necessary changes, you just hit Ctrl-D or type exit to
+After making the necessary changes, you just hit Ctrl-D or type exit to
 leave the temporary shell.
 
 Formatting the changelog and patches
@@ -62,7 +62,7 @@ Formatting the changelog and patches
 
 After applying your patches you will want to update the changelog. The ``dch``
 command is used to edit the ``debian/changelog`` file and ``edit-patch`` will
-launch ``dch`` automatically after unapplying all the patches. If you are not
+launch ``dch`` automatically after un-applying all the patches. If you are not
 using ``edit-patch``, you can launch ``dch -i`` manually. Unlike with regular
 patches, you should use the following format (note the distribution name uses
 lucid-security since this is a security update for Lucid) for security
@@ -127,7 +127,7 @@ a severe regression from a previous release or a bug which could cause data
 loss.  Due to the potential for such updates to themselves introduce bugs we
 only allow this where the change can be easily understood and verified.
 
-The process for Stable Release Updates is just the same as the proccess for
+The process for Stable Release Updates is just the same as the process for
 security bugs except you should subscribe ``ubuntu-sru`` to the bug.
 
 The update will go into the ``proposed`` archive (for example

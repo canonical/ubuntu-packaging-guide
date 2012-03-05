@@ -257,7 +257,7 @@ package. It has two standard use cases:
 
 In the first case, the ``install`` file should have one line per file 
 installed, 
-specifying both the the file and the installation directory. For example, the 
+specifying both the file and the installation directory. For example, the 
 following ``install`` file would install the script ``foo`` in the source 
 package's 
 root directory to ``usr/bin`` and a desktop file in the ``debian`` directory to 

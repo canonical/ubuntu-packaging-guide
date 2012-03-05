@@ -8,8 +8,8 @@ that you feel needs wider exposure, maybe you want to try your hand at
 creating a package for Ubuntu or a PPA. This guide will take you through the 
 steps of packaging new software.
 
-Checking the Programme
-----------------------
+Checking the Program
+--------------------
 
 The first stage in packaging is to get the released tar from upstream (we call
 the authors of applications "upstream") and check that it compiles and runs.
@@ -52,7 +52,7 @@ compile::
     $ sudo apt-get install libqrencode-dev libzbar-dev libzbarqt-dev
     $ make
 
-If the compile completes successfully you can install and run the programme::
+If the compile completes successfully you can install and run the program::
 
     $ sudo make install
     $ kqrcode
@@ -97,7 +97,7 @@ compile the application to ``Build-Depends:`` so set that to::
     Build-Depends: debhelper (>= 7.0.50~), cmake, libqt4-dev, kdelibs5-dev,
     libqrencode-dev, libzbar-dev, libzbarqt-dev
 
-You will also need to fill in a description of the programme in the
+You will also need to fill in a description of the program in the
 ``Description:`` field.
 
 ``copyright`` needs to be filled in to follow the licence of the upstream
@@ -204,7 +204,7 @@ packages to Debian:
 
   - `Debian Developer's Reference, 5.1. New packages`_ - The entire 
     document is invaluable for both Ubuntu and Debian packagers. This
-    section documents processes for sumbitting new packages.
+    section documents processes for submitting new packages.
 
 In some cases, it might make sense to go directly into Ubuntu first. For
 instance, Debian might be in a freeze making it unlikely that you're

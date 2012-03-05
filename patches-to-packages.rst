@@ -69,32 +69,32 @@ Adding a New Patch
 To add a new patch you need to tell Quilt to create a new patch, tell it which
 files that patch should change, edit the files then refresh the patch::
 
-    $ quilt new kubuntu_02_programme_description.diff
-    Patch kubuntu_02_programme_description.diff is now on top
+    $ quilt new kubuntu_02_program_description.diff
+    Patch kubuntu_02_program_description.diff is now on top
     $ quilt add src/main.cpp
-    File src/main.cpp added to patch kubuntu_02_programme_description.diff
-    $ sed -i "s,Webcam picture retriever,Webcam snapshot programme,"
+    File src/main.cpp added to patch kubuntu_02_program_description.diff
+    $ sed -i "s,Webcam picture retriever,Webcam snapshot program,"
     src/main.cpp
     $ quilt refresh
-    Refreshed patch kubuntu_02_programme_description.diff
+    Refreshed patch kubuntu_02_program_description.diff
 
 The ``quilt add`` step is important, if you forget it the files will not end up
 in the patch.
 
 The change will now be in
-``debian/patches/kubuntu_02_programme_description.diff`` and the ``series``
+``debian/patches/kubuntu_02_program_description.diff`` and the ``series``
 file will have had the new patch added to it.  You should add the new file to
 the packaging::
 
-    $ bzr add debian/patches/kubuntu_02_programme_description.diff
+    $ bzr add debian/patches/kubuntu_02_program_description.diff
     $ bzr add .pc/*
-    $ dch -i "Add patch kubuntu_02_programme_description.diff to improve the programme description"
+    $ dch -i "Add patch kubuntu_02_program_description.diff to improve the program description"
     $ bzr commit
 
 Quilt keeps its metadata in the ``.pc/`` directory, so currently you need to
 add that to the packaging too.  This should be improved in future.
 
-As a general rule you should be careful adding patches to programmes unless
+As a general rule you should be careful adding patches to programs unless
 they come from upstream, there is often a good reason why that change has not
 already been made.  The above example changes a user interface string for
 example, so it would break all translations.  If in doubt, do ask the upstream
@@ -135,13 +135,13 @@ upstream, so we can delete the patch::
 Then carry on::
 
     $ quilt push
-    Applied kubuntu_02_programme_description.diff
+    Applied kubuntu_02_program_description.diff
 
 It is a good idea to run refresh, this will update the patch relative to the
 changed upstream source::
 
     $ quilt refresh
-    Refreshed patch kubuntu_02_programme_description.diff
+    Refreshed patch kubuntu_02_program_description.diff
 
 Then commit as usual::
 
@@ -164,7 +164,7 @@ Other Patch Systems
 
 Other patch systems used by packages include ``dpatch`` and ``cdbs
 simple-patchsys``, these work similarly to Quilt by keeping patches in
-debian/patches but have different commands to apply, unapply or create patches.
+debian/patches but have different commands to apply, un-apply or create patches.
 You can use ``edit-patch``, shown in previous chapters, as a reliable way to
 work with all systems.
 

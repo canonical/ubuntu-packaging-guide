@@ -57,7 +57,7 @@ Alternatives
 SBuild is a system similar to PBuilder for creating an environment to run test package builds in.  It closer matches that used by Launchpad for building packages but takes some more setup compared to PBuilder.  See `the Security Team Build Environment wiki page`_ for a full explanation.
 
 Full virtual machines can be useful for packaging and testing
-programmes.  TestDrive is a program to automate syncing and running
+programs.  TestDrive is a program to automate syncing and running
 daily ISO images, see `the TestDrive wiki page`_ for more information.
 
 You can also set up pbuilder to pause when it comes across a build
