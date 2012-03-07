@@ -2,6 +2,9 @@
 Packaging New Software
 ======================
 
+You will want to read the :doc:`Getting Set Up</getting-set-up>` article first
+in order to prepare your development environment.
+
 While there are thousands of packages in the Ubuntu archive, there are still 
 a lot nobody has gotten to yet. If there is an exciting new piece of software 
 that you feel needs wider exposure, maybe you want to try your hand at 
@@ -22,7 +25,7 @@ required dependencies lets install those as well.
 
 Install build tools::
 
-    $ sudo apt-get install build-essential cmake 
+    $ sudo apt-get install build-essential
 
 Download main package::
 
@@ -35,6 +38,12 @@ Now uncompress main package::
 
 This application uses the autoconf build system so we want to run ./configure to prepare
 for compilation::
+
+This will check for the required build dependencies. As ``hello`` is a simple
+example, ``build-essential`` should provide everything we need. For more
+complex programs, the command will fail if you do not have the needed libraries
+and development files. Install the needed packages and repeat until the command
+runs successfully.::
 
     $ ./configure
 
@@ -50,9 +59,9 @@ If the compile completes successfully you can install and run the program::
 Starting a Package
 ------------------
 
-``bzr-builddeb`` includes a plugin to create a new package from a template,
-the plugin is a wrapper around the ``dh_make`` additionally make sure your
-in the directory where you have your hello tar file. command::
+The plugin is a wrapper around the ``dh_make`` command. You should already
+have these if you installed ``packaging-dev`` Run the command providing the
+package name, version number, and path to the upstream tarball::
 
     $ sudo apt-get install dh-make
     $ cd ..
@@ -65,15 +74,15 @@ directory.  Have a look at the contents.  Most of the files it adds are only
 needed for specialist packages (such as Emacs modules) so you can start by
 removing the optional example files::
 
-    $ cd hellorm/debian
+    $ cd hello/debian
     $ rm *ex *EX
 
 You should now customise each of the files.  
 
 In ``debian/changelog`` change the
-version number to an Ubuntu version: ``2.7-1ubuntu1`` (upstream version 2.7,
+version number to an Ubuntu version: ``2.7-0ubuntu1`` (upstream version 2.7,
 Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current
-development Ubuntu release such as ``oneiric``.
+development Ubuntu release such as ``precise``.
 
 Much of the package building work is done by a series of scripts
 called ``debhelper``.  The exact behaviour of ``debhelper`` changes
@@ -127,7 +136,7 @@ be placed in ``..``.
 
 You can view the contents of the package with::
 
-    $ lesspipe hello_2.7-1_amd64.deb
+    $ lesspipe hello_2.7-0ubuntu1.deb
 
 Install the package and check it works::
 
@@ -141,8 +150,8 @@ bugs.  Many errors can be automatically detected by our tool
 ``lintian`` which can be run on both the source .dsc metadata file and
 the .deb binary package::
 
-    $ lintian hello_2.7-1.dsc
-    $ lintian hello_2.7-1_amd64.deb
+    $ lintian hello_2.7-0ubuntu1.dsc
+    $ lintian hello_2.7-0ubuntu1.deb
 
 A description of each of the problems it reports can be found on the
 `lintian website`_.
@@ -157,7 +166,7 @@ clean system using ``pbuilder``::
 
     $ bzr builddeb -S
     $ cd ../build-area
-    $ pbuilder-dist oneiric build hello_2.7-1.dsc
+    $ pbuilder-dist precise build hello_2.7-0ubuntu1.dsc
 
 When you are happy with your package you will want others to review it.  You
 can upload the branch to Launchpad for review::
@@ -168,7 +177,7 @@ Uploading it to a PPA (Personal Package Archive) will ensure it builds
 and give an easy way for you and others to test the binary packages.
 You will need to set up a PPA in Launchad then upload with ``dput``::
 
-    $ dput ppa:<lp-username> hello_2.7-1.dsc
+    $ dput ppa:<lp-username> hello_2.7-0ubuntu1.dsc
 
 See :doc:`uploading</udd-uploading>` for more information.
 

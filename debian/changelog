@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (0.3) RELEASED; urgency=high
+ubuntu-packaging-guide (2.7-0ubuntu1) precise; urgency=high
 
   * Added fixes to instructions
     - Switched over to GNU Hello project code
