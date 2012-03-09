@@ -190,7 +190,7 @@ htmlhelp_basename = 'ubuntu-packaging-guidedoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'ubuntu-packaging-guide.tex', u'ubuntu-packaging-guide Documentation',
+  ('ubuntu-packaging-guide/index', 'ubuntu-packaging-guide.tex', u'ubuntu-packaging-guide Documentation',
    u'Ubuntu Developers', 'manual'),
 ]
 
@@ -223,7 +223,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'ubuntu-packaging-guide', u'ubuntu-packaging-guide Documentation',
+    ('ubuntu-packaging-guide/index', 'ubuntu-packaging-guide', u'ubuntu-packaging-guide Documentation',
      [u'Ubuntu Developers'], 1)
 ]
 
@@ -233,7 +233,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'ubuntu-packaging-guide', u'ubuntu-packaging-guide Documentation', u'Ubuntu Developers',
+  ('ubuntu-packaging-guide/index', 'ubuntu-packaging-guide', u'ubuntu-packaging-guide Documentation', u'Ubuntu Developers',
    'ubuntu-packaging-guide', 'One line description of project.', 'Miscellaneous'),
 ]
 
