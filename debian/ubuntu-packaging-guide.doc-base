@@ -7,5 +7,5 @@ Abstract: The Ubuntu Packaging Guide is a set of articles that should help
 Section: Text
 
 Format: HTML
-Index: /usr/share/doc/ubuntu-packaging-guide/html/index.html
-Files: /usr/share/doc/ubuntu-packaging-guide/html/*.html
+Index: /usr/share/doc/ubuntu-packaging-guide/html/en/ubuntu-packaging-guide/index.html
+Files: /usr/share/doc/ubuntu-packaging-guide/html/en/ubuntu-packaging-guide/*.html
