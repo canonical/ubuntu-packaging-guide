@@ -66,10 +66,14 @@ dirhtml-%: locale
 
 singlehtml: $(foreach lang,$(LANGS),singlehtml-$(lang))
 	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml/en
+	sed -i 's/..\/..\//..\//g' _build/singlehtml/en/ubuntu-packaging-guide/index.html
+	sed -i 's/ubuntu-packaging-guide\/index/index/g' _build/singlehtml/en/ubuntu-packaging-guide/index.html
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml/en"
 singlehtml-%: locale
 	$(SPHINXBUILD) -Dlanguage=$* -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml/$*
+	sed -i 's/..\/..\//..\//g' _build/singlehtml/$*/ubuntu-packaging-guide/index.html
+	sed -i 's/ubuntu-packaging-guide\/index/index/g' _build/singlehtml/$*/ubuntu-packaging-guide/index.html
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml/$*."
 
