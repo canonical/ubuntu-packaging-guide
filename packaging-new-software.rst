@@ -2,17 +2,17 @@
 Packaging New Software
 ======================
 
-You will want to read the :doc:`Getting Set Up</getting-set-up>` article first
-in order to prepare your development environment.
-
 While there are thousands of packages in the Ubuntu archive, there are still 
 a lot nobody has gotten to yet. If there is an exciting new piece of software 
 that you feel needs wider exposure, maybe you want to try your hand at 
 creating a package for Ubuntu or a PPA. This guide will take you through the 
 steps of packaging new software.
 
+You will want to read the :doc:`Getting Set Up</getting-set-up>` article first
+in order to prepare your development environment.
+
 Checking the Program
-----------------------
+--------------------
 
 The first stage in packaging is to get the released tar from upstream (we call
 the authors of applications "upstream") and check that it compiles and runs.
@@ -20,8 +20,8 @@ the authors of applications "upstream") and check that it compiles and runs.
 This guide will take you through packaging a simple application called GNU Hello
 which has been `posted on GNU.org`_.
 
-If you don't have the build tools lets make sure we have them first.  Also if you don't have the
-required dependencies lets install those as well.
+If you don't have the build tools lets make sure we have them first.  Also if you
+don't have the required dependencies lets install those as well.
 
 Install build tools::
 
@@ -36,8 +36,8 @@ Now uncompress main package::
     $ tar xf hello-2.7.tar.gz
     $ cd hello-2.7
 
-This application uses the autoconf build system so we want to run ./configure to prepare
-for compilation::
+This application uses the autoconf build system so we want to run ``./configure``
+to prepare for compilation::
 
 This will check for the required build dependencies. As ``hello`` is a simple
 example, ``build-essential`` should provide everything we need. For more
@@ -59,20 +59,20 @@ If the compile completes successfully you can install and run the program::
 Starting a Package
 ------------------
 
-The plugin is a wrapper around the ``dh_make`` command. You should already
-have these if you installed ``packaging-dev`` Run the command providing the
-package name, version number, and path to the upstream tarball::
+``bzr-builddeb`` includes a plugin to create a new package from a template. The
+plugin is a wrapper around the ``dh_make`` command. You should already have
+these if you installed ``packaging-dev`` Run the command providing the package
+name, version number, and path to the upstream tarball::
 
     $ sudo apt-get install dh-make
     $ cd ..
     $ bzr dh-make hello 2.7 hello-2.7.tar.gz
 
-When it asks what type of package type ``s`` for single binary.
-ls
-This will import the code into a branch and add the ``debian/`` packaging
-directory.  Have a look at the contents.  Most of the files it adds are only
-needed for specialist packages (such as Emacs modules) so you can start by
-removing the optional example files::
+When it asks what type of package type ``s`` for single binary. This will import
+the code into a branch and add the ``debian/`` packaging directory.  Have a look
+at the contents.  Most of the files it adds are only needed for specialist
+packages (such as Emacs modules) so you can start by removing the optional
+example files::
 
     $ cd hello/debian
     $ rm *ex *EX
@@ -93,7 +93,8 @@ recent version which is ``8``.
 ``control`` contains all the metadata of the package.  The first paragraph
 describes the source package. The second and and following paragraphs describe
 the binary packages to be built.  We will need to add the packages needed to
-compile the application to ``Build-Depends:`` so set that to::
+compile the application to ``Build-Depends:``. For ``hello``, make sure that it
+includes at least::
 
     Build-Depends: debhelper (>= 7.0.50~)
 
@@ -117,9 +118,12 @@ code and turns it into a binary package.  Fortunately most of the work is
 automatically done these days by ``debhelper 7`` so the universal ``%``
 Makefile target just runs the ``dh`` script which will run everything needed.
 
+All of these file are explained in more detail in the :doc:`overview of the
+debian directory</debian-dir-overview>` article.
+
 Finally commit the code to your packaging branch::
 
-    $ bzr commit
+    $ bzr commit -m "Intial commit of Debian packaging."
 
 Building the package
 --------------------
@@ -136,11 +140,11 @@ be placed in ``..``.
 
 You can view the contents of the package with::
 
-    $ lesspipe hello_2.7-0ubuntu1.deb
+    $ lesspipe hello_2.7-0ubuntu1_amd64.deb
 
 Install the package and check it works::
 
-    $ sudo dpkg --install hello_2.7-1_amd64.deb
+    $ sudo dpkg --install hello_2.7-0ubuntu1_amd64.deb
 
 Next Steps
 ----------
@@ -151,7 +155,7 @@ bugs.  Many errors can be automatically detected by our tool
 the .deb binary package::
 
     $ lintian hello_2.7-0ubuntu1.dsc
-    $ lintian hello_2.7-0ubuntu1.deb
+    $ lintian hello_2.7-0ubuntu1_amd64.deb
 
 A description of each of the problems it reports can be found on the
 `lintian website`_.

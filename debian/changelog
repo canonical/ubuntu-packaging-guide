@@ -1,25 +1,5 @@
-ubuntu-packaging-guide (2.7-0ubuntu1) precise; urgency=high
-
-  * Added fixes to instructions
-    - Switched over to GNU Hello project code
-
- -- Ryein C. Bowling <ryein.bowling@gmail.com> Fri, 24 Feb 2012
-3:30:05 +0100
-
-ubuntu-packaging-guide (0.2) RELEASED; urgency=high
-
-  * Added fixes to instructions
-    - Used a non-corrupt version of kqrcode 0.6.0
-    - Updates instructions to make it easier to follow along
-    - Changed some spelling mistakes
-    - Added the required dev package instructions
-
- -- Ryein C. Bowling <ryein.bowling@gmail.com> Fri, 10 Feb 2012
-3:30:05 +0100
-
 ubuntu-packaging-guide (0.1) UNRELEASED; urgency=low
 
   * Initial release.
 
- -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 19 Nov 2010
-11:35:05 +0100
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 19 Nov 2010 11:35:05 +0100
