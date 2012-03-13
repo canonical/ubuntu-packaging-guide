@@ -8,7 +8,7 @@ Introduction
 If you followed the instructions to :doc:`get set up with Ubuntu 
 Development<./getting-set-up>`, you should be all set and ready to go.
 
-..image:: |IMG|fixing-a-bug.png
+.. image:: ../images/fixing-a-bug.png
 
 As you can see in the image above, there is no surprises in the process of
 fixing bugs in Ubuntu: you found a problem, you get the code, work on the fix, 
