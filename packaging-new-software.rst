@@ -37,7 +37,7 @@ Now uncompress main package::
     $ cd hello-2.7
 
 This application uses the autoconf build system so we want to run ``./configure``
-to prepare for compilation::
+to prepare for compilation.
 
 This will check for the required build dependencies. As ``hello`` is a simple
 example, ``build-essential`` should provide everything we need. For more
