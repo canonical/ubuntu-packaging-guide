@@ -166,7 +166,8 @@ without having to build from scratch::
     $ debuild -nc
 
 Having checked that the package builds locally you should ensure it builds on a
-clean system using ``pbuilder``::
+clean system using ``pbuilder``. If you haven't set up ``pbuilder-dist``
+yet, :doc:`do so now</getting-set-up>`::
 
     $ bzr builddeb -S
     $ cd ../build-area
