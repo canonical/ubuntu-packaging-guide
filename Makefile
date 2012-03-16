@@ -145,7 +145,7 @@ latexpdf-%: locale
 	$(SPHINXBUILD) -Dlanguage=$* -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$*
 	@echo "Running LaTeX files through pdflatex..."
 	make -C $(BUILDDIR)/latex/$* all-pdf
-	mkdir -p $(BUILDDIR)/pdf/$*; cp $(BUILDDIR)/latex/en/*pdf $(BUILDDIR)/pdf/$*
+	mkdir -p $(BUILDDIR)/pdf/$*; cp $(BUILDDIR)/latex/$*/*pdf $(BUILDDIR)/pdf/$*
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/pdf/$*."
 
 text: $(foreach lang,$(LANGS),text-$(lang))
