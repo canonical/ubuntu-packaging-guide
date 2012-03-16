@@ -10,5 +10,5 @@ Format: PDF
 Files: /usr/share/doc/ubuntu-packaging-guide/pdf/en/ubuntu-packaging-guide.pdf.gz
 
 Format: HTML
-Index: /usr/share/doc/ubuntu-packaging-guide/singlehtml/en/ubuntu-packaging-guide/index.html
-Files: /usr/share/doc/ubuntu-packaging-guide/singlehtml/en/ubuntu-packaging-guide/index.html
+Index: /usr/share/doc/ubuntu-packaging-guide/singlehtml/en/index.html
+Files: /usr/share/doc/ubuntu-packaging-guide/singlehtml/en/index.html
