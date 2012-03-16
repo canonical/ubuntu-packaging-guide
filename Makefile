@@ -47,10 +47,10 @@ clean:
 
 html: $(foreach lang,$(LANGS),html-$(lang))
 	# Always build an English version, even if there are no .po files.
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/en
-	mv $(BUILDDIR)/html/en/ubuntu-packaging-guide/*html $(BUILDDIR)/html/en/
-	sed -i 's/href="..\//href=".\//g' $(BUILDDIR)/html/en/*html
-	sed -i 's/..\/_images/.\/_images/g' $(BUILDDIR)/html/en/*html
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	mv $(BUILDDIR)/html/ubuntu-packaging-guide/*html $(BUILDDIR)/html/
+	sed -i 's/href="..\//href=".\//g' $(BUILDDIR)/html/*html
+	sed -i 's/..\/_images/.\/_images/g' $(BUILDDIR)/html/*html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/en"
 html-%: locale
