@@ -72,16 +72,18 @@ dirhtml-%: locale
 
 singlehtml: $(foreach lang,$(LANGS),singlehtml-$(lang))
 	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml/en
-	sed -i 's/..\/..\//..\//g' _build/singlehtml/en/ubuntu-packaging-guide/index.html
+	sed -i 's/..\/..\//.\//g' _build/singlehtml/en/ubuntu-packaging-guide/index.html
 	sed -i 's/ubuntu-packaging-guide\/index/index/g' _build/singlehtml/en/ubuntu-packaging-guide/index.html
+	mv $(BUILDDIR)/singlehtml/en/ubuntu-packaging-guide/*html  $(BUILDDIR)/singlehtml/en
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml/en"
 singlehtml-%: locale
 	$(SPHINXBUILD) -Dlanguage=$* -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml/$*
 	# Work around upstream bug in singlehtml generation:
 	# https://bitbucket.org/birkenfeld/sphinx/issue/892/broken-singlehtml-when-files-are-in
-	sed -i 's/..\/..\//..\//g' _build/singlehtml/$*/ubuntu-packaging-guide/index.html
+	sed -i 's/..\/..\//.\//g' _build/singlehtml/$*/ubuntu-packaging-guide/index.html
 	sed -i 's/ubuntu-packaging-guide\/index/index/g' _build/singlehtml/$*/ubuntu-packaging-guide/index.html
+	mv $(BUILDDIR)/singlehtml/$*/ubuntu-packaging-guide/*html  $(BUILDDIR)/singlehtml/$*
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml/$*."
 
