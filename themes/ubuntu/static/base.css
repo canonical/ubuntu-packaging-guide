@@ -43,6 +43,16 @@ code{
 		-webkit-border-radius: 4px;
 	border-radius: 4px;
 }
+div.highlight-python{
+	padding: 10px;
+	font-family: 'Ubuntu Mono', 'Consolas', 'Monaco', 'DejaVu Sans Mono', Courier, monospace;
+	background-color: #fdf6f2;
+	display: block;
+	margin-bottom: 10px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
 h1 {
 	font-size: 36px;
 	line-height: 1.1;
