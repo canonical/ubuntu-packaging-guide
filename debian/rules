@@ -10,3 +10,16 @@ override_dh_auto_build:
 
 override_dh_compress:
 	dh_compress -X usr/share/doc/ubuntu-packaging-guide/html/
+
+override_dh_link:
+	# symlink identical resources.
+	cd debian/ubuntu-packaging-guide && LC_ALL=C fdupes -r1nq \
+	usr/share/doc/ubuntu-packaging-guide/html | while read s; do \
+		set -- $$(echo $$s | tr ' ' '\n' | sort); \
+		f=$$1; shift; \
+		for d; do \
+			echo "symlinking identical file $$f to $$d"; \
+			rm $$f; ln -s /$$d $$f; \
+		done; \
+	done;
+	dh_link
