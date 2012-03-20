@@ -9,7 +9,7 @@ Introduction
 ============
 
 Fixing security bugs in Ubuntu is not really any different than :doc:`fixing a
-regular bug in Ubuntu</fixing-a-bug>`, and it is assumed that you are familiar
+regular bug in Ubuntu<./fixing-a-bug>`, and it is assumed that you are familiar
 with patching normal bugs. To demonstrate where things are different, we will
 be updating the dbus package in Ubuntu 10.04 LTS (Lucid Lynx) for a security
 update.
@@ -38,7 +38,7 @@ Patching the source
 ===================
 Now that we have the source package, we need to patch it to fix the
 vulnerability. You may use whatever patch method that is appropriate for the
-package, including :doc:`UDD techniques</udd-intro>`, but this example will
+package, including :doc:`UDD techniques<./udd-intro>`, but this example will
 use ``edit-patch`` (from the ubuntu-dev-tools package). ``edit-patch`` is the
 easiest way to patch packages and it is basically a wrapper around every other
 patch system you can imagine.
@@ -95,7 +95,7 @@ Test and Submit your work
 =========================
 
 At this point the process is the same as for :doc:`fixing a regular bug in
-Ubuntu</fixing-a-bug>`. Specifically, you will want to:
+Ubuntu<./fixing-a-bug>`. Specifically, you will want to:
 
  #. Build your package and verify that it compiles without error and without
     any added compiler warnings

@@ -59,7 +59,7 @@ and one which adds the ``debian/`` packaging directory::
 (This command uses *qbzr* for a GUI, run ``log`` instead of ``qlog`` for
 console output.)
 
-.. image:: images/kdetoys-udd-branch.png
+.. image:: ../images/kdetoys-udd-branch.png
 
 This UDD branch of *kdetoys* shows the full packaging for each version
 uploaded to Ubuntu with grey circles and the upstream source versions with
@@ -82,7 +82,7 @@ and compare any two versions.  For example, to see the changes between version
 (This command uses *qbzr* for a GUI, run ``diff`` instead of ``qdiff`` for
 console output.)
 
-.. image:: images/kdetoys-udd-diff.png
+.. image:: ../images/kdetoys-udd-diff.png
 
 From this we can clearly see what has changed in Ubuntu compared to Debian,
 very handy.
