@@ -71,10 +71,10 @@ dirhtml-%: locale
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml/$*."
 
 singlehtml: $(foreach lang,$(LANGS),singlehtml-$(lang))
-	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml/en
-	sed -i 's/..\/..\//.\//g' _build/singlehtml/en/ubuntu-packaging-guide/index.html
-	sed -i 's/ubuntu-packaging-guide\/index/index/g' _build/singlehtml/en/ubuntu-packaging-guide/index.html
-	mv $(BUILDDIR)/singlehtml/en/ubuntu-packaging-guide/*html  $(BUILDDIR)/singlehtml/en
+	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
+	sed -i 's/..\/..\//.\//g' _build/singlehtml/ubuntu-packaging-guide/index.html
+	sed -i 's/ubuntu-packaging-guide\/index/index/g' _build/singlehtml/ubuntu-packaging-guide/index.html
+	mv $(BUILDDIR)/singlehtml/ubuntu-packaging-guide/*html  $(BUILDDIR)/singlehtml
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml/en"
 singlehtml-%: locale
@@ -122,16 +122,16 @@ devhelp:
 	@echo "# devhelp"
 
 epub: $(foreach lang,$(LANGS),epub-$(lang))
-	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub/en
+	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
 	@echo
-	@echo "Build finished. The epub file is in $(BUILDDIR)/epub/en"
+	@echo "Build finished. The epub file is in $(BUILDDIR)/epub"
 epub-%: locale
 	$(SPHINXBUILD) -Dlanguage=$* -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub/$*
 	@echo
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub/$*."
 
 latex: $(foreach lang,$(LANGS),latex-$(lang))
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/en
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in is in $(BUILDDIR)/epub/en"
 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
@@ -144,11 +144,11 @@ latex-%: locale
 	      "(use \`make latexpdf' here to do that automatically)."
 
 latexpdf: $(foreach lang,$(LANGS),latexpdf-$(lang))
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/en
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo "Running LaTeX files through pdflatex..."
-	make -C $(BUILDDIR)/latex/en all-pdf
-	mkdir -p $(BUILDDIR)/pdf/en; cp $(BUILDDIR)/latex/en/*pdf $(BUILDDIR)/pdf/en
-	@echo "Build finished; the PDF files are in $(BUILDDIR)/pdf/en"
+	make -C $(BUILDDIR)/latex all-pdf
+	mkdir -p $(BUILDDIR)/pdf; cp $(BUILDDIR)/latex/*pdf $(BUILDDIR)/pdf
+	@echo "Build finished; the PDF files are in $(BUILDDIR)/pdf"
 latexpdf-%: locale
 	$(SPHINXBUILD) -Dlanguage=$* -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$*
 	@echo "Running LaTeX files through pdflatex..."
