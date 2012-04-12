@@ -52,7 +52,7 @@ html: $(foreach lang,$(LANGS),html-$(lang))
 	sed -i 's/href="..\//href=".\//g' $(BUILDDIR)/html/*html
 	sed -i 's/..\/_images/.\/_images/g' $(BUILDDIR)/html/*html
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/en"
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html"
 html-%: locale
 	$(SPHINXBUILD) -Dlanguage=$* -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$*
 	mv $(BUILDDIR)/html/$*/ubuntu-packaging-guide/*html  $(BUILDDIR)/html/$*
@@ -77,7 +77,7 @@ singlehtml: $(foreach lang,$(LANGS),singlehtml-$(lang))
 	sed -i 's/ubuntu-packaging-guide\/index/index/g' $(BUILDDIR)/singlehtml/index.html
 	sed -i 's/..\/..\/_images/.\/_images/g' $(BUILDDIR)/singlehtml/index.html
 	@echo
-	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml/en"
+	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml"
 singlehtml-%: locale
 	$(SPHINXBUILD) -Dlanguage=$* -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml/$*
 	mv $(BUILDDIR)/singlehtml/$*/ubuntu-packaging-guide/*html  $(BUILDDIR)/singlehtml/$*
