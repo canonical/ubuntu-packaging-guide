@@ -87,9 +87,9 @@ problem for millions of users out there.
 
 Open Source Development happens in a distributed world with different goals
 and different areas of focus. For example there might be the case that a 
-particular Upstream might be interested in working on a new big feature while
-Ubuntu, because of the tight release schedule, might be interested in shipping 
-a solid version with just an additional bug fix. That is why we make use of 
+particular Upstream is interested in working on a new big feature while 
+Ubuntu, because of the tight release schedule, is interested in shipping a 
+solid version with just an additional bug fix. That is why we make use of 
 "Distributed Development", where code is being worked on in various branches
 that are merged with each other after code reviews and sufficient discussion.
 
