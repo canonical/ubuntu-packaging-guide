@@ -28,6 +28,11 @@ Files: themes/ubuntu/static/images/background-header-home.png
 Copyright: 2011 Canonical Ltd.
 License: GPL-3+
 
+Files: themes/ubuntu/layout.html
+Copyright: 2007-2010, the Sphinx team
+           2010-2012, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+License: BSD
+
 Files: themes/ubuntu/static/reset.css
 Copyright: 2010, Yahoo! Inc.
 License: BSD
