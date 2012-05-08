@@ -17,8 +17,8 @@ Copyright: 2009-2011 LoCo Directory Hackers <loco-directory-dev@lists.ubuntu.com
 License: AGPL-3
 
 Files: themes/ubuntu/static/light-django-theme.css
-Copyright: Ubuntu Community Web Themes Developers (https://launchpad.net/~ubuntu-community-webthemes)
-License: GPL-2+
+Copyright: Matteo Lissandrini, http://www.kuzeko.com
+License: CC-BY-SA-3.0
 
 Files: themes/ubuntu/static/images/background-header-home.png
        themes/ubuntu/static/images/background-footer.png
