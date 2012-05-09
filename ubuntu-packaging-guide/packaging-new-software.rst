@@ -8,7 +8,7 @@ that you feel needs wider exposure, maybe you want to try your hand at
 creating a package for Ubuntu or a PPA. This guide will take you through the 
 steps of packaging new software.
 
-You will want to read the :doc:`Getting Set Up</getting-set-up>` article first
+You will want to read the :doc:`Getting Set Up<./getting-set-up>` article first
 in order to prepare your development environment.
 
 Checking the Program
@@ -119,7 +119,7 @@ automatically done these days by ``debhelper 7`` so the universal ``%``
 Makefile target just runs the ``dh`` script which will run everything needed.
 
 All of these file are explained in more detail in the :doc:`overview of the
-debian directory</debian-dir-overview>` article.
+debian directory<./debian-dir-overview>` article.
 
 Finally commit the code to your packaging branch::
 
@@ -167,7 +167,7 @@ without having to build from scratch::
 
 Having checked that the package builds locally you should ensure it builds on a
 clean system using ``pbuilder``. If you haven't set up ``pbuilder-dist``
-yet, :doc:`do so now</getting-set-up>`::
+yet, :doc:`do so now<./getting-set-up>`::
 
     $ bzr builddeb -S
     $ cd ../build-area
