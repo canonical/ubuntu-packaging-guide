@@ -22,7 +22,7 @@ Description: Ubuntu Packaging Guide - metapackage
  ubuntu-packaging-guide-html.
 
 Package: ubuntu-packaging-guide-html
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, libjs-underscore, libjs-jquery
 Architecture: all
 Description: Ubuntu Packaging Guide - HTML guide
  The Ubuntu Packaging Guide is a set of articles that should help you to get
@@ -46,7 +46,7 @@ Description: Ubuntu Packaging Guide - PDF guide
  This package contains the PDF version of the guide.
 
 Package: ubuntu-packaging-guide-epub
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, libjs-underscore, libjs-jquery
 Architecture: all
 Description: Ubuntu Packaging Guide - EPUB guide
  The Ubuntu Packaging Guide is a set of articles that should help you to get

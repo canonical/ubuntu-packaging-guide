@@ -25,6 +25,15 @@ override_dh_link:
 		done; \
 		cd -; \
 	done;
+	# use system copies of jquery and underscore instead.
+	for filename in `find $$DEBIANDIR -wholename '*/_static/jquery.js'`; do \
+		rm $$filename; \
+		ln -s /usr/share/javascript/jquery/jquery.js $$filename; \
+	done
+	for filename in `find $$DEBIANDIR -wholename '*/_static/underscore.js'`; do \
+		rm $$filename; \
+		ln -s /usr/share/javascript/underscore/underscore.js $$filename; \
+	done
 	dh_link
 
 override_dh_install:
