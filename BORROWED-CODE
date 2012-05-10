@@ -1,11 +1,3 @@
-themes/ubuntu/static/newstyle.css
-themes/ubuntu/static/images/*
-	From http://loco.ubuntu.com/media/css/newstyle.css
-	     http://loco.ubuntu.com/media/images
-
-themes/ubuntu/static/light-django-theme.css
-	From lp:ubuntu-community-webthemes/light-django-theme
-
 themes/ubuntu/static/{reset,960,base,home}.css
 themes/ubuntu/static/images/{background-header-home.png,background-footer.png,sec-nav-hover.gif}
 	From lp:ubuntudeveloperportal
