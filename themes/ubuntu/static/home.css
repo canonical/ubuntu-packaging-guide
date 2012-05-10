@@ -243,3 +243,75 @@ blockquote cite {
 #content *:hover > a.headerlink {
    visibility: visible;
 }
+
+
+/* Start sidebar */
+#sidebar ul {
+  margin-bottom: 10px;
+}
+
+#sidebar .toc ul li ul li {
+  list-style-type: decimal;
+}
+
+#sidebar .toc ul {
+    padding-left: 15px;
+}
+    
+#sidebar .toc > ul > li > a.reference.internal {
+    display:none;
+}
+
+#sidebar .browse-guide ul {
+  overflow:hidden;
+}
+
+#sidebar .browse-guide li {
+  float: left;
+  margin-left: 68px;
+  width: 16px;
+  height: 16px;
+}
+
+#sidebar .browse-guide li > a {
+  text-indent: -5000px;
+  float: left;
+  width: 16px;
+  height: 16px;
+}
+
+#sidebar .browse-guide .next {
+  background: url(images/go-next.png) no-repeat;
+}
+
+#sidebar .browse-guide .prev {
+  background: url(images/go-previous.png) no-repeat center center;
+  margin-left: 10px;
+}
+
+#sidebar .browse-guide .center {
+  background: url(images/go-home.png) no-repeat;
+}
+
+#sidebar .browse-guide .disabled {
+  background: transparent;
+}
+
+#sidebar #back_top {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#sidebar #back_top a {
+    color: #333333;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.fixed#sidebar {
+    position: fixed;
+    width: 220px !important;
+    top:10px;
+}
+/* End sidebar */

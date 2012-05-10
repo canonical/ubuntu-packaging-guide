@@ -15,6 +15,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 PODIR         = po
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 LANGS = $(basename $(notdir $(wildcard $(PODIR)/*.po)))
+LANGS = 
 
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext locale
 
@@ -50,6 +51,7 @@ html: $(foreach lang,$(LANGS),html-$(lang))
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	mv $(BUILDDIR)/html/ubuntu-packaging-guide/*html $(BUILDDIR)/html/
 	sed -i 's/href="..\//href=".\//g' $(BUILDDIR)/html/*html
+	sed -i 's/src="..\/_static/src=".\/_static/g' $(BUILDDIR)/html/*html
 	sed -i 's/..\/_images/.\/_images/g' $(BUILDDIR)/html/*html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html"
