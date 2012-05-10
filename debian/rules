@@ -23,3 +23,6 @@ override_dh_link:
 		done; \
 	done;
 	dh_link
+
+override_dh_install:
+	dh_install --list-missing
