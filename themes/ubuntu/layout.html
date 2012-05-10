@@ -21,7 +21,6 @@
 {%- macro relbar() %}
 <div class="header-content">
     <div class="clearfix">
-      <!--<img class="arrow-nav" src="http://developer.ubuntu.com/wp-content/themes/wordpress-theme-ubuntudeveloper/img/arrow-nav.png" width="9" height="5" alt="" />-->
   <div class="header-navigation-secondary">
     <div>
           <nav role="navigation">
@@ -64,12 +63,10 @@
     {%- block htmltitle %}
     <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
     {%- endblock %}
-    <!--<link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />-->
     <link rel="stylesheet" href="{{ pathto('_static/reset.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/960.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/base.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/home.css', 1) }}" type="text/css" />
-    <!--<link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />-->
     {%- for cssfile in css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
     {%- endfor %}
@@ -126,23 +123,6 @@
   <body class="home">
   <a name="top"></a>
 
-<!--
-<aside id="top-nav"> 
-  <div class="container">
-    
-    <section id="top-login"> 
-      <a class="top-login-item" href="/openid/login?next=/events/" title="Login">Login</a>
-    </section>
-    <nav id="top-related"> 
-      <a class="top-nav-item" href="http://www.ubuntu.com">Ubuntu.com</a> 
-      <a class="top-nav-item" href="http://www.ubuntu.com/community">Community</a>
-      <a class="top-nav-item" href="http://www.ubuntu.com/support">Support</a>
-      <a class="top-nav-item" href="http://www.ubuntu.com/partners">Partners</a>
-    </nav>
-  </div> 
-</aside>
--->
-
 <div class="header-navigation">
     <div>
       <nav role="navigation">
@@ -163,16 +143,6 @@
   </div>
 
 {%- block relbar1 %}{{ relbar() }}{% endblock %}
-
-<!--
-<header id="page-header"> 
-  <div class="container" > 
-    <nav id="main-nav"> 
-      <a class="main-nav-item " title="Index" href="index.html">Index</a> 
-    </nav> 
-  </div> 
-</header>
--->
 
 {%- block header %}{% endblock %}
 
@@ -224,7 +194,6 @@
       {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     {%- endif %}
 
-    <!--<p>&copy; 2012 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd. <a class="link-bug" href="https://bugs.launchpad.net/ubuntudeveloperportal/+filebug">Report a bug on this site</a></p>-->
   </div>
 </footer>
 {%- endblock %}
