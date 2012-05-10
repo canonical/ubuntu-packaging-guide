@@ -14,16 +14,21 @@ override_dh_compress:
 override_dh_link:
 	# symlink identical resources.
 	for version in html epub pdf; do \
-		cd debian/ubuntu-packaging-guide-$$version && LC_ALL=C fdupes -r1nq \
-			usr/share/doc/ubuntu-packaging-guide-$$version/$$version | while read s; do \
-			set -- $$(echo $$s | tr ' ' '\n' | sort); \
-			f=$$1; shift; \
-			for d; do \
-				echo "symlinking identical file $$f to $$d"; \
-				rm $$f; ln -s /$$d $$f; \
+		if [ "$$version" = "html" ]; then subversion="html singlehtml"; \
+		else subversion=$$version; \
+		fi; \
+		for sv in $$subversion; do \
+			cd debian/ubuntu-packaging-guide-$$version && LC_ALL=C fdupes -r1nq \
+				usr/share/doc/ubuntu-packaging-guide-$$version/$$sv | while read s; do \
+				set -- $$(echo $$s | tr ' ' '\n' | sort); \
+				f=$$1; shift; \
+				for d; do \
+					echo "symlinking identical file $$f to $$d"; \
+					rm $$f; ln -s /$$d $$f; \
+				done; \
 			done; \
+			cd -; \
 		done; \
-		cd -; \
 	done;
 	dh_link
 
