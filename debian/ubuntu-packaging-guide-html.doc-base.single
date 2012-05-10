@@ -1,4 +1,4 @@
-Document: ubuntu-packaging-guide
+Document: ubuntu-packaging-guide-html
 Title: Ubuntu Packaging Guide
 Author: Ubuntu Developers 
 Abstract: The Ubuntu Packaging Guide is a set of articles that should help 
@@ -6,9 +6,6 @@ Abstract: The Ubuntu Packaging Guide is a set of articles that should help
  serve as a starting point with easy and simple to understand articles.
 Section: Text
 
-Format: PDF
-Files: /usr/share/doc/ubuntu-packaging-guide/pdf/ubuntu-packaging-guide.pdf.gz
-
 Format: HTML
-Index: /usr/share/doc/ubuntu-packaging-guide/singlehtml/index.html
-Files: /usr/share/doc/ubuntu-packaging-guide/singlehtml/index.html
+Index: /usr/share/doc/ubuntu-packaging-guide-html/singlehtml/index.html
+Files: /usr/share/doc/ubuntu-packaging-guide-html/singlehtml/index.html

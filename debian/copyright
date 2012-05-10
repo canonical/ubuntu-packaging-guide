@@ -7,23 +7,6 @@ Files: *
 Copyright: 2010-2012, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 License: CC-BY-SA-3.0
 
-Files: themes/ubuntu/static/newstyle.css
-       themes/ubuntu/static/images/dotted.png
-       themes/ubuntu/statis/images/favicon.ico
-       themes/ubuntu/statis/images/footer.png
-       themes/ubuntu/statis/images/header.png
-       themes/ubuntu/statis/images/search.png
-Copyright: 2009-2011 LoCo Directory Hackers <loco-directory-dev@lists.ubuntu.com>
-License: AGPL-3
-
-Files: themes/ubuntu/static/light-django-theme.css
-Copyright: Matteo Lissandrini, http://www.kuzeko.com
-License: CC-BY-SA-3.0
-
-Files: themes/ubuntu/static/default.css_t
-Copyright: Alexander Fougner <fougner89 at gmail dot com
-License: GPL-2
-
 Files: themes/ubuntu/static/images/background-header-home.png
        themes/ubuntu/static/images/background-footer.png
        themes/ubuntu/static/images/sec-nav-hover.gif
@@ -45,63 +28,6 @@ License: BSD
 Files: themes/ubuntu/static/960.css
 Copyright: Nathan Smith
 License: GPL-3+ or MIT
-
-License: AGPL-3
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU Affero General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU Affero General Public License for more details.
- .
- You should have received a copy of the GNU Affero General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-License: GPL-2+
- This program is free software; you can redistribute it
- and/or modify it under the terms of the GNU General Public
- License as published by the Free Software Foundation; either
- version 2 of the License, or (at your option) any later
- version.
- .
- This program is distributed in the hope that it will be
- useful, but WITHOUT ANY WARRANTY; without even the implied
- warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
- PURPOSE.  See the GNU General Public License for more
- details.
- .
- You should have received a copy of the GNU General Public
- License along with this package; if not, write to the Free
- Software Foundation, Inc., 51 Franklin St, Fifth Floor,
- Boston, MA  02110-1301 USA
- .
- On Debian systems, the full text of the GNU General Public
- License version 2 can be found in the file
- `/usr/share/common-licenses/GPL-2'.
-
-License: GPL-2
- This program is free software; you can redistribute it
- and/or modify it under the terms of the GNU General Public
- License as published by the Free Software Foundation; either
- version 2 of the License.
- .
- This program is distributed in the hope that it will be
- useful, but WITHOUT ANY WARRANTY; without even the implied
- warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
- PURPOSE.  See the GNU General Public License for more
- details.
- .
- You should have received a copy of the GNU General Public
- License along with this package; if not, write to the Free
- Software Foundation, Inc., 51 Franklin St, Fifth Floor,
- Boston, MA  02110-1301 USA
- .
- On Debian systems, the full text of the GNU General Public
- License version 2 can be found in the file
- `/usr/share/common-licenses/GPL-2'.
 
 License: GPL-3+
  This program is free software; you can redistribute it
