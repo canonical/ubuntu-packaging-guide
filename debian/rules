@@ -13,13 +13,19 @@ override_dh_compress:
 
 override_dh_link:
 	# symlink identical resources.
-	cd debian/ubuntu-packaging-guide && LC_ALL=C fdupes -r1nq \
-	usr/share/doc/ubuntu-packaging-guide/html | while read s; do \
-		set -- $$(echo $$s | tr ' ' '\n' | sort); \
-		f=$$1; shift; \
-		for d; do \
-			echo "symlinking identical file $$f to $$d"; \
-			rm $$f; ln -s /$$d $$f; \
+	for version in html epub pdf; do \
+		cd debian/ubuntu-packaging-guide-$$version && LC_ALL=C fdupes -r1nq \
+			usr/share/doc/ubuntu-packaging-guide-$$version/$$version | while read s; do \
+			set -- $$(echo $$s | tr ' ' '\n' | sort); \
+			f=$$1; shift; \
+			for d; do \
+				echo "symlinking identical file $$f to $$d"; \
+				rm $$f; ln -s /$$d $$f; \
+			done; \
 		done; \
+		cd -; \
 	done;
 	dh_link
+
+override_dh_install:
+	dh_install --list-missing
