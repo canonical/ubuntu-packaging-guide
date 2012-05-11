@@ -209,6 +209,9 @@
 <div class="shadow"></div>
 <footer>
   <div>
+    {%- if version %}
+      {% trans version=version|e %}Version: {{ version }}.{% endtrans %}
+    {%- endif %}
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
