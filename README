@@ -1,0 +1,50 @@
+The Ubuntu Packaging Guide
+--------------------------
+
+This guide is often one of the first things that a new Ubuntu contributor will
+look at. Helping make it better can have a big impact.
+
+It is split up into two sections:
+
+- A list of articles based on tasks, things you want to get done.
+- A set of knowledge-base articles that dig deeper into specific bits of our
+  tools and workflows.
+
+The actual articles can be found under the 'ubuntu-packaging-guide' directory
+in rst files. The html template and css can be found under 'themes/ubuntu'. If
+adding a new article, make sure to add it to the 'ubuntu-packaging-guide/index.rst'
+file so that it appears in the table of contents.
+
+Development is hosted on Launchpad:
+
+Bugs - https://bugs.launchpad.net/ubuntu-packaging-guide/
+Bzr Branch - lp:ubuntu-packaging-guide
+Translations -https://translations.launchpad.net/ubuntu-packaging-guide
+
+This project is licensed under the CC-BY-SA-3.0, the full text of which can be
+found in COPYING. Further information cand be found in 'debian/copyright'.
+
+
+Sphinx & ReStructured text
+--------------------------
+
+The guide is built using Sphinx (http://sphinx.pocoo.org/). Articles should be
+written in ReStructured text. The following links might be helpful:
+
+http://docutils.sourceforge.net/docs/user/rst/quickstart.html
+http://docutils.sourceforge.net/docs/user/rst/quickref.html
+
+
+Building
+--------
+
+The power of Sphinx is that it can generate documentation in many formats.
+Running 'make all' will generate the guide in html, dirhtml, singlehtml, pickle,
+json, htmlhelp, qthelp, devhelp, epub, latex, latexpdf, text, and man formats.
+They will be outputted to the '_build' directory.
+
+Not all of these formats are important to us. You can build an individual
+format with, for example, 'make html'. Run 'make help' for a list of all
+targets.
+
+Please at least test your fixes by building the html version.
