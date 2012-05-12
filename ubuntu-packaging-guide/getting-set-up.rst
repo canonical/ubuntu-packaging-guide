@@ -61,8 +61,6 @@ This command will install the following software:
   keeping it trivial to merge each others work.
 * ``apt-file`` provides an easy way to find the binary package that contains a
   given file.
-* ``apt-cache`` (part of the ``apt`` package) provides even more information 
-  about packages on Ubuntu.
 
 
 Create your GPG key
