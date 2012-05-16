@@ -1,16 +1,16 @@
 $(function() {
-
-    var offset = $("#sidebar").offset();
-    var topPadding = 30;
-
     $(window).scroll(function() {
-        if ($(window).scrollTop() > offset.top) {       
-            $("#sidebar").stop().addClass('fixed');
-        
+        // Make toc visibile always
+        var toc = "#sidebar";
+        var offset = $(toc).offset();
+        var topPadding = 30;
+
+        // Permit only if window is enough big
+        if( $(window).height() > $(toc).height() &&
+            $(window).scrollTop() > offset.top ){
+                $(toc).stop().addClass('fixed');
         } else {
-        
-              $("#sidebar").stop().removeClass('fixed');
-        
+                $(toc).stop().removeClass('fixed');
         }
     });
 
