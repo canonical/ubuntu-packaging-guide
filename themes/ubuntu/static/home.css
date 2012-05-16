@@ -258,8 +258,9 @@ blockquote cite {
     padding-left: 15px;
 }
     
-#sidebar .toc > ul > li > a.reference.internal {
-    display:none;
+#sidebar .toc > ul > li {
+    list-style-type: square;
+    margin-left: 10px;
 }
 
 #sidebar .browse-guide ul {
