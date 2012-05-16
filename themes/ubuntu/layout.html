@@ -2,8 +2,8 @@
     ubuntu/layout.html
     ~~~~~~~~~~~~~~~~~
 
-    Ubuntu layout template for Sphinx themes.
-
+    Ubuntu layout template for Sphinx themes based on default Sphinx template.
+    :copyright: 2010-2012, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
     :copyright: Copyright 2007-2010 by the Sphinx team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 #}
@@ -178,6 +178,9 @@
 <div class="shadow"></div>
 <footer>
   <div>
+    {%- if version %}
+      {% trans version=version|e %}Version: {{ version }}.{% endtrans %}
+    {%- endif %}
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}

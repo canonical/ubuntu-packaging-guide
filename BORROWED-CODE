@@ -1,6 +1,11 @@
-themes/ubuntu/static/{reset,960,base,home}.css
+themes/ubuntu/static/{reset,base,home}.css
 themes/ubuntu/static/images/{background-header-home.png,background-footer.png,sec-nav-hover.gif}
 	From lp:ubuntudeveloperportal
 
 themes/ubuntu/static/images/{go-home.png,go-next.png,go-previous.png}
 	From lp:humanity
+
+themes/ubuntu/static/960.css
+	Derived from: https://github.com/nathansmith/960-grid-system/
+	By way of: lp:ubuntudeveloperportal
+
