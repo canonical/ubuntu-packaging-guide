@@ -61,7 +61,7 @@ makes sense to skip these steps.
 Creating a shared repository
 ----------------------------
 
-You want to work on the Tomboy package in Natty, and you've verified
+Say that you want to work on the Tomboy package, and you've verified
 that the source package is named ``tomboy``.  Before actually
 branching the code for Tomboy, create a shared repository to hold the
 branches for this package.  The shared repository will make future

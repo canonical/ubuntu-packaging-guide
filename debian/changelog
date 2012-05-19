@@ -1,3 +1,9 @@
+ubuntu-packaging-guide (0.1ubuntu1) quantal; urgency=low
+
+  * ubuntu-packaging-guide/udd-getting-the-source.rst:Line 64 Changed from 'You want' to 'Say that you want' and also took ut the Natty part of that line (LP: #997796)
+
+ -- Joseph Mills <josephjamesmills@gmail.com>  Sat, 19 May 2012 03:26:47 -0400
+
 ubuntu-packaging-guide (0.1) UNRELEASED; urgency=low
 
   * Initial release.
