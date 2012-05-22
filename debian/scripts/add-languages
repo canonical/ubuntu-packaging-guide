@@ -1,5 +1,17 @@
 #!/usr/bin/python
 
+#
+# Some notes to get this script up and running.
+#
+# To play around with this some more, try to:
+#
+# - create an empty translation:
+#    cp po/ubuntu-packaging-guide.pot po/xx.po
+# - run the script and see if it works and just takes the translations
+#   above the threshold (PERCENTAGE variable)
+# - make sure you don't accidentally commit changes to the packaging
+#
+
 import copy
 import glob
 import sys
@@ -17,6 +29,8 @@ except:
     print >> sys.stderr, "You need to have  python-debian  installed."
     sys.exit(1)
 
+# Once we use this, we will want to set this to 70 maybe. 
+# This is just for testing.
 PERCENTAGE = 1
 
 class Package(object):
