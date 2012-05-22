@@ -1,0 +1,128 @@
+#!/usr/bin/python
+
+import copy
+import glob
+import sys
+import os
+
+try:
+    import polib
+except:
+    print >> sys.stderr, "You need to have  python-polib  installed."
+    sys.exit(1)
+
+try:
+    from debian import deb822
+except:
+    print >> sys.stderr, "You need to have  python-debian  installed."
+    sys.exit(1)
+
+PERCENTAGE = 1
+
+class Package(object):
+    stanzas = None
+
+    def __init__(self):
+        # we assume, this file lives in "debian/scripts"
+        self.script_path = os.path.dirname(__file__)
+        self.base_path = os.path.join(self.script_path, "../..")
+        self.po_path = os.path.join(self.base_path, "po/")
+        self.control_file = os.path.join(self.base_path, "debian/control")
+        self.all_pofiles = self.get_all_pofiles()
+        self.all_languages = self.get_all_languages()
+        self.semi_complete_pofiles = self.get_semi_complete_pofiles()
+        self.semi_complete_languages = self.get_semi_complete_languages()
+        self.available_binary_packages = self.get_available_binary_packages()
+        self.available_binary_package_names = self.get_available_binary_package_names()
+        self.base_package_names = self.get_base_package_names()
+
+    def get_all_pofiles(self):
+        return map(lambda a: os.path.abspath(a),
+                   glob.glob("%s/*.po" % self.po_path))
+    
+    def get_all_languages(self):
+        return map(lambda a: os.path.basename(a).split(".po")[0],
+                   self.all_pofiles)
+
+    def get_semi_complete_pofiles(self):
+        languages = self.all_pofiles
+        complete = []
+        for language in languages:
+            pofile = polib.pofile(language)
+            if pofile.percent_translated() >= PERCENTAGE:
+                complete += [ language ]
+        return complete
+
+    def get_semi_complete_languages(self):
+        return map(lambda a: os.path.basename(a).split(".po")[0],
+                   self.semi_complete_pofiles)
+
+    def get_available_binary_packages(self):
+        BLACKLIST = [u'ubuntu-packaging-guide']     # metapackages and stuff
+        self.stanzas = deb822.Packages.iter_paragraphs(open(self.control_file))
+        return filter(lambda a: a.has_key("Package") and \
+                                a["Package"] not in BLACKLIST, self.stanzas)
+
+    def get_available_binary_package_names(self):
+        return map(lambda a: a["Package"], 
+                   self.available_binary_packages)
+
+    def get_base_package_names(self):
+        base_packages = []
+        for name in self.available_binary_package_names:
+            is_translations_package = False
+            for language in self.all_languages:
+                if name.endswith("-%s" % language):
+                    is_translations_package = True
+            if not is_translations_package:
+                base_packages += [ name ]
+        return base_packages
+
+    def get_package_name_permutations(self, languages):
+        permutations = []
+        for language in languages:
+            permutations +=  map(lambda pkg: "%s-%s" % (pkg, language),
+                                 self.base_package_names)
+        return permutations
+
+    def get_missing_binary_packages(self, languages):
+        return filter(lambda a: a not in self.available_binary_package_names,
+                      self.get_package_name_permutations(languages))
+
+    def add_to_control_file(self, language, template_name):
+        new_package_name = "%s-%s" % (template_name, language)
+        template = filter(lambda a: a["Package"] == template_name,
+                          self.available_binary_packages)[0]
+        new_stanza = copy.copy(template)
+        new_stanza["Package"] = new_package_name
+        desc = new_stanza["Description"].split("\n")
+        desc[0] += " - '%s' version" % language
+        desc[-1] = desc[-1].rstrip()
+        desc += [ " .", " This is the '%s' version." % language ]
+        new_stanza["Description"] = "\n".join(desc)
+        f = open(self.control_file, "a")
+        f.write(u"\n")
+        f.write(unicode(new_stanza))
+        f.close()
+
+    def add_installation_files(self, language, template_name):
+        new_package_name = "%s-%s" % (template_name, language)
+        print language, new_package_name, template_name
+
+    def add_package(self, package_name):
+        base_template = "-".join(package_name.split("-")[0:-1])
+        language = package_name.split("-")[-1]
+        self.add_to_control_file(language, base_template)
+        self.add_installation_files(language, base_template)
+
+def main():
+    package = Package()
+    for name in package.get_missing_binary_packages(package.semi_complete_languages):
+        package.add_package(name)
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        print >> sys.stderr, "Aborted."
+        sys.exit(1)
