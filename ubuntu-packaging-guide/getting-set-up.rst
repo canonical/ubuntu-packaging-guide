@@ -250,7 +250,7 @@ so it is safe to share it with Launchpad. Copy the contents of the file and
 paste them into the text box on the web page that says "Add an SSH key". Now
 click "Import Public Key".
 
-For more information on this process, visit the `<creating an SSH keypair 
+For more information on this process, visit the `creating an SSH keypair 
 <https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on 
 Launchpad.
 
