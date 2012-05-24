@@ -7,10 +7,10 @@ $(function() {
         if ($(window).height() > $(toc).height() &&   
             $(window).scrollTop() > offset.top) 
         {       
-            $("#sidebar").stop().addClass('fixed');
+            $(toc).stop().addClass('fixed');
         
         } else {
-              $("#sidebar").stop().removeClass('fixed');
+              $(toc).stop().removeClass('fixed');
         }
     });
 
