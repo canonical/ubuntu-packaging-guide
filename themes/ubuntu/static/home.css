@@ -246,6 +246,10 @@ blockquote cite {
 
 
 /* Start sidebar */
+#sidebar {
+  padding-top: 10px;
+  margin-top: -10px;
+}
 #sidebar ul {
   margin-bottom: 10px;
 }
