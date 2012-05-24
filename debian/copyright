@@ -436,3 +436,26 @@ License: CC-BY-SA-3.0
  this trademark restriction does not form part of the License.
  .
     Creative Commons may be contacted at http://creativecommons.org/.
+
+Files: themes/ubuntu/static/images/go-home.png
+       themes/ubuntu/static/images/go-next.png
+       themes/ubuntu/static/images/go-previous.png
+Copyright: Daniel Fore <Daniel.P.Fore@gmail.com>
+	   Jonian Guveli <jonian.guveli@gmail.com>
+           K.Vishnoo Charan Reddy <vish@ubuntu.com>
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 of the License.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
