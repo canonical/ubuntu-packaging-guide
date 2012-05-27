@@ -60,6 +60,8 @@ package, type::
     $ apt-cache showsrc python-vigra | grep ^Package:
     Package: libvigraimpex
 
+``apt-cache`` is part of the standard installation of Ubuntu.
+
 Getting the code
 ================
 
