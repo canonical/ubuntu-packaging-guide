@@ -181,7 +181,7 @@ Committing the fix
 
 With the changelog entry written and saved, you can just run::
 
-  bzr commit
+  debcommit
 
 and the change will be committed (locally) with your changelog entry as a 
 commit message.
