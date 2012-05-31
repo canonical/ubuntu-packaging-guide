@@ -1,5 +1,5 @@
-ubuntu-packaging-guide (0.1) UNRELEASED; urgency=low
+ubuntu-packaging-guide (0.1) quantal; urgency=low
 
-  * Initial release.
+  * Initial release. (LP: #1004017)
 
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 19 Nov 2010 11:35:05 +0100
