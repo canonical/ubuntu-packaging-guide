@@ -5,7 +5,7 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: debhelper (>= 7.0.50~), python-sphinx (>= 1.1~), doc-base, 
  texlive-latex-base, texlive-latex-recommended, texlive-latex-extra,
  texlive-fonts-recommended, fdupes
-Standards-Version: 3.9.1
+Standards-Version: 3.9.3
 
 Package: ubuntu-packaging-guide
 Depends: ${misc:Depends}, ubuntu-packaging-guide-html
