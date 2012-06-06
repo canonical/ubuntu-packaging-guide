@@ -1,3 +1,10 @@
+ubuntu-packaging-guide (0.2) UNRELEASED; urgency=low
+
+  [ Jonathan Jesse ]
+  * "bzr commit" should be "debcommit" in fixing-a-bug. (LP: #978493)
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 06 Jun 2012 09:28:00 +0200
+
 ubuntu-packaging-guide (0.1) quantal; urgency=low
 
   [ Daniel Holbach ]
