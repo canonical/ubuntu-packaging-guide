@@ -134,11 +134,36 @@ class Package(object):
                                       "%s/%s/" % (doc_type, language),
                                       line))
 
+    def add_docbase_files(self, language, template_name):
+        if template_name.endswith("html"):
+            new_package_name = "%s-%s" % (template_name, language)
+            template_file = os.path.join(self.base_path,
+                                         "debian/" + template_name + ".doc-base")
+            new_file = os.path.join(self.base_path,
+                                    "debian/" + new_package_name + ".doc-base")
+            with open(template_file, "r") as template_file:
+                lines = template_file.readlines()
+            with open(new_file, "w") as new_file:
+                for line in lines:
+                    if line.startswith("Document:"):
+                        line = "Document: " + new_package_name + "\n"
+                    elif line.startswith("Index:") | line.startswith("Files:"):
+                        line = re.sub("/html", "/html/%s" % language, line)
+                        line = re.sub("-html", "-html-%s" % language, line)
+                    elif line.startswith("Title:"):
+                        line = "Title: Ubuntu Packaging Guide - %s Version\n" % language
+                    else:
+                        line = line
+                    new_file.write(line)
+        else:
+            pass
+
     def add_package(self, package_name):
         base_template = "-".join(package_name.split("-")[0:-1])
         language = package_name.split("-")[-1]
         self.add_to_control_file(language, base_template)
         self.add_installation_files(language, base_template)
+        self.add_docbase_files(language, base_template)
 
 def main():
     package = Package()
