@@ -16,6 +16,7 @@ import copy
 import glob
 import sys
 import os
+import re
 
 try:
     import polib
@@ -122,6 +123,16 @@ class Package(object):
     def add_installation_files(self, language, template_name):
         new_package_name = "%s-%s" % (template_name, language)
         print language, new_package_name, template_name
+        template_file = os.path.join(self.base_path, "debian/" + template_name + ".docs")
+        new_file = os.path.join(self.base_path, "debian/" + new_package_name + ".docs")
+        doc_type = template_name.split("-")[-1]
+        with open(template_file, "r") as template_file:
+            lines = template_file.readlines()
+        with open(new_file, "w") as new_file:
+            for line in lines:
+                new_file.write(re.sub("%s/" % doc_type,
+                                      "%s/%s/" % (doc_type, language),
+                                      line))
 
     def add_package(self, package_name):
         base_template = "-".join(package_name.split("-")[0:-1])
