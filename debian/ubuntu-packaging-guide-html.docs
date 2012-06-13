@@ -1,2 +1,7 @@
-_build/html
-_build/singlehtml
+_build/singlehtml/_images
+_build/singlehtml/index.html
+_build/singlehtml/objects.inv
+_build/singlehtml/_static
+_build/html/*.html
+_build/html/_images
+_build/html/_static

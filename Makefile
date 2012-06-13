@@ -14,8 +14,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 # the i18n builder cannot share the environment and doctrees with the others
 PODIR         = po
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
-#LANGS = $(basename $(notdir $(wildcard $(PODIR)/*.po)))
-LANGS=
+LANGS = $(basename $(notdir $(wildcard $(PODIR)/*.po)))
 
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext locale
 

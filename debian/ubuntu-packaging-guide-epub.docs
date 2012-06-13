@@ -1,1 +1,9 @@
-_build/epub
+_build/epub/content.opf
+_build/epub/_images
+_build/epub/META-INF
+_build/epub/mimetype
+_build/epub/search.html
+_build/epub/_static
+_build/epub/toc.ncx
+_build/epub/ubuntu-packaging-guide
+_build/epub/ubuntu-packaging-guide.epub
