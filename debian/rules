@@ -9,7 +9,7 @@ override_dh_auto_build:
 	make epub
 
 override_dh_compress:
-	dh_compress -X usr/share/doc/ubuntu-packaging-guide/html/
+	dh_compress -X usr/share/doc/ubuntu-packaging-guide-html/
 
 override_dh_link:
 	# symlink identical resources.
