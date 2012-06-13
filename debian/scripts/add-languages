@@ -159,7 +159,6 @@ class Package(object):
                  if line.startswith("Document:"):
                      line = "Document: " + new_package_name + "\n"
                  elif line.startswith("Index:") | line.startswith("Files:"):
-                     line = re.sub("/html", "/html/%s" % language, line)
                      line = re.sub("-html", "-html-%s" % language, line)
                  elif line.startswith("Title:"):
                      line = "Title: Ubuntu Packaging Guide - %s Version\n" % language
