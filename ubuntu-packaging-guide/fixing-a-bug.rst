@@ -60,6 +60,8 @@ package, type::
     $ apt-cache showsrc python-vigra | grep ^Package:
     Package: libvigraimpex
 
+``apt-cache`` is part of the standard installation of Ubuntu.
+
 Getting the code
 ================
 
@@ -179,7 +181,7 @@ Committing the fix
 
 With the changelog entry written and saved, you can just run::
 
-  bzr commit
+  debcommit
 
 and the change will be committed (locally) with your changelog entry as a 
 commit message.
