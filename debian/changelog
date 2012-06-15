@@ -6,6 +6,12 @@ ubuntu-packaging-guide (0.2) UNRELEASED; urgency=low
   [ Andrew Starr-Bochicchio ]
   * Provide overview of traditional packaging tools (LP: #809925)
   * traditional-packaging.html is empty, but linked to (LP: #885315)
+  * Only exclude the -html/_sources dir from compression. Lintian doesn't like
+    the changelog not being compressed.
+  * For epub packages only install the epub file. Every thing else is just
+    leftover from the build process.
+  * Install the html/_sources dir. They are linked to on the web site.
+  * Adjust paths for new install locations
 
   [ Andrew Starr-Bochicchio + Daniel Holbach ]
   * provide a means to ship per-language per-flavour packages, if a certain
