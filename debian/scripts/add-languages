@@ -30,9 +30,7 @@ except:
     print >> sys.stderr, "You need to have  python-debian  installed."
     sys.exit(1)
 
-# Once we use this, we will want to set this to 70 maybe. 
-# This is just for testing.
-PERCENTAGE = 1
+PERCENTAGE = 70
 
 class Package(object):
     stanzas = None

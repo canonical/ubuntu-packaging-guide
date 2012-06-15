@@ -1,5 +1,21 @@
-ubuntu-packaging-guide (0.1) UNRELEASED; urgency=low
+ubuntu-packaging-guide (0.2) UNRELEASED; urgency=low
 
-  * Initial release.
+  [ Jonathan Jesse ]
+  * "bzr commit" should be "debcommit" in fixing-a-bug. (LP: #978493)
 
- -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 19 Nov 2010 11:35:05 +0100
+  [ Andrew Starr-Bochicchio ]
+  * Provide overview of traditional packaging tools (LP: #809925)
+  * traditional-packaging.html is empty, but linked to (LP: #885315)
+
+  [ Andrew Starr-Bochicchio + Daniel Holbach ]
+  * provide a means to ship per-language per-flavour packages, if a certain
+    level of completeness of the translations is reached. (LP: #961936)
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 06 Jun 2012 09:28:00 +0200
+
+ubuntu-packaging-guide (0.1) quantal; urgency=low
+
+  [ Daniel Holbach ]
+  * Initial release. (LP: #1004017)
+
+ -- Andrew Starr-Bochicchio <a.starr.b@gmail.com>  Fri, 01 Jun 2012 18:16:22 -0400
