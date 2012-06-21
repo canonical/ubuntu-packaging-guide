@@ -97,3 +97,19 @@ in Launchpad.
 Note that if you are sponsored via a debdiff attached to a bug report you need
 to manually update by generating a new diff and attaching that to the bug
 report.
+
+
+Expectations
+============
+
+The Ubuntu developers have set up a schedule of "patch pilots", who regularly
+review the sponsoring queue and give feedback on branches and patches. Even
+though this measure has been put in place it might still take several days
+until you hear back. This depends on how busy everybody is, if the development
+release is currently frozen, or other factors.
+
+If you haven't heard back in a while, feel free to join `#ubuntu-devel` on 
+`irc.freenode.net` and find out if somebody can help you there.
+
+For more information on the generall sponsorship process, review the 
+documentation on our wiki as well: https://wiki.ubuntu.com/SponsorshipProcess
