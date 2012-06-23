@@ -1,4 +1,7 @@
 #!/usr/bin/make -f
+
+VERSION:= $(shell dpkg-parsechangelog | sed -rne 's,^Version: ([^-]+).*,\1,p')
+
 %:
 	dh $@ --builddirectory=_build
 
@@ -43,3 +46,7 @@ override_dh_link:
 
 override_dh_install:
 	dh_install --list-missing
+
+get-orig-source:
+	bzr export -r tag:$(VERSION) --root=ubuntu-packaging-guide-$(VERSION).orig \
+		ubuntu-packaging-guide_$(VERSION).tar.gz lp:ubuntu-packaging-guide

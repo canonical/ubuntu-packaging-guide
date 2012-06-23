@@ -12,6 +12,7 @@ ubuntu-packaging-guide (0.2) UNRELEASED; urgency=low
     leftover from the build process.
   * Install the html/_sources dir. They are linked to on the web site.
   * Adjust paths for new install locations
+  * debian/rules: Add a get-orig-source target.
 
   [ Andrew Starr-Bochicchio + Daniel Holbach ]
   * provide a means to ship per-language per-flavour packages, if a certain
