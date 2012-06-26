@@ -43,6 +43,7 @@ Articles
    security-and-stable-release-updates
    patches-to-packages
    libraries
+   backports
 
 Knowledge Base
 --------------
