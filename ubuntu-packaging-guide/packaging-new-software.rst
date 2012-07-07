@@ -163,7 +163,7 @@ A description of each of the problems it reports can be found on the
 After making a fix to the packaging you can rebuild using ``-nc`` "no clean"
 without having to build from scratch::
 
-    $ debuild -nc
+    $ debuild -nc -us -uc
 
 Having checked that the package builds locally you should ensure it builds on a
 clean system using ``pbuilder``. If you haven't set up ``pbuilder-dist``
