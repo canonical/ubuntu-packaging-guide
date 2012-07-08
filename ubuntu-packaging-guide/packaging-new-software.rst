@@ -131,12 +131,12 @@ Building the package
 Now we need to check that our packaging successfully compiles the package and
 builds the .deb binary package::
 
-    $ debuild -us -uc
+    $ bzr builddeb -- -us -uc
     $ cd ../../
 
-``debuild`` is a command to build the package in its current location.  The
-``-us -uc`` tell it there is not need to GPG sign the compile.  The result will
-be placed in ``..``.  
+``bzr builddeb`` is a command to build the package in its current location.
+The ``-us -uc`` tell it there is not need to GPG sign the compile.  The result
+will be placed in ``..``.  
 
 You can view the contents of the package with::
 
@@ -163,7 +163,7 @@ A description of each of the problems it reports can be found on the
 After making a fix to the packaging you can rebuild using ``-nc`` "no clean"
 without having to build from scratch::
 
-    $ debuild -nc
+    $ bzr builddeb -- -nc
 
 Having checked that the package builds locally you should ensure it builds on a
 clean system using ``pbuilder``. If you haven't set up ``pbuilder-dist``
