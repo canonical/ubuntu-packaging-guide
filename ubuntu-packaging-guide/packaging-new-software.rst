@@ -96,7 +96,7 @@ the binary packages to be built.  We will need to add the packages needed to
 compile the application to ``Build-Depends:``. For ``hello``, make sure that it
 includes at least::
 
-    Build-Depends: debhelper (>= 7.0.50~)
+    Build-Depends: debhelper (>= 8.0.0)
 
 You will also need to fill in a description of the program in the
 ``Description:`` field.
