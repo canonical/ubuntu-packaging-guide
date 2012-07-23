@@ -60,7 +60,6 @@ Knowledge Base
    udd-latest
    udd-merging
    udd-patchsys
-   udd-newpackage
    chroots
    traditional-packaging
    kde

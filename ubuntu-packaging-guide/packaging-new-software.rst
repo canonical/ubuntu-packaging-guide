@@ -5,7 +5,7 @@ Packaging New Software
 While there are thousands of packages in the Ubuntu archive, there are still 
 a lot nobody has gotten to yet. If there is an exciting new piece of software 
 that you feel needs wider exposure, maybe you want to try your hand at 
-creating a package for Ubuntu or a PPA. This guide will take you through the 
+creating a package for Ubuntu or a PPA_. This guide will take you through the 
 steps of packaging new software.
 
 You will want to read the :doc:`Getting Set Up<./getting-set-up>` article first
@@ -217,6 +217,7 @@ instance, Debian might be in a freeze making it unlikely that you're
 package will make it into Ubuntu in time for the next release. This
 process is documented on the `"New Packages" section of the Ubuntu wiki`_.
 
+.. _PPA: https://help.launchpad.net/Packaging/PPA
 .. _`posted on GNU.org`: http://www.gnu.org/software/hello/
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
 .. _`lintian website`: http://lintian.debian.org/tags.html
