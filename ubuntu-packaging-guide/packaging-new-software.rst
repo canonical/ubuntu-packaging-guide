@@ -182,7 +182,7 @@ Uploading it to a PPA (Personal Package Archive) will ensure it builds
 and give an easy way for you and others to test the binary packages.
 You will need to set up a PPA in Launchad then upload with ``dput``::
 
-    $ dput ppa:<lp-username> hello_2.7-0ubuntu1.dsc
+    $ dput ppa:<lp-username> hello_2.7-0ubuntu1.changes
 
 See :doc:`uploading<./udd-uploading>` for more information.
 
