@@ -198,7 +198,7 @@ This could for example be::
 So if you just run::
 
   bzr push lp:~emmaadams/ubuntu/natty/specialpackage/fix-for-123456
-  bzr lp-open
+  bzr lp-propose
 
 you should be all set. The push command should push it to Launchpad and the 
 second command will open the Launchpad page of the remote branch in your 
