@@ -62,7 +62,7 @@ Here’s our ``debian/rules`` file (with annotations):
        done
        dh_auto_install
 
-It is also a good practice to run tests during the build, if they are shipped by upstream. Usually tests can be invoked using ``setup.py check``.
+It is also a good practice to run tests during the build, if they are shipped by upstream. Usually tests can be invoked using ``setup.py test`` or ``setup.py check``.
 
 debian/\*.install
 -----------------
