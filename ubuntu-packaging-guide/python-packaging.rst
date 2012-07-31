@@ -8,6 +8,8 @@ There are two types of Python packages — *modules* and *apps*.
 
 At the moment of writing this, Ubuntu has two incompatible versions of Python — *2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python 2.x version, and ``/usr/bin/python3`` — to a default Python 2.x version. Python modules should be built against all supported Python versions.
 
+If you are going to package a new Python module, you can find ``py2dsc`` tool useful (available in `python-stdeb`_ package).
+
 debian/control
 --------------
 
@@ -112,6 +114,7 @@ See also
 .. _`python-markdown`: http://packages.python.org/Markdown/
 .. _`PyPI`: http://pypi.python.org/pypi/Markdown/
 .. _`Subversion repository`: http://anonscm.debian.org/viewvc/python-modules/packages/python-markdown/trunk/debian/
+.. _`python-stdeb`: https://launchpad.net/ubuntu/+source/stdeb
 .. _`bug 597105`: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=597105
 .. _`Specifying Supported Versions`: http://www.debian.org/doc/packaging-manuals/python-policy/ch-module_packages.html#s-specifying_versions
 .. _`Programs Shipping Private Modules`: http://www.debian.org/doc/packaging-manuals/python-policy/ch-programs.html#s-current_version_progs
