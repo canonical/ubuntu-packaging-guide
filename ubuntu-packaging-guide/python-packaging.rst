@@ -102,6 +102,17 @@ Because docs also contain source ``.txt`` files, we’ll also tell ``dh_compress
    override_dh_compress:
        dh_compress -X.txt
 
+Checking for packaging mistakes
+-------------------------------
+
+Along with ``lintian``, there is a special tool for checking Python packages — ``lintian4py``. It is available in `lintian4python`_ package. For example, this command invokes both ``lintian`` and ``lintian4py`` and checks source and binary packages:
+
+::
+
+  lintian{,4py} -EI --pedantic *.dsc *.deb
+
+Here, ``-EI`` option is used to enable experimental and informational tags.
+
 See also
 --------
 
@@ -119,6 +130,7 @@ See also
 .. _`Specifying Supported Versions`: http://www.debian.org/doc/packaging-manuals/python-policy/ch-module_packages.html#s-specifying_versions
 .. _`Programs Shipping Private Modules`: http://www.debian.org/doc/packaging-manuals/python-policy/ch-programs.html#s-current_version_progs
 .. _`Sphinx`: http://sphinx.pocoo.org/
+.. _`lintian4python`: https://launchpad.net/ubuntu/+source/lintian4python
 .. _`Python/Packaging`: http://wiki.debian.org/Python/Packaging
 .. _`Python/LibraryStyleGuide`: http://wiki.debian.org/Python/LibraryStyleGuide
 .. _`Python/AppStyleGuide`: http://wiki.debian.org/Python/AppStyleGuide
