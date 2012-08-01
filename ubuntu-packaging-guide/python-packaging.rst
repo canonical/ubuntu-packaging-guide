@@ -26,7 +26,7 @@ Things in ``debian/control`` that are specific for a Python package:
     X-Python3-Version: >= 3.1
   
   If your package works only with Python 2.x or 3.x, build depend only on one ``-all`` package and use only one ``-Version`` field.
-- Module packages should have ``{python:Depends}`` and ``{python3:Depends}`` substitution variables (correspondingly) in their dependency lists.
+- Module packages should have ``{python:Depends}`` and ``{python3:Depends}`` substitution variables (respectively) in their dependency lists.
 
 debian/rules
 ------------
