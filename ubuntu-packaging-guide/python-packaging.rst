@@ -87,9 +87,15 @@ and ``python3-markdown.install`` will only have one line:
 The ``-doc`` package
 --------------------
 
-If upstream provides documentation, it’s usually built when you run ``setup.py build``. The most common format for Python docs is `Sphinx`_.
+Tool that is most commonly used for building Python docs is `Sphinx`_. To add Sphinx documentation to your package (using ``dh_sphinxdoc`` helper), you should:
 
-In our case, docs are built into ``build/docs/`` directory, so we can simply put this in the ``python-markdown-doc.docs`` file:
+* Add build-dependency on ``python-sphinx`` or ``python3-sphinx`` package (depending on what Python version do you want to use);
+* Append ``sphinxdoc`` to ``dh --with`` line;
+* Run ``setup.py build_sphinx`` in ``override_dh_auto_build`` (sometimes not needed);
+* Add ``{sphinxdoc:Depends}`` to dependency list of your ``-doc`` package;
+* Add path to built docs directory (usually ``build/sphinx/html``) to your ``.docs`` file.
+
+In our case, docs are automatically built in ``build/docs/`` directory (when we run ``setup.py build``), so we can simply put this in the ``python-markdown-doc.docs`` file:
 
 ::
 
