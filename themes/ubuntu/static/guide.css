@@ -1,0 +1,12 @@
+/* CSS style bits for Ubuntu developer guide */
+/* Author: Dmitry Shachnev <mitya57@gmail.com>, 2012 */
+
+#content li {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+
+#content .highlight {
+    padding-bottom: 10px;
+}
