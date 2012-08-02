@@ -29,6 +29,7 @@ ubuntu-packaging-guide (0.2) UNRELEASED; urgency=low
 
   [ Dmitry Shachnev ]
   * Add python-packaging.rst (LP: #702008)
+  * Add guide.css and pygments.css files
 
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 06 Jun 2012 09:28:00 +0200
 
