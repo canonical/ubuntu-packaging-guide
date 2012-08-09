@@ -6,6 +6,7 @@ ubuntu-packaging-guide (0.2) UNRELEASED; urgency=low
 
   [ Jonathan Jesse ]
   * "bzr commit" should be "debcommit" in fixing-a-bug. (LP: #978493)
+  * Use 'bzr lp-propose' instead of 'bzr lp-open' (LP: #950227)
 
   [ Andrew Starr-Bochicchio ]
   * Provide overview of traditional packaging tools (LP: #809925)
