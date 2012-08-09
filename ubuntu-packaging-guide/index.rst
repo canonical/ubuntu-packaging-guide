@@ -63,4 +63,5 @@ Knowledge Base
    udd-newpackage
    chroots
    traditional-packaging
+   python-packaging
    kde
