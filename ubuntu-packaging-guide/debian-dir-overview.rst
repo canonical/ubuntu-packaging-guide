@@ -319,6 +319,13 @@ example::
  hello: Successfully downloaded updated package hello-2.7.tar.gz
      and symlinked hello_2.7.orig.tar.gz to it
 
+If your tarballs live on Launchpad, the ``debian/watch`` file is a little more
+complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  In
+that case, use something like::
+
+    version=3
+    https://launchpad.net/flufl.enum/+download http://launchpad.net/flufl.enum/.*/flufl.enum-(.+).tar.gz
+
 For further information, see ``man uscan`` and the `watch file section (Section 
 4.11) <http://www.debian.org/doc/debian-policy/ch-source.html#s-debianwatch>`_ 
 of the Debian Policy Manual.
@@ -372,3 +379,6 @@ Debian New Maintainers' Guide has more detailed descriptions of each file.
 control, changelog, copyright and rules files. `Chapter 5, "Other files under 
 the debian directory" <http://www.debian.org/doc/maint-guide/dother.en.html>`_ 
 discusses additional files that may be used.
+
+.. _`Question 21146`: https://answers.launchpad.net/launchpad/+question/21146
+.. _`Bug 231797`: https://launchpad.net/bugs/231797
