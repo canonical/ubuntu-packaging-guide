@@ -18,6 +18,8 @@ ubuntu-packaging-guide (0.2) UNRELEASED; urgency=low
   * Install the html/_sources dir. They are linked to on the web site.
   * Adjust paths for new install locations
   * debian/rules: Add a get-orig-source target.
+  * Drop udd-newpackage page. It's contents are sufficiently covered in
+    the packaging-new-software page (LP: #942754).
 
   [ Andrew Starr-Bochicchio + Daniel Holbach ]
   * provide a means to ship per-language per-flavour packages, if a certain
