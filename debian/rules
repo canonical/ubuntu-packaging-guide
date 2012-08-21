@@ -15,24 +15,17 @@ override_dh_compress:
 	dh_compress -X usr/share/doc/ubuntu-packaging-guide-html/_sources
 
 override_dh_link:
-	# symlink identical resources.
-	for version in html epub pdf; do \
-		if [ "$$version" = "html" ]; then subversion="html singlehtml"; \
-		else subversion=$$version; \
-		fi; \
-		for sv in $$subversion; do \
-			cd debian/ubuntu-packaging-guide-$$version && LC_ALL=C fdupes -r1nq \
-				usr/share/doc/ubuntu-packaging-guide-$$version/$$sv | while read s; do \
-				set -- $$(echo $$s | tr ' ' '\n' | sort); \
-				f=$$1; shift; \
-				for d; do \
-					echo "symlinking identical file $$f to $$d"; \
-					rm $$f; ln -s /$$d $$f; \
-				done; \
+	# symlink identical resources. Only needed for the html package.
+	cd debian/ubuntu-packaging-guide-html && LC_ALL=C fdupes -r1nq \
+	usr/share/doc/ubuntu-packaging-guide-html | while read s; do \
+			set -- $$(echo $$s | tr ' ' '\n' | sort); \
+			f=$$1; shift; \
+			for d; do \
+				echo "symlinking identical file $$f to $$d"; \
+				rm $$f; ln -s /$$d $$f; \
 			done; \
-			cd -; \
 		done; \
-	done;
+	done
 	# use system copies of jquery and underscore instead.
 	for filename in `find $$DEBIANDIR -wholename '*/_static/jquery.js'`; do \
 		rm $$filename; \
