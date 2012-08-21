@@ -123,6 +123,27 @@ class Package(object):
         template_file = os.path.join(self.base_path, "debian/" + template_name + ".docs")
         new_file = os.path.join(self.base_path, "debian/" + new_package_name + ".docs")
         doc_type = template_name.split("-")[-1]
+        if template_name.endswith("html"):
+            self.write_docs_file(template_file, new_file, doc_type, language)
+            install_file = os.path.join(self.base_path, 
+                                        "debian/" + template_name + ".install")
+            new_install_file = os.path.join(self.base_path,
+                                            "debian/" + new_package_name + ".install")
+            with open(install_file, "r") as install_file:
+                lines = install_file.readlines()
+            with open(new_install_file, "w") as new_install_file:
+                for line in lines:
+                    source = re.sub("%s/" % doc_type,
+                                          "%s/%s/" % (doc_type, language),
+                                          line.split('\t')[0])
+                    dest = re.sub("-%s/" % doc_type,
+                                          "-%s-%s/" % (doc_type, language),
+                                          line.split('\t')[-1])
+                    new_install_file.write(source + '\t' + dest)
+        else:
+            self.write_docs_file(template_file, new_file, doc_type, language)
+
+    def write_docs_file(self, template_file, new_file, doc_type, language):
         with open(template_file, "r") as template_file:
             lines = template_file.readlines()
         with open(new_file, "w") as new_file:
