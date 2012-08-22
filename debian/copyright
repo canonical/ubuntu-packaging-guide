@@ -13,7 +13,7 @@ Files: themes/ubuntu/static/images/background-header-home.png
        themes/ubuntu/static/base.css
        themes/ubuntu/static/home.css
 Copyright: 2011 Canonical Ltd.
-License: GPL-3+
+License: GPL-3
 
 Files: themes/ubuntu/layout.html
        themes/ubuntu/searchbox.html
@@ -51,6 +51,26 @@ License: GPL-3+
  License version 2 can be found in the file
  `/usr/share/common-licenses/GPL-3'.
 
+License: GPL-3
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the License.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.
 
 License: BSD
  Redistribution and use of this software in source and binary forms, with 
