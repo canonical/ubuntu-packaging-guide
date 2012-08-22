@@ -1,3 +1,9 @@
+ubuntu-packaging-guide (0.2.1) quantal; urgency=low
+
+  * Upload to quantal. (LP: #1004017)
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Wed, 22 Aug 2012 11:59:08 +0200
+
 ubuntu-packaging-guide (0.2) UNRELEASED; urgency=low
 
   [ Iain Lane ]
