@@ -20,6 +20,7 @@ ubuntu-packaging-guide (0.2) UNRELEASED; urgency=low
   * debian/rules: Add a get-orig-source target.
   * Drop udd-newpackage page. It's contents are sufficiently covered in
     the packaging-new-software page (LP: #942754).
+  * Fix installation of singlehtml (LP: #1014639).
 
   [ Andrew Starr-Bochicchio + Daniel Holbach ]
   * provide a means to ship per-language per-flavour packages, if a certain
