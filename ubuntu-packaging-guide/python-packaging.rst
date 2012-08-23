@@ -2,13 +2,13 @@
 Packaging Python modules and applications
 =========================================
 
-Our packaging follows Debian’s `Python policy`_. We will use `python-markdown`_ package as an example, which can be downloaded from `PyPI`_. You can look at its packaging at its `Subversion repository`_.
+Our packaging follows Debian’s `Python policy`_. We will use the `python-markdown`_ package as an example, which can be downloaded from `PyPI`_. You can look at its packaging at its `Subversion repository`_.
 
 There are two types of Python packages — *modules* and *apps*.
 
-At the moment of writing this, Ubuntu has two incompatible versions of Python — *2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python 2.x version, and ``/usr/bin/python3`` — to a default Python 2.x version. Python modules should be built against all supported Python versions.
+At the time of writing, Ubuntu has two incompatible versions of Python — *2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python 2.x version, and ``/usr/bin/python3`` to a default Python 3.x version. Python modules should be built against all supported Python versions.
 
-If you are going to package a new Python module, you can find ``py2dsc`` tool useful (available in `python-stdeb`_ package).
+If you are going to package a new Python module, you might find the ``py2dsc`` tool useful (available in `python-stdeb`_ package).
 
 debian/control
 --------------
@@ -17,7 +17,7 @@ Python 2.x and 3.x versions of the package should be in separate binary packages
 
 Things in ``debian/control`` that are specific for a Python package:
 
-- Section of module packages should be ``python``, of the documentation package — ``doc``. For an application, a single binary package will be enough.
+- The section of module packages should be ``python``, and ``doc`` for the documentation package. For an application, a single binary package will be enough.
 - We should add build dependencies on ``python-all (>= 2.6.6-3~)`` and ``python3-all (>= 3.1.2-7~)`` to make sure Python helpers are available (see the next section for details).
 - It’s recommended to add ``X-Python-Version`` and ``X-Python3-Version`` fields — see “`Specifying Supported Versions`_” section of the Policy for details. For example:
   ::
@@ -67,7 +67,7 @@ It is also a good practice to run tests during the build, if they are shipped by
 debian/\*.install
 -----------------
 
-Python 2.x modules are installed into ``/usr/share/pyshared/`` directory, and symbolic links are created ``/usr/lib/python2.x/dist-packages/`` for every interpreter version, while Python 3.x ones are all installed into ``/usr/lib/python3/dist-packages/``.
+Python 2.x modules are installed into ``/usr/share/pyshared/`` directory, and symbolic links are created in ``/usr/lib/python2.x/dist-packages/`` for every interpreter version, while Python 3.x ones are all installed into ``/usr/lib/python3/dist-packages/``.
 
 If your package is an application and has private Python modules, they should be installed in ``/usr/share/module``, or ``/usr/lib/module`` if the modules are architecture-dependent (e.g. extensions) (see “`Programs Shipping Private Modules`_” section of the Policy).
 
@@ -87,21 +87,21 @@ and ``python3-markdown.install`` will only have one line:
 The ``-doc`` package
 --------------------
 
-Tool that is most commonly used for building Python docs is `Sphinx`_. To add Sphinx documentation to your package (using ``dh_sphinxdoc`` helper), you should:
+The tool most commonly used for building Python docs is `Sphinx`_. To add Sphinx documentation to your package (using ``dh_sphinxdoc`` helper), you should:
 
-* Add build-dependency on ``python-sphinx`` or ``python3-sphinx`` package (depending on what Python version do you want to use);
-* Append ``sphinxdoc`` to ``dh --with`` line;
+* Add a build-dependency on ``python-sphinx`` or ``python3-sphinx`` (depending on what Python version do you want to use);
+* Append ``sphinxdoc`` to the ``dh --with`` line;
 * Run ``setup.py build_sphinx`` in ``override_dh_auto_build`` (sometimes not needed);
-* Add ``{sphinxdoc:Depends}`` to dependency list of your ``-doc`` package;
-* Add path to built docs directory (usually ``build/sphinx/html``) to your ``.docs`` file.
+* Add ``{sphinxdoc:Depends}`` to the dependency list of your ``-doc`` package;
+* Add the path of the built docs directory (usually ``build/sphinx/html``) to your ``.docs`` file.
 
-In our case, docs are automatically built in ``build/docs/`` directory (when we run ``setup.py build``), so we can simply put this in the ``python-markdown-doc.docs`` file:
+In our case, the docs are automatically built in ``build/docs/`` directory when we run ``setup.py build``, so we can simply put this in the ``python-markdown-doc.docs`` file:
 
 ::
 
   build/docs/
 
-Because docs also contain source ``.txt`` files, we’ll also tell ``dh_compress`` to not compress them — and add this to ``debian/rules``:
+Because docs also contain source ``.txt`` files, we’ll also tell ``dh_compress`` to not compress them — by adding this to ``debian/rules``:
 
 .. code-block:: makefile
 
@@ -111,7 +111,7 @@ Because docs also contain source ``.txt`` files, we’ll also tell ``dh_compress
 Checking for packaging mistakes
 -------------------------------
 
-Along with ``lintian``, there is a special tool for checking Python packages — ``lintian4py``. It is available in `lintian4python`_ package. For example, this command invokes both ``lintian`` and ``lintian4py`` and checks source and binary packages:
+Along with ``lintian``, there is a special tool for checking Python packages — ``lintian4py``. It is available in the `lintian4python`_ package. For example, this command invokes both ``lintian`` and ``lintian4py`` and checks source and binary packages:
 
 ::
 
