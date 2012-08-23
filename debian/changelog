@@ -1,3 +1,10 @@
+ubuntu-packaging-guide (0.2.3) UNRELEASED; urgency=low
+
+  [ Thomas Kluyver ]
+  * Improve English in Python packaging page.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Thu, 23 Aug 2012 14:49:35 +0200
+
 ubuntu-packaging-guide (0.2.2) quantal; urgency=low
 
   * Added COPYING.GPL3 text, fixed a mistake in debian/copyright. Thanks Séb.
