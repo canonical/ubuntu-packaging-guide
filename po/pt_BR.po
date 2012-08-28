@@ -1,26 +1,25 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2010-2012, Ubuntu Developers
+# Brazilian Portuguese translation for ubuntu-packaging-guide
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the ubuntu-packaging-guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ubuntu-packaging-guide 0.1\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: ubuntu-packaging-guide\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-08-23 10:45+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2012-08-23 21:45+0000\n"
+"Last-Translator: Rudinei Weschenfelder <rudinei.ti@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-28 07:32+0000\n"
+"X-Launchpad-Export-Date: 2012-08-28 07:33+0000\n"
 "X-Generator: Launchpad (build 15864)\n"
 
-# d6c7ecbd606c4b9282b23708db85f9b5
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
-msgstr "Chroots benutzen"
+msgstr "Usando o chroot"
 
 #: ../ubuntu-packaging-guide/chroots.rst:5
 msgid ""
@@ -28,6 +27,9 @@ msgid ""
 "versions you can create the environment of the other version with a "
 "``chroot``."
 msgstr ""
+"Se você está executando uma versão do Ubuntu mas os pacotes que está "
+"trabalhando são de outras versões você pode criar um ambiente da outra "
+"versão com um ``chroot``."
 
 #: ../ubuntu-packaging-guide/chroots.rst:9
 msgid ""
@@ -38,17 +40,19 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
-msgstr "Eine Chroot-Umgebung anlegen"
+msgstr "Criando um chroot"
 
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
-msgstr ""
+msgstr "Use o comando ``debootstrap`` para criar um novo chroot::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
 "This will create a directory ``oneiric`` and install a minimal oneiric "
 "system into it."
 msgstr ""
+"Isto irá criar um diretório ``oneiric`` e instalará um sistema mínimo do "
+"oneiric dentro dele."
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
@@ -58,13 +62,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
-msgstr ""
+msgstr "Você pode então trabalhar dentro do chroot::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:30
 msgid ""
 "Where you can install or remove any package you wish without affecting your "
 "main system."
 msgstr ""
+"Onde você pode instalar ou remover qualquer pacote que desejar sem afetar "
+"seu sistema principal."
 
 #: ../ubuntu-packaging-guide/chroots.rst:33
 msgid ""
@@ -77,16 +83,14 @@ msgid ""
 "$ sudo mkdir oneiric/home/<username> $ sudo cp -r ~/.gnupg ~/.ssh ~/.bazaar "
 "oneiric/home/<username>"
 msgstr ""
-"$ sudo mkdir oneiric/home/<username> $ sudo cp -r ~/.gnupg ~/.ssh ~/.bazaar "
-"oneiric/home/<username>"
+"$ sudo mkdir oneiric/home/<nome de usuário> $ sudo cp -r ~/.gnupg ~/.ssh "
+"~/.bazaar oneiric/home/<nome de usuário>"
 
 #: ../ubuntu-packaging-guide/chroots.rst:39
 msgid ""
 "To stop apt and other programs complaining about missing locales you can "
 "install your relevant language pack::"
 msgstr ""
-"Damit apt und andere Programme sich nicht mehr über fehlende Locales "
-"beschweren, kann man die relevanten Language Packs installieren::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:44
 msgid ""
@@ -103,10 +107,9 @@ msgid ""
 "For more information on chroots see our `Debootstrap Chroot wiki page`_."
 msgstr ""
 
-# 26aacfbeebe4473f9e1244c3c974b6ff
 #: ../ubuntu-packaging-guide/chroots.rst:55
 msgid "Alternatives"
-msgstr "Alternativen"
+msgstr "Alternativas"
 
 #: ../ubuntu-packaging-guide/chroots.rst:57
 msgid ""
@@ -140,7 +143,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
-msgstr "Kommunikation in der Ubuntu-Entwicklung"
+msgstr "Comunicação no desenvolvimento do Ubuntu"
 
 #: ../ubuntu-packaging-guide/communication.rst:5
 msgid ""
@@ -149,10 +152,9 @@ msgid ""
 "communicate effectively."
 msgstr ""
 
-# 8dff4e5170734f698bbb51c6807b7dcf
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
-msgstr "Mailinglisten"
+msgstr "Listas de e-mails"
 
 #: ../ubuntu-packaging-guide/communication.rst:12
 msgid ""
@@ -162,44 +164,51 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
-msgstr ""
+msgstr "Em termos de desenvolvimento, estas são as mais importantes:"
 
 #: ../ubuntu-packaging-guide/communication.rst:18
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (announce-"
 "only, the most important development announcements go here)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (apenas "
+"anúncios, os mais importantes anúncios de desenvolvimento aqui)"
 
 #: ../ubuntu-packaging-guide/communication.rst:20
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (general Ubuntu "
 "development discussion)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (discussão geral de "
+"desenvolvimento do Ubuntu)"
 
 #: ../ubuntu-packaging-guide/communication.rst:22
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (MOTU Team discussion, "
 "get help with packaging)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (Time de discussão "
+"MOTU, obter ajuda com empacotamento)"
 
-# bcf8bf4cfd7d44e79964fc504e3dcbcf
 #: ../ubuntu-packaging-guide/communication.rst:27
 msgid "IRC Channels"
-msgstr "IRC-Kanäle"
+msgstr "Canais de IRC"
 
 #: ../ubuntu-packaging-guide/communication.rst:29
 msgid ""
 "For real-time discussions, please connect to irc.freenode.net and join one "
 "or any of these channels:"
 msgstr ""
+"Para discussões em tempo real, por favor conecte-se na rede irc.freenode.net "
+"e entre em qualquer um desses canais:"
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
-msgstr ""
+msgstr "#ubuntu-devel (para discussão geral de desenvolvimento)"
 
 #: ../ubuntu-packaging-guide/communication.rst:33
 msgid "#ubuntu-motu (for MOTU team discussion and generally getting help)"
-msgstr ""
+msgstr "#ubuntu-motu (Time de discussão MOTU e obtenção de ajuda em geral)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:2
 msgid "Basic Overview of the ``debian/`` Directory"
@@ -218,7 +227,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:13
 msgid "The changelog"
-msgstr ""
+msgstr "O registro de mudanças"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:15
 msgid ""
@@ -252,7 +261,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
-msgstr ""
+msgstr "Aqui está um exemplo de arquivo \"changelog\" para hello::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:52
 msgid ""
@@ -281,7 +290,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
-msgstr ""
+msgstr "O arquivo de controle"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:72
 msgid ""
@@ -321,6 +330,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:118
 msgid "Each additional paragraph describes a binary package to be built."
 msgstr ""
+"Cada parágrafo adicional descreve um pacote binário a ser construído."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:120
 msgid ""
@@ -329,10 +339,9 @@ msgid ""
 "Debian Policy Manual."
 msgstr ""
 
-# 870ce0ac216c4fd8a10aa642d5a8ee12
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:126
 msgid "The copyright file"
-msgstr "Die Copyright-Datei"
+msgstr "O arquivo de direitos autorais"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
 msgid ""
@@ -361,7 +370,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:182
 msgid "The rules file"
-msgstr ""
+msgstr "O arquivo de regras"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:184
 msgid ""
@@ -435,14 +444,13 @@ msgid ""
 "the Debian Policy Manual."
 msgstr ""
 
-# 909152843c7c41ffa14664f13cb0e23f
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:247
 msgid "Additional Files"
-msgstr "Zusätzliche Dateien"
+msgstr "Arquivos adicionais"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:250
 msgid "The install file"
-msgstr ""
+msgstr "O arquivo de instalação"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:252
 msgid ""
@@ -538,10 +546,9 @@ msgid ""
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 msgstr ""
 
-# faa634aa8992448d86ad70c8669ceee1
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:331
 msgid "The source/format file"
-msgstr "Die Datei source/format"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
 msgid ""
@@ -578,7 +585,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:350
 msgid "Support for additional compression formats: bzip2, lzma and xz"
-msgstr ""
+msgstr "Suporte para formatos de compressão adicionais: bzip2, lzma e xz"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:352
 msgid "Support for multiple upstream tarballs"
@@ -610,7 +617,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:366
 msgid "Additional Resources"
-msgstr "Weiterführende Quellen"
+msgstr "Recursos adicionais"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:368
 msgid ""
@@ -625,12 +632,12 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:3
 msgid "Fixing a bug in Ubuntu"
-msgstr ""
+msgstr "Corrigindo um erro no Ubuntu"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:6
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:9
 msgid "Introduction"
-msgstr "Einleitung"
+msgstr "Introdução"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:8
 msgid ""
@@ -649,7 +656,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:20
 msgid "Finding the problem"
-msgstr ""
+msgstr "Encontrando o problema"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:22
 msgid ""
@@ -700,7 +707,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:64
 msgid "Getting the code"
-msgstr ""
+msgstr "Obtendo o código"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:66
 msgid ""
@@ -732,7 +739,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:86
 msgid "Work on a fix"
-msgstr ""
+msgstr "trabalhar em uma correção"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:88
 msgid ""
@@ -782,11 +789,13 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:118
 msgid "Testing the fix"
-msgstr ""
+msgstr "Testando a correção"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:120
 msgid "To build a test package with your changes, run these commands::"
 msgstr ""
+"Para construir um pacote de teste com suas alterações, e execute estes "
+"comandos::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:125
 msgid ""
@@ -804,7 +813,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:136
 msgid "Documenting the fix"
-msgstr ""
+msgstr "Documentando a correção"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:138
 msgid ""
@@ -817,7 +826,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:143
 msgid "The easiest way to update this is to run::"
-msgstr ""
+msgstr "A maneira mais fácil de atualizar isto é executar::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:147
 msgid ""
@@ -842,11 +851,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
 msgid "where the change was done"
-msgstr ""
+msgstr "onde a alteração foi realizada"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:166
 msgid "what was changed"
-msgstr ""
+msgstr "o que foi alterado"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:167
 msgid "where the discussion of the change happened"
@@ -864,7 +873,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:178
 msgid "Committing the fix"
-msgstr ""
+msgstr "Submetendo uma correção"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:180
 msgid "With the changelog entry written and saved, you can just run::"
@@ -884,7 +893,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:192
 msgid "This could for example be::"
-msgstr ""
+msgstr "Isto poderia por exemplo ser::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:196
 msgid "So if you just run::"
@@ -900,7 +909,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
 msgid "Getting Set Up"
-msgstr ""
+msgstr "Guia de configuração"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:5
 msgid ""
@@ -912,7 +921,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:10
 msgid "Installing packaging-related software. This includes:"
-msgstr ""
+msgstr "Instalando pacotes de programas relacionados. Isto inclui:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:12
 msgid "Ubuntu-specific packaging utilities"
@@ -928,7 +937,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
 msgid "Creating and configuring your account on Launchpad"
-msgstr ""
+msgstr "Criando e configurando sua conta no Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:17
 msgid ""
@@ -936,6 +945,9 @@ msgid ""
 "packages, interact with other developers, and propose your changes on "
 "Launchpad."
 msgstr ""
+"Configurando o seu ambiente de desenvolvimento para ajudá-lo a fazer "
+"compilações de pacotes locais, interagir com outros desenvolvedores, e "
+"propor as alterações no Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:22
 msgid ""
@@ -1015,7 +1027,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:69
 msgid "Create your GPG key"
-msgstr ""
+msgstr "Criar sua chave GPG"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:71
 msgid ""
@@ -1055,7 +1067,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:97
 msgid "Once this is done, you will get a message similar to this one::"
-msgstr ""
+msgstr "uma vez feito isso, você receberá uma mensagem semelhante a esta::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:104
 msgid "In this case ``43CDE61D`` is the *key ID*."
@@ -1077,7 +1089,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:118
 msgid "Create your SSH key"
-msgstr ""
+msgstr "Criar sua chave SSH"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:120
 msgid ""
@@ -1090,7 +1102,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:126
 msgid "To generate an SSH key, enter::"
-msgstr ""
+msgstr "Para gerar uma chave SSH, digite::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:130
 msgid ""
@@ -1140,7 +1152,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:156
 msgid "Get set up to work with Launchpad"
-msgstr ""
+msgstr "Prepare-se para trabalhar com o Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:158
 msgid ""
@@ -1155,19 +1167,19 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:163
 msgid "Uploading your GPG and SSH keys to Launchpad"
-msgstr ""
+msgstr "Enviando suas chaves GPG e SSH para o Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:164
 msgid "Configuring Bazaar to work with Launchpad"
-msgstr ""
+msgstr "Configurando o Bazaar para trabalhar com o Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:165
 msgid "Configuring Bash to work with Bazaar"
-msgstr ""
+msgstr "Configurando o Bash para trabalhar com o Bazaar"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid "About Launchpad"
-msgstr "Über Launchpad"
+msgstr "Sobre o Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:171
 msgid ""
@@ -1194,7 +1206,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:186
 msgid "Get a Launchpad account"
-msgstr ""
+msgstr "Obter uma conta do Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:188
 msgid ""
@@ -1227,7 +1239,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:207
 msgid "Upload your GPG key to Launchpad"
-msgstr ""
+msgstr "Enviar sua chave GPG para o Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:209
 msgid "To find about your GPG fingerprint, run::"
@@ -1293,10 +1305,13 @@ msgid ""
 "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
 "Launchpad."
 msgstr ""
+"Para mais informações sobre este processo, visite a _página `<creating an "
+"SSH keypair (criando um par de chaves SSH) "
+"<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>` no Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:259
 msgid "Configure Bazaar"
-msgstr ""
+msgstr "Configurar o Bazaar"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:261
 msgid ""
@@ -1326,7 +1341,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:281
 msgid "Configure your shell"
-msgstr ""
+msgstr "Configurar seu shell"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:282
 msgid ""
@@ -1337,7 +1352,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:289
 msgid "Now save the file and either restart your terminal or run::"
-msgstr ""
+msgstr "Agora salve o arquivo e reinicie o seu terminal ou execute::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:293
 msgid ""
@@ -1347,7 +1362,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:9
 msgid "Ubuntu Packaging Guide"
-msgstr "Ubuntu Packaging Handbuch"
+msgstr "Guia de Empacotamento do Ubuntu"
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
@@ -1390,15 +1405,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:33
 msgid "Articles"
-msgstr "Artikel"
+msgstr "Artigos"
 
 #: ../ubuntu-packaging-guide/index.rst:48
 msgid "Knowledge Base"
-msgstr "Wissensdatenbank"
+msgstr "Base de conhecimento"
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
-msgstr "Einführung in die Ubuntu-Entwicklung"
+msgstr "Introdução ao desenvolvimento Ubuntu"
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:5
 msgid ""
@@ -1571,7 +1586,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:3
 msgid "KDE Packaging"
-msgstr "KDE Paketierung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:5
 msgid ""
@@ -1608,7 +1623,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:27
 msgid "debian/rules"
-msgstr "debian/rules"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:29
 msgid ""
@@ -1634,7 +1649,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:47
 msgid "Translations"
-msgstr "Übersetzungen"
+msgstr "Traduções"
 
 #: ../ubuntu-packaging-guide/kde.rst:49
 msgid ""
@@ -1699,7 +1714,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:3
 msgid "Shared Libraries"
-msgstr ""
+msgstr "Bibliotecas compartilhadas"
 
 #: ../ubuntu-packaging-guide/libraries.rst:5
 msgid ""
@@ -1742,11 +1757,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:34
 msgid "An Example"
-msgstr "Ein Beispiel"
+msgstr "Um exemplo"
 
 #: ../ubuntu-packaging-guide/libraries.rst:36
 msgid "We will use libnova as an example::"
-msgstr ""
+msgstr "Vamos usar libnova como um exemplo::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:41
 msgid "To find the SONAME of the library run"
@@ -1754,7 +1769,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:43
 msgid "$ readelf -a /usr/lib/libnova-0.12.so.2 | grep SONAME"
-msgstr ""
+msgstr "$ readelf -a /usr/lib/libnova-0.12.so.2 | grep SONAME"
 
 #: ../ubuntu-packaging-guide/libraries.rst:45
 msgid ""
@@ -1809,7 +1824,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:82
 msgid "Static Libraries"
-msgstr ""
+msgstr "Bibliotecas estáticas"
 
 #: ../ubuntu-packaging-guide/libraries.rst:84
 msgid ""
@@ -1892,7 +1907,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
-msgstr "Weiterführende Literatur"
+msgstr "Leitura adicional"
 
 #: ../ubuntu-packaging-guide/libraries.rst:152
 msgid ""
@@ -1902,7 +1917,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:3
 msgid "Packaging New Software"
-msgstr ""
+msgstr "Empacotando um novo software"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:5
 msgid ""
@@ -1921,7 +1936,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:15
 msgid "Checking the Program"
-msgstr ""
+msgstr "Verificando o programa"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:17
 msgid ""
@@ -1971,16 +1986,17 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:50
 msgid "Now you can compile the source::"
-msgstr ""
+msgstr "Agora você pode compilar o fonte::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:54
 msgid ""
 "If the compile completes successfully you can install and run the program::"
 msgstr ""
+"If the compile completes successfully you can install and run the program::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:60
 msgid "Starting a Package"
-msgstr ""
+msgstr "Iniciando um pacote"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:62
 msgid ""
@@ -2001,7 +2017,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:80
 msgid "You should now customise each of the files."
-msgstr ""
+msgstr "Agora você deve customizar cada um dos arquivos."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:82
 msgid ""
@@ -2101,11 +2117,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:145
 msgid "Install the package and check it works::"
-msgstr ""
+msgstr "Instalar o pacote e verificar se funciona::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:150
 msgid "Next Steps"
-msgstr "Nächste Schritte"
+msgstr "Próximos passos"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:152
 msgid ""
@@ -2270,7 +2286,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:67
 msgid "Adding a New Patch"
-msgstr ""
+msgstr "Adicionando um novo patch"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:69
 msgid ""
@@ -2326,7 +2342,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:116
 msgid "Then upgrade to the new version"
-msgstr ""
+msgstr "Em seguida, atualizar para a nova versão"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:118
 msgid ""
@@ -2507,7 +2523,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:95
 msgid "Test and Submit your work"
-msgstr ""
+msgstr "Testar e enviar o seu trabalho"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:97
 msgid ""
@@ -2600,7 +2616,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:3
 msgid "Getting the Source"
-msgstr ""
+msgstr "Obtendo o fonte"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:6
 msgid "Source package URLs"
@@ -2648,7 +2664,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:48
 msgid "Getting the source"
-msgstr ""
+msgstr "Obtendo o fonte"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:50
 msgid ""
@@ -2666,7 +2682,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:62
 msgid "Creating a shared repository"
-msgstr ""
+msgstr "Criando um repositório compartilhado"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:64
 msgid ""
@@ -2690,7 +2706,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:82
 msgid "Getting the trunk branch"
-msgstr ""
+msgstr "Obtendo o ramo trunk"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:84
 msgid ""
@@ -2708,7 +2724,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:97
 msgid "Ensuring the version is up to date"
-msgstr ""
+msgstr "Assegurando que a versão é atualizada"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:99
 msgid ""
@@ -2784,7 +2800,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:3
 msgid "Ubuntu Distributed Development - Introduction"
-msgstr ""
+msgstr "Desenvolvimento distribuído do Ubuntu - Introdução"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:5
 msgid ""
@@ -2837,7 +2853,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:40
 msgid "Ubuntu Distributed Development"
-msgstr ""
+msgstr "Desenvolvimento distribuído do Ubuntu"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:42
 msgid ""
@@ -2926,13 +2942,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:105
 msgid "Limitations of UDD"
-msgstr ""
+msgstr "Limitações do DDU"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:107
 msgid ""
 "Ubuntu Distributed Development is a new method for working with Ubuntu "
 "packages.  It currently has some notable limitations:"
 msgstr ""
+"O desenvolvimento distribuído do Ubuntu é um novo método para trabalhar com "
+"pacotes Ubuntu. Ele atualmente tem algumas limitações notáveis:"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:110
 msgid ""
@@ -2973,7 +2991,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:3
 msgid "Getting The Latest"
-msgstr ""
+msgstr "Obtendo o mais recente"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:5
 msgid ""
@@ -2983,7 +3001,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:10
 msgid "Updating your main branch"
-msgstr ""
+msgstr "Atualizando seu ramo principal"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:12
 msgid ""
@@ -3040,7 +3058,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:50
 msgid "Referring to versions of a package"
-msgstr ""
+msgstr "Fazendo referência à versões de um pacote"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:52
 msgid ""
@@ -3084,7 +3102,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:20
 msgid "Merging from Debian"
-msgstr ""
+msgstr "Mesclando do Debian"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:22
 msgid ""
@@ -3120,7 +3138,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:50
 msgid "as described earlier."
-msgstr ""
+msgstr "conforme descrito anteriormente."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:52
 msgid ""
@@ -3153,7 +3171,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:77
 msgid "Merging a new upstream version"
-msgstr ""
+msgstr "Mesclando uma nova versão upstream"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:79
 msgid ""
@@ -3225,7 +3243,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:3
 msgid "Building a new package"
-msgstr ""
+msgstr "Construindo um novo pacote"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:5
 msgid ""
@@ -3237,7 +3255,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:12
 msgid "Example package"
-msgstr ""
+msgstr "Pacote de exemplo"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:14
 msgid ""
@@ -3254,7 +3272,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:31
 msgid "Bootstrapping"
-msgstr "Bootstrapping"
+msgstr "Inicializando"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:33
 msgid ""
@@ -3497,7 +3515,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:72
 msgid "Develop your patch"
-msgstr ""
+msgstr "Desenvolva seu patch"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:74
 msgid ""
@@ -3599,7 +3617,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:156
 msgid "edit-patch"
-msgstr "edit-patch"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:158
 msgid ""
@@ -3713,7 +3731,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:62
 msgid "Generating a debdiff"
-msgstr ""
+msgstr "Gerando um debdiff"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:64
 msgid ""
@@ -3769,7 +3787,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:3
 msgid "Uploading a package"
-msgstr ""
+msgstr "Enviando um pacote"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:5
 msgid ""
@@ -3781,7 +3799,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:12
 msgid "Uploading a change made by you"
-msgstr ""
+msgstr "Enviando uma mudança efetuada por você"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:14
 msgid ""
@@ -3903,7 +3921,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:103
 msgid "Canceling an upload"
-msgstr "Einen Upload abbrechen"
+msgstr "Cancelando um envio"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:105
 msgid ""
@@ -3954,7 +3972,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:3
 msgid "Working on a Package"
-msgstr ""
+msgstr "Trabalhando em um pacote"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:5
 msgid ""

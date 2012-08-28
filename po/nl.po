@@ -1,26 +1,25 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2010-2012, Ubuntu Developers
+# Dutch translation for ubuntu-packaging-guide
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the ubuntu-packaging-guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ubuntu-packaging-guide 0.1\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: ubuntu-packaging-guide\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-08-23 10:45+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2012-08-25 09:23+0000\n"
+"Last-Translator: Hannie Dumoleyn <Unknown>\n"
+"Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2012-08-28 07:32+0000\n"
 "X-Generator: Launchpad (build 15864)\n"
 
-# d6c7ecbd606c4b9282b23708db85f9b5
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
-msgstr "Chroots benutzen"
+msgstr "Chroots gebruiken"
 
 #: ../ubuntu-packaging-guide/chroots.rst:5
 msgid ""
@@ -28,6 +27,9 @@ msgid ""
 "versions you can create the environment of the other version with a "
 "``chroot``."
 msgstr ""
+"Als u de ene versie van Ubuntu gebruikt, maar werkt aan pakketten voor een "
+"andere versie, dan kunt u de omgeving van de andere versie aanmaken met een "
+"``chroot``."
 
 #: ../ubuntu-packaging-guide/chroots.rst:9
 msgid ""
@@ -35,42 +37,53 @@ msgid ""
 "which you can work in quite normally.  It avoids the overhead of running a "
 "full virtual machine."
 msgstr ""
+"Een ``chroot`` stelt u in staat een volledig bestandssysteem van een andere "
+"distributie te hebben waarin u vrij normaal kunt werken. Hierdoor is het "
+"niet nodig een volledige virtuele machine te draaien."
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
-msgstr "Eine Chroot-Umgebung anlegen"
+msgstr "Een Chroot aanmaken"
 
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
-msgstr ""
+msgstr "Gebruik het commando ``debootstrap`` om een nieuwe chroot te maken::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
 "This will create a directory ``oneiric`` and install a minimal oneiric "
 "system into it."
 msgstr ""
+"Dit zal een map ``oneiric`` aanmaken en er een minimaal oneiric systeem in "
+"installeren."
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
 "If your version of ``debootstrap`` does not know about oneiric you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
+"Indien uw versie van ``debootstrap`` niets weet van oneiric kunt u proberen "
+"te upgraden naar de versie in ``backports``."
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
-msgstr ""
+msgstr "U kunt daarna werken binnen chroot::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:30
 msgid ""
 "Where you can install or remove any package you wish without affecting your "
 "main system."
 msgstr ""
+"Waar u elk pakket kunt installeren of verwijderen zonder uw hoofdsysteem te "
+"beïnvloeden."
 
 #: ../ubuntu-packaging-guide/chroots.rst:33
 msgid ""
 "You might want to copy your GPG/ssh keys and Bazaar configuration into the "
 "chroot so you can access and sign packages directly."
 msgstr ""
+"U zou uw GPG/ssh-sleutels en Bazaar-configuratie kunnen kopiëren naar chroot "
+"zodat u directe toegang heeft tot pakketten en deze direct kunt tekenen."
 
 #: ../ubuntu-packaging-guide/chroots.rst:36
 msgid ""
@@ -85,8 +98,8 @@ msgid ""
 "To stop apt and other programs complaining about missing locales you can "
 "install your relevant language pack::"
 msgstr ""
-"Damit apt und andere Programme sich nicht mehr über fehlende Locales "
-"beschweren, kann man die relevanten Language Packs installieren::"
+"Om te voorkomen dat apt en andere programma's klagen over het gemis van "
+"lokale instellingen kunt u het talenpakket voor uw taal installeren::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:44
 msgid ""
@@ -103,10 +116,9 @@ msgid ""
 "For more information on chroots see our `Debootstrap Chroot wiki page`_."
 msgstr ""
 
-# 26aacfbeebe4473f9e1244c3c974b6ff
 #: ../ubuntu-packaging-guide/chroots.rst:55
 msgid "Alternatives"
-msgstr "Alternativen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:57
 msgid ""
@@ -140,7 +152,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
-msgstr "Kommunikation in der Ubuntu-Entwicklung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:5
 msgid ""
@@ -149,10 +161,9 @@ msgid ""
 "communicate effectively."
 msgstr ""
 
-# 8dff4e5170734f698bbb51c6807b7dcf
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
-msgstr "Mailinglisten"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:12
 msgid ""
@@ -182,10 +193,9 @@ msgid ""
 "get help with packaging)"
 msgstr ""
 
-# bcf8bf4cfd7d44e79964fc504e3dcbcf
 #: ../ubuntu-packaging-guide/communication.rst:27
 msgid "IRC Channels"
-msgstr "IRC-Kanäle"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:29
 msgid ""
@@ -329,10 +339,9 @@ msgid ""
 "Debian Policy Manual."
 msgstr ""
 
-# 870ce0ac216c4fd8a10aa642d5a8ee12
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:126
 msgid "The copyright file"
-msgstr "Die Copyright-Datei"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
 msgid ""
@@ -435,10 +444,9 @@ msgid ""
 "the Debian Policy Manual."
 msgstr ""
 
-# 909152843c7c41ffa14664f13cb0e23f
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:247
 msgid "Additional Files"
-msgstr "Zusätzliche Dateien"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:250
 msgid "The install file"
@@ -538,10 +546,9 @@ msgid ""
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 msgstr ""
 
-# faa634aa8992448d86ad70c8669ceee1
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:331
 msgid "The source/format file"
-msgstr "Die Datei source/format"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
 msgid ""
@@ -610,7 +617,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:366
 msgid "Additional Resources"
-msgstr "Weiterführende Quellen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:368
 msgid ""
@@ -630,7 +637,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:6
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:9
 msgid "Introduction"
-msgstr "Einleitung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:8
 msgid ""
@@ -1167,7 +1174,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid "About Launchpad"
-msgstr "Über Launchpad"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:171
 msgid ""
@@ -1347,7 +1354,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:9
 msgid "Ubuntu Packaging Guide"
-msgstr "Ubuntu Packaging Handbuch"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
@@ -1390,15 +1397,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:33
 msgid "Articles"
-msgstr "Artikel"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:48
 msgid "Knowledge Base"
-msgstr "Wissensdatenbank"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
-msgstr "Einführung in die Ubuntu-Entwicklung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:5
 msgid ""
@@ -1571,7 +1578,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:3
 msgid "KDE Packaging"
-msgstr "KDE Paketierung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:5
 msgid ""
@@ -1608,7 +1615,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:27
 msgid "debian/rules"
-msgstr "debian/rules"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:29
 msgid ""
@@ -1634,7 +1641,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:47
 msgid "Translations"
-msgstr "Übersetzungen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:49
 msgid ""
@@ -1742,7 +1749,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:34
 msgid "An Example"
-msgstr "Ein Beispiel"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:36
 msgid "We will use libnova as an example::"
@@ -1892,7 +1899,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
-msgstr "Weiterführende Literatur"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:152
 msgid ""
@@ -2105,7 +2112,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:150
 msgid "Next Steps"
-msgstr "Nächste Schritte"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:152
 msgid ""
@@ -2334,9 +2341,6 @@ msgid ""
 "https://launchpad.net/ubuntu/+archive/primary/+files/kamoso_2.0.2.orig.tar.bz"
 "2"
 msgstr ""
-"$ bzr merge-upstream --version 2.0.2 "
-"https://launchpad.net/ubuntu/+archive/primary/+files/kamoso_2.0.2.orig.tar.bz"
-"2"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:120
 msgid "Then apply the patches one at a time to check for problems::"
@@ -2906,7 +2910,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:91
 msgid "Bazaar"
-msgstr "Bazaar"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:93
 msgid ""
@@ -3254,7 +3258,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:31
 msgid "Bootstrapping"
-msgstr "Bootstrapping"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:33
 msgid ""
@@ -3352,7 +3356,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:117
 msgid "pkgme"
-msgstr "pkgme"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:119
 msgid ""
@@ -3599,7 +3603,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:156
 msgid "edit-patch"
-msgstr "edit-patch"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:158
 msgid ""
@@ -3903,7 +3907,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:103
 msgid "Canceling an upload"
-msgstr "Einen Upload abbrechen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:105
 msgid ""
