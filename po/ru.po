@@ -1,26 +1,25 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2010-2012, Ubuntu Developers
+# Russian translation for ubuntu-packaging-guide
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the ubuntu-packaging-guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ubuntu-packaging-guide 0.1\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: ubuntu-packaging-guide\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-08-23 10:45+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2012-08-25 12:14+0000\n"
+"Last-Translator: mashka <mashksharn@gmail.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-28 07:32+0000\n"
+"X-Launchpad-Export-Date: 2012-08-28 07:33+0000\n"
 "X-Generator: Launchpad (build 15864)\n"
 
-# d6c7ecbd606c4b9282b23708db85f9b5
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
-msgstr "Chroots benutzen"
+msgstr "Использовать  Chroots"
 
 #: ../ubuntu-packaging-guide/chroots.rst:5
 msgid ""
@@ -28,6 +27,8 @@ msgid ""
 "versions you can create the environment of the other version with a "
 "``chroot``."
 msgstr ""
+"Если вы пользуетесь одной из версий Ubuntu, но работаете над пакетами для "
+"другой версии вы можете создать среду другой версии с помощью  ``chroot``."
 
 #: ../ubuntu-packaging-guide/chroots.rst:9
 msgid ""
@@ -35,58 +36,67 @@ msgid ""
 "which you can work in quite normally.  It avoids the overhead of running a "
 "full virtual machine."
 msgstr ""
+"Использование ``chroot`` позволит вам иметь в распоряжении полную файловую "
+"систему другого дистрибутива для удобства работы. Это позволяет избежать "
+"затрат, связанных с установкой виртуальной машины."
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
-msgstr "Eine Chroot-Umgebung anlegen"
+msgstr "Создать Chroot"
 
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
-msgstr ""
+msgstr "Используйте команду ``debootstrap`` чтобы создать новый chroot::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
 "This will create a directory ``oneiric`` and install a minimal oneiric "
 "system into it."
 msgstr ""
+"Это позволит создать вам каталог  ``oneiric`` и установит минимальную "
+"oneiric-систему в него."
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
 "If your version of ``debootstrap`` does not know about oneiric you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
+"Если ваша версия  ``debootstrap``  не знает об oneiric вы можете попробовать "
+"обновление до версии ``backports``."
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
-msgstr ""
+msgstr "Вы можете работать внутри  chroot::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:30
 msgid ""
 "Where you can install or remove any package you wish without affecting your "
 "main system."
 msgstr ""
+"Где можно установить или удалить любой пакет, который вы хотите без ущерба "
+"для основной системы."
 
 #: ../ubuntu-packaging-guide/chroots.rst:33
 msgid ""
 "You might want to copy your GPG/ssh keys and Bazaar configuration into the "
 "chroot so you can access and sign packages directly."
 msgstr ""
+"Вы можете скопировать ваши GPG/ssh  ключи и  Bazaar конфигурации в  chroot, "
+"так что вы можете получить доступ и подписать пакеты напрямую."
 
 #: ../ubuntu-packaging-guide/chroots.rst:36
 msgid ""
 "$ sudo mkdir oneiric/home/<username> $ sudo cp -r ~/.gnupg ~/.ssh ~/.bazaar "
 "oneiric/home/<username>"
 msgstr ""
-"$ sudo mkdir oneiric/home/<username> $ sudo cp -r ~/.gnupg ~/.ssh ~/.bazaar "
-"oneiric/home/<username>"
+"$ sudo mkdir oneiric/home/<имяпользователя> $ sudo cp -r ~/.gnupg ~/.ssh "
+"~/.bazaar oneiric/home/<имяпользователя>"
 
 #: ../ubuntu-packaging-guide/chroots.rst:39
 msgid ""
 "To stop apt and other programs complaining about missing locales you can "
 "install your relevant language pack::"
 msgstr ""
-"Damit apt und andere Programme sich nicht mehr über fehlende Locales "
-"beschweren, kann man die relevanten Language Packs installieren::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:44
 msgid ""
@@ -96,17 +106,18 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:50
 msgid "Some programs may need you to bind /dev or /proc."
-msgstr ""
+msgstr "Некоторые программы возможно нужно привязать /dev or /proc."
 
 #: ../ubuntu-packaging-guide/chroots.rst:52
 msgid ""
 "For more information on chroots see our `Debootstrap Chroot wiki page`_."
 msgstr ""
+"Более подробную информацию о chroot вы можете найти на нашей странице  "
+"`Debootstrap Chroot wiki page`_."
 
-# 26aacfbeebe4473f9e1244c3c974b6ff
 #: ../ubuntu-packaging-guide/chroots.rst:55
 msgid "Alternatives"
-msgstr "Alternativen"
+msgstr "Варианты"
 
 #: ../ubuntu-packaging-guide/chroots.rst:57
 msgid ""
@@ -122,6 +133,10 @@ msgid ""
 "TestDrive is a program to automate syncing and running daily ISO images, see "
 "`the TestDrive wiki page`_ for more information."
 msgstr ""
+"Полная версия виртуальных машин могут быть полезны для упаковки и "
+"тестирования программ. TestDrive - это программа позволит  автоматизировать "
+"синхронизацию и выполнение ежедневных ISO-образов, см.`the TestDrive wiki "
+"page`_  чтобы узнать больше."
 
 #: ../ubuntu-packaging-guide/chroots.rst:63
 msgid ""
@@ -137,10 +152,14 @@ msgid ""
 "package on those.  This is useful when you want to compile many packages at "
 "the same time or to overcome bandwidth restraints."
 msgstr ""
+"`Облачные компьютеры EC2 Amazon` _ позволяют нанимать компьютер за несколько "
+"центов в час, можете установить машины Ubuntu в любом из поддерживаемых "
+"версий и пакетов на них. Это полезно, когда вам надо скомпилировать много "
+"пакетов одновременно или преодолеть ограничения пропускной способности."
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
-msgstr "Kommunikation in der Ubuntu-Entwicklung"
+msgstr "Связь в  Ubuntu Development"
 
 #: ../ubuntu-packaging-guide/communication.rst:5
 msgid ""
@@ -148,33 +167,42 @@ msgid ""
 "are made and hundreds of people interact every day, it is important to "
 "communicate effectively."
 msgstr ""
+"В проекте, где тысячи строк кода подвергаются изменениям, принимается "
+"множество решений и сотни людей должны взаимодействовать каждый день, важно "
+"иметь эффективную связь."
 
-# 8dff4e5170734f698bbb51c6807b7dcf
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
-msgstr "Mailinglisten"
+msgstr "Почтовые Рассылки"
 
 #: ../ubuntu-packaging-guide/communication.rst:12
 msgid ""
 "Mailing lists are a very important tool if you want to communicate ideas to "
 "a broader team and make sure that you reach everybody, even across timezones."
 msgstr ""
+"Почтовые рассылки это достаточно эффективный инструмент, если вы хотите "
+"обсудить идеи в команде и убедиться что вы оповестили всех, несмотря на "
+"различия в часовых поясах."
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
-msgstr ""
+msgstr "С точки зрения развития, эти наиболее важные из них:"
 
 #: ../ubuntu-packaging-guide/communication.rst:18
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (announce-"
 "only, the most important development announcements go here)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (только "
+"анонсы, самые важные объявления разработки идут сюда)"
 
 #: ../ubuntu-packaging-guide/communication.rst:20
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (general Ubuntu "
 "development discussion)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel ( главная дискуссия "
+"разработчиков Ubuntu )"
 
 #: ../ubuntu-packaging-guide/communication.rst:22
 msgid ""
@@ -182,28 +210,30 @@ msgid ""
 "get help with packaging)"
 msgstr ""
 
-# bcf8bf4cfd7d44e79964fc504e3dcbcf
 #: ../ubuntu-packaging-guide/communication.rst:27
 msgid "IRC Channels"
-msgstr "IRC-Kanäle"
+msgstr "Каналы IRC"
 
 #: ../ubuntu-packaging-guide/communication.rst:29
 msgid ""
 "For real-time discussions, please connect to irc.freenode.net and join one "
 "or any of these channels:"
 msgstr ""
+"Для онлайн-дискуссии , пожалуйста, подключитесь к irc.freenode.net и "
+"присоединяйтесь к любому из каналов:"
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
-msgstr ""
+msgstr "#ubuntu-devel ( для главной дискуссии разработчиков)"
 
 #: ../ubuntu-packaging-guide/communication.rst:33
 msgid "#ubuntu-motu (for MOTU team discussion and generally getting help)"
 msgstr ""
+"#ubuntu-motu (для MOTU обсуждения в команде и главное получения помощи)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:2
 msgid "Basic Overview of the ``debian/`` Directory"
-msgstr ""
+msgstr "Обзор основных   ``debian/`` Каталогов"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:4
 msgid ""
@@ -215,10 +245,17 @@ msgid ""
 "configure the behavior of the package. Some of these files are discussed in "
 "this article, but this is not meant to be a complete list."
 msgstr ""
+"Эта статья кратко объяснит различные файлы, важные для расфасовки пакетов "
+"Ubuntu, которые содержатся в ``debian / `` каталоге. Самыми важными из них "
+"является ``журнал изменений``, ``управление``, ``авторское право``, и "
+"``правила``. Они требуются для всех пакетов. Много дополнительных файлов в "
+"``debian / `` могут использоваться, чтобы настроить и сконфигурировать "
+"поведение пакета. Некоторые из этих файлов обсуждены в этой статье, но это "
+"не значит  что они в полном списке."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:13
 msgid "The changelog"
-msgstr ""
+msgstr "Журнал изменений"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:15
 msgid ""
@@ -229,6 +266,13 @@ msgid ""
 "the same name and email address in ``changelog`` as you have in your key. "
 "The following is a template ``changelog``::"
 msgstr ""
+"Этот файл, как следует из  названия, это список изменений, внесенных в "
+"каждую версию. Он имеет определенный формат, который дает имя пакета, "
+"версию, распределения, изменения и кто вносил изменения в данное время. Если "
+"у вас есть GPG ключ (см. :: документа: `Getting set up` </ getting-set-up "
+"/.>), Удостоверьтесь, что вы  используете те же имя и адрес электронной "
+"почты в ``Журнале изменений `` что и в ключе. Ниже приведен шаблон ``Журнал "
+"изменений`` ::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:31
 msgid ""
@@ -237,22 +281,30 @@ msgid ""
 "For convenience, the command ``dch`` may be used to edit changelog. It will "
 "update the date automatically."
 msgstr ""
+"Формат (особенно даты) важен. Дата должна быть в: rfc: `5322` формата, "
+"которые могут быть получены используя команду ``дата-R``. Для удобства "
+"команда ``dch`` может использоваться, чтобы отредактировать журнал "
+"изменений. Это обновит дату автоматически."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:36
 msgid ""
 "Minor bullet points are indicated by a dash \"-\", while major points use an "
 "asterisk \"*\"."
 msgstr ""
+"Незначительные пункты маркированного списка обозначены тире \"-\", в то "
+"время как важные пункты используют звездочку \"*\"."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:39
 msgid ""
 "If you are packaging from scratch, ``dch --create`` (``dch`` is in the "
 "``devscripts`` package) will create a standard ``debian/changelog`` for you."
 msgstr ""
+"Если упаковываете с нуля, ``dch - create`` (``dch``, находится в "
+"``devscripts`` пакет), создаст стандарт ``debian/changelog`` для вас."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
-msgstr ""
+msgstr "Вот пример файла ``журнала изменений`` для приветствия::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:52
 msgid ""
@@ -260,6 +312,10 @@ msgid ""
 "distro revision, used so that the packaging can be updated (to fix bugs for "
 "example) with new uploads within the same source release version."
 msgstr ""
+"Обратите внимание, что версия имеет ``-0ubuntu1`` добавленный к нему, это - "
+"distro версия, используемая так, чтобы упаковка могла быть обновлена (чтобы "
+"исправить ошибки, например) с новыми закачками в той же исходной версии "
+"выпуска."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:56
 msgid ""
@@ -278,10 +334,13 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
 "of the Debian Policy Manual."
 msgstr ""
+"Для получения дополнительной информации см. `раздел журнала изменений "
+"(Раздел 4.4) <http: www.debian.org=\"\" doc=\"\" debian-policy=\"\" ch-"
+"source.html#s-dpkgchangelog=\"\">` _ Руководства Политики Debian."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
-msgstr ""
+msgstr "Файл управления"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:72
 msgid ""
@@ -289,11 +348,14 @@ msgid ""
 "as ``apt-get``, ``synaptic``, and ``adept``) uses, build-time dependencies, "
 "maintainer information, and much more."
 msgstr ""
+"Файл ``управление`` содержит информацию, что диспетчер пакетов (такой "
+"как``apt-get``, ``synaptic``, and ``adept``), используется, строит временные "
+"зависимости, обслуживающую информацию, и многое другое."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:76
 msgid ""
 "For the Ubuntu ``hello`` package, the ``control`` file looks something like::"
-msgstr ""
+msgstr "Для Ubuntu ``hello`` пакет файл ``control`` выглядит примерно так::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:99
 msgid ""
@@ -303,6 +365,11 @@ msgid ""
 "the version of Debian Policy that the package complies with, the location of "
 "the packaging version control repository, and the upstream home page."
 msgstr ""
+"Первый абзац описывает исходный пакет включая список пакетов, требуемых для "
+"создания пакет из источника в поле ``Build-Depends``. Также содержит "
+"некоторую  meta-информацию, такую как имя специалиста по обслуживанию, "
+"версия Политики Debian, что пакет соответствует расположению репозитария "
+"управления версиями упаковки и домашней страницы."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:106
 msgid ""
@@ -317,10 +384,21 @@ msgid ""
 "For further information, see the `Debian Maintainer Field spec "
 "<https://wiki.ubuntu.com/DebianMaintainerField>`_ on the Ubuntu wiki."
 msgstr ""
+"Отметим, что в Ubuntu, мы устанавливаем поле ``Maintainer`` в общий адрес, "
+"потому что любой может изменить любой пакет (в отличие от Debian, где "
+"изменение пакетов, как правило, ограничен для каждого или команды). Пакеты в "
+"Ubuntu как правило, должны иметь поле ``Maintainer`` установленное в  "
+"``Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>``.  Если  поле "
+"Maintainer изменяется, старое значение должно быть сохранено в  ``XSBC-"
+"Original-Maintainer``. Это может быть сделано автоматически с  ``update-"
+"maintainer``  сценарием, доступным в пакете  ``ubuntu-dev-tools``. Для "
+"получения дополнительной информации см.  `Debian Maintainer Field spec "
+"<https://wiki.ubuntu.com/DebianMaintainerField>`_ на  wiki-странице Ubuntu."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:118
 msgid "Each additional paragraph describes a binary package to be built."
 msgstr ""
+"Каждый дополнительный абзац описывает бинарный пакет, который будет создан."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:120
 msgid ""
@@ -328,11 +406,13 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the "
 "Debian Policy Manual."
 msgstr ""
+"Для получения дополнительной информации см. `раздел файла управления (Глава "
+"5) <http: www.debian.org=\"\" doc=\"\" debian-policy=\"\" ch-"
+"controlfields.html=\"\">` _ Руководства Политики Debian."
 
-# 870ce0ac216c4fd8a10aa642d5a8ee12
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:126
 msgid "The copyright file"
-msgstr "Die Copyright-Datei"
+msgstr "Файл авторских прав"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
 msgid ""
@@ -351,6 +431,11 @@ msgid ""
 "Copyright line with the year and copyright holder, and the text of the "
 "copyright itself. An example template would be::"
 msgstr ""
+"Как правило, информацию об авторских правах можно найти в файле ``COPYING`` "
+"в исходном каталоге программы. Этот файл должен включать такую ​​информацию, "
+"как имена автора и упаковщика, URL, из которого пришли источник, значок "
+"копирайта с соответствующим годом и владельцем авторских прав, а так же "
+"текстом самого авторского права. Шаблон для примера::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:176
 msgid ""
@@ -358,10 +443,13 @@ msgid ""
 "<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ "
 "format. You are encouraged to use this format as well."
 msgstr ""
+"Этот пример следует за форматом  `Machine-readable debian/copyright "
+"<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_  Мы "
+"также рекомендуем вам использовать этот формат."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:182
 msgid "The rules file"
-msgstr ""
+msgstr "Файл с правилами"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:184
 msgid ""
@@ -377,6 +465,8 @@ msgid ""
 "Here is a simplified version of the rules file created by ``dh_make`` (which "
 "can be found in the ``dh-make`` package)::"
 msgstr ""
+"Вот упрощенная версия файла правил, созданная ``dh_make`` (который можно  "
+"найти в  ``dh-make`` пакете) ::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:204
 msgid ""
@@ -408,6 +498,10 @@ msgid ""
 "which commands have already been run, for which packages, and skip running "
 "those commands again."
 msgstr ""
+"Каждая debhelper команда запишет, когда она будет успешно выполнена в "
+"``debian/package.debhelper.log``. (Который удаляет dh_clean.) Таким образом  "
+"dh может сказать, какие команды были уже выполнены и для каких пакетов, что "
+"помогает избежать повторного выполнения этих команд."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:227
 msgid ""
@@ -435,20 +529,21 @@ msgid ""
 "the Debian Policy Manual."
 msgstr ""
 
-# 909152843c7c41ffa14664f13cb0e23f
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:247
 msgid "Additional Files"
-msgstr "Zusätzliche Dateien"
+msgstr "Дополнительные файлы"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:250
 msgid "The install file"
-msgstr ""
+msgstr "Установочные файлы"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:252
 msgid ""
 "The ``install`` file is used by ``dh_install`` to install files into the "
 "binary package. It has two standard use cases:"
 msgstr ""
+"Установочные файлы используются  ``dh_install`` для установки файлов в "
+"бинарный пакет. Они имеют два стандартных варианта использования:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:255
 msgid ""
@@ -460,6 +555,7 @@ msgstr ""
 msgid ""
 "Splitting a single large source package into multiple binary packages."
 msgstr ""
+"Разделение одного большого пакета источника на несколько бинарных пакетов."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:258
 msgid ""
@@ -505,7 +601,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:298
 msgid "The watch file"
-msgstr ""
+msgstr "Просмотр файла"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:300
 msgid ""
@@ -538,10 +634,9 @@ msgid ""
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 msgstr ""
 
-# faa634aa8992448d86ad70c8669ceee1
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:331
 msgid "The source/format file"
-msgstr "Die Datei source/format"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
 msgid ""
@@ -610,7 +705,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:366
 msgid "Additional Resources"
-msgstr "Weiterführende Quellen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:368
 msgid ""
@@ -630,13 +725,15 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:6
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:9
 msgid "Introduction"
-msgstr "Einleitung"
+msgstr "Вступление"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:8
 msgid ""
 "If you followed the instructions to :doc:`get set up with Ubuntu "
 "Development<./getting-set-up>`, you should be all set and ready to go."
 msgstr ""
+"Если вы будете следовать инструкции:doc:`get set up with Ubuntu "
+"Development<./getting-set-up>`, всё будет готово к работе."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:13
 msgid ""
@@ -646,10 +743,15 @@ msgid ""
 "and merged. In this guide we will go through all the necessary steps one by "
 "one."
 msgstr ""
+"Как вы можете видеть на картинке выше, нет никаких сюрпризов в процессе "
+"исправления ошибок в Ubuntu: вы нашли проблему, получаете код, исправляете "
+"его, тестируете , отправляете в Launchpad и просите,чтобы его пересмотрели и "
+"объединили. В этом руководстве мы пройдем через все необходимые шаги, один "
+"за другим."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:20
 msgid "Finding the problem"
-msgstr ""
+msgstr "Найдена проблема"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:22
 msgid ""
@@ -668,7 +770,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:35
 msgid "Figuring out what to fix"
-msgstr ""
+msgstr "Выясните, что нужно исправить"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:37
 msgid ""
@@ -687,7 +789,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:48
 msgid "This would print out::"
-msgstr ""
+msgstr "Это будет напечатано::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:52
 msgid ""
@@ -697,10 +799,15 @@ msgid ""
 "build multiple different binary packages.  To find the source package for a "
 "particular binary package, type::"
 msgstr ""
+"Обратите внимание на то, что часть, предшествующая двоеточию, является "
+"двоичным именем пакета. Часто имеет место, что у исходного пакета и "
+"двоичного пакета будут различные имена. Так часто бывает, когда один "
+"исходный пакет используется, чтобы создать много различных бинарных пакеты. "
+"Чтобы найти исходный пакет для определенного бинарного пакета, введите::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:64
 msgid "Getting the code"
-msgstr ""
+msgstr "Получите код"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:66
 msgid ""
@@ -1167,7 +1274,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid "About Launchpad"
-msgstr "Über Launchpad"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:171
 msgid ""
@@ -1347,7 +1454,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:9
 msgid "Ubuntu Packaging Guide"
-msgstr "Ubuntu Packaging Handbuch"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
@@ -1390,15 +1497,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:33
 msgid "Articles"
-msgstr "Artikel"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:48
 msgid "Knowledge Base"
-msgstr "Wissensdatenbank"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
-msgstr "Einführung in die Ubuntu-Entwicklung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:5
 msgid ""
@@ -1571,7 +1678,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:3
 msgid "KDE Packaging"
-msgstr "KDE Paketierung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:5
 msgid ""
@@ -1608,7 +1715,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:27
 msgid "debian/rules"
-msgstr "debian/rules"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:29
 msgid ""
@@ -1634,7 +1741,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:47
 msgid "Translations"
-msgstr "Übersetzungen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:49
 msgid ""
@@ -1742,7 +1849,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:34
 msgid "An Example"
-msgstr "Ein Beispiel"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:36
 msgid "We will use libnova as an example::"
@@ -1892,7 +1999,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
-msgstr "Weiterführende Literatur"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:152
 msgid ""
@@ -2105,7 +2212,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:150
 msgid "Next Steps"
-msgstr "Nächste Schritte"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:152
 msgid ""
@@ -2334,9 +2441,6 @@ msgid ""
 "https://launchpad.net/ubuntu/+archive/primary/+files/kamoso_2.0.2.orig.tar.bz"
 "2"
 msgstr ""
-"$ bzr merge-upstream --version 2.0.2 "
-"https://launchpad.net/ubuntu/+archive/primary/+files/kamoso_2.0.2.orig.tar.bz"
-"2"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:120
 msgid "Then apply the patches one at a time to check for problems::"
@@ -2906,7 +3010,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:91
 msgid "Bazaar"
-msgstr "Bazaar"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:93
 msgid ""
@@ -3254,7 +3358,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:31
 msgid "Bootstrapping"
-msgstr "Bootstrapping"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:33
 msgid ""
@@ -3352,7 +3456,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:117
 msgid "pkgme"
-msgstr "pkgme"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:119
 msgid ""
@@ -3599,7 +3703,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:156
 msgid "edit-patch"
-msgstr "edit-patch"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:158
 msgid ""
@@ -3903,7 +4007,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:103
 msgid "Canceling an upload"
-msgstr "Einen Upload abbrechen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:105
 msgid ""
