@@ -41,7 +41,7 @@ Building
 The power of Sphinx is that it can generate documentation in many formats.
 Running 'make all' will generate the guide in html, dirhtml, singlehtml, pickle,
 json, htmlhelp, qthelp, devhelp, epub, latex, latexpdf, text, and man formats.
-They will be outputted to the '_build' directory.
+They will be written to the '_build' directory.
 
 Not all of these formats are important to us. You can build an individual
 format with, for example, 'make html'. Run 'make help' for a list of all
