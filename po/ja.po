@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-08-29 04:00+0000\n"
-"Last-Translator: Kentaro Kazuhama <kazken3@gmail.com>\n"
+"PO-Revision-Date: 2012-08-30 03:46+0000\n"
+"Last-Translator: Mitsuya Shibata <mty.shibata@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-29 05:19+0000\n"
+"X-Launchpad-Export-Date: 2012-08-30 05:21+0000\n"
 "X-Generator: Launchpad (build 15864)\n"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
@@ -121,6 +121,10 @@ msgid ""
 "building packages but takes some more setup compared to PBuilder.  See `the "
 "Security Team Build Environment wiki page`_ for a full explanation."
 msgstr ""
+"SBuild は PBuilder "
+"と似ており、テストパッケージをビルドするための環境を作成するためのシステムです。パッケージをビルドするのにLunchpadで使われているものに似ていますが"
+"、PBuilder と比べていくらか設定を行う必要があります。完全な説明は  `the Security Team Build Environment "
+"wiki page`_  を参照してください。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:59
 msgid ""
@@ -128,6 +132,8 @@ msgid ""
 "TestDrive is a program to automate syncing and running daily ISO images, see "
 "`the TestDrive wiki page`_ for more information."
 msgstr ""
+"完全な仮想マシンはパッケージの作成やプログラムのテストに便利となるでしょう。TestDrive は Daily ISO "
+"イメージを自動的に同期し、実行するプログラムです。詳しい説明は `TestDrive wiki page`_ を参照してください。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:63
 msgid ""
@@ -135,6 +141,8 @@ msgid ""
 "Copy C10shell from /usr/share/doc/pbuilder/examples into a directory and use "
 "the --hookdir= argument to point to it."
 msgstr ""
+"pbuilder をビルド失敗時に一時停止するよう設定することもできます。/usr/share/doc/pbuilder/examples から "
+"C10shell をディレクトリーにコピーし、 --hookdir= 引数にそれを渡してください。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:67
 msgid ""
@@ -154,6 +162,8 @@ msgid ""
 "are made and hundreds of people interact every day, it is important to "
 "communicate effectively."
 msgstr ""
+"何千行ものコードが変更され、多くの決定がされ、何百人もの人々が毎日互いに影響しあっているようなプロジェクトでは、効果的にコミュニケーションを取ることが重要"
+"になります。"
 
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
@@ -163,7 +173,7 @@ msgstr "メーリングリスト"
 msgid ""
 "Mailing lists are a very important tool if you want to communicate ideas to "
 "a broader team and make sure that you reach everybody, even across timezones."
-msgstr ""
+msgstr "タイムゾーンを超えて、幅広いチームとアイディアを話し合ったり、皆に確かめたいことがあるなら、メーリングリストは大変重要なツールです。"
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
@@ -213,7 +223,7 @@ msgstr "#ubuntu-motu (MOTU チームの議論ならびに一般的なヘルプ)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:2
 msgid "Basic Overview of the ``debian/`` Directory"
-msgstr ""
+msgstr "``debian/`` ディレクトリに関する基本概要"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:4
 msgid ""
@@ -225,10 +235,16 @@ msgid ""
 "configure the behavior of the package. Some of these files are discussed in "
 "this article, but this is not meant to be a complete list."
 msgstr ""
+"この記事では、Ubuntuパッケージのパッケージングの際に重要な、``debian/`` "
+"ディレクトリに含まれるファイルについて簡単に説明します。最も重要なファイルは、 "
+"``changelog``、``control``、``copyright``、``rules`` "
+"です。これらのファイルは、すべてのパッケージで必須です。``debian/`` "
+"にあるいくつかの追加ファイルは、パッケージの挙動をカスタマイズしたり設定するために利用されているはずです。これらのファイルの一部は、この記事で述べますが、"
+"完全なリストであることを意図したものではありません。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:13
 msgid "The changelog"
-msgstr ""
+msgstr "changelog (変更履歴)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:15
 msgid ""
@@ -247,18 +263,22 @@ msgid ""
 "For convenience, the command ``dch`` may be used to edit changelog. It will "
 "update the date automatically."
 msgstr ""
+"書式（特に日付）が重要です。日付は :rfc:`5332` 形式に準じ、 ``date -R`` コマンドで取得できます。 changelog "
+"を編集する場合は、 ``dch`` コマンドを使うと便利でしょう。このコマンドは、自動的に日付を更新してくれます。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:36
 msgid ""
 "Minor bullet points are indicated by a dash \"-\", while major points use an "
 "asterisk \"*\"."
-msgstr ""
+msgstr "箇条書きの小項目にはダッシュ \"-\" を、大項目にはアスタリスク \"*\" を使います。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:39
 msgid ""
 "If you are packaging from scratch, ``dch --create`` (``dch`` is in the "
 "``devscripts`` package) will create a standard ``debian/changelog`` for you."
 msgstr ""
+"一からパッケージを作る場合は、 ``dch --create`` （``dch`` は ``devscripts`` "
+"パッケージにあります）を使うと、標準的な ``debian/changelog`` を作成できます。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
@@ -288,6 +308,9 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
 "of the Debian Policy Manual."
 msgstr ""
+"詳しいことは Debian ポリシーマニュアルの `changelog section (Section 4.4) "
+"<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
+"を参考にしてください。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
@@ -305,7 +328,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:76
 msgid ""
 "For the Ubuntu ``hello`` package, the ``control`` file looks something like::"
-msgstr ""
+msgstr "Ubuntu の ``hello`` パッケージの場合、 ``control`` ファイルは次のようになっています::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:99
 msgid ""
@@ -343,7 +366,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:126
 msgid "The copyright file"
-msgstr ""
+msgstr "copyrightファイル"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
 msgid ""
@@ -362,6 +385,9 @@ msgid ""
 "Copyright line with the year and copyright holder, and the text of the "
 "copyright itself. An example template would be::"
 msgstr ""
+"一般的に著作権情報は、そのプログラムのソースディレクトリーの ``COPYING`` "
+"ファイルに記載されています。このファイルには、作者とパッケージ作成者の名前、ソースコードを取得した URL 、年と著作権保持者を記述した "
+"Copyright マークの行、そして権利に関する文章そのものが含まれている必要があります。以下はその例です::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:176
 msgid ""
@@ -372,7 +398,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:182
 msgid "The rules file"
-msgstr ""
+msgstr "rulesファイル"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:184
 msgid ""
@@ -387,7 +413,7 @@ msgstr ""
 msgid ""
 "Here is a simplified version of the rules file created by ``dh_make`` (which "
 "can be found in the ``dh-make`` package)::"
-msgstr ""
+msgstr "``dh_make`` （``dh-make`` パッケージに存在します）で作られた単純な rules ファイルは次のとおりです::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:204
 msgid ""
@@ -448,7 +474,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:247
 msgid "Additional Files"
-msgstr ""
+msgstr "その他のファイル"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:250
 msgid "The install file"
@@ -459,17 +485,19 @@ msgid ""
 "The ``install`` file is used by ``dh_install`` to install files into the "
 "binary package. It has two standard use cases:"
 msgstr ""
+"``install`` ファイルは、 ``dh_install`` "
+"に対してバイナリパッケージ内へインストールするファイルを指定するために使われます。二種類の標準的な使い方が存在します:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:255
 msgid ""
 "To install files into your package that are not handled by the upstream "
 "build system."
-msgstr ""
+msgstr "アップストリームのビルドシステムでは設定されていないファイルをパッケージ内へインストールする。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:256
 msgid ""
 "Splitting a single large source package into multiple binary packages."
-msgstr ""
+msgstr "一つの巨大なソースパッケージを複数のバイナリパッケージに分割する。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:258
 msgid ""
@@ -515,7 +543,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:298
 msgid "The watch file"
-msgstr ""
+msgstr "watchファイル"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:300
 msgid ""
@@ -550,21 +578,21 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:331
 msgid "The source/format file"
-msgstr ""
+msgstr "source/formatファイル"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
 msgid ""
 "This file indicates the format of the source package. It should contain a "
 "single line indicating the desired format:"
-msgstr ""
+msgstr "このファイルはソースパッケージの書式を指定します。使用したい書式を指定する一行のみを記述します:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:336
 msgid "``3.0 (native)`` for Debian native packages (no upstream version)"
-msgstr ""
+msgstr "``3.0 (native)`` Debian ネイティブなパッケージ（アップストリームが存在しない）"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:338
 msgid "``3.0 (quilt)`` for packages with a separate upstream tarball"
-msgstr ""
+msgstr "``3.0 (quilt)`` 別途、アップストリームの tar ボールが存在するパッケージ"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:340
 msgid "``1.0`` for packages wishing to explicitly declare the default format"
@@ -591,12 +619,12 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:352
 msgid "Support for multiple upstream tarballs"
-msgstr ""
+msgstr "複数のアップストリーム tarball のサポート"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:354
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
-msgstr ""
+msgstr "debian ディレクトリを分割するために、アップストリームの tarball を作り直す必要がなくなった"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:356
 msgid ""
@@ -634,7 +662,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:3
 msgid "Fixing a bug in Ubuntu"
-msgstr ""
+msgstr "Ubuntuでバグを修正する"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:6
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:9

@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-08-23 21:45+0000\n"
-"Last-Translator: Rudinei Weschenfelder <rudinei.ti@gmail.com>\n"
+"PO-Revision-Date: 2012-08-30 04:39+0000\n"
+"Last-Translator: Neliton Pereira Jr. <nelitonpjr@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-28 07:33+0000\n"
+"X-Launchpad-Export-Date: 2012-08-30 05:21+0000\n"
 "X-Generator: Launchpad (build 15864)\n"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
@@ -91,6 +91,8 @@ msgid ""
 "To stop apt and other programs complaining about missing locales you can "
 "install your relevant language pack::"
 msgstr ""
+"Para impedir que o apt e outros programas reclamem de falta de localizações, "
+"você deve instalar o pacote de linguagem relevante para você::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:44
 msgid ""
@@ -151,6 +153,9 @@ msgid ""
 "are made and hundreds of people interact every day, it is important to "
 "communicate effectively."
 msgstr ""
+"Em um projeto aonde milhares de linhas de código são alterados, muitas "
+"decisões são tomadas e centenas de pessoas interagem todos os dias, é "
+"importante se comunicar de forma eficaz."
 
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
@@ -161,6 +166,9 @@ msgid ""
 "Mailing lists are a very important tool if you want to communicate ideas to "
 "a broader team and make sure that you reach everybody, even across timezones."
 msgstr ""
+"As listas de discussão são ferramentas muito importantes, se você quiser "
+"divulgar suas idéias para uma ampla equipe e ter certeza de que você alcance "
+"todos, até mesmo através de fusos horários diferentes."
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
@@ -212,7 +220,7 @@ msgstr "#ubuntu-motu (Time de discussão MOTU e obtenção de ajuda em geral)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:2
 msgid "Basic Overview of the ``debian/`` Directory"
-msgstr ""
+msgstr "Visão básica do diretório ``debian/``"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:4
 msgid ""
@@ -287,6 +295,9 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
 "of the Debian Policy Manual."
 msgstr ""
+"Para mais informações, consulte a  `seção de alterações (Seção 4.4) "
+"<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
+"do Manual de Políticas do Debian."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
@@ -338,6 +349,9 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the "
 "Debian Policy Manual."
 msgstr ""
+"Para mais informações, consulte a  seção `controle de arquivo (Capítulo 5) "
+"<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ do Manual "
+"de políticas do Debian."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:126
 msgid "The copyright file"
@@ -443,6 +457,10 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ of "
 "the Debian Policy Manual."
 msgstr ""
+"Veja em ``/usr/share/doc/debhelper/examples/`` e ``man dh`` para mais "
+"exemplos. Veja também `a seção de regras (Seção 4.9) "
+"<http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ do "
+"Manual de Políticas do Debian."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:247
 msgid "Additional Files"
@@ -457,6 +475,8 @@ msgid ""
 "The ``install`` file is used by ``dh_install`` to install files into the "
 "binary package. It has two standard use cases:"
 msgstr ""
+"O arquivo ``install` é usado por ``dh_install`` para instalar arquivos no "
+"pacote binário. Ele possui dois casos de uso padrão:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:255
 msgid ""
@@ -567,6 +587,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:340
 msgid "``1.0`` for packages wishing to explicitly declare the default format"
 msgstr ""
+"``1.0`` para pacotes que desejam declarar explicitamente o formato padrão"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
 msgid ""
@@ -607,6 +628,8 @@ msgid ""
 "http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
 "concerning the switch to the 3.0 source package formats."
 msgstr ""
+"http://wiki.debian.org/Projects/DebSrc3.0 resume as informações adicionais "
+"sobre a mudança para o formato 3.0 de pacotes fonte."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
 msgid ""
