@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-08-30 15:49+0000\n"
-"Last-Translator: OKANO Takayoshi <Unknown>\n"
+"PO-Revision-Date: 2012-08-31 18:16+0000\n"
+"Last-Translator: Mitsuya Shibata <mty.shibata@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-31 05:06+0000\n"
-"X-Generator: Launchpad (build 15887)\n"
+"X-Launchpad-Export-Date: 2012-09-01 05:21+0000\n"
+"X-Generator: Launchpad (build 15890)\n"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
@@ -270,7 +270,7 @@ msgstr ""
 msgid ""
 "Minor bullet points are indicated by a dash \"-\", while major points use an "
 "asterisk \"*\"."
-msgstr "箇条書きの小項目にはダッシュ \"-\" を、大項目にはアスタリスク \"*\" を使います。"
+msgstr "箇条書きの小項目にはダッシュ\"-\"を、大項目にはアスタリスク\"*\"を使います。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:39
 msgid ""
@@ -290,6 +290,9 @@ msgid ""
 "distro revision, used so that the packaging can be updated (to fix bugs for "
 "example) with new uploads within the same source release version."
 msgstr ""
+"バージョンに ``-0ubuntu1`` "
+"と追加されていることに気づくでしょう。これはディストロリビジョンで、ソースコードのバージョンは同じだけれども、アップロード時に（例えば不具合修正などの）更"
+"新を行ったパッケージに使われます。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:56
 msgid ""
@@ -421,6 +424,8 @@ msgid ""
 "build target that ``debian/rules`` is called with as an argument to "
 "``/usr/bin/dh``, which itself will call all the necessary ``dh_*`` commands."
 msgstr ""
+"このファイルについてもう少し詳しく見ていきましょう。これは ``debian/rules`` を呼び出したすべてのビルドターゲットについて、 必要な "
+"``dh_*`` コマンドを呼び出す ``/usr/bin/dh`` へと引数を渡しています。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:208
 msgid ""
@@ -453,6 +458,9 @@ msgid ""
 "command in the sequence. The ``--until``, ``--before``, ``--after``, and ``--"
 "remaining`` options can override this behavior."
 msgstr ""
+"``dh`` "
+"の実行時にはこのログを調べ、特定のシーケンスに対して最後に記録されたコマンドを探し、その次のコマンドから実行を再開するのです。この振る舞いは、 ``--"
+"until`` 、 ``--before`` 、 ``--after`` 、 ``--remaining`` オプションで変更できます。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:232
 msgid ""
@@ -615,7 +623,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:350
 msgid "Support for additional compression formats: bzip2, lzma and xz"
-msgstr ""
+msgstr "より多くの圧縮形式のサポート: bzip2、lzma、xz"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:352
 msgid "Support for multiple upstream tarballs"
