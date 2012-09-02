@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-08-31 18:16+0000\n"
+"PO-Revision-Date: 2012-09-01 06:19+0000\n"
 "Last-Translator: Mitsuya Shibata <mty.shibata@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-01 05:21+0000\n"
+"X-Launchpad-Export-Date: 2012-09-02 04:49+0000\n"
 "X-Generator: Launchpad (build 15890)\n"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
@@ -27,8 +27,8 @@ msgid ""
 "versions you can create the environment of the other version with a "
 "``chroot``."
 msgstr ""
-"あるバージョンのUbuntuを起動しているのに他のバージョン向けのパッケージの作業を行なう場合は、``chroot``で他のバージョンの環境を作成すること"
-"ができます。"
+"あるバージョンのUbuntuを起動しているのに他のバージョン向けのパッケージの作業を行なう場合は、 ``chroot`` "
+"で他のバージョンの環境を作成することができます。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:9
 msgid ""
@@ -59,7 +59,7 @@ msgid ""
 "If your version of ``debootstrap`` does not know about oneiric you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
-"使用しているバージョンの ``debootstrap`` がOneiricに対応していない場合は、``backports`` "
+"使用しているバージョンの ``debootstrap`` がOneiricに対応していない場合は、 ``backports`` "
 "にあるバージョンにアップグレードしてみてください。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
@@ -99,11 +99,11 @@ msgid ""
 "If you want to run X programs you will need to bind the /tmp directory into "
 "the chroot, from outside the chroot run::"
 msgstr ""
-"Xのプログラムを実行したい場合は、/tmp ディレクトリをchroot内にバインドする必要があります。chrootの外側から実行してください::"
+"Xのプログラムを実行したい場合は、/tmpディレクトリをchroot内にバインドする必要があります。chrootの外側から実行してください::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:50
 msgid "Some programs may need you to bind /dev or /proc."
-msgstr "一部のプログラムは /dev または /proc にバインドする必要があるかもしれません。"
+msgstr "一部のプログラムは/devまたは/procにバインドする必要があるかもしれません。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:52
 msgid ""
@@ -121,10 +121,9 @@ msgid ""
 "building packages but takes some more setup compared to PBuilder.  See `the "
 "Security Team Build Environment wiki page`_ for a full explanation."
 msgstr ""
-"SBuild は PBuilder "
-"と似ており、テストパッケージをビルドするための環境を作成するためのシステムです。パッケージをビルドするのにLaunchpadで使われているものに似ています"
-"が、PBuilder と比べていくらか設定を行う必要があります。完全な説明は  `the Security Team Build Environment "
-"wiki page`_  を参照してください。"
+"SBuildはPBuilderと似ており、テストパッケージをビルドするための環境を作成するためのシステムです。パッケージをビルドするのにLaunchpad"
+"で使われているものに似ていますが、PBuilderと比べていくらか設定を行う必要があります。完全な説明は  `the Security Team "
+"Build Environment wiki page`_  を参照してください。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:59
 msgid ""
@@ -132,8 +131,8 @@ msgid ""
 "TestDrive is a program to automate syncing and running daily ISO images, see "
 "`the TestDrive wiki page`_ for more information."
 msgstr ""
-"完全な仮想マシンはパッケージの作成やプログラムのテストに便利となるでしょう。TestDrive は Daily ISO "
-"イメージを自動的に同期し、実行するプログラムです。詳しい説明は `TestDrive wiki page`_ を参照してください。"
+"完全な仮想マシンはパッケージの作成やプログラムのテストに便利となるでしょう。TestDriveはDaily "
+"ISOイメージを自動的に同期し、実行するプログラムです。詳しい説明は `TestDrive wiki page`_ を参照してください。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:63
 msgid ""
@@ -141,8 +140,8 @@ msgid ""
 "Copy C10shell from /usr/share/doc/pbuilder/examples into a directory and use "
 "the --hookdir= argument to point to it."
 msgstr ""
-"pbuilder をビルド失敗時に一時停止するよう設定することもできます。/usr/share/doc/pbuilder/examples から "
-"C10shell をディレクトリーにコピーし、 --hookdir= 引数にそれを渡してください。"
+"pbuilderをビルド失敗時に一時停止するよう設定することもできます。/usr/share/doc/pbuilder/examplesからC10shel"
+"l をディレクトリにコピーし、--hookdir=引数にそれを渡してください。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:67
 msgid ""
@@ -151,6 +150,9 @@ msgid ""
 "package on those.  This is useful when you want to compile many packages at "
 "the same time or to overcome bandwidth restraints."
 msgstr ""
+"一時間に数セント支払うことでコンピューターを使用できるAmazonの `EC2 cloud computers`_ "
+"なら、サポートするすべてのUbuntuマシンを構築し、そこでパッケージを作成できます。処理能力の制約なく、同時にたくさんのパッケージをコンパイルしたい場合"
+"に便利でしょう。"
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
@@ -210,8 +212,7 @@ msgstr "IRCチャンネル"
 msgid ""
 "For real-time discussions, please connect to irc.freenode.net and join one "
 "or any of these channels:"
-msgstr ""
-"リアルタイムで議論を行うには、irc.freenode.net に接続して、これらのチャンネルの一つまたはいずれかに join してください:"
+msgstr "リアルタイムで議論を行うには、irc.freenode.netに接続して、これらのチャンネルの一つまたはいずれかにjoinしてください:"
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
@@ -263,8 +264,9 @@ msgid ""
 "For convenience, the command ``dch`` may be used to edit changelog. It will "
 "update the date automatically."
 msgstr ""
-"書式（特に日付）が重要です。日付は :rfc:`5322` 形式に準じ、 ``date -R`` コマンドで取得できます。 changelog "
-"を編集する場合は、 ``dch`` コマンドを使うと便利でしょう。このコマンドは、自動的に日付を更新してくれます。"
+"書式（特に日付）が重要です。日付は :rfc:`5322` 形式に準じ、 ``date -R`` "
+"コマンドで取得できます。changelogを編集する場合は、 ``dch`` "
+"コマンドを使うと便利でしょう。このコマンドは、自動的に日付を更新してくれます。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:36
 msgid ""
@@ -282,7 +284,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
-msgstr "以下は hello のサンプル ``changelog`` ファイルです::"
+msgstr "以下はhelloのサンプル ``changelog`` ファイルです::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:52
 msgid ""
@@ -311,9 +313,9 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
 "of the Debian Policy Manual."
 msgstr ""
-"詳しいことは Debian ポリシーマニュアルの `changelog section (Section 4.4) "
+"詳細はDebianポリシーマニュアルの `changelog section (Section 4.4) "
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
-"を参考にしてください。"
+"を参照してください。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
@@ -331,7 +333,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:76
 msgid ""
 "For the Ubuntu ``hello`` package, the ``control`` file looks something like::"
-msgstr "Ubuntu の ``hello`` パッケージの場合、 ``control`` ファイルは次のようになっています::"
+msgstr "Ubuntuの ``hello`` パッケージの場合、 ``control`` ファイルは次のようになっています::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:99
 msgid ""
@@ -366,6 +368,8 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the "
 "Debian Policy Manual."
 msgstr ""
+"詳細は、Debianポリシーマニュアルの `control file section (Chapter 5) "
+"<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ を参照してください。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:126
 msgid "The copyright file"
@@ -548,6 +552,9 @@ msgid ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
+"さらに詳細を知りたい場合は、 ``man dh_install`` やDebian新メンテナーガイドの `install file section "
+"(Section 5.11) <http://www.debian.org/doc/manuals/maint-"
+"guide/dother.ja.html#install>`_  を参照してください。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:298
 msgid "The watch file"
@@ -576,6 +583,9 @@ msgid ""
 "(Section 4.11) <http://www.debian.org/doc/debian-policy/ch-source.html#s-"
 "debianwatch>`_ of the Debian Policy Manual."
 msgstr ""
+"詳細については ``man uscan`` やDebianポリシーマニュアルの `watch file section (Section 4.11) "
+"<http://www.debian.org/doc/debian-policy/ch-source.html#s-debianwatch>`_ "
+"を参照してください。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:326
 msgid ""
@@ -583,6 +593,8 @@ msgid ""
 "with upstream see `Ubuntu External Health Status "
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 msgstr ""
+"``watch`` ファイルによって、アップストリームとの同期ができていないことが判明しているパッケージの一覧は、 `Ubuntu External "
+"Health Status <http://qa.ubuntuwire.org/uehs/no_updated.html>`_ を参照してください。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:331
 msgid "The source/format file"
@@ -596,11 +608,11 @@ msgstr "このファイルはソースパッケージの書式を指定します
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:336
 msgid "``3.0 (native)`` for Debian native packages (no upstream version)"
-msgstr "``3.0 (native)`` Debian ネイティブなパッケージ（アップストリームが存在しない）"
+msgstr "``3.0 (native)`` Debianネイティブなパッケージ（アップストリームが存在しない）"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:338
 msgid "``3.0 (quilt)`` for packages with a separate upstream tarball"
-msgstr "``3.0 (quilt)`` 別途、アップストリームの tar ボールが存在するパッケージ"
+msgstr "``3.0 (quilt)`` 別途、アップストリームの tarボールが存在するパッケージ"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:340
 msgid "``1.0`` for packages wishing to explicitly declare the default format"
@@ -627,12 +639,12 @@ msgstr "より多くの圧縮形式のサポート: bzip2、lzma、xz"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:352
 msgid "Support for multiple upstream tarballs"
-msgstr "複数のアップストリーム tarball のサポート"
+msgstr "複数のアップストリームtarボールのサポート"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:354
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
-msgstr "debian ディレクトリを分割するために、アップストリームの tarball を作り直す必要がなくなった"
+msgstr "debianディレクトリを分割するために、アップストリームのtarボールを作り直す必要がなくなった"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:356
 msgid ""
