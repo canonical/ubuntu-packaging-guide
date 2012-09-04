@@ -51,14 +51,14 @@ This command will install the following software:
 * ``gnupg`` -- `GNU Privacy Guard`_ contains tools you will need to create a
   cryptographic key with which you will sign files you want to upload to
   Launchpad.
-* ``pbuilder`` -- a tool to do a reproducible builds of a package in a
+* ``pbuilder`` -- a tool to do reproducible builds of a package in a
   clean and isolated environment.
 * ``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a
   collection of tools that make many packaging tasks easier.
 * ``bzr-builddeb`` (and ``bzr``, a dependency) -- distributed version control
   with Bazaar, a new way of working with packages for Ubuntu that will make it
   easy for many developers to collaborate and work on the same code while
-  keeping it trivial to merge each others work.
+  keeping it trivial to merge each other's work.
 * ``apt-file`` provides an easy way to find the binary package that contains a
   given file.
 
