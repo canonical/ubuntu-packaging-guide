@@ -43,10 +43,10 @@ With Ubuntu Distributed Development all packages in the Ubuntu (and Debian)
 archive are automatically imported into Bazaar branches on our code hosting
 site Launchpad.  Changes can be made directly to these branches in
 incremental steps and by anyone with commit access.  Changes can also be made
-in forked branched and merged back in with Merge Proposals when they are large
+in forked branches and merged back in with Merge Proposals when they are large
 enough to need review or if they are by someone without direct commit access.
 
-UDD branches are all in a standard location so doing a checkout is easy::
+UDD branches are all in a standard location, so doing a checkout is easy::
 
     $ bzr branch ubuntu:kdetoys
 
@@ -71,7 +71,7 @@ Many Ubuntu packages are based on the packages in Debian, UDD also imports the
 Debian package into our branches.  In the *kdetoys* branch above the Debian
 versions from *unstable* are from the merge with blue circles while those from
 *Debian experimental* are from the merge with yellow circles.  Debian
-released are tagged with their version number e.g. ``4:4.2.2-1``.
+releases are tagged with their version number, e.g., ``4:4.2.2-1``.
 
 So from a UDD branch you can see the complete history of changes to the package
 and compare any two versions.  For example, to see the changes between version
