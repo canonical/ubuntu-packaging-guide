@@ -251,3 +251,14 @@ system with more information. This might sometimes take a few minutes.
 .. note:: If the problem is just in Ubuntu, you might want to consider
         ::doc:`Seeking Review and Sponsorship<./udd-sponsorship>` to get fix
         included.
+
+
+Additional considerations
+=========================
+
+If you find a package and find that there are a couple of trivial things you
+can fix at the same time, do it. This will speed up review and inclusion.
+
+If there are multiple big things you want to fix, it might be advisable to 
+send individual patches or merge proposals instead. If there are individual
+bugs filed for the issues already, this makes it even easier.
