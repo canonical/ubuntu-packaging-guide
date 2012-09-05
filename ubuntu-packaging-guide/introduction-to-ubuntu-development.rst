@@ -44,7 +44,7 @@ plan the features of the next releases. Every feature is discussed by its
 stakeholders and a specification is written that contains detailed 
 information about its assumptions, implementation, the necessary changes in 
 other places, how to test it and so on. This is all done in an open and 
-transparent fashion, so even if you can not attend the event in person, you 
+transparent fashion, so even if you cannot attend the event in person, you 
 can participate remotely and listen to a streamcast, chat with attendants and 
 subscribe to changes of specifications, so you are always up to date.
 

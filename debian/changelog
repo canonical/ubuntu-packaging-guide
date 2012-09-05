@@ -3,6 +3,9 @@ ubuntu-packaging-guide (0.2.3) UNRELEASED; urgency=low
   [ Thomas Kluyver ]
   * Improve English in Python packaging page.
 
+  [ Don Kirkby ]
+  * fix a number of typos.
+
   [ Daniel Holbach ]
   * workaround for bug 1043232, disable LANGS, so the build for Japanese
     PDFs is not attempted.

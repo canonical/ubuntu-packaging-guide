@@ -91,7 +91,7 @@ version to act as.  You will generally want to set this to the most
 recent version which is ``8``.
 
 ``control`` contains all the metadata of the package.  The first paragraph
-describes the source package. The second and and following paragraphs describe
+describes the source package. The second and following paragraphs describe
 the binary packages to be built.  We will need to add the packages needed to
 compile the application to ``Build-Depends:``. For ``hello``, make sure that it
 includes at least::
@@ -135,7 +135,7 @@ builds the .deb binary package::
     $ cd ../../
 
 ``bzr builddeb`` is a command to build the package in its current location.
-The ``-us -uc`` tell it there is not need to GPG sign the compile.  The result
+The ``-us -uc`` tell it there is no need to GPG sign the compile.  The result
 will be placed in ``..``.  
 
 You can view the contents of the package with::
