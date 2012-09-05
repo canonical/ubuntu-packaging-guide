@@ -62,8 +62,13 @@ class Package(object):
         complete = []
         for language in languages:
             pofile = polib.pofile(language)
-            if pofile.percent_translated() >= PERCENTAGE:
+            percentage = pofile.percent_translated()
+            print os.path.basename(language), ("(%s" % percentage)+"%),",
+            if percentage >= PERCENTAGE:
+                print "adding."
                 complete += [ language ]
+            else:
+                print "NOT adding."
         return complete
 
     def get_semi_complete_languages(self):
@@ -73,8 +78,8 @@ class Package(object):
     def get_available_binary_packages(self):
         BLACKLIST = [u'ubuntu-packaging-guide']     # metapackages and stuff
         self.stanzas = deb822.Packages.iter_paragraphs(open(self.control_file))
-        return filter(lambda a: a.has_key("Package") and \
-                                a["Package"] not in BLACKLIST, self.stanzas)
+        return filter(lambda a: "Package" in a.keys() and \
+                                a.get("Package") not in BLACKLIST, self.stanzas)
 
     def get_available_binary_package_names(self):
         return map(lambda a: a["Package"], 
