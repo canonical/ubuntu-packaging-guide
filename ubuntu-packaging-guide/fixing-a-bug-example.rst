@@ -114,7 +114,7 @@ can easily get it by running::
         bzr branch ubuntu:bumprace
 
 
-If you read :doc:`the Debian Directory Overview<./debian-dir-overview>` before
+If you read :doc:`the Debian Directory Overview<./debian-dir-overview>` before,
 you might remember, that the homepage for a package is specified in the first 
 part of ``debian/control``, the section which starts with ``Source:``.
 
@@ -187,7 +187,7 @@ A few additional considerations:
  * If you have a reference to a Launchpad bug which is fixed by the issue, add
    (``LP: #<bug number>``) to the changelog entry line, ie: ``(LP: #123456)``.
  * If you want to get your fix included in Debian, for a Debian bug the 
-   syntax is ``(Closes: <bug number>)``, ie: ``(Closes: 123456)``.
+   syntax is ``(Closes: #<bug number>)``, ie: ``(Closes: #123456)``.
  * If it is a reference to an upstream or Debian bug or a mailing list 
    discussion, mention it as well.
  * Try to wrap your lines at 80 characters.
@@ -199,7 +199,7 @@ A few additional considerations:
 Testing the fix
 ===============
 
-To test the fix, you need to ::doc:`have your to development environment set 
+To test the fix, you need to :doc:`have your development environment set 
 up<./getting-set-up>`, then to build the package, install it and verify the 
 problem is solved. In our case this would be:: 
 
