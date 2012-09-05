@@ -186,6 +186,8 @@ A few additional considerations:
 
  * If you have a reference to a Launchpad bug which is fixed by the issue, add
    (``LP: #<bug number>``) to the changelog entry line, ie: ``(LP: #123456)``.
+ * If you want to get your fix included in Debian, for a Debian bug the 
+   syntax is ``(Closes: <bug number>)``, ie: ``(Closes: 123456)``.
  * If it is a reference to an upstream or Debian bug or a mailing list 
    discussion, mention it as well.
  * Try to wrap your lines at 80 characters.
