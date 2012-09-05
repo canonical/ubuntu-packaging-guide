@@ -38,8 +38,9 @@ Articles
    introduction-to-ubuntu-development
    getting-set-up
    udd-intro
-   packaging-new-software
    fixing-a-bug
+   fixing-a-bug-example
+   packaging-new-software
    security-and-stable-release-updates
    patches-to-packages
    libraries

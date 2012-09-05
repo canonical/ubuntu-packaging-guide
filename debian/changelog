@@ -12,6 +12,7 @@ ubuntu-packaging-guide (0.2.3) UNRELEASED; urgency=low
   * Fix add-languages-script as the deb822 API seems to have changed. Also
     print out some statistics about translations and if they are considered
     ready for addition or not.
+  * Add a tutorial with a specific example of how to fix a bug. (LP: #1045396)
 
  -- Benjamin Drung <bdrung@debian.org>  Wed, 05 Sep 2012 16:07:02 +0200
 
