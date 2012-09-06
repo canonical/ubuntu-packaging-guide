@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (0.2.3) UNRELEASED; urgency=low
+ubuntu-packaging-guide (0.2.3) unstable; urgency=low
 
   [ Thomas Kluyver ]
   * Improve English in Python packaging page.
@@ -14,7 +14,7 @@ ubuntu-packaging-guide (0.2.3) UNRELEASED; urgency=low
     ready for addition or not.
   * Add a tutorial with a specific example of how to fix a bug. (LP: #1045396)
 
- -- Benjamin Drung <bdrung@debian.org>  Wed, 05 Sep 2012 16:07:02 +0200
+ -- Benjamin Drung <bdrung@debian.org>  Thu, 06 Sep 2012 13:20:35 +0200
 
 ubuntu-packaging-guide (0.2.2) quantal; urgency=low
 
