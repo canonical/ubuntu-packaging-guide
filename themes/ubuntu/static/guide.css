@@ -7,10 +7,6 @@
     margin-bottom: 5px;
 }
 
-.section ul {
+.section ul, .highlight {
     margin-bottom: 10px;
-}
-
-.highlight {
-    padding-bottom: 10px;
 }
