@@ -6,7 +6,7 @@ Our packaging follows Debian’s `Python policy`_. We will use the `python-markd
 
 There are two types of Python packages — *modules* and *apps*.
 
-At the time of writing, Ubuntu has two incompatible versions of Python — *2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python 2.x version, and ``/usr/bin/python3`` to a default Python 3.x version. Python modules should be built against all supported Python versions.
+At the time of writing, Ubuntu has two incompatible versions of Python — *2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python 2.x version, and ``/usr/bin/python3`` — to a default Python 3.x version. Python modules should be built against all supported Python versions.
 
 If you are going to package a new Python module, you might find the ``py2dsc`` tool useful (available in `python-stdeb`_ package).
 
