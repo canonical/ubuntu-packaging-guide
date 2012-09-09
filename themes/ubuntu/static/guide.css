@@ -19,9 +19,10 @@
 .admonition {
     padding-top: 5px;
     padding-left: 10px;
+    padding-right: 5px;
     margin-bottom: 10px;
     border: 1px solid #da8;
-    background-color: #efd;
+    background-color: #ffc;
     border-radius: 3px;
 }
 
