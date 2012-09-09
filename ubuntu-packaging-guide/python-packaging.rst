@@ -117,11 +117,12 @@ Because docs also contain source ``.txt`` files, we’ll also tell ``dh_compress
 Checking for packaging mistakes
 -------------------------------
 
-Along with ``lintian``, there is a special tool for checking Python packages — ``lintian4py``. It is available in the `lintian4python`_ package. For example, this command invokes both ``lintian`` and ``lintian4py`` and checks source and binary packages:
+Along with ``lintian``, there is a special tool for checking Python packages — ``lintian4py``. It is available in the `lintian4python`_ package. For example, these two commands invoke both versions of ``lintian`` and check source and binary packages:
 
 ::
 
-  lintian{,4py} -EI --pedantic *.dsc *.deb
+  lintian -EI --pedantic *.dsc *.deb
+  lintian4py -EI --pedantic *.dsc *.deb
 
 Here, ``-EI`` option is used to enable experimental and informational tags.
 
