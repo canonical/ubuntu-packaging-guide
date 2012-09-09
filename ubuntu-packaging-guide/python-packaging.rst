@@ -37,7 +37,7 @@ Here’s our ``debian/rules`` file (with annotations):
 
 .. code-block:: makefile
 
-   # These command build the list of supported Python 3 versions
+   # These commands build the list of supported Python 3 versions
    # The last version should be just “python3” so that the scripts
    # get a correct shebang.
    # Use just “PYTHON3 := $(shell py3versions -r)” if your package
