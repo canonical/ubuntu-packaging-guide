@@ -7,10 +7,26 @@
     margin-bottom: 5px;
 }
 
-.section ul {
+.section ul, .highlight {
+    margin-top: 5px;
     margin-bottom: 10px;
 }
 
-.highlight {
-    padding-bottom: 10px;
+.section h3 {
+    font-weight: bold;
+}
+
+.admonition {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #da8;
+    background-color: #ffc;
+    border-radius: 3px;
+}
+
+.admonition-title {
+    font-weight: bold;
+    font-size: 110%;
 }

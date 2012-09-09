@@ -1,3 +1,13 @@
+ubuntu-packaging-guide (0.2.4) UNRELEASED; urgency=low
+
+  [ Dmitry Shachnev ]
+  * Make sure that packages built with example debian/rules from
+    our "Python packaging" article get a correct shebang, thanks Colin
+    Watson (LP: #1047457)
+  * Add missing CSS bits for headers and admonitions (LP: #1045386)
+
+ -- Dmitry Shachnev <mitya57@gmail.com>  Sat, 08 Sep 2012 18:37:12 +0400
+
 ubuntu-packaging-guide (0.2.3) unstable; urgency=low
 
   [ Thomas Kluyver ]
