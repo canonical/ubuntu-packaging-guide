@@ -1,5 +1,5 @@
 ===========================================
-Merging - Updating from Debian and Upstream
+Merging — Updating from Debian and Upstream
 ===========================================
 
 Merging is one of the strengths of Bazaar, and something we do often in Ubuntu
