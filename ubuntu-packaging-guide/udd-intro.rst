@@ -1,5 +1,5 @@
 ===================================================
-Ubuntu Distributed Development - Introduction
+Ubuntu Distributed Development — Introduction
 ===================================================
 
 This guide focuses on packaging using the *Ubuntu Distributed Development* (UDD)

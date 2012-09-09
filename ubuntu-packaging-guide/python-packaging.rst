@@ -6,7 +6,7 @@ Our packaging follows Debian’s `Python policy`_. We will use the `python-markd
 
 There are two types of Python packages — *modules* and *apps*.
 
-At the time of writing, Ubuntu has two incompatible versions of Python — *2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python 2.x version, and ``/usr/bin/python3`` to a default Python 3.x version. Python modules should be built against all supported Python versions.
+At the time of writing, Ubuntu has two incompatible versions of Python — *2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python 2.x version, and ``/usr/bin/python3`` — to a default Python 3.x version. Python modules should be built against all supported Python versions.
 
 If you are going to package a new Python module, you might find the ``py2dsc`` tool useful (available in `python-stdeb`_ package).
 
@@ -37,8 +37,14 @@ Here’s our ``debian/rules`` file (with annotations):
 
 .. code-block:: makefile
 
-   # This command builds the list of supported Python 3 versions
-   PYTHON3=$(shell py3versions -r)
+   # These commands build the list of supported Python 3 versions
+   # The last version should be just “python3” so that the scripts
+   # get a correct shebang.
+   # Use just “PYTHON3 := $(shell py3versions -r)” if your package
+   # doesn’t contain scripts
+   PY3REQUESTED := $(shell py3versions -r)
+   PY3DEFAULT := $(shell py3versions -d)
+   PYTHON3 := $(filter-out $(PY3DEFAULT),$(PY3REQUESTED)) python3
    
    %:
        # Adding the required helpers
@@ -111,11 +117,12 @@ Because docs also contain source ``.txt`` files, we’ll also tell ``dh_compress
 Checking for packaging mistakes
 -------------------------------
 
-Along with ``lintian``, there is a special tool for checking Python packages — ``lintian4py``. It is available in the `lintian4python`_ package. For example, this command invokes both ``lintian`` and ``lintian4py`` and checks source and binary packages:
+Along with ``lintian``, there is a special tool for checking Python packages — ``lintian4py``. It is available in the `lintian4python`_ package. For example, these two commands invoke both versions of ``lintian`` and check source and binary packages:
 
 ::
 
-  lintian{,4py} -EI --pedantic *.dsc *.deb
+  lintian -EI --pedantic *.dsc *.deb
+  lintian4py -EI --pedantic *.dsc *.deb
 
 Here, ``-EI`` option is used to enable experimental and informational tags.
 
