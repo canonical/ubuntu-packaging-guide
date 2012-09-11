@@ -251,8 +251,8 @@ If everything went well you should get a mail from Debian's bug tracking
 system with more information. This might sometimes take a few minutes.
 
 .. note:: If the problem is just in Ubuntu, you might want to consider
-        ::doc:`Seeking Review and Sponsorship<./udd-sponsorship>` to get fix
-        included.
+        consider :doc:`Seeking Review and Sponsorship<./udd-sponsorship>` 
+        to get the fix included.
 
 
 Additional considerations
