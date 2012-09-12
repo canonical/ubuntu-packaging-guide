@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-08-23 10:45+0000\n"
+"PO-Revision-Date: 2012-09-11 07:15+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-28 07:32+0000\n"
-"X-Generator: Launchpad (build 15864)\n"
+"X-Launchpad-Export-Date: 2012-09-12 04:48+0000\n"
+"X-Generator: Launchpad (build 15930)\n"
 
 # d6c7ecbd606c4b9282b23708db85f9b5
 #: ../ubuntu-packaging-guide/chroots.rst:3
@@ -28,6 +28,9 @@ msgid ""
 "versions you can create the environment of the other version with a "
 "``chroot``."
 msgstr ""
+"Wenn Du eine Version von Ubuntu benutzt, aber an Paketen für andere "
+"Versionen arbeitest, kannst Du eine Umgebung dieser Version mit einer "
+"``Chroot`` erzeugen."
 
 #: ../ubuntu-packaging-guide/chroots.rst:9
 msgid ""
@@ -35,6 +38,9 @@ msgid ""
 "which you can work in quite normally.  It avoids the overhead of running a "
 "full virtual machine."
 msgstr ""
+"Eine ``Chroot`` erlaubt dir ein Dateisystem einer anderen Distribution zu "
+"haben in dem man nahezu normal arbeiten kann. Dadurch vermeidet man den "
+"Overhead des Laufens einer vollen virtuellen Maschine."
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
@@ -43,28 +49,35 @@ msgstr "Eine Chroot-Umgebung anlegen"
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
 msgstr ""
+"Benutze das Kommando ``debootstrap`` um eine neue Chroot zu erzeugen::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
 "This will create a directory ``oneiric`` and install a minimal oneiric "
 "system into it."
 msgstr ""
+"Dies wird ein Verzeichnis ``oneiric`` anlegen und darin ein minimales "
+"oneiric-System installieren."
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
 "If your version of ``debootstrap`` does not know about oneiric you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
+"Wenn deine Version von ``debootstrap`` noch nichts über oneiric weiß, kannst "
+"du versuchen auf die Version in ``backports`` zu aktualisieren."
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
-msgstr ""
+msgstr "Du kannst dann in der Chroot arbeiten::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:30
 msgid ""
 "Where you can install or remove any package you wish without affecting your "
 "main system."
 msgstr ""
+"Wo Du alle Pakete installieren oder löschen kannst ohne Dein Hauptsystem zu "
+"berühren."
 
 #: ../ubuntu-packaging-guide/chroots.rst:33
 msgid ""
