@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-08-30 04:39+0000\n"
-"Last-Translator: Neliton Pereira Jr. <nelitonpjr@gmail.com>\n"
+"PO-Revision-Date: 2012-09-16 02:08+0000\n"
+"Last-Translator: Tiago Hillebrandt <tiagohillebrandt@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-31 05:06+0000\n"
-"X-Generator: Launchpad (build 15887)\n"
+"X-Launchpad-Export-Date: 2012-09-16 04:49+0000\n"
+"X-Generator: Launchpad (build 15944)\n"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
@@ -2198,7 +2198,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:194
 msgid "Submitting for inclusion"
-msgstr ""
+msgstr "Submetendo para inclusão"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:196
 msgid ""
@@ -2240,7 +2240,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
 msgid "Patches to Packages"
-msgstr ""
+msgstr "Patches para pacotes"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:5
 msgid ""
@@ -2348,7 +2348,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:104
 msgid "Upgrading to New Upstream Versions"
-msgstr ""
+msgstr "Atualizando para novas versões do upstream"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:106
 msgid ""
@@ -2456,7 +2456,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:6
 msgid "Fixing a Security Bug in Ubuntu"
-msgstr ""
+msgstr "Corrigindo uma falha de segurança no Ubuntu"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:11
 msgid ""
@@ -2469,7 +2469,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:19
 msgid "Obtaining the source"
-msgstr ""
+msgstr "Obtendo o fonte"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:21
 msgid ""
@@ -2747,7 +2747,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:97
 msgid "Ensuring the version is up to date"
-msgstr "Assegurando que a versão é atualizada"
+msgstr "Assegurando que a versão está atualizada"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:99
 msgid ""
@@ -2803,7 +2803,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:147
 msgid "Importing a Debian source package"
-msgstr ""
+msgstr "Importando um pacote de fontes do Debian"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:149
 msgid ""
@@ -3096,7 +3096,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-latest.rst:61
 msgid ""
 "This shows you the difference between package version 0.1-1 and 0.1-2."
-msgstr ""
+msgstr "Isso mostra as diferenças entre as versões 0.1-1 e 0.1-2 do pacote."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:3
 msgid "Merging - Updating from Debian and Upstream"
@@ -3194,7 +3194,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:77
 msgid "Merging a new upstream version"
-msgstr "Mesclando uma nova versão upstream"
+msgstr "Mesclando uma nova versão do upstream"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:79
 msgid ""
@@ -3308,7 +3308,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:43
 msgid "The bzr-builddeb way"
-msgstr ""
+msgstr "O caminho do bzr-builddeb"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:45
 msgid ""
@@ -3335,7 +3335,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:63
 msgid "The stdeb way"
-msgstr ""
+msgstr "O caminho do stdeb"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:65
 msgid ""
@@ -3369,7 +3369,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:98
 msgid "stdeb <= 0.5.1"
-msgstr ""
+msgstr "stdeb <= 0.5.1"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:100
 msgid ""
@@ -3403,7 +3403,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:124
 msgid "debian/control file"
-msgstr ""
+msgstr "arquivo debian/control"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:126
 msgid ""
@@ -3423,7 +3423,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:138
 msgid "debian/watch file"
-msgstr ""
+msgstr "arquivo debian/watch"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:140
 msgid "Here for example is the ``debian/watch`` file I'm using::"
@@ -3442,7 +3442,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:159
 msgid "Building the source package"
-msgstr ""
+msgstr "Construindo um pacote de fontes"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:161
 msgid ""
@@ -3452,7 +3452,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:3
 msgid "Working with Patches"
-msgstr ""
+msgstr "Trabalhando com patches"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:5
 msgid ""
