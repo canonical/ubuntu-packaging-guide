@@ -51,7 +51,7 @@ Now you can compile the source::
 
     $ make
 
-If the compile completes successfully you can install and run the program::
+If compilation completes successfully you can install and run the program::
 
     $ sudo make install
     $ hello
@@ -135,7 +135,7 @@ builds the .deb binary package::
     $ cd ../../
 
 ``bzr builddeb`` is a command to build the package in its current location.
-The ``-us -uc`` tell it there is no need to GPG sign the compile.  The result
+The ``-us -uc`` tell it there is no need to GPG sign the package.  The result
 will be placed in ``..``.  
 
 You can view the contents of the package with::
