@@ -109,9 +109,9 @@ package::
 
     $ bzr builddeb -- -nc
 
-The ``-nc`` will cause it to finish at the end of the compile without removing
-the build.  Change to the build and run ``dpkg-gensymbols`` for the library
-package::
+The ``-nc`` will cause it to finish at the end of compilation without removing
+the built files.  Change to the build and run ``dpkg-gensymbols`` for the
+library package::
 
     $ cd ../build-area/libnova-0.12.2/
     $ dpkg-gensymbols -plibnova-0.12-2 > symbols.diff
@@ -123,7 +123,7 @@ This makes a diff file which you can self apply::
 Which will create a file named similar to ``dpkg-gensymbolsnY_WWI`` that lists
 all the symbols.  It also lists the current package version.  We can remove the
 packaging version from that listed in the symbols file because new symbols are
-not generally added by new packaging versions::
+not generally added by new packaging versions, but by the upstream developers::
 
     $ sed -i s,-0ubuntu2,, dpkg-gensymbolsnY_WWI
 

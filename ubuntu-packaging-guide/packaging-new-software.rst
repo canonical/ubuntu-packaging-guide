@@ -51,7 +51,7 @@ Now you can compile the source::
 
     $ make
 
-If the compile completes successfully you can install and run the program::
+If compilation completes successfully you can install and run the program::
 
     $ sudo make install
     $ hello
@@ -135,7 +135,7 @@ builds the .deb binary package::
     $ cd ../../
 
 ``bzr builddeb`` is a command to build the package in its current location.
-The ``-us -uc`` tell it there is no need to GPG sign the compile.  The result
+The ``-us -uc`` tell it there is no need to GPG sign the package.  The result
 will be placed in ``..``.  
 
 You can view the contents of the package with::
@@ -163,11 +163,16 @@ A description of each of the problems it reports can be found on the
 After making a fix to the packaging you can rebuild using ``-nc`` "no clean"
 without having to build from scratch::
 
-    $ bzr builddeb -- -nc
+    $ bzr builddeb -- -nc -us -uc
 
 Having checked that the package builds locally you should ensure it builds on a
-clean system using ``pbuilder``. If you haven't set up ``pbuilder-dist``
-yet, :doc:`do so now<./getting-set-up>`::
+clean system using ``pbuilder``. Since we are going to upload to a PPA
+(Personal Package Archive) shortly, this upload will need to be *signed* to
+allow Launchpad to verify that the upload comes from you (you can tell the
+upload will be signed because the ``-us`` and ``-uc`` flags are not passed to
+``bzr builddeb`` like they were before). For signing to work you need to have
+set up GPG. If you haven't set up ``pbuilder-dist`` or GPG yet, :doc:`do so
+now<./getting-set-up>`::
 
     $ bzr builddeb -S
     $ cd ../build-area
@@ -178,9 +183,9 @@ can upload the branch to Launchpad for review::
 
     $ bzr push lp:~<lp-username>/+junk/hello-package
 
-Uploading it to a PPA (Personal Package Archive) will ensure it builds
-and give an easy way for you and others to test the binary packages.
-You will need to set up a PPA in Launchad then upload with ``dput``::
+Uploading it to a PPA will ensure it builds and give an easy way for you and
+others to test the binary packages.  You will need to set up a PPA in Launchad
+then upload with ``dput``::
 
     $ dput ppa:<lp-username> hello_2.7-0ubuntu1.changes
 
