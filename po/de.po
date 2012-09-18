@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-09-11 07:15+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2012-09-17 06:54+0000\n"
+"Last-Translator: Volker Aßmann <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-12 04:48+0000\n"
-"X-Generator: Launchpad (build 15930)\n"
+"X-Launchpad-Export-Date: 2012-09-18 05:12+0000\n"
+"X-Generator: Launchpad (build 15966)\n"
 
 # d6c7ecbd606c4b9282b23708db85f9b5
 #: ../ubuntu-packaging-guide/chroots.rst:3
@@ -84,6 +84,9 @@ msgid ""
 "You might want to copy your GPG/ssh keys and Bazaar configuration into the "
 "chroot so you can access and sign packages directly."
 msgstr ""
+"Um innerhalb der Chroot Umgebung direkt auf Pakete zugreifen und sie "
+"signieren zu können, sollten Ihre GPG/ssh Schlüssel und Bazaar Konfiguration "
+"in die Umgebung kopiert werden."
 
 #: ../ubuntu-packaging-guide/chroots.rst:36
 msgid ""
@@ -106,15 +109,22 @@ msgid ""
 "If you want to run X programs you will need to bind the /tmp directory into "
 "the chroot, from outside the chroot run::"
 msgstr ""
+"Um X-Window Programme in der Chroot Umgebung nutzen zu können, muss das /tmp "
+"Verzeichnis in die Umgebung gebunden werden. Dies geht außerhalb des Chroot "
+"mit folgendem Kommando:"
 
 #: ../ubuntu-packaging-guide/chroots.rst:50
 msgid "Some programs may need you to bind /dev or /proc."
 msgstr ""
+"Für einige Programme kann es nötig sein die Verzeichnisse /dev und /proc in "
+"das Chroot zu binden."
 
 #: ../ubuntu-packaging-guide/chroots.rst:52
 msgid ""
 "For more information on chroots see our `Debootstrap Chroot wiki page`_."
 msgstr ""
+"Für weitere Informationen über Chroots siehe unsere `Debootstrap Chroot wiki "
+"page`_."
 
 # 26aacfbeebe4473f9e1244c3c974b6ff
 #: ../ubuntu-packaging-guide/chroots.rst:55
@@ -128,6 +138,12 @@ msgid ""
 "building packages but takes some more setup compared to PBuilder.  See `the "
 "Security Team Build Environment wiki page`_ for a full explanation."
 msgstr ""
+"SBuild ist ähnlich wie PBuilder ein System zurErstellung von Umgebungen, in "
+"denen die Paketerzeugung getestet werden kann. Es ist näher an der von "
+"Lauchpad verwendeten Umgebung zur Paketerzeugung, erfordert aber im "
+"Vergleich zu PBuilder etwas mehr Konfigurationsaufwand. Für eine "
+"detaillierte Erklärung siehe `the Security Team Build Environment wiki "
+"page`_."
 
 #: ../ubuntu-packaging-guide/chroots.rst:59
 msgid ""
@@ -216,7 +232,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:2
 msgid "Basic Overview of the ``debian/`` Directory"
-msgstr ""
+msgstr "Allgemeine Übersicht über das ``debian/`` Verzeichnis"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:4
 msgid ""
