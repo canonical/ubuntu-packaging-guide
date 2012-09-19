@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-09-17 06:54+0000\n"
-"Last-Translator: Volker Aßmann <Unknown>\n"
+"PO-Revision-Date: 2012-09-18 14:25+0000\n"
+"Last-Translator: Richard Stromer <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-18 05:12+0000\n"
+"X-Launchpad-Export-Date: 2012-09-19 04:52+0000\n"
 "X-Generator: Launchpad (build 15966)\n"
 
 # d6c7ecbd606c4b9282b23708db85f9b5
@@ -177,6 +177,9 @@ msgid ""
 "are made and hundreds of people interact every day, it is important to "
 "communicate effectively."
 msgstr ""
+"In einem Projekt, bei dem tausende Zeilen Quelltext geändert werden, viele "
+"Entscheidungen getroffen werden und hunderte Leute täglich zusammenspielen, "
+"ist es wichtig effizient zu kommunizieren."
 
 # 8dff4e5170734f698bbb51c6807b7dcf
 #: ../ubuntu-packaging-guide/communication.rst:10
@@ -188,22 +191,30 @@ msgid ""
 "Mailing lists are a very important tool if you want to communicate ideas to "
 "a broader team and make sure that you reach everybody, even across timezones."
 msgstr ""
+"Mailinglisten sind ein sehr bedeutendes Werkzeug um Ideen an ein größeres "
+"Team zu kommunizieren und sicherzustellen, dass man jeden erreicht, auch "
+"über Zeitzonen hinweg."
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
-msgstr ""
+msgstr "Bezüglich der Entwicklung, sind dies die Wichtigsten:"
 
 #: ../ubuntu-packaging-guide/communication.rst:18
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (announce-"
 "only, the most important development announcements go here)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce "
+"(ausschließlich Ankündigungen, hier findet man nur die wichtigsten "
+"Ankündigungen bezüglich der Entwicklung)"
 
 #: ../ubuntu-packaging-guide/communication.rst:20
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (general Ubuntu "
 "development discussion)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (allgemeine "
+"Diskussionen zur Ubuntu Entwicklung)"
 
 #: ../ubuntu-packaging-guide/communication.rst:22
 msgid ""
@@ -224,7 +235,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
-msgstr ""
+msgstr "#ubuntu-devel (für allgemeine Diskussion zur Entwicklung)"
 
 #: ../ubuntu-packaging-guide/communication.rst:33
 msgid "#ubuntu-motu (for MOTU team discussion and generally getting help)"
