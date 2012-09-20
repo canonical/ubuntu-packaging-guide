@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-09-09 16:12+0000\n"
-"Last-Translator: Mitsuya Shibata <mty.shibata@gmail.com>\n"
+"PO-Revision-Date: 2012-09-19 16:32+0000\n"
+"Last-Translator: Shushi Kurose <md81bird@hitaki.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-10 04:55+0000\n"
-"X-Generator: Launchpad (build 15924)\n"
+"X-Launchpad-Export-Date: 2012-09-20 04:51+0000\n"
+"X-Generator: Launchpad (build 15985)\n"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
@@ -418,9 +418,9 @@ msgid ""
 "Copyright line with the year and copyright holder, and the text of the "
 "copyright itself. An example template would be::"
 msgstr ""
-"一般的に著作権情報は、そのプログラムのソースディレクトリーの ``COPYING`` "
-"ファイルに記載されています。このファイルには、作者とパッケージ作成者の名前、ソースコードを取得した URL 、年と著作権保持者を記述した "
-"Copyright マークの行、そして権利に関する文章そのものが含まれている必要があります。以下はその例です::"
+"一般的に著作権情報は、そのプログラムのソースディレクトリの ``COPYING`` "
+"ファイルに記載されています。このファイルには、作者とパッケージ作成者の名前、ソースコードを取得したURL、年と著作権保持者を記述したCopyrightマー"
+"クの行、そして権利に関する文章そのものが含まれている必要があります。以下はその例です::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:176
 msgid ""
@@ -453,7 +453,7 @@ msgstr ""
 msgid ""
 "Here is a simplified version of the rules file created by ``dh_make`` (which "
 "can be found in the ``dh-make`` package)::"
-msgstr "``dh_make`` （``dh-make`` パッケージに存在します）で作られた単純な rules ファイルは次のとおりです::"
+msgstr "``dh_make`` （``dh-make`` パッケージに存在します）で作られた単純なrulesファイルは次のとおりです::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:204
 msgid ""
@@ -483,6 +483,8 @@ msgid ""
 "arch sequences are passed the \"-a\" option to ensure they only work on "
 "architecture dependent packages."
 msgstr ""
+"binary-indepシーケンスのコマンドはバイナリに非依存なパッケージのみ作用するように\"-i\"オプションが渡されますし、binary-"
+"archシーケンスのコマンドはアーキテクチャに依存したパッケージのみに作用するように\"-a\"オプションが渡されます。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:222
 msgid ""
@@ -491,6 +493,9 @@ msgid ""
 "which commands have already been run, for which packages, and skip running "
 "those commands again."
 msgstr ""
+"個々のdebhelperコマンドは、成功時には ``debian/package.debhelper.log`` "
+"に記録されます（dh_cleanで削除されます）。そのため、dhはどのパッケージのどのコマンドが既に実行済みか分かっているため、同じコマンドの実行をスキッ"
+"プします。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:227
 msgid ""
@@ -512,6 +517,11 @@ msgid ""
 "options, or run entirely different commands instead. (Note that to use this "
 "feature, you should Build-Depend on debhelper 7.0.50 or above.)"
 msgstr ""
+"``debian/rules`` に ``override_dh_command`` "
+"という名前のターゲットが含まれており、さらにシーケンスにそのコマンドが存在する場合、 ``dh`` "
+"は実際のコマンドではなく、rulesファイルにあるそのターゲットを実行します。この上書きターゲットを使えば、コマンドに追加のオプションを設定したり、完全に"
+"異なるコマンドを実行させることができます（この機能を使うには、debhelperのバージョン7.0.50以上をBuild-"
+"Dependに指定する必要があります）。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:241
 msgid ""
@@ -520,6 +530,10 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ of "
 "the Debian Policy Manual."
 msgstr ""
+"その他のサンプルは ``/usr/share/doc/debhelper/examples/`` や ``man dh`` "
+"を確認してください。Debianポリシーマニュアルの `the rules section (Section 4.9) "
+"<http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ "
+"も確認すると良いでしょう。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:247
 msgid "Additional Files"
@@ -575,13 +589,15 @@ msgstr ""
 msgid ""
 "While ``foo-common.install`` containing only the architecture independent "
 "file might look like::"
-msgstr ""
+msgstr "それに対して、アーキテクチャに依存しないファイルのみを含む ``foo-common.install`` は次のようになります::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:290
 msgid ""
 "This would create two binary packages, ``foo`` and ``foo-common``. Both "
 "would require their own paragraph in ``debian/control``."
 msgstr ""
+"これにより、 ``foo`` と ``foo-common`` という二つのバイナリパッケージが作成されます。どちらも "
+"``debian/control`` にそれを指定する段落が必要です。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:293
 msgid ""
@@ -605,6 +621,9 @@ msgid ""
 "this writing), while the following lines contain any URLs to parse. For "
 "example::"
 msgstr ""
+"``debian/watch`` ファイルを設定すると、 ``devscripts`` にある ``uscan`` "
+"ツールを使うことで、自動的にアップストリームの新バージョンをチェックできます。watchファイルの先頭行は書式のバージョン（執筆時点では 3 "
+"です）を指定する必要があり、それ以降の行は解析用のURLを記述します。例::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:309
 msgid ""
@@ -613,6 +632,9 @@ msgid ""
 "version. If a new upstream version is found, it will be automatically "
 "downloaded. For example::"
 msgstr ""
+"ソースディレクトリの一番上で ``uscan`` を実行すると、 ``debian/changelog`` "
+"にあるアップストリームのバージョン番号と、アップストリームの最新のバージョンを比較します。新しいバージョンがアップストリームに存在する場合は、自動的にダウ"
+"ンロードされます。例えば次のようになります::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:322
 msgid ""
@@ -663,12 +685,15 @@ msgid ""
 "about the missing file. This warning is informational only and may be safely "
 "ignored."
 msgstr ""
+"現時点では、このファイルが存在しない時のパッケージソースのデフォルトの書式は1.0になります。source/formatファイルで、書式を明示できます。ソ"
+"ースの書式を指定するのにこのファイルを使わなかった場合は、Lintianはファイルが存在しないことに対して警告を発します。この警告は情報表示のみであり、安"
+"全に無視できます。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:347
 msgid ""
 "You are encouraged to use the newer 3.0 source format. It provides a number "
 "of new features:"
-msgstr ""
+msgstr "より新しい3.0の書式を使うことが推奨されます。この書式にはいくつかの新機能が存在します:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:350
 msgid "Support for additional compression formats: bzip2, lzma and xz"
@@ -688,12 +713,16 @@ msgid ""
 "Debian-specific changes are no longer stored in a single .diff.gz but in "
 "multiple patches compatible with quilt under ``debian/patches/``"
 msgstr ""
+"Debianによる変更点を一つの.diff.gzに保存する必要がなくなり、 ``debian/patches/`` "
+"以下のquilt準拠の複数のパッチとして保存されます。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:358
 msgid ""
 "http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
 "concerning the switch to the 3.0 source package formats."
 msgstr ""
+"http://wiki.debian.org/Projects/DebSrc3.0 "
+"には、3.0のソースパッケージ書式への移行に関する情報がまとまっています。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
 msgid ""
@@ -701,10 +730,13 @@ msgid ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
+"詳細については、 ``man dpkg-source`` やDebian新メンテナーガイドの `source/format section "
+"(Section 5.21) <http://www.debian.org/doc/manuals/maint-"
+"guide/dother.en.html#sourcef>`_  を参照してください。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:366
 msgid "Additional Resources"
-msgstr ""
+msgstr "その他の情報"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:368
 msgid ""
@@ -855,29 +887,34 @@ msgstr "アップストリーム（やDebian）のバグトラッキングシス
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:97
 msgid ""
 "Upstream revision history (or newer release) might have fixed the problem,"
-msgstr ""
+msgstr "アップストリームのリビジョン履歴（もしくは新しいリリース）で問題が修正されているかもしれません"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:98
 msgid "bugs or package uploads of Debian or other distributions."
-msgstr ""
+msgstr "Debianや他のディストリビューションのバグやアップロードされたパッケージ"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:103
 msgid ""
 "You now want to create a patch which includes the fix.  The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
+"修正内容を含んだパッチを作りましょう。 ``edit-patch`` コマンドは、パッケージにパッチを追加する簡単な方法です。次のコマンドを実行します::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:108
 msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
 msgstr ""
+"これによりパッケージの内容が一時ディレクトリにコピーされます。テキストエディターを使ってファイルを編集したり、アップストリームからのパッチを適用できます。"
+"例えば次のように適用できます::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:113
 msgid ""
 "After editing the file type ``exit`` or press ``control-d`` to quit the "
 "temporary shell.  The new patch will have been added into ``debian/patches``."
 msgstr ""
+"編集が終わったら ``exit`` を入力するか、 ``control-d`` を押して、一時的なシェルを終了します。新規に作成したパッチが、 "
+"``debian/patches`` に追加されます。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:118
 msgid "Testing the fix"
