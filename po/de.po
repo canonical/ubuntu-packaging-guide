@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-09-18 14:25+0000\n"
-"Last-Translator: Richard Stromer <Unknown>\n"
+"PO-Revision-Date: 2012-09-20 14:32+0000\n"
+"Last-Translator: Volker Aßmann <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-19 04:52+0000\n"
-"X-Generator: Launchpad (build 15966)\n"
+"X-Launchpad-Export-Date: 2012-09-21 04:52+0000\n"
+"X-Generator: Launchpad (build 15985)\n"
 
 # d6c7ecbd606c4b9282b23708db85f9b5
 #: ../ubuntu-packaging-guide/chroots.rst:3
@@ -151,6 +151,11 @@ msgid ""
 "TestDrive is a program to automate syncing and running daily ISO images, see "
 "`the TestDrive wiki page`_ for more information."
 msgstr ""
+"Für das Paketieren und Testen von Programmen können vollständige virtuelle "
+"Maschinen nützlich sein. TestDrive ist ein Programm, mit dem die "
+"Synchronisation und das Ausführen von täglich erzeugten ISO Abbildern "
+"automatisiert werden kann, für weitere Informationen siehe `the TestDrive "
+"wiki page`_."
 
 #: ../ubuntu-packaging-guide/chroots.rst:63
 msgid ""
@@ -158,6 +163,10 @@ msgid ""
 "Copy C10shell from /usr/share/doc/pbuilder/examples into a directory and use "
 "the --hookdir= argument to point to it."
 msgstr ""
+"Pbuilder kann auch so konfiguriert werden, dass es pausiert sobald es auf "
+"einen Übersetzungsfehler trifft. Kopiere das Skript C10shell aus "
+"/usr/share/doc/pbuilder/examples in ein Verzeichnis und gebe dieses als --"
+"hookdir= Parameter an."
 
 #: ../ubuntu-packaging-guide/chroots.rst:67
 msgid ""
@@ -166,6 +175,11 @@ msgid ""
 "package on those.  This is useful when you want to compile many packages at "
 "the same time or to overcome bandwidth restraints."
 msgstr ""
+"Mit Amazon's `EC2 cloud computers`_ kann man einen Rechner für einige cent "
+"pro Stunde mieten. Hier kannst Du Ubuntu Maschinen mit jeglicher "
+"unterstützen Version installieren und darauf Pakete erstellen. Gemietete "
+"Rechenleistung kann besonders nützlich sein um Bandbreitenprobleme zu "
+"umgehen wenn Du viele Pakete parallel übersetzen möchtest."
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
@@ -221,6 +235,8 @@ msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (MOTU Team discussion, "
 "get help with packaging)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (MOTU Team Diskussion, "
+"eine gute Anlaufstelle für Hilfe bei der Paketierung)"
 
 # bcf8bf4cfd7d44e79964fc504e3dcbcf
 #: ../ubuntu-packaging-guide/communication.rst:27
@@ -232,6 +248,8 @@ msgid ""
 "For real-time discussions, please connect to irc.freenode.net and join one "
 "or any of these channels:"
 msgstr ""
+"Für Echtzeit-Diskussionen schaue auf dem IRC Server irc.freenode.net in "
+"einem oder mehreren der folgenden Kanäle vorbei:"
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
@@ -239,7 +257,7 @@ msgstr "#ubuntu-devel (für allgemeine Diskussion zur Entwicklung)"
 
 #: ../ubuntu-packaging-guide/communication.rst:33
 msgid "#ubuntu-motu (for MOTU team discussion and generally getting help)"
-msgstr ""
+msgstr "#ubuntu-motu (für MOTU Team Diskussionen und genereller Hilfe)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:2
 msgid "Basic Overview of the ``debian/`` Directory"
@@ -255,10 +273,18 @@ msgid ""
 "configure the behavior of the package. Some of these files are discussed in "
 "this article, but this is not meant to be a complete list."
 msgstr ""
+"Dieser Artikel gibt eine kurze Übersicht über die verschiedenen Dateien im "
+"``debian/`` Verzeichnis, welche für das Paketieren von Ubuntu Paketen "
+"wichtig sind. Die wichtigsten Dateien sind ``changelog``, ``control``, "
+"``copyright`` und ``rules``. Diese Dateien werden für alle Pakete benötigt. "
+"Anhand weiterer Dateien im ``debian/`` Verzeichnis kann das Verhalten der "
+"Pakete angepasst und konfiguriert werden. Während einige dieser Dateien in "
+"diesem Artikel beschrieben werden, ist er nicht als vollständige Übersicht "
+"gedacht."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:13
 msgid "The changelog"
-msgstr ""
+msgstr "Das Änderungsprotokoll"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:15
 msgid ""
@@ -283,16 +309,22 @@ msgid ""
 "Minor bullet points are indicated by a dash \"-\", while major points use an "
 "asterisk \"*\"."
 msgstr ""
+"Unterpunkte werden durch einen Strich \"-\" dargestellt, während Hauptpunkte "
+"durch einen Stern \"*\" gekennzeichnet werden."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:39
 msgid ""
 "If you are packaging from scratch, ``dch --create`` (``dch`` is in the "
 "``devscripts`` package) will create a standard ``debian/changelog`` for you."
 msgstr ""
+"Falls Du ein neues Paket ohne Vorlage erstellst, kannst Du mit ``dch --"
+"create`` (``dch`` befindet sich im ``devscripts`` Paket) standard Daten für "
+"``debian/changelog`` anlegen."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
 msgstr ""
+"Dies ist ein Beispiel für eine ``changelog`` Datei des hello Pakets::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:52
 msgid ""
