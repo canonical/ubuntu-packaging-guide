@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-08-25 09:23+0000\n"
+"PO-Revision-Date: 2012-09-21 15:25+0000\n"
 "Last-Translator: Hannie Dumoleyn <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-08-28 07:32+0000\n"
-"X-Generator: Launchpad (build 15864)\n"
+"X-Launchpad-Export-Date: 2012-09-22 05:17+0000\n"
+"X-Generator: Launchpad (build 15985)\n"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
@@ -160,48 +160,63 @@ msgid ""
 "are made and hundreds of people interact every day, it is important to "
 "communicate effectively."
 msgstr ""
+"In een project waar duizenden regels code veranderen, veel beslissingen "
+"worden genomen en honderden mensen elke dag met elkaar werken, is het "
+"belangrijk om effectief te communiceren."
 
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
-msgstr ""
+msgstr "Mailinglijsten"
 
 #: ../ubuntu-packaging-guide/communication.rst:12
 msgid ""
 "Mailing lists are a very important tool if you want to communicate ideas to "
 "a broader team and make sure that you reach everybody, even across timezones."
 msgstr ""
+"Mailinglijsten zijn een zeer belangrijk hulpmiddel wanneer u ideeën wilt "
+"bespreken in een breder team, en er zeker van wilt zijn dat u iedereen "
+"bereikt, ongeacht de verschillende tijdzones."
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
-msgstr ""
+msgstr "Met betrekking tot ontwikkeling zijn dit de belangrijkste:"
 
 #: ../ubuntu-packaging-guide/communication.rst:18
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (announce-"
 "only, the most important development announcements go here)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (announce-"
+"only, de belangrijkste mededelingen over de ontwikkeling worden hier "
+"geplaatst)"
 
 #: ../ubuntu-packaging-guide/communication.rst:20
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (general Ubuntu "
 "development discussion)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (algemene discussie "
+"over de Ubuntu-ontwikkeling)"
 
 #: ../ubuntu-packaging-guide/communication.rst:22
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (MOTU Team discussion, "
 "get help with packaging)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (MOTU team-discussie, "
+"hulp krijgen bij het maken van pakketten)"
 
 #: ../ubuntu-packaging-guide/communication.rst:27
 msgid "IRC Channels"
-msgstr ""
+msgstr "IRC-kanalen"
 
 #: ../ubuntu-packaging-guide/communication.rst:29
 msgid ""
 "For real-time discussions, please connect to irc.freenode.net and join one "
 "or any of these channels:"
 msgstr ""
+"Voor rechtstreekse discussies kunt u verbinden met irc.freenode.net en u "
+"voegen bij één van de volgende kanalen:"
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
