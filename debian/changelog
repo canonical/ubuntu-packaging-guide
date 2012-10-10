@@ -6,6 +6,9 @@ ubuntu-packaging-guide (0.2.4) UNRELEASED; urgency=low
     Watson (LP: #1047457)
   * Add missing CSS bits for headers and admonitions (LP: #1045386)
 
+  [ Daniel Holbach ]
+  * Added article about using autopkgtest. 
+
  -- Dmitry Shachnev <mitya57@gmail.com>  Sat, 08 Sep 2012 18:37:12 +0400
 
 ubuntu-packaging-guide (0.2.3) unstable; urgency=low
