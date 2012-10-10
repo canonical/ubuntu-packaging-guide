@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (0.2.4) UNRELEASED; urgency=low
+ubuntu-packaging-guide (0.2.4) unstable; urgency=low
 
   [ Dmitry Shachnev ]
   * Make sure that packages built with example debian/rules from
@@ -9,7 +9,7 @@ ubuntu-packaging-guide (0.2.4) UNRELEASED; urgency=low
   [ Daniel Holbach ]
   * Added article about using autopkgtest. 
 
- -- Dmitry Shachnev <mitya57@gmail.com>  Sat, 08 Sep 2012 18:37:12 +0400
+ -- Benjamin Drung <bdrung@debian.org>  Wed, 10 Oct 2012 14:35:31 +0200
 
 ubuntu-packaging-guide (0.2.3) unstable; urgency=low
 
