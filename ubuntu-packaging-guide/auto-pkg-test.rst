@@ -97,9 +97,10 @@ automated tests are implemented and used in Ubuntu.
 
 * The `libxml2 tests`_ are very similar. They also run a test-build of a 
   simple piece of C code and execute it.
-* The `gtk+3.0 tests`_ do two things: firstly they run the upstream 
-  test-suite as part of ``autopkgtest``. Secondly they execute a python
-  program using ``xvfb`` to emulate a running X session.
+* The `gtk+3.0 tests`_ also do a compile/link/run check in the "build" test. 
+  There is an additional "python3-gi" test which verifies that the GTK 
+  library can also be used through introspection.
+* In the `ubiquity tests`_ the upstream test-suite is executed.
 * The `gvfs tests`_ have comprehensive testing of their functionality and
   are very interesting because they emulate usage of CDs, Samba, DAV and
   other bits.
@@ -112,12 +113,13 @@ they get uploaded or any of their reverse-dependencies change. The output of
 `automatically run autopkgtest tests`_ can be viewed on the web and is 
 regularly updated.
 
-While Debian does not have an automatic testing infrastructure set up yet, it
-makes a lot of sense to forward ``autopkgtest`` changes to Debian as well.
-
+While Debian does not have an automatic testing infrastructure set up yet, 
+they should still be submitted to Debian, as DEP-8 is a Debian specification 
+and Debian developers or users can still manually run the tests.
 
 .. _`DEP 8 Specification`: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob_plain;f=doc/README.package-tests;hb=HEAD
 .. _`libxml2 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/libxml2/quantal/files/head:/debian/tests/
-.. _`gtk+3.0 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/gtk+3.0/quantal/files/head:/debian/tests/
 .. _`gvfs tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/gvfs/quantal/files/head:/debian/tests/
+.. _`gtk+3.0 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/gtk+3.0/quantal/files/head:/debian/tests/
+.. _`ubiquity tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/ubiquity/quantal/files/head:/debian/tests/
 .. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Quantal/view/AutoPkg%20Test/
