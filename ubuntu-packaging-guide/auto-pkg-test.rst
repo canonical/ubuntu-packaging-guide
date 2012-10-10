@@ -71,12 +71,11 @@ The accompanying test for the example above might be::
 
 Here a very simple piece of C code is written to a temporary directory. Then 
 this is compiled with system libraries (using flags and library paths as 
-provided by `pkg-config`. Then the compiled binary, which just exercises some
+provided by `pkg-config`). Then the compiled binary, which just exercises some
 parts of core glib functionality, is run.
 
 While this test is very small and basic, it tests quite a number of core
-components on a system, so is very important to have as it might uncover a big
-number of problems.
+components on a system. This may help to uncover critical issues early on.
 
 Executing the test
 ==================
