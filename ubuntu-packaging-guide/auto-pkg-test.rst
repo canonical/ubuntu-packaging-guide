@@ -116,7 +116,7 @@ While Debian does not have an automatic testing infrastructure set up yet,
 they should still be submitted to Debian, as DEP-8 is a Debian specification 
 and Debian developers or users can still manually run the tests.
 
-Also will packages in Debian with a testsuite header be automatically added 
+Packages in Debian with a testsuite header will also be automatically added 
 when they are synced to Ubuntu.
 
 .. _`DEP 8 Specification`: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob_plain;f=doc/README.package-tests;hb=HEAD
