@@ -54,6 +54,7 @@ Knowledge Base
 
    communication
    debian-dir-overview
+   auto-pkg-test
    udd-getting-the-source
    udd-working
    udd-sponsorship
