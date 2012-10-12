@@ -23,7 +23,8 @@ for example you list all the required packages for the tests, if the testbed
 gets broken during the build or if ``root`` permissions are required. The 
 `DEP 8 specification`_ lists all available options.
 
-In a very simple case the file would look like this::
+Below we are having a look at the ``glib2.0`` source package. In a very 
+simple case the file would look like this::
 
         Tests: build
         Depends: libglib2.0-dev, build-essential
@@ -118,6 +119,20 @@ and Debian developers or users can still manually run the tests.
 
 Packages in Debian with a testsuite header will also be automatically added 
 when they are synced to Ubuntu.
+
+Getting the test into Ubuntu
+============================
+
+The process of submitting an autopkgtest for a package is largely similar to 
+:doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:
+
+* run ``bzr branch ubuntu:<packagename>``,
+* edit ``debian/control`` to enable the tests,
+* add the ``debian/tests`` directory,
+* write the ``debian/tests/control`` based on the `DEP 8 Specification`_,
+* add your test case(s) to ``debian/tests``,
+* commit your changes, push them to Launchpad, propose a merge and get it 
+  reviewed just like any other improvement in a source package.
 
 .. _`DEP 8 Specification`: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob_plain;f=doc/README.package-tests;hb=HEAD
 .. _`libxml2 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/libxml2/quantal/files/head:/debian/tests/
