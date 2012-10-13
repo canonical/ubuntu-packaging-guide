@@ -2,20 +2,21 @@
 # Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the ubuntu-packaging-guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
-#
+# Jose Luis Tirado <joseluis.tirado@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-09-11 05:45+0000\n"
-"Last-Translator: Paco Molinero <paco@byasl.com>\n"
+"PO-Revision-Date: 2012-10-12 21:36+0000\n"
+"Last-Translator: Jose Luis Tirado <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-12 04:48+0000\n"
-"X-Generator: Launchpad (build 15930)\n"
+"X-Launchpad-Export-Date: 2012-10-13 04:52+0000\n"
+"X-Generator: Launchpad (build 16137)\n"
+"Language: es\n"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
@@ -42,7 +43,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
-msgstr "Creando un Chroot"
+msgstr "Crear un chroot"
 
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
@@ -129,11 +130,11 @@ msgid ""
 "building packages but takes some more setup compared to PBuilder.  See `the "
 "Security Team Build Environment wiki page`_ for a full explanation."
 msgstr ""
-"Sbuild es un sistema similar a PBuilder para crear entornos para ejecutar "
-"pruebas de construcción de paquetes. Es más coincide por el utilizado por "
-"Launchpad para construir paquetes pero lleva más tiempo configurarlo "
-"comparado con PBuilder. Vea «the Security Team Build Environment wiki page»_ "
-"para obtener una explicación completa"
+"Sbuild es un sistema similar a Pbuilder para crear entornos donde pueda "
+"ejecutar pruebas de construcción de paquetes. Es más parecido al utilizado "
+"por Launchpad para construir paquetes pero lleva más tiempo configurarlo "
+"comparado con Pbuilder. Veasé «the Security Team Build Environment wiki "
+"page»_ para obtener una explicación más detallada."
 
 #: ../ubuntu-packaging-guide/chroots.rst:59
 msgid ""
@@ -180,8 +181,8 @@ msgid ""
 "communicate effectively."
 msgstr ""
 "En un proyecto donde se modifican miles de líneas de código, se toman muchas "
-"decisiones a diario y miles de personas interactúan a diario, es importantes "
-"comunicarse efectivamente."
+"decisiones y miles de personas interactúan a diario, es importante "
+"comunicarse efizcamente."
 
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
@@ -234,7 +235,7 @@ msgid ""
 "or any of these channels:"
 msgstr ""
 "Para discusiones en tiempo real, por favor conéctese a irc.freenode.net y "
-"únase a uno o cualquiera de estos canales:"
+"únase a alguno de estos canales:"
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
@@ -262,7 +263,7 @@ msgid ""
 msgstr ""
 "En este artículo explicaremos brevemente los diferentes archivos que son "
 "importantes para el empaquetado de paquetes Ubuntu los cuales están en el "
-"directorio  «debian/ ». Los más importantes son  «changelog»,  «control», "
+"directorio  «debian/». Los más importantes son  «changelog»,  «control», "
 "«copyright»  y «rules». Estos son requeridos por todos los paquetes. Un "
 "conjunto de archivos adicionales en «debian/» puede que sean usados para "
 "personalizar y configurar el comportamiento del paquete. Sobre algunos de "
@@ -281,12 +282,12 @@ msgid ""
 "the same name and email address in ``changelog`` as you have in your key. "
 "The following is a template ``changelog``::"
 msgstr ""
-"Este archivo es, como su nombre lo implica, un listado de los cambios "
-"realizados en cada versión. tiene un formato especifico que da el nombre del "
-"paquete, versión,  distribución, cambios, y quién realizo estos cambios a un "
-"determinado tiempo. Si tiene una clave GPG (vea: :doc:«Getting set "
+"Este archivo es, como su nombre indica, un listado de los cambios realizados "
+"en cada versión. Tiene un formato especifico que da el nombre del paquete, "
+"versión,  distribución, cambios, y quién realizó estos cambios en un "
+"determinado momento. Si tiene una clave GPG (vea: :doc:«Getting set "
 "up<./getting-set-up/>»), asegúrese de usar el mismo nombre y dirección de "
-"correo electrónico en «changelog» tal cual lo tiene en la clave. Lo "
+"correo electrónico en «changelog». tal y cómo lo tiene en la clave. Lo "
 "siguiente es una plantilla de «changelog»::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:31
@@ -296,9 +297,9 @@ msgid ""
 "For convenience, the command ``dch`` may be used to edit changelog. It will "
 "update the date automatically."
 msgstr ""
-"El formato (especialmente de la fecha) es importante. La fecha debe estar en "
-"formato :rfc:`5322`, que puede obtenerse mediante la orden «date -R». Por "
-"conveniencia, la orden «dchx  se puede usar para editar el archivo "
+"El formato (especialmente el de la fecha) es importante. La fecha debe estar "
+"en formato :rfc:`5322`, que puede obtenerse mediante la orden «date -R». Por "
+"conveniencia, la orden «dchx» se puede usar para editar el archivo "
 "changelog. Se actualizará la fecha de forma automática."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:36
@@ -306,6 +307,8 @@ msgid ""
 "Minor bullet points are indicated by a dash \"-\", while major points use an "
 "asterisk \"*\"."
 msgstr ""
+"Los puntos de segundo nivel se indican con un guión «-», los de primer nivel "
+"usan un asterisco «*»."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:39
 msgid ""
@@ -325,6 +328,10 @@ msgid ""
 "distro revision, used so that the packaging can be updated (to fix bugs for "
 "example) with new uploads within the same source release version."
 msgstr ""
+"Observe que el paquete tiene un «-0ubuntu1» anexado a el, este representa la "
+"versión en la distribución y se usa para que el paquete pueda ser "
+"actualizado (para solucionar errores por ejemplo) con nuevas subidas usando "
+"la misma versión principal con la que se liberó."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:56
 msgid ""
@@ -336,6 +343,13 @@ msgid ""
 "``2.6-1ubuntu1``. If a package for the application does not exist in Debian, "
 "then the Debian revision is ``0`` (e.g. ``2.6-0ubuntu1``)."
 msgstr ""
+"Ubuntu y Debian tienen esquemas de versión de paquetes ligeramente "
+"diferentes para evitar conflictos en los programas con la misma versión "
+"principal.  Si una paquete de Debian sufre un cambio en Ubuntu, se le agrega "
+"el «ubuntuX» (donde «X» es el número de revisión en Ubuntu) al final de la "
+"versión de Debian. Si el paquete hello «2.6-1» de Debian es modificado en "
+"Ubuntu, la versión quedaría «2.6-1ubuntu1». Si el paquete no existiera en "
+"Debian, entonces la revisión ahí sería «0» (y quedaría «2.6-0ubuntu1»)."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:64
 msgid ""
@@ -376,11 +390,11 @@ msgid ""
 "the packaging version control repository, and the upstream home page."
 msgstr ""
 "El primer párrafo describe el paquete fuente incluyendo la lista de paquetes "
-"requeridos para construir el paquete desde sus fuentes en el campo «Build-"
-"Depends». Este también contiene alguna metainformación como el nombre del "
-"mantenedor, la versión de la política de Debian que cumple el paquete, la "
-"ubicación del repositorio de control de versiones del paquete y la página "
-"principal para enviar el parche."
+"requeridos para construirlo desde sus fuentes en el campo «Build-Depends». "
+"También contiene alguna metainformación como el nombre del mantenedor, la "
+"versión de la política de Debian que cumple el paquete, la ubicación del "
+"repositorio de control de versiones del paquete y la página principal para "
+"enviar el parche."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:106
 msgid ""
@@ -395,6 +409,17 @@ msgid ""
 "For further information, see the `Debian Maintainer Field spec "
 "<https://wiki.ubuntu.com/DebianMaintainerField>`_ on the Ubuntu wiki."
 msgstr ""
+"Tenga en cuenta que en Ubuntu, se configura el campo «Maintainer» a una "
+"dirección general porque cualquiera puede cambiar cualquier paquete (esto se "
+"diferencia de Debian, donde se restringen los permisos para cambiar paquetes "
+"a individuos o equipos). Los paquetes en Ubuntu deben tener por lo general "
+"el campo «Maintainer» como «Ubuntu Developers <ubuntu-devel-"
+"discuss@lists.ubuntu.com>». Si el campo del mantenedor se cambia, el valor "
+"anterior debe guardarse en «XSBC-Original-Maintainer». Esto puede hacerse "
+"automáticamente con el script «update-maintainer» que es parte del paquete "
+"«ubuntu-dev-tools». Para obtener mayor información, véase la página «Debian "
+"Maintainer Field spec <https://wiki.ubuntu.com/DebianMaintainerField>» en la "
+"wiki de Ubuntu."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:118
 msgid "Each additional paragraph describes a binary package to be built."
@@ -406,6 +431,9 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the "
 "Debian Policy Manual."
 msgstr ""
+"Para obtener mayor información, véase la sección sobre el archivo de control "
+"«(Chapter 5) <http://www.debian.org/doc/debian-policy/ch-"
+"controlfields.html>»_ del manual de normas de Debian."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:126
 msgid "The copyright file"
@@ -419,6 +447,12 @@ msgid ""
 "require that each package installs a verbatim copy of its copyright and "
 "license information to ``/usr/share/doc/$(package_name)/copyright``."
 msgstr ""
+"Este archivo almacena la información de derechos de autor para ambos, el "
+"proyecto original y el empaquetado. Tanto Ubuntu como Debian en la sección "
+"12.5 de su manual de normas «<http://www.debian.org/doc/debian-policy/ch-"
+"docs.html#s-copyrightfile>»_ establecen que cada paquete debe instalar una "
+"copia literal del archivo de copyright y de la información del "
+"licenciamiento en «/usr/share/doc/$(nombre_del_paquete)/copyright»."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:134
 msgid ""
@@ -428,6 +462,12 @@ msgid ""
 "Copyright line with the year and copyright holder, and the text of the "
 "copyright itself. An example template would be::"
 msgstr ""
+"Por lo general, la información sobre los derechos de autor se encuentra en "
+"el archivo «COPYING» dentro del directorio de código fuente del programa. "
+"Este archivo debe contener información tal los nombres de los autores, del "
+"creador del paquete, la URL de donde salió el código fuente y una línea de "
+"Copyright con el año, el titular de los derechos de autor y el propio texto "
+"del copyright. Una plantilla de ejemplo sería::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:176
 msgid ""
@@ -435,6 +475,10 @@ msgid ""
 "<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ "
 "format. You are encouraged to use this format as well."
 msgstr ""
+"Este ejemplo sigue el formato de «Machine-readable debian/copyright "
+"<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>»_ "
+"(archivo debia/copyright legible por una máquina). Se le anima a usar este "
+"formato de la misma forma."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:182
 msgid "The rules file"
@@ -448,12 +492,20 @@ msgid ""
 "also has a target to clean up all the build files so you end up with just a "
 "source package again."
 msgstr ""
+"El último archivo que se necesita estudiar es el archivo «rules». Este "
+"archivo hace todo el trabajo para crear el paquete. Es un Makefile con "
+"secciones para compilar e instalar el programa, y después crear el archivo "
+"«.deb» a partir de los archivos instalados. También tiene una sección para "
+"limpiar todos los archivos generados por la compilación, con el fin de "
+"volver a quedarse únicamente con el paquete fuente."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:192
 msgid ""
 "Here is a simplified version of the rules file created by ``dh_make`` (which "
 "can be found in the ``dh-make`` package)::"
 msgstr ""
+"Aquí se encuentra una versión simplificada del archivo de reglas («rules») "
+"generada por el comando «dh_make» (que es parte del paquete «dh-make»)::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:204
 msgid ""
@@ -461,6 +513,9 @@ msgid ""
 "build target that ``debian/rules`` is called with as an argument to "
 "``/usr/bin/dh``, which itself will call all the necessary ``dh_*`` commands."
 msgstr ""
+"Analicemos con más detalle este archivo. Lo que hace es pasar cada sección "
+"de compilación invocada por «debian/rules» como un parámetro a "
+"«/usr/bin/dh», que a su vez ejecutará todos los comandos «dh_*» necesarios."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:208
 msgid ""
@@ -469,6 +524,10 @@ msgid ""
 "\"install\", \"binary-arch\", \"binary-indep\", and \"binary\". In order to "
 "see what commands are run in each target, run::"
 msgstr ""
+"«dh» ejecuta una secuencia de órdenes de debhelper. Las secuencias "
+"soportadas son las que corresponden a las secciones del archivo "
+"«debian/rules»: «build», «clean», «install», «binary-indep», y «binary». "
+"Para saber cuales son las órdenes que se ejecutan en cada sección, ejecute::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:217
 msgid ""
@@ -477,6 +536,11 @@ msgid ""
 "arch sequences are passed the \"-a\" option to ensure they only work on "
 "architecture dependent packages."
 msgstr ""
+"A las órdenes de la secuencia binary-indep se incluye la opción «-i» para "
+"asegurar que solo funcionen en paquetes binarios independientes, mientras "
+"que a las órdenes de la secuencia binary-arch se les agrega una opción «-a» "
+"para asegurar que solo funcionen para paquetes independientes de la "
+"arquitectura."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:222
 msgid ""
@@ -485,6 +549,10 @@ msgid ""
 "which commands have already been run, for which packages, and skip running "
 "those commands again."
 msgstr ""
+"Cada orden debhelper registrará cuando se ha ejecutado correctamente en "
+"«debian/package.debhelper.log» (archivo que dh_clean elimina). De esta "
+"manera dh puede saber qué órdenes ya han sido ejecutadas, para qué paquetes "
+"y evitar ejecutar esas órdenes de nuevo."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:227
 msgid ""
@@ -493,6 +561,10 @@ msgid ""
 "command in the sequence. The ``--until``, ``--before``, ``--after``, and ``--"
 "remaining`` options can override this behavior."
 msgstr ""
+"Cada vez que «dh» se ejecuta, comprueba el registro y busca la última orden "
+"registrada que está en la secuencia especificada. Continúa entonces con la "
+"siguiente orden de la secuencia. Las opciones «--until», «--before», «--"
+"after» y «--remaining» pueden modificar este comportamiento."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:232
 msgid ""
@@ -503,6 +575,13 @@ msgid ""
 "options, or run entirely different commands instead. (Note that to use this "
 "feature, you should Build-Depend on debhelper 7.0.50 or above.)"
 msgstr ""
+"Si el archivo «debian/rules» contiene una sección con el nombre "
+"«override_dh_command», cuando se llegue a esa orden en la secuencia, «dh» "
+"ejecutará esa sección en lugar de la orden original. La sección sobrescrita "
+"puede ejecutar entonces la orden con opciones adicionales, o ejecutar "
+"órdenes completamente diferentes en su lugar (téngase en cuenta  que para "
+"usar esta característica, se debería construir las dependencias con "
+"debhelper 7.0.50 o superior)."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:241
 msgid ""
@@ -511,6 +590,10 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ of "
 "the Debian Policy Manual."
 msgstr ""
+"Véase «/usr/share/doc/debhelper/examples/» y «man dh» para más ejemplos. "
+"Véase  también la sección sobre el archivo de reglas («rules») (Section 4.9) "
+" <http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>_ del "
+"manual de normas de Debian."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:247
 msgid "Additional Files"
@@ -533,11 +616,14 @@ msgid ""
 "To install files into your package that are not handled by the upstream "
 "build system."
 msgstr ""
+"Para instalar archivos en el paquete que no son manejados por el sistema de "
+"compilación del proyecto original."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:256
 msgid ""
 "Splitting a single large source package into multiple binary packages."
 msgstr ""
+"Partir paquete fuente en un único fichero grandeen varios paquetes binarios."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:258
 msgid ""
@@ -547,6 +633,11 @@ msgid ""
 "the source package's root directory to ``usr/bin`` and a desktop file in the "
 "``debian`` directory to ``usr/share/applications``::"
 msgstr ""
+"En el primer caso, el archivo «install» debería contener solo una linea por "
+"cada archivo instalado, indicando tanto el archivo como el directorio de "
+"destino. Por ejemplo, el siguiente archivo «install» instalaría el script "
+"«foo» que se encuentra en la raíz del paquete en «usr/bin» y el archivo "
+"«desktop» del directorio «debian» en «usr/share/applications»::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:269
 msgid ""
@@ -561,18 +652,32 @@ msgid ""
 "``foo.install`` containing only the architecture dependent files might look "
 "like::"
 msgstr ""
+"Cuando un paquete fuente crea varios paquetes binarios, «dh» instala los "
+"archivos en «debian/tmp» en lugar de «debian/<paquete>». Los archivos "
+"instalados en «debian/tmp» pueden entonces moverse a diferentes paquetes "
+"binarios usando varios archivos «$nombre_paquete.install». Esto se hace "
+"frecuentemente para separar grandes cantidades de datos que son "
+"independientes de la arquitectura de paquetes que dependen de la misma, "
+"llevándolos a paquetes «Architecture: all».  En este caso, solo se necesita "
+"el nombre de los archivos (o directorios) a instalar, sin el directorio de "
+"instalación. Por ejemplo, un archivo «foo.install» que solo contenga "
+"archivos dependientes de la arquitectura se vería así::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:282
 msgid ""
 "While ``foo-common.install`` containing only the architecture independent "
 "file might look like::"
 msgstr ""
+"Por el contrario, un archivo «foo-common.install» que solo contenga archivos "
+"que son independientes de la arquitectura se vería así:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:290
 msgid ""
 "This would create two binary packages, ``foo`` and ``foo-common``. Both "
 "would require their own paragraph in ``debian/control``."
 msgstr ""
+"Esto crearía dos paquetes binarios, «foo» y «foo-common». Ambos necesitarían "
+"su propia sección en el archivo «debian/control»."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:293
 msgid ""
@@ -580,10 +685,14 @@ msgid ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
+"Véase «man dh_install» y la sección sobre el archivo «install» (Section "
+"5.11) <http://www.debian.org/doc/manuals/maint-"
+"guide/dother.en.html#install>`_ de la guía del nuevo mantenedor de Debian "
+"para obtener más información."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:298
 msgid "The watch file"
-msgstr ""
+msgstr "El archivo de avisos («watch»)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:300
 msgid ""
@@ -593,6 +702,11 @@ msgid ""
 "this writing), while the following lines contain any URLs to parse. For "
 "example::"
 msgstr ""
+"El archivo «debian/watch» permite comprobar automáticamente si existe una "
+"nueva versión del proyecto original con la herramienta «uscan», localizada "
+"en el paquete «devscripts».  La primera línea del archivo «watch» debe "
+"describir la versión del formato (3, en el momento de escribir esto), "
+"mientras que el resto de líneas contienen las URLs a analizar. Por ejemplo::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:309
 msgid ""
@@ -601,6 +715,10 @@ msgid ""
 "version. If a new upstream version is found, it will be automatically "
 "downloaded. For example::"
 msgstr ""
+"Ejecutando «uscan» en el directorio raíz del paquete comparará el número de "
+"versión original que se encuentra en «debian/changelog» con el último "
+"disponible en el proyecto original. Si se encuentra una versión más moderna "
+"del proyecto original, se descargará automáticamente. Por ejemplo::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:322
 msgid ""
@@ -608,6 +726,9 @@ msgid ""
 "(Section 4.11) <http://www.debian.org/doc/debian-policy/ch-source.html#s-"
 "debianwatch>`_ of the Debian Policy Manual."
 msgstr ""
+"Para más información, véase «man uscan» y la sección sobre el archivo "
+"«watch» (Section 4.11) <http://www.debian.org/doc/debian-policy/ch-"
+"source.html#s-debianwatch>`_ del manual de normas de Debian."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:326
 msgid ""
@@ -615,29 +736,37 @@ msgid ""
 "with upstream see `Ubuntu External Health Status "
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 msgstr ""
+"Para obtener una lista de los paquetes de los que el archivo «watch» informa "
+"no estar sincronizados con las versiones originales véase la página «Ubuntu "
+"External Health Status <http://qa.ubuntuwire.org/uehs/no_updated.html>» "
+"(estado de salud externa de Ubuntu, en inglés)_."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:331
 msgid "The source/format file"
-msgstr ""
+msgstr "El archivo de formato («source/format»)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
 msgid ""
 "This file indicates the format of the source package. It should contain a "
 "single line indicating the desired format:"
 msgstr ""
+"Este archivo indica el formato fuente del  paquete. Solo debería contener "
+"una línea indicando el formato deseado:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:336
 msgid "``3.0 (native)`` for Debian native packages (no upstream version)"
 msgstr ""
-"«3.0 (native)» para paquetes nativos de Debian  (no versión upstream )"
+"«3.0 (native)» para paquetes nativos de Debian (sin versión en upstream)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:338
 msgid "``3.0 (quilt)`` for packages with a separate upstream tarball"
 msgstr ""
+"«3.0 (quilt)» para paquetes con un archivo tar de upstream independiente."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:340
 msgid "``1.0`` for packages wishing to explicitly declare the default format"
 msgstr ""
+"«1.0» para paquetes que desean declarar explícitamente el formato por defecto"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
 msgid ""
@@ -647,6 +776,11 @@ msgid ""
 "about the missing file. This warning is informational only and may be safely "
 "ignored."
 msgstr ""
+"Actualmente, el formato fuente del paquete será por defecto 1.0 si no existe "
+"este archivo. Se puede establecer esto explícitamente en el archivo  "
+"«source/format». Si elige no usar este archivo para definir el formato, "
+"Lintian mostrará una advertencia sobre su ausencia. La advertencia es de "
+"carácter informativo y puede ser ignorada."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:347
 msgid ""
@@ -662,24 +796,30 @@ msgstr "Soporte para formatos de compresión adicionales: bzip2, lzma y xz"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:352
 msgid "Support for multiple upstream tarballs"
-msgstr ""
+msgstr "Soporte para varios archivos tar de upstream"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:354
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
 msgstr ""
+"No es necesario volver a empaquetar los archivos tar de upstream para "
+"eliminar el directorio debian"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:356
 msgid ""
 "Debian-specific changes are no longer stored in a single .diff.gz but in "
 "multiple patches compatible with quilt under ``debian/patches/``"
 msgstr ""
+"Los cambios específicos de Debian ya no se guardan en un único archivo "
+".diff.gz, sino en varios parches compatibles con quilt en «debian/patches/»"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:358
 msgid ""
 "http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
 "concerning the switch to the 3.0 source package formats."
 msgstr ""
+"http://wiki.debian.org/Projects/DebSrc3.0 contiene información adicional "
+"concerniente a la migración al formato de paquetes fuente 3.0."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
 msgid ""
@@ -687,6 +827,10 @@ msgid ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
+"Véase «man dpkg-source» y la sección sobre el archivo «source/format» "
+"(Section 5.21) <http://www.debian.org/doc/manuals/maint-"
+"guide/dother.en.html#sourcef>`_ de la guía del nuevo mantenedor de Debian "
+"para más detalle."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:366
 msgid "Additional Resources"
@@ -702,6 +846,15 @@ msgid ""
 "under the debian directory\" <http://www.debian.org/doc/maint-"
 "guide/dother.en.html>`_ discusses additional files that may be used."
 msgstr ""
+"Además de los enlaces hacia el manual de normas de Debian en cada sección de "
+"arriba, la guía del nuevo mantenedor de Debian contiene descripciones más "
+"detallas de cada archivo. El capítulo 4 «Archivos necesarios del directorio "
+"debian» <http://www.debian.org/doc/maint-guide/dreq.en.html>`_ explica con "
+"mayor profundidad los archivos de control («control»), de registro de "
+"cambios («changelog»), de derechos de autor («copyright») y de reglas "
+"(«rules»). El capítulo 5, «Otros archivos dentro del directorio debian» "
+"<http://www.debian.org/doc/maint-guide/dother.en.html>`_ documenta archivos "
+"adicionales que podrían utilizarse."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:3
 msgid "Fixing a bug in Ubuntu"
@@ -717,6 +870,9 @@ msgid ""
 "If you followed the instructions to :doc:`get set up with Ubuntu "
 "Development<./getting-set-up>`, you should be all set and ready to go."
 msgstr ""
+"Si se han seguido las instrucciones de :doc:`ponerse en marcha con el "
+"desarrollo de Ubuntu<./getting-set-up>`, debería estar preparado para "
+"comenzar."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:13
 msgid ""
@@ -726,6 +882,11 @@ msgid ""
 "and merged. In this guide we will go through all the necessary steps one by "
 "one."
 msgstr ""
+"Como se puede observar en la imagen superior, no hay sorpresas en el proceso "
+"de corrección de fallos en Ubuntu: se encuentra un problema, se descarga el "
+"código fuente, se trabaja en la solución, se prueba, se envían los cambios a "
+"Launchpad y se pide que sea revisado e integrado. Durante esta guía se "
+"pasará por todos estos pasos, uno a uno."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:20
 msgid "Finding the problem"
@@ -737,6 +898,10 @@ msgid ""
 "bug report you are encountering yourself (which gives you a good opportunity "
 "to test the fix), or a problem you noted elsewhere, maybe in a bug report."
 msgstr ""
+"Hay muchas formas de encontrar cosas en las que trabajar. Puede ser "
+"reportando un error que usted mismo haya encontrado (lo que le da una buena "
+"oportunidad de probar la solución), o un problema que haya encontrado en "
+"otro lugar, tal vez en un informe de error."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:26
 msgid ""
@@ -745,6 +910,11 @@ msgid ""
 "upstream or in Debian already, lists small bugs (we call them 'bitesize'), "
 "and so on. Check it out and find your first bug to work on."
 msgstr ""
+"«Harvest <http://harvest.ubuntu.com/>»_ es donde se hace el seguimiento de "
+"varias listas TODO (para hacer) relacionadas con el desarrollo de Ubuntu. "
+"Contiene errores que ya han sido corregidos en upstream o en Debian, "
+"pequeños errores denominados de bocado («bitesize») y otros. Compruébelo y "
+"encuentre su primer error en el que trabajar."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:35
 msgid "Figuring out what to fix"
@@ -756,6 +926,9 @@ msgid ""
 "problem, but you do know the path to the affected program on your system, "
 "you can discover the source package that you'll need to work on."
 msgstr ""
+"Si no se conoce el paquete fuente que contiene el código con el problema, "
+"pero sí la ruta al programa afectado en su sistema, puede encontrar el "
+"paquete en el que necesitará trabajar."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:41
 msgid ""
@@ -764,10 +937,14 @@ msgid ""
 "command line.  To find the binary package containing this application, use "
 "this command::"
 msgstr ""
+"Digamos que ha encontrado un error en Tomboy, una aplicación de escritorio "
+"para tomar notas. Tomboy se puede iniciar ejecutando con «/usr/bin/tomboy» "
+"desde la línea de órdenes. Para conocer el paquete binario al que pertenece "
+"esta aplicación, use la siguiente orden::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:48
 msgid "This would print out::"
-msgstr "Imprimir esto::"
+msgstr "Esto mostrará::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:52
 msgid ""
@@ -777,6 +954,11 @@ msgid ""
 "build multiple different binary packages.  To find the source package for a "
 "particular binary package, type::"
 msgstr ""
+"Tenga en cuenta que la parte que precede a los dos puntos es el nombre del "
+"paquete binario. Es muy frecuente que el nombre del paquete binario y del "
+"paquete fuente sean diferentes. Esto es muy común cuando un solo paquete "
+"fuente se utiliza para construir varios paquetes binarios.  Para conocer el "
+"nombre del paquete fuente de un paquete binario, ejecute::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:64
 msgid "Getting the code"
@@ -790,6 +972,11 @@ msgid ""
 "<branching>` branch corresponding to the source package.  Launchpad "
 "maintains source package branches for all the packages in Ubuntu."
 msgstr ""
+"Una vez que se conozca el nombre del paquete fuente, el siguiente paso será "
+"obtener el código fuente para poder analizarlo. En el mundo del desarrollo "
+"de Ubuntu distribuido eso se hace :ref:`*bifurcando* el paquete fuente "
+"<branching>` creando una rama del paquete fuente. Launchpad mantiene ramas "
+"de los fuentes de todos los paquetes de Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:72
 msgid ""
@@ -803,14 +990,23 @@ msgid ""
 "a little bit of credit.  You're now on your way to becoming an Ubuntu "
 "developer!"
 msgstr ""
+"Una vez se tenga una versión local de ese paquete, puede investigar el "
+"problema, hacer una corrección y subir la solución propuesta a Launchpad, "
+"como una rama de Bazaar. Cuando se sienta satisfecho con la corrección, "
+"puede :ref:«enviar una *petición de fusión* <merge-proposal>»,  que lo que "
+"hace es pedir a otros desarrolladores de Ubuntu que revisen y aprueben los "
+"cambios. Si están de acuerdo, un desarrollador de Ubuntu subirá la nueva "
+"versión del paquete a Ubuntu de forma que todos se beneficiende su excelente "
+"trabajo, y recibirá cierto crédito. ¡Ya está en camino de convertirse en un "
+"desarrollador de Ubuntu!"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:81
 msgid ""
 "We'll describe specifics on how to branch the code, push your fix, and "
 "request a review in the following sections."
 msgstr ""
-"En las siguientes secciones se describen detalles sobre cómo bifurcar el "
-"código, presionar su corrección y solicitar una revisión."
+"En las siguientes secciones se describe en detalle cómo bifurcar el código, "
+"subir la corrección y solicitar una revisión."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:86
 msgid "Work on a fix"
@@ -823,6 +1019,11 @@ msgid ""
 "such as obvious typos first. Try to keep changes as minimal as possible and "
 "document your change and assumptions clearly."
 msgstr ""
+"Se han escrito libros completos sobre cómo encontrar errores, cómo "
+"arreglarlos, cómo probarlos, etc. Si completamente novato en programación, "
+"intente primero encontrar errores simples como erratas obvias en los textos. "
+"Intente mantener tan reducidos como sea posible y documente claramente tanto "
+"los cambios como los supuestos que haga."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:93
 msgid ""
@@ -830,37 +1031,52 @@ msgid ""
 "has fixed it already or is currently working on a fix. Good sources to check "
 "are:"
 msgstr ""
+"Antes de comenzar a trabajar en una solución, asegúrese de investigar si "
+"alguien más ya lo ha solucionado o está trabajando en una solución. Algunos "
+"buenos lugares para buscar son:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
+"El sistema de seguimiento de errores (abiertos y cerrados) del proyecto "
+"original (y de Debian)"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:97
 msgid ""
 "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
+"El historial de cambios del proyecto original (o una versión más reciente) "
+"podría haber corregido el problema."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:98
 msgid "bugs or package uploads of Debian or other distributions."
-msgstr ""
+msgstr "La subida de errores o paquetes de Debian u otras distribuciones"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:103
 msgid ""
 "You now want to create a patch which includes the fix.  The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
+"En este momento desea crear un parche que incluya la solución. La orden "
+"«edit-patch» es una forma simple de añadir un parche a un paquete. Ejecute::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:108
 msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
 msgstr ""
+"Esto copiara el paquete a un directorio temporal. Ahora ya puede editar los "
+"archivos con un editor de textos o aplicar parches desde el proyecto "
+"original, por ejemplo::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:113
 msgid ""
 "After editing the file type ``exit`` or press ``control-d`` to quit the "
 "temporary shell.  The new patch will have been added into ``debian/patches``."
 msgstr ""
+"Completada la edición escriba «exit» o pulse «Ctrl+D» para abandonar el "
+"intérprete de órdenes temporal. El nuevo parche se habrá añadido a "
+"«debian/patches»."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:118
 msgid "Testing the fix"
@@ -877,6 +1093,10 @@ msgid ""
 "just omit the step to sign the source package) and ``pbuilder-dist`` will "
 "build the package from source for whatever ``release`` you choose."
 msgstr ""
+"Esto creará un paquete fuente a partir de los contenidos de la rama («-us -"
+"uc» simplemente omitirá el paso de la firma de los paquetes fuente) y "
+"«pbuilder-dist» construirá el paquete a partir del fuente para la versión "
+"que haya elegido."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:129
 msgid ""
@@ -884,6 +1104,9 @@ msgid ""
 "``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i "
 "<package>_<version>.deb``).  Then test to see if the bug is fixed."
 msgstr ""
+"Cuando la compilación concluya con éxito, instale el paquete desde "
+"«~/pbuilder/<release>_result/» (use «sudo dpkg -i <paquete>_<versión>.deb»). "
+"Compruebe entonces si se ha corregido el error."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:136
 msgid "Documenting the fix"
@@ -897,6 +1120,11 @@ msgid ""
 "includes ``debian/changelog``, where changes of each uploaded package are "
 "tracked."
 msgstr ""
+"Es muy importante documentar con suficiente detalle los cambios que se "
+"hacen, de tal forma que los desarrolladores que revisen el código en el "
+"futuro no tengan que imaginar su razonamiento y sus supuestos cuando lo "
+"hizo. Cada paquete fuente de Debian y Ubuntu contiene un archivo "
+"«debian/changelog» donde se mantienen los cambios de cada paquete subido."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:143
 msgid "The easiest way to update this is to run::"
@@ -907,6 +1135,8 @@ msgid ""
 "This will add a boilerplate changelog entry for you and launch an editor "
 "where you can fill in the blanks. An example of this could be::"
 msgstr ""
+"Esto añadirá una entrada modelo al registro de cambios y lanzará un editor "
+"en el que poder rellenar los campos vacíos. Un ejemplo podría ser::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:156
 msgid ""
@@ -916,12 +1146,20 @@ msgid ""
 "always is 'low'). The last line always contains the name, email address and "
 "timestamp (in :rfc:`5322` format) of the change."
 msgstr ""
+"«dch» debería rellenar por usted la primera y última línea de la entrada en "
+"el registro de cambios. La línea 1 contiene el nombre del paquete fuente, la "
+"número de versión, la emisión de Ubuntu a la que va dirigida, la urgencia "
+"(que casi en todos los casos es «low», baja). La última línea siempre "
+"contiene el nombre, la dirección de correo y la fecha y hora (en formato "
+":rfc: «5322») del cambio."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:162
 msgid ""
 "With that out of the way, let's focus on the actual changelog entry itself: "
 "it is very important to document:"
 msgstr ""
+"Realizado todo esto, céntrese en la propia entrada del registro de cambios: "
+"es muy importante documentar:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
 msgid "where the change was done"
@@ -944,34 +1182,47 @@ msgid ""
 "bugs, the bug will be automatically closed when the package is uploaded to "
 "Ubuntu."
 msgstr ""
+"En este (muy sencillo) ejemplo el último punto se cubre por «(LP: #123456)» "
+"que se refiere al reporte 123456 en Launchpad. Los reportes de errores, "
+"discusiones en listas de correos y documentos de especificaciones son buenas "
+"fuentes de información que justifican las razones por las cuales se hacen "
+"los cambios. Como ventaja adicional, si se usa la notación «LP: #<número>» "
+"para de los errores de Launchpad, dichos errores se cerrarán automáticamente "
+"cuando los cambios se suban a Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:178
 msgid "Committing the fix"
-msgstr ""
+msgstr "Aplicar la solución"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:180
 msgid "With the changelog entry written and saved, you can just run::"
 msgstr ""
+"Con la entrada del registro de cambios escrita y guardada, puede ejecutar "
+"simplemente::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:184
 msgid ""
 "and the change will be committed (locally) with your changelog entry as a "
 "commit message."
 msgstr ""
+"y se aplicarán los cambios (localmente) con la entrada del archivo registro "
+"de cambios como mensaje de la confirmación."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:187
 msgid ""
 "To push it to Launchpad, as the remote branch name, you need to stick to the "
 "following nomenclature::"
 msgstr ""
+"Para enviar los cambios a Launchpad, con el nombre de la rama remota, se "
+"debe mantener la siguiente nomenclatura::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:192
 msgid "This could for example be::"
-msgstr ""
+msgstr "Un ejemplo podría ser::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:196
 msgid "So if you just run::"
-msgstr ""
+msgstr "Así, si ejecuta::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:201
 msgid ""
@@ -980,10 +1231,14 @@ msgid ""
 "browser. There find the \"(+) Propose for merging\" link, click it to get "
 "the change reviewed by somebody and included in Ubuntu."
 msgstr ""
+"habrá finalizado el proceso. La orden «push» envía los cambios a Launchpad y "
+"la segunda orden abre la página de Launchpad en la rama remota en su "
+"navegador. Localice ahí en enlace «(+) Propose for merging», púlselo para "
+"que se revise el cambio por algún desarrollador y se incluya en Ubuntu."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
 msgid "Getting Set Up"
-msgstr ""
+msgstr "Fase de preparación"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:5
 msgid ""
@@ -992,26 +1247,33 @@ msgid ""
 "start working with packages, and upload your packages to Ubuntu's hosting "
 "platform, Launchpad. Here's what we'll cover:"
 msgstr ""
+"Hay una serie de cosas que necesita hacer para poder empezar a desarrollar "
+"para Ubuntu. Este artículo está diseñado para que pueda configurar su equipo "
+"de forma que pueda comenzar a trabajar con paquetes y subirlos a Launchpad, "
+"la plataforma de hospedaje de Ubuntu. Los temas cubiertos son:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:10
 msgid "Installing packaging-related software. This includes:"
-msgstr ""
+msgstr "Instalar software relacionado con el empaquetado. Incluye:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:12
 msgid "Ubuntu-specific packaging utilities"
-msgstr ""
+msgstr "Utilidades de empaquetado específicas de Ubuntu"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:13
 msgid "Encryption software so your work can be verified as being done by you"
 msgstr ""
+"Software de cifrado, para poder verificar que el trabajo se hizo por el "
+"usuario indicado"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:14
 msgid "Additional encryption software so you can securely transfer files"
 msgstr ""
+"Software de cifrado adicional para poder enviar archivos de forma segura"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
 msgid "Creating and configuring your account on Launchpad"
-msgstr ""
+msgstr "Crear y configurar una cuenta en Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:17
 msgid ""
@@ -1019,6 +1281,9 @@ msgid ""
 "packages, interact with other developers, and propose your changes on "
 "Launchpad."
 msgstr ""
+"Configurar un entorno de desarrollo para ayudarle compilar paquetes "
+"localmente, interactuar con otros desarrolladores y proponer sus cambios en "
+"Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:22
 msgid ""
@@ -1026,6 +1291,9 @@ msgid ""
 "of Ubuntu. Doing so will allow you to test changes in the same environment "
 "where those changes will actually be applied and used."
 msgstr ""
+"Se recomienda hacer el trabajo de empaquetado usando la versión actual en "
+"desarrollo de Ubuntu. Esto le permitirá probar los cambios en el mismo "
+"entorno en el que serán realmente aplicados y usados."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:26
 msgid ""
@@ -1033,10 +1301,13 @@ msgid ""
 "<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways "
 "to safely use the development release."
 msgstr ""
+"No se preocupe, sin embargo, la «página wiki de la versión de desarrollo de "
+"Ubuntu https://wiki.ubuntu.com/UsingDevelopmentReleases» muestra varias "
+"formas de usar de forma segura la versión de desarrollo."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
-msgstr "Instalar paquetes básicos de software"
+msgstr "Instalar software básico de empaquetado"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:34
 msgid ""
@@ -1044,6 +1315,10 @@ msgid ""
 "much easier.  You will encounter these tools later in this guide.  To "
 "install most of the tools you will need run this command::"
 msgstr ""
+"Existen varias herramientas que le harán su vida de desarrollador de Ubuntu "
+"mucho más fácil. Encontrará estas herramientas más adelante en esta misma "
+"guía. Para instalar la mayoría de las herramientas necesitará ejecutar esta "
+"orden::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:41
 msgid ""
@@ -1052,6 +1327,10 @@ msgid ""
 "install the above and other tools which are quite common in Ubuntu "
 "development::"
 msgstr ""
+"Nota: desde Ubuntu 11.10 «Oneiric Ocelot» (o si tiene activa las "
+"actualizaciones no soportadas en una versión actualmente soportada), el "
+"siguiente comando instalará las herramientas anteriores y otras que son "
+"bastante habituales en el desarrollo de Ubuntu::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:49
 msgid "This command will install the following software:"
@@ -1063,18 +1342,26 @@ msgid ""
 "cryptographic key with which you will sign files you want to upload to "
 "Launchpad."
 msgstr ""
+"«gnupg» -- «GNU Privacy Guard»_ contiene herramientas que necesitará para "
+"crear una clave criptográfica con la que firmar los archivos que quiera "
+"subir a Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:54
 msgid ""
 "``pbuilder`` -- a tool to do a reproducible builds of a package in a clean "
 "and isolated environment."
 msgstr ""
+"«pbuilder» -- una herramienta para realizar compilaciones reproducibles de "
+"una paquete en un entorno limpio y aislado."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:56
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
 msgstr ""
+"«ubuntu-dev-tools» (y «devscripts», una dependencia directa) -- una "
+"colección de herramientas que hace muchas tareas del empaquetado más "
+"sencillas."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:58
 msgid ""
@@ -1083,22 +1370,30 @@ msgid ""
 "easy for many developers to collaborate and work on the same code while "
 "keeping it trivial to merge each others work."
 msgstr ""
+"«bzr-builddeb» (y «bzr», una dependencia) -- sistema de control de versiones "
+"distribuido con Bazaar, una nueva forma de trabajar con paquetes para Ubuntu "
+"que facilitará a muchos desarrolladores colaborar y trabajar sobre el mismo "
+"código, haciendo que resulte sencillo combinar el trabajo de los demás."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:62
 msgid ""
 "``apt-file`` provides an easy way to find the binary package that contains a "
 "given file."
 msgstr ""
+"«apt-file» proporciona una forma sencilla de encontrar el paquete binario "
+"que contiene un archivo determinado."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:64
 msgid ""
 "``apt-cache`` (part of the ``apt`` package) provides even more information "
 "about packages on Ubuntu."
 msgstr ""
+"«apt-cache» (parte del paquete «apt») proporciona incluso más información "
+"sobre los paquetes en Ubuntu."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:69
 msgid "Create your GPG key"
-msgstr ""
+msgstr "Crear su clave GPG"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:71
 msgid ""
@@ -1109,10 +1404,16 @@ msgid ""
 "you upload a source package to Launchpad, it will only accept the package if "
 "it can absolutely determine who uploaded the package."
 msgstr ""
+"GPG viene de «GNU Privacy Guard» (guardian de privacidad de GNU)_ e "
+"implementa el estándar OpenPGP que le permite firmar y cifrar mensajes y "
+"archivos. Es útil para varios propósitos. En nuestro caso es importante que "
+"pueda firmar archivos con su clave de forma que puedan identificarse como "
+"algo en lo que usted ha trabajado. Si sube un paquete fuente a Launchad, "
+"solo lo aceptará si puede determinar absolutamente quién lo ha subido."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:78
 msgid "To generate a new GPG key, run::"
-msgstr ""
+msgstr "Para generar una nueva clave GPG, ejecute::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:82
 msgid ""
@@ -1127,6 +1428,17 @@ msgid ""
 "passphrase, choose a safe one (a passphrase is just a password which is "
 "allowed to include spaces)."
 msgstr ""
+"GPG primero le preguntará qué tipo de clave desea generar. Elegir el tipo "
+"por defecto (RSA y DSA) es correcto. Después le preguntará por el tamaño de "
+"la clave. El predeterminado (actualmente 2048) es adecuado, pero 4096 es más "
+"seguro. Posteriormente le preguntará si desea que la clave caduque en algún "
+"momento. Es seguro decir «0», lo que significa que nunca expirará. Las "
+"últimas preguntas serán sobre su nombre y dirección de correo electrónico. "
+"Aquí simplemente elija los que quiere usar para el desarrollo de Ubuntu, y "
+"puede añadir direcciones de correo electrónico adicionales posteriormente. "
+"No es necesario añadir un comentario. Luego tendrá que establecer una frase "
+"de paso, elija una segura (una frase de paso es simplemente una contraseña "
+"en la que se permite la inclusión de espacios)."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:92
 msgid ""
@@ -1135,20 +1447,27 @@ msgid ""
 "just fine.  Move the cursor around, type some paragraphs of random text, "
 "load some web page."
 msgstr ""
+"Ahora GPG creará la clave, lo que le puede llevar un tiempo; necesita "
+"algunos bytes aleatorios, así que si le da al sistema algún trabajado para "
+"hacer, mejor. Mueva el cursor, escriba algunos párrafos de texto aleatorio o "
+"cargue alguna página web."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:97
 msgid "Once this is done, you will get a message similar to this one::"
-msgstr ""
+msgstr "Una vez hecho esto, recibirá un mensaje similar a::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:104
 msgid "In this case ``43CDE61D`` is the *key ID*."
-msgstr ""
+msgstr "En este caso «43CDE61D» es el *ID de clave*."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:106
 msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
 msgstr ""
+"Después necesitará cargar la parte pública de su clave a un servidor de "
+"claves, de forma que el resto del mundo pueda identificar los mensajes y "
+"archivos como suyos. Para hacerlo, escriba::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:111
 msgid ""
@@ -1157,10 +1476,14 @@ msgid ""
 "complete, your signed public key will be ready to verify your contributions "
 "around the world."
 msgstr ""
+"Esto mandará su clave a un servidor de claves, con lo que una red de "
+"servidores de claves la sincronizarán automáticamente entre ellos. Una vez "
+"que se complete esta sincronización, su clave pública firmada estará lista "
+"para verificar sus contribuciones por todo el mundo."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:118
 msgid "Create your SSH key"
-msgstr ""
+msgstr "Crear su clave SSH"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:120
 msgid ""
@@ -1170,10 +1493,15 @@ msgid ""
 "transfer files. For our purposes, we will mainly be using SSH to securely "
 "upload source packages to Launchpad."
 msgstr ""
+"SSH_ viene de *Secure Shell* (intérprete de órdenes seguro) y es un "
+"protocolo que le permite intercambiar datos de una forma segura en una red. "
+"Es habitual usar SSH para acceder a un intérprete de órdenes en otro equipo "
+"y usarlo para transferir archivos de forma segura. Para nuestros propósitos, "
+"usaremos SSH básicamente para subir paquetes fuentes a Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:126
 msgid "To generate an SSH key, enter::"
-msgstr ""
+msgstr "Para generar una clave SSH, escriba::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:130
 msgid ""
@@ -1181,6 +1509,9 @@ msgid ""
 "is. For security purposes, it is highly recommended that you use a "
 "passphrase."
 msgstr ""
+"El nombre de archivo por defecto normalmente tiene sentido, así que puede "
+"dejarlo tal cual. Por motivos de seguridad, se recomienda encarecidamente "
+"que use una frase de paso."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:135
 msgid "Set up pbuilder"
@@ -1191,6 +1522,8 @@ msgid ""
 "``pbuilder`` allows you to build packages locally on your machine. It serves "
 "a couple of purposes:"
 msgstr ""
+"«pbuilder» le permite compilar paquetes localmente en su equipo. Sirve para "
+"un par de propósitos:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:140
 msgid ""
@@ -1198,16 +1531,23 @@ msgid ""
 "make sure your builds succeed in a reproducible way, but without modifying "
 "your local system"
 msgstr ""
+"La compilación se hará en un entorno mínimo y limpio. Esto le ayuda a "
+"asegurarse de que sus compilaciones se completan de una forma reproducible, "
+"pero sin modificar su sistema local."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:143
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
 msgstr ""
+"No es necesario instalar todas las *dependencias de compilación* necesarias "
+"de forma local."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:144
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
 msgstr ""
+"Puede configurar varias instancias para distintas versiones de Ubuntu y "
+"Debian."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:146
 msgid "Setting ``pbuilder`` up is very easy, run::"
@@ -1220,10 +1560,14 @@ msgid ""
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
+"donde <versión> es, por ejemplo, «natty», «maverick», «lucid» o, en el caso "
+"de Debian, quizá «sid». Le llevará un rato ya que descargará todos los "
+"paquetes necesarios para una «instalación mínima». Sin embargo, estos "
+"paquetes serán cacheados."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:156
 msgid "Get set up to work with Launchpad"
-msgstr ""
+msgstr "Preparar una configuración para trabajar con Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:158
 msgid ""
@@ -1231,10 +1575,13 @@ msgid ""
 "configure your system to work with Launchpad. This section will focus on the "
 "following topics:"
 msgstr ""
+"Con una configuración local básica establecida, el siguiente paso será "
+"configurar el sistema para trabajar con Launchpad. Esta sección se centrará "
+"en los siguientes temas:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:162
 msgid "What Launchpad is and creating a Launchpad account"
-msgstr ""
+msgstr "Qué es Launchpad y la creación de una cuenta de Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:163
 msgid "Uploading your GPG and SSH keys to Launchpad"
@@ -1260,6 +1607,12 @@ msgid ""
 "team memberships.  You will also use Launchpad to publish your proposed "
 "fixes, and get other Ubuntu developers to review and sponsor them."
 msgstr ""
+"Launchpad es la pieza central de la infraestructura usada en Ubuntu. No sólo "
+"almacena todos sus paquetes y código, sino también cosas tales como "
+"traducciones, informes de errores e información sobre la gente que trabaja "
+"en Ubuntu y su pertenencia a equipos. También usará Launchpad para publicar "
+"sus propuestas de solución y hacer que otros desarrolladores de Ubuntu las "
+"revisen y esponsoricen."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:177
 msgid ""
@@ -1267,6 +1620,9 @@ msgid ""
 "information. This will allow you to download and upload code, submit bug "
 "reports, and more."
 msgstr ""
+"Necesitará registrarse en Launchpad y proporcionar una cantidad mínima de "
+"información. Esto le permitirá descargar y subir código, enviar informes de "
+"error y más cosas."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:181
 msgid ""
@@ -1274,6 +1630,9 @@ msgid ""
 "more information see the `Launchpad Help wiki "
 "<https://help.launchpad.net/>`_."
 msgstr ""
+"Además de hospedar a Ubuntu, Launchpad puede hospedar a cualquier otro "
+"proyecto de software libre. Para más información véase la «Wiki de ayuda de "
+"Launchpad <https://help.launchpad.net/>»_."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:186
 msgid "Get a Launchpad account"
@@ -1286,6 +1645,10 @@ msgid ""
 "can find this out by going to https://launchpad.net/~ and looking for the "
 "part after the `~` in the URL."
 msgstr ""
+"Si no tiene todavía una cuenta de Launchpad, puede fácilmente «crear una»_. "
+"Si tiene una cuenta de Launchpad pero no puede recordar su identificador de "
+"Launchpad, puede encontrarlo visitando https://launchpad.net/~ y mirando en "
+"la parte que sigue al símbolo «~» en la URL."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:193
 msgid ""
@@ -1293,6 +1656,9 @@ msgid ""
 "is encouraged for you to use your real name here so that your Ubuntu "
 "developer colleagues will be able to get to know you better."
 msgstr ""
+"El proceso de registro de Launchpad le pedirá que elija un nombre de "
+"usuario. Se recomienda que use su nombre real de forma que los colegas "
+"desarrolladores de Ubuntu lleguen a conocerle mejor."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:197
 msgid ""
@@ -1300,6 +1666,10 @@ msgid ""
 "link you need to open in your browser in order to verify your email address. "
 "If you don't receive it, check in your spam folder."
 msgstr ""
+"Cuando registre una nueva cuenta, Launchpad le enviará un correo con un "
+"enlace que deberá abrir en su navegador para verificar su dirección de "
+"correo electrónico. Si no lo recibe, compruebe su carpeta de correo no "
+"deseado (spam)."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:201
 msgid ""
@@ -1307,6 +1677,9 @@ msgid ""
 "<https://help.launchpad.net/YourAccount/NewAccount>`_ on Launchpad has more "
 "information about the process and additional settings you can change."
 msgstr ""
+"«La página de ayuda a la nueva cuenta "
+"<https://help.launchpad.net/YourAccount/NewAccount>_ en Launchpad contiene "
+"más información sobre el proceso y parámetros adicionales que puede cambiar."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:207
 msgid "Upload your GPG key to Launchpad"
@@ -1314,11 +1687,11 @@ msgstr "Subir su clave GPG a Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:209
 msgid "To find about your GPG fingerprint, run::"
-msgstr ""
+msgstr "Para buscar su huella de GPG, ejecute::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:213
 msgid "and it will print out something like::"
-msgstr ""
+msgstr "y le mostrará algo como::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:221
 msgid ""
@@ -1326,6 +1699,10 @@ msgid ""
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
 "FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on \"Import Key\"."
 msgstr ""
+"Diríjase a https://launchpad.net/~/+editpgpkeys y copie la huella de la "
+"clave («Key fingerprint») en la casilla de texto. En el caso anterior sería "
+"«5C28 0144 FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D». Ahora pulse en «Import "
+"Key» (importar clave)."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:226
 msgid ""
@@ -1336,6 +1713,13 @@ msgid ""
 "you for the password you chose for the key when GPG generated it. Enter the "
 "password, then click the link to confirm that the key is yours.`"
 msgstr ""
+"Launchpad usará la huella para comprobar su clave en el servidor de claves "
+"de Ubuntu. Si tiene éxito, le enviará un correo electrónico cifrado, "
+"pidiéndole que confirme la clave importada. Compruebe su cuenta de correo "
+"electrónico y lea el mensaje que le ha enviado Launchpad. `Si su cliente de "
+"correo electrónico soporta el cifrado de OpenPGP, le pedirá la contraseña "
+"que eligió para la clave cuando la generó GPG. Escriba la contraseña, y "
+"luego pulse en el enlace que confirma que esa clave es suya.`"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:233
 msgid ""
@@ -1344,12 +1728,19 @@ msgid ""
 "encryption, copy the encrypted email's contents, type ``gpg`` in your "
 "terminal, then paste the email contents into your terminal window."
 msgstr ""
+"Launchpad cifra el mensaje, usando su clave pública, de forma que puede "
+"estar seguro de que esa clave es suya. Si su software de correo electrónico "
+"no soporta el cifrado de OpenPGP, copie el contenido del correo electrónico "
+"cifrado, escriba «gpg» en su terminal y luego copie el contenido de sul "
+"mensaje en su ventana del terminal."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:238
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
 msgstr ""
+"De vuelta a la web de Launchpad, use el botón «Confirm» (confirmar) y "
+"Launchpad completará la importación de su clave OpenPGP."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:241
 msgid ""
@@ -1371,6 +1762,12 @@ msgid ""
 "and paste them into the text box on the web page that says \"Add an SSH "
 "key\". Now click \"Import Public Key\"."
 msgstr ""
+"Abra https://launchpad.net/~/+editsshkeys en su navegador web y abra también "
+"«~/.ssh/id_rsa.pub» en un editor de textos. Esta es la parte pública de su "
+"clave SSH, así que es seguro compartirla en Launchpad. Copie el contenido "
+"del archivo y péguelo en la casilla de texto de la página web que dice «Add "
+"an SSH key\" (añadir una clave SSH). Ahora pulse «Import Public Key» "
+"(importar clave pública)."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:253
 msgid ""
@@ -1378,6 +1775,9 @@ msgid ""
 "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
 "Launchpad."
 msgstr ""
+"Para más información sobre este proceso, visite la página `<crear una pareja "
+"de claves SSH <https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>` "
+"en Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:259
 msgid "Configure Bazaar"
@@ -1390,10 +1790,15 @@ msgid ""
 "concurrently.  It is used for the new Ubuntu Distributed Development method "
 "of working with Ubuntu packages."
 msgstr ""
+"Bazaar es la herramienta que se usa para almacenar cambios en el código de "
+"una manera lógica, para intercambiar los cambios propuestos y para "
+"combinarlos, incluso si el desarrollo se realiza de forma concurrente. Se "
+"usa para el nuevo método de desarrollo distribuido de Ubuntu para trabajar "
+"con paquetes de Ubuntu."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:266
 msgid "To tell Bazaar who you are, simply run::"
-msgstr ""
+msgstr "Para decirle a Bazaar quién es usted, simplemente ejecute::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:271
 msgid ""
@@ -1401,6 +1806,10 @@ msgid ""
 "your commit messages. With `launchpad-login` you set your Launchpad ID. This "
 "way code that you publish in Launchpad will be associated with you."
 msgstr ""
+"`whoami` le dirá a Bazaar qué nombre y dirección de correo electrónico "
+"debería usar para enviarle mensajes. Con `launchpad-login` establece su ID "
+"de Launchpad. De esta forma el código que publique en Launchpad se asociará "
+"a usted."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:275
 msgid ""
@@ -1408,10 +1817,13 @@ msgid ""
 "where it redirects you. The part after the \"~\" in the URL is your "
 "Launchpad ID.)"
 msgstr ""
+"Nota: si no puede recordar el ID, visite https://launchpad.net/~ y mire a "
+"dónde le redirecciona. La parte tras el símbolo «~» en la URL es su ID de "
+"Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:281
 msgid "Configure your shell"
-msgstr ""
+msgstr "Configurar el intérprete de órdenes"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:282
 msgid ""
@@ -1419,20 +1831,25 @@ msgid ""
 "as well. Simply open your `~/.bashrc` in a text editor and add something "
 "like this to the bottom of it::"
 msgstr ""
+"De forma similar a Bazaar, las herramientas de empaquetado de Debian/Ubuntu "
+"necesitan conocerle. Simplemente abra su `~/.bashrc` en un editor de textos "
+"y añada lo siguiente al final del mismo::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:289
 msgid "Now save the file and either restart your terminal or run::"
-msgstr ""
+msgstr "Ahora guarde el archivo y reinicie su terminal o ejecute::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:293
 msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
 msgstr ""
+"(si no usa el intérprete de órdenes por defecto, que es `bash`, edite el "
+"archivo de configuración de dicho intérprete como corresponda)."
 
 #: ../ubuntu-packaging-guide/index.rst:9
 msgid "Ubuntu Packaging Guide"
-msgstr ""
+msgstr "Guía de empaquetado de Ubuntu"
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
@@ -1441,6 +1858,10 @@ msgid ""
 "single component can be obtained easily and every single change to the "
 "Ubuntu platform can be reviewed."
 msgstr ""
+"Ubuntu no solo un sistema operativo libre, gratuito y de código abierto, su "
+"plataforma también es abierta y está desarrollada de forma transparente. El "
+"código fuente para cada uno de los componentes se puede obtener fácilmente y "
+"todos los cambios realizados a la plataforma de Ubuntu pueden ser revisados."
 
 #: ../ubuntu-packaging-guide/index.rst:16
 msgid ""
@@ -1448,6 +1869,9 @@ msgid ""
 "of Ubuntu platform developers is always interested in helping peers getting "
 "started."
 msgstr ""
+"Esto significa que puede involucrarse activamente en mejorarlo y que la "
+"comunidad de desarrolladores de la plataforma de Ubuntu está siempre "
+"interesada en ayudar a las personas que comienzan."
 
 #: ../ubuntu-packaging-guide/index.rst:20
 msgid "The guide is split up into two sections:"
@@ -1456,12 +1880,16 @@ msgstr "La guía está separada en dos secciones:"
 #: ../ubuntu-packaging-guide/index.rst:22
 msgid "A list of articles based on tasks, things you want to get done."
 msgstr ""
+"Una lista de artículos basados en tareas, cosas que puede desear que se "
+"hagan."
 
 #: ../ubuntu-packaging-guide/index.rst:23
 msgid ""
 "A set of knowledge-base articles that dig deeper into specific bits of our "
 "tools and workflows."
 msgstr ""
+"Un conjunto de artículos de la base de conocimientos que profundizan en "
+"partes especificas de las herramientas y flujos de trabajo."
 
 #: ../ubuntu-packaging-guide/index.rst:26
 msgid ""
@@ -1472,18 +1900,24 @@ msgid ""
 ":doc:`UDD Introduction<./udd-intro>` page for an introduction to the "
 "differences."
 msgstr ""
+"Esta guía se centra en el método de empaquetado del desarrollo distribuido "
+"de Ubuntu. Es una nueva forma de empaquetado que usa ramas de control de "
+"revisiones distribuidas. Actualmente tiene algunas limitaciones lo que "
+"significa que muchos equipos de Ubuntu usan métodos de  :doc:`empaquetado "
+"tradicional<./traditional-packaging>`. Véase la página :doc:`Introducción a "
+"UDD<./udd-intro>` para una introducción sobre las diferencias."
 
 #: ../ubuntu-packaging-guide/index.rst:33
 msgid "Articles"
-msgstr ""
+msgstr "Artículos"
 
 #: ../ubuntu-packaging-guide/index.rst:48
 msgid "Knowledge Base"
-msgstr ""
+msgstr "Base de conocimiento"
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
-msgstr ""
+msgstr "Introducción al desarrollo de Ubuntu"
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:5
 msgid ""
@@ -3985,7 +4419,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:103
 msgid "Canceling an upload"
-msgstr ""
+msgstr "Cancelar una descarga"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:105
 msgid ""
@@ -4025,6 +4459,9 @@ msgid ""
 "changes based on what the contributor provides then you should start by "
 "grabbing their branch::"
 msgstr ""
+"Si no tiene una rama existente, pero sabe que desea hacer cambios en base a "
+"lo proporcionado por el contribuyente, debería entonces comenzar por obtener "
+"su rama::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:133
 msgid ""
@@ -4108,6 +4545,8 @@ msgid ""
 "This only works with bzr-builddeb 2.7.5 and bzr 2.4, for older versions use "
 "`debcommit`."
 msgstr ""
+"Esto solo funciona con bzr-builddeb 2.7.5 y bzr 2.4, para versiones "
+"anteriores use «debcommit»."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:71
 msgid ""
@@ -4120,18 +4559,24 @@ msgid ""
 "In order to build the package you can use the `bzr builddeb` command from "
 "the `bzr-builddeb` package.  You can build a source package with::"
 msgstr ""
+"Para de construir el paquete se puede utilizar la orden «bzr builddeb» del "
+"paquete «bzr-builddeb». Se puede construir un paquete fuente con::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:79
 msgid ""
 "(`bd` is an alias for `builddeb`.)  You can leave the package unsigned by "
 "appending `-- -uc -us` to the command."
 msgstr ""
+"(«bd» es un alias de «builddeb») Se puede dejar el paquete sin firmar "
+"añadiendo «--- uc-us» a la orden."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:82
 msgid ""
 "It is also possible to use your normal tools, as long as they are able to "
 "strip the .bzr directories from the package, e.g.::"
 msgstr ""
+"También es posible utilizar sus herramientas habituales, siempre que sean "
+"capaces de eliminar los directorios .bzr del paquete, por ejemplo::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:87
 msgid ""
@@ -4148,3 +4593,5 @@ msgid ""
 "Once you've got the source package, you can build it as normal with "
 "``pbuilder-dist`` (or ``pbuilder`` or `sbuild`_)."
 msgstr ""
+"Una vez haya obtenido el paquete fuente, puede construirlo de forma normal "
+"con «pbuilder-dist» (o «pbuilder» o «sbuild»_)."
