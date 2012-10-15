@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-10-13 18:03+0000\n"
+"PO-Revision-Date: 2012-10-14 18:39+0000\n"
 "Last-Translator: Jose Luis Tirado <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-14 04:45+0000\n"
+"X-Launchpad-Export-Date: 2012-10-15 05:23+0000\n"
 "X-Generator: Launchpad (build 16137)\n"
 "Language: es\n"
 
@@ -2977,18 +2977,27 @@ msgid ""
 "Many errors can be automatically detected by our tool ``lintian`` which can "
 "be run on both the source .dsc metadata file and the .deb binary package::"
 msgstr ""
+"Incluso si genera el paquete binario .deb, el empaquetado puede contener "
+"errores. Muchos errores se pueden detectar automáticamente mediante la "
+"herramienta «lintian» que se puede ejecutar tanto sobre el archivo fuente "
+".dsc de metadatos como sobre el paquete binario .deb::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:160
 msgid ""
 "A description of each of the problems it reports can be found on the "
 "`lintian website`_."
 msgstr ""
+"Se puede encontrar una descripción de los problemas que reporta en `el sitio "
+"web de lintian`_."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:163
 msgid ""
 "After making a fix to the packaging you can rebuild using ``-nc`` \"no "
 "clean\" without having to build from scratch::"
 msgstr ""
+"Después de realizar una corrección al empaquetado puede reconstruirlo usando "
+"la opción «-nc» («no clean», sin limpiar) para no tener que compilarlo desde "
+"el principio::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:168
 msgid ""
@@ -2996,12 +3005,18 @@ msgid ""
 "on a clean system using ``pbuilder``. If you haven't set up ``pbuilder-"
 "dist`` yet, :doc:`do so now<./getting-set-up>`::"
 msgstr ""
+"Después de comprobar que el paquete se compila en local debería asegurarse "
+"de que lo hace también en un sistema limpio usando «pbuilder». Si no ha "
+"configurado todavía «pbuilder-dist» todavía, :doc:`hágalo ahora<./getting-"
+"set-up>`::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:176
 msgid ""
 "When you are happy with your package you will want others to review it.  You "
 "can upload the branch to Launchpad for review::"
 msgstr ""
+"Cuando esté satisfecho con su paquete deseará que otros lo revisen. Puede "
+"subirlo la rama a Launchpad para su revisión::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:181
 msgid ""
@@ -3009,10 +3024,14 @@ msgid ""
 "give an easy way for you and others to test the binary packages. You will "
 "need to set up a PPA in Launchad then upload with ``dput``::"
 msgstr ""
+"Al subirlo a un PPA («Personal Package Archivo», repositorio de paquetes "
+"personal) se asegurará de que se compila y que le proporciona a usted y a "
+"los demás una forma fácil de probar los paquetes binarios. Necesitará "
+"configurar un PPA en Launchpad y luego subirlo con «dput»::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:187
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
-msgstr ""
+msgstr "Véase :doc:`subir<./udd-uploading>` para más información."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:189
 msgid ""
@@ -3020,10 +3039,13 @@ msgid ""
 "mailing list`_.  There might also be a more specific team you could ask such "
 "as the GNU team for more specific questions."
 msgstr ""
+"Puede pedir que se revise en el canal de IRC «#ubuntu-motu», o en la `lista "
+"de correo de MOTU`_. También podría existir un equipo más específico al que "
+"se lo podría solicitar como el equipo GNU para temas más concretos."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:194
 msgid "Submitting for inclusion"
-msgstr ""
+msgstr "Enviar para su inclusión"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:196
 msgid ""
@@ -3033,6 +3055,12 @@ msgid ""
 "available in not just Debian and Ubuntu but all of their derivatives as "
 "well. Here are some useful links for submitting new packages to Debian:"
 msgstr ""
+"Existe varios caminos por los que un paquete puede entrar en Ubuntu. En la "
+"mayoría de los casos, ir antes por Debian puede ser la mejor alternativa. De "
+"esta forma se asegura de que su paquete llegará al mayor número de usuarios, "
+"ya que también estará disponible no solo para Debian y Ubuntu, sino para "
+"todos sus derivados también. Estos son algunos enlaces útiles para enviar "
+"nuevos paquetes a Debian:"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:203
 msgid ""
@@ -3040,6 +3068,9 @@ msgid ""
 "prospective Debian Developers. It is where you can find a sponsor to upload "
 "your package to the archive."
 msgstr ""
+"` P+F de los mentores de Debian`_ - debian-mentors está para la tutoría de "
+"nuevos y futuros desarrolladores de Debian. Es el lugar en el que puede "
+"encontrar un patrocinador que suba su paquete al repositorio."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:207
 msgid ""
@@ -3047,6 +3078,9 @@ msgid ""
 "\"Intent to Package\" and \"Request for Package\" bugs as well as list of "
 "open ITPs and RFPs."
 msgstr ""
+"`Paquetes futuros y necesitados de trabajo`_ - Información sobre cómo "
+"presentar errores «Intención de empaquetar» y «Petición para empaquetar» así "
+"como una lista de ITPs y RFPs abiertos."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:211
 msgid ""
@@ -3054,6 +3088,10 @@ msgid ""
 "invaluable for both Ubuntu and Debian packagers. This section documents "
 "processes for submitting new packages."
 msgstr ""
+"`Referencia de nuevos desarrolladores de Debian, 5.1. Nuevos paquetes`_ - El "
+"documento completo es una fuente inestimable para empaquetadores tanto de "
+"Ubuntu como de Debian. Esta sección documenta el proceso de envío de nuevos "
+"paquetes."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:215
 msgid ""
@@ -3062,10 +3100,14 @@ msgid ""
 "will make it into Ubuntu in time for the next release. This process is "
 "documented on the `\"New Packages\" section of the Ubuntu wiki`_."
 msgstr ""
+"En algunos casos, podría tener sentido ir directamente a Ubuntu primero. Por "
+"ejemplo, Debian podría estar en fase de congelación haciendo improbable que "
+"su paquete llegue a Ubuntu a tiempo para la próxima emisión. Este proceso "
+"está documentado en la `sección  «Nuevos paquetes»\" de la wiki de Ubuntu`_."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
 msgid "Patches to Packages"
-msgstr ""
+msgstr "Parches a los paquetes"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:5
 msgid ""
@@ -3078,6 +3120,16 @@ msgid ""
 "or extract the change to submit to the upstream project.  Instead, we keep "
 "these changes as separate patches, in the form of diff files."
 msgstr ""
+"A veces, los mantenedores de paquetes de Ubuntu tienen que cambiar el código "
+"fuente recibido desde aguas arriba para que funcione correctamente en "
+"Ubuntu. Ejemplos de esto incluyen parches aguas arriba que no han llegado "
+"todavía a la versión emitida, o cambios al sistema de compilación aguas "
+"arribas que son necesarios únicamente para compilarlos en Ubuntu. Se podría "
+"cambiar el código recibido de aguas arriba directamente, pero al hacerlo que "
+"dificulta la eliminación de los parches posteriormente cuando se hayan "
+"incorporado los cambios aguas arriba, o extraer el cambio para enviarlo al "
+"proyecto aguas arriba. En su lugar, se mantienen los cambios como parches "
+"independientes, en forma de archivos de diferencias (diff)."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:14
 msgid ""
@@ -3085,10 +3137,13 @@ msgid ""
 "fortunately we are standardising on one system, `Quilt`_, which is now used "
 "by most packages."
 msgstr ""
+"Existen varias formas de gestionar los parches de paquetes Debian, pero "
+"afortunadamente se están estandarizando en un solo sistema, `Quilt`_, que "
+"actualmente se usa en la mayoría de los paquetes."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:18
 msgid "Let's look at an example package, ``kamoso`` in Natty::"
-msgstr ""
+msgstr "Veámoslo con un paquete de ejemplo, ``kamoso`` en Natty::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:22
 msgid ""
@@ -3099,54 +3154,71 @@ msgid ""
 "in this case the Kubuntu team adds their own prefix to show the patch comes "
 "from them rather than from Debian."
 msgstr ""
+"Los parches se mantienen en «debian/patches». Este paquete tiene un parche "
+"«kubuntu_01_fix_qmax_on_armel.diff» para arreglar un fallo de compilación en "
+"ARM. Al parche se le ha dado un nombre descriptivo de lo que hace, un número "
+"para mantener los parches ordenados (dos parches se puede solapar si cambian "
+"el mismo archivo) y en este caso el equipo de Kubuntu añade su propio "
+"prefijo para mostrar que el parche proviene de ellos en lugar de venir de "
+"Debian."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:29
 msgid "The order of patches to apply is kept in ``debian/patches/series``."
 msgstr ""
+"El orden de los parches a aplicar se mantiene en «debian/patches/series»."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:32
 msgid "Patches with Quilt"
-msgstr ""
+msgstr "Parches con Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:34
 msgid ""
 "Before working with Quilt you need to tell it where to find the patches.  "
 "Add this to your ``~/.bashrc``::"
 msgstr ""
+"Antes de comenzar a trabajar con Quilt necesita indicarle dónde encontrar "
+"los parches. Añádalo a su archivo «~/.bashrc»::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:39
 msgid "And source the file to apply the new export::"
-msgstr ""
+msgstr "Y como fuente el archivo para aplicar la nueva exportación::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:43
 msgid ""
 "By default all patches are applied already to UDD checkouts or downloaded "
 "packages.  You can check this with::"
 msgstr ""
+"Por defecto todos los parches ya están aplicados a las extracción UDD o a "
+"los paquetes descargados. Puede comprobarlo con::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:49
 msgid "If you wanted to remove the patch you would run ``pop``::"
-msgstr ""
+msgstr "Si quería eliminar el parche debería ejecutar «pop»::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:57
 msgid "And to apply a patch you use ``push``::"
-msgstr ""
+msgstr "Y para aplicar un parche use «push»::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:67
 msgid "Adding a New Patch"
-msgstr ""
+msgstr "Añadir un nuevo parche"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:69
 msgid ""
 "To add a new patch you need to tell Quilt to create a new patch, tell it "
 "which files that patch should change, edit the files then refresh the patch::"
 msgstr ""
+"Para añadir un nuevo parche necesita indicarle a Quilt que cree un nuevo "
+"parche, qué archivos debería cambiar ese parche, editar los archivos y "
+"refrescar el parche::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:81
 msgid ""
 "The ``quilt add`` step is important, if you forget it the files will not end "
 "up in the patch."
 msgstr ""
+"El paso «quilt add» es importante, si lo olvida los archivos no terminarán "
+"en el parche."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:84
 msgid ""
@@ -3155,12 +3227,19 @@ msgid ""
 "file will have had the new patch added to it.  You should add the new file "
 "to the packaging::"
 msgstr ""
+"El cambio estará ahora en "
+"«debian/patches/kubuntu_02_program_description.diff» y en el archivo "
+"«series» se habrá añadido el parche. Ahora debería añadir el archivo al "
+"empaquetado::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:94
 msgid ""
 "Quilt keeps its metadata in the ``.pc/`` directory, so currently you need to "
 "add that to the packaging too.  This should be improved in future."
 msgstr ""
+"Quilt mantiene sus metadatos en el directorio «.pc/», así que actualmente "
+"necesita añadirlo también al empaquetado. Esto debería mejorarse en el "
+"futuro."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:97
 msgid ""
@@ -3170,10 +3249,16 @@ msgid ""
 "for example, so it would break all translations.  If in doubt, do ask the "
 "upstream author before adding a patch."
 msgstr ""
+"Como regla general debería tener cuidado al añadir parches a programas a "
+"menos que lleguen desde aguas arriba, frecuentemente hay una buena razón "
+"para que el cambio no se haya hecho todavía. El ejemplo anterior cambia una "
+"cadena de la interfaz de usuario por ejemplo, así que invalidaría todas las "
+"traducciones. Si duda, pregunte al autor aguas arriba antes de añadir el "
+"parche."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:104
 msgid "Upgrading to New Upstream Versions"
-msgstr ""
+msgstr "Actualizar a nuevas versiones de aguas arriba"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:106
 msgid ""
@@ -3181,16 +3266,23 @@ msgid ""
 "date.  They might need to be refreshed to match the new upstream source or "
 "they might need to be removed altogether."
 msgstr ""
+"Cuando actualiza a una nueva versión aguas arriba, los parches normalmente "
+"quedan obsoletos. Podría ser necesario actualizarlos para que coincidan con "
+"el nuevo código fuente de aguas arriba o podría incluso ser necesario "
+"eliminarlos completamente."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
 msgid ""
 "You should start by ensuring no patches are applied.  Unfortunately a commit "
 "is needed before you can merge in the new upstream (this is `bug 815854`_::"
 msgstr ""
+"Debería comenzar por asegurarse de que no se aplica ningún parche. "
+"Desafortunadamente hace falta una confirmación antes de que se pueda "
+"combinar con lo nuevo de aguas arriba (este es el error `bug 815854`_)::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:116
 msgid "Then upgrade to the new version"
-msgstr ""
+msgstr "Luego actualice a la nueva versión"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:118
 msgid ""
@@ -3198,50 +3290,64 @@ msgid ""
 "https://launchpad.net/ubuntu/+archive/primary/+files/kamoso_2.0.2.orig.tar.bz"
 "2"
 msgstr ""
+"$ bzr merge-upstream --version 2.0.2 "
+"https://launchpad.net/ubuntu/+archive/primary/+files/kamoso_2.0.2.orig.tar.bz"
+"2"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:120
 msgid "Then apply the patches one at a time to check for problems::"
 msgstr ""
+"Entonces aplique los cambios uno cada vez para comprobar si hay problemas::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:129
 msgid ""
 "If it can be reverse-applied this means the patch has been applied already "
 "by upstream, so we can delete the patch::"
 msgstr ""
+"Si puede ser aplicado a la inversa significa que el parche ya ha sido "
+"aplicado aguas arriba, de forma que ya se puede borrar::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:135
 msgid "Then carry on::"
-msgstr ""
+msgstr "Luego continúe::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:140
 msgid ""
 "It is a good idea to run refresh, this will update the patch relative to the "
 "changed upstream source::"
 msgstr ""
+"Es una buena idea hacer un refresco, lo que actualizará el parche relativo a "
+"los fuentes cambiados aguas arriba::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:146
 msgid "Then commit as usual::"
-msgstr ""
+msgstr "Luego confirme como siempre::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:152
 msgid "Making A Package Use Quilt"
-msgstr ""
+msgstr "Hacer que un paquete use Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:154
 msgid ""
 "Modern packages use Quilt by default, it is built into the packaging format. "
 " Check in ``debian/source/format`` to ensure it says ``3.0 (quilt)``."
 msgstr ""
+"Los paquetes modernos usan Quilt de forma predeterminada, están incluido en "
+"el formato de empaquetado. Compruebe «debian/source/format» para asegurarse "
+"que pone «3.0 (quilt»."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:158
 msgid ""
 "Older packages using source format 1.0 will need to explicitly use Quilt, "
 "usually by including a makefile into ``debian/rules``."
 msgstr ""
+"Los paquetes más antiguos que usen el formato fuente 1.0 necesitarán usar "
+"Quilt explícitamente, normalmente incluyéndo un archivo makefile en "
+"«debian/rules»."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:163
 msgid "Other Patch Systems"
-msgstr ""
+msgstr "Otros sistemas de parches"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:165
 msgid ""
@@ -3251,6 +3357,12 @@ msgid ""
 "patches. You can use ``edit-patch``, shown in previous chapters, as a "
 "reliable way to work with all systems."
 msgstr ""
+"Otros sistemas de parches que se usan con los paquetes incluyen «dpatch» y "
+"«cdbs simple-patchsys», que funcionan de forma similar a Quilt, manteniendo "
+"los parches en debian/patches pero usan diferentes órdenes para aplicarlos, "
+"des-aplicarlos o crear parches. Puede usar «edit-patch», mostrado en "
+"capítulos anteriores, como una forma fiable de trabajar con todos los "
+"sistemas."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:171
 msgid ""
@@ -3258,12 +3370,19 @@ msgid ""
 "``diff.gz`` source file.  This makes it hard to upgrade to new upstream "
 "versions or differentiate between patches and is best avoided."
 msgstr ""
+"Incluso paquetes más antiguos incluirán cambios directamente en los fuentes "
+"y los mantendrán el archivo fuente «diff.gz». Est complica la actualización "
+"a nuevas versiones de aguas arribas o distinguir entre parches por lo que lo "
+"mejor es evitarlo."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:175
 msgid ""
 "Bazaar Loom is a way to keep patches as part of bzr trees, see :doc:`Working "
 "with Patches via Loom<./udd-patchsys>` for more information."
 msgstr ""
+"Bazaar Loom is una manera de mantener los parches como parte de árboles bzr, "
+"véase :doc:`Trabajar con parches vía Loom<./udd-patchsys>` para más "
+"información."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:178
 msgid ""
@@ -3271,14 +3390,17 @@ msgid ""
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "
 "then feel free to add Quilt."
 msgstr ""
+"No cambie el sistema de parches de un paquete sin haberlo discutido con el "
+"mantenedor de Debian o el equipo pertinente de Ubuntu. Si no existe un "
+"sistema parches no tenga problemas en añadir Quilt."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:3
 msgid "Security and Stable Release Updates"
-msgstr ""
+msgstr "Actualizaciones de seguridad y de versiones estables"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:6
 msgid "Fixing a Security Bug in Ubuntu"
-msgstr ""
+msgstr "Corregir un error de seguridad en Ubuntu"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:11
 msgid ""
@@ -3288,10 +3410,15 @@ msgid ""
 "different, we will be updating the dbus package in Ubuntu 10.04 LTS (Lucid "
 "Lynx) for a security update."
 msgstr ""
+"Corregir errores de seguridad no es en tan distinto de :doc:`corregir un "
+"error normal en Ubuntu<./fixing-a-bug>`, y se asume que está familiarizado "
+"con el parcheo de errores normales. Para mostrar dónde se hacen las cosas de "
+"forma diferente, actualizaremos el paquete dbus en Ubuntu 10.04 LTS (Lucid "
+"Lynx) para incluir una actualización de seguridad."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:19
 msgid "Obtaining the source"
-msgstr ""
+msgstr "Obtener el código fuente"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:21
 msgid ""
@@ -3299,6 +3426,9 @@ msgid ""
 "10.04 LTS (Lucid Lynx). So first you need to determine the version of the "
 "package you want to download. We can use the ``rmadison`` to help with this::"
 msgstr ""
+"En este ejemplo, ya sabemos que deseamos corregir el paquete dbus en "
+"Ubuntu10.04 LTS (Lucid Lynx). Así que lo primero es determinar la versión "
+"del paquete que quiere descargar. Puede usar «rmadison» para que le ayude::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:30
 msgid ""
@@ -3306,10 +3436,14 @@ msgid ""
 "want to patch that is not in -proposed or -backports. Since we are updating "
 "Lucid's dbus, you'll download 1.2.16-2ubuntu4.2 from lucid-updates::"
 msgstr ""
+"Habitualmente deseará seleccionar la versión más alta para la emisión que "
+"pretende parchear que no esté en -proposed o -backports. Ya que estamos "
+"actualizando el dbus de Lucid, descargará 1.2.16-2ubuntu4.2 from lucid-"
+"updates::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:38
 msgid "Patching the source"
-msgstr ""
+msgstr "Parchear el código fuente"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:39
 msgid ""
@@ -3320,10 +3454,17 @@ msgid ""
 "the easiest way to patch packages and it is basically a wrapper around every "
 "other patch system you can imagine."
 msgstr ""
+"Ahora que ya tenemos el paquete fuente, necesitamos parchearlo para corregir "
+"la vulnerabilidad. Puede usar cualquier método que sea adecuado para el "
+"paquete, incluyendo :doc:`técnicas UDD<./udd-intro>`, pero para este ejemplo "
+"se usará «edit-patch» (del paquete  ubuntu-dev-tools). «edit-patch» es la "
+"forma más sencilla de parchear paquetes y básicamente se trata de un "
+"envoltorio alrededor de todos los demás sistemas de parches que pueda "
+"imaginar."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:46
 msgid "To create your patch using ``edit-patch``::"
-msgstr ""
+msgstr "Para crear un parche usando «edit-patch»::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:51
 msgid ""
@@ -3331,16 +3472,22 @@ msgid ""
 "directory. Now edit the files needed to fix the vulnerability.  Often "
 "upstream will have provided a patch so you can apply that patch::"
 msgstr ""
+"Esto aplicará los parches existentes y dejará el empaquetado en un "
+"directorio temporal. Ahora edite los archivos necesarios para solucionar la "
+"vulnerabilidad. Frecuentemente se habrá proporcionado un parche desde aguas "
+"arriba de forma que pueda aplicarlo::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:57
 msgid ""
 "After making the necessary changes, you just hit Ctrl-D or type exit to "
 "leave the temporary shell."
 msgstr ""
+"Después de hacer los cambios necesarios, simplemente pulse Ctrl+D o escriba "
+"«exit» para dejar el intérprete de órdenes temporal."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:61
 msgid "Formatting the changelog and patches"
-msgstr ""
+msgstr "Formatear el registro de cambios («changelog») y los parches"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:63
 msgid ""
@@ -3352,6 +3499,14 @@ msgid ""
 "distribution name uses lucid-security since this is a security update for "
 "Lucid) for security updates::"
 msgstr ""
+"Después de aplicar los parches deseará actualizar el registro de cambios "
+"(«changelog»). La orden «dch» se usa para editar el archivo "
+"«debian/changelog» y «edit-patch» lanzará «dch» automáticamente después de "
+"des-aplicar todos los parches. Si no está usando «edit-patch», puede lanzar "
+"«dch -i» manualmente. A diferencia de los parches normales, debería usar el "
+"siguiente formato (note que el nombre de la distribución usa lucid-security, "
+"ya que se trata de una actualización de seguridad para Lucid) para "
+"actualizaciones de seguridad::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:80
 msgid ""
@@ -3359,38 +3514,51 @@ msgid ""
 "at a minimum the Origin, Description and Bug-Ubuntu tags. For example, edit "
 "debian/patches/99-fix-a-vulnerability.patch to have something like::"
 msgstr ""
+"Actualice su parche para usar las etiquetas de parche adecuadas. Su parche "
+"debería tener por lo menos  las etiquetas «Origin», «Description» y «Bug-"
+"Ubuntu». Por ejemplo, edite debian/patches/99-fix-a-vulnerability.patch para "
+"que tenga es siguiente aspecto::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:91
 msgid ""
 "Multiple vulnerabilities can be fixed in the same security upload; just be "
 "sure to use different patches for different vulnerabilities."
 msgstr ""
+"Muchas vulnerabilidades se puede solucionar en la misma carga de seguridad, "
+"pero asegúrese de usar parches distintos para las diferentes "
+"vulnerabilidades."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:95
 msgid "Test and Submit your work"
-msgstr ""
+msgstr "Probar y enviar el trabajo"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:97
 msgid ""
 "At this point the process is the same as for :doc:`fixing a regular bug in "
 "Ubuntu<./fixing-a-bug>`. Specifically, you will want to:"
 msgstr ""
+"En este punto el proceso es el mismo que para :doc:`arreglar un bug normal "
+"de Ubuntu<./fixing-a-bug>`. Más concretamente, deseará:"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:100
 msgid ""
 "Build your package and verify that it compiles without error and without any "
 "added compiler warnings"
 msgstr ""
+"Construir el paquete y comprobar que compila sin errores y sin ningún aviso "
+"del compilador añadido."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:102
 msgid "Upgrade to the new version of the package from the previous version"
-msgstr ""
+msgstr "Actualizar a la nueva versión del paquete desde la versión anterior"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:103
 msgid ""
 "Test that the new package fixes the vulnerability and does not introduce any "
 "regressions"
 msgstr ""
+"Probar que el nuevo paquete corrige la vulnerabilidad y no introduce ninguna "
+"regresión"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:105
 msgid ""
@@ -3398,12 +3566,17 @@ msgid ""
 "being sure to mark the bug as a security bug and to subscribe ``ubuntu-"
 "security-sponsors``"
 msgstr ""
+"Enviar el trabajo mediante una propuesta de fusión de Launchpad y rellenar "
+"un error en Launchpad asegurándose de marcar el error como un fallo de "
+"seguridad y de suscribirse a «ubuntu-security-sponsors»."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:109
 msgid ""
 "If the security vulnerability is not yet public then do not file a merge "
 "proposal and ensure you mark the bug as private."
 msgstr ""
+"Si la vulnerabilidad de seguridad no es pública todavía no presente una "
+"propuesta de fusión y asegúrese de marcar el error como privado."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:112
 msgid ""
@@ -3411,6 +3584,9 @@ msgid ""
 "how to recreate the bug by running the old version then how to ensure the "
 "bug no longer exists in the new version."
 msgstr ""
+"El presentado debe incluir un caso de prueba, es decir, un comentario que "
+"indique claramente cómo recrear el error ejecutando la versión antigua y "
+"luego cómo asegurarse de que el error no existe en la nueva versión."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:116
 msgid ""
@@ -3419,10 +3595,15 @@ msgid ""
 "newer than Lucid).  If the issue is not fixed in newer Ubuntu versions you "
 "should prepare updates for those versions too."
 msgstr ""
+"El informe de error debería también confirmar que la incidencia está "
+"solucionada en versiones más recientes de Ubuntu que la que incluye la "
+"propuesta de solución (en el ejemplo anterior, más modernas que Lucid). Si "
+"la incidencia no está solucionada en versiones más modernas de Ubuntu "
+"debería preparar las actualizaciones también para esas versiones."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:123
 msgid "Stable Release Updates"
-msgstr ""
+msgstr "Actualizaciones de versiones estables"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:125
 msgid ""
@@ -3432,12 +3613,20 @@ msgid ""
 "bugs we only allow this where the change can be easily understood and "
 "verified."
 msgstr ""
+"También se permite actualizaciones de emisiones en las que un paquete tiene "
+"un error de gran impacto, como por ejemplo una regresión severa de una "
+"emisión anterior o un error que podría causar pérdida de datos. Debido al "
+"potencia de que esas actualizaciones a su vez introduzcan errores solo se "
+"permiten cuando los cambios pueden ser fácilmente comprendidos y verificados."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:130
 msgid ""
 "The process for Stable Release Updates is just the same as the process for "
 "security bugs except you should subscribe ``ubuntu-sru`` to the bug."
 msgstr ""
+"El proceso de actualizaciones de versiones estables es el mismo que el "
+"proceso para errores de seguridad excepto que debería suscribir «ubuntu-sru» "
+"al error."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:133
 msgid ""
@@ -3446,36 +3635,44 @@ msgid ""
 "does not introduce new problems.  After a week without reported problems it "
 "can be moved to ``updates``."
 msgstr ""
+"La actualización irá al repositorio «proposed» (por ejemplo, «lucid-"
+"proposed») donde se deberá comprobar que soluciona el problema y no "
+"introduce nuevos errores. Después de una semana sin problemas reportados se "
+"puede mover a «updates»."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:138
 msgid "See the `Stable Release Updates wiki page`_ for more information."
 msgstr ""
+"Véase la `página wiki actualizaciones de versiones estables`_ para más "
+"información."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:3
 msgid "Traditional Packaging"
-msgstr ""
+msgstr "Empaquetado tradicional"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:5
 msgid "FIXME describe traditional packaging here"
-msgstr ""
+msgstr "FIXME describir aquí el empaquetado tradicional"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:3
 msgid "Getting the Source"
-msgstr ""
+msgstr "Obtener el código fuente"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:6
 msgid "Source package URLs"
-msgstr ""
+msgstr "URLs de los paquetes fuente"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:8
 msgid ""
 "Bazaar provides some very nice shortcuts for accessing Launchpad's source "
 "branches of packages in both Ubuntu and Debian."
 msgstr ""
+"Bazaar proporciona varios atajos muy buenos para acceder a las ramas fuentes "
+"de paquetes de Launchpad tanto de Ubuntu como de Debian."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:11
 msgid "To refer to source branches use::"
-msgstr ""
+msgstr "Para referirse a las ramas fuentes use::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:15
 msgid ""
@@ -3483,6 +3680,10 @@ msgid ""
 "refers to the package in the current development version of Ubuntu.  To "
 "refer to the branch of Tomboy in the development version, you would use::"
 msgstr ""
+"donde *paquete* se refiere el nombre del paquete en el que está interesado. "
+"Esta URL se refiere al paquete en la versión de desarrollo actual de Ubuntu. "
+"Para referirse a la rama de Tomboy en la versión de desarrollo, debería "
+"usar::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:21
 msgid ""
@@ -3490,11 +3691,17 @@ msgid ""
 "just prefix the package name with the release's code name.  E.g. to refer to "
 "Tomboy's source package in Maverick_ use::"
 msgstr ""
+"Para referirse a la versión de un paquete fuente de una versión más antigua "
+"de Ubuntu, añada al nombre del paquete el prefijo con el código de nombre de "
+"la versión. Por ejemplo, para referirse al paquete fuente de Tomboy en "
+"Maverick_ use::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:27
 msgid ""
 "Since they are unique, you can also abbreviate the distro-series name::"
 msgstr ""
+"Puesto que son únicos, también puede abreviar el nombre de las series de "
+"distribuciones::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:31
 msgid ""
@@ -3502,14 +3709,18 @@ msgid ""
 "although there are no shortcuts for the Debian distro-series names.  To "
 "access the Tomboy branch in the current development series for Debian use::"
 msgstr ""
+"Puede usar un esquema similar para acceder a las ramas fuentes de Debian, "
+"aunque en este caso no hay atajos para nos nombres de las series de "
+"distribuciones de Debian. Para acceder a la rama de Tomboy en la serie de "
+"desarrollo de Debian actual use::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:37
 msgid "and to access Tomboy in Debian Lenny_ use::"
-msgstr ""
+msgstr "y para acceder a Tomboy en Debian Lenny_ use::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:48
 msgid "Getting the source"
-msgstr ""
+msgstr "Obtener el código fuente"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:50
 msgid ""
@@ -3517,6 +3728,9 @@ msgid ""
 "These source branches are updated automatically by Launchpad, although the "
 "process is not currently foolproof."
 msgstr ""
+"Cada paquete fuente de Ubuntu tiene asociada una rama fuente en Launchpad. "
+"Estas ramas fuentes son actualizadas automáticamente por Launchpad, aunque "
+"el proceso actualmente no es infalible."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:54
 msgid ""
@@ -3524,10 +3738,13 @@ msgid ""
 "more efficient later.  Once you are used to the process you will learn when "
 "it makes sense to skip these steps."
 msgstr ""
+"Hay un par de cosas que se hacen antes para que el flujo de trabajo "
+"posterior sea más eficiente. Una vez que se acostumbre al proceso aprenderá "
+"cuando puede saltarse estos pasos."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:62
 msgid "Creating a shared repository"
-msgstr ""
+msgstr "Crear un repositorio compartido"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:64
 msgid ""
@@ -3536,22 +3753,31 @@ msgid ""
 "for Tomboy, create a shared repository to hold the branches for this "
 "package.  The shared repository will make future work much more efficient."
 msgstr ""
+"Desea trabajar en el paquete Tomboy de Natty, y ha comprobado que el paquete "
+"fuente se llama «tomboy». Antes de efectuar la bifurcación del código de "
+"Tomboy, cree un repositorio compartido para mantener las ramas de este "
+"paquete. Este repositorio compartido hará que el trabajo futuro sea mucho "
+"más eficiente."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:70
 msgid ""
 "Do this using the `bzr init-repo` command, passing it the directory name we "
 "would like to use::"
 msgstr ""
+"Hágalo usando la orden «bzr init-repo», pasándole el nombre de directorio "
+"que le gustaría usar::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:75
 msgid ""
 "You will see that a `tomboy` directory is created in your current working "
 "area.  Change to this new directory for the rest of your work::"
 msgstr ""
+"Verá que se crea un directorio «tomboy» en su área de trabajo actual. Cambie "
+"a este nuevo directorio para el resto del proceso::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:82
 msgid "Getting the trunk branch"
-msgstr ""
+msgstr "Obtener la rama troncal"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:84
 msgid ""
@@ -3559,6 +3785,9 @@ msgid ""
 "We'll name the target directory `tomboy.dev` just to keep things easy to "
 "remember::"
 msgstr ""
+"Se usa la orden «bzr branch» para crear una rama local del paquete. "
+"Llamaremos al directorio destino «tomboy.dev» sólo para mantenerlo fácil de "
+"recordar::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:90
 msgid ""
@@ -3566,22 +3795,29 @@ msgid ""
 "version of Ubuntu, and you can always ``cd`` into this directory and do a "
 "`bzr pull` to get any future updates."
 msgstr ""
+"El directorio tomboy.dev representa la versión de Tomboy en la versión de "
+"desarrollo de Ubuntu y siempre puede cambiarse («cd») a este directorio y "
+"hacer «bzr pull» para obtener actualizaciones futuras."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:97
 msgid "Ensuring the version is up to date"
-msgstr ""
+msgstr "Asegurarse de que la versión está actualizada"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:99
 msgid ""
 "When you do your ``bzr branch`` you will get a message telling you if the "
 "packaging branch is up to date.  For example::"
 msgstr ""
+"Cuando hace «bzr branch» obtendrá un mensaje indicándole si la rama de "
+"empaquetado está actualizada. Por ejemplo::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:107
 msgid ""
 "Occasionally the importer fails and packaging branches do not match what is "
 "in the archive.  A message saying::"
 msgstr ""
+"Ocasionalmente el importador falla y las ramas de empaquetado no coincidirán "
+"con lo que hay en el repositorio. Un mensaje diciendo::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:112
 msgid ""
@@ -3589,14 +3825,17 @@ msgid ""
 "import.ubuntu.com/status/ and `file a bug on the UDD project`_ to get the "
 "issue resolved."
 msgstr ""
+"significa que el importador ha fallado. Puede averiguar por qué en "
+"http://package-import.ubuntu.com/status/ y `presentar un error en el "
+"proyecto UDD`_ para hacer que se resuelva la incidencia."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:118
 msgid "Upstream Tar"
-msgstr ""
+msgstr "Tar aguas arriba («upstream»)"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:120
 msgid "You can get the upstream tar by running::"
-msgstr ""
+msgstr "Puede obtener un tar de aguas arriba ejecutando::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:124
 msgid ""
@@ -3606,14 +3845,19 @@ msgid ""
 "orig-source``. The upstream tar will also be recreated when using bzr to "
 "build the package::"
 msgstr ""
+"Esto probará varios métodos para obtener el archivo tar de aguas arriba, "
+"primero recreándolo desde la etiqueta «upstream-x.y» del archivo bzr, luego "
+"descargándolo desde el repositorio de Ubuntu y finalmente ejecutando "
+"«debian/rules get-orig-source». El tar de aguas arriba también se recreará "
+"cuando se usa bzr para construir el paquete::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:132
 msgid "The `builddeb` plugin has several `configuration options`_."
-msgstr ""
+msgstr "El complemento «builddeb» tiene varias «opciones de configuración`_."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:136
 msgid "Getting a branch for a particular release"
-msgstr ""
+msgstr "Obtener una rama de una versión en particular"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:138
 msgid ""
@@ -3622,10 +3866,15 @@ msgid ""
 "branch corresponding to a particular Ubuntu release.  For example, to get "
 "the Tomboy package for Maverick do::"
 msgstr ""
+"Cuando desee hacer algo como una `stable release update`_ (SRU, "
+"actualización de versión estable) o si simplemente quiere examinar el código "
+"de una versión antigua, deberá obtener la rama correspondiente a una versión "
+"de Ubuntu en particular. Por ejemplo, para obtener el paquete de Tomboy para "
+"Maverick haga::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:147
 msgid "Importing a Debian source package"
-msgstr ""
+msgstr "Importar un paquete fuente de Debian"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:149
 msgid ""
@@ -3636,22 +3885,32 @@ msgid ""
 "working tree to which the source package will be imported (remember to cd "
 "out of the `tomboy` directory created above)::"
 msgstr ""
+"Si el paquete en el que desea trabajar está disponible en Debian, pero no en "
+"Ubuntu, sigue siendo fácil importar el código a una rama de bzr local para "
+"el desarrollo. Digamos que quiere importar el paquete fuente «newpackage». "
+"Empezaremos por crear un repositorio compartido como habitualmente, pero "
+"también debemos crear un árbol de trabajo en el que importar el paquete "
+"fuente (recuerde salir del directorio «tomboy» creado anteriormente)::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:162
 msgid ""
 "As you can see, we just need to provide the remote location of the dsc file, "
 "and Bazaar will do the rest.  You've now got a Bazaar source branch."
 msgstr ""
+"Como puede ver, solo hace falta proporcionar la ubicación remota del archivo "
+"dsc, y Bazaar hará el resto. Ya ha obtenido la rama fuente de Bazaar."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:3
 msgid "Ubuntu Distributed Development - Introduction"
-msgstr ""
+msgstr "Desarrollo distribuido de Ubuntu - Introducción"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:5
 msgid ""
 "This guide focuses on packaging using the *Ubuntu Distributed Development* "
 "(UDD) method."
 msgstr ""
+"Esta guía se centra en el empaquetado usando el método de *desarrollo "
+"distribuido de Ubuntu* (UDD)."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:8
 msgid ""
@@ -3660,10 +3919,14 @@ msgid ""
 "distributed version control system (DVCS) based software development.  The "
 "DVCS used for UDD is Bazaar_."
 msgstr ""
+"El *desarrollo distribuido de Ubuntu* (UDD) es una nueva técnica para "
+"desarrollar paquetes de Ubuntu que usan herramientas, procesos y flujos de "
+"trabajos similares a desarrollos de software basados en sistemas de control "
+"de versiones distribuidos (DVCS) genéricos."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:14
 msgid "Traditional Packaging Limitations"
-msgstr ""
+msgstr "Limitaciones del empaquetado tradicional"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:16
 msgid ""
@@ -3672,6 +3935,11 @@ msgid ""
 "\"debian\" tar (or compressed diff file for older packages) containing the "
 "packaging and a .dsc meta-data file.  To see a traditional package run::"
 msgstr ""
+"Tradicionalmente los paquetes de Ubuntu se han mantenido en archivos "
+"comprimidos tar. Un paquete fuente tradicional se compone del tar fuente de "
+"aguas arriba, un tar de «debian» (o archivo diff comprimido para paquetes "
+"más antiguos) que contiene el empaquetado y un archivo .dsc de metadatos. "
+"Para ver un paquete tradicional ejecute::"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:23
 msgid ""
@@ -3680,6 +3948,10 @@ msgid ""
 "``kdetoys_4.6.5-0ubuntu1~ppa1.dsc``.  Assuming you have dpkg-dev installed "
 "it will extract these and give you the source package."
 msgstr ""
+"Esto descargará el fuente de aguas arriba «kdetoys_4.6.5.orig.tar.bz2», el "
+"empaquetado «kdetoys_4.6.5-0ubuntu1.debian.tar.gz» y los metadatos "
+"«kdetoys_4.6.5-0ubuntu1~ppa1.dsc». Suponiendo que tiene instalado dpkg-dev "
+"los extraerá y le proporcionará el paquete fuente."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:28
 msgid ""
@@ -3695,10 +3967,23 @@ msgid ""
 "where that is and how to get the packaging before they can work on the "
 "package."
 msgstr ""
+"En empaquetado tradicional editaría esos archivos y los subiría. Sin "
+"embargo, esto le limita las oportunidades de colaborar con otros "
+"desarrolladores, los cambios deben ser pasados como archivos diff sin que "
+"exista un lugar centralizado en el que rastrearlos y dos desarrolladores no "
+"pueden hacer cambios al mismo tiempo. Así que la mayoría de los equipos han "
+"puesto sus empaquetados en un sistema de control de versiones. Esto facilita "
+"mucho que varios desarrolladores puedan trabajar juntos en el mismo paquete. "
+"Sin embargo, no hay una conexión directa entre el sistema de control de "
+"versiones y el repositorio de paquetes, así que ambos deben mantenerse "
+"sincronizados manualmente. Puesto que cada equipo trabaja en su propio "
+"sistema de control de versiones un futuro desarrollador debe primero "
+"averiguar dónde se encuentra y cómo obtener el empaquetado antes de que "
+"pueda trabajar en el paquete."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:40
 msgid "Ubuntu Distributed Development"
-msgstr ""
+msgstr "Desarrollo distribuido de Ubuntu"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:42
 msgid ""
@@ -3710,23 +3995,37 @@ msgid ""
 "are large enough to need review or if they are by someone without direct "
 "commit access."
 msgstr ""
+"Con el desarrollo distribuido de Ubuntu todos los paquetes del repositorio "
+"de Ubuntu (y de Debian) se importan automáticamente en ramas Bazaar en el "
+"sitio de hospedaje de código Launchpad. Los cambios se pueden hacer "
+"directamente en eses ramas en pasos incrementales y por cualquiera con "
+"permisos para confirmar. Los cambios también se pueden hacer en ramas "
+"bifurcadas y vueltas a combinar con propuestas de fusión («merge proposals») "
+"cuando son lo suficientemente grandes para necesitar una revisión o si están "
+"realizadas por alguien que no tiene permiso de confirmar directamente."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:49
 msgid ""
 "UDD branches are all in a standard location so doing a checkout is easy::"
 msgstr ""
+"Las ramas UDD están todas en una ubicación estándar así que hacer una "
+"extracción es sencillo::"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:53
 msgid ""
 "The merge history includes two separate branches, one for the upstream "
 "source and one which adds the ``debian/`` packaging directory::"
 msgstr ""
+"El historial de fusiones incluye dos ramas separadas, una para el fuente de "
+"aguas arriba y otra que añade el directorio de empaquetado «debian/»::"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:59
 msgid ""
 "(This command uses *qbzr* for a GUI, run ``log`` instead of ``qlog`` for "
 "console output.)"
 msgstr ""
+"(esta orden usa *qbzr* como IGU, ejecute «log» en lugar de «qlog» para una "
+"salida por consola)."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:64
 msgid ""
@@ -3736,6 +4035,11 @@ msgid ""
 "as ``4:4.2.29-0ubuntu1`` or for the upstream branch with the upstream "
 "version ``upstream-4.2.96``."
 msgstr ""
+"Esta rama UDD de *kdetoys* muestra el empaquetado completo para cada versión "
+"subida a Ubuntu con círculos grises y las versiones fuentes de aguas arriba "
+"con círculos verdes. Las versiones se etiquetan o con la versión de Ubuntu "
+"como «4:4.2.29-0ubuntu1» o para las ramas de aguas arriba, con su versión, "
+"como «upstream-4.2.96»."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:70
 msgid ""
@@ -3745,6 +4049,12 @@ msgid ""
 "those from *Debian experimental* are from the merge with yellow circles.  "
 "Debian released are tagged with their version number e.g. ``4:4.2.2-1``."
 msgstr ""
+"Muchos paquetes de Ubuntu se basan en paquetes de Debian, UDD también "
+"importa el paquete de Debian en nuestras ramas. En la rama *kdetoys* "
+"anterior las versiones Debian de *unstable* vienen de la fusión con los "
+"círculos azules, mientras que las de *Debian experimental* vienen de "
+"fusiones con los círculos amarillos. Las versiones de Debian están "
+"etiquetadas con su número de versión, por ejemplo, «4:4.2.2-1»."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:76
 msgid ""
@@ -3752,22 +4062,29 @@ msgid ""
 "package and compare any two versions.  For example, to see the changes "
 "between version 4.2.2 in Debian and the 4.2.2 in Ubuntu use::"
 msgstr ""
+"Así que desde una rama UDD puede ver el historial completo de cambios del "
+"paquete y comparar dos versiones cualesquiera. Por ejemplo, para ver los "
+"cambios entre la versión 4.2.2 en Debian y la 4.2.2 en Ubuntu use::"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:82
 msgid ""
 "(This command uses *qbzr* for a GUI, run ``diff`` instead of ``qdiff`` for "
 "console output.)"
 msgstr ""
+"(esta orden usa *qbzr* como IGU, ejecute «diff» en lugar de «qdiff» para una "
+"salida por consola)."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:87
 msgid ""
 "From this we can clearly see what has changed in Ubuntu compared to Debian, "
 "very handy."
 msgstr ""
+"Con esto podemos ver claramente qué ha cambiado en Ubuntu comparado con "
+"Debian, lo que es muy útil."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:91
 msgid "Bazaar"
-msgstr ""
+msgstr "Bazaar"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:93
 msgid ""
@@ -3775,6 +4092,9 @@ msgid ""
 "be easy to use for those familiar with popular systems such as Subversion "
 "while offering the power of Git."
 msgstr ""
+"Las ramas UDD usan Bazaar, como sistema de control de versiones distribuido "
+"pensado para ser fácil de usar para gente familiarizada con otros sistemas "
+"populares como Subversion, pero ofreciendo la potencia de Git."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:97
 msgid ""
@@ -3784,16 +4104,23 @@ msgid ""
 "tutorial/index.html>`_ and the `Bazaar Users Guide "
 "<http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_."
 msgstr ""
+"Para empaquetar con UDD necesitará tener nociones básicas de Bazaar para "
+"gestionar archivos. Como introducción a Bazaar consulte el `tutorial de "
+"cinco minutos de Bazaar <http://doc.bazaar.canonical.com/bzr.dev/en/mini-"
+"tutorial/index.html>`_ y la `guía de usuario de Bazaar "
+"<http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:105
 msgid "Limitations of UDD"
-msgstr ""
+msgstr "Limitaciones del UDD"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:107
 msgid ""
 "Ubuntu Distributed Development is a new method for working with Ubuntu "
 "packages.  It currently has some notable limitations:"
 msgstr ""
+"El desarrollo distribuido de Ubuntu es un nuevo método para trabajar con "
+"paquetes de Ubuntu. Actualmente tiene algunas limitaciones importantes:"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:110
 msgid ""
@@ -3802,18 +4129,27 @@ msgid ""
 "checkout --lightweight ubuntu:kdetoys`` but this will need a network access "
 "for any further bzr operations."
 msgstr ""
+"Realizar una bifurcación completa con historial puede suponer mucho tiempo y "
+"recursos d ered. Puede resultar más rápido realizar una extracción ligera "
+"«bzr checkout --lightweight ubuntu:kdetoys» pero esto necesitará de acceso a "
+"la red para cualquier operación de bzr posterior."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:115
 msgid ""
 "Working with patches is fiddly.  Patches can be seen as a branched revision "
 "control system, so we end up with RCS on top of RCS."
 msgstr ""
+"Trabajar con parches es engorroso. Los parches se pueden considerar como un "
+"sistema de control de versiones bifucardo, así que se termina con un RCS "
+"sobre otro RCS."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:118
 msgid ""
 "There is no way to build directly from branches.  You need to create a "
 "source package and upload that."
 msgstr ""
+"No hay manera de construir directamente desde las ramas. Necesita crear un "
+"paquete fuente y subirlo."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:121
 msgid ""
@@ -3822,6 +4158,10 @@ msgid ""
 "can also check the `status of the package importer`_ manually before working "
 "on a branch."
 msgstr ""
+"Algunos paquetes no se han importado con éxito en ramas UDD. Las versiones "
+"recientes de Bazaar notificarán automáticamente cuando se dé este caso. "
+"También puede comprobar manualmente el `estado del importador de paquetes`_ "
+"antes de trabajar en una rama."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:126
 msgid ""
@@ -3831,20 +4171,28 @@ msgid ""
 "because UDD branches are the same as the packages in the  archive any team "
 "should be able to accept merges against them."
 msgstr ""
+"Se está trabajando en todo lo anterior y se espera que UDD se convierta en "
+"la principal forma de trabajar en paquetes de Ubuntu próximamente. Sin "
+"embargo, actualmente la mayoría de los equipos dentro de Ubuntu todavía no "
+"trabajan con ramas UUD para sus desarrollos. Puesto que las ramas UDD son lo "
+"mismos que los paquetes en el repositorio todos los equipos deberían ser "
+"capaces de aceptar fusiones contra ellas."
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:3
 msgid "Getting The Latest"
-msgstr ""
+msgstr "Obtener lo último"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:5
 msgid ""
 "If someone else has landed changes on a package, you will want to pull those "
 "changes in your own copies of the package branches."
 msgstr ""
+"Si alguien más ha introducido cambios en un paquete, deseará descargarse "
+"esos cambios en su propia copia de las ramas de paquetes."
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:10
 msgid "Updating your main branch"
-msgstr ""
+msgstr "Actualizar su rama principal"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:12
 msgid ""
@@ -3852,16 +4200,21 @@ msgid ""
 "particular release is very simple, simply use `bzr pull` from the "
 "appropriate directory::"
 msgstr ""
+"Actualizar su copia de una rama que se corresponda con el paquete en una "
+"versión particular es muy sencillo, simplemente use «bzr pull» desde el "
+"directorio apropiado::"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:18
 msgid ""
 "This works wherever you have a checkout of a branch, so it will work for "
 "things like branches of `maverick`, `hardy-proposed`, etc."
 msgstr ""
+"Esto funciona cuando ha realizado una extracción de una rama, así que "
+"funcionará para ramas como «maverick», «hardy-proposed», etc."
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:23
 msgid "Getting the latest in to your working branches"
-msgstr ""
+msgstr "Obtener lo último en sus ramas de trabajo"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:25
 msgid ""
@@ -3869,6 +4222,9 @@ msgid ""
 "to merge this in to your working branches as well, so that they are based on "
 "the latest code."
 msgstr ""
+"Una vez que haya actualizado su copia de una rama de una serie de la "
+"distribución, puede que desee fusionarlo en sus ramas de trabajo también, de "
+"forma que estén basadas en el código más reciente."
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:29
 msgid ""
@@ -3878,6 +4234,11 @@ msgid ""
 "the latest version then your changes may not be correct, and may even "
 "produce conflicts."
 msgstr ""
+"Sin embargo no tiene por qué hacer esto todo el tiempo. Puede trabajar con "
+"código ligeramente más antiguo sin problemas. La desventaja vendría si "
+"estuviera trabajando en algún código que alguien más ya haya cambiado. Si no "
+"está trabajando con la versión más reciente sus cambios puede que no sean "
+"correctos e incluso pueden producir conflictos."
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:34
 msgid ""
@@ -3885,12 +4246,18 @@ msgid ""
 "the harder may be, so doing it regularly should keep each merge simple.  "
 "Even if there are many merges the total effort would hopefully be less."
 msgstr ""
+"Sin embargo, la fusión debe realizarse en algún punto. Cuando más se "
+"retrase, más complicado puede ser, así que realizarlo de forma regular "
+"debería hacer que cada fusión sea sencilla. Incluso si hay muchas fusiones "
+"el esfuerzo total sería afortunadamente menor."
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:38
 msgid ""
 "To merge the changes you just need to use ``bzr merge``, but you must have "
 "committed your current work first::"
 msgstr ""
+"Para fusionar los cambios solo necesita usar «bzr merge», pero debe haber "
+"confirmado su trabajo actual antes::"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:44
 msgid ""
@@ -3898,10 +4265,13 @@ msgid ""
 "changes that you just merged use ``bzr diff``.  To undo the merge use ``bzr "
 "revert``.  Once you are happy with the changes then use ``bzr commit``."
 msgstr ""
+"Se reportarán todos los conflictos y podrá solucionarlos. Para revisar los "
+"cambios que acaba de fusionar use «bzr diff». Para deshacer el cambio use "
+"«bzr revert». Cuando esté satisfecho con los cambios use «bzr commit»."
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:50
 msgid "Referring to versions of a package"
-msgstr ""
+msgstr "Referirse a versiones de un paquete"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:52
 msgid ""
@@ -3917,10 +4287,12 @@ msgstr ""
 msgid ""
 "This shows you the difference between package version 0.1-1 and 0.1-2."
 msgstr ""
+"Esto le mostrará la diferencia entre las versiones de los paquetes 0.1-1 y "
+"0.1-2."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:3
 msgid "Merging - Updating from Debian and Upstream"
-msgstr ""
+msgstr "Fusionar - Actualizar desde Debian y aguas arriba"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:5
 msgid ""
@@ -3945,13 +4317,16 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:20
 msgid "Merging from Debian"
-msgstr ""
+msgstr "Fusionar desde Debian"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:22
 msgid ""
 "Next run ``bzr merge`` passing the URL of the branch to merge from.  For "
 "example, to merge from the version of the package in Debian Squeeze_ run::"
 msgstr ""
+"Después ejecute «bzr merge» pasándole la URL de la rama desde la que "
+"fusionar. Por ejemplo, para fusionar desde la versión del paquete de Debian "
+"Squeeze_ ejecute::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:27
 msgid ""
@@ -4086,7 +4461,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:3
 msgid "Building a new package"
-msgstr ""
+msgstr "Construir un paquete nuevo"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:5
 msgid ""
@@ -4098,7 +4473,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:12
 msgid "Example package"
-msgstr ""
+msgstr "Paquete de ejemplo"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:14
 msgid ""
@@ -4128,7 +4503,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:43
 msgid "The bzr-builddeb way"
-msgstr ""
+msgstr "La manera de bzr-builddeb"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:45
 msgid ""
@@ -4155,7 +4530,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:63
 msgid "The stdeb way"
-msgstr ""
+msgstr "La manera de stdeb"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:65
 msgid ""
@@ -4170,14 +4545,15 @@ msgstr ""
 msgid ""
 "In either case, start by putting this in your ``~/.pydistutils.cfg`` file::"
 msgstr ""
+"En ambos casos, comience por poner esto en su archivo «~/.pydistutils.cfg»::"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:78
 msgid "Modern stdeb"
-msgstr ""
+msgstr "stdeb moderno"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:80
 msgid "Here's how easy it is::"
-msgstr ""
+msgstr "Es así de fácil::"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:86
 msgid ""
@@ -4189,13 +4565,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:98
 msgid "stdeb <= 0.5.1"
-msgstr ""
+msgstr "stdeb <= 0.5.1"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:100
 msgid ""
 "If you have an older version of stdeb, use this command to create the basic "
 "``debian/`` directory layout::"
 msgstr ""
+"Si tiene una versión más antigua de stdeb, use esta orden para crear la "
+"distribución de directorios «debian/» básica."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:105
 msgid ""
@@ -4210,20 +4588,24 @@ msgid ""
 "$ mv deb_dist/munepy-2.0.1/debian . $ rm -rf deb_dist $ bzr add debian $ bzr "
 "commit -m'Add debian directory'"
 msgstr ""
+"$ mv deb_dist/munepy-2.0.1/debian . $ rm -rf deb_dist $ bzr add debian $ bzr "
+"commit -m'Add debian directory'"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:117
 msgid "pkgme"
-msgstr ""
+msgstr "pkgme"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:119
 msgid ""
 "pkgme_ is a new tool that makes it easy to Debianize a new package.  TBD: "
 "describe how to use it."
 msgstr ""
+"pkgme_ es una nueva herramienta que facilita Debianizar un paquete nuevo. "
+"TBD: describir cómo usarla."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:124
 msgid "debian/control file"
-msgstr ""
+msgstr "Archivo debian/control"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:126
 msgid ""
@@ -4243,11 +4625,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:138
 msgid "debian/watch file"
-msgstr ""
+msgstr "Archivo debian/watch"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:140
 msgid "Here for example is the ``debian/watch`` file I'm using::"
-msgstr ""
+msgstr "Este es un ejemplo del archivo «debian/watch» que estoy usando::"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:145
 msgid ""
@@ -4262,7 +4644,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:159
 msgid "Building the source package"
-msgstr ""
+msgstr "Construir el paquete fuente"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:161
 msgid ""
