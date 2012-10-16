@@ -82,10 +82,10 @@
         HAS_SOURCE:  {{ has_source|lower }}
       };
     </script>
-    {# %- for scriptfile in script_files %}
+    {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-    {%- endfor % #}
-    <script type="text/javascript" src="{{ pathto('_static/jquery.js', 1) }}"></script>
+    {%- endfor %}
+    {# <script type="text/javascript" src="{{ pathto('_static/jquery.js', 1) }}"></script> #}
     <script type="text/javascript" src="{{ pathto('_static/main.js', 1) }}"></script>
     {%- if use_opensearch %}
     <link rel="search" type="application/opensearchdescription+xml"
@@ -131,9 +131,9 @@
         <ul>
           <li class="page_item current_page_item"><a title="Index" href="index.html">Index</a> 
           <li>
-            <form id="form-search" method="get" action="/">
+            <form id="form-search" method="get" action="search.html">
               <fieldset>
-                <input id="input-search" type="text" name="s" value="Search" />
+                <input id="input-search" type="text" name="q" value="Search" />
               </fieldset>
             </form>
           </li>
@@ -150,7 +150,7 @@
 
 {%- block content %}
   
-<div id="content" class="container-12">
+<div id="content" class="body container-12">
   <div class="grid-12">
 
 {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}

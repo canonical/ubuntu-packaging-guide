@@ -40,7 +40,9 @@ For the test in ``debian/tests/build`` this would ensure that the packages
 The actual tests
 ================
 
-The accompanying test for the example above might be::
+The accompanying test for the example above might be:
+
+.. code-block:: sh
 
         #!/bin/sh
         # autopkgtest check: Build and run a program against glib, to verify that the

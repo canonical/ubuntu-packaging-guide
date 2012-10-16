@@ -49,16 +49,25 @@ html: $(foreach lang,$(LANGS),html-$(lang))
 	# Always build an English version, even if there are no .po files.
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	mv $(BUILDDIR)/html/ubuntu-packaging-guide/*html $(BUILDDIR)/html/
+	mv $(BUILDDIR)/html/_sources/ubuntu-packaging-guide/*.txt $(BUILDDIR)/html/_sources/
+	rm -r $(BUILDDIR)/html/_sources/ubuntu-packaging-guide/ $(BUILDDIR)/html/ubuntu-packaging-guide/
 	sed -i 's/href="..\//href=".\//g' $(BUILDDIR)/html/*html
 	sed -i 's/src="..\/_static/src=".\/_static/g' $(BUILDDIR)/html/*html
 	sed -i 's/..\/_images/.\/_images/g' $(BUILDDIR)/html/*html
+	sed -i 's/ubuntu-packaging-guide\///g' $(BUILDDIR)/html/*html
+	sed -i 's/ubuntu-packaging-guide\///g' $(BUILDDIR)/html/searchindex.js
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html"
 html-%: locale
 	$(SPHINXBUILD) -Dlanguage=$* -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$*
-	mv $(BUILDDIR)/html/$*/ubuntu-packaging-guide/*html  $(BUILDDIR)/html/$*
+	mv $(BUILDDIR)/html/$*/ubuntu-packaging-guide/*html $(BUILDDIR)/html/$*
+	mv $(BUILDDIR)/html/$*/_sources/ubuntu-packaging-guide/*.txt $(BUILDDIR)/html/$*/_sources/
+	rm -r $(BUILDDIR)/html/$*/_sources/ubuntu-packaging-guide/ $(BUILDDIR)/html/$*/ubuntu-packaging-guide/
 	sed -i 's/href="..\//href=".\//g' $(BUILDDIR)/html/$*/*html
+	sed -i 's/src="..\/_static/src=".\/_static/g' $(BUILDDIR)/html/$*/*html
 	sed -i 's/..\/_images/.\/_images/g' $(BUILDDIR)/html/$*/*html
+	sed -i 's/ubuntu-packaging-guide\///g' $(BUILDDIR)/html/$*/*html
+	sed -i 's/ubuntu-packaging-guide\///g' $(BUILDDIR)/html/$*/searchindex.js
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/$*."
 
