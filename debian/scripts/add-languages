@@ -32,6 +32,7 @@ except:
 
 PERCENTAGE = 70
 
+
 class Package(object):
     stanzas = None
 
@@ -47,13 +48,14 @@ class Package(object):
         self.semi_complete_pofiles = self.get_semi_complete_pofiles()
         self.semi_complete_languages = self.get_semi_complete_languages()
         self.available_binary_packages = self.get_available_binary_packages()
-        self.available_binary_package_names = self.get_available_binary_package_names()
+        self.available_binary_package_names = \
+            self.get_available_binary_package_names()
         self.base_package_names = self.get_base_package_names()
 
     def get_all_pofiles(self):
         return map(lambda a: os.path.abspath(a),
                    glob.glob("%s/*.po" % self.po_path))
-    
+
     def get_all_languages(self):
         return map(lambda a: os.path.basename(a).split(".po")[0],
                    self.all_pofiles)
@@ -64,10 +66,10 @@ class Package(object):
         for language in languages:
             pofile = polib.pofile(language)
             percentage = pofile.percent_translated()
-            print os.path.basename(language), ("(%s" % percentage)+"%),",
+            print os.path.basename(language), ("(%s" % percentage) + "%),",
             if percentage >= PERCENTAGE:
                 print "adding."
-                complete += [ language ]
+                complete += [language]
             else:
                 print "NOT adding."
         return complete
@@ -79,11 +81,11 @@ class Package(object):
     def get_available_binary_packages(self):
         BLACKLIST = [u'ubuntu-packaging-guide']     # metapackages and stuff
         self.stanzas = deb822.Packages.iter_paragraphs(open(self.control_file))
-        return filter(lambda a: "Package" in a.keys() and \
-                                a.get("Package") not in BLACKLIST, self.stanzas)
+        return filter(lambda a: "Package" in a.keys() and
+                      a.get("Package") not in BLACKLIST, self.stanzas)
 
     def get_available_binary_package_names(self):
-        return map(lambda a: a["Package"], 
+        return map(lambda a: a["Package"],
                    self.available_binary_packages)
 
     def get_base_package_names(self):
@@ -94,13 +96,13 @@ class Package(object):
                 if name.endswith("-%s" % language):
                     is_translations_package = True
             if not is_translations_package:
-                base_packages += [ name ]
+                base_packages += [name]
         return base_packages
 
     def get_package_name_permutations(self, languages):
         permutations = []
         for language in languages:
-            permutations +=  map(lambda pkg: "%s-%s" % (pkg, language),
+            permutations += map(lambda pkg: "%s-%s" % (pkg, language),
                                  self.base_package_names)
         return permutations
 
@@ -117,7 +119,7 @@ class Package(object):
         desc = new_stanza["Description"].split("\n")
         desc[0] += " - '%s' version" % language
         desc[-1] = desc[-1].rstrip()
-        desc += [ " .", " This is the '%s' version." % language ]
+        desc += [" .", " This is the '%s' version." % language]
         new_stanza["Description"] = "\n".join(desc)
         f = open(self.control_file, "a")
         f.write(u"\n")
@@ -126,15 +128,18 @@ class Package(object):
 
     def add_installation_files(self, language, template_name):
         new_package_name = "%s-%s" % (template_name, language)
-        template_file = os.path.join(self.base_path, "debian/" + template_name + ".docs")
-        new_file = os.path.join(self.base_path, "debian/" + new_package_name + ".docs")
+        template_file = os.path.join(self.base_path,
+                                     "debian/" + template_name + ".docs")
+        new_file = os.path.join(self.base_path,
+                                "debian/" + new_package_name + ".docs")
         doc_type = template_name.split("-")[-1]
         if template_name.endswith("html"):
             self.write_docs_file(template_file, new_file, doc_type, language)
-            install_file = os.path.join(self.base_path, 
+            install_file = os.path.join(self.base_path,
                                         "debian/" + template_name + ".install")
             new_install_file = os.path.join(self.base_path,
-                                            "debian/" + new_package_name + ".install")
+                                            "debian/" + new_package_name +
+                                            ".install")
             with open(install_file, "r") as install_file:
                 lines = install_file.readlines()
             with open(new_install_file, "w") as new_install_file:
@@ -161,14 +166,18 @@ class Package(object):
     def add_docbase_files(self, language, template_name):
         new_package_name = "%s-%s" % (template_name, language)
         docbase_template = os.path.join(self.base_path,
-                                        "debian/" + template_name + ".doc-base")
+                                        "debian/" + template_name +
+                                        ".doc-base")
         new_docbase_file = os.path.join(self.base_path,
-                                        "debian/" + new_package_name + ".doc-base")
+                                        "debian/" + new_package_name +
+                                        ".doc-base")
         if template_name.endswith("html"):
             single_template = os.path.join(self.base_path,
-                                           "debian/" + template_name + ".doc-base.single")
+                                           "debian/" + template_name +
+                                           ".doc-base.single")
             new_single_file = os.path.join(self.base_path,
-                                           "debian/" + new_package_name + ".doc-base.single")
+                                           "debian/" + new_package_name +
+                                           ".doc-base.single")
             self.write_docbase_file(language, template_name, new_package_name,
                                     docbase_template, new_docbase_file)
             self.write_docbase_file(language, template_name, new_package_name,
@@ -179,21 +188,24 @@ class Package(object):
         else:
             pass
 
-    def write_docbase_file(self, language, template_name, new_package_name,template_file, new_file):
+    def write_docbase_file(self, language, template_name, new_package_name,
+                           template_file, new_file):
         doc_type = template_name.split("-")[-1]
         with open(template_file, "r") as template_file:
             lines = template_file.readlines()
         with open(new_file, "w") as new_file:
             for line in lines:
-                 if line.startswith("Document:"):
-                     line = "Document: " + new_package_name + "\n"
-                 elif line.startswith("Index:") | line.startswith("Files:"):
-                     line = re.sub("-%s" % doc_type, "-%s-%s" % (doc_type, language), line)
-                 elif line.startswith("Title:"):
-                     line = "Title: Ubuntu Packaging Guide - %s Version\n" % language
-                 else:
-                     line = line
-                 new_file.write(line)
+                if line.startswith("Document:"):
+                    line = "Document: " + new_package_name + "\n"
+                elif line.startswith("Index:") | line.startswith("Files:"):
+                    line = re.sub("-%s" % doc_type,
+                                  "-%s-%s" % (doc_type, language), line)
+                elif line.startswith("Title:"):
+                    line = "Title: Ubuntu Packaging Guide - %s Version\n" \
+                            % language
+                else:
+                    line = line
+                new_file.write(line)
 
     def add_to_makefile(self, language):
         with open(self.makefile, "r") as makefile:
@@ -212,9 +224,11 @@ class Package(object):
         self.add_installation_files(language, base_template)
         self.add_docbase_files(language, base_template)
 
+
 def main():
     package = Package()
-    for name in package.get_missing_binary_packages(package.semi_complete_languages):
+    for name in package.get_missing_binary_packages(
+      package.semi_complete_languages):
         package.add_package(name)
 
 if __name__ == '__main__':
