@@ -41,6 +41,7 @@ class Package(object):
         self.base_path = os.path.join(self.script_path, "../..")
         self.po_path = os.path.join(self.base_path, "po/")
         self.control_file = os.path.join(self.base_path, "debian/control")
+        self.makefile = os.path.join(self.base_path, "Makefile")
         self.all_pofiles = self.get_all_pofiles()
         self.all_languages = self.get_all_languages()
         self.semi_complete_pofiles = self.get_semi_complete_pofiles()
@@ -194,9 +195,19 @@ class Package(object):
                      line = line
                  new_file.write(line)
 
+    def add_to_makefile(self, language):
+        with open(self.makefile, "r") as makefile:
+            lines = makefile.readlines()
+        with open(self.makefile, "w") as makefile:
+            for line in lines:
+                if line.startswith("LANGS =") and language not in line:
+                    line = line.rstrip('\n') + " " + language + '\n'
+                makefile.write(line)
+
     def add_package(self, package_name):
         base_template = "-".join(package_name.split("-")[0:-1])
         language = package_name.split("-")[-1]
+        self.add_to_makefile(language)
         self.add_to_control_file(language, base_template)
         self.add_installation_files(language, base_template)
         self.add_docbase_files(language, base_template)

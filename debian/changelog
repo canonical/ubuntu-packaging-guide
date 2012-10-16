@@ -3,6 +3,10 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
   [ Daniel Holbach ]
   * Added some additional information to the autopkgtest article.
 
+  [ Andrew Starr-Bochicchio ]
+  * debian/scripts/add-languages: Modify LANGS variable in Makefile
+    when a language reaches threshold (LP: #1067288).
+
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 12 Oct 2012 16:52:11 +0200
 
 ubuntu-packaging-guide (0.2.4) unstable; urgency=low
