@@ -1,13 +1,13 @@
 /* CSS style bits for Ubuntu developer guide */
 /* Author: Dmitry Shachnev <mitya57@gmail.com>, 2012 */
 
-.section li {
+.section li, ul.search li {
     list-style-type: disc;
     margin-left: 25px;
     margin-bottom: 5px;
 }
 
-.section ul, .highlight {
+.section ul, ul.search {
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -29,4 +29,21 @@
 .admonition-title {
     font-weight: bold;
     font-size: 110%;
+}
+
+.highlighted {
+    background-color: #deb;
+}
+
+ul.search li a {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+#search-results h2 {
+    margin-top: 20px;
+}
+
+.context {
+    margin-left: 30px;
 }

@@ -19,8 +19,7 @@ Things in ``debian/control`` that are specific for a Python package:
 
 - The section of module packages should be ``python``, and ``doc`` for the documentation package. For an application, a single binary package will be enough.
 - We should add build dependencies on ``python-all (>= 2.6.6-3~)`` and ``python3-all (>= 3.1.2-7~)`` to make sure Python helpers are available (see the next section for details).
-- It’s recommended to add ``X-Python-Version`` and ``X-Python3-Version`` fields — see “`Specifying Supported Versions`_” section of the Policy for details. For example:
-  ::
+- It’s recommended to add ``X-Python-Version`` and ``X-Python3-Version`` fields — see “`Specifying Supported Versions`_” section of the Policy for details. For example::
   
     X-Python-Version: >= 2.6
     X-Python3-Version: >= 3.1
@@ -77,16 +76,12 @@ Python 2.x modules are installed into ``/usr/share/pyshared/`` directory, and sy
 
 If your package is an application and has private Python modules, they should be installed in ``/usr/share/module``, or ``/usr/lib/module`` if the modules are architecture-dependent (e.g. extensions) (see “`Programs Shipping Private Modules`_” section of the Policy).
 
-So, our ``python-markdown.install`` file will look like this (we’ll also want to install a ``markdown_py`` executable):
-
-::
+So, our ``python-markdown.install`` file will look like this (we’ll also want to install a ``markdown_py`` executable)::
 
   usr/lib/python2.*/
   usr/bin/
 
-and ``python3-markdown.install`` will only have one line:
-
-::
+and ``python3-markdown.install`` will only have one line::
 
   usr/lib/python3/
 
@@ -101,9 +96,7 @@ The tool most commonly used for building Python docs is `Sphinx`_. To add Sphinx
 * Add ``{sphinxdoc:Depends}`` to the dependency list of your ``-doc`` package;
 * Add the path of the built docs directory (usually ``build/sphinx/html``) to your ``.docs`` file.
 
-In our case, the docs are automatically built in ``build/docs/`` directory when we run ``setup.py build``, so we can simply put this in the ``python-markdown-doc.docs`` file:
-
-::
+In our case, the docs are automatically built in ``build/docs/`` directory when we run ``setup.py build``, so we can simply put this in the ``python-markdown-doc.docs`` file::
 
   build/docs/
 
@@ -117,9 +110,7 @@ Because docs also contain source ``.txt`` files, we’ll also tell ``dh_compress
 Checking for packaging mistakes
 -------------------------------
 
-Along with ``lintian``, there is a special tool for checking Python packages — ``lintian4py``. It is available in the `lintian4python`_ package. For example, these two commands invoke both versions of ``lintian`` and check source and binary packages:
-
-::
+Along with ``lintian``, there is a special tool for checking Python packages — ``lintian4py``. It is available in the `lintian4python`_ package. For example, these two commands invoke both versions of ``lintian`` and check source and binary packages::
 
   lintian -EI --pedantic *.dsc *.deb
   lintian4py -EI --pedantic *.dsc *.deb

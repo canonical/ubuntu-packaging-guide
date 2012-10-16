@@ -165,7 +165,7 @@ worked out, run::
 
         bzr diff debian/changelog 
 
-and you will see something this:: 
+and you will see something like this:: 
 
         === modified file 'debian/changelog'
 	--- debian/changelog	2012-05-14 23:38:14 +0000
