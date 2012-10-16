@@ -7,6 +7,7 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
   * Fix search not working (LP: #814679).
   * Add CSS styling for code blocks and search results page.
   * Link JS files with the libjs-sphinxdoc package.
+  * Do not install websupport.js
   * Fixed a typo in fixing-a-bug-example.rst.
   * Simplified the syntax in python-packaging.rst.
 

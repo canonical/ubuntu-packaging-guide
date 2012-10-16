@@ -38,7 +38,10 @@ override_dh_link:
 	dh_link
 
 override_dh_install:
-	dh_install --list-missing
+	dh_install --list-missing -Xwebsupport.js
+
+override_dh_installdocs:
+	dh_installdocs -Xwebsupport.js
 
 get-orig-source:
 	bzr export -r tag:$(VERSION) --root=ubuntu-packaging-guide-$(VERSION).orig \
