@@ -4,8 +4,10 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
   * Added some additional information to the autopkgtest article.
 
   [ Andrew Starr-Bochicchio ]
-  * debian/scripts/add-languages: Modify LANGS variable in Makefile
-    when a language reaches threshold (LP: #1067288).
+  * debian/scripts/add-languages:
+   - Modify LANGS variable in Makefile when a language reaches
+     threshold (LP: #1067288).
+   - Clean up to make PEP8 compliant.
   
   [ Dmitry Shachnev ]
   * Fix search not working (LP: #814679).
