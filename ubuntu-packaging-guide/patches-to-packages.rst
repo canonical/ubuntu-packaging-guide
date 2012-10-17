@@ -108,12 +108,12 @@ date.  They might need to be refreshed to match the new upstream source or they
 might need to be removed altogether.
 
 You should start by ensuring no patches are applied.  Unfortunately a commit is
-needed before you can merge in the new upstream (this is `bug 815854`_::
+needed before you can merge in the new upstream (this is `bug 815854`_)::
 
     $ quilt pop -a
     $ bzr commit -m "remove patches"
 
-Then upgrade to the new version
+Then upgrade to the new version::
 
     $ bzr merge-upstream --version 2.0.2 https://launchpad.net/ubuntu/+archive/primary/+files/kamoso_2.0.2.orig.tar.bz2
 
