@@ -11,11 +11,14 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
   
   [ Dmitry Shachnev ]
   * Fix search not working (LP: #814679).
+  * Introduce -common package (LP: #1067338).
+  * Better resources linking.
+  * Remove build-dependency on fdupes.
   * Add CSS styling for code blocks and search results page.
   * Link JS files with the libjs-sphinxdoc package.
-  * Do not install websupport.js
-  * Fixed a typo in fixing-a-bug-example.rst.
+  * Do not install websupport.js.
   * Simplified the syntax in python-packaging.rst.
+  * Miscellaneous fixes.
 
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 12 Oct 2012 16:52:11 +0200
 
