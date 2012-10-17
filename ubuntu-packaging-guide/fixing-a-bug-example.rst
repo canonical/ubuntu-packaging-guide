@@ -130,7 +130,9 @@ If you now run::
 
         bzr diff
 
-you should see something like this:: 
+you should see something like this:
+
+.. code-block:: diff
 
 	=== modified file 'debian/control'
 	--- debian/control	2012-05-14 23:38:14 +0000
@@ -165,7 +167,9 @@ worked out, run::
 
         bzr diff debian/changelog 
 
-and you will see something like this:: 
+and you will see something like this:
+
+.. code-block:: diff
 
         === modified file 'debian/changelog'
 	--- debian/changelog	2012-05-14 23:38:14 +0000
