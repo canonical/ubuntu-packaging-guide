@@ -2,7 +2,6 @@
 
 VERSION := $(shell dpkg-parsechangelog | sed -rne 's,^Version: ([^-]+).*,\1,p')
 COMMON := /usr/share/ubuntu-packaging-guide
-DEBCOMMON := debian/ubuntu-packaging-guide-common$(COMMON)
 
 %:
 	dh $@ --builddirectory=_build
