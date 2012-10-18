@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-10-14 18:39+0000\n"
+"PO-Revision-Date: 2012-10-17 20:42+0000\n"
 "Last-Translator: Jose Luis Tirado <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-15 05:23+0000\n"
-"X-Generator: Launchpad (build 16137)\n"
+"X-Launchpad-Export-Date: 2012-10-18 04:52+0000\n"
+"X-Generator: Launchpad (build 16160)\n"
 "Language: es\n"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
@@ -39,7 +39,7 @@ msgid ""
 msgstr ""
 "Un «chroot» le permite tener un sistema de archivos completo de otra "
 "distribución el cual puede funcionar normalmente. Esto evita la sobrecarga "
-"de ejecutar una maquina virtual"
+"de ejecutar una maquina virtual completa."
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
@@ -4282,6 +4282,13 @@ msgid ""
 "specifier, e.g. ``bzr log``, ``bzr diff``, and so on.  To view the versions "
 "of a package, use the ``package:`` specifier::"
 msgstr ""
+"Frecuentemente pensará en términos de versiones de un paquete, en lugar de "
+"números de versión subyacentes de Bazaar. «bzr-builddeb» proporciona un "
+"especificador de revisión que hace que sea práctico. Cualquier orden que "
+"incluya un parámetro «-r» para especificar una revisión o un rango de "
+"revisiones funcionará con este especificador, como por ejemplo «bzr log», "
+"«bzr diff» y otros. Para ver la versión de un paquete, use el especificador "
+"«package»::"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:61
 msgid ""
@@ -4301,6 +4308,11 @@ msgid ""
 "release, and from other Ubuntu developers.  Doing it in Bazaar is pretty "
 "simple, and all based around the ``bzr merge`` command [#]_."
 msgstr ""
+"La fusión es uno de los puntos fuertes de Bazaar, y algo que se realiza de "
+"forma frecuente en el desarrollo de Ubuntu. Las actualizaciones  pueden ser "
+"fusionadas desde Debian, desde una nueva revisión desde aguas arriba, y "
+"desde otros desarrolladores de Ubuntu. Realizarlo en Bazaar es muy sencillo, "
+"y todo está basado en torno al comando  ``bzr merge`` [#]_."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:10
 msgid ""
@@ -4308,12 +4320,17 @@ msgid ""
 "from a different location.  First check that you have no uncommitted "
 "changes::"
 msgstr ""
+"Mientras se encuentre en el directorio de trabajo de una rama, puede "
+"integrar una rama desde una ubicación diferente. Primero compruebe que no "
+"tiene cambios sin confirmar::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:15
 msgid ""
 "If that reports anything then you will either have to commit the changes, "
 "revert them, or shelve them to come back to later."
 msgstr ""
+"Si eso le reporta cualquier cosa, entonces tendrá que confirmar los cambios, "
+"revertirlos o dejarlos de lado para volver más tarde."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:20
 msgid "Merging from Debian"
@@ -4334,6 +4351,9 @@ msgid ""
 "changes to review.  This may cause some conflicts.  You can see everything "
 "that the ``merge`` command did by running::"
 msgstr ""
+"Esto fusionará los cambios desde el último punto de integración y le dejará "
+"con cambios para revisar. Esto puede provocar algunos conflictos. Puede ver "
+"todo lo que la orden «merge» realizó ejecutando::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:34
 msgid ""
@@ -4341,28 +4361,38 @@ msgid ""
 "look how they should, removing the *conflict markers*.  Once you have done "
 "this, run::"
 msgstr ""
+"Si se reportan conflictos necesitará editar esos archivos para que se vean "
+"como deben, eliminando los *marcadores de conflicto*. Una vez que lo haya "
+"realizado, ejecute::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:41
 msgid ""
 "This will resolve any conflicted files that you fixed, and then tell you "
 "what else you have to deal with."
 msgstr ""
+"Esto resolverá todos los archivos conflictivos que haya corregido y luego le "
+"dirá qué más tiene hacer."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:44
 msgid ""
 "Once any conflicts are resolved, and you have made any other changes that "
 "you need, you will add a new changelog entry, and commit::"
 msgstr ""
+"Una vez resueltos los conflictos y de que haya realizado los cambios que "
+"crea oportunos, deberá añadir una entrada en el registro de cambios "
+"(changelog) y realizará la confirmación::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:50
 msgid "as described earlier."
-msgstr ""
+msgstr "como se describió anteriormente."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:52
 msgid ""
 "However, before you commit, it is always a good thing to check all the "
 "Ubuntu changes by running::"
 msgstr ""
+"Sin embargo, antes de realizar la confirmación, siempre es conveniente "
+"comprobar todos los paquetes de Ubuntu ejecutando::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:57
 msgid ""
@@ -4370,12 +4400,17 @@ msgid ""
 "versions (0.6.10-5ubuntu1).  In similar way you can compare to any other "
 "versions.  To see all available versions run::"
 msgstr ""
+"lo que le mostrará las diferencias entre las versiones Debian (0.6.10-5) y "
+"Ubuntu (0.6.10-5ubuntu1). De forma similar puede comparar cualquier otras "
+"versiones. Para ver todas las versiones disponibles ejecute::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:63
 msgid ""
 "After testing and committing the merge, you will need to seek sponsorship or "
 "upload to the archive in the normal way."
 msgstr ""
+"Después de probar y confirmar la fusión, necesitará buscar un patrocinador o "
+"subirlo al repositorio de la forma habitual."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:66
 msgid ""
@@ -4386,16 +4421,24 @@ msgid ""
 "all the changelog entries since the last Ubuntu change will be included in "
 "your ``_source.changes`` file.  For example::"
 msgstr ""
+"Si va a construir el paquete fuente desde la rama fusionada, debería usar la "
+"opción «-S» en la orden «bd». Otra cosa que querrá tener en cuenta es usar "
+"la opción «--package-merge». Esto añadirá las opciones «-v» y «-sa» "
+"adecuadas al paquete fuente de forma que todas las entradas del registro de "
+"cambios (changelog) desde el último cambio de Ubuntu se incluyan en su "
+"archivo «_source.changes». Por ejemplo::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:77
 msgid "Merging a new upstream version"
-msgstr ""
+msgstr "Integrar una nueva versión de aguas arriba"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:79
 msgid ""
 "When upstream releases a new version (or you want to package a snapshot), "
 "you have to merge a tarball into your branch."
 msgstr ""
+"Cuando aguas arriba se libera una nueva versión (o quiere empaquetar una "
+"instantánea), tendrá que integrar un archivo tar en su rama."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:82
 msgid ""
@@ -4403,6 +4446,9 @@ msgid ""
 "a valid ``debian/watch`` file, from inside the branch that you want to merge "
 "to, just type this::"
 msgstr ""
+"Eso se hace mediante la orden «bzr merge-upstream». Si su paquete tiene un "
+"archivo «debian/watch» válido, desde dentro de la rama en la que quiere "
+"realizar la integración, escriba simplemente::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:88
 msgid ""
@@ -4410,18 +4456,25 @@ msgid ""
 "adding a ``debian/changelog`` entry for you.  ``bzr-builddeb`` looks at the "
 "``debian/watch`` file for the upstream tarball location."
 msgstr ""
+"Esto descargará el tar y lo integrará en su rama, añadiendo automáticamente "
+"por usted una entrada en «debian/changelog». «bzr-builddeb» busca en el "
+"archivo «debian/watch» la ubicación del archivo tar de aguas arriba."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:92
 msgid ""
 "If you do *not* have a ``debian/watch`` file, you'll need to specify the "
 "location of the upstream tarball, and the version manually::"
 msgstr ""
+"Si *no* dispone de un archivo «debia/watch» necesitará indicar la ubicación "
+"del archivo tar de aguas arriba y la versión manualmente::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:97
 msgid ""
 "The ``--version`` option is used to specify the upstream version that is "
 "being merged in, as the command isn't able to infer that (yet)."
 msgstr ""
+"La opción «--version» se usa para especificar la versión de aguas arriba que "
+"se está integrando, ya que la orden no es capaz de deducirlo (de momento)."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:100
 msgid ""
@@ -4430,6 +4483,10 @@ msgid ""
 "as shown.  The command will automatically download the tarball for you.  The "
 "tarball will be renamed appropriately and, if required, converted to ``.gz``."
 msgstr ""
+"El último parámetro es la ubicación del archivo tar al que se está "
+"actualizando; puede ser una ruta local de su sistema de archivos o una URI "
+"http, ftp, sftp, etc. como se muestra. La orden descargará automáticamente "
+"el archivo tar por usted."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:105
 msgid ""
@@ -4437,6 +4494,9 @@ msgid ""
 "successfully, or that there were conflicts.  Either way you will be able to "
 "review the changes before committing as normal."
 msgstr ""
+"La orden «merge-upstream» le dirá si se ha ejecutado con éxito o si "
+"aparecieron conflictos. En cualquiera de los casos podrá revisar los cambios "
+"antes de confirmarlos como siempre."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:109
 msgid ""
@@ -4449,6 +4509,15 @@ msgid ""
 "release was *1.1-0ubuntu3*, create the tag *upstream-1.1* pointing to the "
 "bzr revision you want to use as the tip of the upstream branch."
 msgstr ""
+"Si está integrando una emisión de aguas arriba en una rama Bazaar existente "
+"que no ha usado anteriormente la distribución de UDD, «bzr merge-upstream» "
+"fallará con un error indicando que la etiqueta de la versión anterior de "
+"aguas arriba no está disponible; la integración no se puede completar sin "
+"conocer contra qué versión base hacerlo. Para solventar el problema, cree "
+"una etiqueta en su repositorio para la última versión de aguas arriba ahí "
+"presente; por ejemplo, si la última emisión de Ubuntu fue *1.1-0ubuntu3*, "
+"cree la etiqueta *upstream-1.1* apuntando a la revisión bzr que desea que se "
+"use como punta de la rama de aguas arriba."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:122
 msgid ""
@@ -4458,6 +4527,11 @@ msgid ""
 "``bzr`` version 2.5 beta 5 or newer, and ``bzr-builddeb`` version 2.8.1 or "
 "newer.  For older versions, use the ``bzr merge-package`` command instead."
 msgstr ""
+"Necesitará versiones más modernas de «bzr» y de «bzr-builddeb» para que "
+"funcione la orden «merge». Use las versiones de Ubuntu 12.04 (Precise) o las "
+"versiones de desarrollo del PPA «bzr». Más concretamente, necesitará «bzr» "
+"versión 2.5 beta 5 o superior y «bzr-builddeb» version 2.8.1 o superior. Con "
+"versiones más antiguas, use en su lugar la orden «bzr merge-package»."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:3
 msgid "Building a new package"
@@ -4470,6 +4544,10 @@ msgid ""
 "so that other people can more easily use the code.  This also makes a good "
 "first step in contributing your package to universe_."
 msgstr ""
+"Digamos que tengo un proyecto de aguas arriba que todavía no está disponible "
+"para Ubuntu. Quiero crear un paquete para este proyecto y hacerlo disponible "
+"como un PPA de forma que otra gente pueda usar el código más fácilmente. "
+"Este es también un buen primer paso para contribuir el paquete a universe_."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:12
 msgid "Example package"
@@ -4481,16 +4559,22 @@ msgid ""
 "typical setuptools-based Python package.  Fortunately, it's also maintained "
 "in Launchpad using Bazaar, so that makes bootstrapping much easier."
 msgstr ""
+"Comencé con una biblioteca de Python llamada `flufl.enum`_, que es un "
+"paquete de herramientas de configuración basadas en Python bastante típico. "
+"Afortunadamente, también se mantiene en Launchpad usando Bazaar, lo que el "
+"arranque mucho más sencillo."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:18
 msgid ""
 "Because we want to package the trunk branch, getting started is pretty "
 "simple::"
 msgstr ""
+"Puesto que queremos empaquetar la rama troncal, comenzar es bastante "
+"sencillo::"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:31
 msgid "Bootstrapping"
-msgstr ""
+msgstr "Arranque"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:33
 msgid ""
@@ -4500,6 +4584,11 @@ msgid ""
 "convergence`_ in the methods, especially if you're building standard Python "
 "setuptools-based libraries and applications."
 msgstr ""
+"Necesita crear el directorio «debian» inicial, así como los archivos "
+"necesarios dentro del mismo. Actualmente hay muchas maneras de configurar "
+"este directorio, pero por suerte se llegará a `alguna convergencia`_ de los "
+"métodos, especialmente si está compilando bibliotecas y aplicaciones "
+"estándar de Python basadas en herramientas de configuración."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:43
 msgid "The bzr-builddeb way"
@@ -4511,6 +4600,9 @@ msgid ""
 "``bzr dh-make``.  The latter might provide some benefits, and can be run "
 "like so from inside your branch::"
 msgstr ""
+"Puede usar la orden «dh_make» para que funcione o de forma parecida «bzr dh-"
+"make». La última forma podría tener algunas ventajas y la podemos ejecutar "
+"así desde dentro de su rama::"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:52
 msgid ""
@@ -4518,6 +4610,9 @@ msgid ""
 "the tarball locally first.  Use ``bzr dh-make --help`` for details on this "
 "command."
 msgstr ""
+"Si no dispone de una URL de la que descargar el archivo tar, necesitará "
+"crearlo localmente antes. Use «bzr dh-make --help» para detalles sobre esta "
+"orden."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:55
 msgid ""
@@ -4527,6 +4622,11 @@ msgid ""
 "``debian/changelog``.  The following section may give you some hints about "
 "that."
 msgstr ""
+"Después de que haya creado la plantilla del directorio «debian», asegúrese "
+"de hacer «bzr rm» de cualquier archivo en «debian» que no necesite (por "
+"ejemplo, los archivos «*.ex») y edite los archivos como «debian/control», "
+"«debian/watch», «debian/copyright» y «debian/changelog». La siguiente "
+"sección le puede ofrecer algunas ayudas para hacerlo."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:63
 msgid "The stdeb way"
@@ -4540,6 +4640,11 @@ msgid ""
 "won't need all of the commands.  stdeb has a command that is *exactly* what "
 "we're looking for!"
 msgstr ""
+"Otra forma de crear el directorio inicial «debian» para paquetes basados en "
+"herramientas de configuración de Python, es usar el paquete stdeb_. Existe "
+"documentación completa sobre este paquete en `upstream home`_, pero no le "
+"harán falta todas las órdenes. ¡stdeb tiene una orden que es *exactamente* "
+"lo que está buscando!"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:71
 msgid ""
@@ -4562,6 +4667,10 @@ msgid ""
 "a particular file system layout that we don't have.  No matter, we'll add "
 "the copyright file manually::"
 msgstr ""
+"También se necesita un archivo «debian/copyright». Normalmente se usaría "
+"«dh_make -c» de nuevo, pero eso no va bien con UDD. «dh_make» espera una "
+"disposición del sistema de archivos particular que no tenemos. No improta, "
+"porque añadiremos el archivo copyright manualmente::"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:98
 msgid "stdeb <= 0.5.1"
@@ -4582,6 +4691,10 @@ msgid ""
 "Because we're using UDD we don't care about anything else that ``sdist_dsc`` "
 "produces, so we can shuffle things around and remove the cruft."
 msgstr ""
+"Esta orden le deja con un directorio «deb_dist» que contiene a su vez un "
+"directorio «flufl.enum_3.0.1». Dentro de este último está el directorio "
+"«debian». Al usar UDD nos da igual todo lo demás que «sdis_dsc» produce, así "
+"que podemos mover las cosas y eliminar lo sobrante."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:110
 msgid ""
@@ -4614,6 +4727,11 @@ msgid ""
 "For example, I needed to modify the ``Maintainer`` and ``Description`` "
 "fields, and add ``X-Python-Version`` and ``Homepage`` fields."
 msgstr ""
+"A estas alturas probablemente desee editar el archivo «debian/control», "
+"añadiendo cualquier información que falte o corrigiendo información "
+"predeterminada incorrecta. Por ejemplo, yo necesité modificar los campos "
+"«Maintainer» y «Description»  y añadir los campos «X-Python-Version» y "
+"«Homepage»."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:131
 msgid ""
@@ -4622,6 +4740,11 @@ msgid ""
 "file so that builddeb can find the upstream tarball.  This really should "
 "match the version of the checkout you've made."
 msgstr ""
+"Ahora queremos compilar el paquete fuente. La forma más sencilla de hacerlo "
+"es con el complemento «bzr-builddeb», sin embargo, eso necesita un archivo "
+"«debian/watch» válido de forma que builddeb pueda encontrar el archivo tar "
+"de aguas arriba. Esto debería realmente coincidir con la versión de la "
+"extracción que ha realizado."
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:138
 msgid "debian/watch file"
@@ -4637,10 +4760,13 @@ msgid ""
 "more complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  "
 "In that case, use something like::"
 msgstr ""
+"Si sus archivos tar residen en Launchpad, el archivo «debian/watch» es algo "
+"más complicado (véase Question 21146`_ y `Bug 231797`_ para saber por qué). "
+"En este caso, usamos algo como::"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:152
 msgid "So, then it's a matter of...::"
-msgstr ""
+msgstr "Así, entonces es una cuestión de...::"
 
 #: ../ubuntu-packaging-guide/udd-newpackage.rst:159
 msgid "Building the source package"
@@ -4651,10 +4777,12 @@ msgid ""
 "Now we can build the source package and publish the package as we normally "
 "would, with ``bzr builddeb -S`` and ``dput``."
 msgstr ""
+"Ahora podemos compilar el paquete fuente y publicarlo como haríamos "
+"normalmente, con «bzr builddeb -S» y «dput»."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:3
 msgid "Working with Patches"
-msgstr ""
+msgstr "Trabajar con parches"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:5
 msgid ""
@@ -4668,6 +4796,16 @@ msgid ""
 "find out if your package has a patch system by using the ``what-patch`` "
 "command (from the ``ubuntu-dev-tools`` package)."
 msgstr ""
+"Muchos paquetes existentes que se han cambiado desde aguas arriba expresan "
+"esos cambios usando un sistema de parches, de los cuales hay varios entre lo "
+"que elegir. Normalmente, cuando haga un cambio adicional a un paquete, "
+"deseará añadir un archivo de parche al sistema de parches que se esté "
+"usando, en lugar de editar el código fuente directamente. Tenga en cuenta, "
+"sin embargo, que se considera una mala práctica añadir un sistema de parches "
+"a un paquete que no tiene ya uno. En este caso, coordínese con el mantenedor "
+"de Debian o edite los archivos directamente. Puede averiguar si el paquete "
+"tiene un sistema de parches usando la orden «what-patch» (del paquete "
+"«ubuntu-dev-tools»)."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:15
 msgid ""
@@ -4677,6 +4815,11 @@ msgid ""
 "2.5 and ``bzr-builddeb`` 2.8.1 (in Ubuntu 12.04 Precise), handling source "
 "packages with quilt patches has become much easier."
 msgstr ""
+"A pesar de que Debian dispone de varios sistemas de parches, Quilt_ se está "
+"convirtiendo en el más popular. Quilt él mismo como una especie de sistema "
+"de control de versiones y, en el contexto de UDD, puede ser algo bueno y "
+"algo malo. Con Bazaar 2.5 y «bzr-builddeb» 2.8.1 (en Ubuntu 12.04 Precise), "
+"la gestión de los paquetes fuente con parches quilt se ha facilitado mucho."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:21
 msgid ""
@@ -4685,6 +4828,10 @@ msgid ""
 "versions of the package from Debian where either the Debian or Ubuntu (or "
 "both) have quilt patches in the source branch."
 msgstr ""
+"Hay dos tareas principales en las que tendrá que ser consciente de los "
+"parches quilt: cuando desarrolle su propio parche al código de aguas arriba "
+"y cuando fusione nuevas versiones del paquete desde Debian, donde Debian o "
+"Ubuntu (o ambos) tienen parches quilt en la rama fuente."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:26
 msgid ""
@@ -4693,10 +4840,14 @@ msgid ""
 "adapt them to your own workflow, and keep watching for improvements from the "
 "Bazaar teams."
 msgstr ""
+"A continuación se dan algunas directrices para trabajar con parches quilt en "
+"UDD en estos dos escenarios. Algunas de estas técnicas son trabajos en "
+"curso, así que debería adaptarlas a su flujo de trabajo y vigilar por "
+"posibles mejoras desde los equipos de Bazaar."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:33
 msgid "Patches are applied in source branches"
-msgstr ""
+msgstr "Los parches se aplican en las ramas fuentes"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:35
 msgid ""
@@ -4708,10 +4859,17 @@ msgid ""
 "push or pop all the changes.  Or to put it another way, once you have a "
 "branch, jump right in!"
 msgstr ""
+"Algo importante a tener en cuenta: todas las ramas fuentes reflejan el árbol "
+"después de una orden «quilt push -a». En otras palabras, cuando bifurque una "
+"rama fuente desde Launchpad, obtiene el árbol con todos los parches "
+"aplicados, lista para que salte a trabajar. No necesita realizar «quilt push "
+"-a» manualmente y, de hecho, obtendrá un árbol con muchas modificaciones que "
+"distraen si inserta o extrae todos los cambios. O, por decirlo de otra "
+"forma, una vez que tenga la rama, ¡salte sobre ella!"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:45
 msgid "Merging from Debian with quilt patches"
-msgstr ""
+msgstr "Fusionar desde Debian con parches quilt"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:47
 msgid ""
@@ -4740,7 +4898,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:72
 msgid "Develop your patch"
-msgstr ""
+msgstr "Desarrollar su parche"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:74
 msgid ""
@@ -4824,7 +4982,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:141
 msgid "Gotchas"
-msgstr ""
+msgstr "Problemas comunes"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:143
 msgid ""
@@ -4842,7 +5000,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:156
 msgid "edit-patch"
-msgstr ""
+msgstr "edit-patch"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:158
 msgid ""
@@ -4874,7 +5032,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:3
 msgid "Seeking Review and Sponsorship"
-msgstr ""
+msgstr "Buscar revisor y patrocinador"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:5
 msgid ""
@@ -4894,7 +5052,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:19
 msgid "Pushing to Launchpad"
-msgstr ""
+msgstr "Empujar a Launchpad"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:21
 msgid ""
@@ -4937,7 +5095,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:47
 msgid "If that fails, then you can use::"
-msgstr ""
+msgstr "Si eso falla, puede usar::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:51
 msgid ""
@@ -4956,7 +5114,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:62
 msgid "Generating a debdiff"
-msgstr ""
+msgstr "Generar un debdiff"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:64
 msgid ""
@@ -4970,6 +5128,8 @@ msgstr ""
 msgid ""
 "Another way is to is to open the merge proposal and download the diff."
 msgstr ""
+"Otra forma es abrir una propuesta de fusión y descargar las diferencias "
+"(diff)."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:73
 msgid ""
@@ -5012,7 +5172,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:3
 msgid "Uploading a package"
-msgstr ""
+msgstr "Subir un paquete"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:5
 msgid ""
@@ -5024,7 +5184,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:12
 msgid "Uploading a change made by you"
-msgstr ""
+msgstr "Subir un paquete que ha modificado"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:14
 msgid ""
@@ -5055,6 +5215,8 @@ msgid ""
 "For older versions of bzr, you can use the ``merge-package`` command "
 "instead::"
 msgstr ""
+"Para versiones más antigas de bzr, puede usar en su lugar la orden «merge-"
+"package»::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:38
 msgid ""
@@ -5097,7 +5259,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:63
 msgid "Now you can push the changes back to Launchpad::"
-msgstr ""
+msgstr "Ahora ya puede empujar los cambios de vuelta a Launchpad::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:67
 msgid "(Change the destination if you are uploading an SRU or similar.)"
@@ -5122,7 +5284,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:84
 msgid "Sponsoring a change"
-msgstr ""
+msgstr "Patrocinar un cambio"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:86
 msgid ""
@@ -5162,7 +5324,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:115
 msgid "Sponsoring something and making your own changes"
-msgstr ""
+msgstr "Patrocinar algo y hacer sus propias modificaciones"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:117
 msgid ""
@@ -5214,7 +5376,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:13
 msgid "Branching for a change"
-msgstr ""
+msgstr "Bifurcar para hacer un cambio"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:15
 msgid ""
@@ -5259,7 +5421,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:57
 msgid "Commit with the normal::"
-msgstr ""
+msgstr "Confirmar con el habitual::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:61
 msgid ""
