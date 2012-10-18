@@ -61,7 +61,7 @@ Starting a Package
 
 ``bzr-builddeb`` includes a plugin to create a new package from a template. The
 plugin is a wrapper around the ``dh_make`` command. You should already have
-these if you installed ``packaging-dev`` Run the command providing the package
+these if you installed ``packaging-dev``. Run the command providing the package
 name, version number, and path to the upstream tarball::
 
     $ sudo apt-get install dh-make
@@ -218,7 +218,7 @@ packages to Debian:
     section documents processes for submitting new packages.
 
 In some cases, it might make sense to go directly into Ubuntu first. For
-instance, Debian might be in a freeze making it unlikely that you're
+instance, Debian might be in a freeze making it unlikely that your
 package will make it into Ubuntu in time for the next release. This
 process is documented on the `"New Packages" section of the Ubuntu wiki`_.
 
