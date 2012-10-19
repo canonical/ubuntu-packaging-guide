@@ -190,7 +190,9 @@ target to clean up all the build files so you end up with just a source package
 again.
 
 Here is a simplified version of the rules file created by ``dh_make`` (which 
-can be found in the ``dh-make`` package)::
+can be found in the ``dh-make`` package):
+
+.. code-block:: makefile
 
  #!/usr/bin/make -f
  # -*- makefile -*-

@@ -28,11 +28,11 @@ branch like this::
     $ bzr branch tomboy.dev bug-12345
     $ cd bug-12345
 
-Now you can do all my work in the `bug-12345` directory.  You make changes
+Now you can do all my work in the ``bug-12345`` directory.  You make changes
 there as necessary, committing as you go along.  This is just like doing any
 kind of software development with Bazaar.  You can make intermediate commits
 as often as you like, and when your changes are finished, you will use the
-standard `dch` command (from the `devscripts` package)::
+standard ``dch`` command (from the ``devscripts`` package)::
 
     $ dch -i
 
@@ -41,11 +41,11 @@ file.
 
 .. _link-via-changelog:
 
-When you added your `debian/changelog` entry, you should have included a bug
+When you added your ``debian/changelog`` entry, you should have included a bug
 fix tag that indicated which Launchpad bug issue you're fixing.  The format of
 this textual tag is pretty strict: ``LP: #12345``.  The space between the
 ``:`` and the ``#`` is required and of course you should use the actual bug
-number that you're fixing.  Your `debian/changelog` entry might look something
+number that you're fixing.  Your ``debian/changelog`` entry might look something
 like::
 
     tomboy (1.5.2-1ubuntu5) natty; urgency=low
@@ -62,7 +62,7 @@ A hook in bzr-builddeb will use the debian/changelog text as the commit
 message and set the tag to mark bug #12345 as fixed.
 
 This only works with bzr-builddeb 2.7.5 and bzr 2.4, for older versions use
-`debcommit`.
+``debcommit``.
 
 
 Building the package
@@ -71,13 +71,13 @@ Building the package
 Along the way, you'll want to build your branch so that you can test it to
 make sure it does actually fix the bug.
 
-In order to build the package you can use the `bzr builddeb` command from
-the `bzr-builddeb` package.  You can build a source package with::
+In order to build the package you can use the ``bzr builddeb`` command from
+the ``bzr-builddeb`` package.  You can build a source package with::
 
     $ bzr builddeb -S
 
-(`bd` is an alias for `builddeb`.)  You can leave the package unsigned by
-appending `-- -uc -us` to the command.
+(``bd`` is an alias for ``builddeb``.)  You can leave the package unsigned by
+appending ``-- -uc -us`` to the command.
 
 It is also possible to use your normal tools, as long as they are able to
 strip the .bzr directories from the package, e.g.::
@@ -85,11 +85,11 @@ strip the .bzr directories from the package, e.g.::
     $ debuild -i -I
 
 If you ever see an error related to trying to build a native package without a
-tarball, check to see if there is a `.bzr-builddeb/default.conf` file
+tarball, check to see if there is a ``.bzr-builddeb/default.conf`` file
 erroneously specifying the package as native.  If the changelog version has a
 dash in it, then it's not a native package, so remove the configuration file.
-Note that while `bzr builddeb` has a `--native` switch, it does not have a
-`--no-native` switch.
+Note that while ``bzr builddeb`` has a ``--native`` switch, it does not have a
+``--no-native`` switch.
 
 Once you've got the source package, you can build it as normal with
 ``pbuilder-dist`` (or ``pbuilder`` or `sbuild`_).

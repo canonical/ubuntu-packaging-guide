@@ -31,7 +31,7 @@ Where you can install or remove any package you wish without affecting your
 main system.
 
 You might want to copy your GPG/ssh keys and Bazaar configuration into the
-chroot so you can access and sign packages directly.
+chroot so you can access and sign packages directly::
 
     $ sudo mkdir oneiric/home/<username>
     $ sudo cp -r ~/.gnupg ~/.ssh ~/.bazaar oneiric/home/<username>
@@ -62,7 +62,7 @@ daily ISO images, see `the TestDrive wiki page`_ for more information.
 
 You can also set up pbuilder to pause when it comes across a build
 failure.  Copy C10shell from /usr/share/doc/pbuilder/examples into a
-directory and use the --hookdir= argument to point to it.
+directory and use the ``--hookdir=`` argument to point to it.
 
 Amazon's `EC2 cloud computers`_ allow you to hire a computer paying a
 few US cents per hour, you can set up Ubuntu machines of any supported
