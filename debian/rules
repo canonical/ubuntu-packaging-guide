@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
-VERSION:= $(shell dpkg-parsechangelog | sed -rne 's,^Version: ([^-]+).*,\1,p')
+VERSION := $(shell dpkg-parsechangelog | sed -rne 's,^Version: ([^-]+).*,\1,p')
+COMMON := /usr/share/ubuntu-packaging-guide
 
 %:
 	dh $@ --builddirectory=_build
@@ -12,21 +13,19 @@ override_dh_auto_build:
 	make epub
 
 override_dh_compress:
-	dh_compress -X usr/share/doc/ubuntu-packaging-guide-html/_sources
+	dh_compress -X_sources
 
 override_dh_link:
 	# symlink identical resources. Only needed for the html packages.
-	for lang in `find debian/ -maxdepth 1 -iname *html* -type d | cut -c 30-`; do \
-		cd debian/ubuntu-packaging-guide$$lang && LC_ALL=C fdupes -r1nq \
-		usr/share/doc/ubuntu-packaging-guide$$lang | while read s; do \
-				set -- $$(echo $$s | tr ' ' '\n' | sort); \
-				f=$$1; shift; \
-				for d; do \
-					echo "symlinking identical file $$f to $$d"; \
-					rm $$f; ln -s /$$d $$f; \
-				done; \
+	for dirname in _static _images; do \
+		for directory in `find debian/ -wholename */$$dirname -not -wholename *-common* -type d`; do \
+			cd $$directory; \
+			for filename in `find -type f -not -name translations.js`; do \
+				rm $$filename; \
+				ln -s $(COMMON)/$$dirname/$$filename $$filename; \
 			done; \
-		cd -; \
+			cd -; \
+		done; \
 	done
 	# use system copies of javascript libraries instead
 	for jsname in jquery underscore doctools searchtools; do \

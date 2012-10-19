@@ -79,7 +79,9 @@ class Package(object):
                    self.semi_complete_pofiles)
 
     def get_available_binary_packages(self):
-        BLACKLIST = [u'ubuntu-packaging-guide']     # metapackages and stuff
+		# metapackages and stuff
+        BLACKLIST = [u'ubuntu-packaging-guide',
+                     u'ubuntu-packaging-guide-common']
         self.stanzas = deb822.Packages.iter_paragraphs(open(self.control_file))
         return filter(lambda a: "Package" in a.keys() and
                       a.get("Package") not in BLACKLIST, self.stanzas)
