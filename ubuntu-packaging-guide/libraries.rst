@@ -38,7 +38,7 @@ We will use libnova as an example::
     $ bzr branch ubuntu:natty/libnova
     $ sudo apt-get install libnova-dev
 
-To find the SONAME of the library run
+To find the SONAME of the library run::
 
     $ readelf -a /usr/lib/libnova-0.12.so.2 | grep SONAME
 
