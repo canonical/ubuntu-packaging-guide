@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-05-22 12:36+0000\n"
-"PO-Revision-Date: 2012-10-17 20:42+0000\n"
+"PO-Revision-Date: 2012-10-18 22:52+0000\n"
 "Last-Translator: Jose Luis Tirado <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-18 04:52+0000\n"
-"X-Generator: Launchpad (build 16160)\n"
+"X-Launchpad-Export-Date: 2012-10-19 05:58+0000\n"
+"X-Generator: Launchpad (build 16165)\n"
 "Language: es\n"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
@@ -4880,12 +4880,21 @@ msgid ""
 "merge, then if there are no conflicts, it will re-apply the patches leaving "
 "you again with a source branch in the ``quilt push -a`` state."
 msgstr ""
+"Con versiones más recientes de Bazaar como se ha mencionado anteriormente, "
+"integrar nuevas versiones de Debian en Ubuntu debería ser relativamente "
+"fácil ahora, incluso cuando uno o ambos paquetes tengan parches quilt. "
+"Simplemente use «bzr merge» como haría normalmente. Bajo el capó, Bazaar "
+"primero des-aplicará todos los parches y luego hará la fusión y luego, si no "
+"hay conflictos, volverá a aplicar los parches con una rama fuente en el "
+"estado «quilt push -a»."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:54
 msgid ""
 "For example, if we want to merge the Debian version of the ``aptitude`` "
 "package with the Ubuntu version, we would do something like this::"
 msgstr ""
+"Por ejemplo, si queremos integrar la versión Debian del paquete «aptitude» "
+"en la versión de Ubuntu, haríamos algo como esto::"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:64
 msgid ""
@@ -4895,6 +4904,12 @@ msgid ""
 "patches are applied again.  Then you're ready to commit, push, and build as "
 "you normally would."
 msgstr ""
+"Si hubiera conflictos en la integración, los parches quilt permanecerán sin "
+"aplicar de forma que pueda resolver los conflictos más fácilmente. Usaría "
+"una combinación de órdenes de bzr y quilt para resolver los conflictos, "
+"hasta que todos los parches de quilt se hayan aplicado de nuevo. Entonces "
+"estará listo para confirmar, empujar los cambios y compilar como haría "
+"normalmente."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:72
 msgid "Develop your patch"
@@ -4908,12 +4923,20 @@ msgid ""
 "upstream (where UDD isn't used), and to remove patches when upstream fixes "
 "the bug the patch addresses (possibly in a completely different way)."
 msgstr ""
+"Existe una fuerte preferencia a arreglar los paquetes usando un sistema de "
+"parches como quilt, en lugar de modificar el código fuente directamente. "
+"Esto se debe a que con un sistema de parches, es más fácil transmitir esos "
+"cambios a Debian o aguas arriba (donde no se usa UDD) y eliminar los parches "
+"cuando los errores que solucionan son corregidos aguas arriba (posiblemente "
+"de una forma totalmente distinta)."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:80
 msgid ""
 "Let's say there's a bug in the ``dbus`` package that you want to fix.  You "
 "start the way you normally would with any package in UDD::"
 msgstr ""
+"Digamos que hay un error en el paquete «dbus» que desea arreglar. Comienza "
+"como haría normalmente con cualquier paquete en UDD::"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:89
 msgid ""
@@ -4921,6 +4944,9 @@ msgid ""
 "fix the typo in your favorite editor, then do a ``bzr stat`` to prove that "
 "the file has been edited::"
 msgstr ""
+"Es posible que el error sea muy sencillo; hay una errata en el archivo "
+"«README». Simplemente corrija la errata en su editor favorito y luego haga "
+"«bzr stat» para probar que el fichero se ha editado::"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:97
 msgid ""
@@ -4929,6 +4955,10 @@ msgid ""
 "quilt. The way to do that is to use the ``--prefix`` (or ``-p``) option to "
 "``bzr diff``::"
 msgstr ""
+"Ahora, para obtener esta corrección en un paquete quilt, necesitamos generar "
+"un archivo de diferencias (diff), pero necesitamos que el parche resultante "
+"tenga un formato aplicable por quilt. La forma de hacerlo es usar la opción "
+"«--prefix» (o «-p») con «bzr diff»::"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:104
 msgid ""
@@ -4937,6 +4967,11 @@ msgid ""
 "*level 0* diffs which are more easily read by humans, but this won't work "
 "with quilt (despite the implication in the quilt documentation)."
 msgstr ""
+"Lo que esto hace realmente es producir un diff de *nivel 1*, lo que es "
+"necesario para la orden quilt que vamos a usar más adelante. Normalmente, "
+"«bzr diff» produce diffs de *nivel 0* que son mucho más legibles para "
+"humanos, pero que no funcionarán con quilt (a pesar de lo que diga en la "
+"documentación de quilt)."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:109
 msgid ""
@@ -4944,6 +4979,9 @@ msgid ""
 "from the working tree.  Note that here we're using the ``a`` and ``b`` "
 "directory prefixes for the diff, but the actual names don't really matter."
 msgstr ""
+"El comando anterior genera el parche y lo almacen en un archivo un nivel por "
+"arriba en el árbol de trabajo. Tenga en cuenta que estamos usando los "
+"prefijos de directorios «a» y «b», pero que los nombres reales no importan."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:113
 msgid ""
@@ -4951,6 +4989,9 @@ msgid ""
 "you named the file above with the same name you want into your quilt stack, "
 "then just do this::"
 msgstr ""
+"Ahora todo lo que tiene que hacer es importar el parche en sus parches "
+"quilt. Si le dio el mismo nombre al fichero anterior que el que quiere usar "
+"en la pila de quilt, simplemente haga::"
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:120
 msgid ""
@@ -4959,6 +5000,10 @@ msgid ""
 "generated above.  Of course, you can change this by using the ``-P`` option "
 "to ``quilt import``."
 msgstr ""
+"Necesita la última línea para informarle a Bazaar sobre el nuevo archivo de "
+"parche de quilt. Puede comprobar que el nombre del parche de quilt es el "
+"mismo que el del fichero que generó antes. Por supuesto, puede cambiaro "
+"usando la opción «-P» con «quilt import»."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:125
 msgid ""
@@ -4968,6 +5013,11 @@ msgid ""
 "apply the newly imported quilt patch (with ``quilt push``), it will fail "
 "because you're applying a patch on top of the already patched file."
 msgstr ""
+"Una cosa importante a tener en cuenta es que si usa las órdenes «bzr stat» y "
+"«quilt applied» verá que el archivo «README» aún sigue modificado, pero que "
+"el parche «bug--12345.patch» no se ha aplicado todavía. Si intenta aplicar "
+"el parche quilt recién importado (con «quilt push») fallará porque está "
+"aplicando un parche por encima del archivo ya parcheado."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:131
 msgid ""
@@ -4979,6 +5029,13 @@ msgid ""
 "can just edit the tree in place, and do ``quilt refresh`` commands to update "
 "the top quilt patch."
 msgstr ""
+"Una forma de evitar esto es deshacer el cambio en «README» antes de hacer el "
+"«quilt push». Sin embargo, si piensa que puede querer continuar con el "
+"desarrollo del parche y, por lo tanto no quiere que desaparezca de su árbol "
+"de cambios, use «bzr shelve» para guardar el cambio en el árbol de trabajo, "
+"a un lado, y luego haga «quilt push». De cualquier forma, una vez que haya "
+"empujado su parche quilt superior, puede editar el árbol directamente y usar "
+"órdenes «quilt refresh» para actualizar el parche quilt superior."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:141
 msgid "Gotchas"
@@ -4997,6 +5054,16 @@ msgid ""
 "and quilt). For now, the best recommendation is to revert any changes to the "
 "``.pc`` directory in your branch."
 msgstr ""
+"Algo a tener en cuenta es que quilt usa un directorio «.pc» para guardar su "
+"estado. Este directorio está bajo el control de versiones en todas las ramas "
+"fuentes. *Vigile* los cambios en el directorio «.pc» que no tengan relación "
+"(o más exactamente, no le interesen) con su parche. Esto puede ocurrir "
+"porque el importador de la rama fuente UDD `actualmente incluye un "
+"directorio .pc existente`_ en la rama importada. Esto puede provocar "
+"conflictos o cambios no deseados o desconocidos esencialmente porque han "
+"existido dos sistemas de control de versión compitiendo por la misma cosa "
+"(esto es, bzr y quilt). Por ahora, la mejor recomendación es que deshaga "
+"cualquier cambio del directorio «.pc» de su rama."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:156
 msgid "edit-patch"
@@ -5012,6 +5079,13 @@ msgid ""
 "In theory ``edit-patch`` should solve this, but there are currently two "
 "blockers."
 msgstr ""
+"«edit-patch» es un pequeño script de envoltorio que forma parte del paquete "
+"«ubuntu-dev-tools». Oculta muchos de los detalles desagradables de trabajar "
+"con el sistema de parches. Por ejemplo, mientra que lo anterior funciona "
+"bien si su paquete ya está usando quilt, deberá adaptar el flujo de trabajo, "
+"quizá significativamente, para trabajar con `un sistema de parches "
+"diferente`_. En teoría «edit-patch» debería solucionarlo, pero actualmente "
+"existen dos impedimentos."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:165
 msgid ""
@@ -5021,6 +5095,12 @@ msgid ""
 "this isn't yet exposed in ``edit-patch``.  If you use the ``--prefix`` "
 "argument to the ``bzr diff`` command as shown above, you should be okay."
 msgstr ""
+"Por defecto, «bzr diff» produce un parche «--p0», pero «edit-patch» delega "
+"al valor por defecto del sistema de parches subyacente. Para quilt, esto es "
+"«-p1». «quilt import» toma el parámetro «-p» para indicar el nivel de "
+"prefijo, pero esto no está todavía accesible en «edit-patch». Si usa el "
+"parámetro «--prefix» con la orden «bzr diff» como se ha mostrado "
+"anteriormente, debería ir bien."
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:171
 msgid ""
@@ -5029,6 +5109,11 @@ msgid ""
 "``edit-patch``, as shown above.  The alternative would be to save the diff "
 "in a temporary file, and then point ``edit-patch`` to this temporary file."
 msgstr ""
+"Por defecto «edit-patch» requiere una ruta a un archivo de parche existente, "
+"pero suele ser más conveniente canalizar la salida de «bzr diff» a la "
+"entrada estándar (stdin) de «edit-patch», como se ha mostrado. La "
+"alternativa sería guardar el archivo las diferencias diff en un archivo "
+"temporal y luego apuntar «edit-patch» a este archivo temporal."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:3
 msgid "Seeking Review and Sponsorship"
@@ -5041,6 +5126,10 @@ msgid ""
 "not you have upload rights yourself.  Of course, if you don't have upload "
 "rights, you will need to seek sponsorship."
 msgstr ""
+"Una de las ventajas más importantes de usar el flujo de trabajo de UDD es "
+"mejorar la calidad buscando revisiones de cambios de sus compañeros. Esto es "
+"cierto tenga usted o no permisos para subir código. Por supuesto, si no "
+"tiene permisos para subir, necesitará buscar un patrocinio."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:10
 msgid ""
@@ -5049,6 +5138,10 @@ msgid ""
 "the bug issue, and create a *merge proposal* for others to review, and "
 "sponsors to upload."
 msgstr ""
+"Una vez que esté satisfecho con su corrección y tenga la rama lista, los "
+"siguientes pasos se pueden usar para publicarla en Launchpad, enlazarla a la "
+"incidencia del error y crear una *propuesta de fusión* para que otros la "
+"revisen y que los patrocinadores la suban."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:19
 msgid "Pushing to Launchpad"
@@ -5060,38 +5153,51 @@ msgid ""
 "via-changelog>` using ``dch`` and ``bzr commit``.  However, the branch and "
 "bug don't actually get linked until you push the branch to Launchpad."
 msgstr ""
+"Le hemos mostrado previamente cómo :ref:`asociar su rama al error <link-via-"
+"changelog>` usando «dch» y «bzr commit». Sin embargo, la rama y el error no "
+"se enlazan realmente hasta que no empuja la rama a Launchpad."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:25
 msgid ""
 "It is not critical to have a link to a bug for every change you make, but if "
 "you are fixing reported bugs then linking to them will be useful."
 msgstr ""
+"No es crítico tener un enlace a un error para cada cambio que realice, pero "
+"si está corrigiendo errores reportados enlazarlos es útil."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:28
 msgid "The general form of the URL you should push your branch to is::"
-msgstr ""
+msgstr "La forma genera de la URL a la que debería empujar su rama es::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:32
 msgid ""
 "For example, to push your fix for bug 12345 in the Tomboy package for Natty, "
 "you'd use::"
 msgstr ""
+"Por ejemplo, para empujar su corrección del error 12345 en el paquete Tomboy "
+"para Natty, usaría::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:37
 msgid ""
 "The last component of the path is arbitrary; it's up to you to pick "
 "something meaningful."
 msgstr ""
+"El último componente de la ruta es arbitrario; depende de usted elegir algo "
+"significativo."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:40
 msgid ""
 "However, this usually isn't enough to get Ubuntu developers to review and "
 "sponsor your change.  You should next submit a *merge proposal*."
 msgstr ""
+"Sin embargo, esto no es normalmente suficiente para que los desarrolladores "
+"de Ubuntu revisen y patrocinen su cambio. Debería envíar una *propuesta de "
+"fusión*."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:43
 msgid "To do this open the bug page in a browser, e.g.::"
 msgstr ""
+"Para hacerlo, abra la página del error en un navegador, por ejemplo::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:47
 msgid "If that fails, then you can use::"
@@ -5104,6 +5210,12 @@ msgid ""
 "in an explanation of your change in the *Initial Comment* box.  Lastly, "
 "click *Propose Merge* to complete the process."
 msgstr ""
+"donde la mayoría de las URLs coincidan con las que ha usado para «bzr push». "
+"En esta página, verá un enlace que dice *Propose for merging into another "
+"branch* (proponer para ser integrada en otra rama). Escriba una explicación "
+"de su cambio en la casilla *Initial Comment* (comentario inicial). "
+"Finalmente, pulse *Propose Merge* (proponer integración) para completar el "
+"proceso."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:56
 msgid ""
@@ -5111,6 +5223,10 @@ msgid ""
 "`~ubuntu-branches` team, which should be enough to reach an Ubuntu developer "
 "who can review and sponsor your package change."
 msgstr ""
+"Las propuestas de integración a ramas de paquetes fuente subscribirán "
+"automáticamente al equipo `~ubuntu-branches`, lo que debería ser suficiente "
+"para que lleguen a un desarrollador de Ubuntu que pueda revisar y patrocinar "
+"sus cambios al paquete."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:62
 msgid "Generating a debdiff"
@@ -5223,12 +5339,16 @@ msgid ""
 "This will merge the two trees, possibly producing conflicts, which you'll "
 "need to resolve manually."
 msgstr ""
+"Esto fusionará los dos árboles, posiblemente produciendo conflictos, que "
+"deberá resolver manualmente."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:41
 msgid ""
 "Next you should make sure the ``debian/changelog`` is as you would like, "
 "with the correct distribution, version number, etc."
 msgstr ""
+"Después debería asegurarse de que el archivo «debian/changelog» está como "
+"desea, con la distribución correcta, número de versión, etc."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:44
 msgid ""
@@ -5242,6 +5362,8 @@ msgid ""
 "The next step is to build and test the modified source package as you "
 "normally would::"
 msgstr ""
+"El siguiente paso es construir y probar el paquete fuente como haría "
+"normalmente::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:53
 msgid ""
@@ -5256,6 +5378,8 @@ msgid ""
 "This tag will tell the package importer that what is in the Bazaar branch is "
 "the same as in the archive."
 msgstr ""
+"Esta etiqueta le dirá al importador del paquete que lo que está en la rama "
+"de Bazaar es lo mismo que lo que está en el repositorio."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:63
 msgid "Now you can push the changes back to Launchpad::"
@@ -5263,7 +5387,7 @@ msgstr "Ahora ya puede empujar los cambios de vuelta a Launchpad::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:67
 msgid "(Change the destination if you are uploading an SRU or similar.)"
-msgstr ""
+msgstr "(cambie el destino si está subiendo una SRU o similar)."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:69
 msgid ""
@@ -5274,13 +5398,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:75
 msgid "or, if you have permission to upload to the primary archive::"
-msgstr ""
+msgstr "o, si tiene permisos para subir al repositorio primario::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:79
 msgid ""
 "You are now free to delete your feature branch, as it is merged, and can be "
 "re-downloaded from Launchpad if needed."
 msgstr ""
+"Ahora ya puede borrar su rama, ya que se ha integrado, y se puede volver a "
+"descargar de Launchpad si hiciera falta."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:84
 msgid "Sponsoring a change"
@@ -5383,6 +5509,9 @@ msgid ""
 "The first thing to do is to make sure your source package branch is up-to-"
 "date.  It will be if you just checked it out, otherwise do this::"
 msgstr ""
+"Lo primero a hacer es asegurarse de que su rama del paquete fuente está "
+"actualizada. Lo estará si la acaba de extraer, de otra forma haga lo "
+"siguiente::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:21
 msgid ""
@@ -5408,6 +5537,8 @@ msgid ""
 "This will drop you in an editor to add an entry to the `debian/changelog` "
 "file."
 msgstr ""
+"Esto le dejará en un editor para que añada una entrada al archivo "
+"`debian/changelog`."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:44
 msgid ""
@@ -5442,6 +5573,8 @@ msgid ""
 "Along the way, you'll want to build your branch so that you can test it to "
 "make sure it does actually fix the bug."
 msgstr ""
+"Por el camino querrá compilar su rama de forma que pueda probarla y "
+"asegurarse de que realmente corrige el error."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:74
 msgid ""
