@@ -168,8 +168,8 @@ debian/patches but have different commands to apply, un-apply or create patches.
 You can use ``edit-patch``, shown in previous chapters, as a reliable way to
 work with all systems.
 
-Even older packages will include changes directly to sources and kept in the
-``diff.gz`` source file.  This makes it hard to upgrade to new upstream
+In even older packages changes will be included directly to sources and kept
+in the ``diff.gz`` source file.  This makes it hard to upgrade to new upstream
 versions or differentiate between patches and is best avoided.
 
 Bazaar Loom is a way to keep patches as part of bzr trees, see :doc:`Working
