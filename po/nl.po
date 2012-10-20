@@ -7,15 +7,261 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-05-22 12:36+0000\n"
+"POT-Creation-Date: 2012-10-19 14:57+0000\n"
 "PO-Revision-Date: 2012-09-21 15:25+0000\n"
 "Last-Translator: Hannie Dumoleyn <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-09-22 05:17+0000\n"
-"X-Generator: Launchpad (build 15985)\n"
+"X-Launchpad-Export-Date: 2012-10-20 05:20+0000\n"
+"X-Generator: Launchpad (build 16165)\n"
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
+msgid "autopkgtest: Automatic testing for packages"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
+msgid ""
+"The `DEP 8 specification`_ defines how automatic testing can very easily be "
+"integrated into packages. To integrate a test into a package, all you need "
+"to do is:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
+msgid "add the following to the Source section in ``debian/control``::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:13
+msgid ""
+"add a file called ``debian/tests/control`` which specifies the requirements "
+"for the testbed,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
+msgid "add the tests in ``debian/tests/``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
+msgid "Testbed requirements"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:21
+msgid ""
+"In ``debian/tests/control`` you specify what to expect from the testbed. So "
+"for example you list all the required packages for the tests, if the testbed "
+"gets broken during the build or if ``root`` permissions are required. The "
+"`DEP 8 specification`_ lists all available options."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
+msgid ""
+"Below we are having a look at the ``glib2.0`` source package. In a very "
+"simple case the file would look like this::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
+msgid ""
+"For the test in ``debian/tests/build`` this would ensure that the packages "
+"``libglib2.0-dev`` and ``build-essential`` are installed."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
+msgid ""
+"You can use ``@`` in the ``Depends`` line to indicate that you want all the "
+"packages installed which are built by the source package in question."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
+msgid "The actual tests"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
+msgid "The accompanying test for the example above might be:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
+msgid ""
+"Here a very simple piece of C code is written to a temporary directory. Then "
+"this is compiled with system libraries (using flags and library paths as "
+"provided by `pkg-config`). Then the compiled binary, which just exercises "
+"some parts of core glib functionality, is run."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:80
+msgid ""
+"While this test is very small and basic, it tests quite a number of core "
+"components on a system. This may help to uncover critical issues early on."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
+msgid "Executing the test"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
+msgid ""
+"The test script can be easily executed on its own, but if you want to make "
+"sure that the testbed is properly set up, you might want to use ``adt-run`` "
+"from the ``autopkgtest`` package to execute the test. Simply run this "
+"command in the source tree::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:95
+msgid "Further examples"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:97
+msgid ""
+"This list is not comprehensive, but might help you get a better idea of how "
+"automated tests are implemented and used in Ubuntu."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:100
+msgid ""
+"The `libxml2 tests`_ are very similar. They also run a test-build of a "
+"simple piece of C code and execute it."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
+msgid ""
+"The `gtk+3.0 tests`_ also do a compile/link/run check in the \"build\" test. "
+"There is an additional \"python3-gi\" test which verifies that the GTK "
+"library can also be used through introspection."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:105
+msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:106
+msgid ""
+"The `gvfs tests`_ have comprehensive testing of their functionality and are "
+"very interesting because they emulate usage of CDs, Samba, DAV and other "
+"bits."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
+msgid "Ubuntu infrastructure"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:113
+msgid ""
+"Packages which have ``autopkgtest`` enabled will have their tests run "
+"whenever they get uploaded or any of their reverse-dependencies change. The "
+"output of `automatically run autopkgtest tests`_ can be viewed on the web "
+"and is regularly updated."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:118
+msgid ""
+"While Debian does not have an automatic testing infrastructure set up yet, "
+"they should still be submitted to Debian, as DEP-8 is a Debian specification "
+"and Debian developers or users can still manually run the tests."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:122
+msgid ""
+"Packages in Debian with a testsuite header will also be automatically added "
+"when they are synced to Ubuntu."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:126
+msgid "Getting the test into Ubuntu"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:128
+msgid ""
+"The process of submitting an autopkgtest for a package is largely similar to "
+":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:131
+msgid "run ``bzr branch ubuntu:<packagename>``,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:132
+msgid "edit ``debian/control`` to enable the tests,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:133
+msgid "add the ``debian/tests`` directory,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:134
+msgid ""
+"write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:135
+msgid "add your test case(s) to ``debian/tests``,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:136
+msgid ""
+"commit your changes, push them to Launchpad, propose a merge and get it "
+"reviewed just like any other improvement in a source package."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/backports.rst:3
+msgid "Backporting software updates"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/backports.rst:5
+msgid ""
+"Sometimes you might want to make new functionality available in a stable "
+"release which is not connected to a critical bug fix. For these scenarios "
+"you have two options: either you `upload to a PPA "
+"<https://help.launchpad.net/Packaging/PPA>`_ or prepare a backport."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/backports.rst:12
+msgid "Personal Package Archive (PPA)"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/backports.rst:14
+msgid ""
+"Using a PPA has a number of benefits. It is fairly straight-forward, you "
+"don't need approval of anyone, but the downside of it is that your users "
+"will have to manually enable it. It is a non-standard software source."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/backports.rst:18
+msgid ""
+"The `PPA documentation on Launchpad`_ is fairly comprehensive and should get "
+"you up and running in no time."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/backports.rst:25
+msgid "Official Ubuntu Backports"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/backports.rst:27
+msgid ""
+"The Backports Project is a means to provide new features to users. Because "
+"of the inherent stability risks in backporting packages, users do not get "
+"backported packages without some explicit action on their part. This "
+"generally makes backports an inappropriate avenue for fixing bugs. If a "
+"package in an Ubuntu release has a bug, it should be fixed either through "
+"the :doc:`Security Update or the Stable Release Update process<./security-"
+"and-stable-release-updates>`, as appropriate."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/backports.rst:35
+msgid ""
+"Once you determined you want a package to be backported to a stable release, "
+"you will need to test-build and test it on the given stable release. "
+"``pbuilder-dist`` (in the ``ubuntu-dev-tools`` package) is a very handy tool "
+"to do this easily."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/backports.rst:40
+msgid ""
+"To report the backport request and get it processed by the Backporters team, "
+"you can use the ``requestbackport`` tool (also in the ``ubuntu-dev-tools`` "
+"package). It will determine the intermediate releases that package needs to "
+"be backported to, list all reverse-dependencies, and file the backporting "
+"request.  Also will it include a testing checklist in the bug."
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
@@ -80,18 +326,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/chroots.rst:33
 msgid ""
 "You might want to copy your GPG/ssh keys and Bazaar configuration into the "
-"chroot so you can access and sign packages directly."
+"chroot so you can access and sign packages directly::"
 msgstr ""
-"U zou uw GPG/ssh-sleutels en Bazaar-configuratie kunnen kopiëren naar chroot "
-"zodat u directe toegang heeft tot pakketten en deze direct kunt tekenen."
-
-#: ../ubuntu-packaging-guide/chroots.rst:36
-msgid ""
-"$ sudo mkdir oneiric/home/<username> $ sudo cp -r ~/.gnupg ~/.ssh ~/.bazaar "
-"oneiric/home/<username>"
-msgstr ""
-"$ sudo mkdir oneiric/home/<username> $ sudo cp -r ~/.gnupg ~/.ssh ~/.bazaar "
-"oneiric/home/<username>"
 
 #: ../ubuntu-packaging-guide/chroots.rst:39
 msgid ""
@@ -139,7 +375,7 @@ msgstr ""
 msgid ""
 "You can also set up pbuilder to pause when it comes across a build failure.  "
 "Copy C10shell from /usr/share/doc/pbuilder/examples into a directory and use "
-"the --hookdir= argument to point to it."
+"the ``--hookdir=`` argument to point to it."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:67
@@ -399,17 +635,17 @@ msgstr ""
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:192
 msgid ""
 "Here is a simplified version of the rules file created by ``dh_make`` (which "
-"can be found in the ``dh-make`` package)::"
+"can be found in the ``dh-make`` package):"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:204
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:206
 msgid ""
 "Let us go through this file in some detail. What this does is pass every "
 "build target that ``debian/rules`` is called with as an argument to "
 "``/usr/bin/dh``, which itself will call all the necessary ``dh_*`` commands."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:208
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:210
 msgid ""
 "``dh`` runs a sequence of debhelper commands. The supported sequences "
 "correspond to the targets of a ``debian/rules`` file: \"build\", \"clean\", "
@@ -417,7 +653,7 @@ msgid ""
 "see what commands are run in each target, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:217
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:219
 msgid ""
 "Commands in the binary-indep sequence are passed the \"-i\" option to ensure "
 "they only work on binary independent packages, and commands in the binary-"
@@ -425,7 +661,7 @@ msgid ""
 "architecture dependent packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:222
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:224
 msgid ""
 "Each debhelper command will record when it's successfully run in "
 "``debian/package.debhelper.log``. (Which dh_clean deletes.) So dh can tell "
@@ -433,7 +669,7 @@ msgid ""
 "those commands again."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:227
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:229
 msgid ""
 "Each time ``dh`` is run, it examines the log, and finds the last logged "
 "command that is in the specified sequence. It then continues with the next "
@@ -441,7 +677,7 @@ msgid ""
 "remaining`` options can override this behavior."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:232
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:234
 msgid ""
 "If ``debian/rules`` contains a target with a name like "
 "``override_dh_command``, then when it gets to that command in the sequence, "
@@ -451,7 +687,7 @@ msgid ""
 "feature, you should Build-Depend on debhelper 7.0.50 or above.)"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:241
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:243
 msgid ""
 "Have a look at ``/usr/share/doc/debhelper/examples/`` and ``man dh`` for "
 "more examples. Also see `the rules section (Section 4.9) "
@@ -459,32 +695,32 @@ msgid ""
 "the Debian Policy Manual."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:247
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:249
 msgid "Additional Files"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:250
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:252
 msgid "The install file"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:252
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:254
 msgid ""
 "The ``install`` file is used by ``dh_install`` to install files into the "
 "binary package. It has two standard use cases:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:255
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:257
 msgid ""
 "To install files into your package that are not handled by the upstream "
 "build system."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:256
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:258
 msgid ""
 "Splitting a single large source package into multiple binary packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:258
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:260
 msgid ""
 "In the first case, the ``install`` file should have one line per file "
 "installed, specifying both the file and the installation directory. For "
@@ -493,7 +729,7 @@ msgid ""
 "``debian`` directory to ``usr/share/applications``::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:269
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:271
 msgid ""
 "When a source package is producing multiple binary packages ``dh`` will "
 "install the files into ``debian/tmp`` rather than directly into "
@@ -507,30 +743,30 @@ msgid ""
 "like::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:282
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:284
 msgid ""
 "While ``foo-common.install`` containing only the architecture independent "
 "file might look like::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:290
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:292
 msgid ""
 "This would create two binary packages, ``foo`` and ``foo-common``. Both "
 "would require their own paragraph in ``debian/control``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:293
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:295
 msgid ""
 "See ``man dh_install`` and the `install file section (Section 5.11) "
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:298
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:300
 msgid "The watch file"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:300
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:302
 msgid ""
 "The ``debian/watch`` file allows us to check automatically for new upstream "
 "versions using the tool ``uscan`` found in the ``devscripts`` package. The "
@@ -539,7 +775,7 @@ msgid ""
 "example::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:309
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:311
 msgid ""
 "Running ``uscan`` in the root source directory will now compare the upstream "
 "version number in ``debian/changelog`` with the latest available upstream "
@@ -547,43 +783,50 @@ msgid ""
 "downloaded. For example::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:322
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:324
+msgid ""
+"If your tarballs live on Launchpad, the ``debian/watch`` file is a little "
+"more complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  "
+"In that case, use something like::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:331
 msgid ""
 "For further information, see ``man uscan`` and the `watch file section "
 "(Section 4.11) <http://www.debian.org/doc/debian-policy/ch-source.html#s-"
 "debianwatch>`_ of the Debian Policy Manual."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:326
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:335
 msgid ""
 "For a list of packages where the ``watch`` file reports they are not in sync "
 "with upstream see `Ubuntu External Health Status "
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:331
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:340
 msgid "The source/format file"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
 msgid ""
 "This file indicates the format of the source package. It should contain a "
 "single line indicating the desired format:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:336
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:345
 msgid "``3.0 (native)`` for Debian native packages (no upstream version)"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:338
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:347
 msgid "``3.0 (quilt)`` for packages with a separate upstream tarball"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:340
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:349
 msgid "``1.0`` for packages wishing to explicitly declare the default format"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:351
 msgid ""
 "Currently, the package source format will default to 1.0 if this file does "
 "not exist. You can make this explicit in the source/format file. If you "
@@ -592,49 +835,49 @@ msgid ""
 "ignored."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:347
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:356
 msgid ""
 "You are encouraged to use the newer 3.0 source format. It provides a number "
 "of new features:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:350
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:359
 msgid "Support for additional compression formats: bzip2, lzma and xz"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:352
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
 msgid "Support for multiple upstream tarballs"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:354
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:363
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:356
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:365
 msgid ""
 "Debian-specific changes are no longer stored in a single .diff.gz but in "
 "multiple patches compatible with quilt under ``debian/patches/``"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:358
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:367
 msgid ""
 "http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
 "concerning the switch to the 3.0 source package formats."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:370
 msgid ""
 "See ``man dpkg-source`` and the `source/format section (Section 5.21) "
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:366
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:375
 msgid "Additional Resources"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:368
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:377
 msgid ""
 "In addition to the links to the Debian Policy Manual in each section above, "
 "the Debian New Maintainers' Guide has more detailed descriptions of each "
@@ -720,11 +963,15 @@ msgid ""
 "particular binary package, type::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:64
-msgid "Getting the code"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:63
+msgid "``apt-cache`` is part of the standard installation of Ubuntu."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:66
+msgid "Getting the code"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:68
 msgid ""
 "Once you know the source package to work on, you will want to get a copy of "
 "the code on your system, so that you can debug it.  In Ubuntu Distributed "
@@ -733,7 +980,7 @@ msgid ""
 "maintains source package branches for all the packages in Ubuntu."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:72
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:74
 msgid ""
 "Once you've got a local branch of the source package, you can investigate "
 "the bug, create a fix, and upload your proposed fix to Launchpad, in the "
@@ -746,17 +993,17 @@ msgid ""
 "developer!"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:81
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:83
 msgid ""
 "We'll describe specifics on how to branch the code, push your fix, and "
 "request a review in the following sections."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:86
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:88
 msgid "Work on a fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:88
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:90
 msgid ""
 "There are entire books written about finding bugs, fixing them, testing "
 "them, etc. If you are completely new to programming, try to fix easy bugs "
@@ -764,71 +1011,73 @@ msgid ""
 "document your change and assumptions clearly."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:93
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:95
 msgid ""
 "Before working on a fix yourself, make sure to investigate if nobody else "
 "has fixed it already or is currently working on a fix. Good sources to check "
 "are:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:98
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:97
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
 msgid ""
 "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:98
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
 msgid "bugs or package uploads of Debian or other distributions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:103
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:105
 msgid ""
 "You now want to create a patch which includes the fix.  The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:108
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:110
 msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:113
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:115
 msgid ""
 "After editing the file type ``exit`` or press ``control-d`` to quit the "
 "temporary shell.  The new patch will have been added into ``debian/patches``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:118
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:120
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:204
 msgid "Testing the fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:120
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:122
 msgid "To build a test package with your changes, run these commands::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:125
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:127
 msgid ""
 "This will create a source package from the branch contents (``-us -uc`` will "
 "just omit the step to sign the source package) and ``pbuilder-dist`` will "
 "build the package from source for whatever ``release`` you choose."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:129
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:131
 msgid ""
 "Once the build succeeds, install the package from "
 "``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i "
 "<package>_<version>.deb``).  Then test to see if the bug is fixed."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:136
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:138
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:155
 msgid "Documenting the fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:138
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:140
 msgid ""
 "It is very important to document your change sufficiently so developers who "
 "look at the code in the future won't have to guess what your reasoning was "
@@ -837,17 +1086,17 @@ msgid ""
 "tracked."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:143
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:145
 msgid "The easiest way to update this is to run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:147
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:149
 msgid ""
 "This will add a boilerplate changelog entry for you and launch an editor "
 "where you can fill in the blanks. An example of this could be::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:156
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:158
 msgid ""
 "``dch`` should fill out the first and last line of such a changelog entry "
 "for you already. Line 1 consists of the source package name, the version "
@@ -856,25 +1105,25 @@ msgid ""
 "timestamp (in :rfc:`5322` format) of the change."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:162
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:164
 msgid ""
 "With that out of the way, let's focus on the actual changelog entry itself: "
 "it is very important to document:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:167
 msgid "where the change was done"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:166
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 msgid "what was changed"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:167
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
 msgid "where the discussion of the change happened"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:171
 msgid ""
 "In our (very sparse) example the last point is covered by ``(LP: #123456)`` "
 "which refers to Launchpad bug 123456. Bug reports or mailing list threads or "
@@ -884,40 +1133,367 @@ msgid ""
 "Ubuntu."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:178
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:180
 msgid "Committing the fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:180
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:182
 msgid "With the changelog entry written and saved, you can just run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:184
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:186
 msgid ""
 "and the change will be committed (locally) with your changelog entry as a "
 "commit message."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:187
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:189
 msgid ""
 "To push it to Launchpad, as the remote branch name, you need to stick to the "
 "following nomenclature::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:192
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:194
 msgid "This could for example be::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:196
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:198
 msgid "So if you just run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:201
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:203
 msgid ""
 "you should be all set. The push command should push it to Launchpad and the "
 "second command will open the Launchpad page of the remote branch in your "
 "browser. There find the \"(+) Propose for merging\" link, click it to get "
 "the change reviewed by somebody and included in Ubuntu."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:208
+msgid ""
+"Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into "
+"more detail about getting feedback for your proposed changes."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:211
+msgid ""
+"If your branch fixes issues in stable releases or it is a security fix, you "
+"might want to have a look at our :doc:`Security and stable release "
+"updates<./security-and-stable-release-updates>` article."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:3
+msgid "Tutorial: Fixing a bug in Ubuntu"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:5
+msgid ""
+"While the mechanics for :doc:`fixing a bug<./fixing-a-bug>` are the same for "
+"every bug, every problem you look at is likely to be different from another. "
+"An example of a concrete problem might help to get an idea what to consider "
+"generally."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:10
+msgid ""
+"At the time of writing this article this was not fixed yet. When you are "
+"reading the article this might actually be fixed. Take this as an example "
+"and try to adapt it to the specific problem you are facing."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:15
+msgid "Confirming the problem"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:17
+msgid ""
+"Let's say the package ``bumprace`` does not have a homepage in its package "
+"description. As a first step you would check if the problem is not solved "
+"already. This is easy to check, either take a look at Software Center or "
+"run::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:23
+msgid "The output should be similar to this::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:49
+msgid "A counter-example would be ``gedit``, which has a homepage set::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:55
+msgid ""
+"Sometimes you will find that a particular problem you are looking into is "
+"already fixed. To avoid wasting efforts and duplicating work it makes sense "
+"to first do some detective work."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:61
+msgid "Research bug situation"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:63
+msgid ""
+"First we should check if a bug for the problem exists in Ubuntu already. "
+"Maybe somebody is working on a fix already, or we can contribute to the "
+"solution somehow. For Ubuntu we have a quick look at "
+"https://bugs.launchpad.net/ubuntu/+source/bumprace and there is no open bug "
+"with our problem there."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:69
+msgid ""
+"For Ubuntu the URL ``https://bugs.launchpad.net/ubuntu/+source/<package>`` "
+"should always take to the bug page of the source package in question."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:73
+msgid ""
+"For Debian, which is the major source for Ubuntu's packages, we have a look "
+"at http://bugs.debian.org/src:bumprace and can't find a bug report for our "
+"problem either."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:77
+msgid ""
+"For Debian the URL ``http://bugs.debian.org/src:<package>`` should always "
+"take to the bug page of the source package in question."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:80
+msgid ""
+"The problem we are working on is special as it only concerns the packaging-"
+"related bits of ``bumprace``. If it was a problem in the source code it "
+"would be helpful to also check the Upstream bug tracker. This is "
+"unfortunately often different for every package you have a look at, but if "
+"you search the web for it, you should in most cases find it pretty easily."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:88
+msgid "Offering help"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:90
+msgid ""
+"If you found an open bug and it is not assigned to somebody and you are in a "
+"position to fix it, you should comment on it with your solution. Be sure to "
+"include as much information as you can: Under which circumstances does the "
+"bug occur? How did you fix the problem? Did you test your solution?"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:95
+msgid ""
+"If no bug report has been filed, you can file a bug for it. What you might "
+"want to bear in mind is: Is the issue so small that just asking for somebody "
+"to commit it is good enough? Did you manage to only partially fix the issue "
+"and you want to at least share your part of it?"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:100
+msgid "It is great if you can offer help and will surely be appreciated."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:104
+msgid "Fixing the issue"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:106
+msgid ""
+"For this specific example it is enough to search the web for ``bumprace`` "
+"and find the homepage of it. Be sure it is a live site and not just a "
+"software catalogue. http://www.linux-games.com/bumprace/ looks like it is "
+"the proper place."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:111
+msgid ""
+"To address the issue in the source package, we first need the source and we "
+"can easily get it by running::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:117
+msgid ""
+"If you read :doc:`the Debian Directory Overview<./debian-dir-overview>` "
+"before, you might remember, that the homepage for a package is specified in "
+"the first part of ``debian/control``, the section which starts with "
+"``Source:``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:121
+msgid "So what we do next is run::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:125
+msgid ""
+"and edit ``debian/control`` to add ``Homepage: http://www.linux-"
+"games.com/bumprace/``. At the end of the first section should be a good "
+"place for it. Once you have done this, save the file."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:129
+msgid "If you now run::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:133
+msgid "you should see something like this:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:149
+msgid ""
+"The diff is pretty simple to understand. The ``+`` indicates a line which "
+"was added. In our cases it was added just before the second section, "
+"starting with ``Package``, which indicates a resulting binary package."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:157
+msgid ""
+"It is important to explain to your fellow developers what exactly you did. "
+"If you run::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:163
+msgid ""
+"this will start an editor with a boilerplate changelog entry which you just "
+"have to fill out. In our case something like ``debian/control: Added "
+"project's homepage.`` should do. Then save the file. To double-check this "
+"worked out, run::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:170
+msgid "and you will see something like this:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:189
+msgid "A few additional considerations:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:191
+msgid ""
+"If you have a reference to a Launchpad bug which is fixed by the issue, add "
+"(``LP: #<bug number>``) to the changelog entry line, ie: ``(LP: #123456)``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:193
+msgid ""
+"If you want to get your fix included in Debian, for a Debian bug the syntax "
+"is ``(Closes: #<bug number>)``, ie: ``(Closes: #123456)``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:195
+msgid ""
+"If it is a reference to an upstream or Debian bug or a mailing list "
+"discussion, mention it as well."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:197
+msgid "Try to wrap your lines at 80 characters."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:198
+msgid ""
+"Try to be specific, not an essay, but enough for somebody (who did not "
+"deeply look into the issue) to understand."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:200
+msgid "Mention how you fixed the issue and where."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:206
+msgid ""
+"To test the fix, you need to :doc:`have your development environment set "
+"up<./getting-set-up>`, then to build the package, install it and verify the "
+"problem is solved. In our case this would be::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:214
+msgid ""
+"In step one we build the source package from the branch, then build it by "
+"using ``pbuilder``, then inspect the resulting package to check if the "
+"Homepage field was added properly."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:218
+msgid ""
+"In a lot of cases you will have to actually install the package to make sure "
+"it works as expected. Our case is a lot easier. If the build succeeded, you "
+"will find the binary packages in ``~/pbuilder/<release>_result``. Install "
+"them via ``sudo dpkg -i <package>.deb`` or by double-clicking on them in "
+"your file manager."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:225
+msgid ""
+"As we verified, the problem is now solved, so the next step is sharing our "
+"solution with the world."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:229
+msgid "Getting the fix included"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:231
+msgid ""
+"It makes to get fix included as Upstream as possible. Doing that you can "
+"guarantee that everybody can take the Upstream source as-is and don't need "
+"to have local modifications to fix it."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:235
+msgid ""
+"In our case we established that we have a problem with the packaging, both "
+"in Ubuntu and Debian. As Ubuntu is based on Debian, we will send the fix to "
+"Debian. Once it is included there, it will be picked up by Ubuntu "
+"eventually. The issue in our tutorial is clearly non-critical, so this "
+"approach makes sense. If it is important to fix the issue as soon as "
+"possible, you will need to send the solution to multiple bug trackers. "
+"Provided the issue affects all parties in question."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:243
+msgid "To submit the patch to Debian, simply run::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:247
+msgid ""
+"This will take you through a series of steps to make sure the bug ends up in "
+"the correct place. Be sure to review the diff again to make sure it does not "
+"include random changes you made earlier."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:251
+msgid ""
+"Communication is important, so when you add some more description to it to "
+"the inclusion request, be friendly, explain it well."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:254
+msgid ""
+"If everything went well you should get a mail from Debian's bug tracking "
+"system with more information. This might sometimes take a few minutes."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:257
+msgid ""
+"If the problem is just in Ubuntu, you might want to consider :doc:`Seeking "
+"Review and Sponsorship<./udd-sponsorship>` to get the fix included."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:263
+msgid "Additional considerations"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:265
+msgid ""
+"If you find a package and find that there are a couple of trivial things you "
+"can fix at the same time, do it. This will speed up review and inclusion."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:268
+msgid ""
+"If there are multiple big things you want to fix, it might be advisable to "
+"send individual patches or merge proposals instead. If there are individual "
+"bugs filed for the issues already, this makes it even easier."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
@@ -1005,8 +1581,8 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:54
 msgid ""
-"``pbuilder`` -- a tool to do a reproducible builds of a package in a clean "
-"and isolated environment."
+"``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
+"isolated environment."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:56
@@ -1020,7 +1596,7 @@ msgid ""
 "``bzr-builddeb`` (and ``bzr``, a dependency) -- distributed version control "
 "with Bazaar, a new way of working with packages for Ubuntu that will make it "
 "easy for many developers to collaborate and work on the same code while "
-"keeping it trivial to merge each others work."
+"keeping it trivial to merge each other's work."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:62
@@ -1029,17 +1605,11 @@ msgid ""
 "given file."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:64
-msgid ""
-"``apt-cache`` (part of the ``apt`` package) provides even more information "
-"about packages on Ubuntu."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/getting-set-up.rst:69
+#: ../ubuntu-packaging-guide/getting-set-up.rst:67
 msgid "Create your GPG key"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:71
+#: ../ubuntu-packaging-guide/getting-set-up.rst:69
 msgid ""
 "GPG stands for `GNU Privacy Guard`_ and it implements the OpenPGP standard "
 "which allows you to sign and encrypt messages and files. This is useful for "
@@ -1049,11 +1619,11 @@ msgid ""
 "it can absolutely determine who uploaded the package."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:78
+#: ../ubuntu-packaging-guide/getting-set-up.rst:76
 msgid "To generate a new GPG key, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:82
+#: ../ubuntu-packaging-guide/getting-set-up.rst:80
 msgid ""
 "GPG will first ask you which kind of key you want to generate. Choosing the "
 "default (RSA and DSA) is fine. Next it will ask you about the keysize. The "
@@ -1067,7 +1637,7 @@ msgid ""
 "allowed to include spaces)."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:92
+#: ../ubuntu-packaging-guide/getting-set-up.rst:90
 msgid ""
 "Now GPG will create a key for you, which can take a little bit of time; it "
 "needs random bytes, so if you give the system some work to do it will be "
@@ -1075,21 +1645,21 @@ msgid ""
 "load some web page."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:97
+#: ../ubuntu-packaging-guide/getting-set-up.rst:95
 msgid "Once this is done, you will get a message similar to this one::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:104
+#: ../ubuntu-packaging-guide/getting-set-up.rst:102
 msgid "In this case ``43CDE61D`` is the *key ID*."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:106
+#: ../ubuntu-packaging-guide/getting-set-up.rst:104
 msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:111
+#: ../ubuntu-packaging-guide/getting-set-up.rst:109
 msgid ""
 "This will send your key to one keyserver, but a network of keyservers will "
 "automatically sync the key between themselves. Once this syncing is "
@@ -1097,11 +1667,11 @@ msgid ""
 "around the world."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:118
+#: ../ubuntu-packaging-guide/getting-set-up.rst:116
 msgid "Create your SSH key"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:120
+#: ../ubuntu-packaging-guide/getting-set-up.rst:118
 msgid ""
 "SSH_ stands for *Secure Shell*, and it is a protocol that allows you to "
 "exchange data in a secure way over a network. It is common to use SSH to "
@@ -1110,49 +1680,49 @@ msgid ""
 "upload source packages to Launchpad."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:126
+#: ../ubuntu-packaging-guide/getting-set-up.rst:124
 msgid "To generate an SSH key, enter::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:130
+#: ../ubuntu-packaging-guide/getting-set-up.rst:128
 msgid ""
 "The default file name usually makes sense, so you can just leave it as it "
 "is. For security purposes, it is highly recommended that you use a "
 "passphrase."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:135
+#: ../ubuntu-packaging-guide/getting-set-up.rst:133
 msgid "Set up pbuilder"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:137
+#: ../ubuntu-packaging-guide/getting-set-up.rst:135
 msgid ""
 "``pbuilder`` allows you to build packages locally on your machine. It serves "
 "a couple of purposes:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:140
+#: ../ubuntu-packaging-guide/getting-set-up.rst:138
 msgid ""
 "The build will be done in a minimal and clean environment. This helps you "
 "make sure your builds succeed in a reproducible way, but without modifying "
 "your local system"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:143
+#: ../ubuntu-packaging-guide/getting-set-up.rst:141
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:144
+#: ../ubuntu-packaging-guide/getting-set-up.rst:142
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:146
+#: ../ubuntu-packaging-guide/getting-set-up.rst:144
 msgid "Setting ``pbuilder`` up is very easy, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:150
+#: ../ubuntu-packaging-guide/getting-set-up.rst:148
 msgid ""
 "where <release> is for example `natty`, `maverick`, `lucid` or in the case "
 "of Debian maybe `sid`. This will take a while as it will download all the "
@@ -1160,38 +1730,38 @@ msgid ""
 "though."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:156
+#: ../ubuntu-packaging-guide/getting-set-up.rst:154
 msgid "Get set up to work with Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:158
+#: ../ubuntu-packaging-guide/getting-set-up.rst:156
 msgid ""
 "With a basic local configuration in place, your next step will be to "
 "configure your system to work with Launchpad. This section will focus on the "
 "following topics:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:162
+#: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid "What Launchpad is and creating a Launchpad account"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:163
+#: ../ubuntu-packaging-guide/getting-set-up.rst:161
 msgid "Uploading your GPG and SSH keys to Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:164
+#: ../ubuntu-packaging-guide/getting-set-up.rst:162
 msgid "Configuring Bazaar to work with Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:165
+#: ../ubuntu-packaging-guide/getting-set-up.rst:163
 msgid "Configuring Bash to work with Bazaar"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:169
+#: ../ubuntu-packaging-guide/getting-set-up.rst:167
 msgid "About Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:171
+#: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid ""
 "Launchpad is the central piece of infrastructure we use in Ubuntu. It not "
 "only stores our packages and our code, but also things like translations, "
@@ -1200,25 +1770,25 @@ msgid ""
 "fixes, and get other Ubuntu developers to review and sponsor them."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:177
+#: ../ubuntu-packaging-guide/getting-set-up.rst:175
 msgid ""
 "You will need to register with Launchpad and provide a minimal amount of "
 "information. This will allow you to download and upload code, submit bug "
 "reports, and more."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:181
+#: ../ubuntu-packaging-guide/getting-set-up.rst:179
 msgid ""
 "Besides hosting Ubuntu, Launchpad can host any Free Software project. For "
 "more information see the `Launchpad Help wiki "
 "<https://help.launchpad.net/>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:186
+#: ../ubuntu-packaging-guide/getting-set-up.rst:184
 msgid "Get a Launchpad account"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:188
+#: ../ubuntu-packaging-guide/getting-set-up.rst:186
 msgid ""
 "If you don't already have a Launchpad account, you can easily `create one`_. "
 "If you have a Launchpad account but cannot remember your Launchpad id, you "
@@ -1226,47 +1796,47 @@ msgid ""
 "part after the `~` in the URL."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:193
+#: ../ubuntu-packaging-guide/getting-set-up.rst:191
 msgid ""
 "Launchpad's registration process will ask you to choose a display name. It "
 "is encouraged for you to use your real name here so that your Ubuntu "
 "developer colleagues will be able to get to know you better."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:197
+#: ../ubuntu-packaging-guide/getting-set-up.rst:195
 msgid ""
 "When you register a new account, Launchpad will send you an email with a "
 "link you need to open in your browser in order to verify your email address. "
 "If you don't receive it, check in your spam folder."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:201
+#: ../ubuntu-packaging-guide/getting-set-up.rst:199
 msgid ""
 "`The new account help page "
 "<https://help.launchpad.net/YourAccount/NewAccount>`_ on Launchpad has more "
 "information about the process and additional settings you can change."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:207
+#: ../ubuntu-packaging-guide/getting-set-up.rst:205
 msgid "Upload your GPG key to Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:209
+#: ../ubuntu-packaging-guide/getting-set-up.rst:207
 msgid "To find about your GPG fingerprint, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:213
+#: ../ubuntu-packaging-guide/getting-set-up.rst:211
 msgid "and it will print out something like::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:221
+#: ../ubuntu-packaging-guide/getting-set-up.rst:219
 msgid ""
 "Head to https://launchpad.net/~/+editpgpkeys and copy the \"Key "
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
 "FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on \"Import Key\"."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:226
+#: ../ubuntu-packaging-guide/getting-set-up.rst:224
 msgid ""
 "Launchpad will use the fingerprint to check the Ubuntu key server for your "
 "key and, if successful, send you an encrypted email asking you to confirm "
@@ -1276,7 +1846,7 @@ msgid ""
 "password, then click the link to confirm that the key is yours.`"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:233
+#: ../ubuntu-packaging-guide/getting-set-up.rst:231
 msgid ""
 "Launchpad encrypts the email, using your public key, so that it can be sure "
 "that the key is yours. If your email software does not support OpenPGP "
@@ -1284,23 +1854,23 @@ msgid ""
 "terminal, then paste the email contents into your terminal window."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:238
+#: ../ubuntu-packaging-guide/getting-set-up.rst:236
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:241
+#: ../ubuntu-packaging-guide/getting-set-up.rst:239
 msgid ""
 "Find more information at "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:245
+#: ../ubuntu-packaging-guide/getting-set-up.rst:243
 msgid "Upload your SSH key to Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:247
+#: ../ubuntu-packaging-guide/getting-set-up.rst:245
 msgid ""
 "Open https://launchpad.net/~/+editsshkeys in a web browser, also open "
 "``~/.ssh/id_rsa.pub`` in a text editor. This is the public part of your SSH "
@@ -1309,18 +1879,18 @@ msgid ""
 "key\". Now click \"Import Public Key\"."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:253
+#: ../ubuntu-packaging-guide/getting-set-up.rst:251
 msgid ""
-"For more information on this process, visit the `<creating an SSH keypair "
+"For more information on this process, visit the `creating an SSH keypair "
 "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
 "Launchpad."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:259
+#: ../ubuntu-packaging-guide/getting-set-up.rst:257
 msgid "Configure Bazaar"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:261
+#: ../ubuntu-packaging-guide/getting-set-up.rst:259
 msgid ""
 "Bazaar is the tool we use to store code changes in a logical way, to "
 "exchange proposed changes and merge them, even if development is done "
@@ -1328,40 +1898,40 @@ msgid ""
 "of working with Ubuntu packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:266
+#: ../ubuntu-packaging-guide/getting-set-up.rst:264
 msgid "To tell Bazaar who you are, simply run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:271
+#: ../ubuntu-packaging-guide/getting-set-up.rst:269
 msgid ""
 "`whoami` will tell Bazaar which name and email address it should use for "
 "your commit messages. With `launchpad-login` you set your Launchpad ID. This "
 "way code that you publish in Launchpad will be associated with you."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:275
+#: ../ubuntu-packaging-guide/getting-set-up.rst:273
 msgid ""
 "Note: If you can not remember the ID, go to https://launchpad.net/~ and see "
 "where it redirects you. The part after the \"~\" in the URL is your "
 "Launchpad ID.)"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:281
+#: ../ubuntu-packaging-guide/getting-set-up.rst:279
 msgid "Configure your shell"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:282
+#: ../ubuntu-packaging-guide/getting-set-up.rst:280
 msgid ""
 "Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you "
 "as well. Simply open your `~/.bashrc` in a text editor and add something "
 "like this to the bottom of it::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:289
+#: ../ubuntu-packaging-guide/getting-set-up.rst:287
 msgid "Now save the file and either restart your terminal or run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:293
+#: ../ubuntu-packaging-guide/getting-set-up.rst:291
 msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
@@ -1414,7 +1984,7 @@ msgstr ""
 msgid "Articles"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:48
+#: ../ubuntu-packaging-guide/index.rst:50
 msgid "Knowledge Base"
 msgstr ""
 
@@ -1474,7 +2044,7 @@ msgid ""
 "stakeholders and a specification is written that contains detailed "
 "information about its assumptions, implementation, the necessary changes in "
 "other places, how to test it and so on. This is all done in an open and "
-"transparent fashion, so even if you can not attend the event in person, you "
+"transparent fashion, so even if you cannot attend the event in person, you "
 "can participate remotely and listen to a streamcast, chat with attendants "
 "and subscribe to changes of specifications, so you are always up to date."
 msgstr ""
@@ -1599,7 +2169,7 @@ msgstr ""
 msgid ""
 "Packaging of KDE programs in Ubuntu is managed by the Kubuntu and MOTU "
 "teams.  You can contact the Kubuntu team on the `Kubuntu mailing list`_ and "
-"``#kubuntu-devel`` Freenode IRC channl.  More information about Kubuntu "
+"``#kubuntu-devel`` Freenode IRC channel.  More information about Kubuntu "
 "development is on the `Kubuntu wiki page`_."
 msgstr ""
 
@@ -1629,6 +2199,7 @@ msgid ""
 msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:27
+#: ../ubuntu-packaging-guide/python-packaging.rst:31
 msgid "debian/rules"
 msgstr ""
 
@@ -1771,11 +2342,7 @@ msgid "We will use libnova as an example::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:41
-msgid "To find the SONAME of the library run"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/libraries.rst:43
-msgid "$ readelf -a /usr/lib/libnova-0.12.so.2 | grep SONAME"
+msgid "To find the SONAME of the library run::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:45
@@ -1873,9 +2440,9 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:112
 msgid ""
-"The ``-nc`` will cause it to finish at the end of the compile without "
-"removing the build.  Change to the build and run ``dpkg-gensymbols`` for the "
-"library package::"
+"The ``-nc`` will cause it to finish at the end of compilation without "
+"removing the built files.  Change to the build and run ``dpkg-gensymbols`` "
+"for the library package::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:119
@@ -1887,7 +2454,8 @@ msgid ""
 "Which will create a file named similar to ``dpkg-gensymbolsnY_WWI`` that "
 "lists all the symbols.  It also lists the current package version.  We can "
 "remove the packaging version from that listed in the symbols file because "
-"new symbols are not generally added by new packaging versions::"
+"new symbols are not generally added by new packaging versions, but by the "
+"upstream developers::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:130
@@ -1931,7 +2499,7 @@ msgid ""
 "While there are thousands of packages in the Ubuntu archive, there are still "
 "a lot nobody has gotten to yet. If there is an exciting new piece of "
 "software that you feel needs wider exposure, maybe you want to try your hand "
-"at creating a package for Ubuntu or a PPA. This guide will take you through "
+"at creating a package for Ubuntu or a PPA_. This guide will take you through "
 "the steps of packaging new software."
 msgstr ""
 
@@ -1997,7 +2565,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:54
 msgid ""
-"If the compile completes successfully you can install and run the program::"
+"If compilation completes successfully you can install and run the program::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:60
@@ -2008,7 +2576,7 @@ msgstr ""
 msgid ""
 "``bzr-builddeb`` includes a plugin to create a new package from a template. "
 "The plugin is a wrapper around the ``dh_make`` command. You should already "
-"have these if you installed ``packaging-dev`` Run the command providing the "
+"have these if you installed ``packaging-dev``. Run the command providing the "
 "package name, version number, and path to the upstream tarball::"
 msgstr ""
 
@@ -2045,10 +2613,10 @@ msgstr ""
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:93
 msgid ""
 "``control`` contains all the metadata of the package.  The first paragraph "
-"describes the source package. The second and and following paragraphs "
-"describe the binary packages to be built.  We will need to add the packages "
-"needed to compile the application to ``Build-Depends:``. For ``hello``, make "
-"sure that it includes at least::"
+"describes the source package. The second and following paragraphs describe "
+"the binary packages to be built.  We will need to add the packages needed to "
+"compile the application to ``Build-Depends:``. For ``hello``, make sure that "
+"it includes at least::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:101
@@ -2112,9 +2680,9 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:137
 msgid ""
-"``debuild`` is a command to build the package in its current location.  The "
-"``-us -uc`` tell it there is not need to GPG sign the compile.  The result "
-"will be placed in ``..``."
+"``bzr builddeb`` is a command to build the package in its current location. "
+"The ``-us -uc`` tell it there is no need to GPG sign the package.  The "
+"result will be placed in ``..``."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:141
@@ -2151,39 +2719,44 @@ msgstr ""
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:168
 msgid ""
 "Having checked that the package builds locally you should ensure it builds "
-"on a clean system using ``pbuilder``. If you haven't set up ``pbuilder-"
-"dist`` yet, :doc:`do so now<./getting-set-up>`::"
+"on a clean system using ``pbuilder``. Since we are going to upload to a PPA "
+"(Personal Package Archive) shortly, this upload will need to be *signed* to "
+"allow Launchpad to verify that the upload comes from you (you can tell the "
+"upload will be signed because the ``-us`` and ``-uc`` flags are not passed "
+"to ``bzr builddeb`` like they were before). For signing to work you need to "
+"have set up GPG. If you haven't set up ``pbuilder-dist`` or GPG yet, "
+":doc:`do so now<./getting-set-up>`::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:176
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:181
 msgid ""
 "When you are happy with your package you will want others to review it.  You "
 "can upload the branch to Launchpad for review::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:181
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:186
 msgid ""
-"Uploading it to a PPA (Personal Package Archive) will ensure it builds and "
-"give an easy way for you and others to test the binary packages. You will "
-"need to set up a PPA in Launchad then upload with ``dput``::"
+"Uploading it to a PPA will ensure it builds and give an easy way for you and "
+"others to test the binary packages.  You will need to set up a PPA in "
+"Launchad then upload with ``dput``::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:187
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:192
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:189
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:194
 msgid ""
 "You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the `MOTU "
 "mailing list`_.  There might also be a more specific team you could ask such "
 "as the GNU team for more specific questions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:194
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:199
 msgid "Submitting for inclusion"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:196
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:201
 msgid ""
 "There are a number of paths that a package can take to enter Ubuntu. In most "
 "cases, going through Debian first can be the best path. This way ensures "
@@ -2192,31 +2765,31 @@ msgid ""
 "well. Here are some useful links for submitting new packages to Debian:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:203
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:208
 msgid ""
 "`Debian Mentors FAQ`_ - debian-mentors is for the mentoring of new and "
 "prospective Debian Developers. It is where you can find a sponsor to upload "
 "your package to the archive."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:207
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:212
 msgid ""
 "`Work-Needing and Prospective Packages`_ - Information on how to file "
 "\"Intent to Package\" and \"Request for Package\" bugs as well as list of "
 "open ITPs and RFPs."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:211
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:216
 msgid ""
 "`Debian Developer's Reference, 5.1. New packages`_ - The entire document is "
 "invaluable for both Ubuntu and Debian packagers. This section documents "
 "processes for submitting new packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:215
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:220
 msgid ""
 "In some cases, it might make sense to go directly into Ubuntu first. For "
-"instance, Debian might be in a freeze making it unlikely that you're package "
+"instance, Debian might be in a freeze making it unlikely that your package "
 "will make it into Ubuntu in time for the next release. This process is "
 "documented on the `\"New Packages\" section of the Ubuntu wiki`_."
 msgstr ""
@@ -2343,18 +2916,11 @@ msgstr ""
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
 msgid ""
 "You should start by ensuring no patches are applied.  Unfortunately a commit "
-"is needed before you can merge in the new upstream (this is `bug 815854`_::"
+"is needed before you can merge in the new upstream (this is `bug 815854`_)::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:116
-msgid "Then upgrade to the new version"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:118
-msgid ""
-"$ bzr merge-upstream --version 2.0.2 "
-"https://launchpad.net/ubuntu/+archive/primary/+files/kamoso_2.0.2.orig.tar.bz"
-"2"
+msgid "Then upgrade to the new version::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:120
@@ -2412,9 +2978,9 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:171
 msgid ""
-"Even older packages will include changes directly to sources and kept in the "
-"``diff.gz`` source file.  This makes it hard to upgrade to new upstream "
-"versions or differentiate between patches and is best avoided."
+"In even older packages changes will be included directly to sources and kept "
+"in the ``diff.gz`` source file.  This makes it hard to upgrade to new "
+"upstream versions or differentiate between patches and is best avoided."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:175
@@ -2428,6 +2994,225 @@ msgid ""
 "Do not change a package's patch system without discussing it with the Debian "
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "
 "then feel free to add Quilt."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:3
+msgid "Packaging Python modules and applications"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:5
+msgid ""
+"Our packaging follows Debian’s `Python policy`_. We will use the `python-"
+"markdown`_ package as an example, which can be downloaded from `PyPI`_. You "
+"can look at its packaging at its `Subversion repository`_."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:7
+msgid "There are two types of Python packages — *modules* and *apps*."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:9
+msgid ""
+"At the time of writing, Ubuntu has two incompatible versions of Python — "
+"*2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python "
+"2.x version, and ``/usr/bin/python3`` — to a default Python 3.x version. "
+"Python modules should be built against all supported Python versions."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:11
+msgid ""
+"If you are going to package a new Python module, you might find the "
+"``py2dsc`` tool useful (available in `python-stdeb`_ package)."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:14
+msgid "debian/control"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:16
+msgid ""
+"Python 2.x and 3.x versions of the package should be in separate binary "
+"packages. Names should have ``python{,3}-modulename`` format (like: "
+"``python3-dbus.mainloop.qt``). Here, we will use ``python-markdown`` and "
+"``python3-markdown`` for module packages and ``python-markdown-doc`` for the "
+"documentation package."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:18
+msgid "Things in ``debian/control`` that are specific for a Python package:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:20
+msgid ""
+"The section of module packages should be ``python``, and ``doc`` for the "
+"documentation package. For an application, a single binary package will be "
+"enough."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:21
+msgid ""
+"We should add build dependencies on ``python-all (>= 2.6.6-3~)`` and "
+"``python3-all (>= 3.1.2-7~)`` to make sure Python helpers are available (see "
+"the next section for details)."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:22
+msgid ""
+"It’s recommended to add ``X-Python-Version`` and ``X-Python3-Version`` "
+"fields — see “`Specifying Supported Versions`_” section of the Policy for "
+"details. For example::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:27
+msgid ""
+"If your package works only with Python 2.x or 3.x, build depend only on one "
+"``-all`` package and use only one ``-Version`` field."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:28
+msgid ""
+"Module packages should have ``{python:Depends}`` and ``{python3:Depends}`` "
+"substitution variables (respectively) in their dependency lists."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:33
+msgid ""
+"The recommended helpers for python modules are ``dh_python2`` and "
+"``dh_python3``. Unfortunately, ``debhelper`` doesn’t yet build Python 3.x "
+"packages automatically (see `bug 597105`_ in Debian BTS), so we’ll need to "
+"do that manually in override sections (skip this if your package doesn’t "
+"support Python 3.x)."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:35
+msgid "Here’s our ``debian/rules`` file (with annotations):"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:70
+msgid ""
+"It is also a good practice to run tests during the build, if they are "
+"shipped by upstream. Usually tests can be invoked using ``setup.py test`` or "
+"``setup.py check``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:73
+msgid "debian/\\*.install"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:75
+msgid ""
+"Python 2.x modules are installed into ``/usr/share/pyshared/`` directory, "
+"and symbolic links are created in ``/usr/lib/python2.x/dist-packages/`` for "
+"every interpreter version, while Python 3.x ones are all installed into "
+"``/usr/lib/python3/dist-packages/``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:77
+msgid ""
+"If your package is an application and has private Python modules, they "
+"should be installed in ``/usr/share/module``, or ``/usr/lib/module`` if the "
+"modules are architecture-dependent (e.g. extensions) (see “`Programs "
+"Shipping Private Modules`_” section of the Policy)."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:79
+msgid ""
+"So, our ``python-markdown.install`` file will look like this (we’ll also "
+"want to install a ``markdown_py`` executable)::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:84
+msgid "and ``python3-markdown.install`` will only have one line::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:89
+msgid "The ``-doc`` package"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:91
+msgid ""
+"The tool most commonly used for building Python docs is `Sphinx`_. To add "
+"Sphinx documentation to your package (using ``dh_sphinxdoc`` helper), you "
+"should:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:93
+msgid ""
+"Add a build-dependency on ``python-sphinx`` or ``python3-sphinx`` (depending "
+"on what Python version do you want to use);"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:94
+msgid "Append ``sphinxdoc`` to the ``dh --with`` line;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:95
+msgid ""
+"Run ``setup.py build_sphinx`` in ``override_dh_auto_build`` (sometimes not "
+"needed);"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:96
+msgid ""
+"Add ``{sphinxdoc:Depends}`` to the dependency list of your ``-doc`` package;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:97
+msgid ""
+"Add the path of the built docs directory (usually ``build/sphinx/html``) to "
+"your ``.docs`` file."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:99
+msgid ""
+"In our case, the docs are automatically built in ``build/docs/`` directory "
+"when we run ``setup.py build``, so we can simply put this in the ``python-"
+"markdown-doc.docs`` file::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:103
+msgid ""
+"Because docs also contain source ``.txt`` files, we’ll also tell "
+"``dh_compress`` to not compress them — by adding this to ``debian/rules``:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:111
+msgid "Checking for packaging mistakes"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:113
+msgid ""
+"Along with ``lintian``, there is a special tool for checking Python packages "
+"— ``lintian4py``. It is available in the `lintian4python`_ package. For "
+"example, these two commands invoke both versions of ``lintian`` and check "
+"source and binary packages::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:118
+msgid ""
+"Here, ``-EI`` option is used to enable experimental and informational tags."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:121
+msgid "See also"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:123
+msgid "The `Python policy`_;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:124
+msgid "`Python/Packaging`_ article on Debian wiki;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:125
+msgid ""
+"`Python/LibraryStyleGuide`_ and `Python/AppStyleGuide`_ articles on Debian "
+"wiki;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/python-packaging.rst:126
+msgid "Debian `python-modules`_ and `python-apps`_ teams."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:3
@@ -2614,11 +3399,134 @@ msgid "Traditional Packaging"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:5
-msgid "FIXME describe traditional packaging here"
+msgid ""
+"The majority of this guide deals with :doc:`Ubuntu Distributed Development "
+"<./udd-intro>` (UDD) which utilizes the distributed version control system "
+"(DVCS) Bazaar for :ref:`retrieving package sources <branching>` and "
+"submitting fixes with :ref:`merge proposals. <merge-proposal>` This article "
+"will discuss what we will call traditional packaging methods for lack of a "
+"better word. Before Bazaar was adopted for Ubuntu development, these were "
+"the typical methods for contributing to Ubuntu."
 msgstr ""
 
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:13
+msgid ""
+"In some cases, you may need to use these tools instead of UDD. So it is good "
+"to be familiar with them. Before you begin, you should already have read the "
+"article :doc:`Getting Set Up. <./getting-set-up>`"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:18
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:3
 msgid "Getting the Source"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:20
+msgid "In order to get a source package, you can simply run::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:24
+msgid ""
+"This method has some draw backs though. It downloads the version of the "
+"source that is available on **your system.** You are likely running the "
+"current stable release, but you want to contribute your change against the "
+"package in the development release. Luckily, the ``ubuntu-dev-tools`` "
+"package provides a helper script::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:32
+msgid ""
+"By default, the  latest version in the development release will be "
+"downloaded. You can also specify a version or Ubuntu release like::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:37
+msgid "to pull the source from the ``precise`` release, or::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:41
+msgid ""
+"to download version ``1.0-1ubuntu1`` of the package. For more information on "
+"the command, see ``man pull-lp-source``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:44
+msgid ""
+"For our example, let's pretend we got a bug report saying that \"colour\" in "
+"the description of ``xicc`` should be \"color,\" and we want to fix it. "
+"*(Note: This is just an example of something to change and not really a "
+"bug.)* To get the source, run::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:52
+msgid "Creating a Debdiff"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:54
+msgid ""
+"A ``debdiff`` shows the difference between two Debian packages. The name of "
+"the command used to generate one is also ``debdiff``. It is part of the "
+"``devscripts`` package. See ``man debdiff`` for all the details. To compare "
+"two source packages, pass the two ``dsc`` files as arguments::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:61
+msgid ""
+"To continue with our example, let's edit the ``debian/control`` and \"fix\" "
+"our \"bug\"::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:67
+msgid ""
+"We also must adhere to the `Debian Maintainer Field Spec "
+"<https://wiki.ubuntu.com/DebianMaintainerField>`_ and edit "
+"``debian/control`` to replace::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:73
+msgid "with::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:78
+msgid ""
+"You can use the ``update-maintainer`` tool (in the ``ubuntu-dev-tools`` "
+"package) to do that."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:81
+msgid ""
+"Remember to document your changes in ``debian/changelog`` using ``dch -i`` "
+"and then we can generate a new source package::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:86
+msgid "Now we can examine our changes using ``debdiff``::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:91
+msgid ""
+"To create a patch file that you can send to others or attach to a bug report "
+"for sponsorship, run::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:98
+msgid "Applying a Debdiff"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:100
+msgid ""
+"In order to apply a debdiff, first make sure you have the source code of the "
+"version that it was created against::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:105
+msgid ""
+"Then in a terminal, change the to the directory where the source was "
+"uncompressed::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:110
+msgid "A debdiff is just like a normal patch file. Apply it as usual with::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:6
@@ -2689,7 +3597,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:64
 msgid ""
-"You want to work on the Tomboy package in Natty, and you've verified that "
+"Say that you want to work on the Tomboy package, and you've verified that "
 "the source package is named ``tomboy``.  Before actually branching the code "
 "for Tomboy, create a shared repository to hold the branches for this "
 "package.  The shared repository will make future work much more efficient."
@@ -2802,7 +3710,7 @@ msgid ""
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:3
-msgid "Ubuntu Distributed Development - Introduction"
+msgid "Ubuntu Distributed Development — Introduction"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:5
@@ -2864,14 +3772,14 @@ msgid ""
 "archive are automatically imported into Bazaar branches on our code hosting "
 "site Launchpad.  Changes can be made directly to these branches in "
 "incremental steps and by anyone with commit access.  Changes can also be "
-"made in forked branched and merged back in with Merge Proposals when they "
+"made in forked branches and merged back in with Merge Proposals when they "
 "are large enough to need review or if they are by someone without direct "
 "commit access."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:49
 msgid ""
-"UDD branches are all in a standard location so doing a checkout is easy::"
+"UDD branches are all in a standard location, so doing a checkout is easy::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:53
@@ -2901,7 +3809,7 @@ msgid ""
 "the Debian package into our branches.  In the *kdetoys* branch above the "
 "Debian versions from *unstable* are from the merge with blue circles while "
 "those from *Debian experimental* are from the merge with yellow circles.  "
-"Debian released are tagged with their version number e.g. ``4:4.2.2-1``."
+"Debian releases are tagged with their version number, e.g., ``4:4.2.2-1``."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:76
@@ -3077,7 +3985,7 @@ msgid ""
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:3
-msgid "Merging - Updating from Debian and Upstream"
+msgid "Merging — Updating from Debian and Upstream"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:5
@@ -3240,192 +4148,6 @@ msgid ""
 "the development versions from the ``bzr`` PPA.  Specifically, you need "
 "``bzr`` version 2.5 beta 5 or newer, and ``bzr-builddeb`` version 2.8.1 or "
 "newer.  For older versions, use the ``bzr merge-package`` command instead."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:3
-msgid "Building a new package"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:5
-msgid ""
-"Let's say I have an upstream project that is not yet available for Ubuntu.  "
-"I want to create a package from this project and make it available as a PPA_ "
-"so that other people can more easily use the code.  This also makes a good "
-"first step in contributing your package to universe_."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:12
-msgid "Example package"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:14
-msgid ""
-"I started with a Python library called `flufl.enum`_, which is a fairly "
-"typical setuptools-based Python package.  Fortunately, it's also maintained "
-"in Launchpad using Bazaar, so that makes bootstrapping much easier."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:18
-msgid ""
-"Because we want to package the trunk branch, getting started is pretty "
-"simple::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:31
-msgid "Bootstrapping"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:33
-msgid ""
-"You need to create the initial ``debian`` directory, as well as the "
-"necessary files inside the ``debian`` directory.  Currently, there are many "
-"ways to set up this directory, but hopefully there will be `some "
-"convergence`_ in the methods, especially if you're building standard Python "
-"setuptools-based libraries and applications."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:43
-msgid "The bzr-builddeb way"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:45
-msgid ""
-"You could use the ``dh_make`` command to get things going, or similarly the "
-"``bzr dh-make``.  The latter might provide some benefits, and can be run "
-"like so from inside your branch::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:52
-msgid ""
-"If you don't have a URL to download a tarball from, you'll need to create "
-"the tarball locally first.  Use ``bzr dh-make --help`` for details on this "
-"command."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:55
-msgid ""
-"After you've created the ``debian`` directory template, be sure to ``bzr "
-"rm`` any ``debian`` files you don't need (e.g. the ``*.ex`` files), and edit "
-"files such as ``debian/control``, ``debian/watch``, ``debian/copyright`` and "
-"``debian/changelog``.  The following section may give you some hints about "
-"that."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:63
-msgid "The stdeb way"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:65
-msgid ""
-"Another way for creating the initial ``debian`` directory for Python "
-"setuptools-based packages, is to use the stdeb_ package.  The full "
-"documentation for this package is available on the `upstream home`_, but you "
-"won't need all of the commands.  stdeb has a command that is *exactly* what "
-"we're looking for!"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:71
-msgid ""
-"In either case, start by putting this in your ``~/.pydistutils.cfg`` file::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:78
-msgid "Modern stdeb"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:80
-msgid "Here's how easy it is::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:86
-msgid ""
-"We also need a ``debian/copyright`` file.  Normally, we'd use ``dh_make -c`` "
-"for that but again, that doesn't play nicely with UDD.  ``dh_make`` expects "
-"a particular file system layout that we don't have.  No matter, we'll add "
-"the copyright file manually::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:98
-msgid "stdeb <= 0.5.1"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:100
-msgid ""
-"If you have an older version of stdeb, use this command to create the basic "
-"``debian/`` directory layout::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:105
-msgid ""
-"This command leaves you with a ``deb_dist`` directory containing a "
-"``flufl.enum_3.0.1`` directory.  Inside that is your ``debian/`` directory. "
-"Because we're using UDD we don't care about anything else that ``sdist_dsc`` "
-"produces, so we can shuffle things around and remove the cruft."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:110
-msgid ""
-"$ mv deb_dist/munepy-2.0.1/debian . $ rm -rf deb_dist $ bzr add debian $ bzr "
-"commit -m'Add debian directory'"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:117
-msgid "pkgme"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:119
-msgid ""
-"pkgme_ is a new tool that makes it easy to Debianize a new package.  TBD: "
-"describe how to use it."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:124
-msgid "debian/control file"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:126
-msgid ""
-"You probably want to edit the ``debian/control`` file at this point, adding "
-"any information that's missing, or fixing incorrect default information.  "
-"For example, I needed to modify the ``Maintainer`` and ``Description`` "
-"fields, and add ``X-Python-Version`` and ``Homepage`` fields."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:131
-msgid ""
-"Now we want to build the source package.  The easiest way to do that is with "
-"the ``bzr-builddeb`` plugin, however this requires a valid ``debian/watch`` "
-"file so that builddeb can find the upstream tarball.  This really should "
-"match the version of the checkout you've made."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:138
-msgid "debian/watch file"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:140
-msgid "Here for example is the ``debian/watch`` file I'm using::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:145
-msgid ""
-"If your tarballs live on Launchpad, the ``debian/watch`` file is a little "
-"more complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  "
-"In that case, use something like::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:152
-msgid "So, then it's a matter of...::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:159
-msgid "Building the source package"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-newpackage.rst:161
-msgid ""
-"Now we can build the source package and publish the package as we normally "
-"would, with ``bzr builddeb -S`` and ``dput``."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-patchsys.rst:3
@@ -3786,6 +4508,31 @@ msgid ""
 "bug report."
 msgstr ""
 
+#: ../ubuntu-packaging-guide/udd-sponsorship.rst:103
+msgid "Expectations"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/udd-sponsorship.rst:105
+msgid ""
+"The Ubuntu developers have set up a schedule of \"patch pilots\", who "
+"regularly review the sponsoring queue and give feedback on branches and "
+"patches. Even though this measure has been put in place it might still take "
+"several days until you hear back. This depends on how busy everybody is, if "
+"the development release is currently frozen, or other factors."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/udd-sponsorship.rst:111
+msgid ""
+"If you haven't heard back in a while, feel free to join `#ubuntu-devel` on "
+"`irc.freenode.net` and find out if somebody can help you there."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/udd-sponsorship.rst:114
+msgid ""
+"For more information on the generall sponsorship process, review the "
+"documentation on our wiki as well: https://wiki.ubuntu.com/SponsorshipProcess"
+msgstr ""
+
 #: ../ubuntu-packaging-guide/udd-uploading.rst:3
 msgid "Uploading a package"
 msgstr ""
@@ -4007,11 +4754,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:31
 msgid ""
-"Now you can do all my work in the `bug-12345` directory.  You make changes "
+"Now you can do all my work in the ``bug-12345`` directory.  You make changes "
 "there as necessary, committing as you go along.  This is just like doing any "
 "kind of software development with Bazaar.  You can make intermediate commits "
 "as often as you like, and when your changes are finished, you will use the "
-"standard `dch` command (from the `devscripts` package)::"
+"standard ``dch`` command (from the ``devscripts`` package)::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:39
@@ -4022,12 +4769,12 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:44
 msgid ""
-"When you added your `debian/changelog` entry, you should have included a bug "
-"fix tag that indicated which Launchpad bug issue you're fixing.  The format "
-"of this textual tag is pretty strict: ``LP: #12345``.  The space between the "
-"``:`` and the ``#`` is required and of course you should use the actual bug "
-"number that you're fixing.  Your `debian/changelog` entry might look "
-"something like::"
+"When you added your ``debian/changelog`` entry, you should have included a "
+"bug fix tag that indicated which Launchpad bug issue you're fixing.  The "
+"format of this textual tag is pretty strict: ``LP: #12345``.  The space "
+"between the ``:`` and the ``#`` is required and of course you should use the "
+"actual bug number that you're fixing.  Your ``debian/changelog`` entry might "
+"look something like::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:57
@@ -4043,7 +4790,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-working.rst:64
 msgid ""
 "This only works with bzr-builddeb 2.7.5 and bzr 2.4, for older versions use "
-"`debcommit`."
+"``debcommit``."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:71
@@ -4054,14 +4801,14 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:74
 msgid ""
-"In order to build the package you can use the `bzr builddeb` command from "
-"the `bzr-builddeb` package.  You can build a source package with::"
+"In order to build the package you can use the ``bzr builddeb`` command from "
+"the ``bzr-builddeb`` package.  You can build a source package with::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:79
 msgid ""
-"(`bd` is an alias for `builddeb`.)  You can leave the package unsigned by "
-"appending `-- -uc -us` to the command."
+"(``bd`` is an alias for ``builddeb``.)  You can leave the package unsigned "
+"by appending ``-- -uc -us`` to the command."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:82
@@ -4073,11 +4820,11 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-working.rst:87
 msgid ""
 "If you ever see an error related to trying to build a native package without "
-"a tarball, check to see if there is a `.bzr-builddeb/default.conf` file "
+"a tarball, check to see if there is a ``.bzr-builddeb/default.conf`` file "
 "erroneously specifying the package as native.  If the changelog version has "
 "a dash in it, then it's not a native package, so remove the configuration "
-"file. Note that while `bzr builddeb` has a `--native` switch, it does not "
-"have a `--no-native` switch."
+"file. Note that while ``bzr builddeb`` has a ``--native`` switch, it does "
+"not have a ``--no-native`` switch."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:94
