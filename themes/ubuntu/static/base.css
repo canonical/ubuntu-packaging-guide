@@ -37,7 +37,8 @@ code,
 div.highlight-makefile,
 div.highlight-sh,
 div.highlight-diff,
-div.highlight-python {
+div.highlight-python,
+div.highlight-control {
 	padding: 10px;
 	font-family: 'Ubuntu Mono', 'Consolas', 'Monaco', 'DejaVu Sans Mono', Courier, monospace;
 	background-color: #fdf6f2;
