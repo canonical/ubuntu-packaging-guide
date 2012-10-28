@@ -73,7 +73,9 @@ The ``control`` file contains the information that the package manager (such as
 ``apt-get``, ``synaptic``, and ``adept``) uses, build-time dependencies, 
 maintainer information, and much more.
 
-For the Ubuntu ``hello`` package, the ``control`` file looks something like::
+For the Ubuntu ``hello`` package, the ``control`` file looks something like this:
+
+.. code-block:: control
 
  Source: hello
  Section: devel
@@ -95,7 +97,7 @@ For the Ubuntu ``hello`` package, the ``control`` file looks something like::
   an example of how to do a Debian package. It is the Debian version of
   the GNU Project's `hello world' program (which is itself an example
   for the GNU Project).
- 
+
 The first paragraph describes the source package including the list of packages 
 required to build the package from source in the ``Build-Depends`` field. It 
 also 
