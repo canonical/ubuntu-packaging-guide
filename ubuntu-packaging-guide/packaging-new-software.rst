@@ -18,7 +18,7 @@ The first stage in packaging is to get the released tar from upstream (we call
 the authors of applications "upstream") and check that it compiles and runs.
 
 This guide will take you through packaging a simple application called GNU Hello
-which has been `posted on GNU.org`_.
+which has been posted on GNU.org_.
 
 If you don't have the build tools lets make sure we have them first.  Also if you
 don't have the required dependencies lets install those as well.
@@ -220,14 +220,14 @@ packages to Debian:
 In some cases, it might make sense to go directly into Ubuntu first. For
 instance, Debian might be in a freeze making it unlikely that your
 package will make it into Ubuntu in time for the next release. This
-process is documented on the `"New Packages" section of the Ubuntu wiki`_.
+process is documented on the `"New Packages"`_ section of the Ubuntu wiki.
 
 .. _PPA: https://help.launchpad.net/Packaging/PPA
-.. _`posted on GNU.org`: http://www.gnu.org/software/hello/
+.. _GNU.org: http://www.gnu.org/software/hello/
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
 .. _`lintian website`: http://lintian.debian.org/tags.html
 .. _`MOTU mailing list`: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
 .. _`Debian Mentors FAQ`: http://wiki.debian.org/DebianMentorsFaq
 .. _`Work-Needing and Prospective Packages`: http://www.debian.org/devel/wnpp/
 .. _`Debian Developer's Reference, 5.1. New packages`: http://www.debian.org/doc/developers-reference/pkgs.html#newpackage
-.. _`"New Packages" section of the Ubuntu wiki`: https://wiki.ubuntu.com/UbuntuDevelopment/NewPackages
+.. _`"New Packages"`: https://wiki.ubuntu.com/UbuntuDevelopment/NewPackages
