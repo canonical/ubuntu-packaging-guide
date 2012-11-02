@@ -8,43 +8,43 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-19 14:57+0000\n"
-"PO-Revision-Date: 2012-10-31 15:18+0000\n"
+"PO-Revision-Date: 2012-11-01 10:50+0000\n"
 "Last-Translator: Howard Chan <smartboyhw@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <zh_HK@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-01 05:11+0000\n"
+"X-Launchpad-Export-Date: 2012-11-02 05:25+0000\n"
 "X-Generator: Launchpad (build 16218)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
-msgstr "autopkgtest: 自動测試軟件"
+msgstr "autopkgtest: 自動测試套件"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
 "The `DEP 8 specification`_ defines how automatic testing can very easily be "
 "integrated into packages. To integrate a test into a package, all you need "
 "to do is:"
-msgstr ""
+msgstr "'DEP 8 規格‘ 定義了如何把自動测試融入進套件。如想把测試融入套件， 您需要做的是："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
 msgid "add the following to the Source section in ``debian/control``::"
-msgstr ""
+msgstr "把以下加進到 \"debian/control\" 裡的 Source 段："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:13
 msgid ""
 "add a file called ``debian/tests/control`` which specifies the requirements "
 "for the testbed,"
-msgstr ""
+msgstr "加進一個名叫“debian/tests/control\" 的檔案用以表明測試温床的規定。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
 msgid "add the tests in ``debian/tests/``."
-msgstr ""
+msgstr "把測試加進\"debian/tests\"裡。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
 msgid "Testbed requirements"
-msgstr ""
+msgstr "測試温床的規定"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:21
 msgid ""
@@ -53,12 +53,14 @@ msgid ""
 "gets broken during the build or if ``root`` permissions are required. The "
 "`DEP 8 specification`_ lists all available options."
 msgstr ""
+"在“debian/tests/control\"裡您可以表明由测試温床裡预计得到什麼。例如您可以列出測試裡所有要求的套件，或者是如果測試温床在建立中被终止"
+"或要不要要求\"root\"通行。“DEP 8 規格“已經列出所有可能的方案。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
-msgstr ""
+msgstr "以下我們將會看一看“glib2.0”的原始碼套件。在一個非常簡單的例子中檔案會像如下："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
