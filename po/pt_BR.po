@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-19 14:57+0000\n"
-"PO-Revision-Date: 2012-10-31 17:20+0000\n"
-"Last-Translator: Rafael Neri <Unknown>\n"
+"PO-Revision-Date: 2012-11-02 16:53+0000\n"
+"Last-Translator: Ursula Junque <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-01 05:11+0000\n"
+"X-Launchpad-Export-Date: 2012-11-03 05:23+0000\n"
 "X-Generator: Launchpad (build 16218)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -53,18 +53,26 @@ msgid ""
 "gets broken during the build or if ``root`` permissions are required. The "
 "`DEP 8 specification`_ lists all available options."
 msgstr ""
+"No ˋˋdebian/tests/controlˋˋ você especifica o que esperar do testbed. Por "
+"exemplo: você lista todos os pacotes requeridos para os testes, se o testbed "
+"falhar durante a compilação ou se permissões de ˋˋrootˋˋ são necessárias. A "
+"ˋDEP 8 specificationˋ_ lista todas as opções disponíveis."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
 msgstr ""
+"Abaixo estamos vendo o pacote fonte do ``glib2.0``. Em um caso muito "
+"simples, o arquivo se pareceria com isto::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
+"Para o teste em ``debian/tests/build`` isto deverá garantir que os pacotes "
+"``libglib2.0-dev`` e ``build-essential`` estão instalados."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
 msgid ""
@@ -74,11 +82,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr "Os testes efetivos"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
-msgstr ""
+msgstr "O teste que deve acompanhar o exemplo acima poderia ser:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
 msgid ""
