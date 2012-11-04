@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-19 14:57+0000\n"
-"PO-Revision-Date: 2012-11-02 16:53+0000\n"
-"Last-Translator: Ursula Junque <Unknown>\n"
+"PO-Revision-Date: 2012-11-03 20:53+0000\n"
+"Last-Translator: Jose Ricardo Ziviani <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-03 05:23+0000\n"
+"X-Launchpad-Export-Date: 2012-11-04 05:12+0000\n"
 "X-Generator: Launchpad (build 16218)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
-msgstr ""
+msgstr "autopkgtest: Teste automático para pacotes"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
@@ -44,7 +44,7 @@ msgstr "adicione os testes em ``debian/tests/``."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
 msgid "Testbed requirements"
-msgstr ""
+msgstr "Requisitos do Testbed"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:21
 msgid ""
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr ""
+msgstr "Os testes atuais"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
@@ -172,6 +172,8 @@ msgid ""
 "Packages in Debian with a testsuite header will also be automatically added "
 "when they are synced to Ubuntu."
 msgstr ""
+"Pacotes no Debian com um cabeçalho testsuite também serão adicionados "
+"automaticamente quando eles são sincronizados com o Ubuntu."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:126
 msgid "Getting the test into Ubuntu"
@@ -199,6 +201,7 @@ msgstr "adiciona o diretório ``debian/tests``,"
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
 msgstr ""
+"escreva o ``debian/tests/control`` baseado no `DEP 8 Specification`_,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:135
 msgid "add your test case(s) to ``debian/tests``,"
@@ -523,6 +526,8 @@ msgid ""
 "If you are packaging from scratch, ``dch --create`` (``dch`` is in the "
 "``devscripts`` package) will create a standard ``debian/changelog`` for you."
 msgstr ""
+"Se você estiver empacotando do zero, ``dch --create`` (``dch`` está no "
+"pacote ``devscripts``) criará um ``debian/changelog`` padrão para você."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
