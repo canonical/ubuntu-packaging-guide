@@ -55,6 +55,9 @@ html: $(foreach lang,$(LANGS),html-$(lang))
 	sed -i 's/src="..\/_static/src=".\/_static/g' $(BUILDDIR)/html/*html
 	sed -i 's/..\/_images/.\/_images/g' $(BUILDDIR)/html/*html
 	sed -i 's/ubuntu-packaging-guide\///g' $(BUILDDIR)/html/*html
+	# The "grab the source code" URL shouldn't be mangled
+	sed -i 's/ubuntu-packaging-guide-team\/trunk/ubuntu-packaging-guide-team\/ubuntu-packaging-guide\/trunk/g' \
+	$(BUILDDIR)/html/*.html
 	sed -i 's/ubuntu-packaging-guide\///g' $(BUILDDIR)/html/searchindex.js
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html"
@@ -67,6 +70,9 @@ html-%: locale
 	sed -i 's/src="..\/_static/src=".\/_static/g' $(BUILDDIR)/html/$*/*html
 	sed -i 's/..\/_images/.\/_images/g' $(BUILDDIR)/html/$*/*html
 	sed -i 's/ubuntu-packaging-guide\///g' $(BUILDDIR)/html/$*/*html
+	# The "grab the source code" URL shouldn't be mangled
+	sed -i 's/ubuntu-packaging-guide-team\/trunk/ubuntu-packaging-guide-team\/ubuntu-packaging-guide\/trunk/g' \
+	$(BUILDDIR)/html/$*/*.html
 	sed -i 's/ubuntu-packaging-guide\///g' $(BUILDDIR)/html/$*/searchindex.js
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/$*."
