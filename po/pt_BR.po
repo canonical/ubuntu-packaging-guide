@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-19 14:57+0000\n"
-"PO-Revision-Date: 2012-11-03 20:53+0000\n"
-"Last-Translator: Jose Ricardo Ziviani <Unknown>\n"
+"PO-Revision-Date: 2012-11-05 14:55+0000\n"
+"Last-Translator: Fabiano Bovo <bovo.fabiano@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-04 05:12+0000\n"
-"X-Generator: Launchpad (build 16218)\n"
+"X-Launchpad-Export-Date: 2012-11-06 05:15+0000\n"
+"X-Generator: Launchpad (build 16232)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -166,6 +166,10 @@ msgid ""
 "they should still be submitted to Debian, as DEP-8 is a Debian specification "
 "and Debian developers or users can still manually run the tests."
 msgstr ""
+"Enquanto o Debian ainda não tiver uma infra-estrutura de teste automatizado "
+"configurada, eles ainda devem ser submetidos ao Debian, uma vez que DEP-8 é "
+"uma especificação do Debian e os desenvolvedores  Debian, ou usuários, ainda "
+"podem executar os testes manualmente."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:122
 msgid ""
@@ -177,13 +181,16 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:126
 msgid "Getting the test into Ubuntu"
-msgstr ""
+msgstr "Obtendo o teste no Ubuntu"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:128
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
+"O processo de apresentação de um autopkgtest para um pacote é muito "
+"semelhante a :doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essencialmente, "
+"você simplesmente:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:131
 msgid "run ``bzr branch ubuntu:<packagename>``,"
@@ -235,6 +242,9 @@ msgid ""
 "don't need approval of anyone, but the downside of it is that your users "
 "will have to manually enable it. It is a non-standard software source."
 msgstr ""
+"Usar um PPA tem várias vantagens. É bastante simples e você não precisa da "
+"aprovação de ninguém, mas o lado negativo disso é que seus usuários terão "
+"que ativá-lo manualmente. É um software de fonte não-padrão."
 
 #: ../ubuntu-packaging-guide/backports.rst:18
 msgid ""
