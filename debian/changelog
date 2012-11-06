@@ -18,10 +18,11 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
   * Link JS files with the libjs-sphinxdoc package.
   * Do not install websupport.js.
   * Simplified the syntax in python-packaging.rst.
-  * Miscellaneous fixes.
   * pygments.css: remove background-color line, it makes pygmentized code
     blocks look inconsistent with other ones.
-  * make some links easier to translate.
+  * Make some links easier to translate.
+  * Makefile: fix sed breaking "Grab the source" URL.
+  * Miscellaneous fixes.
 
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 12 Oct 2012 16:52:11 +0200
 
