@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-10-19 14:57+0000\n"
+"POT-Creation-Date: 2012-11-06 16:04+0000\n"
 "PO-Revision-Date: 2012-10-05 01:35+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Macedonian <mk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-20 05:20+0000\n"
-"X-Generator: Launchpad (build 16165)\n"
+"X-Launchpad-Export-Date: 2012-11-07 05:01+0000\n"
+"X-Generator: Launchpad (build 16232)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -524,10 +524,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:76
 msgid ""
-"For the Ubuntu ``hello`` package, the ``control`` file looks something like::"
+"For the Ubuntu ``hello`` package, the ``control`` file looks something like "
+"this:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:99
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:101
 msgid ""
 "The first paragraph describes the source package including the list of "
 "packages required to build the package from source in the ``Build-Depends`` "
@@ -536,7 +537,7 @@ msgid ""
 "the packaging version control repository, and the upstream home page."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:106
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:108
 msgid ""
 "Note that in Ubuntu, we set the ``Maintainer`` field to a general address "
 "because anyone can change any package (this differs from Debian where "
@@ -550,22 +551,22 @@ msgid ""
 "<https://wiki.ubuntu.com/DebianMaintainerField>`_ on the Ubuntu wiki."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:118
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:120
 msgid "Each additional paragraph describes a binary package to be built."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:120
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:122
 msgid ""
 "For further information, see the `control file section (Chapter 5) "
 "<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the "
 "Debian Policy Manual."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:126
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
 msgid "The copyright file"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:130
 msgid ""
 "This file gives the copyright information for both the upstream source and "
 "the packaging. Ubuntu and `Debian Policy (Section 12.5) "
@@ -574,7 +575,7 @@ msgid ""
 "license information to ``/usr/share/doc/$(package_name)/copyright``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:134
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:136
 msgid ""
 "Generally, copyright information is found in the ``COPYING`` file in the "
 "program's source directory. This file should include such information as the "
@@ -583,18 +584,18 @@ msgid ""
 "copyright itself. An example template would be::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:176
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:178
 msgid ""
 "This example follows the `Machine-readable debian/copyright "
 "<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ "
 "format. You are encouraged to use this format as well."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:182
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:184
 msgid "The rules file"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:184
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:186
 msgid ""
 "The last file we need to look at is ``rules``. This does all the work for "
 "creating our package. It is a Makefile with targets to compile and install "
@@ -603,20 +604,20 @@ msgid ""
 "source package again."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:192
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:194
 msgid ""
 "Here is a simplified version of the rules file created by ``dh_make`` (which "
 "can be found in the ``dh-make`` package):"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:206
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:208
 msgid ""
 "Let us go through this file in some detail. What this does is pass every "
 "build target that ``debian/rules`` is called with as an argument to "
 "``/usr/bin/dh``, which itself will call all the necessary ``dh_*`` commands."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:210
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:212
 msgid ""
 "``dh`` runs a sequence of debhelper commands. The supported sequences "
 "correspond to the targets of a ``debian/rules`` file: \"build\", \"clean\", "
@@ -624,7 +625,7 @@ msgid ""
 "see what commands are run in each target, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:219
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:221
 msgid ""
 "Commands in the binary-indep sequence are passed the \"-i\" option to ensure "
 "they only work on binary independent packages, and commands in the binary-"
@@ -632,7 +633,7 @@ msgid ""
 "architecture dependent packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:224
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:226
 msgid ""
 "Each debhelper command will record when it's successfully run in "
 "``debian/package.debhelper.log``. (Which dh_clean deletes.) So dh can tell "
@@ -640,7 +641,7 @@ msgid ""
 "those commands again."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:229
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:231
 msgid ""
 "Each time ``dh`` is run, it examines the log, and finds the last logged "
 "command that is in the specified sequence. It then continues with the next "
@@ -648,7 +649,7 @@ msgid ""
 "remaining`` options can override this behavior."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:234
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:236
 msgid ""
 "If ``debian/rules`` contains a target with a name like "
 "``override_dh_command``, then when it gets to that command in the sequence, "
@@ -658,7 +659,7 @@ msgid ""
 "feature, you should Build-Depend on debhelper 7.0.50 or above.)"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:243
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:245
 msgid ""
 "Have a look at ``/usr/share/doc/debhelper/examples/`` and ``man dh`` for "
 "more examples. Also see `the rules section (Section 4.9) "
@@ -666,32 +667,32 @@ msgid ""
 "the Debian Policy Manual."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:249
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:251
 msgid "Additional Files"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:252
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:254
 msgid "The install file"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:254
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:256
 msgid ""
 "The ``install`` file is used by ``dh_install`` to install files into the "
 "binary package. It has two standard use cases:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:257
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:259
 msgid ""
 "To install files into your package that are not handled by the upstream "
 "build system."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:258
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:260
 msgid ""
 "Splitting a single large source package into multiple binary packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:260
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:262
 msgid ""
 "In the first case, the ``install`` file should have one line per file "
 "installed, specifying both the file and the installation directory. For "
@@ -700,7 +701,7 @@ msgid ""
 "``debian`` directory to ``usr/share/applications``::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:271
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:273
 msgid ""
 "When a source package is producing multiple binary packages ``dh`` will "
 "install the files into ``debian/tmp`` rather than directly into "
@@ -714,30 +715,30 @@ msgid ""
 "like::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:284
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:286
 msgid ""
 "While ``foo-common.install`` containing only the architecture independent "
 "file might look like::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:292
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:294
 msgid ""
 "This would create two binary packages, ``foo`` and ``foo-common``. Both "
 "would require their own paragraph in ``debian/control``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:295
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:297
 msgid ""
 "See ``man dh_install`` and the `install file section (Section 5.11) "
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:300
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:302
 msgid "The watch file"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:302
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:304
 msgid ""
 "The ``debian/watch`` file allows us to check automatically for new upstream "
 "versions using the tool ``uscan`` found in the ``devscripts`` package. The "
@@ -746,7 +747,7 @@ msgid ""
 "example::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:311
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:313
 msgid ""
 "Running ``uscan`` in the root source directory will now compare the upstream "
 "version number in ``debian/changelog`` with the latest available upstream "
@@ -754,50 +755,50 @@ msgid ""
 "downloaded. For example::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:324
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:326
 msgid ""
 "If your tarballs live on Launchpad, the ``debian/watch`` file is a little "
 "more complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  "
 "In that case, use something like::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:331
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
 msgid ""
 "For further information, see ``man uscan`` and the `watch file section "
 "(Section 4.11) <http://www.debian.org/doc/debian-policy/ch-source.html#s-"
 "debianwatch>`_ of the Debian Policy Manual."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:335
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:337
 msgid ""
 "For a list of packages where the ``watch`` file reports they are not in sync "
 "with upstream see `Ubuntu External Health Status "
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:340
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
 msgid "The source/format file"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:344
 msgid ""
 "This file indicates the format of the source package. It should contain a "
 "single line indicating the desired format:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:345
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:347
 msgid "``3.0 (native)`` for Debian native packages (no upstream version)"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:347
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:349
 msgid "``3.0 (quilt)`` for packages with a separate upstream tarball"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:349
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:351
 msgid "``1.0`` for packages wishing to explicitly declare the default format"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:351
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:353
 msgid ""
 "Currently, the package source format will default to 1.0 if this file does "
 "not exist. You can make this explicit in the source/format file. If you "
@@ -806,49 +807,49 @@ msgid ""
 "ignored."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:356
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:358
 msgid ""
 "You are encouraged to use the newer 3.0 source format. It provides a number "
 "of new features:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:359
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
 msgid "Support for additional compression formats: bzip2, lzma and xz"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:363
 msgid "Support for multiple upstream tarballs"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:363
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:365
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:365
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:367
 msgid ""
 "Debian-specific changes are no longer stored in a single .diff.gz but in "
 "multiple patches compatible with quilt under ``debian/patches/``"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:367
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:369
 msgid ""
 "http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
 "concerning the switch to the 3.0 source package formats."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:370
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:372
 msgid ""
 "See ``man dpkg-source`` and the `source/format section (Section 5.21) "
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:375
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:377
 msgid "Additional Resources"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:377
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:379
 msgid ""
 "In addition to the links to the Debian Policy Manual in each section above, "
 "the Debian New Maintainers' Guide has more detailed descriptions of each "
@@ -2494,7 +2495,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:20
 msgid ""
 "This guide will take you through packaging a simple application called GNU "
-"Hello which has been `posted on GNU.org`_."
+"Hello which has been posted on GNU.org_."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:23
@@ -2762,7 +2763,7 @@ msgid ""
 "In some cases, it might make sense to go directly into Ubuntu first. For "
 "instance, Debian might be in a freeze making it unlikely that your package "
 "will make it into Ubuntu in time for the next release. This process is "
-"documented on the `\"New Packages\" section of the Ubuntu wiki`_."
+"documented on the `\"New Packages\"`_ section of the Ubuntu wiki."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
