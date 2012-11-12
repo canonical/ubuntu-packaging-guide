@@ -9,9 +9,9 @@ Build-Depends: debhelper (>= 7.0.50~),
                doc-base,
                python-sphinx (>= 1.1~),
                texlive-fonts-recommended,
-               texlive-latex-base,
                texlive-latex-extra,
-               texlive-latex-recommended
+               texlive-lang-cjk,
+               latex-cjk-japanese
 Homepage: https://launchpad.net/ubuntu-packaging-guide
 Standards-Version: 3.9.3
 

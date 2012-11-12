@@ -172,6 +172,13 @@ latexpdf-%: locale
 	make -C $(BUILDDIR)/latex/$* all-pdf
 	mkdir -p $(BUILDDIR)/pdf/$*; cp $(BUILDDIR)/latex/$*/*pdf $(BUILDDIR)/pdf/$*
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/pdf/$*."
+latexpdf-ja: locale-ja
+	# Special case, selecting all-pdf-ja target instead of all-pdf
+	$(SPHINXBUILD) -Dlanguage=ja -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/ja
+	@echo "Running LaTeX files through pdflatex..."
+	make -C $(BUILDDIR)/latex/ja all-pdf-ja
+	mkdir -p $(BUILDDIR)/pdf/ja; cp $(BUILDDIR)/latex/ja/*pdf $(BUILDDIR)/pdf/ja
+	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/pdf/ja."
 
 text: $(foreach lang,$(LANGS),text-$(lang))
 	$(SPHINXBUILD) -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text/en
