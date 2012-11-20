@@ -12,7 +12,7 @@ extract the change to submit to the upstream project.  Instead, we keep these
 changes as separate patches, in the form of diff files.
 
 There are a number of different ways of handling patches in Debian packages,
-fortunately we are standardising on one system, `Quilt`_, which is now used by
+fortunately we are standardizing on one system, `Quilt`_, which is now used by
 most packages.
 
 Let's look at an example package, ``kamoso`` in Natty::
@@ -171,9 +171,6 @@ work with all systems.
 In even older packages changes will be included directly to sources and kept
 in the ``diff.gz`` source file.  This makes it hard to upgrade to new upstream
 versions or differentiate between patches and is best avoided.
-
-Bazaar Loom is a way to keep patches as part of bzr trees, see :doc:`Working
-with Patches via Loom<./udd-patchsys>` for more information.
 
 Do not change a package's patch system without discussing it with the Debian
 maintainer or relevant Ubuntu team.  If there is no existing patch system then
