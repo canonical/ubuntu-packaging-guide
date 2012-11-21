@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.2.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 09:26\n"
+"POT-Creation-Date: 2012-11-21 11:14\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -788,166 +788,166 @@ msgstr ""
 msgid "We'll describe specifics on how to branch the code, push your fix, and request a review in the following sections."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:88
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:89
 # 59382029127f4af6a0b884ceb8448bc6
 msgid "Work on a fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:90
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:91
 # 086bb002bb3549be95f5a3083b9525fd
 msgid "There are entire books written about finding bugs, fixing them, testing them, etc. If you are completely new to programming, try to fix easy bugs such as obvious typos first. Try to keep changes as minimal as possible and document your change and assumptions clearly."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:95
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
 # 52031c9a681f4e0f99a602c742b8da5b
 msgid "Before working on a fix yourself, make sure to investigate if nobody else has fixed it already or is currently working on a fix. Good sources to check are:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:98
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
 # af309e2981624047a9708fdcf808fd3c
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
 # d18e5546e00742ac91d9d8027c5f0d5b
 msgid "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:101
 # 258c911c0b6941969be60352c4c71e15
 msgid "bugs or package uploads of Debian or other distributions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:105
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:106
 # 8b8f4ca3ae214a63819e215580076f7e
 msgid "You now want to create a patch which includes the fix.  The command ``edit-patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:110
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:111
 # 3efb88337529442d9aaf9054324025b8
 msgid "This will copy the packaging to a temporary directory.  You can now edit files with a text editor or apply patches from upstream, for example::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:115
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:116
 # bd7007cc9485438b9aa7d11d0c8cefeb
 msgid "After editing the file type ``exit`` or press ``control-d`` to quit the temporary shell.  The new patch will have been added into ``debian/patches``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:120
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:121
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:204
 # ffe781409683496087dd1a72d4c2a6e3
 # f14c741bda9049b49f7de1e4a9b08786
 msgid "Testing the fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:122
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:123
 # 6fee349ca3944068b5b9282601a898b6
 msgid "To build a test package with your changes, run these commands::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:127
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:128
 # b25290e8bdae47c1ae1e0553cf392a26
 msgid "This will create a source package from the branch contents (``-us -uc`` will just omit the step to sign the source package) and ``pbuilder-dist`` will build the package from source for whatever ``release`` you choose."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:131
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:132
 # c7c276df725b4ecd80bcb909562336b0
 msgid "Once the build succeeds, install the package from ``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i <package>_<version>.deb``).  Then test to see if the bug is fixed."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:138
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:139
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:155
 # 927b7d0e745d487bbae43bf451eb5ae2
 # 7e78dedfc3334f4eb483057d2ddbf20a
 msgid "Documenting the fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:140
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:141
 # 8d5ebea0c7b24ece85f4557b411f5cc6
 msgid "It is very important to document your change sufficiently so developers who look at the code in the future won't have to guess what your reasoning was and what your assumptions were. Every Debian and Ubuntu package source includes ``debian/changelog``, where changes of each uploaded package are tracked."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:145
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:146
 # c5da006f634b426f9de20a0777f6ba77
 msgid "The easiest way to update this is to run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:149
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:150
 # 9406b18b4e7c47b99c0898566e96aa9a
 msgid "This will add a boilerplate changelog entry for you and launch an editor where you can fill in the blanks. An example of this could be::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:158
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:159
 # 5cfd955030624b0a9120b44e2dc0e190
 msgid "``dch`` should fill out the first and last line of such a changelog entry for you already. Line 1 consists of the source package name, the version number, which Ubuntu release it is uploaded to, the urgency (which almost always is 'low'). The last line always contains the name, email address and timestamp (in :rfc:`5322` format) of the change."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:164
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
 # 85c55d5f0c8c48f8a199432ee37d8c47
 msgid "With that out of the way, let's focus on the actual changelog entry itself: it is very important to document:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:167
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 # 7d951432608c415f87499ee9c6b196c7
 msgid "where the change was done"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
 # 8d0a7be604a54afeb1a38cf225125678
 msgid "what was changed"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:170
 # e3d23410f07142d18b168fa403a712e5
 msgid "where the discussion of the change happened"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:171
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:172
 # 18db6b38a86d4462b3880cd4749dd02b
 msgid "In our (very sparse) example the last point is covered by ``(LP: #123456)`` which refers to Launchpad bug 123456. Bug reports or mailing list threads or specifications are usually good information to provide as a rationale for a change. As a bonus, if you use the ``LP: #<number>`` notation for Launchpad bugs, the bug will be automatically closed when the package is uploaded to Ubuntu."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:180
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:181
 # 01e956c0c31d401e9f494d8576bfa584
 msgid "Committing the fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:182
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:183
 # 09f170c43d484b339ec3e5cffab69275
 msgid "With the changelog entry written and saved, you can just run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:186
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:187
 # 301593ebf4944f668bdd0b00e02780ba
 msgid "and the change will be committed (locally) with your changelog entry as a commit message."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:189
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:190
 # 26a2945a16914e41a73e90b991db11da
 msgid "To push it to Launchpad, as the remote branch name, you need to stick to the following nomenclature::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:194
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
 # 04d9314cf72b454a91fe1115b578ae0d
 msgid "This could for example be::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:198
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:199
 # 54eb6f56238141f7afc8aed464cc962f
 msgid "So if you just run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:203
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:204
 # 9174cefe8875439f9493c0f8a652d3cc
 msgid "you should be all set. The push command should push it to Launchpad and the second command will open the Launchpad page of the remote branch in your browser. There find the \"(+) Propose for merging\" link, click it to get the change reviewed by somebody and included in Ubuntu."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:208
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:209
 # 8e6506d04c17490fad9576935324f877
 msgid "Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into more detail about getting feedback for your proposed changes."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:211
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:212
 # eb418e76194d4e38978268f1c9356d2d
 msgid "If your branch fixes issues in stable releases or it is a security fix, you might want to have a look at our :doc:`Security and stable release updates<./security-and-stable-release-updates>` article."
 msgstr ""
@@ -2358,7 +2358,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:165
 # 84426a80635d4b6795510de9f20df908
-msgid "Other patch systems used by packages include ``dpatch`` and ``cdbs simple-patchsys``, these work similarly to Quilt by keeping patches in ``debian/patches`` but have different commands to apply, un-apply or create patches. You can find out which patch system is used by a package by using the ``what-patch`` command (from the ``ubuntu-dev-tools`` package). You can use ``edit-patch``, shown in `previous chapters`_, as a reliable way to work with all systems."
+msgid "Other patch systems used by packages include ``dpatch`` and ``cdbs simple-patchsys``, these work similarly to Quilt by keeping patches in ``debian/patches`` but have different commands to apply, un-apply or create patches. You can find out which patch system is used by a package by using the ``what-patch`` command (from the ``ubuntu-dev-tools`` package). You can use ``edit-patch``, shown in :ref:`previous chapters <working-on-a-fix>`, as a reliable way to work with all systems."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:173
