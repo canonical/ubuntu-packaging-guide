@@ -8,6 +8,8 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
    - Modify LANGS variable in Makefile when a language reaches
      threshold (LP: #1067288).
    - Clean up to make PEP8 compliant.
+  * Drop udd-patchsys article. The patches-to-packages article
+    is the recommended workflow (LP: #973884).  
   
   [ Dmitry Shachnev ]
   * Fix search not working (LP: #814679).
