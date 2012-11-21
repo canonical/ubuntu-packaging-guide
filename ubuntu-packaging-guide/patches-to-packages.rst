@@ -164,9 +164,11 @@ Other Patch Systems
 
 Other patch systems used by packages include ``dpatch`` and ``cdbs
 simple-patchsys``, these work similarly to Quilt by keeping patches in
-debian/patches but have different commands to apply, un-apply or create patches.
-You can use ``edit-patch``, shown in previous chapters, as a reliable way to
-work with all systems.
+``debian/patches`` but have different commands to apply, un-apply or create
+patches. You can find out which patch system is used by a package by using the
+``what-patch`` command (from the ``ubuntu-dev-tools`` package). You can use
+``edit-patch``, shown in `previous chapters`_, as a reliable way to work with
+all systems.
 
 In even older packages changes will be included directly to sources and kept
 in the ``diff.gz`` source file.  This makes it hard to upgrade to new upstream
@@ -178,3 +180,4 @@ feel free to add Quilt.
 
 .. _`Quilt`: http://wiki.debian.org/UsingQuilt
 .. _`bug 815854`: https://bugs.launchpad.net/bzr-builddeb/+bug/815854
+.. _`previous chapters`: ./fixing-a-bug.html#work-on-a-fix
