@@ -61,7 +61,6 @@ Knowledge Base
    udd-uploading
    udd-latest
    udd-merging
-   udd-patchsys
    chroots
    traditional-packaging
    python-packaging
