@@ -12,7 +12,7 @@ extract the change to submit to the upstream project.  Instead, we keep these
 changes as separate patches, in the form of diff files.
 
 There are a number of different ways of handling patches in Debian packages,
-fortunately we are standardising on one system, `Quilt`_, which is now used by
+fortunately we are standardizing on one system, `Quilt`_, which is now used by
 most packages.
 
 Let's look at an example package, ``kamoso`` in Natty::
@@ -164,16 +164,15 @@ Other Patch Systems
 
 Other patch systems used by packages include ``dpatch`` and ``cdbs
 simple-patchsys``, these work similarly to Quilt by keeping patches in
-debian/patches but have different commands to apply, un-apply or create patches.
-You can use ``edit-patch``, shown in previous chapters, as a reliable way to
-work with all systems.
+``debian/patches`` but have different commands to apply, un-apply or create
+patches. You can find out which patch system is used by a package by using the
+``what-patch`` command (from the ``ubuntu-dev-tools`` package). You can use
+``edit-patch``, shown in `previous chapters`_, as a reliable way to work with
+all systems.
 
 In even older packages changes will be included directly to sources and kept
 in the ``diff.gz`` source file.  This makes it hard to upgrade to new upstream
 versions or differentiate between patches and is best avoided.
-
-Bazaar Loom is a way to keep patches as part of bzr trees, see :doc:`Working
-with Patches via Loom<./udd-patchsys>` for more information.
 
 Do not change a package's patch system without discussing it with the Debian
 maintainer or relevant Ubuntu team.  If there is no existing patch system then
@@ -181,3 +180,4 @@ feel free to add Quilt.
 
 .. _`Quilt`: http://wiki.debian.org/UsingQuilt
 .. _`bug 815854`: https://bugs.launchpad.net/bzr-builddeb/+bug/815854
+.. _`previous chapters`: ./fixing-a-bug.html#work-on-a-fix
