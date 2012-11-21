@@ -83,6 +83,7 @@ credit.  You're now on your way to becoming an Ubuntu developer!
 We'll describe specifics on how to branch the code, push your fix, and request
 a review in the following sections.
 
+.. _working-on-a-fix:
 
 Work on a fix
 =============
