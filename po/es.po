@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-11-12 08:45+0000\n"
+"POT-Creation-Date: 2012-11-21 11:14+0000\n"
 "PO-Revision-Date: 2012-10-31 09:27+0000\n"
 "Last-Translator: Javier P.L. <chilicuil@ubuntu.com>\n"
 "Language-Team: Español; Castellano <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-13 05:45+0000\n"
-"X-Generator: Launchpad (build 16251)\n"
+"X-Launchpad-Export-Date: 2012-11-22 05:18+0000\n"
+"X-Generator: Launchpad (build 16293)\n"
 "Language: es\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -1349,11 +1349,11 @@ msgstr ""
 "En las siguientes secciones se describe en detalle cómo bifurcar el código, "
 "subir la corrección y solicitar una revisión."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:88
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:89
 msgid "Work on a fix"
 msgstr "Trabajar en una solución"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:90
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:91
 msgid ""
 "There are entire books written about finding bugs, fixing them, testing "
 "them, etc. If you are completely new to programming, try to fix easy bugs "
@@ -1366,7 +1366,7 @@ msgstr ""
 "Intente mantener tan reducidos como sea posible y documente claramente tanto "
 "los cambios como los supuestos que haga."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:95
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
 msgid ""
 "Before working on a fix yourself, make sure to investigate if nobody else "
 "has fixed it already or is currently working on a fix. Good sources to check "
@@ -1376,24 +1376,24 @@ msgstr ""
 "alguien más ya lo ha solucionado o está trabajando en una solución. Algunos "
 "buenos lugares para buscar son:"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:98
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
 "El sistema de seguimiento de errores (abiertos y cerrados) del proyecto "
 "original (y de Debian)"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
 msgid ""
 "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
 "El historial de cambios del proyecto original (o una versión más reciente) "
 "podría haber corregido el problema."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:101
 msgid "bugs or package uploads of Debian or other distributions."
 msgstr "La subida de errores o paquetes de Debian u otras distribuciones"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:105
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:106
 msgid ""
 "You now want to create a patch which includes the fix.  The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
@@ -1401,7 +1401,7 @@ msgstr ""
 "En este momento desea crear un parche que incluya la solución. La orden "
 "«edit-patch» es una forma simple de añadir un parche a un paquete. Ejecute::"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:110
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:111
 msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
@@ -1410,7 +1410,7 @@ msgstr ""
 "archivos con un editor de textos o aplicar parches desde el proyecto "
 "original, por ejemplo::"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:115
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:116
 msgid ""
 "After editing the file type ``exit`` or press ``control-d`` to quit the "
 "temporary shell.  The new patch will have been added into ``debian/patches``."
@@ -1419,17 +1419,17 @@ msgstr ""
 "intérprete de órdenes temporal. El nuevo parche se habrá añadido a "
 "«debian/patches»."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:120
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:121
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:204
 msgid "Testing the fix"
 msgstr "Probar la solución"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:122
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:123
 msgid "To build a test package with your changes, run these commands::"
 msgstr ""
 "Para crear un paquete de prueba con los cambios, ejecute estas órdenes::"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:127
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:128
 msgid ""
 "This will create a source package from the branch contents (``-us -uc`` will "
 "just omit the step to sign the source package) and ``pbuilder-dist`` will "
@@ -1440,7 +1440,7 @@ msgstr ""
 "«pbuilder-dist» construirá el paquete a partir del fuente para la versión "
 "que haya elegido."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:131
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:132
 msgid ""
 "Once the build succeeds, install the package from "
 "``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i "
@@ -1450,12 +1450,12 @@ msgstr ""
 "«~/pbuilder/<release>_result/» (use «sudo dpkg -i <paquete>_<versión>.deb»). "
 "Compruebe entonces si se ha corregido el error."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:138
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:139
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:155
 msgid "Documenting the fix"
 msgstr "Documentar la solución"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:140
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:141
 msgid ""
 "It is very important to document your change sufficiently so developers who "
 "look at the code in the future won't have to guess what your reasoning was "
@@ -1469,11 +1469,11 @@ msgstr ""
 "hizo. Cada paquete fuente de Debian y Ubuntu contiene un archivo "
 "«debian/changelog» donde se mantienen los cambios de cada paquete subido."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:145
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:146
 msgid "The easiest way to update this is to run::"
 msgstr "La manera más fácil de actualizar esto es ejecutar::"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:149
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:150
 msgid ""
 "This will add a boilerplate changelog entry for you and launch an editor "
 "where you can fill in the blanks. An example of this could be::"
@@ -1481,7 +1481,7 @@ msgstr ""
 "Esto añadirá una entrada modelo al registro de cambios y lanzará un editor "
 "en el que poder rellenar los campos vacíos. Un ejemplo podría ser::"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:158
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:159
 msgid ""
 "``dch`` should fill out the first and last line of such a changelog entry "
 "for you already. Line 1 consists of the source package name, the version "
@@ -1496,7 +1496,7 @@ msgstr ""
 "contiene el nombre, la dirección de correo y la fecha y hora (en formato "
 ":rfc: «5322») del cambio."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:164
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
 msgid ""
 "With that out of the way, let's focus on the actual changelog entry itself: "
 "it is very important to document:"
@@ -1504,19 +1504,19 @@ msgstr ""
 "Realizado todo esto, céntrese en la propia entrada del registro de cambios: "
 "es muy importante documentar:"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:167
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 msgid "where the change was done"
 msgstr "dónde se hizo el cambio"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
 msgid "what was changed"
 msgstr "qué se ha cambiado"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:170
 msgid "where the discussion of the change happened"
 msgstr "dónde ocurrió la discusión acerca del cambio"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:171
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:172
 msgid ""
 "In our (very sparse) example the last point is covered by ``(LP: #123456)`` "
 "which refers to Launchpad bug 123456. Bug reports or mailing list threads or "
@@ -1533,17 +1533,17 @@ msgstr ""
 "para de los errores de Launchpad, dichos errores se cerrarán automáticamente "
 "cuando los cambios se suban a Ubuntu."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:180
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:181
 msgid "Committing the fix"
 msgstr "Aplicar la solución"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:182
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:183
 msgid "With the changelog entry written and saved, you can just run::"
 msgstr ""
 "Con la entrada del registro de cambios escrita y guardada, puede ejecutar "
 "simplemente::"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:186
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:187
 msgid ""
 "and the change will be committed (locally) with your changelog entry as a "
 "commit message."
@@ -1551,7 +1551,7 @@ msgstr ""
 "y se aplicarán los cambios (localmente) con la entrada del archivo registro "
 "de cambios como mensaje de la confirmación."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:189
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:190
 msgid ""
 "To push it to Launchpad, as the remote branch name, you need to stick to the "
 "following nomenclature::"
@@ -1559,15 +1559,15 @@ msgstr ""
 "Para enviar los cambios a Launchpad, con el nombre de la rama remota, se "
 "debe mantener la siguiente nomenclatura::"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:194
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
 msgid "This could for example be::"
 msgstr "Un ejemplo podría ser::"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:198
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:199
 msgid "So if you just run::"
 msgstr "Así, si ejecuta::"
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:203
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:204
 msgid ""
 "you should be all set. The push command should push it to Launchpad and the "
 "second command will open the Launchpad page of the remote branch in your "
@@ -1579,7 +1579,7 @@ msgstr ""
 "navegador. Localice ahí en enlace «(+) Propose for merging», púlselo para "
 "que se revise el cambio por algún desarrollador y se incluya en Ubuntu."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:208
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:209
 msgid ""
 "Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into "
 "more detail about getting feedback for your proposed changes."
@@ -1587,7 +1587,7 @@ msgstr ""
 "Nuestro artículo sobre :doc:`seeking sponsorship<./udd-sponsorship>` entra "
 "en más detalle sobre cómo obtener respuesta a los cambios propuestos."
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:211
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:212
 msgid ""
 "If your branch fixes issues in stable releases or it is a security fix, you "
 "might want to have a look at our :doc:`Security and stable release "
@@ -3930,12 +3930,9 @@ msgstr ""
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:14
 msgid ""
 "There are a number of different ways of handling patches in Debian packages, "
-"fortunately we are standardising on one system, `Quilt`_, which is now used "
+"fortunately we are standardizing on one system, `Quilt`_, which is now used "
 "by most packages."
 msgstr ""
-"Existen varias formas de gestionar los parches de paquetes Debian, pero "
-"afortunadamente se están estandarizando en un solo sistema, `Quilt`_, que "
-"actualmente se usa en la mayoría de los paquetes."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:18
 msgid "Let's look at an example package, ``kamoso`` in Natty::"
@@ -4139,18 +4136,14 @@ msgstr "Otros sistemas de parches"
 msgid ""
 "Other patch systems used by packages include ``dpatch`` and ``cdbs simple-"
 "patchsys``, these work similarly to Quilt by keeping patches in "
-"debian/patches but have different commands to apply, un-apply or create "
-"patches. You can use ``edit-patch``, shown in previous chapters, as a "
-"reliable way to work with all systems."
+"``debian/patches`` but have different commands to apply, un-apply or create "
+"patches. You can find out which patch system is used by a package by using "
+"the ``what-patch`` command (from the ``ubuntu-dev-tools`` package). You can "
+"use ``edit-patch``, shown in :ref:`previous chapters <working-on-a-fix>`, as "
+"a reliable way to work with all systems."
 msgstr ""
-"Otros sistemas de parches que se usan con los paquetes incluyen «dpatch» y "
-"«cdbs simple-patchsys», que funcionan de forma similar a Quilt, manteniendo "
-"los parches en debian/patches pero usan diferentes órdenes para aplicarlos, "
-"des-aplicarlos o crear parches. Puede usar «edit-patch», mostrado en "
-"capítulos anteriores, como una forma fiable de trabajar con todos los "
-"sistemas."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:171
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:173
 msgid ""
 "In even older packages changes will be included directly to sources and kept "
 "in the ``diff.gz`` source file.  This makes it hard to upgrade to new "
@@ -4161,16 +4154,7 @@ msgstr ""
 "actualización a nuevas versiones de aguas arribas o distinguir entre parches "
 "por lo que lo mejor es evitarlo."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:175
-msgid ""
-"Bazaar Loom is a way to keep patches as part of bzr trees, see :doc:`Working "
-"with Patches via Loom<./udd-patchsys>` for more information."
-msgstr ""
-"Bazaar Loom is una manera de mantener los parches como parte de árboles bzr, "
-"véase :doc:`Trabajar con parches vía Loom<./udd-patchsys>` para más "
-"información."
-
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:178
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:177
 msgid ""
 "Do not change a package's patch system without discussing it with the Debian "
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "
@@ -5788,342 +5772,6 @@ msgstr ""
 "versiones de desarrollo del PPA «bzr». Más concretamente, necesitará «bzr» "
 "versión 2.5 beta 5 o superior y «bzr-builddeb» version 2.8.1 o superior. Con "
 "versiones más antiguas, use en su lugar la orden «bzr merge-package»."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:3
-msgid "Working with Patches"
-msgstr "Trabajar con parches"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:5
-msgid ""
-"Many existing packages that have changes from upstream express those changes "
-"using a patch system, of which there are several to choose from.  Usually, "
-"when you make an additional change to a package, you'll want to add a patch "
-"file to the patch system being used, rather than editing the source code in "
-"place.  Note however that it is considered bad practice to add a patch "
-"system to a package that does not already have one.  In that case, either "
-"coordinate with the Debian maintainer, or edit the files in place.  You can "
-"find out if your package has a patch system by using the ``what-patch`` "
-"command (from the ``ubuntu-dev-tools`` package)."
-msgstr ""
-"Muchos paquetes existentes que se han cambiado desde aguas arriba expresan "
-"esos cambios usando un sistema de parches, de los cuales hay varios entre lo "
-"que elegir. Normalmente, cuando haga un cambio adicional a un paquete, "
-"deseará añadir un archivo de parche al sistema de parches que se esté "
-"usando, en lugar de editar el código fuente directamente. Tenga en cuenta, "
-"sin embargo, que se considera una mala práctica añadir un sistema de parches "
-"a un paquete que no tiene ya uno. En este caso, coordínese con el mantenedor "
-"de Debian o edite los archivos directamente. Puede averiguar si el paquete "
-"tiene un sistema de parches usando la orden «what-patch» (del paquete "
-"«ubuntu-dev-tools»)."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:15
-msgid ""
-"While Debian has several patch systems, Quilt_ is becoming the most popular. "
-"Quilt acts something like a version control system itself, and in the "
-"context of UDD, this can be both a good thing and a bad thing.  With Bazaar "
-"2.5 and ``bzr-builddeb`` 2.8.1 (in Ubuntu 12.04 Precise), handling source "
-"packages with quilt patches has become much easier."
-msgstr ""
-"A pesar de que Debian dispone de varios sistemas de parches, Quilt_ se está "
-"convirtiendo en el más popular. Quilt él mismo como una especie de sistema "
-"de control de versiones y, en el contexto de UDD, puede ser algo bueno y "
-"algo malo. Con Bazaar 2.5 y «bzr-builddeb» 2.8.1 (en Ubuntu 12.04 Precise), "
-"la gestión de los paquetes fuente con parches quilt se ha facilitado mucho."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:21
-msgid ""
-"There are two main tasks where you'll have to be aware of quilt patches, "
-"when developing your own patch to the upstream code, and when merging new "
-"versions of the package from Debian where either the Debian or Ubuntu (or "
-"both) have quilt patches in the source branch."
-msgstr ""
-"Hay dos tareas principales en las que tendrá que ser consciente de los "
-"parches quilt: cuando desarrolle su propio parche al código de aguas arriba "
-"y cuando fusione nuevas versiones del paquete desde Debian, donde Debian o "
-"Ubuntu (o ambos) tienen parches quilt en la rama fuente."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:26
-msgid ""
-"Here are some guidelines for working with quilt patches in UDD in these two "
-"scenarios.  Some of these techniques are works-in-progress, so you should "
-"adapt them to your own workflow, and keep watching for improvements from the "
-"Bazaar teams."
-msgstr ""
-"A continuación se dan algunas directrices para trabajar con parches quilt en "
-"UDD en estos dos escenarios. Algunas de estas técnicas son trabajos en "
-"curso, así que debería adaptarlas a su flujo de trabajo y vigilar por "
-"posibles mejoras desde los equipos de Bazaar."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:33
-msgid "Patches are applied in source branches"
-msgstr "Los parches se aplican en las ramas fuentes"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:35
-msgid ""
-"One important thing to keep in mind: all source branches reflect the tree "
-"after a ``quilt push -a``.  In other words, when you branch a source branch "
-"from Launchpad, you get the tree with all patches applied, ready for you to "
-"jump right into hacking.  You do not need to ``quilt push -a`` manually, and "
-"in fact, you'll get a tree with lots of distracting modifications if you "
-"push or pop all the changes.  Or to put it another way, once you have a "
-"branch, jump right in!"
-msgstr ""
-"Algo importante a tener en cuenta: todas las ramas fuentes reflejan el árbol "
-"después de una orden «quilt push -a». En otras palabras, cuando bifurque una "
-"rama fuente desde Launchpad, obtiene el árbol con todos los parches "
-"aplicados, lista para que salte a trabajar. No necesita realizar «quilt push "
-"-a» manualmente y, de hecho, obtendrá un árbol con muchas modificaciones que "
-"distraen si inserta o extrae todos los cambios. O, por decirlo de otra "
-"forma, una vez que tenga la rama, ¡salte sobre ella!"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:45
-msgid "Merging from Debian with quilt patches"
-msgstr "Fusionar desde Debian con parches quilt"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:47
-msgid ""
-"With newer versions of Bazaar as mentioned above, merging new Debian "
-"versions to Ubuntu versions should be quite easy now, even when one or both "
-"packages have quilt patches.  Just use ``bzr merge`` as you normally would.  "
-"Under the hood, Bazaar will first un-apply all the patches, then do the "
-"merge, then if there are no conflicts, it will re-apply the patches leaving "
-"you again with a source branch in the ``quilt push -a`` state."
-msgstr ""
-"Con versiones más recientes de Bazaar como se ha mencionado anteriormente, "
-"integrar nuevas versiones de Debian en Ubuntu debería ser relativamente "
-"fácil ahora, incluso cuando uno o ambos paquetes tengan parches quilt. "
-"Simplemente use «bzr merge» como haría normalmente. Por debajo, Bazaar "
-"primero des-aplicará todos los parches y luego hará la fusión y finalmente, "
-"si no hay conflictos, volverá a aplicar los parches dejándole con una rama "
-"fuente en el estado «quilt push -a»."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:54
-msgid ""
-"For example, if we want to merge the Debian version of the ``aptitude`` "
-"package with the Ubuntu version, we would do something like this::"
-msgstr ""
-"Por ejemplo, si queremos integrar la versión Debian del paquete «aptitude» "
-"en la versión de Ubuntu, haríamos algo como esto::"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:64
-msgid ""
-"If there are merge conflicts, the quilt patches will remain un-applied so "
-"that you can resolve the conflicts more easily.  You would use a combination "
-"of bzr and quilt commands to resolve the conflicts, until all the quilt "
-"patches are applied again.  Then you're ready to commit, push, and build as "
-"you normally would."
-msgstr ""
-"Si hubiera conflictos en la integración, los parches quilt permanecerán sin "
-"aplicar de forma que pueda resolver los conflictos más fácilmente. Usaría "
-"una combinación de órdenes de bzr y quilt para resolver los conflictos, "
-"hasta que todos los parches de quilt se hayan aplicado de nuevo. Entonces "
-"estará listo para confirmar, empujar los cambios y compilar como haría "
-"normalmente."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:72
-msgid "Develop your patch"
-msgstr "Desarrollar su parche"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:74
-msgid ""
-"There is a strong preference to fixing packages using a patch system like "
-"quilt, rather than modifying the source code directly.  This is because with "
-"a patch system, it's easier to communicate those changes to Debian or "
-"upstream (where UDD isn't used), and to remove patches when upstream fixes "
-"the bug the patch addresses (possibly in a completely different way)."
-msgstr ""
-"Existe una fuerte preferencia a arreglar los paquetes usando un sistema de "
-"parches como quilt, en lugar de modificar el código fuente directamente. "
-"Esto se debe a que con un sistema de parches, es más fácil transmitir esos "
-"cambios a Debian o aguas arriba (donde no se usa UDD) y eliminar los parches "
-"cuando los errores que solucionan son corregidos aguas arriba (posiblemente "
-"de una forma totalmente distinta)."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:80
-msgid ""
-"Let's say there's a bug in the ``dbus`` package that you want to fix.  You "
-"start the way you normally would with any package in UDD::"
-msgstr ""
-"Digamos que hay un error en el paquete «dbus» que desea arreglar. Comienza "
-"como haría normalmente con cualquier paquete en UDD::"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:89
-msgid ""
-"Maybe the bug is pretty simple; there's a typo in the ``README`` file.  Just "
-"fix the typo in your favorite editor, then do a ``bzr stat`` to prove that "
-"the file has been edited::"
-msgstr ""
-"Es posible que el error sea muy sencillo; hay una errata en el archivo "
-"«README». Simplemente corrija la errata en su editor favorito y luego haga "
-"«bzr stat» para probar que el fichero se ha editado::"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:97
-msgid ""
-"Now, in order to get this fix into a quilt patch, we need to generate a "
-"diff, but we need the resulting patch to have a format that is consumable by "
-"quilt. The way to do that is to use the ``--prefix`` (or ``-p``) option to "
-"``bzr diff``::"
-msgstr ""
-"Ahora, para obtener esta corrección en un paquete quilt, necesitamos generar "
-"un archivo de diferencias (diff), pero necesitamos que el parche resultante "
-"tenga un formato aplicable por quilt. La forma de hacerlo es usar la opción "
-"«--prefix» (o «-p») con «bzr diff»::"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:104
-msgid ""
-"What this actually does is to produce a *level 1* diff, which is required by "
-"the quilt command we're going to use below.  Normally, ``bzr diff`` produces "
-"*level 0* diffs which are more easily read by humans, but this won't work "
-"with quilt (despite the implication in the quilt documentation)."
-msgstr ""
-"Lo que esto hace realmente es producir un diff de *nivel 1*, lo que es "
-"necesario para la orden quilt que vamos a usar más adelante. Normalmente, "
-"«bzr diff» produce diffs de *nivel 0* que son mucho más legibles para "
-"humanos, pero que no funcionarán con quilt (a pesar de lo que diga en la "
-"documentación de quilt)."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:109
-msgid ""
-"The above command generates the patch and stores it in a file one level up "
-"from the working tree.  Note that here we're using the ``a`` and ``b`` "
-"directory prefixes for the diff, but the actual names don't really matter."
-msgstr ""
-"El comando anterior genera el parche y lo almacen en un archivo un nivel por "
-"arriba en el árbol de trabajo. Tenga en cuenta que estamos usando los "
-"prefijos de directorios «a» y «b», pero que los nombres reales no importan."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:113
-msgid ""
-"Now all you need to do is to import the patch into your quilt patches.  If "
-"you named the file above with the same name you want into your quilt stack, "
-"then just do this::"
-msgstr ""
-"Ahora todo lo que tiene que hacer es importar el parche en sus parches "
-"quilt. Si le dio el mismo nombre al fichero anterior que el que quiere usar "
-"en la pila de quilt, simplemente haga::"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:120
-msgid ""
-"You need the last line to inform Bazaar about the new quilt patch file.  You "
-"can see that the quilt patch's name is the same as the file name you "
-"generated above.  Of course, you can change this by using the ``-P`` option "
-"to ``quilt import``."
-msgstr ""
-"Necesita la última línea para informarle a Bazaar sobre el nuevo archivo de "
-"parche de quilt. Puede comprobar que el nombre del parche de quilt es el "
-"mismo que el del fichero que generó antes. Por supuesto, puede cambiaro "
-"usando la opción «-P» con «quilt import»."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:125
-msgid ""
-"One important thing to notice is that if you do the commands ``bzr stat`` "
-"and a ``quilt applied`` , you'll see that the ``README`` file is still "
-"modified, but the ``bug-12345.patch`` is not yet applied.  If you try to "
-"apply the newly imported quilt patch (with ``quilt push``), it will fail "
-"because you're applying a patch on top of the already patched file."
-msgstr ""
-"Una cosa importante a tener en cuenta es que si usa las órdenes «bzr stat» y "
-"«quilt applied» verá que el archivo «README» aún sigue modificado, pero que "
-"el parche «bug--12345.patch» no se ha aplicado todavía. Si intenta aplicar "
-"el parche quilt recién importado (con «quilt push») fallará porque está "
-"aplicando un parche por encima del archivo ya parcheado."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:131
-msgid ""
-"One way around this is to revert the change to ``README`` before doing the "
-"``quilt push``.  However, if you think you may want to continue to develop "
-"the patch, and thus do not want to throw away your in-tree changes, use "
-"``bzr shelve`` to save the change in the working tree to the side, then do "
-"``quilt push``.  Either way, once you've pushed your top quilt patch, you "
-"can just edit the tree in place, and do ``quilt refresh`` commands to update "
-"the top quilt patch."
-msgstr ""
-"Una forma de evitar esto es deshacer el cambio en «README» antes de hacer el "
-"«quilt push». Sin embargo, si piensa que puede querer continuar con el "
-"desarrollo del parche y, por lo tanto no quiere que desaparezca de su árbol "
-"de cambios, use «bzr shelve» para guardar el cambio en el árbol de trabajo, "
-"a un lado, y luego haga «quilt push». De cualquier forma, una vez que haya "
-"empujado su parche quilt superior, puede editar el árbol directamente y usar "
-"órdenes «quilt refresh» para actualizar el parche quilt superior."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:141
-msgid "Gotchas"
-msgstr "Problemas comunes"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:143
-msgid ""
-"One thing to keep in mind is that quilt uses a hidden ``.pc`` directory to "
-"record its status.  This directory is under version control in all source "
-"branches.  *Watch out* for changes to the ``.pc`` directory that are "
-"unrelated (or more accurately, uninteresting) to your patch.  This can "
-"happen because the UDD source branch importer `currently includes any "
-"existing .pc directory`_ in the imported branch.  This can cause conflicts, "
-"or other unwanted or unknown changes because you've essentially got two "
-"conflicting version control systems competing for the same thing (i.e. bzr "
-"and quilt). For now, the best recommendation is to revert any changes to the "
-"``.pc`` directory in your branch."
-msgstr ""
-"Algo a tener en cuenta es que quilt usa un directorio «.pc» para guardar su "
-"estado. Este directorio está bajo el control de versiones en todas las ramas "
-"fuentes. *Vigile* los cambios en el directorio «.pc» que no tengan relación "
-"(o más exactamente, no le interesen) con su parche. Esto puede ocurrir "
-"porque el importador de la rama fuente UDD actualmente incluye un directorio "
-".pc existente `currently includes any existing .pc directory`_ en la rama "
-"importada. Esto puede provocar conflictos o cambios no deseados o "
-"desconocidos esencialmente porque han existido dos sistemas de control de "
-"versión compitiendo por la misma cosa (esto es, bzr y quilt). Por ahora, la "
-"mejor recomendación es que deshaga cualquier cambio del directorio «.pc» de "
-"su rama."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:156
-msgid "edit-patch"
-msgstr "edit-patch"
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:158
-msgid ""
-"``edit-patch`` is a nice little wrapper script that comes as part of the "
-"``ubuntu-dev-tools`` package.  It pretty much hides the nasty details of "
-"dealing with the patch system specifically.  For example, while the above "
-"works well if your package is using quilt already, you'll have to adjust the "
-"workflow, perhaps significantly, to work with `a different patch system`_.  "
-"In theory ``edit-patch`` should solve this, but there are currently two "
-"blockers."
-msgstr ""
-"«edit-patch» es un pequeño script de envoltorio que forma parte del paquete "
-"«ubuntu-dev-tools». Oculta muchos de los detalles desagradables de trabajar "
-"con el sistema de parches. Por ejemplo, mientras que lo anterior funciona "
-"bien si su paquete ya está usando quilt, deberá adaptar el flujo de trabajo, "
-"quizá significativamente, para trabajar con un sistema de parches diferente "
-"`a different patch system`_. En teoría «edit-patch» debería solucionarlo, "
-"pero actualmente existen dos impedimentos."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:165
-msgid ""
-"By default, ``bzr diff`` produces a ``-p0`` patch, but ``edit-patch`` defers "
-"to the underlying patch system's default.  For quilt, this is ``-p1``.  "
-"``quilt import`` takes a ``-p`` argument to specify the prefix level, but "
-"this isn't yet exposed in ``edit-patch``.  If you use the ``--prefix`` "
-"argument to the ``bzr diff`` command as shown above, you should be okay."
-msgstr ""
-"Por defecto, «bzr diff» produce un parche «--p0», pero «edit-patch» delega "
-"al valor por defecto del sistema de parches subyacente. Para quilt, esto es "
-"«-p1». «quilt import» toma el parámetro «-p» para indicar el nivel de "
-"prefijo, pero esto no está todavía accesible en «edit-patch». Si usa el "
-"parámetro «--prefix» con la orden «bzr diff» como se ha mostrado "
-"anteriormente, debería ir bien."
-
-#: ../ubuntu-packaging-guide/udd-patchsys.rst:171
-msgid ""
-"By default, ``edit-patch`` requires a path to an existing patch file, but "
-"it's more convenient to pipe the output of ``bzr diff`` to the stdin of "
-"``edit-patch``, as shown above.  The alternative would be to save the diff "
-"in a temporary file, and then point ``edit-patch`` to this temporary file."
-msgstr ""
-"Por defecto «edit-patch» requiere una ruta a un archivo de parche existente, "
-"pero suele ser más conveniente canalizar la salida de «bzr diff» a la "
-"entrada estándar (stdin) de «edit-patch», como se ha mostrado. La "
-"alternativa sería guardar el archivo las diferencias diff en un archivo "
-"temporal y luego apuntar «edit-patch» a este archivo temporal."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:3
 msgid "Seeking Review and Sponsorship"
