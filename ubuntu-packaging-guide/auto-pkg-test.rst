@@ -174,5 +174,5 @@ The process of submitting an autopkgtest for a package is largely similar to
 .. _`gtk+3.0 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/gtk+3.0/quantal/files/head:/debian/tests/
 .. _`ubiquity tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/ubiquity/quantal/files/head:/debian/tests/
 .. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Quantal/view/AutoPkg%20Test/
-.. _`lp:auto-package-testing`: https://code.launchpad.net/auto-packaging-testing
+.. _`lp:auto-package-testing`: https://code.launchpad.net/auto-package-testing
 .. _`auto-package-testing documentation`: http://bazaar.launchpad.net/~auto-package-testing-dev/auto-package-testing/trunk/view/head:/doc/USAGE.md
