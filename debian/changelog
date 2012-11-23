@@ -27,6 +27,7 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
   * Makefile: add a special case for building Japanese PDF files
     (LP: #1043232).
   * Build-depend on texlive-lang-cjk and latex-cjk-japanese.
+  * Install and use local logo-ubuntu.png.
   * Miscellaneous fixes.
 
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 12 Oct 2012 16:52:11 +0200
