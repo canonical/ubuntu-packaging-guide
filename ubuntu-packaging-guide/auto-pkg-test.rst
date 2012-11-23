@@ -101,18 +101,22 @@ uses a pristine virtual machine to run the tests. You can set it up like so::
 
 And provision a Quantal AMD64 system::
 
-    ./bin/prepare-testbed -r quantal -d amd64
+    ./bin/prepare-testbed -r quantal amd64
 
 This command will create a pristine Quantal AMD64 VM from a cloud image. To 
 run the tests, simply run::
 
-        ./bin/run-adt-test -r quantal -d -a amd64 \
+        ./bin/run-adt-test -r quantal -a amd64 \
                 -b lp:~super-friends/friends/packaging friends
 
 This would use the ``lp:~super-friends/friends/packaging`` branch as a basis 
-to run the tests on the ``friends`` package. If use the ``-l`` flag you will 
-be logged into the virtual machine after the tests were run. This makes it 
-very easy to debug issues.
+to run the tests on the Ubuntu ``friends`` package. If you only specify a 
+branch with ``-b`` but do not specify a package name, this will instead build 
+the branch and install the binaries from that build; this is useful if you 
+want to run tests on a newer version than the one packaged in Ubuntu, or the 
+package is not in Ubuntu at all. If use the ``-k`` flag you will be logged 
+into the virtual machine after the tests were run. This makes it very easy 
+to debug issues.
 
 The `auto-package-testing documentation`_ has a lot more valuable information
 on other testing options.
