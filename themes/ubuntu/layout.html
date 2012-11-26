@@ -139,8 +139,10 @@
           </li>
         </ul>
       </nav>
-      <a class="logo-ubuntu" href="/"><img src="{{ pathto('_static/images/logo-ubuntu.png', 1) }}" width="119" height="27" alt="Ubuntu logo" /></a>
-      <h2><a href="/">Developer</a></h2>
+      <a class="logo-ubuntu" href="http://developer.ubuntu.com/">
+        <img src="{{ pathto('_static/images/logo-ubuntu.png', 1) }}" width="119" height="27" alt="Ubuntu logo" />
+      </a>
+      <a href="http://developer.ubuntu.com/"><h2>Developer</h2></a>
     </div>
   </div>
 
@@ -196,7 +198,7 @@
     <a href="https://bugs.launchpad.net/ubuntu-packaging-guide">Report bugs</a> or 
     <a href="https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk">grab the source code</a> from Launchpad.
     {%- if show_sphinx %}
-      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
     {%- endif %}
 
   </div>
