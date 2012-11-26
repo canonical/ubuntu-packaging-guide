@@ -2,6 +2,7 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
 
   [ Daniel Holbach ]
   * Added some additional information to the autopkgtest article.
+  * Updated autopkgtest article to current tools. (LP: #1080805)
 
   [ Andrew Starr-Bochicchio ]
   * debian/scripts/add-languages:
