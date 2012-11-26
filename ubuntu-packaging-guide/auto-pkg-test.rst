@@ -85,10 +85,42 @@ Executing the test
 
 The test script can be easily executed on its own, but if you want to make 
 sure that the testbed is properly set up, you might want to use ``adt-run`` 
-from the ``autopkgtest`` package to execute the test. Simply run this 
-command in the source tree::
+from the ``autopkgtest`` package to execute the test. The easiest way to do
+this is to run this command in the source tree::
 
         sudo adt-run --no-built-binaries --built-tree=. --- adt-virt-null
+
+The downside of this approach is that you test it locally, but can't ensure
+that this will work in a minimal environment. For example will it be hard to
+ensure that all the required packages are installed for the tests. With 
+`lp:auto-package-testing`_ we have a more comprehensive testing tool. It 
+uses a pristine virtual machine to run the tests. You can set it up like so:: 
+
+        bzr branch lp:auto-package-testing
+        cd auto-package-testing
+
+And provision a Quantal AMD64 system::
+
+    ./bin/prepare-testbed -r quantal amd64
+
+This command will create a pristine Quantal AMD64 VM from a cloud image. To 
+run the tests, simply run::
+
+        ./bin/run-adt-test -r quantal -a amd64 \
+                -b lp:~super-friends/friends/packaging friends
+
+This would use the ``lp:~super-friends/friends/packaging`` branch as a basis 
+to run the tests on the Ubuntu ``friends`` package. If you only specify a 
+branch with ``-b`` but do not specify a package name, this will instead build 
+the branch and install the binaries from that build; this is useful if you 
+want to run tests on a newer version than the one packaged in Ubuntu, or the 
+package is not in Ubuntu at all. If use the ``-k`` flag you can log into the 
+virtual machine after the tests were run. This makes it very easy to debug 
+issues.
+
+The `auto-package-testing documentation`_ has a lot more valuable information
+on other testing options.
+
 
 
 Further examples
@@ -142,3 +174,5 @@ The process of submitting an autopkgtest for a package is largely similar to
 .. _`gtk+3.0 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/gtk+3.0/quantal/files/head:/debian/tests/
 .. _`ubiquity tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/ubiquity/quantal/files/head:/debian/tests/
 .. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Quantal/view/AutoPkg%20Test/
+.. _`lp:auto-package-testing`: https://code.launchpad.net/auto-package-testing
+.. _`auto-package-testing documentation`: http://bazaar.launchpad.net/~auto-package-testing-dev/auto-package-testing/trunk/view/head:/doc/USAGE.md
