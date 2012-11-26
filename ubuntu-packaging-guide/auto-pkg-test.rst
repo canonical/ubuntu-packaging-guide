@@ -114,9 +114,9 @@ to run the tests on the Ubuntu ``friends`` package. If you only specify a
 branch with ``-b`` but do not specify a package name, this will instead build 
 the branch and install the binaries from that build; this is useful if you 
 want to run tests on a newer version than the one packaged in Ubuntu, or the 
-package is not in Ubuntu at all. If use the ``-k`` flag you will be logged 
-into the virtual machine after the tests were run. This makes it very easy 
-to debug issues.
+package is not in Ubuntu at all. If use the ``-k`` flag you can log into the 
+virtual machine after the tests were run. This makes it very easy to debug 
+issues.
 
 The `auto-package-testing documentation`_ has a lot more valuable information
 on other testing options.
