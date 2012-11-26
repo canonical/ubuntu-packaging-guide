@@ -7,7 +7,7 @@ MOTU teams.  You can contact the Kubuntu team on the `Kubuntu mailing
 list`_ and ``#kubuntu-devel`` Freenode IRC channel.  More information
 about Kubuntu development is on the `Kubuntu wiki page`_.
 
-Our packaging follows the practices of the ``Debian Qt/KDE Team`` and
+Our packaging follows the practices of the `Debian Qt/KDE Team`_ and
 Debian KDE Extras Team.  Most of our packages are derived from the
 packaging of these Debian teams.
 
