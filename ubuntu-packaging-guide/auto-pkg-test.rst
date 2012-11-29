@@ -94,7 +94,12 @@ The downside of this approach is that you test it locally, but can't ensure
 that this will work in a minimal environment. For example will it be hard to
 ensure that all the required packages are installed for the tests. With 
 `lp:auto-package-testing`_ we have a more comprehensive testing tool. It 
-uses a pristine virtual machine to run the tests. You can set it up like so:: 
+uses a pristine virtual machine to run the tests. To set it up, firstly
+install the needed dependencies::
+
+        sudo apt-get install qemu-utils kvm eatmydata
+
+Then, get the source code from Launchpad::
 
         bzr branch lp:auto-package-testing
         cd auto-package-testing
