@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-11-26 12:39+0000\n"
+"POT-Creation-Date: 2012-11-29 20:33+0000\n"
 "PO-Revision-Date: 2012-09-24 18:12+0000\n"
 "Last-Translator: Shushi Kurose <md81bird@hitaki.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-27 05:48+0000\n"
-"X-Generator: Launchpad (build 16309)\n"
+"X-Launchpad-Export-Date: 2012-11-30 05:23+0000\n"
+"X-Generator: Launchpad (build 16319)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -112,20 +112,25 @@ msgid ""
 "that this will work in a minimal environment. For example will it be hard to "
 "ensure that all the required packages are installed for the tests. With "
 "`lp:auto-package-testing`_ we have a more comprehensive testing tool. It "
-"uses a pristine virtual machine to run the tests. You can set it up like so::"
+"uses a pristine virtual machine to run the tests. To set it up, firstly "
+"install the needed dependencies::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
+msgid "Then, get the source code from Launchpad::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Quantal AMD64 system::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:106
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Quantal AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:112
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
 "This would use the ``lp:~super-friends/friends/packaging`` branch as a basis "
 "to run the tests on the Ubuntu ``friends`` package. If you only specify a "
@@ -137,51 +142,51 @@ msgid ""
 "debug issues."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:121
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:126
 msgid ""
 "The `auto-package-testing documentation`_ has a lot more valuable "
 "information on other testing options."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:127
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:132
 msgid "Further examples"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:129
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:134
 msgid ""
 "This list is not comprehensive, but might help you get a better idea of how "
 "automated tests are implemented and used in Ubuntu."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:132
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:137
 msgid ""
 "The `libxml2 tests`_ are very similar. They also run a test-build of a "
 "simple piece of C code and execute it."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:134
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:139
 msgid ""
 "The `gtk+3.0 tests`_ also do a compile/link/run check in the \"build\" test. "
 "There is an additional \"python3-gi\" test which verifies that the GTK "
 "library can also be used through introspection."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:137
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:142
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:138
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid ""
 "The `gvfs tests`_ have comprehensive testing of their functionality and are "
 "very interesting because they emulate usage of CDs, Samba, DAV and other "
 "bits."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:148
 msgid "Ubuntu infrastructure"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:145
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:150
 msgid ""
 "Packages which have ``autopkgtest`` enabled will have their tests run "
 "whenever they get uploaded or any of their reverse-dependencies change. The "
@@ -189,51 +194,51 @@ msgid ""
 "and is regularly updated."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:150
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:155
 msgid ""
 "While Debian does not have an automatic testing infrastructure set up yet, "
 "they should still be submitted to Debian, as DEP-8 is a Debian specification "
 "and Debian developers or users can still manually run the tests."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:154
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:159
 msgid ""
 "Packages in Debian with a testsuite header will also be automatically added "
 "when they are synced to Ubuntu."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:158
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:163
 msgid "Getting the test into Ubuntu"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:160
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:165
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:163
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:168
 msgid "run ``bzr branch ubuntu:<packagename>``,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "edit ``debian/control`` to enable the tests,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:165
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
 msgid "add the ``debian/tests`` directory,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:167
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
 msgid "add your test case(s) to ``debian/tests``,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:168
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
@@ -2335,7 +2340,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:10
 msgid ""
-"Our packaging follows the practices of the ``Debian Qt/KDE Team`` and Debian "
+"Our packaging follows the practices of the `Debian Qt/KDE Team`_ and Debian "
 "KDE Extras Team.  Most of our packages are derived from the packaging of "
 "these Debian teams."
 msgstr ""
