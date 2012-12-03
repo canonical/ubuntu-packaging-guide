@@ -27,7 +27,6 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
   * Makefile: fix sed breaking "Grab the source" URL.
   * Makefile: add a special case for building Japanese PDF files
     (LP: #1043232).
-  * Build-depend on texlive-lang-cjk and latex-cjk-japanese.
   * Install and use local logo-ubuntu.png.
   * Miscellaneous fixes.
 
