@@ -27,6 +27,7 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
   * Makefile: fix sed breaking "Grab the source" URL.
   * Makefile: add a special case for building Japanese PDF files
     (LP: #1043232).
+  * Makefile: remove all hashsum lines from .pot file.
   * Install and use local logo-ubuntu.png.
   * Miscellaneous fixes.
 
