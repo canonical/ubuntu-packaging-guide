@@ -9,6 +9,7 @@ Build-Depends: debhelper (>= 7.0.50~),
                doc-base,
                python-sphinx (>= 1.1~),
                texlive-fonts-recommended,
+               texlive-latex-recommended,
                texlive-latex-extra
 #              texlive-lang-cjk,
 #              latex-cjk-japanese
