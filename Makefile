@@ -224,7 +224,7 @@ info-%: locale
 
 gettext:
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(PODIR)/
-	sed -i '/[0-9a-f]\{32\}/d' $(PODIR)/ubuntu-packaging-guide.pot
+	sed -i '/^# [0-9a-f]\{32\}/d' $(PODIR)/ubuntu-packaging-guide.pot
 	@echo
 	@echo "Build finished. The message catalogs are in $(PODIR)/."
 
