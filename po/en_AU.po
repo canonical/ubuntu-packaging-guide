@@ -1,16 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2010-2012, Ubuntu Developers
+# English (Australia) translation for ubuntu-packaging-guide
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the ubuntu-packaging-guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ubuntu-packaging-guide 0.1\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: ubuntu-packaging-guide\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-03 17:02+0000\n"
-"PO-Revision-Date: 2012-12-07 12:37+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2012-12-07 09:05+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: English (Australia) <en_AU@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
-msgstr "autopkgtest: Automatische Tests für Pakete"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
@@ -27,30 +27,24 @@ msgid ""
 "integrated into packages. To integrate a test into a package, all you need "
 "to do is:"
 msgstr ""
-"Die `DEP 8-Spezifikation`_ legt fest, wie automatische Tests sehr einfach in "
-"Pakete eingebunden werden können. Um einen Test in ein Paket einzubinden, "
-"müssen Sie nur folgendes machen:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
 msgid "add the following to the Source section in ``debian/control``::"
 msgstr ""
-"fügen Sie folgendes zum Abschnitt \"Source\" in ``debian/control`` hinzu::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:13
 msgid ""
 "add a file called ``debian/tests/control`` which specifies the requirements "
 "for the testbed,"
 msgstr ""
-"erstellen Sie eine Datei namens ``debian/tests/control``, die die "
-"Anforderungen für die Testumgebung festlegt,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
 msgid "add the tests in ``debian/tests/``."
-msgstr "fügen Sie die Tests in ``debian/tests/`` ein."
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
 msgid "Testbed requirements"
-msgstr "Anforderungen für die Testumgebung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:21
 msgid ""
@@ -59,40 +53,28 @@ msgid ""
 "gets broken during the build or if ``root`` permissions are required. The "
 "`DEP 8 specification`_ lists all available options."
 msgstr ""
-"In ``debian/tests/control`` legen Sie fest, welche Anforderungen die "
-"Testumgebung erfüllen muss. Sie können zum Beispiel alle Pakete auflisten, "
-"die für die Tests benötigt werden, oder angeben, ob die Testumgebung beim "
-"Erstellen des Pakets beschädigt wird oder ob ``root``-Rechte benötigt "
-"werden. Die  `DEP 8 specification`_ listet alle verfügbaren Optionen auf."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
 msgstr ""
-"Im Folgenden schauen uns das Quellpaket  ``glib2.0`` an. Im einfachsten Fall "
-"sieht die Datei so aus::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
-"Das stellt für den Test ``debian/tests/build`` sicher, dass die Pakete "
-"``libglib2.0-dev`` und ``build-essential`` installiert sind."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
 msgid ""
 "You can use ``@`` in the ``Depends`` line to indicate that you want all the "
 "packages installed which are built by the source package in question."
 msgstr ""
-"Sie können in der ``Depends``-Zeile ``@`` benutzen, um festzulegen, dass Sie "
-"alle Pakete installiert haben wollen, die aus dem jeweiligen Quellpaket "
-"erzeugt werden."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr "Die eigentlichen Tests"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
@@ -323,10 +305,9 @@ msgid ""
 "request.  Also will it include a testing checklist in the bug."
 msgstr ""
 
-# d6c7ecbd606c4b9282b23708db85f9b5
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
-msgstr "Chroots benutzen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:5
 msgid ""
@@ -334,9 +315,6 @@ msgid ""
 "versions you can create the environment of the other version with a "
 "``chroot``."
 msgstr ""
-"Wenn Du eine Version von Ubuntu benutzt, aber an Paketen für andere "
-"Versionen arbeitest, kannst Du eine Umgebung dieser Version mit einer "
-"``Chroot`` erzeugen."
 
 #: ../ubuntu-packaging-guide/chroots.rst:9
 msgid ""
@@ -344,46 +322,36 @@ msgid ""
 "which you can work in quite normally.  It avoids the overhead of running a "
 "full virtual machine."
 msgstr ""
-"Eine ``Chroot`` erlaubt dir ein Dateisystem einer anderen Distribution zu "
-"haben in dem man nahezu normal arbeiten kann. Dadurch vermeidet man den "
-"Overhead des Laufens einer vollen virtuellen Maschine."
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
-msgstr "Eine Chroot-Umgebung anlegen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
 msgstr ""
-"Benutze das Kommando ``debootstrap`` um eine neue Chroot zu erzeugen::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
 "This will create a directory ``oneiric`` and install a minimal oneiric "
 "system into it."
 msgstr ""
-"Dies wird ein Verzeichnis ``oneiric`` anlegen und darin ein minimales "
-"oneiric-System installieren."
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
 "If your version of ``debootstrap`` does not know about oneiric you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
-"Wenn deine Version von ``debootstrap`` noch nichts über oneiric weiß, kannst "
-"du versuchen auf die Version in ``backports`` zu aktualisieren."
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
-msgstr "Du kannst dann in der Chroot arbeiten::"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:30
 msgid ""
 "Where you can install or remove any package you wish without affecting your "
 "main system."
 msgstr ""
-"Wo Du alle Pakete installieren oder löschen kannst ohne Dein Hauptsystem zu "
-"berühren."
 
 #: ../ubuntu-packaging-guide/chroots.rst:33
 msgid ""
@@ -396,35 +364,25 @@ msgid ""
 "To stop apt and other programs complaining about missing locales you can "
 "install your relevant language pack::"
 msgstr ""
-"Damit apt und andere Programme sich nicht mehr über fehlende Locales "
-"beschweren, kann man die relevanten Language Packs installieren::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:44
 msgid ""
 "If you want to run X programs you will need to bind the /tmp directory into "
 "the chroot, from outside the chroot run::"
 msgstr ""
-"Um X-Window Programme in der Chroot Umgebung nutzen zu können, muss das /tmp "
-"Verzeichnis in die Umgebung gebunden werden. Dies geht außerhalb des Chroot "
-"mit folgendem Kommando:"
 
 #: ../ubuntu-packaging-guide/chroots.rst:50
 msgid "Some programs may need you to bind /dev or /proc."
 msgstr ""
-"Für einige Programme kann es nötig sein die Verzeichnisse /dev und /proc in "
-"das Chroot zu binden."
 
 #: ../ubuntu-packaging-guide/chroots.rst:52
 msgid ""
 "For more information on chroots see our `Debootstrap Chroot wiki page`_."
 msgstr ""
-"Für weitere Informationen über Chroots siehe unsere `Debootstrap Chroot wiki "
-"page`_."
 
-# 26aacfbeebe4473f9e1244c3c974b6ff
 #: ../ubuntu-packaging-guide/chroots.rst:55
 msgid "Alternatives"
-msgstr "Alternativen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:57
 msgid ""
@@ -433,12 +391,6 @@ msgid ""
 "building packages but takes some more setup compared to PBuilder.  See `the "
 "Security Team Build Environment wiki page`_ for a full explanation."
 msgstr ""
-"SBuild ist ähnlich wie PBuilder ein System zurErstellung von Umgebungen, in "
-"denen die Paketerzeugung getestet werden kann. Es ist näher an der von "
-"Lauchpad verwendeten Umgebung zur Paketerzeugung, erfordert aber im "
-"Vergleich zu PBuilder etwas mehr Konfigurationsaufwand. Für eine "
-"detaillierte Erklärung siehe `the Security Team Build Environment wiki "
-"page`_."
 
 #: ../ubuntu-packaging-guide/chroots.rst:59
 msgid ""
@@ -446,11 +398,6 @@ msgid ""
 "TestDrive is a program to automate syncing and running daily ISO images, see "
 "`the TestDrive wiki page`_ for more information."
 msgstr ""
-"Für das Paketieren und Testen von Programmen können vollständige virtuelle "
-"Maschinen nützlich sein. TestDrive ist ein Programm, mit dem die "
-"Synchronisation und das Ausführen von täglich erzeugten ISO Abbildern "
-"automatisiert werden kann, für weitere Informationen siehe `the TestDrive "
-"wiki page`_."
 
 #: ../ubuntu-packaging-guide/chroots.rst:63
 msgid ""
@@ -466,15 +413,10 @@ msgid ""
 "package on those.  This is useful when you want to compile many packages at "
 "the same time or to overcome bandwidth restraints."
 msgstr ""
-"Mit Amazon's `EC2 cloud computers`_ kann man einen Rechner für einige cent "
-"pro Stunde mieten. Hier kannst Du Ubuntu Maschinen mit jeglicher "
-"unterstützen Version installieren und darauf Pakete erstellen. Gemietete "
-"Rechenleistung kann besonders nützlich sein um Bandbreitenprobleme zu "
-"umgehen wenn Du viele Pakete parallel übersetzen möchtest."
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
-msgstr "Kommunikation in der Ubuntu-Entwicklung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:5
 msgid ""
@@ -482,77 +424,60 @@ msgid ""
 "are made and hundreds of people interact every day, it is important to "
 "communicate effectively."
 msgstr ""
-"In einem Projekt, bei dem tausende Zeilen Quelltext geändert werden, viele "
-"Entscheidungen getroffen werden und hunderte Leute täglich zusammenspielen, "
-"ist es wichtig effizient zu kommunizieren."
 
-# 8dff4e5170734f698bbb51c6807b7dcf
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
-msgstr "Mailinglisten"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:12
 msgid ""
 "Mailing lists are a very important tool if you want to communicate ideas to "
 "a broader team and make sure that you reach everybody, even across timezones."
 msgstr ""
-"Mailinglisten sind ein sehr bedeutendes Werkzeug um Ideen an ein größeres "
-"Team zu kommunizieren und sicherzustellen, dass man jeden erreicht, auch "
-"über Zeitzonen hinweg."
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
-msgstr "Bezüglich der Entwicklung, sind dies die Wichtigsten:"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:18
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (announce-"
 "only, the most important development announcements go here)"
 msgstr ""
-"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce "
-"(ausschließlich Ankündigungen, hier findet man nur die wichtigsten "
-"Ankündigungen bezüglich der Entwicklung)"
 
 #: ../ubuntu-packaging-guide/communication.rst:20
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (general Ubuntu "
 "development discussion)"
 msgstr ""
-"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (allgemeine "
-"Diskussionen zur Ubuntu Entwicklung)"
 
 #: ../ubuntu-packaging-guide/communication.rst:22
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (MOTU Team discussion, "
 "get help with packaging)"
 msgstr ""
-"https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (MOTU Team Diskussion, "
-"eine gute Anlaufstelle für Hilfe bei der Paketierung)"
 
-# bcf8bf4cfd7d44e79964fc504e3dcbcf
 #: ../ubuntu-packaging-guide/communication.rst:27
 msgid "IRC Channels"
-msgstr "IRC-Kanäle"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:29
 msgid ""
 "For real-time discussions, please connect to irc.freenode.net and join one "
 "or any of these channels:"
 msgstr ""
-"Für Echtzeit-Diskussionen schaue auf dem IRC Server irc.freenode.net in "
-"einem oder mehreren der folgenden Kanäle vorbei:"
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
-msgstr "#ubuntu-devel (für allgemeine Diskussion zur Entwicklung)"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:33
 msgid "#ubuntu-motu (for MOTU team discussion and generally getting help)"
-msgstr "#ubuntu-motu (für MOTU Team Diskussionen und genereller Hilfe)"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:2
 msgid "Basic Overview of the ``debian/`` Directory"
-msgstr "Allgemeine Übersicht über das ``debian/`` Verzeichnis"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:4
 msgid ""
@@ -564,18 +489,10 @@ msgid ""
 "configure the behavior of the package. Some of these files are discussed in "
 "this article, but this is not meant to be a complete list."
 msgstr ""
-"Dieser Artikel gibt eine kurze Übersicht über die verschiedenen Dateien im "
-"``debian/`` Verzeichnis, welche für das Paketieren von Ubuntu Paketen "
-"wichtig sind. Die wichtigsten Dateien sind ``changelog``, ``control``, "
-"``copyright`` und ``rules``. Diese Dateien werden für alle Pakete benötigt. "
-"Anhand weiterer Dateien im ``debian/`` Verzeichnis kann das Verhalten der "
-"Pakete angepasst und konfiguriert werden. Während einige dieser Dateien in "
-"diesem Artikel beschrieben werden, ist er nicht als vollständige Übersicht "
-"gedacht."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:13
 msgid "The changelog"
-msgstr "Das Änderungsprotokoll"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:15
 msgid ""
@@ -600,22 +517,16 @@ msgid ""
 "Minor bullet points are indicated by a dash \"-\", while major points use an "
 "asterisk \"*\"."
 msgstr ""
-"Unterpunkte werden durch einen Strich \"-\" dargestellt, während Hauptpunkte "
-"durch einen Stern \"*\" gekennzeichnet werden."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:39
 msgid ""
 "If you are packaging from scratch, ``dch --create`` (``dch`` is in the "
 "``devscripts`` package) will create a standard ``debian/changelog`` for you."
 msgstr ""
-"Falls Du ein neues Paket ohne Vorlage erstellst, kannst Du mit ``dch --"
-"create`` (``dch`` befindet sich im ``devscripts`` Paket) standard Daten für "
-"``debian/changelog`` anlegen."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
 msgstr ""
-"Dies ist ein Beispiel für eine ``changelog`` Datei des hello Pakets::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:52
 msgid ""
@@ -644,7 +555,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
-msgstr "Die control Datei"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:72
 msgid ""
@@ -693,10 +604,9 @@ msgid ""
 "Debian Policy Manual."
 msgstr ""
 
-# 870ce0ac216c4fd8a10aa642d5a8ee12
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
 msgid "The copyright file"
-msgstr "Die Copyright-Datei"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:130
 msgid ""
@@ -799,10 +709,9 @@ msgid ""
 "the Debian Policy Manual."
 msgstr ""
 
-# 909152843c7c41ffa14664f13cb0e23f
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:251
 msgid "Additional Files"
-msgstr "Zusätzliche Dateien"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:254
 msgid "The install file"
@@ -909,10 +818,9 @@ msgid ""
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 msgstr ""
 
-# faa634aa8992448d86ad70c8669ceee1
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
 msgid "The source/format file"
-msgstr "Die Datei source/format"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:344
 msgid ""
@@ -981,7 +889,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:377
 msgid "Additional Resources"
-msgstr "Weiterführende Quellen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:379
 msgid ""
@@ -1001,7 +909,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:6
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:9
 msgid "Introduction"
-msgstr "Einleitung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:8
 msgid ""
@@ -1865,7 +1773,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:167
 msgid "About Launchpad"
-msgstr "Über Launchpad"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid ""
@@ -2045,7 +1953,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:9
 msgid "Ubuntu Packaging Guide"
-msgstr "Ubuntu Packaging Handbuch"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
@@ -2088,15 +1996,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:33
 msgid "Articles"
-msgstr "Artikel"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:50
 msgid "Knowledge Base"
-msgstr "Wissensdatenbank"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
-msgstr "Einführung in die Ubuntu-Entwicklung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:5
 msgid ""
@@ -2269,7 +2177,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:3
 msgid "KDE Packaging"
-msgstr "KDE Paketierung"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:5
 msgid ""
@@ -2307,7 +2215,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/kde.rst:27
 #: ../ubuntu-packaging-guide/python-packaging.rst:31
 msgid "debian/rules"
-msgstr "debian/rules"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:29
 msgid ""
@@ -2333,7 +2241,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:47
 msgid "Translations"
-msgstr "Übersetzungen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:49
 msgid ""
@@ -2441,7 +2349,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:34
 msgid "An Example"
-msgstr "Ein Beispiel"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:36
 msgid "We will use libnova as an example::"
@@ -2588,7 +2496,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
-msgstr "Weiterführende Literatur"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:152
 msgid ""
@@ -2801,7 +2709,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:150
 msgid "Next Steps"
-msgstr "Nächste Schritte"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:152
 msgid ""
@@ -3935,7 +3843,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:91
 msgid "Bazaar"
-msgstr "Bazaar"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:93
 msgid ""
@@ -4551,7 +4459,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:103
 msgid "Canceling an upload"
-msgstr "Einen Upload abbrechen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:105
 msgid ""
