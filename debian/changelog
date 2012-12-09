@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
+ubuntu-packaging-guide (0.3.0) experimental; urgency=low
 
   [ Daniel Holbach ]
   * Added some additional information to the autopkgtest article.
@@ -34,7 +34,7 @@ ubuntu-packaging-guide (0.2.5) UNRELEASED; urgency=low
   * Install and use local logo-ubuntu.png.
   * Miscellaneous fixes.
 
- -- Daniel Holbach <daniel.holbach@ubuntu.com>  Fri, 12 Oct 2012 16:52:11 +0200
+ -- Andrew Starr-Bochicchio <asb@debian.org>  Sun, 09 Dec 2012 12:55:11 -0500
 
 ubuntu-packaging-guide (0.2.4) unstable; urgency=low
 
