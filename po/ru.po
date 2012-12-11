@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-03 17:02+0000\n"
-"PO-Revision-Date: 2012-12-09 17:39+0000\n"
+"PO-Revision-Date: 2012-12-10 14:51+0000\n"
 "Last-Translator: Aleksey Kabanov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-10 04:47+0000\n"
-"X-Generator: Launchpad (build 16341)\n"
+"X-Launchpad-Export-Date: 2012-12-11 05:06+0000\n"
+"X-Generator: Launchpad (build 16356)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -227,7 +227,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:168
 msgid "run ``bzr branch ubuntu:<packagename>``,"
-msgstr ""
+msgstr "выполните ``bzr branch ubuntu:<имя_пакета>``,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "edit ``debian/control`` to enable the tests,"
@@ -266,7 +266,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/backports.rst:12
 msgid "Personal Package Archive (PPA)"
-msgstr "Personal Package Archive (PPA)"
+msgstr "Персональные архивы пакетов (PPA)"
 
 #: ../ubuntu-packaging-guide/backports.rst:14
 msgid ""
@@ -274,16 +274,22 @@ msgid ""
 "don't need approval of anyone, but the downside of it is that your users "
 "will have to manually enable it. It is a non-standard software source."
 msgstr ""
+"Использование PPA имеет ряд преимуществ. Это достаточно просто, вам не "
+"понадобится одобрение от кого бы то ни было, но недостаток в том, что "
+"пользователям придётся вручную подключать PPA. Это нестандартный источник "
+"приложений."
 
 #: ../ubuntu-packaging-guide/backports.rst:18
 msgid ""
 "The `PPA documentation on Launchpad`_ is fairly comprehensive and should get "
 "you up and running in no time."
 msgstr ""
+"`Документация по PPA на Launchpad`_ достаточно подробна и на её освоение вам "
+"не потребуется много времени."
 
 #: ../ubuntu-packaging-guide/backports.rst:25
 msgid "Official Ubuntu Backports"
-msgstr ""
+msgstr "Официальные бэкпорты Ubuntu"
 
 #: ../ubuntu-packaging-guide/backports.rst:27
 msgid ""
@@ -781,6 +787,10 @@ msgid ""
 "\"install\", \"binary-arch\", \"binary-indep\", and \"binary\". In order to "
 "see what commands are run in each target, run::"
 msgstr ""
+"``dh`` запускает последовательность команд debhelper. Поддерживаемые "
+"последовательности соответствуют целям файла ``debian/rules``: «build», "
+"«clean», «install», «binary-arch», «binary-indep» и «binary». Чтобы увидеть, "
+"какие команды выполняются в каждой цели, наберите::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:221
 msgid ""
@@ -850,8 +860,8 @@ msgid ""
 "The ``install`` file is used by ``dh_install`` to install files into the "
 "binary package. It has two standard use cases:"
 msgstr ""
-"Установочные файлы используются  ``dh_install`` для установки файлов в "
-"бинарный пакет. Они имеют два стандартных варианта использования:"
+"Файл ``install`` используется  ``dh_install`` для установки файлов в "
+"двоичный пакет. Он имеет два стандартных варианта использования:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:259
 msgid ""
@@ -873,6 +883,11 @@ msgid ""
 "the source package's root directory to ``usr/bin`` and a desktop file in the "
 "``debian`` directory to ``usr/share/applications``::"
 msgstr ""
+"В первом случае файл ``install`` должен содержать одну строку для каждого "
+"устанавливаемого файла, указывающую как файл, так и установочный каталог. "
+"Например, следующий файл ``install`` установит сценарий ``foo`` из корневого "
+"каталога пакета исходного кода в ``usr/bin`` и desktop-файл из каталога "
+"``debian`` в ``usr/share/applications``::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:273
 msgid ""
@@ -887,18 +902,32 @@ msgid ""
 "``foo.install`` containing only the architecture dependent files might look "
 "like::"
 msgstr ""
+"Если пакет исходного кода производит несколько двоичных пакетов, ``dh`` "
+"установит файлы в ``debian/tmp`` вместо установки непосредственно в "
+"``debian/<пакет>``. Файлы, установленные в ``debian/tmp`` затем можно "
+"переместить в отдельные двоичные пакеты с помощью нескольких файлов "
+"``$имя_пакета.install``. Это часто делается, чтобы разбить большое "
+"количество не зависящих от архитектуры данных из зависящих от архитектуры "
+"пакетов в пакеты ``Architecture: all``. В этом случае нужно указать только "
+"имена устанавливаемых файлов (или каталогов), без установочного каталога. "
+"Например, ``foo.install``, содерщащий только зависящие от архитектуры файлы, "
+"может выглядеть наподобие::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:286
 msgid ""
 "While ``foo-common.install`` containing only the architecture independent "
 "file might look like::"
 msgstr ""
+"В то время как ``foo-common.install``, содержащий только не зависящие от "
+"архитектуры файлы, может выглядеть так::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:294
 msgid ""
 "This would create two binary packages, ``foo`` and ``foo-common``. Both "
 "would require their own paragraph in ``debian/control``."
 msgstr ""
+"Будут созданы два двоичных пакета: ``foo`` и ``foo-common``. Для обоих "
+"требуется их собственный абзац в ``debian/control``."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:297
 msgid ""
@@ -906,6 +935,9 @@ msgid ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
+"Для дополнительных подробностей смотрите ``man dh_install`` и `раздел о "
+"файле install (Раздел 5.11) <http://www.debian.org/doc/manuals/maint-"
+"guide/dother.en.html#install>`_  в «Debian New Maintainers' Guide»."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:302
 msgid "The watch file"
@@ -931,6 +963,9 @@ msgid ""
 "version. If a new upstream version is found, it will be automatically "
 "downloaded. For example::"
 msgstr ""
+"Запуск ``uscan`` в корневом каталоге исходников сравнит номер апстрим-версии "
+"в ``debian/changelog`` с последней доступной в апстриме версией. Если в "
+"апстриме найдена новая версия, она будет автоматически загружена. Например::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:326
 msgid ""
@@ -938,6 +973,9 @@ msgid ""
 "more complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  "
 "In that case, use something like::"
 msgstr ""
+"Если ваши тарболы «живут» на Launchpad, файл ``debian/watch`` будет немного "
+"более сложным (о том, почему это так, смотрите `Question 21146`_ и `Bug "
+"231797`_).  В этом случае используйте что-то наподобие::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
 msgid ""
@@ -955,6 +993,9 @@ msgid ""
 "with upstream see `Ubuntu External Health Status "
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 msgstr ""
+"Список пакетов, для которых файл ``watch`` сообщает о том, что они не "
+"синхронизированы с апстримом, смотрите `Ubuntu External Health Status "
+"<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
 msgid "The source/format file"
@@ -971,14 +1012,15 @@ msgstr ""
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:347
 msgid "``3.0 (native)`` for Debian native packages (no upstream version)"
 msgstr ""
+"``3.0 (native)`` для «родных» пакетов Debian (апстрим-версия отсутствует)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:349
 msgid "``3.0 (quilt)`` for packages with a separate upstream tarball"
-msgstr ""
+msgstr "``3.0 (quilt)`` для пакетов с отдельным тарболом из апстрима"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:351
 msgid "``1.0`` for packages wishing to explicitly declare the default format"
-msgstr ""
+msgstr "``1.0`` для пакетов, желающих явно указать формат по умолчанию"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:353
 msgid ""
@@ -988,6 +1030,11 @@ msgid ""
 "about the missing file. This warning is informational only and may be safely "
 "ignored."
 msgstr ""
+"В настоящее время по умолчанию выбирается формат пакета исходного кода 1.0, "
+"если этот файл отсутствует. В файле source/format можно указать его явно. "
+"Если вы не используете этот файл для указания формата исходного кода, "
+"Lintian выдаст предупреждение об отстутствии файла. Это чисто информационное "
+"предупреждение и его можно без опасений проигнорировать."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:358
 msgid ""
@@ -1015,12 +1062,17 @@ msgid ""
 "Debian-specific changes are no longer stored in a single .diff.gz but in "
 "multiple patches compatible with quilt under ``debian/patches/``"
 msgstr ""
+"Специфичные для Debian изменения теперь хранятся не в одном файле .diff.gz, "
+"а в виде нескольких патчей, совместимых с quilt, в каталоге "
+"``debian/patches/``"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:369
 msgid ""
 "http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
 "concerning the switch to the 3.0 source package formats."
 msgstr ""
+"http://wiki.debian.org/Projects/DebSrc3.0 подытоживает дополнительную "
+"информацию, касающуюся перехода на формат пакетов исходого кода 3.0."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:372
 msgid ""
@@ -1226,11 +1278,14 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
+"Система отслеживания ошибок апстрима (и Debian) — открытые и закрытые ошибки,"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
 msgid ""
 "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
+"История версий в апстриме (или в новой версии) может содержать сведения об "
+"исправлении ошибки,"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:101
 msgid "bugs or package uploads of Debian or other distributions."
@@ -1241,6 +1296,8 @@ msgid ""
 "You now want to create a patch which includes the fix.  The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
+"Теперь можно создать патч, содержащий исправление ошибки.  Команда ``edit-"
+"patch`` — самый простой способ добавить патч к пакету. Выполните::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:111
 msgid ""
@@ -1274,6 +1331,9 @@ msgid ""
 "just omit the step to sign the source package) and ``pbuilder-dist`` will "
 "build the package from source for whatever ``release`` you choose."
 msgstr ""
+"Это создаст пакет исходного кода из содержимого ветки (``-us -uc`` просто "
+"позволяет пропустить этап подписывания пакета исходного кода), а ``pbuilder-"
+"dist`` соберёт пакет из исходного кода для любого выбранного вами ``релиза``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:132
 msgid ""
@@ -1354,6 +1414,12 @@ msgid ""
 "bugs, the bug will be automatically closed when the package is uploaded to "
 "Ubuntu."
 msgstr ""
+"В нашем (довольно редком) примере последнему пункту соответствует ``(LP: "
+"#123456)``, то есть сслыка на ошибку на Launchpad с номером 123456. Отчёты "
+"об ошибках, темы списков рассылки или спецификации обычно являются хорошими "
+"источниками информации для обоснования изменений. В качестве дополнительного "
+"приза, если вы используете нотацию ``LP: #<номер>`` для ошибок на Launchpad, "
+"то ошибка автоматически получит статус закрытой при отправке пакета в Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:181
 msgid "Committing the fix"
@@ -1368,6 +1434,8 @@ msgid ""
 "and the change will be committed (locally) with your changelog entry as a "
 "commit message."
 msgstr ""
+"и изменение будет залито (локально) с вашей записью changelog в качестве "
+"сообщения коммита."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:190
 msgid ""
@@ -1381,7 +1449,7 @@ msgstr "Это может быть, например::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:199
 msgid "So if you just run::"
-msgstr ""
+msgstr "Так что, если вы просто выполните::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:204
 msgid ""
@@ -1390,12 +1458,19 @@ msgid ""
 "browser. There find the \"(+) Propose for merging\" link, click it to get "
 "the change reviewed by somebody and included in Ubuntu."
 msgstr ""
+"всё должно быть готово. Команда push выполнит отправку на Launchpad, а "
+"вторая команда откроет страницу удалённой ветки на Launchpad в вашем "
+"браузере. Найдите там ссылку «(+) Propose for merging» и щёлкните на ней, "
+"чтобы кто-нибудь проверил изменение и включил его в Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:209
 msgid ""
 "Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into "
 "more detail about getting feedback for your proposed changes."
 msgstr ""
+"Наша статья о :doc:`поиске поручительства<./udd-sponsorship>` предоставляет "
+"дополнительные подробности о получении обратной связи для предложенных вами "
+"изменений."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:212
 msgid ""
@@ -1403,6 +1478,9 @@ msgid ""
 "might want to have a look at our :doc:`Security and stable release "
 "updates<./security-and-stable-release-updates>` article."
 msgstr ""
+"Если ваша ветка исправляет ошибку в стабильном выпуске или это исправление "
+"безопасности, прочтите нашу статью :doc:`Обновления безопасности и "
+"стабильных выпусков<./security-and-stable-release-updates>`."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:3
 msgid "Tutorial: Fixing a bug in Ubuntu"
@@ -1490,6 +1568,8 @@ msgid ""
 "For Ubuntu the URL ``https://bugs.launchpad.net/ubuntu/+source/<package>`` "
 "should always take to the bug page of the source package in question."
 msgstr ""
+"Для Ubuntu URL ``https://bugs.launchpad.net/ubuntu/+source/<пакет>`` всегда "
+"приводит на страницу ошибок в указанном пакете исходного кода."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:73
 msgid ""
@@ -1506,6 +1586,8 @@ msgid ""
 "For Debian the URL ``http://bugs.debian.org/src:<package>`` should always "
 "take to the bug page of the source package in question."
 msgstr ""
+"Для Debian URL ``http://bugs.debian.org/src:<пакет>`` всегда приводит на "
+"страницу ошибок в указанном пакете исходного кода."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:80
 msgid ""
@@ -1515,6 +1597,12 @@ msgid ""
 "unfortunately often different for every package you have a look at, but if "
 "you search the web for it, you should in most cases find it pretty easily."
 msgstr ""
+"Ошибка, над которой мы работаем, необычна в том смысле, что она касается "
+"только пакетирования ``bumprace``. Если бы это была ошибка в исходном коде, "
+"полезно было бы также проверить систему отслеживания ошибок апстрима. К "
+"сожалению, эта процедура часто различается для каждого отдельного пакета, но "
+"всегда можно воспользоваться поиском в интернете, и в большинстве случаев вы "
+"обнаружите, что она окажется не такой уж сложной."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:88
 msgid "Offering help"
@@ -2083,16 +2171,21 @@ msgid ""
 "make sure your builds succeed in a reproducible way, but without modifying "
 "your local system"
 msgstr ""
+"Сборка будет выполнена в минимальной и чистой среде. Это даст возможность "
+"убедиться, что сборку удастся успешно воспроизвести и на других компьютерах, "
+"но при этом поможет избежать изменений в вашей локальной системе"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:141
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
 msgstr ""
+"Отпадает необходимость в локальной установке всех *сборочных зависимостей*"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:142
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
 msgstr ""
+"Можно настроить несколько экземпляров для различных выпусков Ubuntu и Debian"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:144
 msgid "Setting ``pbuilder`` up is very easy, run::"
@@ -2105,6 +2198,9 @@ msgid ""
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
+"где <release> — это, например, `natty`, `maverick`, `lucid` или, в случае "
+"Debian, `sid`. Загрузка всех необходимых для «минимальной установки» пакетов "
+"займёт некоторое время. Впрочем, они будут кэшироваться."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:154
 msgid "Get set up to work with Launchpad"
@@ -2346,6 +2442,10 @@ msgid ""
 "your commit messages. With `launchpad-login` you set your Launchpad ID. This "
 "way code that you publish in Launchpad will be associated with you."
 msgstr ""
+"`whoami` сообщит Bazaar, какое имя и адрес электронной почты он должен "
+"использовать для ваших коммитов. С помощью `launchpad-login` вы указываете "
+"свой Launchpad ID. Это код, который идентифицирует вашу учётную запись на "
+"Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:273
 msgid ""
@@ -2437,6 +2537,13 @@ msgid ""
 ":doc:`UDD Introduction<./udd-intro>` page for an introduction to the "
 "differences."
 msgstr ""
+"Это руководство фокусируется на методе создания пакетов Ubuntu Distributed "
+"Development. Это новый способ работы с пакетами, который использует ветки "
+"системы управления распределёнными версиями.  В настоящее время он имеет "
+"некоторые ограничения, поэтому многие команды Ubuntu по-прежнему пользуются "
+":doc:`традиционными<./traditional-packaging>` методами создания пакетов.  "
+"Чтобы узнать о различиях, смотрите страницу :doc:`Введение в UDD<./udd-"
+"intro>`."
 
 #: ../ubuntu-packaging-guide/index.rst:33
 msgid "Articles"
@@ -2734,7 +2841,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:3
 msgid "KDE Packaging"
-msgstr ""
+msgstr "Работа с пакетами KDE"
 
 #: ../ubuntu-packaging-guide/kde.rst:5
 msgid ""
@@ -2743,6 +2850,10 @@ msgid ""
 "``#kubuntu-devel`` Freenode IRC channel.  More information about Kubuntu "
 "development is on the `Kubuntu wiki page`_."
 msgstr ""
+"Создание пакетов приложений KDE в Ubuntu управляется командами Kubuntu и "
+"MOTU.  Связаться с командой Kubuntu можно через `список рассылки Kubuntu`_ и "
+"Freenode IRC-канал ``#kubuntu-devel``.  Дополнительная информация о "
+"разработке Kubuntu находится на  `вики-странице Kubuntu`_."
 
 #: ../ubuntu-packaging-guide/kde.rst:10
 msgid ""
@@ -2750,10 +2861,13 @@ msgid ""
 "KDE Extras Team.  Most of our packages are derived from the packaging of "
 "these Debian teams."
 msgstr ""
+"Наша работа с пакетами следует практике `команды Debian Qt/KDE`_ и команды "
+"Debian KDE Extras.  Большинство наших пакетов являются производными от "
+"пакетов этих команд Debian."
 
 #: ../ubuntu-packaging-guide/kde.rst:15
 msgid "Patching Policy"
-msgstr ""
+msgstr "Политика создания патчей"
 
 #: ../ubuntu-packaging-guide/kde.rst:17
 msgid ""
@@ -2768,17 +2882,22 @@ msgid ""
 "expects this (such as the top left logo of the Kickoff menu) or to simplify "
 "(such as removing splash screens)."
 msgstr ""
+"Kubuntu не меняет фирменного оформления пакетов, кроме случаев, когда этого "
+"требует апстрим (например, логотип в верхнем левом углу меню Kickoff) или "
+"для упрощения (например, удаление показываемых при запуске заставок)."
 
 #: ../ubuntu-packaging-guide/kde.rst:27
 #: ../ubuntu-packaging-guide/python-packaging.rst:31
 msgid "debian/rules"
-msgstr ""
+msgstr "debian/rules"
 
 #: ../ubuntu-packaging-guide/kde.rst:29
 msgid ""
 "Debian packages include some additions to the basic Debhelper usage. These "
 "are kept in the ``pkg-kde-tools`` package."
 msgstr ""
+"Пакеты Debian включают некоторые дополнения к обычному использованию "
+"Debhelper. Они хранятся в пакете ``pkg-kde-tools``."
 
 #: ../ubuntu-packaging-guide/kde.rst:32
 msgid ""
@@ -2795,6 +2914,11 @@ msgid ""
 "/usr/share/pkg-kde-tools/qt-kde-team/2/debian-qt-kde.mk`` instead of running "
 "``dh``."
 msgstr ""
+"Некоторые новые пакеты KDE используют систему ``dhmk``, альтернативу ``dh``, "
+"созданную командой Debian Qt/KDE.  Прочесть о ней можно в /usr/share/pkg-kde-"
+"tools/qt-kde-team/2/README.  Использующие её пакеты будут ``включать "
+"/usr/share/pkg-kde-tools/qt-kde-team/2/debian-qt-kde.mk`` вместо запуска "
+"``dh``."
 
 #: ../ubuntu-packaging-guide/kde.rst:47
 msgid "Translations"
@@ -2838,12 +2962,19 @@ msgid ""
 "language packs Launchpad will need to associate these together manually, "
 "contact `dpm`_ to do this."
 msgstr ""
+"Апстрим обычно также помещает файлы перевода ``.po`` в каталог ``po/``.  "
+"Если их там нет, проверьте, не находятся ли они в отдельных языковых пакетах "
+"апстрима, таких как языковые пакеты KDE SC.  Если они в отдельном языковом "
+"пакете, Launchpad нужно будет объединить их вручную, свяжитесь для этого с "
+"`dpm`_."
 
 #: ../ubuntu-packaging-guide/kde.rst:69
 msgid ""
 "If a package is moved from universe to main it will need to be re-uploaded "
 "before the translations get imported into Launchpad."
 msgstr ""
+"Если пакет перемещён из universe в main, его следует перевыгрузить перед "
+"импортом переводов на Launchpad."
 
 #: ../ubuntu-packaging-guide/kde.rst:72
 msgid ""
@@ -2855,10 +2986,17 @@ msgid ""
 "packs.  The list of .po files to be downloaded from KDE's repositories is in "
 "``/usr/lib/kubuntu-desktop-i18n/desktop-template-list``."
 msgstr ""
+"Файлы ``.desktop`` также требуют перевода.  Мы добавили патч к KDELibs для "
+"чтения переводов из ``.po``-файлов, указывающих на строку ``X-Ubuntu-Gettext-"
+"Domain=``, добавляемую к файлам ``.desktop`` во время сборки пакета.  Файл "
+".pot для каждого пакета генерируется во время сборки и .po-файлы необходимо "
+"скачать из апстрима и включить в пакет или в наши языковые пакеты.  Список  "
+".po-файлов, которые нужно скачать из репозиториев KDE, находится в "
+"``/usr/lib/kubuntu-desktop-i18n/desktop-template-list``."
 
 #: ../ubuntu-packaging-guide/kde.rst:82
 msgid "Library Symbols"
-msgstr ""
+msgstr "Библиотечные символы"
 
 #: ../ubuntu-packaging-guide/kde.rst:84
 msgid ""
@@ -2871,7 +3009,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:3
 msgid "Shared Libraries"
-msgstr ""
+msgstr "Общие библиотеки"
 
 #: ../ubuntu-packaging-guide/libraries.rst:5
 msgid ""
@@ -2879,6 +3017,9 @@ msgid ""
 "several different programs.  They are distributed as ``.so`` files in "
 "``/usr/lib/``."
 msgstr ""
+"Общие библиотеки — это скомпилированный код, предназначенный для совместного "
+"использования несколькими различными программами. Они распространяются в "
+"виде файлов ``.so`` в ``/usr/lib/``."
 
 #: ../ubuntu-packaging-guide/libraries.rst:9
 msgid ""
@@ -2902,6 +3043,11 @@ msgid ""
 "bundling) if you do not expect any other programs to use the library, more "
 "often they should be split out into separate binary packages."
 msgstr ""
+"Библиотеки обычно распространяются апстримом в виде отдельных выпусков. "
+"Иногда они распространяются, как часть программы. В последнем случае они "
+"могут быть включены в двоичный пакет вместе с программой (это называется "
+"bundling), если вы не предполагаете использование этих библиотек другими "
+"программами, но чаще их всё же следует выделять в отдельные двоичные пакеты."
 
 #: ../ubuntu-packaging-guide/libraries.rst:27
 msgid ""
@@ -2911,6 +3057,10 @@ msgid ""
 "compile programs against the library are put into a package called ``libfoo-"
 "dev``."
 msgstr ""
+"Сами библиотеки помещаются в двоичный пакет с именем ``libfoo1``, где "
+"``foo`` — имя библиотеки, а ``1`` — версия из SONAME. Файлы разработки из "
+"пакета, такие как заголовочные файлы, необходимые для компиляции программ с "
+"библиотекой, помещаются в пакет с именем ``libfoo-dev``."
 
 #: ../ubuntu-packaging-guide/libraries.rst:34
 msgid "An Example"
@@ -2933,6 +3083,12 @@ msgid ""
 "binary package is called ``libnova-0.12-2`` where ``libnova-0.12`` is the "
 "name of the library and ``2`` is our ABI number."
 msgstr ""
+"SONAME в данном случае ``libnova-0.12.so.2``, что соответствует имени файла "
+"(как правило, но не всегда). Здесь апстрим поместил номер версии из "
+"апстрима, как часть SONAME, и задал ABI-версию ``2``.  Имена библиотечных "
+"пакетов должны следовать SONAME библиотеки, которую они содержат. Двоичный "
+"библиотечный пакет называется ``libnova-0.12-2``, где ``libnova-0.12`` — имя "
+"библиотеки, а ``2`` —  наш ABI-номер."
 
 #: ../ubuntu-packaging-guide/libraries.rst:52
 msgid ""
@@ -2944,11 +3100,20 @@ msgid ""
 "introduce incompatibilities without changing their version number and we "
 "will need to change ours."
 msgstr ""
+"Если авторы из апстрима внесли несовместимые изменения в свою библиотеку, "
+"они должны изменить номер версии SONAME, а мы должны переименовать нашу "
+"библиотеку. Любые другие пакеты, использующие наш библиотечный пакет, нужно "
+"будет перекомпилировать с новой весрией, это называется переходом "
+"(transition) и требует некоторых усилий. Надо надеяться, наш ABI-номер "
+"продолжит соответствовать SONAME апстрима, но иногда они вносят "
+"несовместимости без изменения их номера версии, а нам нужно изменить наш."
 
 #: ../ubuntu-packaging-guide/libraries.rst:60
 msgid ""
 "Looking in debian/libnova-0.12-2.install we see it includes two files::"
 msgstr ""
+"Взглянув на debian/libnova-0.12-2.instal, мы увидим, что он включает в себя "
+"два файла::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:65
 msgid ""
@@ -3166,7 +3331,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:60
 msgid "Starting a Package"
-msgstr ""
+msgstr "Создание пакета"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:62
 msgid ""
@@ -3275,6 +3440,10 @@ msgid ""
 "automatically done these days by ``debhelper 7`` so the universal ``%`` "
 "Makefile target just runs the ``dh`` script which will run everything needed."
 msgstr ""
+"``rules`` — самый сложный файл.  Это Makefile, который компилирует код и "
+"превращает его в двоичный пакет.  К счастью, основную часть работы в наши "
+"дни автоматически выполняет ``debhelper 7``, так что универсальная цель "
+"``%`` просто запускает сценарий ``dh``, который делает всё, что необходимо."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:121
 msgid ""
@@ -3333,6 +3502,8 @@ msgid ""
 "A description of each of the problems it reports can be found on the "
 "`lintian website`_."
 msgstr ""
+"Описание каждой проблемы, о которой он сообщает, можно найти на `веб-сайте "
+"lintian`_."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:163
 msgid ""
@@ -3351,6 +3522,16 @@ msgid ""
 "have set up GPG. If you haven't set up ``pbuilder-dist`` or GPG yet, "
 ":doc:`do so now<./getting-set-up>`::"
 msgstr ""
+"Убедившись, что пакет успешно собирается локально, вы должны проверить, "
+"правильно ли его сборка будет проходить в чистой системе, с помощью "
+"``pbuilder``. Поскольку вскоре мы собираемся загрузить его в PPA "
+"(персональный архив пакетов), эту загрузку нужно снабдить *цифровой "
+"подписью*, чтобы Launchpad мог удостовериться, что загрузку сделали вы "
+"(узнать о том, что загрузка будет подписана, можно по отсутствию "
+"передаваемых ``bzr builddeb`` флагов ``-us`` и ``-uc``, которые мы "
+"использовали ранее). Для подписывания своей работы вам понадобится настроить "
+"GPG. Если вы ещё не настроили ``pbuilder-dist`` или GPG, :doc:`сделайте это "
+"сейчас<./getting-set-up>`::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:181
 msgid ""
@@ -3422,7 +3603,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
 msgid "Patches to Packages"
-msgstr ""
+msgstr "Патчи для пакетов"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:5
 msgid ""
@@ -3873,7 +4054,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:111
 msgid "Checking for packaging mistakes"
-msgstr ""
+msgstr "Проверка пакета на наличие ошибок"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:113
 msgid ""
@@ -3920,7 +4101,7 @@ msgstr "Команды Debian `python-modules`_ и `python-apps`_."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:3
 msgid "Security and Stable Release Updates"
-msgstr "Обновления безопасности и обновления до стабильных релизов"
+msgstr "Обновления безопасности и обновления стабильных релизов"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:6
 msgid "Fixing a Security Bug in Ubuntu"
@@ -3967,7 +4148,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:38
 msgid "Patching the source"
-msgstr ""
+msgstr "Создание патча"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:39
 msgid ""
@@ -4087,7 +4268,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:123
 msgid "Stable Release Updates"
-msgstr "Обновления до стабильного релиза"
+msgstr "Обновления стабильного релиза"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:125
 msgid ""
@@ -4097,12 +4278,21 @@ msgid ""
 "bugs we only allow this where the change can be easily understood and "
 "verified."
 msgstr ""
+"Мы также разрешаем вносить обновления в выпуски, в которых пакет содержит "
+"серьёзную ошибку, такую как значительная регрессия по сравнению с предыдущим "
+"выпуском или ошибка, которая может привести к потере данных.  Из-за того, "
+"что такие изменения сами потенциально могут привести к появлению "
+"дополнительных ошибок, мы позволяем делать это только там, где изменения "
+"легко можно понять и проверить."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:130
 msgid ""
 "The process for Stable Release Updates is just the same as the process for "
 "security bugs except you should subscribe ``ubuntu-sru`` to the bug."
 msgstr ""
+"Процесс обновлений стабильного выпуска (Stable Release Updates или SRU) "
+"такой же, как и для исправлений ошибок безопасности, за исключением того, "
+"что нужно подписать на отчёт об ошибке команду ``ubuntu-sru``."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:133
 msgid ""
@@ -5042,7 +5232,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:62
 msgid "Generating a debdiff"
-msgstr ""
+msgstr "Создание debdiff"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:64
 msgid ""
@@ -5398,6 +5588,8 @@ msgid ""
 "(``bd`` is an alias for ``builddeb``.)  You can leave the package unsigned "
 "by appending ``-- -uc -us`` to the command."
 msgstr ""
+"(``bd`` — это псевдоним для ``builddeb``.)  Вы можете оставить пакет "
+"неподписанным, добавив к команде ``-- -uc -us``."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:82
 msgid ""
