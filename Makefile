@@ -101,6 +101,7 @@ singlehtml-%: locale
 	sed -i 's/href="..\//href=".\//g' $(BUILDDIR)/singlehtml/$*/index.html
 	sed -i 's/ubuntu-packaging-guide\/index/index/g' $(BUILDDIR)/singlehtml/$*/index.html
 	sed -i 's/..\/..\/_images/.\/_images/g' $(BUILDDIR)/singlehtml/$*/index.html
+	sed -i 's/src="..\/_static/src=".\/_static/g' $(BUILDDIR)/singlehtml/$*/index.html
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml/$*."
 
