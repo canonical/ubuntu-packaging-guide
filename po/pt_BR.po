@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-03 17:02+0000\n"
-"PO-Revision-Date: 2012-12-10 18:20+0000\n"
+"PO-Revision-Date: 2012-12-11 13:21+0000\n"
 "Last-Translator: Tiago Hillebrandt <tiagohillebrandt@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-11 05:06+0000\n"
-"X-Generator: Launchpad (build 16356)\n"
+"X-Launchpad-Export-Date: 2012-12-12 04:57+0000\n"
+"X-Generator: Launchpad (build 16361)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -201,7 +201,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:142
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
-msgstr ""
+msgstr "Nos `testes do ubiquity`_ a suíte de testes do upstream é executada."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid ""
@@ -474,6 +474,9 @@ msgid ""
 "Copy C10shell from /usr/share/doc/pbuilder/examples into a directory and use "
 "the ``--hookdir=`` argument to point to it."
 msgstr ""
+"Você também pode configurar o pbuilder para pausar quando ele vem através de "
+"uma falha de construção.  Copie C10shell de /usr/share/doc/pbuilder/examples "
+"para dentro do diretório e use o argumento ``--hookdir=`` para apontá-lo."
 
 #: ../ubuntu-packaging-guide/chroots.rst:67
 msgid ""
@@ -638,6 +641,10 @@ msgid ""
 "distro revision, used so that the packaging can be updated (to fix bugs for "
 "example) with new uploads within the same source release version."
 msgstr ""
+"Observe que a versão tem um ``-0ubuntu1`` acrescentado a ela, isso é a "
+"revisão da distro, usada para que o empacotamento possa ser atualizado (para "
+"corrigir falhas, por exemplo) com novos envios para a mesma versão de "
+"lançamento do fonte."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:56
 msgid ""
@@ -859,6 +866,7 @@ msgstr ""
 msgid ""
 "Splitting a single large source package into multiple binary packages."
 msgstr ""
+"Dividindo um grande e único pacote fonte em múltiplos pacotes binários."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:262
 msgid ""
@@ -926,6 +934,10 @@ msgid ""
 "version. If a new upstream version is found, it will be automatically "
 "downloaded. For example::"
 msgstr ""
+"Ao executar ``uscan`` no diretório raiz dos fontes irá comparar o número da "
+"versão no upstream em ``debian/changelog`` com a última versão disponível no "
+"upstream. Se uma nova versão upstream for encontrada, ela será baixada "
+"automaticamente. Por exemplo::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:326
 msgid ""
@@ -933,6 +945,9 @@ msgid ""
 "more complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  "
 "In that case, use something like::"
 msgstr ""
+"Se seus tarballs estão no Launchpad, o arquivo ``debian/watch`` é um pouco "
+"mais complicado (veja `questão 21146`_ e `falha 231797`_ por que é assim).  "
+"Nesse caso, use algo como::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
 msgid ""
@@ -940,6 +955,9 @@ msgid ""
 "(Section 4.11) <http://www.debian.org/doc/debian-policy/ch-source.html#s-"
 "debianwatch>`_ of the Debian Policy Manual."
 msgstr ""
+"Para maiores informações, veja ``man uscan`` e a `seção do arquivo watch "
+"(Seção 4.11) <http://www.debian.org/doc/debian-policy/ch-source.html#s-"
+"debianwatch>`_ do Manual de políticas do Debian."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:337
 msgid ""
@@ -957,6 +975,8 @@ msgid ""
 "This file indicates the format of the source package. It should contain a "
 "single line indicating the desired format:"
 msgstr ""
+"Este arquivo indica o formato do pacote fonte. Ele deve conter uma única "
+"linha indicando o formato desejado:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:347
 msgid "``3.0 (native)`` for Debian native packages (no upstream version)"
@@ -986,6 +1006,8 @@ msgid ""
 "You are encouraged to use the newer 3.0 source format. It provides a number "
 "of new features:"
 msgstr ""
+"Você é encorajado a usar o mais recente formato de fonte, o 3.0. Ele fornece "
+"uma quantia de novos recursos:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
 msgid "Support for additional compression formats: bzip2, lzma and xz"
@@ -999,12 +1021,16 @@ msgstr "Suporte para múltiplos tarballs do upstream"
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
 msgstr ""
+"Não é necessário reempacotar o tarball do upstream para retirar o diretório "
+"debian"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:367
 msgid ""
 "Debian-specific changes are no longer stored in a single .diff.gz but in "
 "multiple patches compatible with quilt under ``debian/patches/``"
 msgstr ""
+"Mudanças específicas do Debian não são armazenadas em um único .diff.gz, mas "
+"em múltiplos patches compatíveis com o quilt em ``debian/patches/``"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:369
 msgid ""
@@ -1179,6 +1205,8 @@ msgstr ""
 msgid ""
 "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
+"Histórico de revisão do upstream (ou lançamento recente) poderia ter "
+"corrigido o problema,"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:101
 msgid "bugs or package uploads of Debian or other distributions."
@@ -1189,12 +1217,17 @@ msgid ""
 "You now want to create a patch which includes the fix.  The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
+"Você agora quer criar um patch que inclui a correção.  O comando ``edit-"
+"patch`` é um caminho fácil para adicionar um patch em um pacote. Execute::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:111
 msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
 msgstr ""
+"Isso copiará o empacotamento para um diretório temporário.  Agora você pode "
+"editar arquivos com um editor de textos ou aplicar patches do upstream, por "
+"exemplo::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:116
 msgid ""
@@ -1228,6 +1261,9 @@ msgid ""
 "``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i "
 "<package>_<version>.deb``).  Then test to see if the bug is fixed."
 msgstr ""
+"Uma vez que a construção for concluída, instale o pacote do "
+"``~/pbuilder/<lançamento>_result/`` (usando ``sudo dpkg -i "
+"<pacote>_<versão>.deb``).  Então teste para ver se a falha está corrigida."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:139
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:155
@@ -2854,10 +2890,12 @@ msgid ""
 "All of these file are explained in more detail in the :doc:`overview of the "
 "debian directory<./debian-dir-overview>` article."
 msgstr ""
+"Todos estes arquivos são explicados mais detalhadamente no artigo "
+":doc:`resumo do diretório debian<./debian-dir-overview>`."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:124
 msgid "Finally commit the code to your packaging branch::"
-msgstr ""
+msgstr "Finalmente submeta o código para seu ramo de empacotamento::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:129
 #: ../ubuntu-packaging-guide/udd-working.rst:69
@@ -2901,6 +2939,8 @@ msgid ""
 "A description of each of the problems it reports can be found on the "
 "`lintian website`_."
 msgstr ""
+"Uma descrição de cada um dos problemas relatados pode ser encontrada no "
+"`site do lintian`_."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:163
 msgid ""
@@ -2925,6 +2965,8 @@ msgid ""
 "When you are happy with your package you will want others to review it.  You "
 "can upload the branch to Launchpad for review::"
 msgstr ""
+"Quando você estiver feliz com seu pacote você irá querer que outros revisem-"
+"o. Você pode enviar para o ramo no Launchpad para revisão::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:186
 msgid ""
@@ -2943,6 +2985,9 @@ msgid ""
 "mailing list`_.  There might also be a more specific team you could ask such "
 "as the GNU team for more specific questions."
 msgstr ""
+"Você pode perguntar por revisões no canal ``#ubuntu-motu`` no IRC ou na "
+"`lista de e-mails dos MOTU`_.  Também pode haver um time mais específico que "
+"você gostaria de perguntar, tal como o GNU para questões mais específicas."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:199
 msgid "Submitting for inclusion"
@@ -3026,10 +3071,11 @@ msgstr ""
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:29
 msgid "The order of patches to apply is kept in ``debian/patches/series``."
 msgstr ""
+"A ordem dos patches para aplicar é mantida em ``debian/patches/series``."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:32
 msgid "Patches with Quilt"
-msgstr ""
+msgstr "Patches com o Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:34
 msgid ""
@@ -3049,11 +3095,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:49
 msgid "If you wanted to remove the patch you would run ``pop``::"
-msgstr ""
+msgstr "Se você quisesse remover o patch poderia executar ``pop``::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:57
 msgid "And to apply a patch you use ``push``::"
-msgstr ""
+msgstr "E para aplicar um patch você usa ``push``::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:67
 msgid "Adding a New Patch"
@@ -3070,6 +3116,8 @@ msgid ""
 "The ``quilt add`` step is important, if you forget it the files will not end "
 "up in the patch."
 msgstr ""
+"O passo ``quilt add`` é importante, se você esquecê-lo os arquivos não vão "
+"terminar no patch."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:84
 msgid ""
@@ -3078,6 +3126,10 @@ msgid ""
 "file will have had the new patch added to it.  You should add the new file "
 "to the packaging::"
 msgstr ""
+"A mudança agora estará em "
+"``debian/patches/kubuntu_02_program_description.diff`` e o arquivo "
+"``series`` terá um novo patch adicionado a ele. Você deve adicionar o novo "
+"arquivo para o empacotamento::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:94
 msgid ""
@@ -3117,7 +3169,7 @@ msgstr "Então atualize para a nova versão::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:120
 msgid "Then apply the patches one at a time to check for problems::"
-msgstr ""
+msgstr "Então aplique os patches, um por vez, para verificar por problemas::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:129
 msgid ""
@@ -3141,23 +3193,28 @@ msgstr "Então submeta como sempre::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:152
 msgid "Making A Package Use Quilt"
-msgstr ""
+msgstr "Fazendo um pacote usar o Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:154
 msgid ""
 "Modern packages use Quilt by default, it is built into the packaging format. "
 " Check in ``debian/source/format`` to ensure it says ``3.0 (quilt)``."
 msgstr ""
+"Pacotes modernos usam o Quilt por padrão, que é construído dentro do formato "
+"do pacote.  Verifique ``debian/source/format`` para assegurar que ele diz "
+"``3.0 (quilt)``."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:158
 msgid ""
 "Older packages using source format 1.0 will need to explicitly use Quilt, "
 "usually by including a makefile into ``debian/rules``."
 msgstr ""
+"Pacotes antigos usando o formato de fonte 1.0 terão que explicitar o uso do "
+"Quilt, normalmente incluindo um makefile dentro de ``debian/rules``."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:163
 msgid "Other Patch Systems"
-msgstr ""
+msgstr "Outros sistemas de patch"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:165
 msgid ""
@@ -3229,6 +3286,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/python-packaging.rst:18
 msgid "Things in ``debian/control`` that are specific for a Python package:"
 msgstr ""
+"Coisas no ``debian/control`` que são específicas para um pacote Python:"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:20
 msgid ""
@@ -3311,7 +3369,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:84
 msgid "and ``python3-markdown.install`` will only have one line::"
-msgstr ""
+msgstr "e ``python3-markdown.install`` terá uma linha::"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:89
 msgid "The ``-doc`` package"
@@ -3382,6 +3440,8 @@ msgstr ""
 msgid ""
 "Here, ``-EI`` option is used to enable experimental and informational tags."
 msgstr ""
+"Aqui, a opção ``-EI`` é usada para habilitar as etiquetas informativas e "
+"experimentais."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:121
 msgid "See also"
@@ -3389,21 +3449,23 @@ msgstr "Veja também"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:123
 msgid "The `Python policy`_;"
-msgstr ""
+msgstr "A `política do Python`_;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:124
 msgid "`Python/Packaging`_ article on Debian wiki;"
-msgstr ""
+msgstr "Artigo `Python/Packaging`_ no wiki do Debian;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:125
 msgid ""
 "`Python/LibraryStyleGuide`_ and `Python/AppStyleGuide`_ articles on Debian "
 "wiki;"
 msgstr ""
+"Artigos `Python/LibraryStyleGuide`_ e `Python/AppStyleGuide`_ no wiki do "
+"Debian;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:126
 msgid "Debian `python-modules`_ and `python-apps`_ teams."
-msgstr ""
+msgstr "Times `python-modules`_ e `python-apps`_ do Debian."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:3
 msgid "Security and Stable Release Updates"
@@ -3456,7 +3518,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:46
 msgid "To create your patch using ``edit-patch``::"
-msgstr ""
+msgstr "Para criar seu patch usando ``edit-patch``::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:51
 msgid ""
