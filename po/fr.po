@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-03 17:02+0000\n"
-"PO-Revision-Date: 2012-12-12 12:01+0000\n"
-"Last-Translator: Winael <vinzjobard@gmail.com>\n"
+"PO-Revision-Date: 2012-12-13 15:11+0000\n"
+"Last-Translator: Sylvie Gallet <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-13 05:04+0000\n"
-"X-Generator: Launchpad (build 16361)\n"
+"X-Launchpad-Export-Date: 2012-12-14 05:52+0000\n"
+"X-Generator: Launchpad (build 16369)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
-msgstr "autopkgtest: tests automatiques pour les paquets"
+msgstr "autopkgtest : tests automatiques pour les paquets"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
 msgid "add the tests in ``debian/tests/``."
-msgstr "ajoutez les tests dans ``debian/tests / ``."
+msgstr "ajoutez les tests dans ``debian/tests/``."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
 msgid "Testbed requirements"
@@ -69,18 +69,25 @@ msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
 msgstr ""
+"Ci-dessous, nous voyons un aperçu du paquet source ``glib2.0``. Dans un cas "
+"très simple, le fichier devrait ressembler à ceci::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
+"Pour le test dans ``debian/tests/build``, cela permettrait de s'assurer que "
+"les paquets ``libglib2.0-dev`` et ``build-essential``  sont installés."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
 msgid ""
 "You can use ``@`` in the ``Depends`` line to indicate that you want all the "
 "packages installed which are built by the source package in question."
 msgstr ""
+"Vous pouvez utiliser ``@`` de la ligne ``Depends`` pour indiquer que vous "
+"souhaitez tous les paquets installés construits par la paquet source en "
+"question."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
@@ -88,7 +95,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
-msgstr ""
+msgstr "Le test accompagnant l'exemple ci-dessus pourrait être :"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
 msgid ""
@@ -103,10 +110,13 @@ msgid ""
 "While this test is very small and basic, it tests quite a number of core "
 "components on a system. This may help to uncover critical issues early on."
 msgstr ""
+"Bien que ce test soit très petit et basique, il teste un grand nombre de "
+"composantes du noyau d'un système. Cela peut aider à découvrir plus tôt des "
+"problèmes critiques."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
 msgid "Executing the test"
-msgstr ""
+msgstr "Exécution du test"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
 msgid ""
@@ -128,7 +138,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
 msgid "Then, get the source code from Launchpad::"
-msgstr ""
+msgstr "Ensuite, récupérez le code source sur Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Quantal AMD64 system::"
@@ -194,7 +204,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:148
 msgid "Ubuntu infrastructure"
-msgstr ""
+msgstr "infrastructure Ubuntu"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:150
 msgid ""
