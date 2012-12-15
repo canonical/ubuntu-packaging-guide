@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-03 17:02+0000\n"
-"PO-Revision-Date: 2012-12-13 15:11+0000\n"
-"Last-Translator: Sylvie Gallet <Unknown>\n"
+"PO-Revision-Date: 2012-12-15 00:03+0000\n"
+"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-14 05:52+0000\n"
-"X-Generator: Launchpad (build 16369)\n"
+"X-Launchpad-Export-Date: 2012-12-15 05:19+0000\n"
+"X-Generator: Launchpad (build 16372)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -170,7 +170,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:132
 msgid "Further examples"
-msgstr ""
+msgstr "Exemples complémentaires"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:134
 msgid ""
@@ -190,6 +190,10 @@ msgid ""
 "There is an additional \"python3-gi\" test which verifies that the GTK "
 "library can also be used through introspection."
 msgstr ""
+"Les essais `gtk +3.0` _ également faire une compilation /link/ run vérifier "
+"dans le dossier \"build\" test. Il ya un supplément de \"python3-gi\" test "
+"qui vérifie que la bibliothèque GTK peut également être utilisé par "
+"l'introspection."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:142
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
@@ -496,7 +500,7 @@ msgid ""
 "or any of these channels:"
 msgstr ""
 "Pour discuter en temps réel, connectez-vous à irc.freenode.net et rejoignez "
-"un ou plusieurs de ces canaux:"
+"un ou plusieurs de ces canaux :"
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
@@ -548,6 +552,8 @@ msgid ""
 "Minor bullet points are indicated by a dash \"-\", while major points use an "
 "asterisk \"*\"."
 msgstr ""
+"Bullet points mineurs sont indiquées par un tiret  \"-\", tandis que les "
+"points principaux utiliser un astérisque \"*\"."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:39
 msgid ""
