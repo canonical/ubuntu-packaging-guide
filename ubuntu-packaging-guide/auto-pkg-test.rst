@@ -173,6 +173,17 @@ The process of submitting an autopkgtest for a package is largely similar to
 * commit your changes, push them to Launchpad, propose a merge and get it 
   reviewed just like any other improvement in a source package.
 
+
+What you can do
+===============
+
+The Ubuntu Engineering team put together a `list of required test-cases`_,
+where packages which need tests are put into different categories. Here you
+can find examples of these tests and easily assign them to yourself.
+
+If you should run into any problems, you can join the `#ubuntu-quality IRC
+channel`_ to get in touch with developers who can help you.
+
 .. _`DEP 8 Specification`: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob_plain;f=doc/README.package-tests;hb=HEAD
 .. _`libxml2 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/libxml2/quantal/files/head:/debian/tests/
 .. _`gvfs tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/gvfs/quantal/files/head:/debian/tests/
@@ -181,3 +192,5 @@ The process of submitting an autopkgtest for a package is largely similar to
 .. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Quantal/view/AutoPkg%20Test/
 .. _`lp:auto-package-testing`: https://code.launchpad.net/auto-package-testing
 .. _`auto-package-testing documentation`: http://bazaar.launchpad.net/~auto-package-testing-dev/auto-package-testing/trunk/view/head:/doc/USAGE.md
+.. _`list of required test-cases`: https://wiki.ubuntu.com/QATeam/RequiredTests
+.. _`#ubuntu-quality IRC channel`: http://webchat.freenode.net/?channels=ubuntu-quality
