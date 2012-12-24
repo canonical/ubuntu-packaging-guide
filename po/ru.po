@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-12-15 15:14+0000\n"
-"PO-Revision-Date: 2012-12-13 08:12+0000\n"
+"PO-Revision-Date: 2012-12-23 13:21+0000\n"
 "Last-Translator: Dmitry Shachnev <mitya57@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-16 05:10+0000\n"
-"X-Generator: Launchpad (build 16372)\n"
+"X-Launchpad-Export-Date: 2012-12-24 04:52+0000\n"
+"X-Generator: Launchpad (build 16378)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -49,7 +49,7 @@ msgstr "добавить тесты в ``debian/tests``."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
 msgid "Testbed requirements"
-msgstr ""
+msgstr "Требования к тестовому окружению"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:21
 msgid ""
@@ -58,32 +58,44 @@ msgid ""
 "gets broken during the build or if ``root`` permissions are required. The "
 "`DEP 8 specification`_ lists all available options."
 msgstr ""
+"В файле ``debian/tests/control`` вы можете указать требования к тестовому "
+"окружению. Например, можно задать список необходимых для тестирования "
+"пакетов, указать, требуется ли восстановление окружения после тестов, и "
+"нужны ли привилегии ``root``. Все доступные опции указаны в `DEP 8 "
+"specification`_."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
 msgstr ""
+"Сейчас мы рассмотрим пакет исходного кода ``glib2.0``. В очень простом "
+"случае он будет выглядеть так::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
+"Это будет означать, что для теста ``debian/tests/build`` требуются пакеты "
+"``libglib2.0-dev`` и ``build-essential``."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
 msgid ""
 "You can use ``@`` in the ``Depends`` line to indicate that you want all the "
 "packages installed which are built by the source package in question."
 msgstr ""
+"В поле ``Depends`` можно указать ``@``, если вы хотите установки всех "
+"бинарных пакетов, собранных из рассматриваемого пакета исходного кода."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr ""
+msgstr "Настоящие тесты"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
 msgstr ""
+"Тест, соответствующий рассмотренному выше примеру, будет выглядеть так:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
 msgid ""
@@ -92,16 +104,24 @@ msgid ""
 "provided by `pkg-config`). Then the compiled binary, which just exercises "
 "some parts of core glib functionality, is run."
 msgstr ""
+"Здесь небольшая программа на языке C копируется во временную директорию, "
+"затем компилируется с использованием системных библиотек (с использованием "
+"флагов и путей к библиотекам, определённых через ``pkg-config``). Затем "
+"запускается скомпилированный файл, который запускает несколько основных "
+"функций glib."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:80
 msgid ""
 "While this test is very small and basic, it tests quite a number of core "
 "components on a system. This may help to uncover critical issues early on."
 msgstr ""
+"Несмотря на то, что тест небольшой и очень простой, он тестирует некоторое "
+"количество основных компонентов системы. Это позволит заранее выявить "
+"критические ошибки, если они возникнут."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
 msgid "Executing the test"
-msgstr ""
+msgstr "Выполнение теста"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
 msgid ""
@@ -110,6 +130,10 @@ msgid ""
 "from the ``autopkgtest`` package to execute the test. The easiest way to do "
 "this is to run this command in the source tree::"
 msgstr ""
+"Тестовый скрипт может быть легко запущен сам по себе, но если вы хотите "
+"убедиться, что тестовое окружение правильно настроено, вы можете "
+"использовать для запуска скрипт ``adt-run`` из пакета ``autopkgtest``. Самый "
+"простой способ — выполнение этой команды в дереве исходного кода::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:93
 msgid ""
@@ -120,6 +144,13 @@ msgid ""
 "uses a pristine virtual machine to run the tests. To set it up, firstly "
 "install the needed dependencies::"
 msgstr ""
+"Минус данного подхода — то, что он позволяет запустить тесты на локальной "
+"машине, но не даёт никаких гарантий того, что он будет работать в "
+"минимальном окружении. Например, будет сложно убедиться, что правильно "
+"указаны все нужные зависимости. С `lp:auto-package-testing`_, у нас есть "
+"более продвинутые средства тестирования. Они используют «чистую» виртуальную "
+"машину для запуска тестов. Чтобы воспользоваться этими средствами, сперва "
+"нужно установить необходимые зависимости::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
 msgid "Then, get the source code from Launchpad::"
@@ -154,6 +185,8 @@ msgid ""
 "The `auto-package-testing documentation`_ has a lot more valuable "
 "information on other testing options."
 msgstr ""
+"Больше ценной информации по опциям тестирования можно найти в `auto-package-"
+"testing documentation`_."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:132
 msgid "Further examples"
@@ -187,6 +220,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:142
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
 msgstr ""
+"В `ubiquity tests`_, выполняются тесты, предоставленные разработчиками."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid ""
@@ -236,20 +270,21 @@ msgstr "выполните ``bzr branch ubuntu:<имя_пакета>``,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "edit ``debian/control`` to enable the tests,"
-msgstr ""
+msgstr "включите тесты в ``debian/control``,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
 msgid "add the ``debian/tests`` directory,"
-msgstr ""
+msgstr "создайте директорию ``debian/tests``,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
 msgstr ""
+"создайте ``debian/tests/control``, следуя требованиям `DEP 8 Specification`_,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
 msgid "add your test case(s) to ``debian/tests``,"
-msgstr ""
+msgstr "добавьте ваши тесты в ``debian/tests``,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid ""
@@ -259,7 +294,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:178
 msgid "What you can do"
-msgstr ""
+msgstr "Чем вы можете помочь"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:180
 msgid ""
