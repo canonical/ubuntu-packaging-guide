@@ -185,13 +185,6 @@
     {%- if version %}
       {% trans version=version|e %}Version: {{ version }}.{% endtrans %}
     {%- endif %}
-    {%- if show_copyright %}
-      {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-      {%- else %}
-        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
-      {%- endif %}
-    {%- endif %}
     {%- if last_updated %}
       {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
     {%- endif %}
@@ -199,6 +192,19 @@
     <a href="https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk">grab the source code</a> from Launchpad.
     {%- if show_sphinx %}
       {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+    {%- endif %}
+    {%- if show_copyright %}
+      <br />
+      {%- if hasdoc('copyright') %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+      {%- else %}
+        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+        Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+        <img alt="Creative Commons License" style="border-width:0" 
+        src="{{ pathto('_static/images/cc-by-sa.png', 1) }}" /></a>
+      {%- endif %}
     {%- endif %}
 
   </div>

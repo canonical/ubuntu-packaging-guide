@@ -7,6 +7,9 @@ ubuntu-packaging-guide (0.3.1) UNRELEASED; urgency=low
   * Document where to find a list of required autopkgtests and where 
     to get help.
 
+  [ Andrew Starr-Bochicchio ]
+  * Put license information into the page footer (LP: #1093447).
+
  -- Andrew Starr-Bochicchio <a.starr.b@gmail.com>  Sun, 09 Dec 2012 13:35:33 -0500
 
 ubuntu-packaging-guide (0.3.0) experimental; urgency=low
