@@ -185,11 +185,11 @@ If you should run into any problems, you can join the `#ubuntu-quality IRC
 channel`_ to get in touch with developers who can help you.
 
 .. _`DEP 8 Specification`: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob_plain;f=doc/README.package-tests;hb=HEAD
-.. _`libxml2 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/libxml2/quantal/files/head:/debian/tests/
-.. _`gvfs tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/gvfs/quantal/files/head:/debian/tests/
-.. _`gtk+3.0 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/gtk+3.0/quantal/files/head:/debian/tests/
-.. _`ubiquity tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/quantal/ubiquity/quantal/files/head:/debian/tests/
-.. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Quantal/view/AutoPkg%20Test/
+.. _`libxml2 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/raring/libxml2/raring/files/head:/debian/tests/
+.. _`gvfs tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/raring/gvfs/raring/files/head:/debian/tests/
+.. _`gtk+3.0 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/raring/gtk+3.0/raring/files/head:/debian/tests/
+.. _`ubiquity tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/raring/ubiquity/raring/files/head:/debian/tests/
+.. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Raring/view/AutoPkgTest/
 .. _`lp:auto-package-testing`: https://code.launchpad.net/auto-package-testing
 .. _`auto-package-testing documentation`: http://bazaar.launchpad.net/~auto-package-testing-dev/auto-package-testing/trunk/view/head:/doc/USAGE.md
 .. _`list of required test-cases`: https://wiki.ubuntu.com/QATeam/RequiredTests
