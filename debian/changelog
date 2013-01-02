@@ -1,7 +1,8 @@
 ubuntu-packaging-guide (0.3.1) UNRELEASED; urgency=low
 
   [ Dmitry Shachnev ]
-  * Makefile: fix wrong links to some resources in singlehtml builds
+  * Makefile: fix wrong links to some resources in singlehtml builds.
+  * auto-pkg-test.rst: Updated links for raring.
 
   [ Daniel Holbach ]
   * Document where to find a list of required autopkgtests and where 
