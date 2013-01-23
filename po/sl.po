@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-12-15 15:14+0000\n"
+"POT-Creation-Date: 2013-01-22 17:49+0000\n"
 "PO-Revision-Date: 2012-10-04 13:02+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-12-16 05:10+0000\n"
-"X-Generator: Launchpad (build 16372)\n"
+"X-Launchpad-Export-Date: 2013-01-23 05:31+0000\n"
+"X-Generator: Launchpad (build 16441)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -1974,34 +1974,74 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
+"Welcome to the Ubuntu Packaging and Development Guide! This is the official "
+"place for learning all about Ubuntu Development and packaging. After reading "
+"this guide you will have:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:15
+msgid ""
+"heard about the most important players, processes and tools in Ubuntu "
+"development,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:17
+msgid "your development environment set up correctly,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:18
+msgid "a better idea of how to join our community,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:19
+msgid "fixed an actual Ubuntu bug as part of the tutorials."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:21
+msgid ""
 "Ubuntu is not only a free and open source operating system, its platform is "
 "also open and developed in a transparent fashion. The source code for every "
 "single component can be obtained easily and every single change to the "
 "Ubuntu platform can be reviewed."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:16
+#: ../ubuntu-packaging-guide/index.rst:26
 msgid ""
 "This means you can actively get involved in improving it and the community "
 "of Ubuntu platform developers is always interested in helping peers getting "
 "started."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:20
+#: ../ubuntu-packaging-guide/index.rst:30
+msgid ""
+"Ubuntu is also a community of great people who believe in free software and "
+"that it should be accessible for everyone. Its members are welcoming and "
+"want you to be involved as well. We want you to get involved, to ask "
+"questions, to make Ubuntu better together with us."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:35
+msgid ""
+"If you run into problems: don't panic! Check out the :doc:`communication "
+"article<./communication>` and you will find out how to most easily get in "
+"touch with other developers."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:39
 msgid "The guide is split up into two sections:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:22
+#: ../ubuntu-packaging-guide/index.rst:41
 msgid "A list of articles based on tasks, things you want to get done."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:23
+#: ../ubuntu-packaging-guide/index.rst:42
 msgid ""
 "A set of knowledge-base articles that dig deeper into specific bits of our "
 "tools and workflows."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:26
+#: ../ubuntu-packaging-guide/index.rst:45
 msgid ""
 "This guide focuses on the Ubuntu Distributed Development packaging method. "
 "This is a new way of packaging which uses Distributed Revision Control "
@@ -2011,11 +2051,11 @@ msgid ""
 "differences."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:33
+#: ../ubuntu-packaging-guide/index.rst:52
 msgid "Articles"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:50
+#: ../ubuntu-packaging-guide/index.rst:69
 msgid "Knowledge Base"
 msgstr ""
 
@@ -2769,7 +2809,7 @@ msgstr ""
 msgid ""
 "Uploading it to a PPA will ensure it builds and give an easy way for you and "
 "others to test the binary packages.  You will need to set up a PPA in "
-"Launchad then upload with ``dput``::"
+"Launchpad and then upload with ``dput``::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:192
