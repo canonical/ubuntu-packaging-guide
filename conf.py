@@ -190,7 +190,7 @@ latex_font_size = '10pt,oneside,openany'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('ubuntu-packaging-guide/index', 'ubuntu-packaging-guide.tex', u'ubuntu-packaging-guide Documentation',
+  ('ubuntu-packaging-guide/index', 'ubuntu-packaging-guide.tex', u'Ubuntu Packaging Guide',
    u'Ubuntu Developers', 'manual'),
 ]
 
