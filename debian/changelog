@@ -3,6 +3,7 @@ ubuntu-packaging-guide (0.3.1) UNRELEASED; urgency=low
   [ Dmitry Shachnev ]
   * Makefile: fix wrong links to some resources in singlehtml builds.
   * auto-pkg-test.rst: Updated links for raring.
+  * Add a work-around for the blank pages in PDF bug (LP: #1095513).
 
   [ Daniel Holbach ]
   * Document where to find a list of required autopkgtests and where 
