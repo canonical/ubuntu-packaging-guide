@@ -61,7 +61,7 @@ html: $(foreach lang,$(LANGS),html-$(lang))
 	sed -i 's/ubuntu-packaging-guide\///g' $(BUILDDIR)/html/searchindex.js
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html"
-html-%: locale
+html-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$*
 	mv $(BUILDDIR)/html/$*/ubuntu-packaging-guide/*html $(BUILDDIR)/html/$*
 	mv $(BUILDDIR)/html/$*/_sources/ubuntu-packaging-guide/*.txt $(BUILDDIR)/html/$*/_sources/
@@ -81,7 +81,7 @@ dirhtml: $(foreach lang,$(LANGS),dirhtml-$(lang))
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml/en
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml/en"
-dirhtml-%: locale
+dirhtml-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml/$*
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml/$*."
@@ -95,7 +95,7 @@ singlehtml: $(foreach lang,$(LANGS),singlehtml-$(lang))
 	sed -i 's/src="..\/_static/src=".\/_static/g' $(BUILDDIR)/singlehtml/index.html
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml"
-singlehtml-%: locale
+singlehtml-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml/$*
 	mv $(BUILDDIR)/singlehtml/$*/ubuntu-packaging-guide/*html  $(BUILDDIR)/singlehtml/$*
 	sed -i 's/href="..\//href=".\//g' $(BUILDDIR)/singlehtml/$*/index.html
@@ -143,7 +143,7 @@ epub: $(foreach lang,$(LANGS),epub-$(lang))
 	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
 	@echo
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub"
-epub-%: locale
+epub-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub/$*
 	@echo
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub/$*."
@@ -154,7 +154,7 @@ latex: $(foreach lang,$(LANGS),latex-$(lang))
 	@echo "Build finished; the LaTeX files are in is in $(BUILDDIR)/epub/en"
 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
 	      "(use \`make latexpdf' here to do that automatically)."
-latex-%: locale
+latex-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$*
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex/$*."
@@ -167,7 +167,7 @@ latexpdf: $(foreach lang,$(LANGS),latexpdf-$(lang))
 	make -C $(BUILDDIR)/latex all-pdf
 	mkdir -p $(BUILDDIR)/pdf; cp $(BUILDDIR)/latex/*pdf $(BUILDDIR)/pdf
 	@echo "Build finished; the PDF files are in $(BUILDDIR)/pdf"
-latexpdf-%: locale
+latexpdf-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$*
 	@echo "Running LaTeX files through pdflatex..."
 	make -C $(BUILDDIR)/latex/$* all-pdf
@@ -185,7 +185,7 @@ text: $(foreach lang,$(LANGS),text-$(lang))
 	$(SPHINXBUILD) -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text/en
 	@echo
 	@echo "Build finished. The text pages are in $(BUILDDIR)/text/en"
-text-%: locale
+text-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text/$*
 	@echo
 	@echo "Build finished. The text files are in $(BUILDDIR)/text/$*."
@@ -194,7 +194,7 @@ man: $(foreach lang,$(LANGS),man-$(lang))
 	$(SPHINXBUILD) -b man $(ALLSPHINXOPTS) $(BUILDDIR)/man/en
 	@echo
 	@echo "Build finished. The manual pages are in $(BUILDDIR)/man/en"
-man-%: locale
+man-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b man $(ALLSPHINXOPTS) $(BUILDDIR)/man/$*
 	@echo
 	@echo "Build finished. The manual pages are in $(BUILDDIR)/man/$*."
@@ -205,7 +205,7 @@ texinfo: $(foreach lang,$(LANGS),texinfo-$(lang))
 	@echo "Build finished. The Texinfo files are in $(BUILDDIR)/texinfo/en."
 	@echo "Run \`make' in that directory to run these through makeinfo" \
 	      "(use \`make info' here to do that automatically)."
-texinfo-%: locale
+texinfo-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo/$*
 	@echo
 	@echo "Build finished. The Texinfo files are in $(BUILDDIR)/texinfo/$*."
@@ -217,7 +217,7 @@ info: $(foreach lang,$(LANGS),info-$(lang))
 	@echo "Running Texinfo files through makeinfo..."
 	make -C $(BUILDDIR)/texinfo/en info
 	@echo "makeinfo finished; the Info files are in $(BUILDDIR)/texinfo/en."
-info-%: locale
+info-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo/$*
 	@echo "Running Texinfo files through makeinfo..."
 	make -C $(BUILDDIR)/texinfo/$* info

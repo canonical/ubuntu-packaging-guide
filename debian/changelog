@@ -1,7 +1,9 @@
 ubuntu-packaging-guide (0.3.1) UNRELEASED; urgency=low
 
   [ Dmitry Shachnev ]
-  * Makefile: fix wrong links to some resources in singlehtml builds.
+  * Makefile:
+    - Fix wrong links to some resources in singlehtml builds.
+    - Make sure .mo files are built in locale targets.
   * auto-pkg-test.rst: Updated links for raring.
   * Add a work-around for the blank pages in PDF bug (LP: #1095513).
 
