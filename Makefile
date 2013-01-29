@@ -247,7 +247,10 @@ doctest:
 
 locale: $(foreach lang,$(LANGS),locale-$(lang))
 locale-%:
-	@echo "Compiling .mo files in $(PODIR)/$*/LC_MESSAGES"
-	mkdir -p $(PODIR)/$*/LC_MESSAGES
-	msgfmt po/$*.po -o po/$*/LC_MESSAGES/ubuntu-packaging-guide.mo
+	@if [ -f po/$*.po ]; then \
+		echo "Compiling .mo files in $(PODIR)/$*/LC_MESSAGES"; \
+		mkdir -p $(PODIR)/$*/LC_MESSAGES; \
+		msgfmt po/$*.po -o po/$*/LC_MESSAGES/ubuntu-packaging-guide.mo; \
+	else echo "$*.po not available, skipping .mo building"; \
+	fi
 
