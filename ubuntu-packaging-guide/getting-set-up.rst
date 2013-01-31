@@ -229,7 +229,11 @@ you for the password you chose for the key when GPG generated it. Enter the
 password, then click the link to confirm that the key is yours.`
 
 Launchpad encrypts the email, using your public key, so that it can be sure
-that the key is yours. If your email software does not support OpenPGP
+that the key is yours. If you are using Thunderbird, the default Ubuntu email
+client, you can install the
+`Enigmail plugin <https://apps.ubuntu.com/cat/applications/enigmail/>`_
+to easily decrypt the message.
+If your email software does not support OpenPGP
 encryption, copy the encrypted email's contents, type ``gpg`` in your
 terminal, then paste the email contents into your terminal window.
 
