@@ -15,7 +15,10 @@ ubuntu-packaging-guide (0.3.1) UNRELEASED; urgency=low
   * Put license information into the page footer (LP: #1093447).
   * Add logo and fix title on the pdf cover page.
 
- -- Andrew Starr-Bochicchio <a.starr.b@gmail.com>  Sun, 09 Dec 2012 13:35:33 -0500
+  [ Dražen Lučanin ]
+  * getting-set-up.rst: link to Enigmail for Thunderbird GPG support.
+
+ -- Dražen Lučanin <kermit666@gmail.com>  Thu, 31 Jan 2013 22:22:13 +0100
 
 ubuntu-packaging-guide (0.3.0) experimental; urgency=low
 
