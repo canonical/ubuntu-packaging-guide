@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-01-22 17:49+0000\n"
+"POT-Creation-Date: 2013-02-01 07:51+0000\n"
 "PO-Revision-Date: 2012-12-11 12:54+0000\n"
 "Last-Translator: Mahyuddin Susanto <udienz@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-01-23 05:30+0000\n"
-"X-Generator: Launchpad (build 16441)\n"
+"X-Launchpad-Export-Date: 2013-02-02 05:33+0000\n"
+"X-Generator: Launchpad (build 16462)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -1925,28 +1925,31 @@ msgstr ""
 #: ../ubuntu-packaging-guide/getting-set-up.rst:231
 msgid ""
 "Launchpad encrypts the email, using your public key, so that it can be sure "
-"that the key is yours. If your email software does not support OpenPGP "
-"encryption, copy the encrypted email's contents, type ``gpg`` in your "
-"terminal, then paste the email contents into your terminal window."
+"that the key is yours. If you are using Thunderbird, the default Ubuntu "
+"email client, you can install the `Enigmail plugin "
+"<https://apps.ubuntu.com/cat/applications/enigmail/>`_ to easily decrypt the "
+"message. If your email software does not support OpenPGP encryption, copy "
+"the encrypted email's contents, type ``gpg`` in your terminal, then paste "
+"the email contents into your terminal window."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:236
+#: ../ubuntu-packaging-guide/getting-set-up.rst:240
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:239
+#: ../ubuntu-packaging-guide/getting-set-up.rst:243
 msgid ""
 "Find more information at "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:243
+#: ../ubuntu-packaging-guide/getting-set-up.rst:247
 msgid "Upload your SSH key to Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:245
+#: ../ubuntu-packaging-guide/getting-set-up.rst:249
 msgid ""
 "Open https://launchpad.net/~/+editsshkeys in a web browser, also open "
 "``~/.ssh/id_rsa.pub`` in a text editor. This is the public part of your SSH "
@@ -1955,18 +1958,18 @@ msgid ""
 "key\". Now click \"Import Public Key\"."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:251
+#: ../ubuntu-packaging-guide/getting-set-up.rst:255
 msgid ""
 "For more information on this process, visit the `creating an SSH keypair "
 "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
 "Launchpad."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:257
+#: ../ubuntu-packaging-guide/getting-set-up.rst:261
 msgid "Configure Bazaar"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:259
+#: ../ubuntu-packaging-guide/getting-set-up.rst:263
 msgid ""
 "Bazaar is the tool we use to store code changes in a logical way, to "
 "exchange proposed changes and merge them, even if development is done "
@@ -1974,40 +1977,40 @@ msgid ""
 "of working with Ubuntu packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:264
+#: ../ubuntu-packaging-guide/getting-set-up.rst:268
 msgid "To tell Bazaar who you are, simply run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:269
+#: ../ubuntu-packaging-guide/getting-set-up.rst:273
 msgid ""
 "`whoami` will tell Bazaar which name and email address it should use for "
 "your commit messages. With `launchpad-login` you set your Launchpad ID. This "
 "way code that you publish in Launchpad will be associated with you."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:273
+#: ../ubuntu-packaging-guide/getting-set-up.rst:277
 msgid ""
 "Note: If you can not remember the ID, go to https://launchpad.net/~ and see "
 "where it redirects you. The part after the \"~\" in the URL is your "
 "Launchpad ID.)"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:279
+#: ../ubuntu-packaging-guide/getting-set-up.rst:283
 msgid "Configure your shell"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:280
+#: ../ubuntu-packaging-guide/getting-set-up.rst:284
 msgid ""
 "Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you "
 "as well. Simply open your `~/.bashrc` in a text editor and add something "
 "like this to the bottom of it::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:287
+#: ../ubuntu-packaging-guide/getting-set-up.rst:291
 msgid "Now save the file and either restart your terminal or run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:291
+#: ../ubuntu-packaging-guide/getting-set-up.rst:295
 msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
