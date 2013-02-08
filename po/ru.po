@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-01 07:51+0000\n"
-"PO-Revision-Date: 2013-02-02 16:34+0000\n"
+"PO-Revision-Date: 2013-02-07 16:38+0000\n"
 "Last-Translator: Dmitry Shachnev <mitya57@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-03 04:59+0000\n"
-"X-Generator: Launchpad (build 16462)\n"
+"X-Launchpad-Export-Date: 2013-02-08 04:43+0000\n"
+"X-Generator: Launchpad (build 16482)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -179,6 +179,11 @@ msgid ""
 "the virtual machine after the tests were run. This makes it very easy to "
 "debug issues."
 msgstr ""
+"Эта команда будет использовать репозиторий ``lp:~super-"
+"friends/friends/packaging`` в качестве базиса для запуска тестов пакета "
+"``friends``. Если вы укажете bzr-репозиторий через ``-b``, но не укажете имя "
+"пакета, то будут использованы бинарные пакеты, полученные при сборке "
+"репозитория."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:126
 msgid ""
@@ -205,6 +210,8 @@ msgid ""
 "The `libxml2 tests`_ are very similar. They also run a test-build of a "
 "simple piece of C code and execute it."
 msgstr ""
+"Тесты `libxml2 tests`_ очень похожи. Они также производят тестовую сборку "
+"небольшого куска C-кода и запускают его."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:139
 msgid ""
@@ -228,6 +235,8 @@ msgid ""
 "very interesting because they emulate usage of CDs, Samba, DAV and other "
 "bits."
 msgstr ""
+"Тесты `gvfs tests`_ тестируют различную функциональность gvfs и представляют "
+"интерес, так как эмулируют использование CD, Samba, DAV и других компонентов."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:148
 msgid "Ubuntu infrastructure"
@@ -240,6 +249,10 @@ msgid ""
 "output of `automatically run autopkgtest tests`_ can be viewed on the web "
 "and is regularly updated."
 msgstr ""
+"Для пакетов с включённым ``autopkgtest`` тесты будут выполняться каждый раз "
+"при загрузке новой версии или изменениях обратных зависимостей. Выход "
+"`automatically run autopkgtest tests`_ доступен через web-интерфейс и "
+"регулярно обновляется."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:155
 msgid ""
@@ -247,22 +260,31 @@ msgid ""
 "they should still be submitted to Debian, as DEP-8 is a Debian specification "
 "and Debian developers or users can still manually run the tests."
 msgstr ""
+"Несмотря на то, что у Debian пока нет инфраструктуры автоматического "
+"тестирования, тесты следует отправлять в Debian, так как DEP-8 — "
+"спецификация Debian, и разработчики и пользователи Debian могут запускать "
+"тесты вручную."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:159
 msgid ""
 "Packages in Debian with a testsuite header will also be automatically added "
 "when they are synced to Ubuntu."
 msgstr ""
+"Пакеты Debian с заголовком ``XS-Testsuite``, скопированные в Ubuntu, также "
+"будут добавлены в список тестируемых пакетов."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:163
 msgid "Getting the test into Ubuntu"
-msgstr ""
+msgstr "Добавление теста в Ubuntu"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:165
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
+"Процесс добавления и отправки autopkgtest-теста для пакета похож на "
+":doc:`процесс исправления ошибки в Ubuntu<./fixing-a-bug>`. Необходимо "
+"просто:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:168
 msgid "run ``bzr branch ubuntu:<packagename>``,"
@@ -291,6 +313,9 @@ msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
 msgstr ""
+"закрепить ваши изменения, отправить их на Launchpad, создать заявку на "
+"слияние (merge proposal) и дождаться, пока она будет рассмотрена (как и "
+"любое другое изменение пакета)."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:178
 msgid "What you can do"
@@ -302,16 +327,22 @@ msgid ""
 "where packages which need tests are put into different categories. Here you "
 "can find examples of these tests and easily assign them to yourself."
 msgstr ""
+"Команда инженеров Ubuntu создала список необходимых тестов (`list of "
+"required test-cases`_), где пакеты, которым требуются тесты, разбиты на "
+"различные категории. Там вы можете посмотреть на примеры таких тестов и сами "
+"заняться каким-то из них."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:184
 msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel`_ to get in touch with developers who can help you."
 msgstr ""
+"Если у вас возникнут какие-то проблемы, зайдите на `#ubuntu-quality IRC "
+"channel`_, на котором есть готовые помочь вам разработчики."
 
 #: ../ubuntu-packaging-guide/backports.rst:3
 msgid "Backporting software updates"
-msgstr ""
+msgstr "Бэкпортирование обновлений программ"
 
 #: ../ubuntu-packaging-guide/backports.rst:5
 msgid ""
@@ -320,6 +351,10 @@ msgid ""
 "you have two options: either you `upload to a PPA "
 "<https://help.launchpad.net/Packaging/PPA>`_ or prepare a backport."
 msgstr ""
+"Иногда вам требуется сделать новую функциональность доступной в стабильном "
+"выпуске, и это не исправление критической ошибки. Для этого есть две опции: "
+"`загрузить пакет в PPA<https://help.launchpad.net/Packaging/PPA>`_ или "
+"подготовить бэкпорт."
 
 #: ../ubuntu-packaging-guide/backports.rst:12
 msgid "Personal Package Archive (PPA)"
@@ -456,6 +491,8 @@ msgid ""
 "If you want to run X programs you will need to bind the /tmp directory into "
 "the chroot, from outside the chroot run::"
 msgstr ""
+"Если вам нужно запускать программы, использующие X-сервер, вам нужно "
+"добавить в chroot директорию /tmp, для этого снаружи chroot запустите::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:50
 msgid "Some programs may need you to bind /dev or /proc."
