@@ -26,8 +26,8 @@ This project is licensed under the CC-BY-SA-3.0, the full text of which can be
 found in ``COPYING``. Further information can be found in ``debian/copyright``.
 
 
-Sphinx & reStructured text
---------------------------
+Sphinx & reStructuredText
+-------------------------
 
 The guide is built using `Sphinx <http://sphinx.pocoo.org/>`_. Articles should
 be written in reStructuredText. The following links might be helpful:
