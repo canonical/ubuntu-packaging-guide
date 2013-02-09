@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (0.3.1) UNRELEASED; urgency=low
+ubuntu-packaging-guide (0.3.1) raring; urgency=low
 
   [ Dmitry Shachnev ]
   * Makefile:
@@ -10,6 +10,9 @@ ubuntu-packaging-guide (0.3.1) UNRELEASED; urgency=low
   [ Daniel Holbach ]
   * Document where to find a list of required autopkgtests and where 
     to get help.
+  * Enable Russian translations. Add texlive-lang-cyrillic to debian/control
+    as Build-Depends.
+  * Bump Standards-Version. No changes.
 
   [ Andrew Starr-Bochicchio ]
   * Put license information into the page footer (LP: #1093447).
@@ -18,7 +21,7 @@ ubuntu-packaging-guide (0.3.1) UNRELEASED; urgency=low
   [ Dražen Lučanin ]
   * getting-set-up.rst: link to Enigmail for Thunderbird GPG support.
 
- -- Dražen Lučanin <kermit666@gmail.com>  Thu, 31 Jan 2013 22:22:13 +0100
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Sat, 09 Feb 2013 10:53:16 +0100
 
 ubuntu-packaging-guide (0.3.0) experimental; urgency=low
 
