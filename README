@@ -54,7 +54,7 @@ Translating
 -----------
 
 We use Sphinx l10n module and Gettext for translating Ubuntu Packaging Guide.
-Translation takes place on
+Translating takes place on
 `Launchpad <http://translations.launchpad.net/ubuntu-packaging-guide>`_, and
 translated ``.po`` files are automatically imported to the bzr branch.
 
