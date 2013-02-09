@@ -49,3 +49,22 @@ format with, for example, ``make html``. Run ``make help`` for a list of all
 targets.
 
 Please at least test your fixes by building the html version.
+
+Translating
+-----------
+
+We use Sphinx l10n module and Gettext for translating Ubuntu Packaging Guide.
+Translation takes place on
+`Launchpad <http://translations.launchpad.net/ubuntu-packaging-guide>`_, and
+translated ``.po`` files are automatically imported to the bzr branch.
+
+Some notes about translating the guide:
+
+- Only inline links can be translated currently. Do not translate named
+  links.
+- Some formatting is part of reStructuredText and should not be changed,
+  including emphasis (which uses asterisks or underscores), paragraph ending
+  before a code block (``::``) and double backtick quotes (``\`\```).
+
+To test your translation, use ``make BUILDER-LANGUAGE`` command (for example,
+``make html-it`` will build HTML docs in Italian language).
