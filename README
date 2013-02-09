@@ -29,7 +29,7 @@ found in ``COPYING``. Further information can be found in ``debian/copyright``.
 Sphinx & reStructuredText
 -------------------------
 
-The guide is built using `Sphinx <http://sphinx.pocoo.org/>`_. Articles should
+The guide is built using `Sphinx <http://sphinx-doc.org/>`_. Articles should
 be written in reStructuredText. The following links might be helpful:
 
 * http://docutils.sourceforge.net/docs/user/rst/quickstart.html
