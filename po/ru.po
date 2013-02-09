@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-01 07:51+0000\n"
-"PO-Revision-Date: 2013-02-07 16:38+0000\n"
+"PO-Revision-Date: 2013-02-08 13:53+0000\n"
 "Last-Translator: Dmitry Shachnev <mitya57@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-08 04:43+0000\n"
+"X-Launchpad-Export-Date: 2013-02-09 05:13+0000\n"
 "X-Generator: Launchpad (build 16482)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -393,6 +393,12 @@ msgid ""
 "the :doc:`Security Update or the Stable Release Update process<./security-"
 "and-stable-release-updates>`, as appropriate."
 msgstr ""
+"Целью проекта Backports является предоставление пользователям новой "
+"функциональности. Из-за рисков уменьшения стабильности при портировании "
+"новшеств, бэкпорты недоступны пользователям, пока они не включат их. Поэтому "
+"бэкпорты не являются местом для исправления ошибок. Если в пакете Ubuntu "
+"обнаружена ошибка, она должна быть исправлена через :doc:`обновления "
+"безопасности и стабильности`."
 
 #: ../ubuntu-packaging-guide/backports.rst:35
 msgid ""
@@ -401,6 +407,10 @@ msgid ""
 "``pbuilder-dist`` (in the ``ubuntu-dev-tools`` package) is a very handy tool "
 "to do this easily."
 msgstr ""
+"Когда вы определите, требуется ли вам адаптировать ваши изменения для "
+"стабильного релиза, вам будет необходимо собрать и протестировать ваш пакет "
+"на данном релизе. Команда ``pbuilder-dist`` (из пакета ``ubuntu-dev-tools``) "
+"поможет вам сделать это."
 
 #: ../ubuntu-packaging-guide/backports.rst:40
 msgid ""
@@ -410,6 +420,11 @@ msgid ""
 "be backported to, list all reverse-dependencies, and file the backporting "
 "request.  Also will it include a testing checklist in the bug."
 msgstr ""
+"Чтобы подать заявку на бэкпорт, можно использовать утилиту "
+"``requestbackport`` (также из пакета ``ubuntu-dev-tools``). Она определит "
+"все промежуточные выпуски, для которых пакет также придётся бэкпортировать, "
+"покажет, какие пакеты зависят от данного, и создаст заявку. Она также "
+"включит список требуемых тестов в заявку."
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
@@ -517,6 +532,11 @@ msgid ""
 "building packages but takes some more setup compared to PBuilder.  See `the "
 "Security Team Build Environment wiki page`_ for a full explanation."
 msgstr ""
+"SBuild — система, похожая на PBuilder, также позволяет создать окружение и "
+"произвести тестовую сборку. Она более похожа на то, что используется на "
+"Launchpad для сборки пакетов, но подготовка такого окружения занимает больше "
+"времени по сравнению с PBuilder. Смотрите `the Security Team Build "
+"Environment wiki page`_ для подробного объяснения."
 
 #: ../ubuntu-packaging-guide/chroots.rst:59
 msgid ""
@@ -825,6 +845,12 @@ msgid ""
 "require that each package installs a verbatim copy of its copyright and "
 "license information to ``/usr/share/doc/$(package_name)/copyright``."
 msgstr ""
+"Этот файл показывает информацию о копирайте на исходный код upstream и "
+"файлы, необходимые для сборки пакетов. Ubuntu и `Debian Policy (Section "
+"12.5) <http://www.debian.org/doc/debian-policy/ch-docs.html#s-"
+"copyrightfile>`_ требуют, чтобы каждый пакет устанавливал сжатую версию "
+"информации о копирайте и лицензии в "
+"``/usr/share/doc/$(package_name)/copyright``."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:136
 msgid ""
@@ -862,6 +888,11 @@ msgid ""
 "also has a target to clean up all the build files so you end up with just a "
 "source package again."
 msgstr ""
+"Последний файл, который мы рассмотрим, это ``rules``. Он выполняет всю "
+"работу по сборке нашего пакета. Это Makefile, в котором есть функции "
+"компиляции программы, её установки и создания ``.deb``-пакета из "
+"установленных файлов. В нём есть также функция очистки файлов сборки, "
+"которая удаляет всё, кроме собственно пакета исходного кода."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:194
 msgid ""
@@ -877,6 +908,10 @@ msgid ""
 "build target that ``debian/rules`` is called with as an argument to "
 "``/usr/bin/dh``, which itself will call all the necessary ``dh_*`` commands."
 msgstr ""
+"Давайте рассмотрим этот файл внимательнее. На каждом этапе сборки "
+"``debian/rules`` вызывается с аргументом, который передаётся "
+"``/usr/bin/dh``, который, в свою очередь, вызывает необходимые команды "
+"``dh_*``."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:212
 msgid ""
@@ -897,6 +932,10 @@ msgid ""
 "arch sequences are passed the \"-a\" option to ensure they only work on "
 "architecture dependent packages."
 msgstr ""
+"Командам из последовательности ``binary-indep`` передаётся аргумент ``-i``, "
+"чтобы они затрагивали только архитектурно-независимые пакеты, а командам из "
+"последовательности ``binary-arch`` — аргумент ``-a``, чтобы онм затрагивали "
+"только архитектурно-зависимые пакеты."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:226
 msgid ""
@@ -932,6 +971,12 @@ msgid ""
 "options, or run entirely different commands instead. (Note that to use this "
 "feature, you should Build-Depend on debhelper 7.0.50 or above.)"
 msgstr ""
+"Если в ``debian/rules`` есть функция с именем, похожим на "
+"``override_dh_команда``, то вместо данной команды ``dh`` выполнит данную "
+"функцию. Эта функция может запустить ту же команду с другими аргументами, "
+"или же совершенно другую команду. (Замечание: для использования этой "
+"функциональности при сборке требуется пакет debhelper версии не менее "
+"7.0.50)."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:245
 msgid ""
@@ -1402,6 +1447,9 @@ msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
 msgstr ""
+"Эта команда скопирует файлы, необходимые для сборки пакета, во временную "
+"директорию. Вы можете изменять эти файлы в текстовом редакторе или применять "
+"патчи из upstream, например::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:116
 msgid ""
@@ -1456,6 +1504,11 @@ msgid ""
 "includes ``debian/changelog``, where changes of each uploaded package are "
 "tracked."
 msgstr ""
+"Очень важно документировать свои изменения в достаточной степени, чтобы "
+"разработчикам впоследствии не пришлось гадать, какими были основания и "
+"предпосылки сделанных вами изменений. Каждый пакет исходного кода Debian и "
+"Ubuntu включает в себя файл ``debian/changelog``, в котором отслеживаются "
+"вносимые в пакет изменения."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:146
 msgid "The easiest way to update this is to run::"
@@ -1521,7 +1574,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:181
 msgid "Committing the fix"
-msgstr ""
+msgstr "Закрепление изменения"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:183
 msgid "With the changelog entry written and saved, you can just run::"
@@ -1540,6 +1593,8 @@ msgid ""
 "To push it to Launchpad, as the remote branch name, you need to stick to the "
 "following nomenclature::"
 msgstr ""
+"Для Launchpad-репозитория, в который отправлять ваши изменения, используйте "
+"cледующее имя::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
 msgid "This could for example be::"
@@ -1726,6 +1781,11 @@ msgid ""
 "to commit it is good enough? Did you manage to only partially fix the issue "
 "and you want to at least share your part of it?"
 msgstr ""
+"Если сообщение об ошибке не было зарегистрировано, вы можете его создать. "
+"Подумайте над двумя вещами: Может быть, изменение настолько мало, что "
+"достаточно просто попросить кого-нибудь применить его? Может быть, у вас "
+"получилось только частично исправить ошибку, и вы хотите поделиться вашей "
+"частью?"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:100
 msgid "It is great if you can offer help and will surely be appreciated."
@@ -1917,7 +1977,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:229
 msgid "Getting the fix included"
-msgstr ""
+msgstr "Применение исправления"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:231
 msgid ""
@@ -1925,6 +1985,9 @@ msgid ""
 "guarantee that everybody can take the Upstream source as-is and don't need "
 "to have local modifications to fix it."
 msgstr ""
+"Важно попытаться продвинуть ваше исправление как можно дальше в upstream. "
+"Это позволит любому взять исходный код в том виде, в каком он представлен в "
+"upstream, и не применять к нему никаких дополнительных модификаций."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:235
 msgid ""
@@ -1936,6 +1999,13 @@ msgid ""
 "possible, you will need to send the solution to multiple bug trackers. "
 "Provided the issue affects all parties in question."
 msgstr ""
+"В нашем случае мы установили, что ошибка относится только к пакетам Ubuntu и "
+"Debian. Так как Ubuntu основана на Debian, мы должны отправить исправление в "
+"Debian. После того, как в Debian появится исправленный пакет, он попадёт "
+"также и в Ubuntu. Наша ошибка не критична, поэтому можно так сделать. Если "
+"же важно применить исправление как можно скорее, то необходимо отправить "
+"исправление в несколько баг-трекеров (если оно затрагивает соотвествующие "
+"проекты)."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:243
 msgid "To submit the patch to Debian, simply run::"
@@ -1947,34 +2017,47 @@ msgid ""
 "the correct place. Be sure to review the diff again to make sure it does not "
 "include random changes you made earlier."
 msgstr ""
+"Эта команда проведёт вас через несколько шагов, необходимых для оформления "
+"отчёта об ошибке и отправки его в правильное место. Обязательно просмотрите "
+"ваши изменения, чтобы убедиться, что там нет ничего постороннего."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:251
 msgid ""
 "Communication is important, so when you add some more description to it to "
 "the inclusion request, be friendly, explain it well."
 msgstr ""
+"Коммуникация имеет очень большое значение, поэтому при добавлении описания "
+"предоставьте хорошее и дружественное объяснение."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:254
 msgid ""
 "If everything went well you should get a mail from Debian's bug tracking "
 "system with more information. This might sometimes take a few minutes."
 msgstr ""
+"Если всё прошло нормально, то вы должны получить почтовое сообщение от "
+"системы отслеживания ошибок Debian с дополнительной информацией. Иногда это "
+"может занять несколько минут."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:257
 msgid ""
 "If the problem is just in Ubuntu, you might want to consider :doc:`Seeking "
 "Review and Sponsorship<./udd-sponsorship>` to get the fix included."
 msgstr ""
+"Если проблема наблюдается только в Ubuntu, вы можете воспользоваться "
+":doc:`инструкцией по поиску спонсора<./udd-sponsorship>`."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:263
 msgid "Additional considerations"
-msgstr ""
+msgstr "Дополнительные замечания"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:265
 msgid ""
 "If you find a package and find that there are a couple of trivial things you "
 "can fix at the same time, do it. This will speed up review and inclusion."
 msgstr ""
+"Если вы можете внести в пакет несколько тривиальных исправлений сразу, "
+"сделайте это. Это позволит разработчикам быстрее рассмотреть и применить эти "
+"изменения."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:268
 msgid ""
@@ -1982,6 +2065,9 @@ msgid ""
 "send individual patches or merge proposals instead. If there are individual "
 "bugs filed for the issues already, this makes it even easier."
 msgstr ""
+"Если вы хотите внести несколько больших изменений, лучше посылать патчи или "
+"запросы на слияние отдельно для каждого изменения. Это проще, если уже "
+"созданы индивидуальные сообщения об ошибках."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
 msgid "Getting Set Up"
@@ -2049,6 +2135,9 @@ msgid ""
 "<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways "
 "to safely use the development release."
 msgstr ""
+"Не беспокойтесь, на вики-странице `Использование разрабатываемых версий "
+"<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ описано множество "
+"способов безопасно использовать разрабатываемые выпуски."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
@@ -2467,6 +2556,14 @@ msgid ""
 "the encrypted email's contents, type ``gpg`` in your terminal, then paste "
 "the email contents into your terminal window."
 msgstr ""
+"Launchpad зашифрует своё почтовое сообщение вашим открытым ключом, чтобы "
+"убедиться, что ключ действительно ваш. Если вы пользуетесь почтовым клиентом "
+"Thunderbird, используемым по умолчанию в Ubuntu, для дешифровки сообщения "
+"можно установить расширение `Enigmail "
+"<https://apps.ubuntu.com/cat/applications/enigmail/>`_. Если ваш почтовый "
+"клиент не поддерживает шифрование OpenPGP, скопируйте зашифрованное "
+"содержимое письма, наберите в терминале ``gpg`` и вставьте содержимое письма "
+"в окно терминала."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:240
 msgid ""
@@ -2583,7 +2680,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:9
 msgid "Ubuntu Packaging Guide"
-msgstr ""
+msgstr "Руководство разрабочика Ubuntu"
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
@@ -2591,24 +2688,29 @@ msgid ""
 "place for learning all about Ubuntu Development and packaging. After reading "
 "this guide you will have:"
 msgstr ""
+"Добро пожаловать в руководство разработчика Ubuntu! Это официальная "
+"документация по всем темам, связанных с разработкой Ubuntu и сборкой пакетов "
+"для этой операционной системы. После прочтения этого руководства вы:"
 
 #: ../ubuntu-packaging-guide/index.rst:15
 msgid ""
 "heard about the most important players, processes and tools in Ubuntu "
 "development,"
 msgstr ""
+"будете знать о самых важных утилитах, процессах и командах в разработке "
+"Ubuntu,"
 
 #: ../ubuntu-packaging-guide/index.rst:17
 msgid "your development environment set up correctly,"
-msgstr ""
+msgstr "правильно настроить вашу среду разработки,"
 
 #: ../ubuntu-packaging-guide/index.rst:18
 msgid "a better idea of how to join our community,"
-msgstr ""
+msgstr "лучше узнать о том, как присоединиться к нашему сообществу,"
 
 #: ../ubuntu-packaging-guide/index.rst:19
 msgid "fixed an actual Ubuntu bug as part of the tutorials."
-msgstr ""
+msgstr "исправите настоящую ошибку в Ubuntu в процессе руководства."
 
 #: ../ubuntu-packaging-guide/index.rst:21
 msgid ""
@@ -2639,6 +2741,11 @@ msgid ""
 "want you to be involved as well. We want you to get involved, to ask "
 "questions, to make Ubuntu better together with us."
 msgstr ""
+"Ubuntu также является сообществом замечательных людей, верящих в то, что "
+"программное обеспечение должно быть свободным и доступным для всех. "
+"Участники сообщества приветствуют вас и хотят, чтобы вы тоже к ним "
+"присоединились. Мы хотим, чтобы вы принимали участие в нашей работе, "
+"задавали вопросы, делали Ubuntu лучше вместе с нами."
 
 #: ../ubuntu-packaging-guide/index.rst:35
 msgid ""
@@ -2646,6 +2753,9 @@ msgid ""
 "article<./communication>` and you will find out how to most easily get in "
 "touch with other developers."
 msgstr ""
+"Если у вас возникнут трудности: не волнуйтесь! Прочтите :doc:`раздел о "
+"коммуникации<./communication>`, и вы узнаете, как легко связаться с "
+"остальными разработчиками."
 
 #: ../ubuntu-packaging-guide/index.rst:39
 msgid "The guide is split up into two sections:"
@@ -2951,6 +3061,9 @@ msgid ""
 "Additional steps might involve getting the change backported to an older, "
 "still supported version of Ubuntu and forwarding it to Upstream."
 msgstr ""
+"Дополнительные шаги, которые вы можете предпринять, это адапитрование вашего "
+"изменения для предыдущих поддерживаемых выпусков Ubuntu, и отправление его в "
+"upstream."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:119
 msgid ""
@@ -3373,7 +3486,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:3
 msgid "Packaging New Software"
-msgstr ""
+msgstr "Создание пакетов для новых программ"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:5
 msgid ""

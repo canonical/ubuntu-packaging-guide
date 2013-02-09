@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-01 07:51+0000\n"
-"PO-Revision-Date: 2012-12-11 11:56+0000\n"
+"PO-Revision-Date: 2013-02-08 08:55+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-02 05:33+0000\n"
-"X-Generator: Launchpad (build 16462)\n"
+"X-Launchpad-Export-Date: 2013-02-09 05:13+0000\n"
+"X-Generator: Launchpad (build 16482)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -146,20 +146,30 @@ msgid ""
 "uses a pristine virtual machine to run the tests. To set it up, firstly "
 "install the needed dependencies::"
 msgstr ""
+"Der Nachteil dieser Herangehensweise ist, dass du es zwar lokal testen "
+"kannst, aber nicht sicherstellen kannst, dass es in einer minimalen Umgebung "
+"funktioniert. Zum Beispiel ist es schwierig festzustellen, ob alle "
+"benötigten Pakete für die Versuche installiert sind. Mit 'lp:auto-package-"
+"testing' haben wir ein umfangreiches Hilfsmittel, welches auf Basis einer "
+"unveränderten virtuellen Machine die Tests durchführt. Um es einzurichten, "
+"musst du zuerst die benötigten Abhängigkeiten installieren::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
 msgid "Then, get the source code from Launchpad::"
-msgstr ""
+msgstr "Dann besorge dir den Quellcode von Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Quantal AMD64 system::"
-msgstr ""
+msgstr "Und stelle ein Quantal AMD64 System zusammen::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Quantal AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Dieser Befehl wird eine unverändertes Abbild einer Quantal AMD64 VM von "
+"einem Server liefern. Um den Test zu starten, musst du nur folgenden Text "
+"eingeben::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -178,6 +188,8 @@ msgid ""
 "The `auto-package-testing documentation`_ has a lot more valuable "
 "information on other testing options."
 msgstr ""
+"Die 'auto-package-testing documentation' hat viele andere wichtige "
+"Informationen für andere Testoptionen."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:132
 msgid "Further examples"
@@ -188,6 +200,9 @@ msgid ""
 "This list is not comprehensive, but might help you get a better idea of how "
 "automated tests are implemented and used in Ubuntu."
 msgstr ""
+"Diese Liste ist nicht vollständig, aber wird dir sicher einen guten Einblick "
+"geben wie automatisierte Testdurchläufe in Ubuntu implementiert und benutzt "
+"werden."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:137
 msgid ""
@@ -203,10 +218,16 @@ msgid ""
 "There is an additional \"python3-gi\" test which verifies that the GTK "
 "library can also be used through introspection."
 msgstr ""
+"Der Test 'gtk+3.0 tests' erwirkt außerdem einen Kompilierungs-, Link- und "
+"Durchlaufstest im ''build'' Test. Es gibt einen zusätzlichen \"python3-gi\"-"
+"Test, welcher sicherstellt, dass die GTK-Bibliothek auch durch "
+"\"Introspection\" benutzt werden kann."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:142
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
 msgstr ""
+"In den `ubiquity tests`_ wird die Test-Suite von Upstream (den Software-"
+"Autoren) ausgeführt."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid ""
@@ -214,10 +235,13 @@ msgid ""
 "very interesting because they emulate usage of CDs, Samba, DAV and other "
 "bits."
 msgstr ""
+"Die `gvfs tests`_ haben ausführliche Funktionalitätstests und sind sehr "
+"interessant, weil sie die Benutzung von CDs, Samba, DAV und anderen Dingen "
+"simulieren."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:148
 msgid "Ubuntu infrastructure"
-msgstr ""
+msgstr "Ubuntu Infrastruktur"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:150
 msgid ""
@@ -226,6 +250,10 @@ msgid ""
 "output of `automatically run autopkgtest tests`_ can be viewed on the web "
 "and is regularly updated."
 msgstr ""
+"Pakete welche ``autopkgtest`` aktiviert haben, werden ihre Tests immer dann "
+"ausführen, wenn sie hochgeladen werden oder sich ihre Rückabhängigeiten "
+"ändern. Die Ausgabe von `automatically run autopkgtest tests`_ kann im "
+"Internet abgerufen werden und wird regelmäßig aktualisiert."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:155
 msgid ""
@@ -233,26 +261,35 @@ msgid ""
 "they should still be submitted to Debian, as DEP-8 is a Debian specification "
 "and Debian developers or users can still manually run the tests."
 msgstr ""
+"Debian hat bisher noch keine Infrastruktur für Automatisches Testen, aber "
+"Tests sollten trotzdem nach Debian weitergeleitet werden, denn DEP-8 ist "
+"eine Debian-Spezifikation und Debian-Entwickler und -Nutzer können Tests "
+"immerhin manuell ausführen."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:159
 msgid ""
 "Packages in Debian with a testsuite header will also be automatically added "
 "when they are synced to Ubuntu."
 msgstr ""
+"Pakete in Debian mit dem Testsuite-Header werden außerdem automatisch "
+"hinzugefügt, wenn sie nach Ubuntu gesynced werden."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:163
 msgid "Getting the test into Ubuntu"
-msgstr ""
+msgstr "Die Tests in Ubuntu bekommen"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:165
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
+"Der Prozess, um einen autopkgtest in Ubuntu einzubringen ist größtenteils "
+"identisch mit :doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Im Prinzip muss "
+"man einfach:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:168
 msgid "run ``bzr branch ubuntu:<packagename>``,"
-msgstr ""
+msgstr "Führe ``bzr branch ubuntu:<Paketname>`` aus,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "edit ``debian/control`` to enable the tests,"
@@ -278,10 +315,13 @@ msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
 msgstr ""
+"die Änderungen committen, sie nach Launchpad hochladen, und einen Merge "
+"vorschlagen, sie dann überprüfen lassen, genau wie jede andere Änderung an "
+"einem Quellpaket auch."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:178
 msgid "What you can do"
-msgstr ""
+msgstr "Was du machen kannst"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:180
 msgid ""
@@ -289,16 +329,22 @@ msgid ""
 "where packages which need tests are put into different categories. Here you "
 "can find examples of these tests and easily assign them to yourself."
 msgstr ""
+"Das Ubuntu Engineering Team hat eine Liste von `list of required test-"
+"cases`_ zusammengestellt, wo Pakete die Tests brauchen in verschiedene "
+"Kategorien aufgeteilt wurden. Hier kannst du eine Liste von Beispielen von "
+"Tests finden und das Schreiben der Tests Dir zuweisen."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:184
 msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel`_ to get in touch with developers who can help you."
 msgstr ""
+"Falls irgendwelche Probleme auftreten, kannst du dem `#ubuntu-quality IRC "
+"channel`_ beitreten, um in Kontakt mit den Entwicklern zu treten."
 
 #: ../ubuntu-packaging-guide/backports.rst:3
 msgid "Backporting software updates"
-msgstr ""
+msgstr "Zurückportieren von Software-Aktualisierungen"
 
 #: ../ubuntu-packaging-guide/backports.rst:5
 msgid ""
@@ -307,6 +353,12 @@ msgid ""
 "you have two options: either you `upload to a PPA "
 "<https://help.launchpad.net/Packaging/PPA>`_ or prepare a backport."
 msgstr ""
+"In manchen Fällen möchtest Du vielleicht gerne eine neue Funktion in einer "
+"stabilen Version verfügbar machen, die nicht mit einer kritischen "
+"Fehlerbehebung zusammenhängt. Für diese Fälle gibt es zwei Möglichkeiten: "
+"Entweder du `lädst das Paket in ein PPA hoch "
+"<https://help.launchpad.net/Packaging/PPA>`_ oder bereitest einen Backport "
+"vor."
 
 #: ../ubuntu-packaging-guide/backports.rst:12
 msgid "Personal Package Archive (PPA)"
@@ -318,12 +370,18 @@ msgid ""
 "don't need approval of anyone, but the downside of it is that your users "
 "will have to manually enable it. It is a non-standard software source."
 msgstr ""
+"Ein PPA bringt viele Vorteile. Es ist leicht zu benutzen und du benötigst "
+"keinerlei Genehmigung oder Überprüfung anderer. Aber andererseits werden die "
+"Benutzer sie manuell einrichten müssen, da sie keine Standard-Paketquelle "
+"ist."
 
 #: ../ubuntu-packaging-guide/backports.rst:18
 msgid ""
 "The `PPA documentation on Launchpad`_ is fairly comprehensive and should get "
 "you up and running in no time."
 msgstr ""
+"Die `PPA Dokumentation auf Launchpad`_ ist sehr verständlich und sollte dich "
+"schnell voran bringen."
 
 #: ../ubuntu-packaging-guide/backports.rst:25
 msgid "Official Ubuntu Backports"
@@ -4751,12 +4809,16 @@ msgid ""
 "This only works with bzr-builddeb 2.7.5 and bzr 2.4, for older versions use "
 "``debcommit``."
 msgstr ""
+"Das funktioniert nur mit 'bzr-builddeb 2.7.5' und 'bzr 2.4', verwende "
+"``debcommit`` für ältere Versionen."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:71
 msgid ""
 "Along the way, you'll want to build your branch so that you can test it to "
 "make sure it does actually fix the bug."
 msgstr ""
+"Währenddessen wirst deinen eigenen Zweig erstellen wollen, sodass du auch "
+"sicher gehen kannst, dass der Fehler auch behoben wurde."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:74
 msgid ""
