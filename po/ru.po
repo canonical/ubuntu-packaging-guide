@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-02-01 07:51+0000\n"
-"PO-Revision-Date: 2013-02-08 13:53+0000\n"
+"POT-Creation-Date: 2013-02-09 14:21+0000\n"
+"PO-Revision-Date: 2013-02-09 15:13+0000\n"
 "Last-Translator: Dmitry Shachnev <mitya57@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-09 05:13+0000\n"
+"X-Launchpad-Export-Date: 2013-02-10 05:06+0000\n"
 "X-Generator: Launchpad (build 16482)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -1011,6 +1011,8 @@ msgid ""
 "To install files into your package that are not handled by the upstream "
 "build system."
 msgstr ""
+"Для установки в ваш пакет файлов, не установленных оригинальной системой "
+"сборки."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:260
 msgid ""
@@ -1193,12 +1195,14 @@ msgstr "Поддержка дополнительных форматов сжа�
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:363
 msgid "Support for multiple upstream tarballs"
-msgstr ""
+msgstr "Поддержка нескольких архивов с оригинальным исходным кодом"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:365
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
 msgstr ""
+"Необязательно перепаковывать архив с оригинальным исходным кодом, чтобы "
+"удалить директорию ``debian``."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:367
 msgid ""
@@ -1366,23 +1370,17 @@ msgstr "Получение кода"
 msgid ""
 "Once you know the source package to work on, you will want to get a copy of "
 "the code on your system, so that you can debug it.  In Ubuntu Distributed "
-"Development this is done by :ref:`*branching* the source package "
-"<branching>` branch corresponding to the source package.  Launchpad "
-"maintains source package branches for all the packages in Ubuntu."
+"Development this is done by :ref:`branching the source package <branching>` "
+"branch corresponding to the source package.  Launchpad maintains source "
+"package branches for all the packages in Ubuntu."
 msgstr ""
-"После того, как вы узнали имя содержащего ошибку пакета исходного кода, "
-"можно получить копию этого кода на ваш компьютер, чтобы заняться его "
-"отладкой.  В Ubuntu Distributed Development это делается с помощью "
-":ref:`*ответвления*<branching>` ветки исходного кода, соответствующей "
-"данному пакету.  Launchpad поддерживает ветки исходного кода для всех "
-"пакетов, входящих в состав Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:74
 msgid ""
 "Once you've got a local branch of the source package, you can investigate "
 "the bug, create a fix, and upload your proposed fix to Launchpad, in the "
 "form of a Bazaar branch.  When you are happy with your fix, you can "
-":ref:`submit a *merge proposal* <merge-proposal>`, which asks other Ubuntu "
+":ref:`submit a merge proposal <merge-proposal>`, which asks other Ubuntu "
 "developers to review and approve your change.  If they agree with your "
 "changes, an Ubuntu developer will upload the new version of the package to "
 "Ubuntu so that everyone gets the benefit of your excellent fix - and you get "
@@ -1395,6 +1393,8 @@ msgid ""
 "We'll describe specifics on how to branch the code, push your fix, and "
 "request a review in the following sections."
 msgstr ""
+"Мы опишем специфику загрузки кода, отправки изменений, и создания заявки на "
+"просмотр в следующимх разделах."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:89
 msgid "Work on a fix"
@@ -1407,6 +1407,10 @@ msgid ""
 "such as obvious typos first. Try to keep changes as minimal as possible and "
 "document your change and assumptions clearly."
 msgstr ""
+"Есть целые книги о нахождении ошибок, их исправлении, тестировании и так "
+"далее. Если вы новичок в программировании, попробуйте исправлять лёгкие "
+"ошибки, такие как опечатки. Пытайтесь делать ваши изменения минимальными и "
+"чётко документировать ваши изменения и предположения."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
 msgid ""
@@ -1433,6 +1437,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:101
 msgid "bugs or package uploads of Debian or other distributions."
 msgstr ""
+"отчёты об ошибках и новые версии пакетов в Debian и других дистрибутивах."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:106
 msgid ""
@@ -2702,11 +2707,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:17
 msgid "your development environment set up correctly,"
-msgstr "правильно настроить вашу среду разработки,"
+msgstr "сможете правильно настроить вашу среду разработки,"
 
 #: ../ubuntu-packaging-guide/index.rst:18
 msgid "a better idea of how to join our community,"
-msgstr "лучше узнать о том, как присоединиться к нашему сообществу,"
+msgstr "узнаете, как присоединиться к нашему сообществу,"
 
 #: ../ubuntu-packaging-guide/index.rst:19
 msgid "fixed an actual Ubuntu bug as part of the tutorials."
@@ -3125,6 +3130,10 @@ msgid ""
 "upstream authors or submitted upstream with the expectation they will be "
 "merged soon or we have consulted the issue with the upstream authors."
 msgstr ""
+"Kubuntu добавляет патчи в приложения KDE, только если они исходят от "
+"оригинальных авторов, либо если они были отправлены в upstream и есть "
+"уверенность в их скором принятии, либо если мы обсудили проблемы с "
+"разработчиками KDE."
 
 #: ../ubuntu-packaging-guide/kde.rst:22
 msgid ""
@@ -3155,6 +3164,9 @@ msgid ""
 "will ensure the correct build flags are used and add options such as "
 "handling kdeinit stubs and translations::"
 msgstr ""
+"Пакеты, использующие Debhelper 7, должны добавить опцию ``--with=kde``. Это "
+"позволит убедиться в использовании правильных флагов сборки и опций, таких "
+"как обработка заданий kdeinit и файлов перевода."
 
 #: ../ubuntu-packaging-guide/kde.rst:39
 msgid ""
@@ -3188,6 +3200,9 @@ msgid ""
 "make available upstream translations and handle ``.desktop`` file "
 "translations."
 msgstr ""
+"Итак, каждый KDE-пакет в main должен создавать шаблоны переводов, включать "
+"оригинальные переводы и обрабатывать переводимые строки в ``.desktop``-"
+"файлах."
 
 #: ../ubuntu-packaging-guide/kde.rst:56
 msgid ""
@@ -3256,6 +3271,12 @@ msgid ""
 "See `Working with symbols files`_ for how to create and keep these files up "
 "to date."
 msgstr ""
+"Библиотечные символы хранятся в файлах ``.symbols``, для того чтобы при "
+"появлении новых версий не было отсутствующих символов. KDE использует "
+"библиотеки C++, которые немного отличаются от библиотек C. Команда Debian "
+"Qt/KDE имеет скрипты, обрабатывающие это. Смотрите страницу `Working with "
+"symbols files`_ для подробностей по созданию этих файлов и поддерживанию их "
+"в актуальном состоянии."
 
 #: ../ubuntu-packaging-guide/libraries.rst:3
 msgid "Shared Libraries"
