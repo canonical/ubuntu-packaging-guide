@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-02-01 07:51+0000\n"
-"PO-Revision-Date: 2013-02-08 13:53+0000\n"
-"Last-Translator: Dmitry Shachnev <mitya57@gmail.com>\n"
+"POT-Creation-Date: 2013-02-09 14:21+0000\n"
+"PO-Revision-Date: 2013-02-10 13:21+0000\n"
+"Last-Translator: Aleksey Kabanov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-09 05:13+0000\n"
+"X-Launchpad-Export-Date: 2013-02-11 05:17+0000\n"
 "X-Generator: Launchpad (build 16482)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -1011,6 +1011,8 @@ msgid ""
 "To install files into your package that are not handled by the upstream "
 "build system."
 msgstr ""
+"Для установки в ваш пакет файлов, не установленных оригинальной системой "
+"сборки."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:260
 msgid ""
@@ -1193,12 +1195,14 @@ msgstr "Поддержка дополнительных форматов сжа�
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:363
 msgid "Support for multiple upstream tarballs"
-msgstr ""
+msgstr "Поддержка нескольких архивов с оригинальным исходным кодом"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:365
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
 msgstr ""
+"Необязательно перепаковывать архив с оригинальным исходным кодом, чтобы "
+"удалить директорию ``debian``."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:367
 msgid ""
@@ -1366,23 +1370,17 @@ msgstr "Получение кода"
 msgid ""
 "Once you know the source package to work on, you will want to get a copy of "
 "the code on your system, so that you can debug it.  In Ubuntu Distributed "
-"Development this is done by :ref:`*branching* the source package "
-"<branching>` branch corresponding to the source package.  Launchpad "
-"maintains source package branches for all the packages in Ubuntu."
+"Development this is done by :ref:`branching the source package <branching>` "
+"branch corresponding to the source package.  Launchpad maintains source "
+"package branches for all the packages in Ubuntu."
 msgstr ""
-"После того, как вы узнали имя содержащего ошибку пакета исходного кода, "
-"можно получить копию этого кода на ваш компьютер, чтобы заняться его "
-"отладкой.  В Ubuntu Distributed Development это делается с помощью "
-":ref:`*ответвления*<branching>` ветки исходного кода, соответствующей "
-"данному пакету.  Launchpad поддерживает ветки исходного кода для всех "
-"пакетов, входящих в состав Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:74
 msgid ""
 "Once you've got a local branch of the source package, you can investigate "
 "the bug, create a fix, and upload your proposed fix to Launchpad, in the "
 "form of a Bazaar branch.  When you are happy with your fix, you can "
-":ref:`submit a *merge proposal* <merge-proposal>`, which asks other Ubuntu "
+":ref:`submit a merge proposal <merge-proposal>`, which asks other Ubuntu "
 "developers to review and approve your change.  If they agree with your "
 "changes, an Ubuntu developer will upload the new version of the package to "
 "Ubuntu so that everyone gets the benefit of your excellent fix - and you get "
@@ -1395,6 +1393,8 @@ msgid ""
 "We'll describe specifics on how to branch the code, push your fix, and "
 "request a review in the following sections."
 msgstr ""
+"Мы опишем специфику загрузки кода, отправки изменений, и создания заявки на "
+"просмотр в следующимх разделах."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:89
 msgid "Work on a fix"
@@ -1407,6 +1407,10 @@ msgid ""
 "such as obvious typos first. Try to keep changes as minimal as possible and "
 "document your change and assumptions clearly."
 msgstr ""
+"Есть целые книги о нахождении ошибок, их исправлении, тестировании и так "
+"далее. Если вы новичок в программировании, попробуйте исправлять лёгкие "
+"ошибки, такие как опечатки. Пытайтесь делать ваши изменения минимальными и "
+"чётко документировать ваши изменения и предположения."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
 msgid ""
@@ -1433,6 +1437,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:101
 msgid "bugs or package uploads of Debian or other distributions."
 msgstr ""
+"отчёты об ошибках и новые версии пакетов в Debian и других дистрибутивах."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:106
 msgid ""
@@ -2702,11 +2707,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:17
 msgid "your development environment set up correctly,"
-msgstr "правильно настроить вашу среду разработки,"
+msgstr "сможете правильно настроить вашу среду разработки,"
 
 #: ../ubuntu-packaging-guide/index.rst:18
 msgid "a better idea of how to join our community,"
-msgstr "лучше узнать о том, как присоединиться к нашему сообществу,"
+msgstr "узнаете, как присоединиться к нашему сообществу,"
 
 #: ../ubuntu-packaging-guide/index.rst:19
 msgid "fixed an actual Ubuntu bug as part of the tutorials."
@@ -3125,6 +3130,10 @@ msgid ""
 "upstream authors or submitted upstream with the expectation they will be "
 "merged soon or we have consulted the issue with the upstream authors."
 msgstr ""
+"Kubuntu добавляет патчи в приложения KDE, только если они исходят от "
+"оригинальных авторов, либо если они были отправлены в upstream и есть "
+"уверенность в их скором принятии, либо если мы обсудили проблемы с "
+"разработчиками KDE."
 
 #: ../ubuntu-packaging-guide/kde.rst:22
 msgid ""
@@ -3155,6 +3164,9 @@ msgid ""
 "will ensure the correct build flags are used and add options such as "
 "handling kdeinit stubs and translations::"
 msgstr ""
+"Пакеты, использующие Debhelper 7, должны добавить опцию ``--with=kde``. Это "
+"позволит убедиться в использовании правильных флагов сборки и опций, таких "
+"как обработка заданий kdeinit и файлов перевода."
 
 #: ../ubuntu-packaging-guide/kde.rst:39
 msgid ""
@@ -3188,6 +3200,9 @@ msgid ""
 "make available upstream translations and handle ``.desktop`` file "
 "translations."
 msgstr ""
+"Итак, каждый KDE-пакет в main должен создавать шаблоны переводов, включать "
+"оригинальные переводы и обрабатывать переводимые строки в ``.desktop``-"
+"файлах."
 
 #: ../ubuntu-packaging-guide/kde.rst:56
 msgid ""
@@ -3256,6 +3271,12 @@ msgid ""
 "See `Working with symbols files`_ for how to create and keep these files up "
 "to date."
 msgstr ""
+"Библиотечные символы хранятся в файлах ``.symbols``, для того чтобы при "
+"появлении новых версий не было отсутствующих символов. KDE использует "
+"библиотеки C++, которые немного отличаются от библиотек C. Команда Debian "
+"Qt/KDE имеет скрипты, обрабатывающие это. Смотрите страницу `Working with "
+"symbols files`_ для подробностей по созданию этих файлов и поддерживанию их "
+"в актуальном состоянии."
 
 #: ../ubuntu-packaging-guide/libraries.rst:3
 msgid "Shared Libraries"
@@ -3483,6 +3504,8 @@ msgid ""
 "Junichi Uekawa's `Debian Library Packaging Guide`_ goes into this topic in "
 "more detail."
 msgstr ""
+"В `Debian Library Packaging Guide`_ (автор: Junichi Uekawa) эта тема "
+"рассматривается более подробно."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:3
 msgid "Packaging New Software"
@@ -4027,7 +4050,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:152
 msgid "Making A Package Use Quilt"
-msgstr ""
+msgstr "Создание пакета с использованием Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:154
 msgid ""
@@ -4564,7 +4587,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:3
 msgid "Traditional Packaging"
-msgstr ""
+msgstr "Традиционные методы создания пакетов"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:5
 msgid ""
@@ -5034,6 +5057,8 @@ msgid ""
 "(This command uses *qbzr* for a GUI, run ``log`` instead of ``qlog`` for "
 "console output.)"
 msgstr ""
+"(Эта команда использует в качестве графического интерфейса *qbzr*. Для "
+"вывода в консоль, запустите ``log`` вместо ``qlog``.)"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:64
 msgid ""
@@ -5231,6 +5256,7 @@ msgstr ""
 msgid ""
 "This shows you the difference between package version 0.1-1 and 0.1-2."
 msgstr ""
+"Эта команда покажет вам различия между версиями пакета 0.1-1 и 0.1-2."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:3
 msgid "Merging — Updating from Debian and Upstream"
@@ -5309,6 +5335,9 @@ msgid ""
 "versions (0.6.10-5ubuntu1).  In similar way you can compare to any other "
 "versions.  To see all available versions run::"
 msgstr ""
+"Эта команда покажет различия между версиями в Debian (0.6.10-5) и Ubuntu "
+"(0.6.10-5ubuntu1).  Подобным же способом вы можете выполнить сравнение с "
+"любыми другими версиями.  Чтобы увидеть все доступные версии, выполните::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:63
 msgid ""
@@ -5606,6 +5635,8 @@ msgid ""
 "For older versions of bzr, you can use the ``merge-package`` command "
 "instead::"
 msgstr ""
+"Для более старых версий bzr можно использовать взамен команду ``merge-"
+"package``::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:38
 msgid ""
@@ -5618,6 +5649,8 @@ msgid ""
 "Next you should make sure the ``debian/changelog`` is as you would like, "
 "with the correct distribution, version number, etc."
 msgstr ""
+"Далее следует убедиться в правильности содержимого ``debian/changelog``, то "
+"есть, что там правильно указан дистрибутив, номер версии и т.п."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:44
 msgid ""
@@ -5631,6 +5664,8 @@ msgid ""
 "The next step is to build and test the modified source package as you "
 "normally would::"
 msgstr ""
+"Следующий шаг — собрать и протестировать изменённый пакет исходного кода, "
+"как вы это обычно делаете::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:53
 msgid ""
@@ -5748,7 +5783,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:3
 msgid "Working on a Package"
-msgstr ""
+msgstr "Работа с пакетом"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:5
 msgid ""
@@ -5794,6 +5829,7 @@ msgid ""
 "This will drop you in an editor to add an entry to the `debian/changelog` "
 "file."
 msgstr ""
+"Эта команда откроет редактор и добавит запись в файл `debian/changelog`."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:44
 msgid ""
@@ -5820,6 +5856,8 @@ msgid ""
 "This only works with bzr-builddeb 2.7.5 and bzr 2.4, for older versions use "
 "``debcommit``."
 msgstr ""
+"Это работает только с bzr-builddeb 2.7.5 и bzr 2.4, для более старых версий "
+"используйте ``debcommit``."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:71
 msgid ""
@@ -5862,3 +5900,5 @@ msgid ""
 "Once you've got the source package, you can build it as normal with "
 "``pbuilder-dist`` (or ``pbuilder`` or `sbuild`_)."
 msgstr ""
+"После того, как вы получили пакет исходного кода, можно собрать его как "
+"обычно, с помощью ``pbuilder-dist`` (или ``pbuilder``, или `sbuild`_)."
