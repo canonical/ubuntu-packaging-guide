@@ -10,41 +10,61 @@ It is split up into two sections:
 - A set of knowledge-base articles that dig deeper into specific bits of our
   tools and workflows.
 
-The actual articles can be found under the 'ubuntu-packaging-guide' directory
-in rst files. The html template and css can be found under 'themes/ubuntu'. If
-adding a new article, make sure to add it to the 'ubuntu-packaging-guide/index.rst'
-file so that it appears in the table of contents.
+The actual articles can be found under the ``ubuntu-packaging-guide``
+directory in rst files. The html template and css can be found under
+``themes/ubuntu``. If adding a new article, make sure to add it to the
+``ubuntu-packaging-guide/index.rst`` file so that it appears in the table of
+contents.
 
 Development is hosted on Launchpad:
 
-Bugs - https://bugs.launchpad.net/ubuntu-packaging-guide/
-Bzr Branch - lp:ubuntu-packaging-guide
-Translations -https://translations.launchpad.net/ubuntu-packaging-guide
+:Bugs: https://bugs.launchpad.net/ubuntu-packaging-guide/
+:Bzr Branch: lp:ubuntu-packaging-guide
+:Translations: https://translations.launchpad.net/ubuntu-packaging-guide
 
 This project is licensed under the CC-BY-SA-3.0, the full text of which can be
-found in COPYING. Further information cand be found in 'debian/copyright'.
+found in ``COPYING``. Further information can be found in ``debian/copyright``.
 
 
-Sphinx & ReStructured text
---------------------------
+Sphinx & reStructuredText
+-------------------------
 
-The guide is built using Sphinx (http://sphinx.pocoo.org/). Articles should be
-written in ReStructured text. The following links might be helpful:
+The guide is built using `Sphinx <http://sphinx-doc.org/>`_. Articles should
+be written in reStructuredText. The following links might be helpful:
 
-http://docutils.sourceforge.net/docs/user/rst/quickstart.html
-http://docutils.sourceforge.net/docs/user/rst/quickref.html
+* http://docutils.sourceforge.net/docs/user/rst/quickstart.html
+* http://docutils.sourceforge.net/docs/user/rst/quickref.html
 
 
 Building
 --------
 
 The power of Sphinx is that it can generate documentation in many formats.
-Running 'make all' will generate the guide in html, dirhtml, singlehtml, pickle,
-json, htmlhelp, qthelp, devhelp, epub, latex, latexpdf, text, and man formats.
-They will be written to the '_build' directory.
+Running ``make all`` will generate the guide in html, dirhtml, singlehtml,
+pickle, json, htmlhelp, qthelp, devhelp, epub, latex, latexpdf, text, and
+man formats. They will be written to the ``_build`` directory.
 
 Not all of these formats are important to us. You can build an individual
-format with, for example, 'make html'. Run 'make help' for a list of all
+format with, for example, ``make html``. Run ``make help`` for a list of all
 targets.
 
 Please at least test your fixes by building the html version.
+
+Translating
+-----------
+
+We use Sphinx l10n module and Gettext for translating Ubuntu Packaging Guide.
+Translating takes place on
+`Launchpad <http://translations.launchpad.net/ubuntu-packaging-guide>`_, and
+translated ``.po`` files are automatically imported to the bzr branch.
+
+Some notes about translating the guide:
+
+- Only inline links can be translated currently. Do not translate named
+  links.
+- Some formatting is part of reStructuredText and should not be changed,
+  including emphasis (which uses asterisks or underscores), paragraph ending
+  before a code block (``::``) and double backtick quotes (``\`\```).
+
+To test your translation, use ``make BUILDER-LANGUAGE`` command (for example,
+``make html-it`` will build HTML docs in Italian language).
