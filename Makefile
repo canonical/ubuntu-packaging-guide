@@ -169,17 +169,18 @@ latexpdf: $(foreach lang,$(LANGS),latexpdf-$(lang))
 	@echo "Build finished; the PDF files are in $(BUILDDIR)/pdf"
 latexpdf-%: locale-%
 	$(SPHINXBUILD) -Dlanguage=$* -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$*
+	# Disable Times package for russian language
+	@if [ $* = ru ]; then \
+		sed -i '/^\\usepackage{times}/d' $(BUILDDIR)/latex/ru/*.tex; \
+	fi
 	@echo "Running LaTeX files through pdflatex..."
-	make -C $(BUILDDIR)/latex/$* all-pdf
+	if [ $* = ja ]; then \
+		make -C $(BUILDDIR)/latex/$* all-pdf-ja; \
+	else \
+		make -C $(BUILDDIR)/latex/$* all-pdf; \
+	fi
 	mkdir -p $(BUILDDIR)/pdf/$*; cp $(BUILDDIR)/latex/$*/*pdf $(BUILDDIR)/pdf/$*
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/pdf/$*."
-latexpdf-ja: locale-ja
-	# Special case, selecting all-pdf-ja target instead of all-pdf
-	$(SPHINXBUILD) -Dlanguage=ja -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/ja
-	@echo "Running LaTeX files through pdflatex..."
-	make -C $(BUILDDIR)/latex/ja all-pdf-ja
-	mkdir -p $(BUILDDIR)/pdf/ja; cp $(BUILDDIR)/latex/ja/*pdf $(BUILDDIR)/pdf/ja
-	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/pdf/ja."
 
 text: $(foreach lang,$(LANGS),text-$(lang))
 	$(SPHINXBUILD) -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text/en
