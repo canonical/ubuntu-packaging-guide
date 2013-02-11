@@ -6,6 +6,7 @@ ubuntu-packaging-guide (0.3.1) raring; urgency=low
     - Make sure .mo files are built in locale targets.
   * auto-pkg-test.rst: Updated links for raring.
   * Add a work-around for the blank pages in PDF bug (LP: #1095513).
+  * Disable useless index in PDFs.
 
   [ Daniel Holbach ]
   * Document where to find a list of required autopkgtests and where 
