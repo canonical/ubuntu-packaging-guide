@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-09 14:21+0000\n"
-"PO-Revision-Date: 2013-02-09 15:13+0000\n"
-"Last-Translator: Dmitry Shachnev <mitya57@gmail.com>\n"
+"PO-Revision-Date: 2013-02-10 13:21+0000\n"
+"Last-Translator: Aleksey Kabanov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-10 05:06+0000\n"
+"X-Launchpad-Export-Date: 2013-02-11 05:17+0000\n"
 "X-Generator: Launchpad (build 16482)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -3504,6 +3504,8 @@ msgid ""
 "Junichi Uekawa's `Debian Library Packaging Guide`_ goes into this topic in "
 "more detail."
 msgstr ""
+"В `Debian Library Packaging Guide`_ (автор: Junichi Uekawa) эта тема "
+"рассматривается более подробно."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:3
 msgid "Packaging New Software"
@@ -4048,7 +4050,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:152
 msgid "Making A Package Use Quilt"
-msgstr ""
+msgstr "Создание пакета с использованием Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:154
 msgid ""
@@ -4585,7 +4587,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:3
 msgid "Traditional Packaging"
-msgstr ""
+msgstr "Традиционные методы создания пакетов"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:5
 msgid ""
@@ -5055,6 +5057,8 @@ msgid ""
 "(This command uses *qbzr* for a GUI, run ``log`` instead of ``qlog`` for "
 "console output.)"
 msgstr ""
+"(Эта команда использует в качестве графического интерфейса *qbzr*. Для "
+"вывода в консоль, запустите ``log`` вместо ``qlog``.)"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:64
 msgid ""
@@ -5252,6 +5256,7 @@ msgstr ""
 msgid ""
 "This shows you the difference between package version 0.1-1 and 0.1-2."
 msgstr ""
+"Эта команда покажет вам различия между версиями пакета 0.1-1 и 0.1-2."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:3
 msgid "Merging — Updating from Debian and Upstream"
@@ -5330,6 +5335,9 @@ msgid ""
 "versions (0.6.10-5ubuntu1).  In similar way you can compare to any other "
 "versions.  To see all available versions run::"
 msgstr ""
+"Эта команда покажет различия между версиями в Debian (0.6.10-5) и Ubuntu "
+"(0.6.10-5ubuntu1).  Подобным же способом вы можете выполнить сравнение с "
+"любыми другими версиями.  Чтобы увидеть все доступные версии, выполните::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:63
 msgid ""
@@ -5627,6 +5635,8 @@ msgid ""
 "For older versions of bzr, you can use the ``merge-package`` command "
 "instead::"
 msgstr ""
+"Для более старых версий bzr можно использовать взамен команду ``merge-"
+"package``::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:38
 msgid ""
@@ -5639,6 +5649,8 @@ msgid ""
 "Next you should make sure the ``debian/changelog`` is as you would like, "
 "with the correct distribution, version number, etc."
 msgstr ""
+"Далее следует убедиться в правильности содержимого ``debian/changelog``, то "
+"есть, что там правильно указан дистрибутив, номер версии и т.п."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:44
 msgid ""
@@ -5652,6 +5664,8 @@ msgid ""
 "The next step is to build and test the modified source package as you "
 "normally would::"
 msgstr ""
+"Следующий шаг — собрать и протестировать изменённый пакет исходного кода, "
+"как вы это обычно делаете::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:53
 msgid ""
@@ -5769,7 +5783,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:3
 msgid "Working on a Package"
-msgstr ""
+msgstr "Работа с пакетом"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:5
 msgid ""
@@ -5815,6 +5829,7 @@ msgid ""
 "This will drop you in an editor to add an entry to the `debian/changelog` "
 "file."
 msgstr ""
+"Эта команда откроет редактор и добавит запись в файл `debian/changelog`."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:44
 msgid ""
@@ -5841,6 +5856,8 @@ msgid ""
 "This only works with bzr-builddeb 2.7.5 and bzr 2.4, for older versions use "
 "``debcommit``."
 msgstr ""
+"Это работает только с bzr-builddeb 2.7.5 и bzr 2.4, для более старых версий "
+"используйте ``debcommit``."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:71
 msgid ""
@@ -5883,3 +5900,5 @@ msgid ""
 "Once you've got the source package, you can build it as normal with "
 "``pbuilder-dist`` (or ``pbuilder`` or `sbuild`_)."
 msgstr ""
+"После того, как вы получили пакет исходного кода, можно собрать его как "
+"обычно, с помощью ``pbuilder-dist`` (или ``pbuilder``, или `sbuild`_)."
