@@ -12,6 +12,7 @@ Build-Depends: debhelper (>= 7.0.50~),
                texlive-latex-recommended,
                texlive-latex-extra,
                texlive-lang-cyrillic,
+               cm-super-minimal
 #              texlive-lang-cjk,
 #              latex-cjk-japanese
 Homepage: https://launchpad.net/ubuntu-packaging-guide
