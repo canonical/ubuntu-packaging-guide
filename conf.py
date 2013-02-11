@@ -246,7 +246,7 @@ texinfo_appendices = []
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = project
+epub_title = html_title
 epub_author = authors
 epub_publisher = authors
 epub_copyright = copyright
