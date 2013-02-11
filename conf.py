@@ -217,6 +217,8 @@ latex_logo = 'images/logo-ubuntu_cof-orange-hex.png'
 # If false, no module index is generated.
 #latex_domain_indices = True
 
+# Disable useless index in PDFs (only one item).
+latex_elements = {'printindex': ''}
 
 # -- Options for manual page output --------------------------------------------
 
