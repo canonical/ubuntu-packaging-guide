@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-09 14:21+0000\n"
-"PO-Revision-Date: 2013-02-08 08:55+0000\n"
+"PO-Revision-Date: 2013-02-11 10:38+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-10 05:05+0000\n"
-"X-Generator: Launchpad (build 16482)\n"
+"X-Launchpad-Export-Date: 2013-02-12 04:54+0000\n"
+"X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -182,6 +182,15 @@ msgid ""
 "the virtual machine after the tests were run. This makes it very easy to "
 "debug issues."
 msgstr ""
+"Dies würde den ``lp:~super-friends/friends/packaging`` Branch als Basis "
+"benutzen, um die Tests für das Ubuntu-Paket ``friends`` auszuführen. Wenn Du "
+"nur einen Branch mit ``-b`` angibst, aber keinen Paketnamen spezifizierst, "
+"wird dies einen Build des Branches durchführen und die Binärpakete des "
+"Builds installieren; dies ist nützlich, wenn Du die Tests einer neueren "
+"Version des Pakets ausführen möchtest oder das Paket gar nicht in Ubuntu "
+"enthalten ist. Wenn Du die Option ``-k`` verwendest, kannst Du Dich in die "
+"virtuelle Maschine einloggen nachdem die Tests gelaufen sind. Dies ist sehr "
+"nützlich, um Fehler zu untersuchen."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:126
 msgid ""
@@ -397,6 +406,14 @@ msgid ""
 "the :doc:`Security Update or the Stable Release Update process<./security-"
 "and-stable-release-updates>`, as appropriate."
 msgstr ""
+"Das Zurückportieren ist ein Mittel um den Nutzern neue Funktionen "
+"bereitzustellen. Wegen der Gefahr von Kompabilitätsproblemen erhalten Nutzer "
+"keine zurückportieren Pakete ohne ausdrückliche Maßnahmen ihrerseits. Das "
+"macht Zurückportieren grundsätzlich zu einer schlechten Wahl für "
+"Fehlerbehebungen. Wenn ein Paket in einer Ubuntu-Veröffentlichung einen "
+"Fehler aufweist, sollte er entweder durch :doc:`ein Sicherheitsupdate oder "
+"den \"Stable-Release\"-Updateprozess<./security-and-stable-release-updates>` "
+"angemessen behoben werden."
 
 #: ../ubuntu-packaging-guide/backports.rst:35
 msgid ""
@@ -405,6 +422,10 @@ msgid ""
 "``pbuilder-dist`` (in the ``ubuntu-dev-tools`` package) is a very handy tool "
 "to do this easily."
 msgstr ""
+"Wenn Du Dich dazu entschlossen hast, ein Paket durch eine Backport in einen "
+"stabilen Release zu portieren, wirst Du zumindest einen Test-Build ausführen "
+"müssen und das Paket in demjenigen Release zu testen. ``pbuilder-dist`` (im "
+"``ubuntu-dev-tools`` Paket) ist ein tolles Werkzeug um das problemlos zu tun."
 
 #: ../ubuntu-packaging-guide/backports.rst:40
 msgid ""
@@ -482,6 +503,9 @@ msgid ""
 "You might want to copy your GPG/ssh keys and Bazaar configuration into the "
 "chroot so you can access and sign packages directly::"
 msgstr ""
+"Vielleicht möchtest Du auch deine GPG/ssh-Schlüssel und Bazaarkonfiguration "
+"in das Chroot kopieren, um so einfacher auf Pakete zugreifen zu und sie "
+"signieren zu können::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:39
 msgid ""
@@ -550,6 +574,9 @@ msgid ""
 "Copy C10shell from /usr/share/doc/pbuilder/examples into a directory and use "
 "the ``--hookdir=`` argument to point to it."
 msgstr ""
+"Du kannst pbuilder auch so konfigurieren, dass er anhält, wenn er ein "
+"Problem findet. Kopiere C10shell von /usr/share/doc/pbuilder/examples in ein "
+"Verzeichnis und benutze das ``--hookdir=`` Argument um darauf zu verweisen."
 
 #: ../ubuntu-packaging-guide/chroots.rst:67
 msgid ""
@@ -733,6 +760,9 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
 "of the Debian Policy Manual."
 msgstr ""
+"Für weitere Informationen, schau Dir die `changelog section (Section 4.4) "
+"<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
+"des Debian Policy Manual an."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
@@ -744,12 +774,17 @@ msgid ""
 "as ``apt-get``, ``synaptic``, and ``adept``) uses, build-time dependencies, "
 "maintainer information, and much more."
 msgstr ""
+"Die ``control`` Datei enthält Informationen, die der Paketmanager (also z.B. "
+"``apt-get``, ``synaptic`` und ``adept``) verwendet, build-spezifische "
+"Abhängigkeiten, Betreuerinformationen und vieles andere."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:76
 msgid ""
 "For the Ubuntu ``hello`` package, the ``control`` file looks something like "
 "this:"
 msgstr ""
+"Für das Ubuntupaket ``hello``, sieht die Datei  ``control`` folgendermaßen "
+"aus:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:101
 msgid ""
@@ -777,6 +812,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:120
 msgid "Each additional paragraph describes a binary package to be built."
 msgstr ""
+"Jeder weitere Abschnitte beschreibt ein Binärpaket, welches gebaut wird."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:122
 msgid ""
@@ -784,6 +820,9 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the "
 "Debian Policy Manual."
 msgstr ""
+"Für weitere Information, schau Dir `control file section (Chapter 5) "
+"<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ des Debian "
+"Policy Manual an."
 
 # 870ce0ac216c4fd8a10aa642d5a8ee12
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
@@ -814,10 +853,13 @@ msgid ""
 "<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ "
 "format. You are encouraged to use this format as well."
 msgstr ""
+"Dieses Beispiel befolgt das `Machine-readable debian/copyright "
+"<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ "
+"Format. Fühl Dich ermutigt, dieses Format auch zu verwenden."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:184
 msgid "The rules file"
-msgstr ""
+msgstr "Die rules Datei"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:186
 msgid ""
@@ -827,12 +869,20 @@ msgid ""
 "also has a target to clean up all the build files so you end up with just a "
 "source package again."
 msgstr ""
+"Die letzte Datei, die wir uns anschauen ist ``rules``. Hier geschieht alle "
+"Arbeit, um das Paket zu erzeugen. Es ist ein Makefile mit Targets, um die "
+"Anwendung zu kompilieren und zu installieren, dann die ``.deb`` Datei von "
+"den installierten Dateien zu erzeugen. Es enthält auch ein Target um "
+"\"aufzuräumen\", so dass das Quellpaket wieder auf dem ursprünglichen Stand "
+"ist."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:194
 msgid ""
 "Here is a simplified version of the rules file created by ``dh_make`` (which "
 "can be found in the ``dh-make`` package):"
 msgstr ""
+"Hier ist eine vereinfachte Version der rules Datei, die von ``dh_make`` "
+"erzeugt wurde (erhältlich im ``dh-make`` Paket):"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:208
 msgid ""
