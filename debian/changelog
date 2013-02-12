@@ -26,6 +26,9 @@ ubuntu-packaging-guide (0.3.1) raring; urgency=low
   [ Dražen Lučanin ]
   * getting-set-up.rst: link to Enigmail for Thunderbird GPG support.
 
+  [ Jean-Baptiste Lallement ]
+  * auto-pkg-test.rst: updated for raring and new run-adt-test syntax.
+
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Sat, 09 Feb 2013 10:53:16 +0100
 
 ubuntu-packaging-guide (0.3.0) experimental; urgency=low
