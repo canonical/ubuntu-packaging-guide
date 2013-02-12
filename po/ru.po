@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-09 14:21+0000\n"
-"PO-Revision-Date: 2013-02-10 13:21+0000\n"
+"PO-Revision-Date: 2013-02-11 19:31+0000\n"
 "Last-Translator: Aleksey Kabanov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-11 05:17+0000\n"
-"X-Generator: Launchpad (build 16482)\n"
+"X-Launchpad-Export-Date: 2013-02-12 04:54+0000\n"
+"X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -2096,18 +2096,18 @@ msgstr "Установка программ для работы с пакета�
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:12
 msgid "Ubuntu-specific packaging utilities"
-msgstr "Специфичные для Ubuntu утилиты создания пакетов"
+msgstr "специфичные для Ubuntu утилиты создания пакетов"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:13
 msgid "Encryption software so your work can be verified as being done by you"
 msgstr ""
-"Криптографическую программу, которая позволит другим удостовериться, что "
+"криптографическую программу, которая позволит другим удостовериться, что "
 "работа выполнена именно вами"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:14
 msgid "Additional encryption software so you can securely transfer files"
 msgstr ""
-"Дополнительные программы шифрования, обеспечивающие безопасную передачу "
+"дополнительные программы шифрования, обеспечивающие безопасную передачу "
 "файлов"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
@@ -2715,7 +2715,7 @@ msgstr "узнаете, как присоединиться к нашему со
 
 #: ../ubuntu-packaging-guide/index.rst:19
 msgid "fixed an actual Ubuntu bug as part of the tutorials."
-msgstr "исправите настоящую ошибку в Ubuntu в процессе руководства."
+msgstr "исправите настоящую ошибку в Ubuntu в процессе изучения руководства."
 
 #: ../ubuntu-packaging-guide/index.rst:21
 msgid ""
@@ -2791,7 +2791,7 @@ msgid ""
 msgstr ""
 "Это руководство фокусируется на методе создания пакетов Ubuntu Distributed "
 "Development. Это новый способ работы с пакетами, который использует ветки "
-"системы управления распределёнными версиями.  В настоящее время он имеет "
+"распределённой системы управления версиями.  В настоящее время он имеет "
 "некоторые ограничения, поэтому многие команды Ubuntu по-прежнему пользуются "
 ":doc:`традиционными<./traditional-packaging>` методами создания пакетов.  "
 "Чтобы узнать о различиях, смотрите страницу :doc:`Введение в UDD<./udd-"
@@ -2849,10 +2849,10 @@ msgstr ""
 "двоичные пакеты затем попадают в архив и его зеркала в различных странах. "
 "Адреса в ``/etc/apt/sources.list`` указывают на архив или зеркало архива. "
 "Каждый день для различных вариантов Ubuntu создаются образы компакт-дисков. "
-"Ubuntu Desktop, Ubuntu Server, Kubuntu и другие варианты определяют список "
-"требуемых пакетов, которые попадают на CD. Эти образы CD затем используются "
-"для тестирования установки и предоставляют  обратную связь для дальнейшего "
-"планирования выпуска."
+"Команды разработчиков Ubuntu Desktop, Ubuntu Server, Kubuntu и других "
+"вариантов определяют список требуемых пакетов, которые попадают на CD. Эти "
+"образы CD затем используются для тестирования установки и предоставляют  "
+"обратную связь для дальнейшего планирования выпуска."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:24
 msgid ""
@@ -3066,9 +3066,9 @@ msgid ""
 "Additional steps might involve getting the change backported to an older, "
 "still supported version of Ubuntu and forwarding it to Upstream."
 msgstr ""
-"Дополнительные шаги, которые вы можете предпринять, это адапитрование вашего "
-"изменения для предыдущих поддерживаемых выпусков Ubuntu, и отправление его в "
-"upstream."
+"Дополнительные шаги, которые вы можете предпринять, — это адаптирование "
+"вашего изменения для предыдущих поддерживаемых выпусков Ubuntu и отправление "
+"его в апстрим."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:119
 msgid ""
@@ -3077,8 +3077,8 @@ msgid ""
 "documentation and ask questions, being a team player and enjoying some "
 "detective work."
 msgstr ""
-"Наиболее важные требования для успешной разработки в Ubuntu: уметь «уметь "
-"заставлять вещи снова работать», не бояться читать документацию и задавать "
+"Наиболее важные требования для успешной разработки в Ubuntu: уметь "
+"«заставлять вещи снова работать», не бояться читать документацию и задавать "
 "вопросы, быть командным игроком и иметь некоторую склонность к работе "
 "детектива."
 
@@ -4106,7 +4106,7 @@ msgstr ""
 "Наше руководство следует рекомендациям Debian `Python policy`_. В качестве "
 "примера мы будем использовать пакет `python-markdown`_, который можно "
 "загрузить с сайта `PyPI`_. Вы можете посмотреть исходные коды сборки в "
-"`Subversion repository`_."
+"`репозитории Subversion`_."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:7
 msgid "There are two types of Python packages — *modules* and *apps*."
@@ -4977,6 +4977,8 @@ msgid ""
 "This guide focuses on packaging using the *Ubuntu Distributed Development* "
 "(UDD) method."
 msgstr ""
+"Это руководство фокусируется на работе с пакетами с использованием метода "
+"*Ubuntu Distributed Development* (UDD)."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:8
 msgid ""
@@ -4986,7 +4988,7 @@ msgid ""
 "DVCS used for UDD is Bazaar_."
 msgstr ""
 "*Ubuntu Distributed Development* (UDD) — это новая технология разработки "
-"пакетов Ubuntu, использующая инструменты, процессы и  последовательности "
+"пакетов Ubuntu, использующая инструменты, процессы и последовательности "
 "действий, характерные для  типичной схемы разработки программ, основанной на "
 "распределённой системе управления версиями (DVCS).  DVCS, используемая в UDD "
 "— это Bazaar_."
@@ -5002,6 +5004,11 @@ msgid ""
 "\"debian\" tar (or compressed diff file for older packages) containing the "
 "packaging and a .dsc meta-data file.  To see a traditional package run::"
 msgstr ""
+"Традиционно пакеты Ubuntu хранятся в архивных tar-файлах.  Традиционный "
+"пакет исходного кода состоит из tar-файла с исходным кодом из апстрима, "
+"\"debian\" tar-файла (или сжатого diff-файл для более старых пакетов), "
+"содержащего набор входных файлов для создания пакета, и файла .dsc с "
+"метаданными.  Чтобы посмотреть на традиционный пакет, выполните команду::"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:23
 msgid ""
@@ -5010,6 +5017,10 @@ msgid ""
 "``kdetoys_4.6.5-0ubuntu1~ppa1.dsc``.  Assuming you have dpkg-dev installed "
 "it will extract these and give you the source package."
 msgstr ""
+"Она загрузит исходники из апстрима ``kdetoys_4.6.5.orig.tar.bz2``, набор "
+"входных файлов ``kdetoys_4.6.5-0ubuntu1.debian.tar.gz`` и метаданные "
+"``kdetoys_4.6.5-0ubuntu1~ppa1.dsc``.  Если у вас установлен dpkg-dev, она "
+"извлечёт их содержимое и предоставит вам пакет исходного кода."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:28
 msgid ""
@@ -5112,6 +5123,9 @@ msgid ""
 "be easy to use for those familiar with popular systems such as Subversion "
 "while offering the power of Git."
 msgstr ""
+"Ветки UDD используют Bazaar — распределённую систему управления версиями, "
+"которая проста в использовании для тех, кто знаком с такими популярными "
+"системами, как Subversion, и в то же время предоставляет всю мощь Git."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:97
 msgid ""
@@ -5121,6 +5135,12 @@ msgid ""
 "tutorial/index.html>`_ and the `Bazaar Users Guide "
 "<http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_."
 msgstr ""
+"Чтобы создавать пакеты с помощью UDD, вам нужно знать основы того, как "
+"использовать Bazaar для управления файлами.  Для знакомства с Bazaar "
+"смотрите `Пятиминутный урок по Bazaar "
+"<http://doc.bazaar.canonical.com/bzr.dev/en/mini-tutorial/index.html>`_ и "
+"`Руководство пользователя Bazaar "
+"<http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:105
 msgid "Limitations of UDD"
@@ -5173,17 +5193,19 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:3
 msgid "Getting The Latest"
-msgstr ""
+msgstr "Получение последних изменений"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:5
 msgid ""
 "If someone else has landed changes on a package, you will want to pull those "
 "changes in your own copies of the package branches."
 msgstr ""
+"Если кто-нибудь ещё внёс изменения в пакет, вам может понадобиться получить "
+"эти изменения в ваши копии веток пакета."
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:10
 msgid "Updating your main branch"
-msgstr ""
+msgstr "Обновление вашей основной ветки"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:12
 msgid ""
@@ -5191,6 +5213,8 @@ msgid ""
 "particular release is very simple, simply use `bzr pull` from the "
 "appropriate directory::"
 msgstr ""
+"Обновить вашу копию ветки, соответствующей пакету в определённом релизе, "
+"очень просто: используйте `bzr pull` из соответствующего каталога::"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:18
 msgid ""
@@ -5200,7 +5224,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:23
 msgid "Getting the latest in to your working branches"
-msgstr ""
+msgstr "Получение последних изменений в ваши рабочие ветки"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:25
 msgid ""
@@ -5260,7 +5284,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:3
 msgid "Merging — Updating from Debian and Upstream"
-msgstr ""
+msgstr "Слияние — обновления из Debian и апстрима"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:5
 msgid ""
@@ -5269,6 +5293,11 @@ msgid ""
 "release, and from other Ubuntu developers.  Doing it in Bazaar is pretty "
 "simple, and all based around the ``bzr merge`` command [#]_."
 msgstr ""
+"Слияние — это одна из сильнейших сторон Bazaar, и мы часто выполняем его в "
+"процессе разработки Ubuntu.  Слияние может быть выполнено с обновлениями из "
+"Debian, из нового выпуска в апстриме и от других разработчиков Ubuntu.  "
+"Сделать это в Bazaar очень просто, всё основано на команде ``bzr merge`` "
+"[#]_."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:10
 msgid ""
@@ -5276,6 +5305,9 @@ msgid ""
 "from a different location.  First check that you have no uncommitted "
 "changes::"
 msgstr ""
+"Находясь в рабочем каталоге любой ветки, вы можете выполнить слияние "
+"изменений из ветки в другом месте.  Сначала проверьте, что у вас нет "
+"незафиксированных изменений::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:15
 msgid ""
@@ -5285,13 +5317,16 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:20
 msgid "Merging from Debian"
-msgstr ""
+msgstr "Слияние из Debian"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:22
 msgid ""
 "Next run ``bzr merge`` passing the URL of the branch to merge from.  For "
 "example, to merge from the version of the package in Debian Squeeze_ run::"
 msgstr ""
+"Теперь выполните ``bzr merge``, указав команде URL ветки, из которой нужно "
+"слить изменения.  Например, чтобы выполнить слияние из версии пакета в "
+"Debian Squeeze_, выполните::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:27
 msgid ""
@@ -5318,10 +5353,12 @@ msgid ""
 "Once any conflicts are resolved, and you have made any other changes that "
 "you need, you will add a new changelog entry, and commit::"
 msgstr ""
+"После того, как все конфликты разрешены, и вы внесли все другие необходимые "
+"изменения, нужно добавить новую запись в changelog и выполнить фиксацию::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:50
 msgid "as described earlier."
-msgstr ""
+msgstr "как было описано выше."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:52
 msgid ""
@@ -5344,6 +5381,8 @@ msgid ""
 "After testing and committing the merge, you will need to seek sponsorship or "
 "upload to the archive in the normal way."
 msgstr ""
+"После проверки и фиксации слияния, вам нужно найти попечителя или выгрузить "
+"пакет в архив обычным способом."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:66
 msgid ""
@@ -5357,7 +5396,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:77
 msgid "Merging a new upstream version"
-msgstr ""
+msgstr "Слияние с новой версией из апстрима"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:79
 msgid ""
@@ -5371,6 +5410,9 @@ msgid ""
 "a valid ``debian/watch`` file, from inside the branch that you want to merge "
 "to, just type this::"
 msgstr ""
+"Это делается командой ``bzr merge-upstream``.  Если в вашем пакете имеется "
+"файл ``debian/watch`` с правильным содержимым, то из каталога ветки, в "
+"которую вы собираетесь слить изменения, просто наберите::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:88
 msgid ""
@@ -5378,12 +5420,17 @@ msgid ""
 "adding a ``debian/changelog`` entry for you.  ``bzr-builddeb`` looks at the "
 "``debian/watch`` file for the upstream tarball location."
 msgstr ""
+"Команда загрузит тарбол и сольёт его в вашу ветку, автоматически добавив "
+"запись в ``debian/changelog``.  ``bzr-builddeb`` просматривает файл "
+"``debian/watch``, чтобы определить местоположение тарбола из апстрима."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:92
 msgid ""
 "If you do *not* have a ``debian/watch`` file, you'll need to specify the "
 "location of the upstream tarball, and the version manually::"
 msgstr ""
+"Если у вас *отсутствует* файл ``debian/watch``, то вам нужно вручную указать "
+"местоположение тарбола из апстрима и версию::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:97
 msgid ""
@@ -5449,7 +5496,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:19
 msgid "Pushing to Launchpad"
-msgstr ""
+msgstr "Выгрузка на Launchpad"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:21
 msgid ""
@@ -5457,6 +5504,10 @@ msgid ""
 "via-changelog>` using ``dch`` and ``bzr commit``.  However, the branch and "
 "bug don't actually get linked until you push the branch to Launchpad."
 msgstr ""
+"Ранее мы показали вам, как :ref:`связать вашу ветку с ошибкой <link-via-"
+"changelog>`, используя команды  ``dch`` и ``bzr commit``.  Однако ветка и "
+"ошибка в действительности не будут связаны, пока вы не выгрузите ветку на "
+"Launchpad командой push."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:25
 msgid ""
@@ -5467,32 +5518,41 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:28
 msgid "The general form of the URL you should push your branch to is::"
 msgstr ""
+"Общий формат URL, на который вы должны выгрузить свою ветку, имеет следующий "
+"вид::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:32
 msgid ""
 "For example, to push your fix for bug 12345 in the Tomboy package for Natty, "
 "you'd use::"
 msgstr ""
+"Например, чтобы отправить исправление для ошибки 12345 в пакете Tomboy для "
+"Natty, используйте::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:37
 msgid ""
 "The last component of the path is arbitrary; it's up to you to pick "
 "something meaningful."
 msgstr ""
+"Последний компонент пути в этом примере выбран произвольно, укажите вместо "
+"него реально существующую ошибку."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:40
 msgid ""
 "However, this usually isn't enough to get Ubuntu developers to review and "
 "sponsor your change.  You should next submit a *merge proposal*."
 msgstr ""
+"Но обычно этого недостаточно, чтобы разработчики Ubuntu проверили ваше "
+"изменение и взяли на себя поручительство над ним.  Вам нужно отправить "
+"*предложение слияния* (merge proposal)."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:43
 msgid "To do this open the bug page in a browser, e.g.::"
-msgstr ""
+msgstr "Чтобы сделать это, откройте страницу ошибки в браузере, например::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:47
 msgid "If that fails, then you can use::"
-msgstr ""
+msgstr "Если сделать это не удалось, вы можете использовать::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:51
 msgid ""
@@ -5501,6 +5561,10 @@ msgid ""
 "in an explanation of your change in the *Initial Comment* box.  Lastly, "
 "click *Propose Merge* to complete the process."
 msgstr ""
+"где большая часть URL совпадает с тем URL, который вы указывали в команде "
+"`bzr push`.  На этой странице вы увидите ссылку *Propose for merging into "
+"another branch*.  Наберите описание вашего изменения в поле  *Initial "
+"Comment*.  Затем щёлкните *Propose Merge*, чтобы завершить процесс."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:56
 msgid ""
@@ -5532,6 +5596,9 @@ msgid ""
 "Name the diff appropriately, e.g. ``foobar-12345.debdiff`` and attach it to "
 "the bug report."
 msgstr ""
+"Вы должны убедиться, что diff-файл содержит ожидаемые вами изменения, не "
+"больше и не меньше. Дайте ему подходящее имя, например, ``foobar-"
+"12345.debdiff`` и прикрепите к отчёту об ошибке."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:79
 msgid "Dealing with feedback from sponsors"
@@ -5583,12 +5650,17 @@ msgid ""
 "If you haven't heard back in a while, feel free to join `#ubuntu-devel` on "
 "`irc.freenode.net` and find out if somebody can help you there."
 msgstr ""
+"Если вы не получаете ответа в течение долгого времени, подключитесь к каналу "
+"`#ubuntu-devel` на `irc.freenode.net` и найдите кого-нибудь, кто может вам "
+"помочь."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:114
 msgid ""
 "For more information on the generall sponsorship process, review the "
 "documentation on our wiki as well: https://wiki.ubuntu.com/SponsorshipProcess"
 msgstr ""
+"Чтобы узнать больше о процессе поручительства, прочтите также нашу вики-"
+"документацию: https://wiki.ubuntu.com/SponsorshipProcess"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:3
 msgid "Uploading a package"
@@ -5601,10 +5673,15 @@ msgid ""
 "`Personal Package Archive`_ (PPA).  You might also want to do an upload if "
 "you are sponsoring someone else's changes."
 msgstr ""
+"После того, как предложение слияния проверено и утверждено, вы можете "
+"захотеть выгрузить свой пакетy либо в архив дистрибутива (если у вас есть "
+"соответствующие права), либо в ваш `персональный архив пакетов`_ (Personal "
+"Package Archive, или PPA).  Вам также может понадобиться это сделать, если "
+"вы являетесь взяли на себя поручительство над чьими-нибудь изменениями."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:12
 msgid "Uploading a change made by you"
-msgstr ""
+msgstr "Выгрузка изменений, сделанных вами"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:14
 msgid ""
@@ -5643,6 +5720,8 @@ msgid ""
 "This will merge the two trees, possibly producing conflicts, which you'll "
 "need to resolve manually."
 msgstr ""
+"Эта команда сольёт два дерева и, возможно, сообщит о конфликтах, которые вам "
+"надо будет разрешить вручную."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:41
 msgid ""
@@ -5684,10 +5763,12 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-uploading.rst:63
 msgid "Now you can push the changes back to Launchpad::"
 msgstr ""
+"Теперь вы можете выгрузить командой push изменения обратно на Launchpad::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:67
 msgid "(Change the destination if you are uploading an SRU or similar.)"
 msgstr ""
+"(Измените место назначения, если вы выгружаете SRU или что-то подобное.)"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:69
 msgid ""
@@ -5708,7 +5789,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:84
 msgid "Sponsoring a change"
-msgstr ""
+msgstr "Поручительство над изменением"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:86
 msgid ""
@@ -5716,6 +5797,9 @@ msgid ""
 "instead of merging from a branch you created, you merge from the branch in "
 "the merge proposal::"
 msgstr ""
+"Поручительство над чьим-нибудь изменением похоже на вышеописанную процедуру, "
+"но вместо слияния из созданной вами ветки вы выполняете слияние из ветки, "
+"имеющейся в предложении слияния::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:92
 msgid ""
@@ -5732,7 +5816,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:103
 msgid "Canceling an upload"
-msgstr ""
+msgstr "Отмена выгрузки"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:105
 msgid ""
@@ -5840,6 +5924,12 @@ msgid ""
 "actual bug number that you're fixing.  Your ``debian/changelog`` entry might "
 "look something like::"
 msgstr ""
+"При добавлении записи в ``debian/changelog`` вы должны включить тег "
+"исправления ошибки, который указывает, для какого сообщения об ошибке на "
+"Launchpad вы создали исправление.  Этот текстовый тег имеет вполне "
+"определённый формат: ``LP: #12345``.  Пробел между ``:`` и ``#`` обязателен "
+"и, разумеется, вы должны указать номер реально существующей ошибке, которую "
+"вы исправляете.  Ваш ``debian/changelog`` может выглядеть примерно так::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:57
 msgid "Commit with the normal::"
