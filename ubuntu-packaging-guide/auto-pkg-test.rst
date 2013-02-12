@@ -104,24 +104,25 @@ Then, get the source code from Launchpad::
         bzr branch lp:auto-package-testing
         cd auto-package-testing
 
-And provision a Quantal AMD64 system::
+And provision a Raring AMD64 system::
 
-    ./bin/prepare-testbed -r quantal amd64
+    ./bin/prepare-testbed -r raring amd64
 
-This command will create a pristine Quantal AMD64 VM from a cloud image. To 
+This command will create a pristine Raring AMD64 VM from a cloud image. To 
 run the tests, simply run::
 
-        ./bin/run-adt-test -r quantal -a amd64 \
-                -b lp:~super-friends/friends/packaging friends
+        ./bin/run-adt-test -r raring -a amd64 \
+            -S file:///tmp/glib2.0-2.35.7/ glib2.0
 
-This would use the ``lp:~super-friends/friends/packaging`` branch as a basis 
-to run the tests on the Ubuntu ``friends`` package. If you only specify a 
-branch with ``-b`` but do not specify a package name, this will instead build 
-the branch and install the binaries from that build; this is useful if you 
-want to run tests on a newer version than the one packaged in Ubuntu, or the 
-package is not in Ubuntu at all. If use the ``-k`` flag you can log into the 
-virtual machine after the tests were run. This makes it very easy to debug 
-issues.
+This would use the source package in ``/tmp/glib2.0-2.35.7/`` and run the
+tests from this tree against the package ``glib2.0`` from the archive. The
+option ``-S`` also supports schemes for bzr, git, and apt sources. If you
+only specify a source with ``-S`` but do not specify a package name, this will
+instead build the branch and install the binaries from that build; this is
+useful if you want to run tests on a newer version than the one packaged in
+Ubuntu, or the package is not in Ubuntu at all. If use the ``-k`` flag you can
+log into the virtual machine after the tests were run. This makes it very easy
+to debug issues.
 
 The `auto-package-testing documentation`_ has a lot more valuable information
 on other testing options.
