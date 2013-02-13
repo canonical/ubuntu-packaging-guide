@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-09 14:21+0000\n"
-"PO-Revision-Date: 2013-02-11 10:38+0000\n"
+"POT-Creation-Date: 2013-02-12 11:02+0000\n"
+"PO-Revision-Date: 2013-02-12 08:29+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-12 04:54+0000\n"
+"X-Launchpad-Export-Date: 2013-02-13 04:53+0000\n"
 "X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -159,40 +159,29 @@ msgid "Then, get the source code from Launchpad::"
 msgstr "Dann besorge dir den Quellcode von Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
-msgid "And provision a Quantal AMD64 system::"
-msgstr "Und stelle ein Quantal AMD64 System zusammen::"
+msgid "And provision a Raring AMD64 system::"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
-"This command will create a pristine Quantal AMD64 VM from a cloud image. To "
+"This command will create a pristine Raring AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
-"Dieser Befehl wird eine unverändertes Abbild einer Quantal AMD64 VM von "
-"einem Server liefern. Um den Test zu starten, musst du nur folgenden Text "
-"eingeben::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
-"This would use the ``lp:~super-friends/friends/packaging`` branch as a basis "
-"to run the tests on the Ubuntu ``friends`` package. If you only specify a "
-"branch with ``-b`` but do not specify a package name, this will instead "
-"build the branch and install the binaries from that build; this is useful if "
-"you want to run tests on a newer version than the one packaged in Ubuntu, or "
-"the package is not in Ubuntu at all. If use the ``-k`` flag you can log into "
-"the virtual machine after the tests were run. This makes it very easy to "
-"debug issues."
+"This would use the source package in ``/tmp/glib2.0-2.35.7/`` and run the "
+"tests from this tree against the package ``glib2.0`` from the archive. The "
+"option ``-S`` also supports schemes for bzr, git, and apt sources. If you "
+"only specify a source with ``-S`` but do not specify a package name, this "
+"will instead build the branch and install the binaries from that build; this "
+"is useful if you want to run tests on a newer version than the one packaged "
+"in Ubuntu, or the package is not in Ubuntu at all. If use the ``-k`` flag "
+"you can log into the virtual machine after the tests were run. This makes it "
+"very easy to debug issues."
 msgstr ""
-"Dies würde den ``lp:~super-friends/friends/packaging`` Branch als Basis "
-"benutzen, um die Tests für das Ubuntu-Paket ``friends`` auszuführen. Wenn Du "
-"nur einen Branch mit ``-b`` angibst, aber keinen Paketnamen spezifizierst, "
-"wird dies einen Build des Branches durchführen und die Binärpakete des "
-"Builds installieren; dies ist nützlich, wenn Du die Tests einer neueren "
-"Version des Pakets ausführen möchtest oder das Paket gar nicht in Ubuntu "
-"enthalten ist. Wenn Du die Option ``-k`` verwendest, kannst Du Dich in die "
-"virtuelle Maschine einloggen nachdem die Tests gelaufen sind. Dies ist sehr "
-"nützlich, um Fehler zu untersuchen."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:126
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:127
 msgid ""
 "The `auto-package-testing documentation`_ has a lot more valuable "
 "information on other testing options."
@@ -200,11 +189,11 @@ msgstr ""
 "Die 'auto-package-testing documentation' hat viele andere wichtige "
 "Informationen für andere Testoptionen."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:132
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:133
 msgid "Further examples"
 msgstr "Weitere Beispiele"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:134
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:135
 msgid ""
 "This list is not comprehensive, but might help you get a better idea of how "
 "automated tests are implemented and used in Ubuntu."
@@ -213,7 +202,7 @@ msgstr ""
 "geben wie automatisierte Testdurchläufe in Ubuntu implementiert und benutzt "
 "werden."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:137
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:138
 msgid ""
 "The `libxml2 tests`_ are very similar. They also run a test-build of a "
 "simple piece of C code and execute it."
@@ -221,7 +210,7 @@ msgstr ""
 "Die `libxml2 tests`_ sind sehr ähnlich. Sie enthalten auch eine Test-"
 "Kompilierung eines Stücks C-Code und führen es aus."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:139
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
 msgid ""
 "The `gtk+3.0 tests`_ also do a compile/link/run check in the \"build\" test. "
 "There is an additional \"python3-gi\" test which verifies that the GTK "
@@ -232,13 +221,13 @@ msgstr ""
 "Test, welcher sicherstellt, dass die GTK-Bibliothek auch durch "
 "\"Introspection\" benutzt werden kann."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:142
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
 msgstr ""
 "In den `ubiquity tests`_ wird die Test-Suite von Upstream (den Software-"
 "Autoren) ausgeführt."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:144
 msgid ""
 "The `gvfs tests`_ have comprehensive testing of their functionality and are "
 "very interesting because they emulate usage of CDs, Samba, DAV and other "
@@ -248,11 +237,11 @@ msgstr ""
 "interessant, weil sie die Benutzung von CDs, Samba, DAV und anderen Dingen "
 "simulieren."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:148
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:149
 msgid "Ubuntu infrastructure"
 msgstr "Ubuntu Infrastruktur"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:150
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:151
 msgid ""
 "Packages which have ``autopkgtest`` enabled will have their tests run "
 "whenever they get uploaded or any of their reverse-dependencies change. The "
@@ -264,7 +253,7 @@ msgstr ""
 "ändern. Die Ausgabe von `automatically run autopkgtest tests`_ kann im "
 "Internet abgerufen werden und wird regelmäßig aktualisiert."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:155
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:156
 msgid ""
 "While Debian does not have an automatic testing infrastructure set up yet, "
 "they should still be submitted to Debian, as DEP-8 is a Debian specification "
@@ -275,7 +264,7 @@ msgstr ""
 "eine Debian-Spezifikation und Debian-Entwickler und -Nutzer können Tests "
 "immerhin manuell ausführen."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:159
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:160
 msgid ""
 "Packages in Debian with a testsuite header will also be automatically added "
 "when they are synced to Ubuntu."
@@ -283,11 +272,11 @@ msgstr ""
 "Pakete in Debian mit dem Testsuite-Header werden außerdem automatisch "
 "hinzugefügt, wenn sie nach Ubuntu gesynced werden."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:163
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
 msgid "Getting the test into Ubuntu"
 msgstr "Die Tests in Ubuntu bekommen"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:165
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
@@ -296,30 +285,30 @@ msgstr ""
 "identisch mit :doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Im Prinzip muss "
 "man einfach:"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:168
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "run ``bzr branch ubuntu:<packagename>``,"
 msgstr "Führe ``bzr branch ubuntu:<Paketname>`` aus,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
 msgid "edit ``debian/control`` to enable the tests,"
 msgstr "bearbeiten Sie ``debian/control`` um die Tests zu aktivitieren,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
 msgid "add the ``debian/tests`` directory,"
 msgstr "fügen Sie ein ``debian/tests``-Verzeichnis hinzu,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
 msgstr ""
 "schreiben Sie die ``debian/tests/control``-Datei, basierend auf der `DEP 8 "
 "Specification`_,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid "add your test case(s) to ``debian/tests``,"
 msgstr "fügen Sie Ihre(n) Test(s) zu ``debian/tests`` hinzu,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:174
 msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
@@ -328,11 +317,11 @@ msgstr ""
 "vorschlagen, sie dann überprüfen lassen, genau wie jede andere Änderung an "
 "einem Quellpaket auch."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:178
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
 msgid "What you can do"
 msgstr "Was du machen kannst"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:180
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:181
 msgid ""
 "The Ubuntu Engineering team put together a `list of required test-cases`_, "
 "where packages which need tests are put into different categories. Here you "
@@ -343,7 +332,7 @@ msgstr ""
 "Kategorien aufgeteilt wurden. Hier kannst du eine Liste von Beispielen von "
 "Tests finden und das Schreiben der Tests Dir zuweisen."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:184
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:185
 msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel`_ to get in touch with developers who can help you."
@@ -4752,7 +4741,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:115
 msgid "Sponsoring something and making your own changes"
-msgstr ""
+msgstr "Etwas sponsoren und eigene Änderungen beifügen"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:117
 msgid ""
@@ -4787,7 +4776,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:3
 msgid "Working on a Package"
-msgstr ""
+msgstr "An einem Paket arbeiten"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:5
 msgid ""
@@ -4808,6 +4797,8 @@ msgid ""
 "The first thing to do is to make sure your source package branch is up-to-"
 "date.  It will be if you just checked it out, otherwise do this::"
 msgstr ""
+"Das erste, was Du sicherstellen solltest, ist, ob das Quellpaket aktuell "
+"ist. Das wird so sein, wenn Du es gerade ausgecheckt hast, ansonsten::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:21
 msgid ""
@@ -4818,6 +4809,13 @@ msgid ""
 "the shared repository you previously created for Tomboy, you can create your "
 "bug fix branch like this::"
 msgstr ""
+"Alle Aktualisierungen die das Paket vor Deinem Checkout erhalten hat, werden "
+"jetzt heruntergeladen. Es ist am Besten an diesem Branch keine Änderungen "
+"vorzunehmen. Stattdessen lohnt es sich einen neuen Branch anzulegen, der nur "
+"die Änderungen enthalten wird, die Du vornehmen möchtest. Zum Beispiel "
+"könntest Du Bug 12345 des Tomboy-Projekts beheben wollen. Wenn Du im Shared "
+"Repository bist, das Du vorher angelegt hast, kannst Du einen Bugfix-Branch "
+"folgendermaßen anlegen::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:31
 msgid ""
@@ -4833,6 +4831,8 @@ msgid ""
 "This will drop you in an editor to add an entry to the `debian/changelog` "
 "file."
 msgstr ""
+"Dies wird einen Editor öffnen um einen Eintrag in `debian/changelog` "
+"hinzuzufügen."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:44
 msgid ""
@@ -4853,6 +4853,9 @@ msgid ""
 "A hook in bzr-builddeb will use the debian/changelog text as the commit "
 "message and set the tag to mark bug #12345 as fixed."
 msgstr ""
+"Ein Hook in bzr-builddeb wird den Eintrag aus debian/changelog in der Commit-"
+"Nachricht verwenden und ein Tag setzen, um Bug #12345 als behoben zu "
+"markieren."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:64
 msgid ""
@@ -4881,12 +4884,16 @@ msgid ""
 "(``bd`` is an alias for ``builddeb``.)  You can leave the package unsigned "
 "by appending ``-- -uc -us`` to the command."
 msgstr ""
+"(``bd`` ist ein Alias für ``builddeb``.) Du kannst das Paket unsigniert "
+"lassen, in dem Du ``-- -us -uc`` an das Kommando anhängst."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:82
 msgid ""
 "It is also possible to use your normal tools, as long as they are able to "
 "strip the .bzr directories from the package, e.g.::"
 msgstr ""
+"Es ist außerdem möglich, Deine normalen Werkzeuge zu verwenden, so lange sie "
+"nur das .bzr Verzeichnis aus dem resultierenden Paket entfernen können."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:87
 msgid ""
@@ -4903,3 +4910,5 @@ msgid ""
 "Once you've got the source package, you can build it as normal with "
 "``pbuilder-dist`` (or ``pbuilder`` or `sbuild`_)."
 msgstr ""
+"Wenn Du das Quellpaket heruntergeladen hast, kannst Du es ganz normal mit "
+"``pbuilder-dist`` (oder ``pbuilder`` oder `sbuilt`_) bauen."
