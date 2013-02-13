@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-02-09 14:21+0000\n"
+"POT-Creation-Date: 2013-02-12 11:02+0000\n"
 "PO-Revision-Date: 2012-12-30 20:14+0000\n"
 "Last-Translator: Vinicius Almeida <vinicius.algo@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-10 05:06+0000\n"
-"X-Generator: Launchpad (build 16482)\n"
+"X-Launchpad-Export-Date: 2013-02-13 04:54+0000\n"
+"X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -154,38 +154,29 @@ msgid "Then, get the source code from Launchpad::"
 msgstr "Então, obter o código fonte do Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
-msgid "And provision a Quantal AMD64 system::"
-msgstr "E fornece um sistema Quantal AMD64::"
+msgid "And provision a Raring AMD64 system::"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
-"This command will create a pristine Quantal AMD64 VM from a cloud image. To "
+"This command will create a pristine Raring AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
-"Este comando irá criar uma MV impecável do Quantal AMD64 de uma imagem na "
-"nuvem. Para executar os testes, simplesmente execute::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
-"This would use the ``lp:~super-friends/friends/packaging`` branch as a basis "
-"to run the tests on the Ubuntu ``friends`` package. If you only specify a "
-"branch with ``-b`` but do not specify a package name, this will instead "
-"build the branch and install the binaries from that build; this is useful if "
-"you want to run tests on a newer version than the one packaged in Ubuntu, or "
-"the package is not in Ubuntu at all. If use the ``-k`` flag you can log into "
-"the virtual machine after the tests were run. This makes it very easy to "
-"debug issues."
+"This would use the source package in ``/tmp/glib2.0-2.35.7/`` and run the "
+"tests from this tree against the package ``glib2.0`` from the archive. The "
+"option ``-S`` also supports schemes for bzr, git, and apt sources. If you "
+"only specify a source with ``-S`` but do not specify a package name, this "
+"will instead build the branch and install the binaries from that build; this "
+"is useful if you want to run tests on a newer version than the one packaged "
+"in Ubuntu, or the package is not in Ubuntu at all. If use the ``-k`` flag "
+"you can log into the virtual machine after the tests were run. This makes it "
+"very easy to debug issues."
 msgstr ""
-"Isso usaria o ``lp:~super-friends/friends/packaging``ramo como uma base para "
-"executar os testes no Ubuntu ``friends`` package. Se você só especifica um "
-"ramo com ``-b`` mas não especifica um nome de um pacote, este, ao contrário, "
-"construirá o ramo e instalará os binários de dessa construção; Isto é útil "
-"se você quiser executar testes em uma versão mais recente do que o "
-"empacotado no Ubuntu, ou o pacote não está em todo o Ubuntu. Se usar o ``-"
-"k`` você pode entrar na máquina virtual após os testes serem executados. "
-"Isto torna muito fácil de depurar problemas."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:126
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:127
 msgid ""
 "The `auto-package-testing documentation`_ has a lot more valuable "
 "information on other testing options."
@@ -193,11 +184,11 @@ msgstr ""
 "O `auto-package-testing documentation`_  tem muito mais informação valiosa "
 "sobre outras opções de teste"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:132
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:133
 msgid "Further examples"
 msgstr "Outros exemplos"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:134
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:135
 msgid ""
 "This list is not comprehensive, but might help you get a better idea of how "
 "automated tests are implemented and used in Ubuntu."
@@ -205,7 +196,7 @@ msgstr ""
 "Esta lista não é completa, mas pode ajudá-lo a ter uma ideia melhor de como "
 "testes automatizados são implementados e usados no Ubuntu."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:137
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:138
 msgid ""
 "The `libxml2 tests`_ are very similar. They also run a test-build of a "
 "simple piece of C code and execute it."
@@ -213,7 +204,7 @@ msgstr ""
 "Os testes em `libxml2 tests`_ são muito similares. Eles também compilam um "
 "teste de um pedaço simples de código em C e o executam."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:139
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
 msgid ""
 "The `gtk+3.0 tests`_ also do a compile/link/run check in the \"build\" test. "
 "There is an additional \"python3-gi\" test which verifies that the GTK "
@@ -223,11 +214,11 @@ msgstr ""
 "no teste de compilação. Há um teste adicional \"python3-gi\" que verifica "
 "que a biblioteca GTK pode ser usada através de introspecção."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:142
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
 msgstr "Nos `testes do ubiquity`_ a suíte de testes do upstream é executada."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:144
 msgid ""
 "The `gvfs tests`_ have comprehensive testing of their functionality and are "
 "very interesting because they emulate usage of CDs, Samba, DAV and other "
@@ -236,11 +227,11 @@ msgstr ""
 "Os testes em `gvfs tests`_ tem testes abrangentes de suas funcionalidades e "
 "são muito interessantes porque emulam uso de CDs, Samba, DAV e entre outros."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:148
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:149
 msgid "Ubuntu infrastructure"
 msgstr "Infraestrutura do Ubuntu"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:150
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:151
 msgid ""
 "Packages which have ``autopkgtest`` enabled will have their tests run "
 "whenever they get uploaded or any of their reverse-dependencies change. The "
@@ -253,7 +244,7 @@ msgstr ""
 "(`automatically run autopkgtest tests`_) pode ser visto na web e é "
 "regularmente atualizado."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:155
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:156
 msgid ""
 "While Debian does not have an automatic testing infrastructure set up yet, "
 "they should still be submitted to Debian, as DEP-8 is a Debian specification "
@@ -264,7 +255,7 @@ msgstr ""
 "uma especificação do Debian e os desenvolvedores  Debian, ou usuários, ainda "
 "podem executar os testes manualmente."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:159
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:160
 msgid ""
 "Packages in Debian with a testsuite header will also be automatically added "
 "when they are synced to Ubuntu."
@@ -272,11 +263,11 @@ msgstr ""
 "Pacotes no Debian com um cabeçalho testsuite também serão adicionados "
 "automaticamente quando eles forem sincronizados com o Ubuntu."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:163
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
 msgid "Getting the test into Ubuntu"
 msgstr "Obtendo o teste no Ubuntu"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:165
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
@@ -285,29 +276,29 @@ msgstr ""
 "semelhante a :doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essencialmente, "
 "você simplesmente:"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:168
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "run ``bzr branch ubuntu:<packagename>``,"
 msgstr "execute ``bzr branch ubuntu:<nomedopacote>``,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
 msgid "edit ``debian/control`` to enable the tests,"
 msgstr "edite ``debian/control`` para habilitar os testes,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
 msgid "add the ``debian/tests`` directory,"
 msgstr "adiciona o diretório ``debian/tests``,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
 msgstr ""
 "escreva o ``debian/tests/control`` baseado no `DEP 8 Specification`_,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid "add your test case(s) to ``debian/tests``,"
 msgstr "adicione seu(s) caso(s) de teste em ``debian/tests``,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:174
 msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
@@ -315,18 +306,18 @@ msgstr ""
 "submeta suas mudanças, envie elas para o Launchpad, proponha a mesclagem e "
 "obtenha revisões apenas como qualquer outra melhoria no pacote fonte."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:178
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
 msgid "What you can do"
 msgstr "O que você pode fazer"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:180
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:181
 msgid ""
 "The Ubuntu Engineering team put together a `list of required test-cases`_, "
 "where packages which need tests are put into different categories. Here you "
 "can find examples of these tests and easily assign them to yourself."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:184
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:185
 msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel`_ to get in touch with developers who can help you."
