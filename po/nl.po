@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-12 11:02+0000\n"
-"PO-Revision-Date: 2013-02-12 16:19+0000\n"
+"PO-Revision-Date: 2013-02-14 16:35+0000\n"
 "Last-Translator: Hannie Dumoleyn <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-13 04:53+0000\n"
+"X-Launchpad-Export-Date: 2013-02-15 04:51+0000\n"
 "X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -76,20 +76,25 @@ msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
+"Voor de test in ``debian/tests/build`` zou dit ervoor zorgen dat de "
+"pakketten ``libglib2.0-dev`` en ``build-essential`` geïnstalleerd zijn."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
 msgid ""
 "You can use ``@`` in the ``Depends`` line to indicate that you want all the "
 "packages installed which are built by the source package in question."
 msgstr ""
+"U kunt ``@`` in de regel ``Depends`` gebruiken om aan te geven dat u alle "
+"pakketten die gebouwd worden door het betreffende bronpakket geïnstalleerd "
+"wilt hebben."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr ""
+msgstr "De werkelijke testen"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
-msgstr ""
+msgstr "De bijbehorende test voor het voorbeeld hierboven zou kunnen zijn:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
 msgid ""
@@ -98,16 +103,24 @@ msgid ""
 "provided by `pkg-config`). Then the compiled binary, which just exercises "
 "some parts of core glib functionality, is run."
 msgstr ""
+"Hier wordt een zeer eenvoudig stukje C-code geschreven naar een tijdelijke "
+"map. Daarna wordt dit gecompileerd met systeembibliotheken (gebruik makend "
+"van vlaggen en bibliotheekpaden zoals geboden door `pkg-config`). Daarna "
+"wordt het gecompileerde binaire bestand, dat alleen maar een paar onderdelen "
+"van de kernfunctionaliteit van glib uitoefent, uitgevoerd."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:80
 msgid ""
 "While this test is very small and basic, it tests quite a number of core "
 "components on a system. This may help to uncover critical issues early on."
 msgstr ""
+"Hoewel deze test klein en basaal is, test hij een flink aantal "
+"kernonderdelen van een systeem. Dit kan helpen bij het ontdekken van "
+"kritieke problemen in een vroeg stadium."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
 msgid "Executing the test"
-msgstr ""
+msgstr "De test uitvoeren"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
 msgid ""

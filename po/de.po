@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-12 11:02+0000\n"
-"PO-Revision-Date: 2013-02-13 10:37+0000\n"
-"Last-Translator: noneofthem <heypigs@gmail.com>\n"
+"PO-Revision-Date: 2013-02-14 07:48+0000\n"
+"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-14 05:01+0000\n"
+"X-Launchpad-Export-Date: 2013-02-15 04:51+0000\n"
 "X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4535,7 +4535,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:62
 msgid "Generating a debdiff"
-msgstr ""
+msgstr "Ein Debdiff erzeugen"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:64
 msgid ""
@@ -4549,6 +4549,8 @@ msgstr ""
 msgid ""
 "Another way is to is to open the merge proposal and download the diff."
 msgstr ""
+"Ein weiterer Weg dies zu tun ist den Merge-Vorschlag im Browser zu öffnen "
+"und das Diff herunterzuladen."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:73
 msgid ""
@@ -4559,7 +4561,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:79
 msgid "Dealing with feedback from sponsors"
-msgstr ""
+msgstr "Umgang mit Feedback der Sponsoren"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:81
 msgid ""
@@ -4591,7 +4593,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:103
 msgid "Expectations"
-msgstr ""
+msgstr "Erwartungen"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:105
 msgid ""
@@ -4607,16 +4609,20 @@ msgid ""
 "If you haven't heard back in a while, feel free to join `#ubuntu-devel` on "
 "`irc.freenode.net` and find out if somebody can help you there."
 msgstr ""
+"Wenn Du eine Weile nichts mehr gehört hast, schaue einfach in `#ubuntu-"
+"devel` auf `irc.freenode.net` ob Dir jemand dort helfen kann."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:114
 msgid ""
 "For more information on the generall sponsorship process, review the "
 "documentation on our wiki as well: https://wiki.ubuntu.com/SponsorshipProcess"
 msgstr ""
+"Weitere Informationen über den allgemeinen Prozess für Sponsoring, sind auf "
+"https://wiki.ubuntu.com/SponsorshipProcess verfügbar."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:3
 msgid "Uploading a package"
-msgstr ""
+msgstr "Ein Paket hochladen."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:5
 msgid ""
@@ -4628,7 +4634,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:12
 msgid "Uploading a change made by you"
-msgstr ""
+msgstr "Eine eigene Änderung hochladen"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:14
 msgid ""
@@ -4636,12 +4642,17 @@ msgid ""
 "to get that change back on to the main source branch, build a source "
 "package, and then upload it."
 msgstr ""
+"Wenn du einen Branch mit einer Änderung hast, die Du hochladen möchtest, "
+"musst Du die Änderung in den Haupt-Branch integrieren, ein Quellpaket bauen "
+"und es hochladen."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:18
 msgid ""
 "First, you need to check that you have the latest version of the package in "
 "your checkout of the development package trunk::"
 msgstr ""
+"Zuerst musst Du prüfen, ob Du die neueste Version des Pakets in Deinem "
+"Checkout des Entwicklungszweiges hast."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:24
 msgid ""
@@ -4659,18 +4670,25 @@ msgid ""
 "For older versions of bzr, you can use the ``merge-package`` command "
 "instead::"
 msgstr ""
+"Für ältere Versionen von bzr kannst Du das ``merge-package`` Kommando "
+"verwenden."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:38
 msgid ""
 "This will merge the two trees, possibly producing conflicts, which you'll "
 "need to resolve manually."
 msgstr ""
+"Dies wird zwei Zweige mergen, dabei können Merge-Konflikte auftreten, die "
+"man manuell auflösen muss."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:41
 msgid ""
 "Next you should make sure the ``debian/changelog`` is as you would like, "
 "with the correct distribution, version number, etc."
 msgstr ""
+"Als nächstes solltest Du sicherstellen, dass ``debian/changelog`` wie "
+"gewünscht aussieht, mit der richtigen Distribution, Versionsnummer und so "
+"weiter."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:44
 msgid ""
