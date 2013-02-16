@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-12 11:02+0000\n"
-"PO-Revision-Date: 2012-12-30 20:14+0000\n"
-"Last-Translator: Vinicius Almeida <vinicius.algo@gmail.com>\n"
+"PO-Revision-Date: 2013-02-16 02:07+0000\n"
+"Last-Translator: Neliton Pereira Jr. <nelitonpjr@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-15 04:52+0000\n"
+"X-Launchpad-Export-Date: 2013-02-16 05:12+0000\n"
 "X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -89,7 +89,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr "Os testes atuais"
+msgstr "Os testes reais"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
@@ -155,13 +155,15 @@ msgstr "Então, obter o código fonte do Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Raring AMD64 system::"
-msgstr ""
+msgstr "E provisionar um sitema Raring AMD64::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Raring AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Este comando irá criar uma máquina virtual Raring AMD64 pura a partir de uma "
+"imagem em nuvem. Para executar os testes, é só executar::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -272,9 +274,9 @@ msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
-"O processo de apresentação de um autopkgtest para um pacote é muito "
-"semelhante a :doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essencialmente, "
-"você simplesmente:"
+"O processo de envio de um autopkgtest para um pacote é muito semelhante a "
+":doc:`corrigindo um erro no Ubuntu<./fixing-a-bug>`. Essencialmente, você "
+"simplesmente:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "run ``bzr branch ubuntu:<packagename>``,"
@@ -316,12 +318,19 @@ msgid ""
 "where packages which need tests are put into different categories. Here you "
 "can find examples of these tests and easily assign them to yourself."
 msgstr ""
+"O time de Engenharia do Ubuntu montou a \"lista de casos de teste "
+"necessários\"_, onde pacotes que necessitam ser testados são colocados em "
+"diferentes categorias. Aqui você pode encontrar exemplos desses testes e "
+"atribuí-los a você."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:185
 msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel`_ to get in touch with developers who can help you."
 msgstr ""
+"Se você incorrer em quaisquer problemas, você também pode se inscrever no "
+"\"#ubuntu-quality IRC channel\"_ para entrar em contato com desenvolvedores "
+"que podem ajudá-lo."
 
 #: ../ubuntu-packaging-guide/backports.rst:3
 msgid "Backporting software updates"
@@ -375,6 +384,14 @@ msgid ""
 "the :doc:`Security Update or the Stable Release Update process<./security-"
 "and-stable-release-updates>`, as appropriate."
 msgstr ""
+"O Projeto de Backports é uma maneira de fornecer novos recursos aos "
+"usuários. Por causa dos riscos intrínsecos dos pacotes de backports, "
+"usuários não obtêm pacotes de backports sem algumas ações explícitas de suas "
+"partes. Isto geralmente faz com que backports sejam uma via inapropriada "
+"para corrigir erros. Se um pacote em uma versão do Ubuntu possui um erro, "
+"ele deve ser corrigido através do :doc:`processo de atualização de segurança "
+"ou de atualização de versão estável <./security-and-stable-release-"
+"updates>`, como deve ser."
 
 #: ../ubuntu-packaging-guide/backports.rst:35
 msgid ""
@@ -383,6 +400,10 @@ msgid ""
 "``pbuilder-dist`` (in the ``ubuntu-dev-tools`` package) is a very handy tool "
 "to do this easily."
 msgstr ""
+"Uma vez que você tenha decidido que quer que se faça um backport de um "
+"pacote para uma versão estável, você precisará construí-lo e testá-lo nessa "
+"dada versão estável. \"pbuider-dist\" (no pacote \"ubuntu-dev-tools\") é uma "
+"ferramenta muito útil para se fazer isto facilmente."
 
 #: ../ubuntu-packaging-guide/backports.rst:40
 msgid ""
@@ -392,6 +413,12 @@ msgid ""
 "be backported to, list all reverse-dependencies, and file the backporting "
 "request.  Also will it include a testing checklist in the bug."
 msgstr ""
+"Para relatar um pedido de backport e tê-lo processado polo time de Backport, "
+"você pode utilizar a ferramenta \"requestbackport\" (também no pacote "
+"\"ubuntu-dev-tools\"). Isso irá determinar que as versões intermediárias "
+"para as quais será feito um backport do pacote, listar todas as dependências "
+"reversas, e arquivar o pedido de backport. Irá também incluir uma lista de "
+"verificação de teste no rastreador de erros."
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
@@ -1033,6 +1060,9 @@ msgid ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
+"Veja \"man dh_install\" e a \"seção de arquivo de instalação (Seção 5,11) "
+"<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>\"_ do "
+"Novo Guia dos Mantenedores do Debian para detalhes adicionais."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:302
 msgid "The watch file"
@@ -1120,6 +1150,11 @@ msgid ""
 "about the missing file. This warning is informational only and may be safely "
 "ignored."
 msgstr ""
+"Atualmente, o formato fonte do pacote será padronizada para 1.0 se o arquivo "
+"não existir. Você pode fazer isso explicitamente no arquivo/formato fonte. "
+"Se você escolher não utilizar este arquivo para definir o formato fonte, o "
+"Lintian irá lhe avisar sobre o arquivo ausente. Este aviso é apenas uma "
+"informação e pode ser ignorado com segurança."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:358
 msgid ""
@@ -1196,6 +1231,8 @@ msgid ""
 "If you followed the instructions to :doc:`get set up with Ubuntu "
 "Development<./getting-set-up>`, you should be all set and ready to go."
 msgstr ""
+"Se você seguiu as instruções do :doc:`prepare-se para o Desenvolvimento do "
+"Ubuntu<./getting-set-up>`, você deve estar pronto para começar."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:13
 msgid ""
@@ -1205,6 +1242,11 @@ msgid ""
 "and merged. In this guide we will go through all the necessary steps one by "
 "one."
 msgstr ""
+"Como você pode observar na imagem acima, não há surpresas no processo de "
+"correção de erros no Ubuntu: você encontra um problema, obtém o código, "
+"trabalha para corrigi-lo, testa, envia as alterações para o Launchpad e pede "
+"para que sejam revisadas e incorporadas. Neste guia nós passaremos por todas "
+"as etapas necessárias, uma por uma."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:20
 msgid "Finding the problem"
@@ -1216,6 +1258,10 @@ msgid ""
 "bug report you are encountering yourself (which gives you a good opportunity "
 "to test the fix), or a problem you noted elsewhere, maybe in a bug report."
 msgstr ""
+"Há várias maneiras diferentes de encontrar coisas nas quais trabalhar. Pode "
+"ser um relatório de erro que você mesmo encontrou (o que lhe dá uma boa "
+"oportunidade para testar a correção), ou um problema que você encontrou em "
+"outro lugar, talvez num relatório de erro."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:26
 msgid ""
@@ -1235,6 +1281,9 @@ msgid ""
 "problem, but you do know the path to the affected program on your system, "
 "you can discover the source package that you'll need to work on."
 msgstr ""
+"Se você não sabe qual o pacote fonte que contém o código que tem o problema, "
+"mas você sabe o caminho para o programa afetado no seu sistema, você pode "
+"descobrir o pacote fonte no qual você precisa trabalhar."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:41
 msgid ""
@@ -1243,6 +1292,10 @@ msgid ""
 "command line.  To find the binary package containing this application, use "
 "this command::"
 msgstr ""
+"Digamos que você tenha encontrado um erro no Tomboy, um aplicativo para "
+"tomar notas na área de trabalho. O Tomboy pode ser iniciado executando "
+"\"/usr/bin/tomboy\" na linha de comando. Para encontrar o pacote binário que "
+"contém esse aplicativo, use este comando::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:48
 msgid "This would print out::"
@@ -1256,6 +1309,11 @@ msgid ""
 "build multiple different binary packages.  To find the source package for a "
 "particular binary package, type::"
 msgstr ""
+"Note que a parte que precede o ponto-e-vírgula é o nome do pacote binário. "
+"Frequentemente, o pacote fonte e o pacote binário terão nomes diferentes. "
+"Isto é mais comum quando um único pacote fonte é utilizado para construir "
+"diferentes pacotes binários. Para encontrar o pacote fonte de um pacote "
+"binário em particular, digite::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:63
 msgid "``apt-cache`` is part of the standard installation of Ubuntu."
@@ -1306,6 +1364,10 @@ msgid ""
 "such as obvious typos first. Try to keep changes as minimal as possible and "
 "document your change and assumptions clearly."
 msgstr ""
+"Há livros inteiros escritos sobre encontrar erros, corrigi-los, testá-los, "
+"etc. Se você for um programador novato, tente corrigir erros fáceis "
+"primeiro, como erros de digitação óbvios. Tente alterar o mínimo possível, e "
+"documente sua alteração e suposições com clareza."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
 msgid ""
@@ -1320,6 +1382,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
+"Rastreamento de erros upstream (e Debian) de erros abertos e fechados,"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
 msgid ""
@@ -1374,6 +1437,10 @@ msgid ""
 "just omit the step to sign the source package) and ``pbuilder-dist`` will "
 "build the package from source for whatever ``release`` you choose."
 msgstr ""
+"Isto irá criar um pacote fonte a partir do conteúdo do ramo (\"-us -uc\" irá "
+"apenas omitir o passo para assinar o pacote fonte) e \"pbuilder-dist\" irá "
+"construir o pacote a partir da fonte para qualquer \"versão\" que você "
+"escolher."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:132
 msgid ""
@@ -1398,6 +1465,11 @@ msgid ""
 "includes ``debian/changelog``, where changes of each uploaded package are "
 "tracked."
 msgstr ""
+"É muito importante documentar a sua alteração suficientemente de maneira que "
+"os desenvolvedores que olharem o código no futuro não terão que adivinhar "
+"qual foi o seu raciocínio e quais foram a suposições. Todo pacote fonte do "
+"Debian e do Ubuntu inclui o \"debian/changelog\", onde alterações em cada "
+"pacote enviado são rastreadas."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:146
 msgid "The easiest way to update this is to run::"
@@ -1423,6 +1495,8 @@ msgid ""
 "With that out of the way, let's focus on the actual changelog entry itself: "
 "it is very important to document:"
 msgstr ""
+"Com isso fora do caminho, vamos nos concentrar na entrada do registro de "
+"alteração propriamente dita: é muito importante documentar:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 msgid "where the change was done"
@@ -1493,8 +1567,8 @@ msgid ""
 "Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into "
 "more detail about getting feedback for your proposed changes."
 msgstr ""
-"Nosso artigo sobre :​doc:`seeking sponsorship<./udd-sponsorship>`  entra em "
-"mais detalhes sobre a obtenção de feedback para as suas alterações propostas."
+"Nosso artigo sobre :​doc:`buscando patrocínio<./udd-sponsorship>`  entra em "
+"mais detalhes sobre a obtenção de retorno para as suas alterações propostas."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:212
 msgid ""
@@ -1502,6 +1576,10 @@ msgid ""
 "might want to have a look at our :doc:`Security and stable release "
 "updates<./security-and-stable-release-updates>` article."
 msgstr ""
+"Se o seu ramo corrigir problemas em uma versão estável ou for uma correção "
+"de segurança, você pode querer dar uma olhada no nosso artigo "
+":doc:`Atualizações de segurança e de versões estáveis<./security-and-stable-"
+"release-updates>`."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:3
 msgid "Tutorial: Fixing a bug in Ubuntu"
@@ -1514,6 +1592,10 @@ msgid ""
 "An example of a concrete problem might help to get an idea what to consider "
 "generally."
 msgstr ""
+"Apesar de a mecânica para :doc:`corrigir um erro<./fixing-a-bug>` ser a "
+"mesma para todos os erros, todo problema com que você se depara é "
+"provavelmente diferente dos outros. Um exemplo de problema concreto pode "
+"ajudar a ter uma ideia do que deve ser considerado em geral."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:10
 msgid ""
@@ -1521,6 +1603,10 @@ msgid ""
 "reading the article this might actually be fixed. Take this as an example "
 "and try to adapt it to the specific problem you are facing."
 msgstr ""
+"No momento que este artigo estava sendo escrito, isto ainda não havia sido "
+"corrigido. Quando você estiver lendo o artigo, talvez já tenha sido "
+"corrigido. Tome isto como um exemplo e tente adaptá-lo ao problema "
+"específico que você está encarando."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:15
 msgid "Confirming the problem"
@@ -1533,6 +1619,10 @@ msgid ""
 "already. This is easy to check, either take a look at Software Center or "
 "run::"
 msgstr ""
+"Digamos que o pacote \"bumprace\" não tenha uma página na Internet na sua "
+"descrição de pacote. Como primeiro passo, você iria verificar se o problema "
+"já esta solucionado. Isto é fácil de verificar, dê uma olhado na Central de "
+"Programas ou execute::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:23
 msgid "The output should be similar to this::"
@@ -1541,6 +1631,8 @@ msgstr "A saída deve ser similar a isto::"
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:49
 msgid "A counter-example would be ``gedit``, which has a homepage set::"
 msgstr ""
+"Um contra-exemplo seria o \"gedit\", que tem uma página na Internet "
+"definida::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:55
 msgid ""
@@ -1548,6 +1640,9 @@ msgid ""
 "already fixed. To avoid wasting efforts and duplicating work it makes sense "
 "to first do some detective work."
 msgstr ""
+"Algumas vezes você ira descobrir que um problema em particular que você está "
+"analisando já está corrigido. Para evitar desperdiçar esforço e duplicar "
+"trabalho, faz sentido fazer um trabalho de detetive antes."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:61
 msgid "Research bug situation"
@@ -1636,6 +1731,8 @@ msgid ""
 "To address the issue in the source package, we first need the source and we "
 "can easily get it by running::"
 msgstr ""
+"Para nos dedicarmos a esse problema no pacote fonte, nós primeiro precisamos "
+"do fonte e nós podemos facilmente obtê-lo executando::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:117
 msgid ""
@@ -5055,3 +5152,5 @@ msgid ""
 "Once you've got the source package, you can build it as normal with "
 "``pbuilder-dist`` (or ``pbuilder`` or `sbuild`_)."
 msgstr ""
+"Uma vez que você tenha obtido o pacote fonte, você pode construí-lo "
+"normalmente com  \"pbuilder-dist\"` (ou \"pbuilder\" ou \"sbuild\"_)."

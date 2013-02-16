@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-12 11:02+0000\n"
-"PO-Revision-Date: 2013-02-14 07:48+0000\n"
+"PO-Revision-Date: 2013-02-15 12:34+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-15 04:51+0000\n"
+"X-Launchpad-Export-Date: 2013-02-16 05:12+0000\n"
 "X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -182,6 +182,16 @@ msgid ""
 "you can log into the virtual machine after the tests were run. This makes it "
 "very easy to debug issues."
 msgstr ""
+"Das würde das Quellpaket ``/tmp/glib2.0-2.35.7/`` auswählen und die Tests "
+"gegen das Paket ``glib2.0`` aus dem Archiv laufen lassen.  Die Option ``-S`` "
+"unterstützt auch Quellen von bzr, git und apt. Wenn du nur eine Quelle mit "
+"``-S`` festlegst, aber den Paketnamen nicht genauer bestimmst, wird diese "
+"Funktion stattdessen den Zweig aufbauen und die Binaries von dieser Version "
+"installieren; das ist nützlich wenn du Tests für ein neueres Paket "
+"durchführen willst als das welches in Ubuntu enthalten ist oder das Paket "
+"überhaupt nicht in Ubuntu existiert. Wenn du die Option ``-k``  setzt kannst "
+"du in die virtuelle Maschine wechseln nachdem die Tests durchgeführt wurden. "
+"Das macht es sehr einfach Fehler zu erkennen."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:127
 msgid ""
@@ -904,6 +914,10 @@ msgid ""
 "build target that ``debian/rules`` is called with as an argument to "
 "``/usr/bin/dh``, which itself will call all the necessary ``dh_*`` commands."
 msgstr ""
+"Lass uns durch diese Datei ein bisschen genauer durchgehen. Sie sorgt dafür, "
+"dass jedes Target, welches von ``debian/rules`` aufgerufen wird, als "
+"Argument an ``/usr/bin/dh`` weitergegeben wird, welches selbst wiederum alle "
+"nötigen ``dh_*``-Befehle aufrufen wird."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:212
 msgid ""
@@ -954,6 +968,10 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ of "
 "the Debian Policy Manual."
 msgstr ""
+"Wirf einen Blick in ``/usr/share/doc/debhelper/examples/`` und ``man dh`` "
+"für weitere Beispiele. Außerdem ist `der Regelkatalog (Abschnitt 4.9) "
+"<http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ der "
+"Debian-Grundsatzanweisung hilfreich."
 
 # 909152843c7c41ffa14664f13cb0e23f
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:251
@@ -962,13 +980,15 @@ msgstr "Zusätzliche Dateien"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:254
 msgid "The install file"
-msgstr ""
+msgstr "Die Datei install"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:256
 msgid ""
 "The ``install`` file is used by ``dh_install`` to install files into the "
 "binary package. It has two standard use cases:"
 msgstr ""
+"Die Datei ``install`` wir dvon ``dh_install`` verwendet um Dateien in das "
+"Binärpacket zu installieren. Es hat zwei gängige Einsatzmöglichkeiten:"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:259
 msgid ""
@@ -4490,13 +4510,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:28
 msgid "The general form of the URL you should push your branch to is::"
-msgstr ""
+msgstr "Die allgemeine Form der URL, zu der Du Deinen Branch hochlädst ist::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:32
 msgid ""
 "For example, to push your fix for bug 12345 in the Tomboy package for Natty, "
 "you'd use::"
 msgstr ""
+"Um zu Beispiel Deinen Fix für Bug 12345 im Paket tomboy in Natty hochzuladen "
+"würdest Du folgendes benutzen::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:37
 msgid ""
@@ -4512,11 +4534,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:43
 msgid "To do this open the bug page in a browser, e.g.::"
-msgstr ""
+msgstr "Um dies zu tun, öffne den Bug-Report in Deinem Browser, z.B.::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:47
 msgid "If that fails, then you can use::"
-msgstr ""
+msgstr "Sollte dies fehlschlagen, dann benutze::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:51
 msgid ""
@@ -4576,6 +4598,9 @@ msgid ""
 "pushed to, and will update the branch on Launchpad with your latest commits. "
 "All you need to do is::"
 msgstr ""
+"Wenn Du Deinen Branch nach Launchpad hochlädst, wird sich Bazaar merken "
+"wohin und der Branch in Launchpad wird aktualisiert mit Deinen letzten "
+"Commits. Alles was Du tun musst, ist::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:93
 msgid ""
@@ -4702,6 +4727,8 @@ msgid ""
 "The next step is to build and test the modified source package as you "
 "normally would::"
 msgstr ""
+"Im nächsten Schritt baut und testet man das modifizierte Paket, genau wie "
+"sonst auch::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:53
 msgid ""
@@ -4719,7 +4746,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:63
 msgid "Now you can push the changes back to Launchpad::"
-msgstr ""
+msgstr "Jetzt kann man die Änderungen zurück nach Launchpad hochladen::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:67
 msgid "(Change the destination if you are uploading an SRU or similar.)"
@@ -4734,7 +4761,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:75
 msgid "or, if you have permission to upload to the primary archive::"
-msgstr ""
+msgstr "oder, wenn Du die Uploadrechte für das Primärachiv hast:"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:79
 msgid ""
