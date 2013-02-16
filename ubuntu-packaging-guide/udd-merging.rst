@@ -116,7 +116,6 @@ upstream version present there; e.g., if the last Ubuntu release was
 want to use as the tip of the upstream branch.
 
 
-.. _`package importer`:  http://package-import.ubuntu.com/status/
 .. _Squeeze: http://wiki.debian.org/DebianSqueeze
 
 .. [#] You will need newer versions of ``bzr`` and the ``bzr-builddeb`` for
