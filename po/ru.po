@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-12 11:02+0000\n"
-"PO-Revision-Date: 2013-02-12 08:32+0000\n"
+"PO-Revision-Date: 2013-02-15 13:00+0000\n"
 "Last-Translator: Aleksey Kabanov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-15 04:52+0000\n"
+"X-Launchpad-Export-Date: 2013-02-16 05:12+0000\n"
 "X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -158,13 +158,15 @@ msgstr "Затем получите исходный код с Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Raring AMD64 system::"
-msgstr ""
+msgstr "И подготовьте систему Raring AMD64::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Raring AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Эта команда создаст чистую виртуальную машину Raring AMD64 из облачного "
+"образа. Для запуска тестов просто выполните::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -3404,6 +3406,10 @@ msgid ""
 "It is a current `Debian goal to remove .la files`_ and we should help with "
 "this."
 msgstr ""
+"Файлы ``.la`` (libtool) необходимы в некоторых не-Linux системах с плохой "
+"поддержкой библиотек, но в системах Debian они обычно вызывают больше "
+"проблем, чем решают.  Текущая цель Debian — убрать файлы .la (`Debian goal "
+"to remove .la files`_), и мы должны  в этом помочь."
 
 #: ../ubuntu-packaging-guide/libraries.rst:82
 msgid "Static Libraries"
@@ -3419,10 +3425,18 @@ msgid ""
 "with the library until the program is recompiled.  For this reason programs "
 "using static libraries are discouraged."
 msgstr ""
+"Пакет -dev также содержит ``usr/lib/libnova.a``.  Это статическая "
+"библиотека, альтернатива общей библиотеке.  Любая программа, "
+"скомпилированная со статической библиотекой, содержит её код непосредственно "
+"в себе.  Это позволяет не беспокоиться о двоичной совместимости библиотеки.  "
+"Однако это также означает, что любые ошибки, в том числе уязвимости в "
+"безопасности, не будут исправлены за счёт обновления библиотеки, пока "
+"программа не будет перекомпилирована.  По этой причине использовать "
+"программы со статическими библиотеками не рекомендуется."
 
 #: ../ubuntu-packaging-guide/libraries.rst:94
 msgid "Symbol Files"
-msgstr ""
+msgstr "Символьные файлы"
 
 #: ../ubuntu-packaging-guide/libraries.rst:96
 msgid ""
@@ -3446,6 +3460,8 @@ msgid ""
 "libnova has no symbols file so we can create one.  Start by compiling the "
 "package::"
 msgstr ""
+"libnova не имеет символьного файла, так что мы можем создать его. Начните с "
+"компиляции пакета::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:112
 msgid ""
@@ -3453,10 +3469,13 @@ msgid ""
 "removing the built files.  Change to the build and run ``dpkg-gensymbols`` "
 "for the library package::"
 msgstr ""
+"Опция ``-nc`` указывает не удалять сборочные файлы после завершения "
+"компиляции.  Перейдите в каталог сборки и выполните  ``dpkg-gensymbols`` для "
+"пакета библиотеки::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:119
 msgid "This makes a diff file which you can self apply::"
-msgstr ""
+msgstr "Это создаст diff-файл, который вы сможете применить самостоятельно::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:123
 msgid ""
@@ -3470,6 +3489,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/libraries.rst:130
 msgid "Now move the file into its location, commit and do a test build::"
 msgstr ""
+"Теперь переместите файл туда, где он должен находиться, зафиксируйте "
+"изменения и выполните тестовую сборку::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:138
 msgid ""
@@ -3477,6 +3498,10 @@ msgid ""
 "upstream version of libnova you would run dpkg-gensymbols again and it will "
 "give a diff to update the symbols file."
 msgstr ""
+"Если компиляция выполняется успешно, значит символьный файл не содержит "
+"ошибок.  С выходом следующей апстрим-версии libnova вам придётся снова "
+"запустить dpkg-gensymbols, чтобы создать diff для обновления символьного "
+"файла."
 
 #: ../ubuntu-packaging-guide/libraries.rst:143
 msgid "C++ Library Symbols Files"
@@ -3488,10 +3513,14 @@ msgid ""
 "Debian Qt/KDE Team maintain some scripts to handle this, see their `Working "
 "with symbols files`_ page for how to use them."
 msgstr ""
+"C++ имеет ещё более строгие стандарты двоичной совместимости, чем C.  "
+"Команда Debian Qt/KDE поддерживает несколько сценариев для работы с ними: "
+"посетите их страницу `Working with symbols files`_, чтобы узнать как "
+"пользоваться этими сценариями."
 
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
-msgstr ""
+msgstr "Информация для дальнейшего чтения"
 
 #: ../ubuntu-packaging-guide/libraries.rst:152
 msgid ""
@@ -3513,6 +3542,12 @@ msgid ""
 "at creating a package for Ubuntu or a PPA_. This guide will take you through "
 "the steps of packaging new software."
 msgstr ""
+"Хотя в архиве Ubuntu имеются тысячи пакетов, есть ещё много программ, "
+"которыми никто не занимается. Если вы знаете о какой-то замечательной "
+"программе, о которой, по вашему мнению, стоит узнать более широкому кругу "
+"пользователей, вы можете попробовать приложить свою руку к созданию пакета "
+"для Ubuntu или PPA_. Это руководство проведёт вас через этапы создания "
+"пакета для новой программы."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:11
 msgid ""
@@ -3818,6 +3853,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:192
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
 msgstr ""
+"Смотрите раздел «:doc:`Загрузка<./udd-uploading>`» для дополнительной "
+"информации."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:194
 msgid ""
@@ -3838,6 +3875,12 @@ msgid ""
 "available in not just Debian and Ubuntu but all of their derivatives as "
 "well. Here are some useful links for submitting new packages to Debian:"
 msgstr ""
+"Существует несколько путей, которыми пакет может попасть в Ubuntu. В "
+"большинстве случаев лучшим путём может быть прохождение сначала через "
+"Debian. Это позволит вашему пакету стать доступным для наибольшего "
+"количества пользователей, так как он будет доступен не только в Debian и "
+"Ubuntu, но и во всех дистрибутивах, созданных на их основе. Вот несколько "
+"полезных ссылок по отправке новых пакетов в Debian:"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:208
 msgid ""
@@ -3845,6 +3888,9 @@ msgid ""
 "prospective Debian Developers. It is where you can find a sponsor to upload "
 "your package to the archive."
 msgstr ""
+"`Debian Mentors FAQ`_ — debian-mentors является основным местом для "
+"создания, просмотра и загрузки в Debian новых пакетов. Здесь вы можете найти "
+"разработчика Debian для загрузки вашего пакета в архив."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:212
 msgid ""
@@ -3859,6 +3905,9 @@ msgid ""
 "invaluable for both Ubuntu and Debian packagers. This section documents "
 "processes for submitting new packages."
 msgstr ""
+"`Debian Developer's Reference, 5.1. New packages`_ — весь документ бесценен "
+"для создателей пакетов как для Ubuntu, так и для Debian. Этот раздел "
+"документирует процессы по отправке новых пакетов."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:220
 msgid ""
@@ -3867,6 +3916,11 @@ msgid ""
 "will make it into Ubuntu in time for the next release. This process is "
 "documented on the `\"New Packages\"`_ section of the Ubuntu wiki."
 msgstr ""
+"В некоторых случаях может иметь смысл сначала отправить пакет "
+"непосредственно в Ubuntu. Например, если версия Debian находится в состоянии "
+"заморозки, что делает маловероятным своевременное попадание вашего пакета в "
+"новый выпуск Ubuntu. Этот процесс документирован в разделе `\"New "
+"Packages\"`_ вики-страниц Ubuntu."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
 msgid "Patches to Packages"
@@ -3991,6 +4045,12 @@ msgid ""
 "for example, so it would break all translations.  If in doubt, do ask the "
 "upstream author before adding a patch."
 msgstr ""
+"Как правило, следует проявлять осторожность при добавлении патчей к "
+"программам, если они исходят не из апстрима. Часто имеется веская причина, "
+"по которой изменения ещё не были сделаны.  В рассмотренном выше примере "
+"изменяется строка в пользовательском интерфейсе, так что это может поломать "
+"все переводы.  Если сомневаетесь, спросите автора из апстрима перед тем, как "
+"добавить патч."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:104
 msgid "Upgrading to New Upstream Versions"
@@ -4027,10 +4087,12 @@ msgid ""
 "If it can be reverse-applied this means the patch has been applied already "
 "by upstream, so we can delete the patch::"
 msgstr ""
+"Если для патча указано ``it can be reverse-applied``, значит патч уже был "
+"применён апстримом, так что мы можем удалить этот патч::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:135
 msgid "Then carry on::"
-msgstr ""
+msgstr "Затем продолжайте::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:140
 msgid ""
@@ -4040,7 +4102,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:146
 msgid "Then commit as usual::"
-msgstr ""
+msgstr "Затем выполните фиксацию, как обычно::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:152
 msgid "Making A Package Use Quilt"
@@ -4057,10 +4119,12 @@ msgid ""
 "Older packages using source format 1.0 will need to explicitly use Quilt, "
 "usually by including a makefile into ``debian/rules``."
 msgstr ""
+"Для более старых пакетов, использующих формат 1.0, необходимо использовать "
+"Quilt явно, обычно с помощью включения make-фала в ``debian/rules``."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:163
 msgid "Other Patch Systems"
-msgstr ""
+msgstr "Другие системы управления патчами"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:165
 msgid ""
@@ -4448,7 +4512,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:61
 msgid "Formatting the changelog and patches"
-msgstr ""
+msgstr "Форматирование файла changelog и патчей"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:63
 msgid ""
@@ -4467,6 +4531,10 @@ msgid ""
 "at a minimum the Origin, Description and Bug-Ubuntu tags. For example, edit "
 "debian/patches/99-fix-a-vulnerability.patch to have something like::"
 msgstr ""
+"Обновите свой патч для использования соответствующих тегов. Ваш патч должен "
+"содержать как минимум теги Origin, Description и Bug-Ubuntu. Например, "
+"отредактируйте ``debian/patches/99-fix-a-vulnerability.patch``, чтобы он "
+"имел приблизительно следующие строки::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:91
 msgid ""
@@ -4476,7 +4544,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:95
 msgid "Test and Submit your work"
-msgstr ""
+msgstr "Проверка и отправка вашей работы"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:97
 msgid ""
@@ -4517,6 +4585,9 @@ msgid ""
 "If the security vulnerability is not yet public then do not file a merge "
 "proposal and ensure you mark the bug as private."
 msgstr ""
+"Если это уязвимость в безопасности, о которой ещё не объявлено публично, то "
+"не отправляйте предложение слияния и убедитесь, что вы пометили свою ошибку, "
+"как приватную (private)."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:112
 msgid ""
@@ -5359,6 +5430,8 @@ msgid ""
 "However, before you commit, it is always a good thing to check all the "
 "Ubuntu changes by running::"
 msgstr ""
+"Однако перед фиксацией всегда желательно проверить все изменения, сделанные "
+"в Ubuntu, выполнив::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:57
 msgid ""
@@ -5431,6 +5504,9 @@ msgid ""
 "The ``--version`` option is used to specify the upstream version that is "
 "being merged in, as the command isn't able to infer that (yet)."
 msgstr ""
+"Опция ``--version`` используется для указания версии апстрима, из которой "
+"выполняется слияние, поскольку команда не способна  (пока) узнать её "
+"самостоятельно."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:100
 msgid ""
@@ -5439,6 +5515,11 @@ msgid ""
 "as shown.  The command will automatically download the tarball for you.  The "
 "tarball will be renamed appropriately and, if required, converted to ``.gz``."
 msgstr ""
+"Последний параметр — это местоположение тарбола, на который выполняется "
+"обновление: это может быть путь в локальной файловой системе, http, ftp, "
+"sftp или другой URI, как показано в примере.  Команда автоматически загрузит "
+"тарбол для вас, переименует его соответствующим образом и, если требуется, "
+"преобразует в ``.gz``."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:105
 msgid ""
@@ -5446,6 +5527,9 @@ msgid ""
 "successfully, or that there were conflicts.  Either way you will be able to "
 "review the changes before committing as normal."
 msgstr ""
+"Команда ``merge-upstream`` сообщит либо о своём удачном завершении, либо о "
+"том, что имеются конфликты.  В любом случае у вас будет возможность "
+"проверить изменения перед их фиксацией обычным способом."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:109
 msgid ""
@@ -5467,6 +5551,12 @@ msgid ""
 "``bzr`` version 2.5 beta 5 or newer, and ``bzr-builddeb`` version 2.8.1 or "
 "newer.  For older versions, use the ``bzr merge-package`` command instead."
 msgstr ""
+"Для работы с командой ``merge`` вам понадобятся более новые версии ``bzr`` и "
+"``bzr-builddeb``.  Используйте версии из Ubuntu 12.04 (Precise) или "
+"разрабатываемые версии из  PPA ``bzr``.  Точнее говоря, вам понадобится "
+"``bzr`` версии 2.5 beta 5 или более новой, а также ``bzr-builddeb`` версии "
+"2.8.1 или более новой.  Для старых версий используйте взамен команду ``bzr "
+"merge-package``."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:3
 msgid "Seeking Review and Sponsorship"
@@ -5508,6 +5598,9 @@ msgid ""
 "It is not critical to have a link to a bug for every change you make, but if "
 "you are fixing reported bugs then linking to them will be useful."
 msgstr ""
+"Создавать ссылку на ошибку для каждого вашего изменения не обязательно, но "
+"если вы исправляете ошибки, для которых имеется отчёт об ошибке, то ссылки "
+"на этот отчёт могут быть полезны."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:28
 msgid "The general form of the URL you should push your branch to is::"
@@ -5578,11 +5671,15 @@ msgid ""
 "debdiff, you can generate one like this (from inside your `bug-12345` "
 "branch)::"
 msgstr ""
+"Как было указано выше, некоторые поручители предпочитают проверять "
+"*debdiff*, прикреплённый к отчёту об ошибке, вместо предложения слияния.  "
+"Если вас попросили включить debdiff, вы можете создать его следующим образом "
+"(из вашей ветки `bug-12345`)::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:71
 msgid ""
 "Another way is to is to open the merge proposal and download the diff."
-msgstr ""
+msgstr "Другой способ — открыть предложение слияния и загрузить diff."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:73
 msgid ""
@@ -5596,7 +5693,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:79
 msgid "Dealing with feedback from sponsors"
-msgstr ""
+msgstr "Работа с обратной связью от поручителей"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:81
 msgid ""
@@ -5604,6 +5701,9 @@ msgid ""
 "do this fairly easily.  Simply go to the branch that you were working in "
 "before, make the changes requested, and then commit::"
 msgstr ""
+"Если поручитель проверяет вашу ветку и просит вас что-то изменить, то "
+"сделать это очень легко.  Просто перейдите в ветку, над которой вы работали, "
+"сделайте требуемые изменения и выполните фиксацию::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:87
 msgid ""
@@ -5628,7 +5728,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:103
 msgid "Expectations"
-msgstr ""
+msgstr "Ожидание"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:105
 msgid ""
@@ -5638,6 +5738,12 @@ msgid ""
 "several days until you hear back. This depends on how busy everybody is, if "
 "the development release is currently frozen, or other factors."
 msgstr ""
+"Разработчики Ubuntu составили расписание людей (так называемых \"patch "
+"pilots\"), которые регулярно проверяют очередь поручительства и "
+"предоставляют обратную связь по вопросам работы с ветками и патчами. Но, "
+"даже несмотря на это, может пройти несколько дней, пока вы получите ответ. "
+"Это зависит от их занятости, от состояния заморозки текущей версии и других "
+"факторов."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:111
 msgid ""
@@ -5770,10 +5876,14 @@ msgid ""
 "you need to ``dput`` the source package to the appropriate location.  For "
 "example, if you want to upload your changes to your PPA, you'd do::"
 msgstr ""
+"Вам нужен один последний шаг, чтобы отправить свои изменения в Ubuntu или "
+"ваш PPA: вам нужно загрузить с помощью ``dput`` пакет исходного кода в "
+"соответствующее место.  Например, чтобы загрузить изменения в PPA, сделайте "
+"следующее::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:75
 msgid "or, if you have permission to upload to the primary archive::"
-msgstr ""
+msgstr "или, если у вас есть права загрузки в основной архив::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:79
 msgid ""
@@ -5826,7 +5936,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:115
 msgid "Sponsoring something and making your own changes"
-msgstr ""
+msgstr "Поручительство над чем-нибудь и внесение своих собственных изменений"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:117
 msgid ""
@@ -5834,6 +5944,9 @@ msgid ""
 "with some changes of your own then you can merge their work in to a separate "
 "branch first."
 msgstr ""
+"Если вы являетесь поручителем над чьей-нибудь работой, но хотите дополнить "
+"её несколькими собственными изменениями, то вы можете сначала выполнить "
+"слияние их работы в отдельную ветку."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:121
 msgid ""
