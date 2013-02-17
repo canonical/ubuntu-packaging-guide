@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-12 11:02+0000\n"
-"PO-Revision-Date: 2013-02-16 02:07+0000\n"
+"PO-Revision-Date: 2013-02-16 17:59+0000\n"
 "Last-Translator: Neliton Pereira Jr. <nelitonpjr@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-16 05:12+0000\n"
+"X-Launchpad-Export-Date: 2013-02-17 04:54+0000\n"
 "X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -1567,7 +1567,7 @@ msgid ""
 "Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into "
 "more detail about getting feedback for your proposed changes."
 msgstr ""
-"Nosso artigo sobre :​doc:`buscando patrocínio<./udd-sponsorship>`  entra em "
+"Nosso artigo sobre :doc:`buscando patrocínio<./udd-sponsorship>`  entra em "
 "mais detalhes sobre a obtenção de retorno para as suas alterações propostas."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:212
@@ -1671,6 +1671,9 @@ msgid ""
 "at http://bugs.debian.org/src:bumprace and can't find a bug report for our "
 "problem either."
 msgstr ""
+"Para o Debian, que é a maior fonte para os pacotes do Ubuntu, nós demos uma "
+"olhada em http://bugs.debian.org/src:bumprace e não achamos um relatório "
+"para o nosso problema também."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:77
 msgid ""
@@ -1708,6 +1711,10 @@ msgid ""
 "to commit it is good enough? Did you manage to only partially fix the issue "
 "and you want to at least share your part of it?"
 msgstr ""
+"Se nenhum relatório de erro foi arquivado, você pode arquivá-lo. O que você "
+"deve ter em mente é: o problema é tão pequeno que pedir para alguém para "
+"repará-lo seria suficiente? Você conseguiu corrigir apenas parcialmente o "
+"problema e você quer ao menos compartilhar a sua parte na correção?"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:100
 msgid "It is great if you can offer help and will surely be appreciated."
@@ -1725,6 +1732,10 @@ msgid ""
 "software catalogue. http://www.linux-games.com/bumprace/ looks like it is "
 "the proper place."
 msgstr ""
+"Para este caso específico basta pesquisar na Internet \"bumprace\" e "
+"encontrar a sua página Web. Assegure-se de que é um site ativo e não apenas "
+"um catálogo de programas. http://www.linux-games.com/bumprace/ parece que é "
+"o local apropriado."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:111
 msgid ""
@@ -1741,6 +1752,10 @@ msgid ""
 "the first part of ``debian/control``, the section which starts with "
 "``Source:``."
 msgstr ""
+"Se você leu :doc:`A visão geral do diretório Debian<./debian-dir-overview>` "
+"previamente, você deve se lembrar que página Web para de um pacote está "
+"especificada na primeira página do \"debian/control\", a seção que inicia "
+"com \"Source\"."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:121
 msgid "So what we do next is run::"
@@ -1797,18 +1812,25 @@ msgid ""
 "If you have a reference to a Launchpad bug which is fixed by the issue, add "
 "(``LP: #<bug number>``) to the changelog entry line, ie: ``(LP: #123456)``."
 msgstr ""
+"Se você tem uma referência para um erro no Launchpad que está corrigido pelo "
+"problema, adicione (\"LP: #<número do erro>\") para a linha de entrada do "
+"registro de alterações, ou seja, \"(LP: #123456)\"."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:193
 msgid ""
 "If you want to get your fix included in Debian, for a Debian bug the syntax "
 "is ``(Closes: #<bug number>)``, ie: ``(Closes: #123456)``."
 msgstr ""
+"Se você deseja que a sua correção seja incluída no Debian, a sintaxe para o "
+"erro no Debian é (Closes: #<número do erro>), ou seja, (Closes: #123456)\"."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:195
 msgid ""
 "If it is a reference to an upstream or Debian bug or a mailing list "
 "discussion, mention it as well."
 msgstr ""
+"Se for uma referencia para  um erro de upstream ou Debian, ou lista de "
+"discussão, mencione isto também."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:197
 msgid "Try to wrap your lines at 80 characters."
@@ -1819,6 +1841,8 @@ msgid ""
 "Try to be specific, not an essay, but enough for somebody (who did not "
 "deeply look into the issue) to understand."
 msgstr ""
+"Tente ser específico, num texto não muito longo, mas o suficiente para que "
+"alguém (que não conhece profundamente o problema) possa entender."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:200
 msgid "Mention how you fixed the issue and where."
@@ -1857,7 +1881,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:229
 msgid "Getting the fix included"
-msgstr ""
+msgstr "Incluindo a correção"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:231
 msgid ""
@@ -1865,6 +1889,9 @@ msgid ""
 "guarantee that everybody can take the Upstream source as-is and don't need "
 "to have local modifications to fix it."
 msgstr ""
+"É feito para incluir a correção o mais upstream possível. Fazendo isto, você "
+"pode garantir que todos possam obter a fonte upstream como está, sem "
+"precisar fazer modificações locais para corrigi-la."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:235
 msgid ""
@@ -1901,6 +1928,8 @@ msgid ""
 "If everything went well you should get a mail from Debian's bug tracking "
 "system with more information. This might sometimes take a few minutes."
 msgstr ""
+"Se tudo deu certo você deverá receber um e-mail do sistema de rastreamento "
+"de erros do Debian com mais informações. Isto pode levar alguns minutos."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:257
 msgid ""
@@ -1948,10 +1977,14 @@ msgstr "Utilitários de empacotamento específicos do Ubuntu"
 #: ../ubuntu-packaging-guide/getting-set-up.rst:13
 msgid "Encryption software so your work can be verified as being done by you"
 msgstr ""
+"Programas de criptografia para que seu trabalho possa ser verificado se foi "
+"feito por você"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:14
 msgid "Additional encryption software so you can securely transfer files"
 msgstr ""
+"Programas adicionais de criptografia para que você possa transferir seus "
+"arquivos com segurança"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
 msgid "Creating and configuring your account on Launchpad"
@@ -2094,6 +2127,9 @@ msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
 msgstr ""
+"A seguir, você deve enviar a parte pública de sua chave para um servidor de "
+"chaves para que o mundo possa identificar mensagens e arquivos como sendo "
+"seus. Para fazer isso, digite::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:109
 msgid ""
