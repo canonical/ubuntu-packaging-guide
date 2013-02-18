@@ -44,8 +44,9 @@ help:
 clean:
 	-rm -rf $(BUILDDIR)/* $(PODIR)/.doctrees \
 	$(foreach lang,$(LANGS),$(PODIR)/$(lang)/)
+	rm -f translators.html
 
-html: $(foreach lang,$(LANGS),html-$(lang))
+html: $(foreach lang,$(LANGS),html-$(lang)) translators.html
 	# Always build an English version, even if there are no .po files.
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	mv $(BUILDDIR)/html/ubuntu-packaging-guide/*html $(BUILDDIR)/html/
@@ -61,7 +62,7 @@ html: $(foreach lang,$(LANGS),html-$(lang))
 	sed -i 's/ubuntu-packaging-guide\///g' $(BUILDDIR)/html/searchindex.js
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html"
-html-%: locale-%
+html-%: locale-% translators.html
 	$(SPHINXBUILD) -Dlanguage=$* -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$*
 	mv $(BUILDDIR)/html/$*/ubuntu-packaging-guide/*html $(BUILDDIR)/html/$*
 	mv $(BUILDDIR)/html/$*/_sources/ubuntu-packaging-guide/*.txt $(BUILDDIR)/html/$*/_sources/
@@ -77,16 +78,16 @@ html-%: locale-%
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/$*."
 
-dirhtml: $(foreach lang,$(LANGS),dirhtml-$(lang))
+dirhtml: $(foreach lang,$(LANGS),dirhtml-$(lang)) translators.html
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml/en
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml/en"
-dirhtml-%: locale-%
+dirhtml-%: locale-% translators.html
 	$(SPHINXBUILD) -Dlanguage=$* -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml/$*
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml/$*."
 
-singlehtml: $(foreach lang,$(LANGS),singlehtml-$(lang))
+singlehtml: $(foreach lang,$(LANGS),singlehtml-$(lang)) translators.html
 	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
 	mv $(BUILDDIR)/singlehtml/ubuntu-packaging-guide/*html  $(BUILDDIR)/singlehtml
 	sed -i 's/href="..\//href=".\//g' $(BUILDDIR)/singlehtml/index.html
@@ -95,7 +96,7 @@ singlehtml: $(foreach lang,$(LANGS),singlehtml-$(lang))
 	sed -i 's/src="..\/_static/src=".\/_static/g' $(BUILDDIR)/singlehtml/index.html
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml"
-singlehtml-%: locale-%
+singlehtml-%: locale-% translators.html
 	$(SPHINXBUILD) -Dlanguage=$* -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml/$*
 	mv $(BUILDDIR)/singlehtml/$*/ubuntu-packaging-guide/*html  $(BUILDDIR)/singlehtml/$*
 	sed -i 's/href="..\//href=".\//g' $(BUILDDIR)/singlehtml/$*/index.html
@@ -226,8 +227,10 @@ info-%: locale-%
 
 gettext:
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(PODIR)/
-	sed -i '/^# [0-9a-f]\{32\}/d' $(PODIR)/ubuntu-packaging-guide.pot
-	@echo
+	@sed -i '/^# [0-9a-f]\{32\}/d' $(PODIR)/ubuntu-packaging-guide.pot
+	@echo "# Will be replaced with a list of translators" >> $(PODIR)/ubuntu-packaging-guide.pot
+	@echo "msgid \"translator-credits\"" >> $(PODIR)/ubuntu-packaging-guide.pot
+	@echo "msgstr \"\"" >> $(PODIR)/ubuntu-packaging-guide.pot
 	@echo "Build finished. The message catalogs are in $(PODIR)/."
 
 changes:
@@ -255,3 +258,5 @@ locale-%:
 	else echo "$*.po not available, skipping .mo building"; \
 	fi
 
+translators.html:
+	debian/scripts/build-list-of-translators -a -o translators.html

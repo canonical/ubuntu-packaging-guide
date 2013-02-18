@@ -1,0 +1,109 @@
+#!/usr/bin/python3
+
+# Builds a list in translators for the given languages
+# Run with "--help" to get more info
+# Author: Dmitry Shachnev <mitya57@ubuntu.com>, 2013
+
+import argparse
+import sys
+import fnmatch
+
+from os import listdir
+from os.path import exists, isfile, join, dirname
+
+try:
+    import polib
+except ImportError:
+    sys.exit("Error: you should have 'python3-polib' package installed.")
+
+def parse_translator_string(translator_string):
+    """Parses translator string and returns (name, url) tuple."""
+    name, url = translator_string.rsplit(' ', 1)
+    return name[2:], url
+
+def write_txt(translators, fname):
+    outputfile = open(fname, 'w')
+    outputfile.write('Ubuntu Packaging Guide translators\n')
+    outputfile.write('==================================\n')
+    for langname in sorted(translators):
+        outputfile.write('\n' + langname + ' language:\n')
+        for name, url in translators[langname]:
+            outputfile.write('  - ' + name + ' <' + url + '>\n')
+    outputfile.close()
+
+def write_html(translators, fname):
+    templatefile = open(join(dirname(__file__)  , 'data', 'template.html'))
+    template = templatefile.read()
+    templatefile.close()
+    content = '<h1>Ubuntu Packaging Guide translators</h1>'
+    for langname in sorted(translators):
+        langid = langname.lower().replace('(', '').replace(')', '').replace(' ', '-')
+        content += '\n<h2 id="' + langid + '">' + langname + ' language</h2>\n<ul>\n'
+        for name, url in translators[langname]:
+            content += '<li>' + name + ' &lt;<a href="' + url + '">'
+            content += url + '</a>&gt;\n'
+        content += '</ul>'
+    outputfile = open(fname, 'w')
+    outputfile.write(template.replace('%CONTENT%', content))
+    outputfile.close()
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-o', '--output-file', default='translators.txt',
+        help='file to save the output to (default: translators.txt)')
+    parser.add_argument('-a', '--all-languages', action='store_true',
+        help='output for all languages (not just accepted ones)')
+    parser.add_argument('-l', '--language', action='append',
+        help='output for the given language (can be set multiple times)')
+    args = parser.parse_args()
+
+    languages = None
+    working_dir = '.'
+    if not exists('po'):
+        working_dir = join('..', '..')
+    if not exists(join(working_dir, 'po')):
+        sys.exit('Error: "po" directory not found!')
+
+    if args.all_languages:
+        pofiles = fnmatch.filter(listdir(join(working_dir, 'po')), '*.po')
+        languages = [fname[:-3] for fname in pofiles]
+    elif args.language:
+        languages = args.language
+    else:
+        if isfile(join(working_dir, 'Makefile')):
+            makefile = open(join(working_dir, 'Makefile'))
+        else:
+            sys.exit('Error: Makefile not found!')
+        for line in makefile:
+            if line.startswith('LANGS = '):
+                languages = line.split()[2:]
+        makefile.close()
+        if not languages:
+            sys.exit('Error: no LANGS set in Makefile!')
+
+    translators = {}
+    sys.stdout.write('Processing languages:')
+    sys.stdout.flush()
+    for language in languages:
+        sys.stdout.write(' ' + language)
+        sys.stdout.flush()
+        if not isfile(join(working_dir, 'po', language+'.po')):
+            sys.stdout.write('(e)')
+            continue
+        pofile = polib.pofile(join(working_dir, 'po', language+'.po'))
+        langname = pofile.header[:pofile.header.find('translation')-1]
+        for entry in pofile:
+            if entry.msgid == 'translator-credits' and entry.msgstr:
+                translators[langname] = map(parse_translator_string,
+                    entry.msgstr.split('\n')[1:])
+        if langname not in translators:
+            sys.stdout.write('(s)')
+
+    if args.output_file.endswith('.html'):
+        write_html(translators, args.output_file)
+    else:
+        write_txt(translators, args.output_file)
+    print('\nOutput written as', args.output_file)
+
+if __name__ == '__main__':
+    main()
