@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-12 11:02+0000\n"
-"PO-Revision-Date: 2013-02-16 17:59+0000\n"
+"PO-Revision-Date: 2013-02-17 14:51+0000\n"
 "Last-Translator: Neliton Pereira Jr. <nelitonpjr@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-17 04:54+0000\n"
+"X-Launchpad-Export-Date: 2013-02-18 05:03+0000\n"
 "X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -384,14 +384,14 @@ msgid ""
 "the :doc:`Security Update or the Stable Release Update process<./security-"
 "and-stable-release-updates>`, as appropriate."
 msgstr ""
-"O Projeto de Backports é uma maneira de fornecer novos recursos aos "
-"usuários. Por causa dos riscos intrínsecos dos pacotes de backports, "
-"usuários não obtêm pacotes de backports sem algumas ações explícitas de suas "
-"partes. Isto geralmente faz com que backports sejam uma via inapropriada "
-"para corrigir erros. Se um pacote em uma versão do Ubuntu possui um erro, "
-"ele deve ser corrigido através do :doc:`processo de atualização de segurança "
-"ou de atualização de versão estável <./security-and-stable-release-"
-"updates>`, como deve ser."
+"O Projeto Backports é uma maneira de fornecer novos recursos aos usuários. "
+"Por causa dos riscos intrínsecos dos pacotes de backports, usuários não "
+"obtêm pacotes de backports sem algumas ações explícitas de suas partes. Isto "
+"geralmente faz com que backports sejam uma via inapropriada para correção de "
+"erros. Se um pacote em uma versão do Ubuntu possui um erro, ele deve ser "
+"corrigido através do :doc:`processo de atualização de segurança ou de "
+"atualização de versão estável <./security-and-stable-release-updates>`, como "
+"deve ser."
 
 #: ../ubuntu-packaging-guide/backports.rst:35
 msgid ""
@@ -2013,6 +2013,10 @@ msgid ""
 "<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways "
 "to safely use the development release."
 msgstr ""
+"No entanto, não se preocupe. A `página wiki de versões de desenvolvimento do "
+"Ubuntu <https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ mostra uma "
+"variedade de maneiras de se utilizar com segurança a versão em "
+"desenvolvimento."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
@@ -2024,6 +2028,10 @@ msgid ""
 "much easier.  You will encounter these tools later in this guide.  To "
 "install most of the tools you will need run this command::"
 msgstr ""
+"Há várias ferramentas que irão fazer a sua vida como desenvolvedor do Ubuntu "
+"muito mais fácil. Você irá encontrar essas ferramentas mais adiante neste "
+"guia. Para instalar a maioria dessas ferramentas você precisará executar "
+"este comando::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:41
 msgid ""
@@ -2032,6 +2040,10 @@ msgid ""
 "install the above and other tools which are quite common in Ubuntu "
 "development::"
 msgstr ""
+"Nota: Desde o Ubuntu 11.10 \"Oneiric Ocelot\" (ou se você tiver backports "
+"habilitados em uma versão atualmente suportada), o seguinte comando irá "
+"instalar as ferramentas acima e outras que são bem comuns no desenvolvimento "
+"do Ubuntu::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:49
 msgid "This command will install the following software:"
@@ -2043,6 +2055,9 @@ msgid ""
 "cryptographic key with which you will sign files you want to upload to "
 "Launchpad."
 msgstr ""
+"``gnupg`` -- `GNU Privacy Guard`_ contém as ferramentas que você irá "
+"precisar para criar a chave criptográfica com a qual irá assinar seus "
+"arquivos que deseja enviar ao Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:54
 msgid ""
@@ -2057,6 +2072,9 @@ msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
 msgstr ""
+"\"ubuntu-dev-tools\" (e \"devscripts\", uma dependência direta) -- uma "
+"coleção de ferramentas para tornar mais fácil muitas tarefas de "
+"empacotamento."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:58
 msgid ""
@@ -2113,6 +2131,10 @@ msgid ""
 "just fine.  Move the cursor around, type some paragraphs of random text, "
 "load some web page."
 msgstr ""
+"Agora o GPG irá criar uma chave para você, o que pode levar uma pouco de "
+"tempo. Ele precisa de bytes aleatórios, então será bom se você fornecer ao "
+"sistema algum trabalho para fazer. Mova o cursor pela tela, digite alguns "
+"parágrafos de texto aleatório, carregue uma página da Internet."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:95
 msgid "Once this is done, you will get a message similar to this one::"
@@ -2138,6 +2160,10 @@ msgid ""
 "complete, your signed public key will be ready to verify your contributions "
 "around the world."
 msgstr ""
+"Isto irá enviar a sua chave para o servidor de chaves, mas uma rede de "
+"servidores de chaves irá fazer uma sincronização automática entre eles. Uma "
+"vez que a sincronização esteja terminada, a sua chave pública assinada "
+"estará pronta para verificar suas contribuições pelo mundo."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:116
 msgid "Create your SSH key"
@@ -2162,6 +2188,9 @@ msgid ""
 "is. For security purposes, it is highly recommended that you use a "
 "passphrase."
 msgstr ""
+"O nome de arquivo padrão geralmente faz sentido, então você pode deixar como "
+"está. Por motivo de segurança, é altamente recomendado que você utilize uma "
+"frase secreta."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:133
 msgid "Set up pbuilder"
@@ -2181,6 +2210,9 @@ msgid ""
 "make sure your builds succeed in a reproducible way, but without modifying "
 "your local system"
 msgstr ""
+"A construção será feita em um sistema mínimo e limpo. Isto ajuda a assegurar "
+"que suas construções sejam feitas com sucesso de uma maneira reprodutível, "
+"sem modificar seu sistema local"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:141
 msgid ""
@@ -2207,6 +2239,10 @@ msgid ""
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
+"em <versão>  está por exemplo \"natty\", \"maverick\", \"lucid\" ou, no caso "
+"de uma versão Debian, \"sid\". Isto levará alguns instantes porque irá "
+"baixar todos os pacotes necessários para uma \"instalação mínima\". "
+"Entretanto, ficará em chache."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:154
 msgid "Get set up to work with Launchpad"
@@ -2218,6 +2254,9 @@ msgid ""
 "configure your system to work with Launchpad. This section will focus on the "
 "following topics:"
 msgstr ""
+"Com uma configuração local básica estabelecida, seu próximo passo será "
+"configurar o seu sistema para trabalhar com o Launchpad. Esta seção irá se "
+"concentrar nos seguintes tópicos:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid "What Launchpad is and creating a Launchpad account"
@@ -2254,6 +2293,9 @@ msgid ""
 "information. This will allow you to download and upload code, submit bug "
 "reports, and more."
 msgstr ""
+"Você irá precisar se registrar no Launchpad e fornecer algumas informações "
+"mínimas. Isto irá permitir que você baixe e envie códigos, envie relatórios "
+"de erros e mais."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:179
 msgid ""
@@ -2261,6 +2303,9 @@ msgid ""
 "more information see the `Launchpad Help wiki "
 "<https://help.launchpad.net/>`_."
 msgstr ""
+"Além de hospedar o Ubuntu, o Launchpad pode hospedar qualquer projeto de "
+"Software Livre. Para mais informações, veja a `wiki de ajuda do Launchpad "
+"<https://help.launchpad.net/>`_."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:184
 msgid "Get a Launchpad account"
@@ -2273,6 +2318,10 @@ msgid ""
 "can find this out by going to https://launchpad.net/~ and looking for the "
 "part after the `~` in the URL."
 msgstr ""
+"Se você já não tiver uma conta no Launchpad, você pode facilmente `criar "
+"uma`_. Se você tem uma conta no Launchpad mas não se lembra da sua id, você "
+"pode descobrir indo a https://launchpad.net/~ e olhando para a parte depois "
+"do \"~\" no URL."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:191
 msgid ""
@@ -2280,6 +2329,9 @@ msgid ""
 "is encouraged for you to use your real name here so that your Ubuntu "
 "developer colleagues will be able to get to know you better."
 msgstr ""
+"O processo de registro do Launchpad irá pedir que você escolha um nome de "
+"exibição. O uso do nome real é encorajado aqui, de modo que seus colegas "
+"desenvolvedores do Ubuntu sejam capazes de lhe conhecer melhor."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:195
 msgid ""
@@ -2287,6 +2339,9 @@ msgid ""
 "link you need to open in your browser in order to verify your email address. "
 "If you don't receive it, check in your spam folder."
 msgstr ""
+"Quando você registrar uma nova conta, o Launchpad enviará um email com um "
+"link que precisa ser aberto no seu navegador para verificar o seu endereço "
+"de email. Se você não recebê-lo, verifique na sua pasta de spam."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:199
 msgid ""
@@ -2340,6 +2395,8 @@ msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
 msgstr ""
+"De volta ao site do Launchpad, clique no botão Confirm e o Launchpad irá "
+"completar a importação da sua chave OpenPGP."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:243
 msgid ""
@@ -2368,6 +2425,9 @@ msgid ""
 "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
 "Launchpad."
 msgstr ""
+"Para mais informações sobre este processo, visite a página do Launchpad "
+"`criando um par de chaves SSH "
+"<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:261
 msgid "Configure Bazaar"
@@ -2380,6 +2440,11 @@ msgid ""
 "concurrently.  It is used for the new Ubuntu Distributed Development method "
 "of working with Ubuntu packages."
 msgstr ""
+"O Bazaar é a ferramenta que usamos para armazenar as alterações de código de "
+"maneira lógica, para trocar alterações propostas e mesclá-las, mesmo se o "
+"desenvolvimento já estiver atualmente terminado. Ele é usado pelo novo "
+"método de Desenvolvimento Distribuído do Ubuntu de trabalho com pacotes do "
+"Ubuntu."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:268
 msgid "To tell Bazaar who you are, simply run::"
@@ -2391,6 +2456,10 @@ msgid ""
 "your commit messages. With `launchpad-login` you set your Launchpad ID. This "
 "way code that you publish in Launchpad will be associated with you."
 msgstr ""
+"\"whoami\" irá dizer ao Bazzar que nome e endereço de email você deve usar "
+"para submeter mensagens. Com \"launchpad-login\", você define a sua ID no "
+"Launchpad. Assim, o código que você publicar no Launchpad será associado a "
+"você."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:277
 msgid ""
@@ -2422,6 +2491,8 @@ msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
 msgstr ""
+"(se você não usa o shell padrão, que o é \"bash\", favor editar devidamente "
+"o arquivo de configuração para o seu shell.)"
 
 #: ../ubuntu-packaging-guide/index.rst:9
 msgid "Ubuntu Packaging Guide"
@@ -2433,24 +2504,29 @@ msgid ""
 "place for learning all about Ubuntu Development and packaging. After reading "
 "this guide you will have:"
 msgstr ""
+"Bem-vindo ao Guia de Desenvolvimento e Empacotamento do Ubuntu! Este é o "
+"local oficial para aprender tudo sobre o desenvolvimento e empacotamento do "
+"Ubuntu. Após ler este guia, você terá:"
 
 #: ../ubuntu-packaging-guide/index.rst:15
 msgid ""
 "heard about the most important players, processes and tools in Ubuntu "
 "development,"
 msgstr ""
+"ouvido sobre as coisas mais importantes, processos e ferramentas no "
+"desenvolvimento do Ubuntu,"
 
 #: ../ubuntu-packaging-guide/index.rst:17
 msgid "your development environment set up correctly,"
-msgstr ""
+msgstr "seu ambiente de desenvolvimento configurado corretamente,"
 
 #: ../ubuntu-packaging-guide/index.rst:18
 msgid "a better idea of how to join our community,"
-msgstr ""
+msgstr "uma ideia melhor de como se juntar à nossa comunidade,"
 
 #: ../ubuntu-packaging-guide/index.rst:19
 msgid "fixed an actual Ubuntu bug as part of the tutorials."
-msgstr ""
+msgstr "corrigido um erro real do Ubuntu como parte dos tutoriais."
 
 #: ../ubuntu-packaging-guide/index.rst:21
 msgid ""
@@ -2481,6 +2557,9 @@ msgid ""
 "article<./communication>` and you will find out how to most easily get in "
 "touch with other developers."
 msgstr ""
+"Se você encontrar problemas, não entre em pânico! Confira o :doc:`artigo "
+"sobre comunicação<./communication>` e você irá descobrir a maneira mais "
+"fácil de entrar em contato com outros desenvolvedores."
 
 #: ../ubuntu-packaging-guide/index.rst:39
 msgid "The guide is split up into two sections:"
@@ -2488,13 +2567,15 @@ msgstr "O guia é dividido em duas seções:"
 
 #: ../ubuntu-packaging-guide/index.rst:41
 msgid "A list of articles based on tasks, things you want to get done."
-msgstr ""
+msgstr "Um lista de artigos baseada em tarefas, coisas que você quer fazer."
 
 #: ../ubuntu-packaging-guide/index.rst:42
 msgid ""
 "A set of knowledge-base articles that dig deeper into specific bits of our "
 "tools and workflows."
 msgstr ""
+"Um conjunto de artigos de base de conhecimento que se aprofunda em partes "
+"específicas de nossas ferramentas e fluxos de trabalho."
 
 #: ../ubuntu-packaging-guide/index.rst:45
 msgid ""
@@ -2626,6 +2707,10 @@ msgid ""
 "something new and exciting, but also about sharing the solution and solving "
 "a problem for millions of users out there."
 msgstr ""
+"Ser um novo colaborador do Ubuntu não é tão intimidador como parece e pode "
+"ser uma experiência bastante compensadora. Não é apenas aprender algo novo e "
+"excitante, mas também sobre compartilhar a solução e resolver um problema "
+"para milhões de usuários."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:88
 msgid ""
@@ -2664,12 +2749,18 @@ msgid ""
 "Upstream and see if the problem (or a possible solution) is known already "
 "and, if not, do your best to make the solution a concerted effort."
 msgstr ""
+"Quando estiver tentando encontrar uma solução, normalmente é uma boa ideia "
+"verificar como o uspstream se o problema (ou uma possível solução) já é "
+"conhecida e, se não, fazer de tudo para que a solução seja um esforço "
+"coordenado."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:116
 msgid ""
 "Additional steps might involve getting the change backported to an older, "
 "still supported version of Ubuntu and forwarding it to Upstream."
 msgstr ""
+"Passos adicionais podem envolver fazer o backport da alteração para uma "
+"versão mais velha ainda suportada ou repassá-la ao upstream."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:119
 msgid ""
@@ -2708,7 +2799,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:15
 msgid "Patching Policy"
-msgstr ""
+msgstr "Politica de patches"
 
 #: ../ubuntu-packaging-guide/kde.rst:17
 msgid ""
@@ -2791,6 +2882,8 @@ msgid ""
 "If a package is moved from universe to main it will need to be re-uploaded "
 "before the translations get imported into Launchpad."
 msgstr ""
+"Se um pacote é movido de \"universe\" para \"main\", ele precisará ser "
+"reenviado antes que as traduções sejam importadas para o Launchpad."
 
 #: ../ubuntu-packaging-guide/kde.rst:72
 msgid ""
@@ -2805,7 +2898,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:82
 msgid "Library Symbols"
-msgstr ""
+msgstr "Símbolos de bibliotecas"
 
 #: ../ubuntu-packaging-guide/kde.rst:84
 msgid ""
@@ -2826,6 +2919,9 @@ msgid ""
 "several different programs.  They are distributed as ``.so`` files in "
 "``/usr/lib/``."
 msgstr ""
+"Bibliotecas compartilhadas são códigos compilados para serem compartilhados "
+"entre diversos programas diferentes. Eles são distribuídos como arquivos "
+"\".so\" em \"/usr/lib/\"."
 
 #: ../ubuntu-packaging-guide/libraries.rst:9
 msgid ""
@@ -2869,7 +2965,7 @@ msgstr "Vamos usar libnova como um exemplo::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:41
 msgid "To find the SONAME of the library run::"
-msgstr ""
+msgstr "Para encontra o SONAME de uma biblioteca, execute::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:45
 msgid ""
@@ -2896,6 +2992,7 @@ msgstr ""
 msgid ""
 "Looking in debian/libnova-0.12-2.install we see it includes two files::"
 msgstr ""
+"Olhando em debian/libnova-0.12-2.install, vemos que inclui dos arquivos::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:65
 msgid ""
@@ -2939,7 +3036,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:94
 msgid "Symbol Files"
-msgstr ""
+msgstr "Arquivos de símbolos"
 
 #: ../ubuntu-packaging-guide/libraries.rst:96
 msgid ""
@@ -2957,12 +3054,17 @@ msgid ""
 "To make the library dependencies more precise we keep ``.symbols`` files "
 "that list all the symbols in a library and the version they appeared in."
 msgstr ""
+"Para fazer as dependências de uma biblioteca mais precisas, nós mantemos os "
+"arquivos \".symbols\" que listam todos os símbolos em uma biblioteca e a "
+"versão em que eles aparecem."
 
 #: ../ubuntu-packaging-guide/libraries.rst:107
 msgid ""
 "libnova has no symbols file so we can create one.  Start by compiling the "
 "package::"
 msgstr ""
+"libnova não tem arquivo de símbolos, então podemos criar um. Inicie "
+"compilando o pacote::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:112
 msgid ""
@@ -2973,7 +3075,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:119
 msgid "This makes a diff file which you can self apply::"
-msgstr ""
+msgstr "Isto gera um arquivo diff que você pode auto-aplicar::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:123
 msgid ""
@@ -2987,6 +3089,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/libraries.rst:130
 msgid "Now move the file into its location, commit and do a test build::"
 msgstr ""
+"Agora mova o arquivo para a seu novo local, submeta e faça uma construção de "
+"teste::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:138
 msgid ""
@@ -2997,7 +3101,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:143
 msgid "C++ Library Symbols Files"
-msgstr ""
+msgstr "Arquivos de símbolos de bibliotecas C++"
 
 #: ../ubuntu-packaging-guide/libraries.rst:145
 msgid ""
