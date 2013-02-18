@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# German translation for ubuntu-packaging-guide
 # Copyright (C) 2010-2012, Ubuntu Developers
 # This file is distributed under the same license as the ubuntu-packaging-guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
