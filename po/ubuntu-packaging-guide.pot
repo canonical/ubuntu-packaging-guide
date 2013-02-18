@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-12 11:02\n"
+"POT-Creation-Date: 2013-02-18 16:29\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2706,7 +2706,7 @@ msgstr ""
 msgid "If you are merging an upstream release into an existing Bazaar branch that has not previously used the UDD layout, ``bzr merge-upstream`` will fail with an error that the tag for the previous upstream version is not available; the merge can't be completed without knowing what base version to merge against. To work around this, create a tag in your existing repository for the last upstream version present there; e.g., if the last Ubuntu release was *1.1-0ubuntu3*, create the tag *upstream-1.1* pointing to the bzr revision you want to use as the tip of the upstream branch."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:122
+#: ../ubuntu-packaging-guide/udd-merging.rst:121
 msgid "You will need newer versions of ``bzr`` and the ``bzr-builddeb`` for the ``merge`` command to work.  Use the versions from Ubuntu 12.04 (Precise) or the development versions from the ``bzr`` PPA.  Specifically, you need ``bzr`` version 2.5 beta 5 or newer, and ``bzr-builddeb`` version 2.8.1 or newer.  For older versions, use the ``bzr merge-package`` command instead."
 msgstr ""
 
@@ -3006,3 +3006,6 @@ msgstr ""
 msgid "Once you've got the source package, you can build it as normal with ``pbuilder-dist`` (or ``pbuilder`` or `sbuild`_)."
 msgstr ""
 
+# Will be replaced with a list of translators
+msgid "translator-credits"
+msgstr ""
