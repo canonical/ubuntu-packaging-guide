@@ -11,7 +11,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os, re, glob
+import sys, os, re, glob, codecs
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -47,7 +47,7 @@ copyright = u'2010-2012, '+authors
 
 changelog = "debian/changelog"
 if os.path.exists(changelog):
-    head=open(changelog).readline()
+    head=codecs.open(changelog, mode='r', encoding='utf-8').readline()
     match = re.compile(".*\((.*)\).*").match(head)
     if match:
         version = match.group(1)
