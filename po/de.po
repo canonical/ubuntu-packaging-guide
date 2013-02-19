@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-12 11:02+0000\n"
-"PO-Revision-Date: 2013-02-15 12:34+0000\n"
+"PO-Revision-Date: 2013-02-18 10:12+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-16 05:12+0000\n"
+"X-Launchpad-Export-Date: 2013-02-19 05:05+0000\n"
 "X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -3882,6 +3882,7 @@ msgstr ""
 msgid ""
 "Since they are unique, you can also abbreviate the distro-series name::"
 msgstr ""
+"Weil sie eindeutig sind, kannst Du die Distro-Serien-Namen auch abkürzen::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:31
 msgid ""
@@ -3896,7 +3897,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:48
 msgid "Getting the source"
-msgstr ""
+msgstr "Den Quelltext herunterladen"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:50
 msgid ""
@@ -3929,6 +3930,8 @@ msgid ""
 "Do this using the `bzr init-repo` command, passing it the directory name we "
 "would like to use::"
 msgstr ""
+"Um dies zu tun, kannst Du `bzr init-repo` Kommando verwenden, gib als "
+"Argument einfach den Verzeichnisnamen an, den Du verwenden möchtest::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:75
 msgid ""
@@ -4462,7 +4465,7 @@ msgid ""
 "bzr revision you want to use as the tip of the upstream branch."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:122
+#: ../ubuntu-packaging-guide/udd-merging.rst:121
 msgid ""
 "You will need newer versions of ``bzr`` and the ``bzr-builddeb`` for the "
 "``merge`` command to work.  Use the versions from Ubuntu 12.04 (Precise) or "
@@ -4751,6 +4754,7 @@ msgstr "Jetzt kann man die Änderungen zurück nach Launchpad hochladen::"
 #: ../ubuntu-packaging-guide/udd-uploading.rst:67
 msgid "(Change the destination if you are uploading an SRU or similar.)"
 msgstr ""
+"(Ändere die Zieldistribution, falls Du einen SRU oder ähnliches hochlädst.)"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:69
 msgid ""
@@ -4768,6 +4772,8 @@ msgid ""
 "You are now free to delete your feature branch, as it is merged, and can be "
 "re-downloaded from Launchpad if needed."
 msgstr ""
+"Jetzt kannst Du den Feature-Branch löschen. Er ist bereits gemerged, kann "
+"also von Launchpad heruntergeladen werden, wenn nötig."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:84
 msgid "Sponsoring a change"
@@ -4786,6 +4792,9 @@ msgid ""
 "contributor to fix them up.  See the next section to learn how to cancel a "
 "pending merge."
 msgstr ""
+"Sollte es Merge-Konflikte geben, wirst Du den Autoren der Änderung "
+"wahrscheinlich bitten, diese zu lösen. Im nächsten Abschnitt wird "
+"beschrieben, wie man einen bevorstehenden Merge abbricht."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:96
 msgid ""
