@@ -23,6 +23,7 @@ ubuntu-packaging-guide (0.3.1) raring; urgency=low
   * Enable Russian translations. Add texlive-lang-cyrillic to debian/control
     as Build-Depends.
   * Bump Standards-Version. No changes.
+  * conf.py: make changelog parsing cope with non-ascii characters.
 
   [ Andrew Starr-Bochicchio ]
   * Put license information into the page footer (LP: #1093447).
