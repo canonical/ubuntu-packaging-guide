@@ -47,10 +47,12 @@ copyright = u'2010-2012, '+authors
 
 changelog = "debian/changelog"
 if os.path.exists(changelog):
-    head=codecs.open(changelog, mode='r', encoding='utf-8').readline()
+    changelogfile = codecs.open(changelog, mode='r', encoding='utf-8')
+    head = changelogfile.readline()
     match = re.compile(".*\((.*)\).*").match(head)
     if match:
         version = match.group(1)
+    changelogfile.close()
 
 
 # The version info for the project you're documenting, acts as replacement for
