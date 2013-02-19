@@ -2,3 +2,4 @@ _build
 po/*
 !po/*.pot
 !po/*.po
+translators.html
