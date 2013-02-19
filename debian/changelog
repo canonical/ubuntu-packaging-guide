@@ -11,6 +11,11 @@ ubuntu-packaging-guide (0.3.1) raring; urgency=low
     - Add a build-dependency on cm-super-minimal.
     - Disable times package when language is russian.
   * Update README and add some information for translators.
+  * Add a script to build the list of translators, run it during build.
+  * Add "Help translate" and "View the list of translators" links to
+    layout.html.
+  * Add a build-dependency on python3-polib, and also prefer python3-sphinx
+    to not use two python stacks at the build time.
 
   [ Daniel Holbach ]
   * Document where to find a list of required autopkgtests and where 

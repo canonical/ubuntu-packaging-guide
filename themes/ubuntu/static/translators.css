@@ -1,0 +1,72 @@
+/* Main stylesheet, adopted from WpGen default theme. */
+/* Author: Dmitry Shachnev <mitya57@ubuntu.com>, 2013 */
+
+body {
+  color: #222;
+  background: url("images/background-footer.png")
+  repeat scroll 0 0 #f7f6f5;
+  margin: 0px;
+  font-family: "Ubuntu";
+}
+
+a {
+  color: #dd4814;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.dev-link:hover {
+  text-decoration: none;
+}
+
+.page-areas {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+}
+
+.page-areas td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.area-toppanel {
+  height: 50px;
+  background-color: white;
+  font-size: 130%;
+}
+
+.area-toppanel td {
+  border-bottom: 2px solid #dd4814;
+}
+
+.area-content {
+  height: 100%;
+}
+
+.content {
+  background-color: white;
+  border: 1px solid #f96;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  padding-top: 0em;
+  height: 100%;
+}
+
+.content, .toppanel {
+  margin: 0px auto;
+  max-width: 800px;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu'), url(https://themes.googleusercontent.com/static/fonts/ubuntu/v4/_xyN3apAT_yRRDeqB3sPRg.woff) format('woff');
+}
