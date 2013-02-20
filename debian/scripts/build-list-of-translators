@@ -22,7 +22,7 @@ def parse_translator_string(translator_string):
     return name[2:], url
 
 def write_txt(translators, fname):
-    outputfile = open(fname, 'w')
+    outputfile = open(fname, 'w', encoding='utf-8')
     outputfile.write('Ubuntu Packaging Guide translators\n')
     outputfile.write('==================================\n')
     for langname in sorted(translators):
@@ -43,7 +43,7 @@ def write_html(translators, fname):
             content += '<li>' + name + ' &lt;<a href="' + url + '">'
             content += url + '</a>&gt;\n'
         content += '</ul>'
-    outputfile = open(fname, 'w')
+    outputfile = open(fname, 'w', encoding='utf-8')
     outputfile.write(template.replace('%CONTENT%', content))
     outputfile.close()
 
