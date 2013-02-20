@@ -1,25 +1,25 @@
-# Dutch translation for ubuntu-packaging-guide
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# Greek translation for ubuntu-packaging-guide
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the ubuntu-packaging-guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-02-14 16:35+0000\n"
-"Last-Translator: Hannie Dumoleyn <Unknown>\n"
-"Language-Team: Dutch <nl@li.org>\n"
+"PO-Revision-Date: 2013-02-19 13:52+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
+"Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-20 05:09+0000\n"
+"X-Launchpad-Export-Date: 2013-02-20 05:10+0000\n"
 "X-Generator: Launchpad (build 16491)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
-msgstr "autopkgtest: Automatisch softwarepakketten testen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
@@ -27,29 +27,24 @@ msgid ""
 "integrated into packages. To integrate a test into a package, all you need "
 "to do is:"
 msgstr ""
-"De `DEP 8 specification`_ omschrijft hoe automatisch testen eenvoudig "
-"geïntegreerd kan worden in pakketten. Om een test te integreren in een "
-"pakket hoeft alleen het volgende gedaan te worden:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
 msgid "add the following to the Source section in ``debian/control``::"
-msgstr "voeg het volgende toe aan de Bronsectie in ``debian/control``::"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:13
 msgid ""
 "add a file called ``debian/tests/control`` which specifies the requirements "
 "for the testbed,"
 msgstr ""
-"voeg een bestand toe met de naam ``debian/tests/control`` dat de vereisten "
-"voor de test specificeert,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
 msgid "add the tests in ``debian/tests/``."
-msgstr "voeg de testen toe in ``debian/tests/``."
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
 msgid "Testbed requirements"
-msgstr "Testvereisten"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:21
 msgid ""
@@ -58,43 +53,32 @@ msgid ""
 "gets broken during the build or if ``root`` permissions are required. The "
 "`DEP 8 specification`_ lists all available options."
 msgstr ""
-"In ``debian/tests/control`` geef je op wat er van de test verwacht wordt. Zo "
-"neem je bijvoorbeeld alle vereiste pakketten voor de testen op in een lijst, "
-"als de test tijdens het opbouwen afgebroken wordt of als er ``root``-rechten "
-"vereist zijn. De `DEP 8 specification`_ vermeldt alle beschikbare opties."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
 msgstr ""
-"Hieronder bekijken we het ``glib2.0``-bronpakket. In een zeer eenvoudig "
-"geval zou het bestand er als volgt uitzien::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
-"Voor de test in ``debian/tests/build`` zou dit ervoor zorgen dat de "
-"pakketten ``libglib2.0-dev`` en ``build-essential`` geïnstalleerd zijn."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
 msgid ""
 "You can use ``@`` in the ``Depends`` line to indicate that you want all the "
 "packages installed which are built by the source package in question."
 msgstr ""
-"U kunt ``@`` in de regel ``Depends`` gebruiken om aan te geven dat u alle "
-"pakketten die gebouwd worden door het betreffende bronpakket geïnstalleerd "
-"wilt hebben."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr "De werkelijke testen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
-msgstr "De bijbehorende test voor het voorbeeld hierboven zou kunnen zijn:"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
 msgid ""
@@ -103,24 +87,16 @@ msgid ""
 "provided by `pkg-config`). Then the compiled binary, which just exercises "
 "some parts of core glib functionality, is run."
 msgstr ""
-"Hier wordt een zeer eenvoudig stukje C-code geschreven naar een tijdelijke "
-"map. Daarna wordt dit gecompileerd met systeembibliotheken (gebruik makend "
-"van vlaggen en bibliotheekpaden zoals geboden door `pkg-config`). Daarna "
-"wordt het gecompileerde binaire bestand, dat alleen maar een paar onderdelen "
-"van de kernfunctionaliteit van glib uitoefent, uitgevoerd."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:80
 msgid ""
 "While this test is very small and basic, it tests quite a number of core "
 "components on a system. This may help to uncover critical issues early on."
 msgstr ""
-"Hoewel deze test klein en basaal is, test hij een flink aantal "
-"kernonderdelen van een systeem. Dit kan helpen bij het ontdekken van "
-"kritieke problemen in een vroeg stadium."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
 msgid "Executing the test"
-msgstr "De test uitvoeren"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
 msgid ""
@@ -349,7 +325,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
-msgstr "Chroots gebruiken"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:5
 msgid ""
@@ -357,9 +333,6 @@ msgid ""
 "versions you can create the environment of the other version with a "
 "``chroot``."
 msgstr ""
-"Als u de ene versie van Ubuntu gebruikt, maar werkt aan pakketten voor een "
-"andere versie, dan kunt u de omgeving van de andere versie aanmaken met een "
-"``chroot``."
 
 #: ../ubuntu-packaging-guide/chroots.rst:9
 msgid ""
@@ -367,45 +340,36 @@ msgid ""
 "which you can work in quite normally.  It avoids the overhead of running a "
 "full virtual machine."
 msgstr ""
-"Een ``chroot`` stelt u in staat een volledig bestandssysteem van een andere "
-"distributie te hebben waarin u vrij normaal kunt werken. Hierdoor is het "
-"niet nodig een volledige virtuele machine te draaien."
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
-msgstr "Een Chroot aanmaken"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
-msgstr "Gebruik het commando ``debootstrap`` om een nieuwe chroot te maken::"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
 "This will create a directory ``oneiric`` and install a minimal oneiric "
 "system into it."
 msgstr ""
-"Dit zal een map ``oneiric`` aanmaken en er een minimaal oneiric systeem in "
-"installeren."
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
 "If your version of ``debootstrap`` does not know about oneiric you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
-"Indien uw versie van ``debootstrap`` niets weet van oneiric kunt u proberen "
-"te upgraden naar de versie in ``backports``."
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
-msgstr "U kunt daarna werken binnen chroot::"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:30
 msgid ""
 "Where you can install or remove any package you wish without affecting your "
 "main system."
 msgstr ""
-"Waar u elk pakket kunt installeren of verwijderen zonder uw hoofdsysteem te "
-"beïnvloeden."
 
 #: ../ubuntu-packaging-guide/chroots.rst:33
 msgid ""
@@ -418,8 +382,6 @@ msgid ""
 "To stop apt and other programs complaining about missing locales you can "
 "install your relevant language pack::"
 msgstr ""
-"Om te voorkomen dat apt en andere programma's klagen over het gemis van "
-"lokale instellingen kunt u het talenpakket voor uw taal installeren::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:44
 msgid ""
@@ -480,63 +442,48 @@ msgid ""
 "are made and hundreds of people interact every day, it is important to "
 "communicate effectively."
 msgstr ""
-"In een project waar duizenden regels code veranderen, veel beslissingen "
-"worden genomen en honderden mensen elke dag met elkaar werken, is het "
-"belangrijk om effectief te communiceren."
 
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
-msgstr "Mailinglijsten"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:12
 msgid ""
 "Mailing lists are a very important tool if you want to communicate ideas to "
 "a broader team and make sure that you reach everybody, even across timezones."
 msgstr ""
-"Mailinglijsten zijn een zeer belangrijk hulpmiddel wanneer u ideeën wilt "
-"bespreken in een breder team, en er zeker van wilt zijn dat u iedereen "
-"bereikt, ongeacht de verschillende tijdzones."
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
-msgstr "Met betrekking tot ontwikkeling zijn dit de belangrijkste:"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:18
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (announce-"
 "only, the most important development announcements go here)"
 msgstr ""
-"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (announce-"
-"only, de belangrijkste mededelingen over de ontwikkeling worden hier "
-"geplaatst)"
 
 #: ../ubuntu-packaging-guide/communication.rst:20
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (general Ubuntu "
 "development discussion)"
 msgstr ""
-"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (algemene discussie "
-"over de Ubuntu-ontwikkeling)"
 
 #: ../ubuntu-packaging-guide/communication.rst:22
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (MOTU Team discussion, "
 "get help with packaging)"
 msgstr ""
-"https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (MOTU team-discussie, "
-"hulp krijgen bij het maken van pakketten)"
 
 #: ../ubuntu-packaging-guide/communication.rst:27
 msgid "IRC Channels"
-msgstr "IRC-kanalen"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:29
 msgid ""
 "For real-time discussions, please connect to irc.freenode.net and join one "
 "or any of these channels:"
 msgstr ""
-"Voor rechtstreekse discussies kunt u verbinden met irc.freenode.net en u "
-"voegen bij één van de volgende kanalen:"
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
@@ -4740,7 +4687,4 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Hannie Dumoleyn https://launchpad.net/~lafeber-dumoleyn\n"
-"  Letatcest https://launchpad.net/~ksoeteman\n"
-"  Nick Lemaire https://launchpad.net/~koukin\n"
-"  Willem Ligtenberg https://launchpad.net/~wligtenberg"
+"  Kostas Psaroudakis https://launchpad.net/~odifis"
