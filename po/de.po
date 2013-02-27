@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-02-25 08:30+0000\n"
+"PO-Revision-Date: 2013-02-26 09:28+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-26 05:16+0000\n"
+"X-Launchpad-Export-Date: 2013-02-27 04:55+0000\n"
 "X-Generator: Launchpad (build 16506)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -826,6 +826,11 @@ msgid ""
 "the version of Debian Policy that the package complies with, the location of "
 "the packaging version control repository, and the upstream home page."
 msgstr ""
+"Der erste Absatz beschreibt in dem Feld ``Build-Depends`` das Quellpaket "
+"inklusive aller benötigten Paketabhängigkeiten, die nötig sind um das Paket "
+"aus dem Quellcode zu bauen. Es enthält außerdem einige Metadaten wie den "
+"Namen des Verantwortlichen, die Version der Debian-Richtlinien, der Ort der "
+"Paketversionkontrolle und die Upstream-Homepage."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:108
 msgid ""
@@ -869,6 +874,11 @@ msgid ""
 "require that each package installs a verbatim copy of its copyright and "
 "license information to ``/usr/share/doc/$(package_name)/copyright``."
 msgstr ""
+"Diese Datei gibt sowohl die Urheberrechte der Upstream-Quelle und der "
+"Paketierung an. Die Ubuntu und `Debian Richtlinien (Abschnitt 12.5) "
+"<http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_ "
+"verlangen, dass jedes Paket eine wortwörtliche Kopie seiner Urheber- und "
+"Lizenzinformationen in ``/usr/share/doc/$(package_name)/copyright`` ablegt."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:136
 msgid ""
@@ -878,6 +888,12 @@ msgid ""
 "Copyright line with the year and copyright holder, and the text of the "
 "copyright itself. An example template would be::"
 msgstr ""
+"Im allgemeinen findet man Urheberrechtsinformationen in der Datei "
+"``COPYING`` in dem Quellverzeichnis des Programms. Diese Datei sollte "
+"Auskünfte über die Namen der Autoren und der Paketierer, die URL des "
+"ursprünglichen Programms, eine Zeile die das Jahr und den Inhaber der "
+"Urheberrechtsansprüche, und den Text des Urheberrechts an sich, geben. Eine "
+"Beispiel wäre::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:178
 msgid ""
@@ -3497,21 +3513,27 @@ msgid ""
 "Add a build-dependency on ``python-sphinx`` or ``python3-sphinx`` (depending "
 "on what Python version do you want to use);"
 msgstr ""
+"Füge eine Build-Abhängigkeit auf ``python-sphinx`` oder ``python3-sphinx`` "
+"hinzu (je nachdem, welche Python-Version Du verwendest);"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:94
 msgid "Append ``sphinxdoc`` to the ``dh --with`` line;"
-msgstr ""
+msgstr "Hänge ``sphinxdoc`` an die Zeile mit ``dh --with`` an;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:95
 msgid ""
 "Run ``setup.py build_sphinx`` in ``override_dh_auto_build`` (sometimes not "
 "needed);"
 msgstr ""
+"Lass ``setup.py build_sphinx`` in ``override_dh_auto_build`` laufen (wird "
+"manchmal jedoch nicht benötigt);"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:96
 msgid ""
 "Add ``{sphinxdoc:Depends}`` to the dependency list of your ``-doc`` package;"
 msgstr ""
+"Trag ``{sphinxdoc:Depends}`` in die Liste der Abhängigkeiten des ``-doc`` "
+"Pakets ein;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:97
 msgid ""
@@ -3534,7 +3556,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:111
 msgid "Checking for packaging mistakes"
-msgstr ""
+msgstr "Auf Paketierungsfehler prüfen"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:113
 msgid ""
@@ -3551,7 +3573,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:121
 msgid "See also"
-msgstr ""
+msgstr "Siehe auch"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:123
 msgid "The `Python policy`_;"
@@ -4941,6 +4963,11 @@ msgid ""
 "as often as you like, and when your changes are finished, you will use the "
 "standard ``dch`` command (from the ``devscripts`` package)::"
 msgstr ""
+"Jetzt kannst Du alle Arbeit im Verzeichnis ``bug-12345`` erledigen. Du "
+"kannst dort alle nötigen Änderungen vornehmen und währenddessen committen. "
+"Es ist nicht anders als jede andere Software-Entwicklung mit Bazaar. Man "
+"kann committen so oft man möchte und wenn die Änderungen fertig sind, "
+"benutzt man einfach ``dch`` (aus dem Paket ``devscripts``)::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:39
 msgid ""
@@ -4994,6 +5021,8 @@ msgid ""
 "In order to build the package you can use the ``bzr builddeb`` command from "
 "the ``bzr-builddeb`` package.  You can build a source package with::"
 msgstr ""
+"Um das Paket zu bauen kann man das Kommando ``bzr builddeb`` (aus dem Paket "
+"``bzr-builddeb``) verwenden. Du kannst das Quellpaket folgendermaßen bauen::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:79
 msgid ""
