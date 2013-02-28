@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-02-26 09:28+0000\n"
+"PO-Revision-Date: 2013-02-27 08:01+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-27 04:55+0000\n"
+"X-Launchpad-Export-Date: 2013-02-28 05:08+0000\n"
 "X-Generator: Launchpad (build 16506)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -950,6 +950,11 @@ msgid ""
 "\"install\", \"binary-arch\", \"binary-indep\", and \"binary\". In order to "
 "see what commands are run in each target, run::"
 msgstr ""
+"``dh`` durchläuft eine Sequenz von debhelper Kommandos. Die unterstützen "
+"Sequenzen korrespondieren mit den Targets einer ``debian/rules``-Datei: "
+"\"build\", \"clean\", \"install\", \"binary-arch\", \"binary-indep\" und "
+"\"binary\". Um zu sehen, welche Kommandos als Teil welchen Targets "
+"durchlaufen werden, benutze::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:221
 msgid ""
@@ -1062,6 +1067,8 @@ msgid ""
 "This would create two binary packages, ``foo`` and ``foo-common``. Both "
 "would require their own paragraph in ``debian/control``."
 msgstr ""
+"Dies würde zwei Binärpakete erzeugen, ``foo`` und ``foo-common``. Beide "
+"würden ihren eigenen Abschnitt in ``debian/control`` benötigen."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:297
 msgid ""
@@ -1217,7 +1224,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:3
 msgid "Fixing a bug in Ubuntu"
-msgstr ""
+msgstr "Einen Bug in Ubuntu beheben"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:6
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:9
@@ -1229,6 +1236,9 @@ msgid ""
 "If you followed the instructions to :doc:`get set up with Ubuntu "
 "Development<./getting-set-up>`, you should be all set and ready to go."
 msgstr ""
+"Wenn Du die Anweisungen in  :doc:`Sich für Ubuntu-Entwicklung "
+"einrichten<./getting-set-up>` befolgt hast, solltest Du bereit sein "
+"loszulegen."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:13
 msgid ""
@@ -1238,10 +1248,15 @@ msgid ""
 "and merged. In this guide we will go through all the necessary steps one by "
 "one."
 msgstr ""
+"Wie man in der obigen Abbildung sehen kann, gibt es wenig Überraschungen im "
+"Prozess der Fehlerbehebung: man findet ein Problem, lädt den Quellcode "
+"herunter, arbeitet an einer Lösung, lädt die notwendigen Änderungen nach "
+"Launchpad und bittet um einen Merge. In diesem Handbuch werden wir alle "
+"nötigen Schritte nacheinander behandeln."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:20
 msgid "Finding the problem"
-msgstr ""
+msgstr "Das Problem finden"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:22
 msgid ""
@@ -1249,6 +1264,10 @@ msgid ""
 "bug report you are encountering yourself (which gives you a good opportunity "
 "to test the fix), or a problem you noted elsewhere, maybe in a bug report."
 msgstr ""
+"Es gibt viele verschiedene Wege Dinge zu finden an denen man arbeiten kann. "
+"Es kann ein Fehlerbericht sein, der einen selbst betrifft (was das Testen "
+"vereinfacht), oder ein Problem, das man woanders beobachtet hat, vielleicht "
+"auch in einem Fehlerbericht."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:26
 msgid ""
@@ -1257,10 +1276,15 @@ msgid ""
 "upstream or in Debian already, lists small bugs (we call them 'bitesize'), "
 "and so on. Check it out and find your first bug to work on."
 msgstr ""
+"In Harvest <http://harvest.ubuntu.com/>`_ haben wir eine Übersicht über "
+"vielfältige \"TODO-Listen\" die mit Ubuntu-Entwicklung zusammenhängen. "
+"Harvest listet Fehler, die in Debian oder Upstream-Projekten behoben wurden, "
+"es listet kleine Bugs (wir nennen sie 'bitesize') und so weiter. Schau es "
+"Dir an und finde Deinen ersten Fehler an dem Du arbeitest."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:35
 msgid "Figuring out what to fix"
-msgstr ""
+msgstr "Herausfinden, was repariert werden muss"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:37
 msgid ""
@@ -1279,7 +1303,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:48
 msgid "This would print out::"
-msgstr ""
+msgstr "Dies gibt aus::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:52
 msgid ""
@@ -1379,11 +1403,12 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:121
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:204
 msgid "Testing the fix"
-msgstr ""
+msgstr "Die Lösung testen"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:123
 msgid "To build a test package with your changes, run these commands::"
 msgstr ""
+"Um ein Testpaket mit Deinen Änderungen zu bauen, durchlaufe diese Kommandos::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:128
 msgid ""
@@ -1402,7 +1427,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:139
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:155
 msgid "Documenting the fix"
-msgstr ""
+msgstr "Die Lösung dokumentieren"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:141
 msgid ""
