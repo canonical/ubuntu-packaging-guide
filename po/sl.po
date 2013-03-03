@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-02-08 18:34+0000\n"
+"PO-Revision-Date: 2013-03-02 17:32+0000\n"
 "Last-Translator: Damir Jerovšek <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-20 05:10+0000\n"
-"X-Generator: Launchpad (build 16491)\n"
+"X-Launchpad-Export-Date: 2013-03-03 05:08+0000\n"
+"X-Generator: Launchpad (build 16514)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
-msgstr ""
+msgstr "autopkgtest: samodejno preizkušanje za pakete"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
@@ -74,11 +74,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr ""
+msgstr "Dejanski preizkusi"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
-msgstr ""
+msgstr "Spremljevalni preizkus za zgornji primer je mogoče:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
 msgid ""
@@ -151,7 +151,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:133
 msgid "Further examples"
-msgstr ""
+msgstr "Nadaljnji primeri"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:135
 msgid ""
@@ -4689,4 +4689,5 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Damir Jerovšek https://launchpad.net/~jierro"
+"  Damir Jerovšek https://launchpad.net/~jierro\n"
+"  Dmitry Shachnev https://launchpad.net/~mitya57"
