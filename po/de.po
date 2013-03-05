@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-02-27 08:01+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2013-03-04 10:34+0000\n"
+"Last-Translator: Limurx <limurx@streber24.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-28 05:08+0000\n"
-"X-Generator: Launchpad (build 16506)\n"
+"X-Launchpad-Export-Date: 2013-03-05 05:21+0000\n"
+"X-Generator: Launchpad (build 16514)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -963,6 +963,11 @@ msgid ""
 "arch sequences are passed the \"-a\" option to ensure they only work on "
 "architecture dependent packages."
 msgstr ""
+"Befehlen in der Sequenz binary-indep wird die Option \"-i\" mitgegeben um "
+"sicherzustellen, dass sie nur mit binär-unabhängigen Paketen funktionieren "
+"und Befehlen in der Sequenz binary-arch wird die Option \"-a\" mitgegeben um "
+"sicherzustellen, dass sie nur mit Architektur-unabhängigen Paketen "
+"funktionieren."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:226
 msgid ""
@@ -971,6 +976,10 @@ msgid ""
 "which commands have already been run, for which packages, and skip running "
 "those commands again."
 msgstr ""
+"Jeder debhelper Befehl wird aufgenommen wenn er erfolgreich in "
+"``debian/package.debhelper.log`` ausgeführt wird. (Welcher dh_clean löscht.) "
+"So kann dh mitteilen welche Befehle bereits für welches Paket ausgeführt "
+"wurden und überspringt diejenigen, die nochmals ausgeführt werden sollen."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:231
 msgid ""
@@ -979,6 +988,11 @@ msgid ""
 "command in the sequence. The ``--until``, ``--before``, ``--after``, and ``--"
 "remaining`` options can override this behavior."
 msgstr ""
+"Jedes Mal wenn ``dh`` ausgeführt wird, untersucht es die Logdatei und findet "
+"den zuletzt verwendeten Befehl welcher in der gegebenen Sequenz enthalten "
+"ist. Es springt danach zum nächsten Befehl in der Sequenz. Die Optionen ``--"
+"until``, ``--before``, ``--after`` und ``--remaining`` können dieses "
+"Verhalten beeinflussen."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:236
 msgid ""
@@ -989,6 +1003,13 @@ msgid ""
 "options, or run entirely different commands instead. (Note that to use this "
 "feature, you should Build-Depend on debhelper 7.0.50 or above.)"
 msgstr ""
+"Falls ``debian/rules`` ein Target mit einem Namen wie "
+"``override_dh_command`` enthält, dann wird  ``dh``, sobald es an dem Befehl "
+"in der Sequenz angekommen ist, das Target von dieser Anweisungsdatei "
+"verwenden statt den eigentlichen Befehl auszuführen. Das neue Target kann "
+"dann den Befehl mit mit anderen Optionen ausführen oder komplett andere "
+"Befehle stattdessen ausführen. (Zu beachten ist, dass du für die Erstellung "
+"debhelper 7.0.50 oder höher verwenden solltest.)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:245
 msgid ""
@@ -1041,6 +1062,12 @@ msgid ""
 "the source package's root directory to ``usr/bin`` and a desktop file in the "
 "``debian`` directory to ``usr/share/applications``::"
 msgstr ""
+"Im ersten Fall sollte die Datei ``install`` eine Zeile für jede installierte "
+"Datei enthalten, die sowohl das Datei- als auch Installationsverzeichnis "
+"festlegt. Zum Beispiel, die folgende ``install``-Datei würde das das Skript "
+"``foo`` in das Stammverzeichnis des Quellpakets nach ``usr/bin`` und eine "
+"Desktop-Datei in das ``debian``-Verzeichnis nach ``usr/share/applications`` "
+"installieren::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:273
 msgid ""
@@ -1079,7 +1106,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:302
 msgid "The watch file"
-msgstr ""
+msgstr "Die Datei 'watch'"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:304
 msgid ""
@@ -1181,24 +1208,31 @@ msgstr "Unterstützung für zusätzliche Komprimierungsformate: bzip2, lzma, xz"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:363
 msgid "Support for multiple upstream tarballs"
-msgstr ""
+msgstr "Ünterstützung für mehrere Upstream-Tarballs"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:365
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
 msgstr ""
+"Nicht nötig den Upsteam-Tarball neu zu packen um das Debian-Verzeichnis zu "
+"löschen"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:367
 msgid ""
 "Debian-specific changes are no longer stored in a single .diff.gz but in "
 "multiple patches compatible with quilt under ``debian/patches/``"
 msgstr ""
+"Debian-spezifische Änderung sind nicht länger in einem einzelnen .diff.gz "
+"sondern stattdessen in mehreren Patches kompatibel mit quilt unter "
+"``debian/patches/``"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:369
 msgid ""
 "http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
 "concerning the switch to the 3.0 source package formats."
 msgstr ""
+"http://wiki.debian.org/Projects/DebSrc3.0 umfasst zusätzliche Informationen "
+"bezüglich dem Umstieg zu dem 3.0 Quellcode-Format."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:372
 msgid ""
@@ -1316,11 +1350,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:63
 msgid "``apt-cache`` is part of the standard installation of Ubuntu."
-msgstr ""
+msgstr "``apt-cache`` ist Teil der Standardinstallation von Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:66
 msgid "Getting the code"
-msgstr ""
+msgstr "Den Quellcode herunterladen"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:68
 msgid ""
@@ -1349,10 +1383,13 @@ msgid ""
 "We'll describe specifics on how to branch the code, push your fix, and "
 "request a review in the following sections."
 msgstr ""
+"Wir werden in den folgenden Abschnitten genauer beschreiben, wie der Code "
+"abgezweigt werden kann, deine Fehlerbehebung vorangebracht wird und eine "
+"Anfrage für eine Durchsicht gestellt wird."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:89
 msgid "Work on a fix"
-msgstr ""
+msgstr "Arbeiten an einer Fehlerbehebung"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:91
 msgid ""
@@ -1361,6 +1398,11 @@ msgid ""
 "such as obvious typos first. Try to keep changes as minimal as possible and "
 "document your change and assumptions clearly."
 msgstr ""
+"Es wurden ganze Bücher darüber verfasst wie man Fehler findet, sie behebt, "
+"testet, usw. Wenn du ein Anfänger im Programmieren bist, versuche zuerst "
+"einfache Fehler wie beispielsweise in der Rechtschreibung zu beheben. "
+"Versuche die Änderungen so minimal wie möglich zu halten und dokumentiere "
+"deine Änderungen und Annahmen übersichtlich."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
 msgid ""
@@ -1368,10 +1410,14 @@ msgid ""
 "has fixed it already or is currently working on a fix. Good sources to check "
 "are:"
 msgstr ""
+"Bevor du dich daran machst, einen Fehler selbst du behen, solltest du "
+"sicherstellen, dass nicht schon ein anderer diesen Fehler behoben hat oder "
+"gerade daran arbeitet. Anlaufstellen dafür sind:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
+"Upstream (und Debian) Fehlererfassung (offene and geschlossene Fehler),"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
 msgid ""
@@ -1380,25 +1426,34 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:101
 msgid "bugs or package uploads of Debian or other distributions."
-msgstr ""
+msgstr "Fehler oder Paket-Uploads von Debian oder einer anderen Distribution"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:106
 msgid ""
 "You now want to create a patch which includes the fix.  The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
+"Du willst nun einen Patch entwickeln, der die Fehlerbehebung enthält. Der "
+"Befehl ``edit-patch`` ist eine einfache Möglichkeit um einen Patch zu einem "
+"Paket hinzuzufügen. Führe aus::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:111
 msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
 msgstr ""
+"Das wird die Paketierung in temporäres Verzeichnis kopieren. Du kannst nun "
+"die Dateien mit einem Texteditor bearbeiten oder die Patches vom Upstream "
+"anwenden, zum Beispiel::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:116
 msgid ""
 "After editing the file type ``exit`` or press ``control-d`` to quit the "
 "temporary shell.  The new patch will have been added into ``debian/patches``."
 msgstr ""
+"Nachdem du die Datei bearbeitet hast, schreibe ``exit`` oder drücke "
+"``Strg+D`` um die zeitweilige Umgebung zu verlassen. Der neue Patch wird "
+"dann unter ``debian/patches`` eingefügt."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:121
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:204
