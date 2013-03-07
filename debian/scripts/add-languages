@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 #
 # Some notes to get this script up and running.
@@ -21,13 +21,13 @@ import re
 try:
     import polib
 except:
-    print >> sys.stderr, "You need to have  python-polib  installed."
+    print("You need to have  python3-polib  installed.", file=sys.stderr)
     sys.exit(1)
 
 try:
     from debian import deb822
 except:
-    print >> sys.stderr, "You need to have  python-debian  installed."
+    print("You need to have  python3-debian  installed.", file=sys.stderr)
     sys.exit(1)
 
 PERCENTAGE = 70
@@ -53,12 +53,10 @@ class Package(object):
         self.base_package_names = self.get_base_package_names()
 
     def get_all_pofiles(self):
-        return map(lambda a: os.path.abspath(a),
-                   glob.glob("%s/*.po" % self.po_path))
+        return [os.path.abspath(a) for a in glob.glob("%s/*.po" % self.po_path)]
 
     def get_all_languages(self):
-        return map(lambda a: os.path.basename(a).split(".po")[0],
-                   self.all_pofiles)
+        return [os.path.basename(a).split(".po")[0] for a in self.all_pofiles]
 
     def get_semi_complete_pofiles(self):
         languages = self.all_pofiles
@@ -66,29 +64,27 @@ class Package(object):
         for language in languages:
             pofile = polib.pofile(language)
             percentage = pofile.percent_translated()
-            print os.path.basename(language), ("(%s" % percentage) + "%),",
+            print(os.path.basename(language), ("(%s" % percentage) + "%),", end=' ')
             if percentage >= PERCENTAGE:
-                print "adding."
+                print("adding.")
                 complete += [language]
             else:
-                print "NOT adding."
+                print("NOT adding.")
         return complete
 
     def get_semi_complete_languages(self):
-        return map(lambda a: os.path.basename(a).split(".po")[0],
-                   self.semi_complete_pofiles)
+        return [os.path.basename(a).split(".po")[0] for a in self.semi_complete_pofiles]
 
     def get_available_binary_packages(self):
 		# metapackages and stuff
-        BLACKLIST = [u'ubuntu-packaging-guide',
-                     u'ubuntu-packaging-guide-common']
+        BLACKLIST = ['ubuntu-packaging-guide',
+                     'ubuntu-packaging-guide-common']
         self.stanzas = deb822.Packages.iter_paragraphs(open(self.control_file))
-        return filter(lambda a: "Package" in a.keys() and
-                      a.get("Package") not in BLACKLIST, self.stanzas)
+        return [a for a in self.stanzas if "Package" in list(a.keys()) and
+                      a.get("Package") not in BLACKLIST]
 
     def get_available_binary_package_names(self):
-        return map(lambda a: a["Package"],
-                   self.available_binary_packages)
+        return [a["Package"] for a in self.available_binary_packages]
 
     def get_base_package_names(self):
         base_packages = []
@@ -104,18 +100,16 @@ class Package(object):
     def get_package_name_permutations(self, languages):
         permutations = []
         for language in languages:
-            permutations += map(lambda pkg: "%s-%s" % (pkg, language),
-                                 self.base_package_names)
+            permutations += ["%s-%s" % (pkg, language) for pkg in self.base_package_names]
         return permutations
 
     def get_missing_binary_packages(self, languages):
-        return filter(lambda a: a not in self.available_binary_package_names,
-                      self.get_package_name_permutations(languages))
+        return [a for a in self.get_package_name_permutations(languages) if a not in self.available_binary_package_names]
 
     def add_to_control_file(self, language, template_name):
         new_package_name = "%s-%s" % (template_name, language)
-        template = filter(lambda a: a["Package"] == template_name,
-                          self.available_binary_packages)[0]
+        template = list(filter(lambda a: a["Package"] == template_name,
+                          self.available_binary_packages))[0]
         new_stanza = copy.copy(template)
         new_stanza["Package"] = new_package_name
         desc = new_stanza["Description"].split("\n")
@@ -124,8 +118,8 @@ class Package(object):
         desc += [" .", " This is the '%s' version." % language]
         new_stanza["Description"] = "\n".join(desc)
         f = open(self.control_file, "a")
-        f.write(u"\n")
-        f.write(unicode(new_stanza))
+        f.write("\n")
+        f.write(str(new_stanza))
         f.close()
 
     def add_installation_files(self, language, template_name):
@@ -237,5 +231,5 @@ if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
-        print >> sys.stderr, "Aborted."
+        print("Aborted.", file=sys.stderr)
         sys.exit(1)
