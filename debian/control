@@ -7,7 +7,7 @@ Vcs-Bzr: lp:ubuntu-packaging-guide
 Vcs-Browser: https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk
 Build-Depends: debhelper (>= 7.0.50~),
                doc-base,
-               python3-sphinx | python-sphinx (>= 1.1~),
+               python3-sphinx (>= 1.1.3+dfsg-6~) | python-sphinx (>= 1.1.3+dfsg-6~),
                python3-polib,
                texlive-fonts-recommended,
                texlive-latex-recommended,
