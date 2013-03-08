@@ -12,6 +12,8 @@
 # - make sure you don't accidentally commit changes to the packaging
 #
 
+from __future__ import print_function
+
 import copy
 import glob
 import sys
@@ -20,15 +22,13 @@ import re
 
 try:
     import polib
-except:
-    print("You need to have  python3-polib  installed.", file=sys.stderr)
-    sys.exit(1)
+except ImportError:
+    sys.exit("You need to have  python3-polib  installed.")
 
 try:
     from debian import deb822
-except:
-    print("You need to have  python3-debian  installed.", file=sys.stderr)
-    sys.exit(1)
+except ImportError:
+    sys.exit("You need to have  python3-debian  installed.")
 
 PERCENTAGE = 70
 
@@ -73,7 +73,8 @@ class Package(object):
         return complete
 
     def get_semi_complete_languages(self):
-        return [os.path.basename(a).split(".po")[0] for a in self.semi_complete_pofiles]
+        return [os.path.basename(a).split(".po")[0]
+            for a in self.semi_complete_pofiles]
 
     def get_available_binary_packages(self):
 		# metapackages and stuff
@@ -84,7 +85,8 @@ class Package(object):
                       a.get("Package") not in BLACKLIST]
 
     def get_available_binary_package_names(self):
-        return [a["Package"] for a in self.available_binary_packages]
+        return [a["Package"]
+            for a in self.available_binary_packages]
 
     def get_base_package_names(self):
         base_packages = []
@@ -100,11 +102,13 @@ class Package(object):
     def get_package_name_permutations(self, languages):
         permutations = []
         for language in languages:
-            permutations += ["%s-%s" % (pkg, language) for pkg in self.base_package_names]
+            permutations += ["%s-%s" % (pkg, language)
+                for pkg in self.base_package_names]
         return permutations
 
     def get_missing_binary_packages(self, languages):
-        return [a for a in self.get_package_name_permutations(languages) if a not in self.available_binary_package_names]
+        return [a for a in self.get_package_name_permutations(languages)
+            if a not in self.available_binary_package_names]
 
     def add_to_control_file(self, language, template_name):
         new_package_name = "%s-%s" % (template_name, language)
@@ -231,5 +235,4 @@ if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
-        print("Aborted.", file=sys.stderr)
-        sys.exit(1)
+        sys.exit("Aborted.")
