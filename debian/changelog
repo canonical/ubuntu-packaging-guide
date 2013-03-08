@@ -16,9 +16,7 @@ ubuntu-packaging-guide (0.3.1) raring; urgency=low
     layout.html.
   * Add a build-dependency on python3-polib, and also prefer python3-sphinx
     to not use two python stacks at the build time.
-  * Port debian/scripts/add-languages to Python 3. 2to3 replaced some
-    functional style code with imperative equivalents, kept that for now
-    as it looks like functionalisms cause some issues with Python 3.
+  * Port debian/scripts/add-languages to Python 3 (using 2to3).
 
   [ Daniel Holbach ]
   * Document where to find a list of required autopkgtests and where 
