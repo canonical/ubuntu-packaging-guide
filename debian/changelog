@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (0.3.1) raring; urgency=low
+ubuntu-packaging-guide (0.3.1) experimental; urgency=low
 
   [ Dmitry Shachnev ]
   * Makefile:
@@ -37,7 +37,7 @@ ubuntu-packaging-guide (0.3.1) raring; urgency=low
   [ Jean-Baptiste Lallement ]
   * auto-pkg-test.rst: updated for raring and new run-adt-test syntax.
 
- -- Daniel Holbach <daniel.holbach@ubuntu.com>  Sat, 09 Feb 2013 10:53:16 +0100
+ -- Andrew Starr-Bochicchio <asb@debian.org>  Fri, 08 Mar 2013 07:19:35 -0500
 
 ubuntu-packaging-guide (0.3.0) experimental; urgency=low
 
