@@ -29,6 +29,14 @@ Files: themes/ubuntu/static/960.css
 Copyright: Nathan Smith
 License: GPL-3+ or MIT
 
+Files: themes/ubuntu/static/images/go-home.png
+       themes/ubuntu/static/images/go-next.png
+       themes/ubuntu/static/images/go-previous.png
+Copyright: Daniel Fore <Daniel.P.Fore@gmail.com>
+           Jonian Guveli <jonian.guveli@gmail.com>
+           K.Vishnoo Charan Reddy <vish@ubuntu.com>
+License: GPL-2
+
 License: GPL-3+
  This program is free software; you can redistribute it
  and/or modify it under the terms of the GNU General Public
@@ -457,12 +465,6 @@ License: CC-BY-SA-3.0
  .
     Creative Commons may be contacted at http://creativecommons.org/.
 
-Files: themes/ubuntu/static/images/go-home.png
-       themes/ubuntu/static/images/go-next.png
-       themes/ubuntu/static/images/go-previous.png
-Copyright: Daniel Fore <Daniel.P.Fore@gmail.com>
-           Jonian Guveli <jonian.guveli@gmail.com>
-           K.Vishnoo Charan Reddy <vish@ubuntu.com>
 License: GPL-2
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
