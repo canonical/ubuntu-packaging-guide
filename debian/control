@@ -5,15 +5,15 @@ Maintainer: Ubuntu Developers <ubuntu-dev-team@lists.alioth.debian.org>
 Uploaders: Andrew Starr-Bochicchio <asb@debian.org>
 Vcs-Bzr: lp:ubuntu-packaging-guide
 Vcs-Browser: https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk
-Build-Depends: debhelper (>= 7.0.50~),
+Build-Depends: cm-super-minimal,
+               debhelper (>= 7.0.50~),
                doc-base,
-               python3-sphinx (>= 1.1.3+dfsg-6~) | python-sphinx (>= 1.1.3+dfsg-6~),
                python3-polib,
+               python3-sphinx (>= 1.1.3+dfsg-6~) | python-sphinx (>= 1.1.3+dfsg-6~),
                texlive-fonts-recommended,
-               texlive-latex-recommended,
-               texlive-latex-extra,
                texlive-lang-cyrillic,
-               cm-super-minimal
+               texlive-latex-extra,
+               texlive-latex-recommended
 #              texlive-lang-cjk,
 #              latex-cjk-japanese
 Homepage: https://launchpad.net/ubuntu-packaging-guide
