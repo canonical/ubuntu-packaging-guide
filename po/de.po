@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-03-04 10:34+0000\n"
-"Last-Translator: Limurx <limurx@streber24.de>\n"
+"PO-Revision-Date: 2013-03-08 14:44+0000\n"
+"Last-Translator: Andreas Altaïr Redmer <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-05 05:21+0000\n"
-"X-Generator: Launchpad (build 16514)\n"
+"X-Launchpad-Export-Date: 2013-03-09 05:21+0000\n"
+"X-Generator: Launchpad (build 16523)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -1082,12 +1082,24 @@ msgid ""
 "``foo.install`` containing only the architecture dependent files might look "
 "like::"
 msgstr ""
+"Wenn ein Quellpaket mehrere Binärpakete produziert, wird ``dh`` die Dateien "
+"in ``debian/tmp`` statt direkt in in ``debian/<package>`` installieren. "
+"Dateien aus ``debian/tmp`` können dann in getrennte Binärpakete mithilfe "
+"mehrerer ``$package_name.install``-Dateien verschoben werden. Dies wird oft "
+"dazu benutzt um große Mengen architekturunabhängiger Daten aus "
+"architekturabhängigen Paketen herauszulösen und sie in ``Architecture: all``-"
+"Pakete zu integrieren. In diesem Fall werden nur der Name der zu "
+"installierenden Dateien (oder Ordner) benötigt und nicht das "
+"Installationsverzeichnis. Zum Beispiel könnte ``foo.install`` mit "
+"ausschließlich architekturabhängigen Dateien so ausschauen::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:286
 msgid ""
 "While ``foo-common.install`` containing only the architecture independent "
 "file might look like::"
 msgstr ""
+"Während ``foo-common.install`` mit der architekturunabhängigen Datei so "
+"ausschauen könnte::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:294
 msgid ""
@@ -1103,6 +1115,10 @@ msgid ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
+"Siehe ``man dh_install`` und den `Abschnitt zur Installationsdatei "
+"(Abschnitt 5.11) <http://www.debian.org/doc/manuals/maint-"
+"guide/dother.en.html#install>`_  der Debian-Anleitung für neue Maintainers "
+"für zusätzliche Informationen."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:302
 msgid "The watch file"
@@ -1326,6 +1342,9 @@ msgid ""
 "problem, but you do know the path to the affected program on your system, "
 "you can discover the source package that you'll need to work on."
 msgstr ""
+"Wenn Du das Quellpaket, das den Fehler beinhaltet nicht kennst, aber Dir der "
+"Pfad zu dem betroffenen Programm auf Deinem System bekannt ist, dann kannst "
+"Du das Quellpaket selbst ermitteln, an dem Du arbeiten musst."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:41
 msgid ""
@@ -1334,6 +1353,10 @@ msgid ""
 "command line.  To find the binary package containing this application, use "
 "this command::"
 msgstr ""
+"Sagen wird, du hast einen Fehler in Tomboy gefunden, einer Merkzettel-"
+"Anwendung für den Desktop. Tomboy kann mit dem Befehl ``/usr/bin/tomboy`` "
+"aus der Kommandozeile gestartet werden. Um das Binärpaket zu finden, welches "
+"die Anwendung enthält, verwende folgenden Befehl::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:48
 msgid "This would print out::"
@@ -1364,6 +1387,11 @@ msgid ""
 "branch corresponding to the source package.  Launchpad maintains source "
 "package branches for all the packages in Ubuntu."
 msgstr ""
+"Wenn Du einmal das Quellpaket kennst mit dem Du arbeitest, wirst Du eine "
+"Kopie des Codes auf deinem System brauchen, um es von Fehlern zu befreien. "
+"In der Ubuntu Entwicklungsverteilung wird dazu :ref:`das Quellpaket "
+"abgezweigt <branching>`. Launchpad verwaltet alle Zweige der Quellpakete in "
+"Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:74
 msgid ""
@@ -1423,6 +1451,8 @@ msgstr ""
 msgid ""
 "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
+"Die Upstream-Revisionseinträge (oder eine neue Veröffentlichung) haben "
+"möglicherweise das Problem behoben,"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:101
 msgid "bugs or package uploads of Debian or other distributions."
@@ -1496,6 +1526,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:146
 msgid "The easiest way to update this is to run::"
 msgstr ""
+"Die einfachste Möglichkeit um zu updaten ist den Befehl auszuführen::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:150
 msgid ""
@@ -1517,18 +1548,20 @@ msgid ""
 "With that out of the way, let's focus on the actual changelog entry itself: "
 "it is very important to document:"
 msgstr ""
+"Wenn dieses Hindernis beseitigt ist, können wir uns auf den eigentlichen "
+"Changelog-Eintrag selbst konzentrieren: Es ist sehr wichtig festzuhalten:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 msgid "where the change was done"
-msgstr ""
+msgstr "wo die Änderungen durchgeführt wurden"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
 msgid "what was changed"
-msgstr ""
+msgstr "was geändert wurde"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:170
 msgid "where the discussion of the change happened"
-msgstr ""
+msgstr "wo die Diskussion zu dieser Änderung zu finden ist"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:172
 msgid ""
@@ -1542,11 +1575,13 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:181
 msgid "Committing the fix"
-msgstr ""
+msgstr "Den Fix hochladen"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:183
 msgid "With the changelog entry written and saved, you can just run::"
 msgstr ""
+"Wenn der Eintrag im changelog geschrieben und gespeichert ist, kannst Du "
+"einfach folgendes starten::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:187
 msgid ""
@@ -1562,11 +1597,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
 msgid "This could for example be::"
-msgstr ""
+msgstr "Dies könnte zum Beispiel sein::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:199
 msgid "So if you just run::"
-msgstr ""
+msgstr "Also wenn Du einfach folgendes startest::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:204
 msgid ""
@@ -1591,7 +1626,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:3
 msgid "Tutorial: Fixing a bug in Ubuntu"
-msgstr ""
+msgstr "Tutorial: Einen Bug in Ubuntu beheben"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:5
 msgid ""
@@ -1610,7 +1645,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:15
 msgid "Confirming the problem"
-msgstr ""
+msgstr "Das Problem bestaetigen"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:17
 msgid ""
@@ -1622,7 +1657,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:23
 msgid "The output should be similar to this::"
-msgstr ""
+msgstr "Die Ausgabe sollte etwa so aussehen::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:49
 msgid "A counter-example would be ``gedit``, which has a homepage set::"
@@ -1637,7 +1672,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:61
 msgid "Research bug situation"
-msgstr ""
+msgstr "Die Fehlersituation ansehen"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:63
 msgid ""
@@ -1660,6 +1695,9 @@ msgid ""
 "at http://bugs.debian.org/src:bumprace and can't find a bug report for our "
 "problem either."
 msgstr ""
+"Für Debian, welches die Hauptquelle für Ubuntu's Pakete ist, schauen wir auf "
+"http://bugs.debian.org/src:bumprace und finden auch keinen bestehenden "
+"Fehlerbericht für unser Problem."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:77
 msgid ""
@@ -1678,7 +1716,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:88
 msgid "Offering help"
-msgstr ""
+msgstr "Hilfe anbieten"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:90
 msgid ""
@@ -5141,6 +5179,7 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Andreas Altaïr Redmer https://launchpad.net/~altair-ibn-la-ahad\n"
 "  Christian Schürer-Waldheim https://launchpad.net/~quincunx\n"
 "  Daniel Holbach https://launchpad.net/~dholbach\n"
 "  Florian Diesch https://launchpad.net/~diesch\n"
