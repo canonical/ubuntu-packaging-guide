@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-03-11 02:21+0000\n"
+"PO-Revision-Date: 2013-03-12 01:27+0000\n"
 "Last-Translator: Neliton Pereira Jr. <nelitonpjr@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-11 05:03+0000\n"
-"X-Generator: Launchpad (build 16523)\n"
+"X-Launchpad-Export-Date: 2013-03-12 04:58+0000\n"
+"X-Generator: Launchpad (build 16524)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -1115,6 +1115,9 @@ msgid ""
 "with upstream see `Ubuntu External Health Status "
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 msgstr ""
+"Para uma lista dos pacotes cujo arquivo \"watch\" relata não estarem "
+"sincronizados com o upstream, consulte `Ubuntu External Health Status "
+"<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
 msgid "The source/format file"
@@ -1564,6 +1567,10 @@ msgid ""
 "browser. There find the \"(+) Propose for merging\" link, click it to get "
 "the change reviewed by somebody and included in Ubuntu."
 msgstr ""
+"você deve estar preparado. O comando push deve enviá-lo ao Launchpad e o "
+"segundo comando irá abrir a página do Launchpad do ramo remoto no seu "
+"navegador. Lá, encontre o link \"(+) Propose for merging\", clique nele para "
+"que a alteração seja revisada por alguém e incluída no Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:209
 msgid ""
@@ -1659,6 +1666,11 @@ msgid ""
 "https://bugs.launchpad.net/ubuntu/+source/bumprace and there is no open bug "
 "with our problem there."
 msgstr ""
+"Primeiro temos que verificar um relatório de erro para o problema já existe "
+"no Ubuntu. Talvez alguém já esteja trabalhando em uma correção, ou que "
+"possamos contribuir para solução de alguma maneira. Para o Ubuntu, nós demos "
+"uma rápida olhada em https://bugs.launchpad.net/ubuntu/+source/bumprace e "
+"não há um relatório de erro ara o problema lá."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:69
 msgid ""
@@ -1706,6 +1718,11 @@ msgid ""
 "include as much information as you can: Under which circumstances does the "
 "bug occur? How did you fix the problem? Did you test your solution?"
 msgstr ""
+"Se você encontrou um relatório de erro aberto, se ele não estiver atribuído "
+"a alguém e você puder corrigi-lo, você deverá comentar no relatório a sua "
+"solução. Certifique-se de incluir toda a informação que puder: em que "
+"circunstâncias o erro acontece? Como você corrigiu o problema? Você testou a "
+"sua solução?"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:95
 msgid ""
@@ -1770,6 +1787,9 @@ msgid ""
 "games.com/bumprace/``. At the end of the first section should be a good "
 "place for it. Once you have done this, save the file."
 msgstr ""
+"e edite o ``debian/control`` para adicionar ``Homepage: http://www.linux-"
+"games.com/bumprace/``. O final da primeira seção será um bom lugar para "
+"colocá-lo. Uma vez que tenha feito isto, salve o arquivo."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:129
 msgid "If you now run::"
@@ -2728,6 +2748,13 @@ msgid ""
 "effective tool to stay on top of bugs in a package or project and organise "
 "the workload."
 msgstr ""
+"Uma outra importante ferramenta de comunicação são os relatórios de erros. "
+"Sempre que um defeito é encontrado em um pacote ou parte da infraestrutura, "
+"um relatório de erro deve ser registrado no Launchpad. Todas as informações "
+"são coletadas nesse relatório, a sua importância, o status e atualização de "
+"para quem foi atribuído, quando necessário. Isto faz com que seja uma "
+"ferramenta efetiva para ficar em cima dos erros em um pacote ou projeto e "
+"organizar a carga de trabalho."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:65
 msgid ""
@@ -3699,7 +3726,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:39
 msgid "And source the file to apply the new export::"
-msgstr ""
+msgstr "E forneça a origem do arquivo para aplicar a nova exportação::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:43
 msgid ""
@@ -3801,6 +3828,8 @@ msgid ""
 "If it can be reverse-applied this means the patch has been applied already "
 "by upstream, so we can delete the patch::"
 msgstr ""
+"Se a aplicação puder ser revertida, isto significa que o patch já foi "
+"aplicado pelo upstream, então podemos excluir o patch::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:135
 msgid "Then carry on::"
@@ -3867,6 +3896,9 @@ msgid ""
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "
 "then feel free to add Quilt."
 msgstr ""
+"Não altere um sistema de patches de um pacote sem discutir isto com o "
+"mantenedor Debian ou time Ubuntu responsável. Se não houver sistema de "
+"patches, então sinta-se à vontade para adicionar o Quilt."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:3
 msgid "Packaging Python modules and applications"
@@ -3923,6 +3955,8 @@ msgid ""
 "documentation package. For an application, a single binary package will be "
 "enough."
 msgstr ""
+"A seção de pacotes de módulos deve ser \"python\", e \"doc\" para o pacote "
+"de documentação. Para um aplicativo, um único pacote binário é o suficiente."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:21
 msgid ""
@@ -4010,22 +4044,29 @@ msgid ""
 "Sphinx documentation to your package (using ``dh_sphinxdoc`` helper), you "
 "should:"
 msgstr ""
+"A ferramenta mais usada para compilar documentação Python é o `Sphinx`_. "
+"Para adicionar documentação Sphinx ao seu pacote (usando o ajudante "
+"\"dh_sphinxdoc\"), você deve:"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:93
 msgid ""
 "Add a build-dependency on ``python-sphinx`` or ``python3-sphinx`` (depending "
 "on what Python version do you want to use);"
 msgstr ""
+"Adicione uma dependência de compilação em \"python-sphinx\" ou \"python3-"
+"sphinx\" (dependendo da versão do Python que você queria usar);"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:94
 msgid "Append ``sphinxdoc`` to the ``dh --with`` line;"
-msgstr ""
+msgstr "Adicione \"sphinxdoc\" à linha \"dh --with\";"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:95
 msgid ""
 "Run ``setup.py build_sphinx`` in ``override_dh_auto_build`` (sometimes not "
 "needed);"
 msgstr ""
+"Execute \"setup.py build_sphinx\" em \"override_dh_auto_build\" (às vezes "
+"não necessário);"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:96
 msgid ""
@@ -4039,6 +4080,8 @@ msgid ""
 "Add the path of the built docs directory (usually ``build/sphinx/html``) to "
 "your ``.docs`` file."
 msgstr ""
+"Adicione o caminho do diretório da documentação compilada (normalmente "
+"\"build/sphinx/html\") no seu arquivo \".docs\"."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:99
 msgid ""
@@ -4133,7 +4176,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:38
 msgid "Patching the source"
-msgstr ""
+msgstr "Aplicando um patch no código fonte"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:39
 msgid ""
@@ -4161,10 +4204,12 @@ msgid ""
 "After making the necessary changes, you just hit Ctrl-D or type exit to "
 "leave the temporary shell."
 msgstr ""
+"Depois de fazer as mudanças necessárias, é só pressionar Ctrl-D ou digitar "
+"\"exit\" para sair temporariamente do shell."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:61
 msgid "Formatting the changelog and patches"
-msgstr ""
+msgstr "Formatando o registro de alteração e os patches"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:63
 msgid ""
@@ -4217,6 +4262,8 @@ msgid ""
 "Test that the new package fixes the vulnerability and does not introduce any "
 "regressions"
 msgstr ""
+"Verifique se o novo pacotes corrige a vulnerabilidade e não introduz nenhuma "
+"regressão"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:105
 msgid ""
@@ -4254,7 +4301,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:123
 msgid "Stable Release Updates"
-msgstr ""
+msgstr "Atualizações de versão estável"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:125
 msgid ""
@@ -4282,6 +4329,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:138
 msgid "See the `Stable Release Updates wiki page`_ for more information."
 msgstr ""
+"Consulte a `Página wiki de atualizações de versão estável`_ para mais "
+"informações."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:3
 msgid "Traditional Packaging"
@@ -4332,7 +4381,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:37
 msgid "to pull the source from the ``precise`` release, or::"
-msgstr ""
+msgstr "para obter o fonte da versão \"precise\", ou::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:41
 msgid ""
@@ -4365,6 +4414,8 @@ msgid ""
 "To continue with our example, let's edit the ``debian/control`` and \"fix\" "
 "our \"bug\"::"
 msgstr ""
+"Para continuar com nosso exemplo, vamos editar o \"debian/control\" e "
+"\"corrigir\" nosso \"erro\":"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:67
 msgid ""
@@ -4391,7 +4442,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:86
 msgid "Now we can examine our changes using ``debdiff``::"
-msgstr ""
+msgstr "Agora podemos examinar nossas alterações usando \"debdiff\"::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:91
 msgid ""
@@ -4410,16 +4461,19 @@ msgid ""
 "In order to apply a debdiff, first make sure you have the source code of the "
 "version that it was created against::"
 msgstr ""
+"Para aplicar um debdiff, primeiramente assegure-se de que possou o código "
+"fonte da versão com a qual foi criado::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:105
 msgid ""
 "Then in a terminal, change the to the directory where the source was "
 "uncompressed::"
-msgstr ""
+msgstr "Em um terminal, vá para o diretório onde o fonte foi descompactado::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:110
 msgid "A debdiff is just like a normal patch file. Apply it as usual with::"
 msgstr ""
+"Um debdiff é como um arquivo de patch normal. Aplique-o como de costume com:"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:6
 msgid "Source package URLs"
@@ -4433,7 +4487,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:11
 msgid "To refer to source branches use::"
-msgstr ""
+msgstr "Para se referir a ramos-fonte digite::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:15
 msgid ""
