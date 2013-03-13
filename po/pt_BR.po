@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-03-12 01:27+0000\n"
+"PO-Revision-Date: 2013-03-12 12:46+0000\n"
 "Last-Translator: Neliton Pereira Jr. <nelitonpjr@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-12 04:58+0000\n"
-"X-Generator: Launchpad (build 16524)\n"
+"X-Launchpad-Export-Date: 2013-03-13 04:47+0000\n"
+"X-Generator: Launchpad (build 16532)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -2427,6 +2427,9 @@ msgid ""
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
 "FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on \"Import Key\"."
 msgstr ""
+"Vá para https://launchpad.net/~/+editpgpkeys e copie a \"Key fingerprint\" "
+"na caixa de texto. No caso acima seria \"5C28 0144 FB08 91C0 2CF3 37AC 6F0B "
+"F90F 43CD E61D\". Agora clique em \"Import Key\"."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:224
 msgid ""
@@ -2437,6 +2440,13 @@ msgid ""
 "you for the password you chose for the key when GPG generated it. Enter the "
 "password, then click the link to confirm that the key is yours.`"
 msgstr ""
+"O Launchpad irá usar a impressão digital para verificar a sua chave no "
+"servidor de chaves do Ubuntu e, se tudo ocorrer bem, enviar para você um e-"
+"mail criptografado pedindo para confirmar a importação da chave. Verifique a "
+"sua conta de e-mail e leia a mensagem que o Launchpad lhe enviou. \"Se o seu "
+"cliente de e-mail tiver suporte a criptografia OpenPGP, ele irá pedir a "
+"senha que você escolheu para a chave quando o GPG a gerou. Digite a senha, e "
+"então clique no link para confirmar que a chave é sua\"."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:231
 msgid ""
@@ -3805,6 +3815,10 @@ msgid ""
 "date.  They might need to be refreshed to match the new upstream source or "
 "they might need to be removed altogether."
 msgstr ""
+"Quando você atualiza para uma nova versão upstream, os patches "
+"frequentemente ficarão desatualizados. Eles podem precisar ser atualizados "
+"para que correspondam ao novo código do upstream ou podem precisar ser "
+"removidos inteiramente."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
 msgid ""
@@ -3971,18 +3985,27 @@ msgid ""
 "fields — see “`Specifying Supported Versions`_” section of the Policy for "
 "details. For example::"
 msgstr ""
+"É recomendado adicionar os campos \"X-Python-Version\" e \"X-Python3-"
+"Version\"  — consulte a seção \"`Especificando versões suportadas`_\" para "
+"mais detalhes. Por exemplo::"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:27
 msgid ""
 "If your package works only with Python 2.x or 3.x, build depend only on one "
 "``-all`` package and use only one ``-Version`` field."
 msgstr ""
+"Se o seu pacote funciona somente como o Python 2.x ou 3.x, compile como "
+"dependente de apenas um pacote (\"-all\") e utilize apenas um campo de "
+"versão (\"-Version\")."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:28
 msgid ""
 "Module packages should have ``{python:Depends}`` and ``{python3:Depends}`` "
 "substitution variables (respectively) in their dependency lists."
 msgstr ""
+"Os pacotes de módulos devem ter variáveis de substituição "
+"\"{python:Depends}\" e \"{python3:Depends}\" (respectivamente) em suas "
+"listas de dependências."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:33
 msgid ""
@@ -4003,6 +4026,9 @@ msgid ""
 "shipped by upstream. Usually tests can be invoked using ``setup.py test`` or "
 "``setup.py check``."
 msgstr ""
+"É de boa prática executar testes durante a compilação, se eles forem "
+"enviados pelo upstream. Normalmente, testes podem ser invocados usando "
+"\"setup.py test\" ou \"setup.py check\"."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:73
 msgid "debian/\\*.install"
@@ -4029,6 +4055,8 @@ msgid ""
 "So, our ``python-markdown.install`` file will look like this (we’ll also "
 "want to install a ``markdown_py`` executable)::"
 msgstr ""
+"Então, o nosso arquivo \"python-markdown.install\" irá parecer assim "
+"(teremos que instalar o executável \"markdown_py\")::"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:84
 msgid "and ``python3-markdown.install`` will only have one line::"
@@ -4095,6 +4123,9 @@ msgid ""
 "Because docs also contain source ``.txt`` files, we’ll also tell "
 "``dh_compress`` to not compress them — by adding this to ``debian/rules``:"
 msgstr ""
+"Pelo fato de que docs também contém arquivos fonte \".txt\", nós também "
+"diremos ao \"dh_compress\" para não comprimi-los, adicionando isto ao "
+"\"debian/rules\":"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:111
 msgid "Checking for packaging mistakes"
@@ -4141,7 +4172,7 @@ msgstr "Times `python-modules`_ e `python-apps`_ do Debian."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:3
 msgid "Security and Stable Release Updates"
-msgstr ""
+msgstr "Atualizações de segurança de versão estável"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:6
 msgid "Fixing a Security Bug in Ubuntu"
@@ -4234,6 +4265,9 @@ msgid ""
 "Multiple vulnerabilities can be fixed in the same security upload; just be "
 "sure to use different patches for different vulnerabilities."
 msgstr ""
+"Várias vulnerabilidades podem ser corrigidas no mesmo envio de segurança; "
+"apenas certifique-se de usar patches diferentes para vulnerabilidades "
+"diferentes."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:95
 msgid "Test and Submit your work"
@@ -4244,6 +4278,8 @@ msgid ""
 "At this point the process is the same as for :doc:`fixing a regular bug in "
 "Ubuntu<./fixing-a-bug>`. Specifically, you will want to:"
 msgstr ""
+"Neste ponto, o processo é o mesmo que para :doc:`corrigir um erro comum no "
+"Ubuntu<./fixing-a-bug>`. Especificamente, você deve:"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:100
 msgid ""
@@ -4317,6 +4353,9 @@ msgid ""
 "The process for Stable Release Updates is just the same as the process for "
 "security bugs except you should subscribe ``ubuntu-sru`` to the bug."
 msgstr ""
+"O processo para atualizações de versões estáveis é o mesmo que o processo "
+"para falhas de seguranção, exceto que você deve registrar \"ubuntu-sru\" no "
+"relatório de erro."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:133
 msgid ""
@@ -4378,6 +4417,9 @@ msgid ""
 "By default, the  latest version in the development release will be "
 "downloaded. You can also specify a version or Ubuntu release like::"
 msgstr ""
+"Por padrão, a última versão do pacote na versão de desenvolvimento do Ubuntu "
+"será baixada. Você pode também especificar a versão do pacote ou do Ubuntu "
+"assim::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:37
 msgid "to pull the source from the ``precise`` release, or::"
@@ -4388,6 +4430,8 @@ msgid ""
 "to download version ``1.0-1ubuntu1`` of the package. For more information on "
 "the command, see ``man pull-lp-source``."
 msgstr ""
+"para baixar a versão \"1.0-1unbuntu1\" do pacote. Para mais informações "
+"sobre o comando, consulte \"man pull-lp-source\"."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:44
 msgid ""
