@@ -1,8 +1,9 @@
 ubuntu-packaging-guide (0.3.2) UNRELEASED; urgency=low
 
   [ Dmitry Shachnev ]
-  * debian/scripts/add-languages: Automate getting full language name for
-    debian/control.
+  * debian/scripts/add-languages:
+    - Automate getting full language name for debian/control.
+    - Ensure that package names are lowercase and don't contain underscores.
   * po/pt_BR.po: use correct backticks (LP: #1154087).
 
  -- Andrew Starr-Bochicchio <asb@debian.org>  Fri, 08 Mar 2013 20:20:29 -0500

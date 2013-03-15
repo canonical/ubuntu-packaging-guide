@@ -53,6 +53,11 @@ class Package(object):
             self.get_available_binary_package_names()
         self.base_package_names = self.get_base_package_names()
 
+    def fix_name(self, language_name):
+        """Formats language names for use in package names, i.e.
+        pt_BR -> pt-br."""
+        return language_name.lower().replace('_', '-')
+
     def get_all_pofiles(self):
         return [os.path.abspath(a) for a in glob.glob("%s/*.po" % self.po_path)]
 
@@ -115,7 +120,8 @@ class Package(object):
             if a not in self.available_binary_package_names]
 
     def add_to_control_file(self, language, template_name):
-        new_package_name = "%s-%s" % (template_name, language)
+        new_package_name = "%s-%s" % (template_name,
+            self.fix_name(language))
         template = list(filter(lambda a: a["Package"] == template_name,
                           self.available_binary_packages))[0]
         new_stanza = copy.copy(template)
@@ -132,7 +138,8 @@ class Package(object):
         f.close()
 
     def add_installation_files(self, language, template_name):
-        new_package_name = "%s-%s" % (template_name, language)
+        new_package_name = "%s-%s" % (template_name,
+            self.fix_name(language))
         template_file = os.path.join(self.base_path,
                                      "debian/" + template_name + ".docs")
         new_file = os.path.join(self.base_path,
@@ -169,7 +176,8 @@ class Package(object):
                                       line))
 
     def add_docbase_files(self, language, template_name):
-        new_package_name = "%s-%s" % (template_name, language)
+        new_package_name = "%s-%s" % (template_name,
+            self.fix_name(language))
         docbase_template = os.path.join(self.base_path,
                                         "debian/" + template_name +
                                         ".doc-base")
