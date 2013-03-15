@@ -58,10 +58,10 @@ msgid ""
 "gets broken during the build or if ``root`` permissions are required. The "
 "`DEP 8 specification`_ lists all available options."
 msgstr ""
-"No ˋˋdebian/tests/controlˋˋ você especifica o que esperar do testbed. Por "
+"No ``debian/tests/control`` você especifica o que esperar do testbed. Por "
 "exemplo: você lista todos os pacotes requeridos para os testes, se o testbed "
-"falhar durante a compilação ou se permissões de ˋˋrootˋˋ são necessárias. A "
-"ˋDEP 8 specificationˋ_ lista todas as opções disponíveis."
+"falhar durante a compilação ou se permissões de ``root`` são necessárias. A "
+"`DEP 8 specification`_ lista todas as opções disponíveis."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
