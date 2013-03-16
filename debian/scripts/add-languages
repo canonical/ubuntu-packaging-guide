@@ -66,7 +66,6 @@ class Package(object):
 
     def get_semi_complete_pofiles(self):
         languages = self.all_pofiles
-        complete = []
         for language in languages:
             pofile = polib.pofile(language)
             basename = os.path.basename(language)
@@ -76,22 +75,23 @@ class Package(object):
             print(basename, ("(%s" % percentage) + "%),", end=' ')
             if percentage >= PERCENTAGE:
                 print("adding.")
-                complete += [language]
+                yield language
             else:
                 print("NOT adding.")
-        return complete
 
     def get_semi_complete_languages(self):
         return [os.path.basename(a).split(".po")[0]
             for a in self.semi_complete_pofiles]
 
     def get_available_binary_packages(self):
-		# metapackages and stuff
-        BLACKLIST = ['ubuntu-packaging-guide',
-                     'ubuntu-packaging-guide-common']
-        self.stanzas = deb822.Packages.iter_paragraphs(open(self.control_file))
-        return [a for a in self.stanzas if "Package" in list(a.keys()) and
-                      a.get("Package") not in BLACKLIST]
+        # metapackages and stuff
+        BLACKLIST = ('ubuntu-packaging-guide',
+                     'ubuntu-packaging-guide-common')
+        with open(self.control_file) as control:
+            stanzas = deb822.Packages.iter_paragraphs(control)
+            result = [a for a in stanzas if "Package" in list(a.keys())
+                and a.get("Package") not in BLACKLIST]
+        return result
 
     def get_available_binary_package_names(self):
         return [a["Package"]
@@ -102,7 +102,7 @@ class Package(object):
         for name in self.available_binary_package_names:
             is_translations_package = False
             for language in self.all_languages:
-                if name.endswith("-%s" % language):
+                if name.endswith("-%s" % self.fix_name(language)):
                     is_translations_package = True
             if not is_translations_package:
                 base_packages += [name]
@@ -111,7 +111,7 @@ class Package(object):
     def get_package_name_permutations(self, languages):
         permutations = []
         for language in languages:
-            permutations += ["%s-%s" % (pkg, language)
+            permutations += ["%s-%s" % (pkg, self.fix_name(language))
                 for pkg in self.base_package_names]
         return permutations
 
@@ -229,9 +229,9 @@ class Package(object):
                     line = line.rstrip('\n') + " " + language + '\n'
                 makefile.write(line)
 
-    def add_package(self, package_name):
-        base_template = "-".join(package_name.split("-")[0:-1])
-        language = package_name.split("-")[-1]
+    def add_package(self, package_name, language):
+        language_code = self.fix_name(language)
+        base_template = package_name.split('-'+language_code)[0]
         self.add_to_makefile(language)
         self.add_to_control_file(language, base_template)
         self.add_installation_files(language, base_template)
@@ -240,9 +240,9 @@ class Package(object):
 
 def main():
     package = Package()
-    for name in package.get_missing_binary_packages(
-      package.semi_complete_languages):
-        package.add_package(name)
+    for language in package.semi_complete_languages:
+        for name in package.get_missing_binary_packages((language,)):
+            package.add_package(name, language)
 
 if __name__ == '__main__':
     try:
