@@ -169,7 +169,7 @@ Description: Ubuntu Packaging Guide - EPUB guide - Russian version
 Package: ubuntu-packaging-guide-html-pt-br
 Depends: ubuntu-packaging-guide-common, ${misc:Depends}
 Architecture: all
-Description: Ubuntu Packaging Guide - HTML guide - 'pt_BR' version
+Description: Ubuntu Packaging Guide - HTML guide - Brazilian Portuguese version
  The Ubuntu Packaging Guide is a set of articles that should help you to get
  involved with packaging and development of Ubuntu. It's not meant to replace
  other great documentation like the Debian New Maintainer's Guide or the
@@ -183,7 +183,7 @@ Description: Ubuntu Packaging Guide - HTML guide - 'pt_BR' version
 Package: ubuntu-packaging-guide-pdf-pt-br
 Depends: ${misc:Depends}
 Architecture: all
-Description: Ubuntu Packaging Guide - PDF guide - 'pt_BR' version
+Description: Ubuntu Packaging Guide - PDF guide - Brazilian Portuguese version
  The Ubuntu Packaging Guide is a set of articles that should help you to get
  involved with packaging and development of Ubuntu. It's not meant to replace
  other great documentation like the Debian New Maintainer's Guide or the
@@ -197,7 +197,7 @@ Description: Ubuntu Packaging Guide - PDF guide - 'pt_BR' version
 Package: ubuntu-packaging-guide-epub-pt-br
 Depends: libjs-sphinxdoc, ${misc:Depends}
 Architecture: all
-Description: Ubuntu Packaging Guide - EPUB guide - 'pt_BR' version
+Description: Ubuntu Packaging Guide - EPUB guide - Brazilian Portuguese version
  The Ubuntu Packaging Guide is a set of articles that should help you to get
  involved with packaging and development of Ubuntu. It's not meant to replace
  other great documentation like the Debian New Maintainer's Guide or the

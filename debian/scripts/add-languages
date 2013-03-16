@@ -127,7 +127,7 @@ class Package(object):
         new_stanza = copy.copy(template)
         new_stanza["Package"] = new_package_name
         desc = new_stanza["Description"].split("\n")
-        desc[0] += " - '%s' version" % language
+        desc[0] += " - %s version" % self.language_names[language]
         desc[-1] = desc[-1].rstrip()
         desc += [" .", " This is the %s version." %
             self.language_names[language]]
