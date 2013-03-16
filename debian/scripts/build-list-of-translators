@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Builds a list in translators for the given languages
+# Builds a list of translators for the given languages
 # Run with "--help" to get more info
 # Author: Dmitry Shachnev <mitya57@ubuntu.com>, 2013
 
@@ -41,7 +41,7 @@ def write_html(translators, fname):
         content += '\n<h2 id="' + langid + '">' + langname + ' language</h2>\n<ul>\n'
         for name, url in translators[langname]:
             content += '<li>' + name + ' &lt;<a href="' + url + '">'
-            content += url + '</a>&gt;\n'
+            content += url + '</a>&gt;</li>\n'
         content += '</ul>'
     outputfile = open(fname, 'w', encoding='utf-8')
     outputfile.write(template.replace('%CONTENT%', content))
