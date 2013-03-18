@@ -1,5 +1,5 @@
 Document: ubuntu-packaging-guide-html-pt-br
-Title: Ubuntu Packaging Guide - pt_BR Version
+Title: Ubuntu Packaging Guide - Brazilian Portuguese Version
 Author: Ubuntu Developers
 Abstract: The Ubuntu Packaging Guide is a set of articles that should help 
  you to get involved with packaging and development of Ubuntu. It tries to 
@@ -7,5 +7,5 @@ Abstract: The Ubuntu Packaging Guide is a set of articles that should help
 Section: Text
 
 Format: HTML
-Index: /usr/share/doc/ubuntu-packaging-guide-html-pt_BR/singlehtml/index.html
-Files: /usr/share/doc/ubuntu-packaging-guide-html-pt_BR/singlehtml/index.html
+Index: /usr/share/doc/ubuntu-packaging-guide-html-pt-br/singlehtml/index.html
+Files: /usr/share/doc/ubuntu-packaging-guide-html-pt-br/singlehtml/index.html

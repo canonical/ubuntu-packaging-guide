@@ -1,5 +1,5 @@
 Document: ubuntu-packaging-guide-pdf-pt-br
-Title: Ubuntu Packaging Guide - pt_BR Version
+Title: Ubuntu Packaging Guide - Brazilian Portoguese Version
 Author: Ubuntu Developers
 Abstract: The Ubuntu Packaging Guide is a set of articles that should help 
  you to get involved with packaging and development of Ubuntu. It tries to 
@@ -7,4 +7,4 @@ Abstract: The Ubuntu Packaging Guide is a set of articles that should help
 Section: Text
 
 Format: PDF
-Files: /usr/share/doc/ubuntu-packaging-guide-pdf-pt_BR/ubuntu-packaging-guide.pdf.gz
+Files: /usr/share/doc/ubuntu-packaging-guide-pdf-pt-br/ubuntu-packaging-guide.pdf.gz
