@@ -14,11 +14,9 @@
 
 from __future__ import print_function
 
-import copy
 import glob
 import sys
 import os
-import re
 
 try:
     import polib
@@ -124,7 +122,9 @@ class Package(object):
             self.fix_name(language))
         template = list(filter(lambda a: a["Package"] == template_name,
                           self.available_binary_packages))[0]
-        new_stanza = copy.copy(template)
+        new_stanza = deb822.Packages()
+        for key in template:
+            new_stanza[key] = template[key]
         new_stanza["Package"] = new_package_name
         desc = new_stanza["Description"].split("\n")
         desc[0] += " - %s version" % self.language_names[language]
@@ -156,12 +156,11 @@ class Package(object):
                 lines = install_file.readlines()
             with open(new_install_file, "w") as new_install_file:
                 for line in lines:
-                    source = re.sub("%s/" % doc_type,
-                                          "%s/%s/" % (doc_type, language),
-                                          line.split('\t')[0])
-                    dest = re.sub("-%s/" % doc_type,
-                                          "-%s-%s/" % (doc_type, language),
-                                          line.split('\t')[-1])
+                    source, dest = line.split('\t')
+                    source = source.replace("%s/" % doc_type,
+                        "%s/%s/" % (doc_type, language))
+                    dest = dest.replace("-%s/" % doc_type,
+                        "-%s-%s/" % (doc_type, self.fix_name(language)))
                     new_install_file.write(source + '\t' + dest)
         else:
             self.write_docs_file(template_file, new_file, doc_type, language)
@@ -171,9 +170,8 @@ class Package(object):
             lines = template_file.readlines()
         with open(new_file, "w") as new_file:
             for line in lines:
-                new_file.write(re.sub("%s/" % doc_type,
-                                      "%s/%s/" % (doc_type, language),
-                                      line))
+                new_file.write(line.replace("%s/" % doc_type,
+                               "%s/%s/" % (doc_type, language)))
 
     def add_docbase_files(self, language, template_name):
         new_package_name = "%s-%s" % (template_name,
@@ -211,13 +209,11 @@ class Package(object):
                 if line.startswith("Document:"):
                     line = "Document: " + new_package_name + "\n"
                 elif line.startswith("Index:") | line.startswith("Files:"):
-                    line = re.sub("-%s" % doc_type,
-                                  "-%s-%s" % (doc_type, language), line)
+                    line = line.replace("-%s" % doc_type,
+                           "-%s-%s" % (doc_type, self.fix_name(language)))
                 elif line.startswith("Title:"):
                     line = "Title: Ubuntu Packaging Guide - %s Version\n" \
-                            % language
-                else:
-                    line = line
+                            % self.language_names[language]
                 new_file.write(line)
 
     def add_to_makefile(self, language):
