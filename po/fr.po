@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-02-08 20:14+0000\n"
-"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
+"PO-Revision-Date: 2013-03-19 21:06+0000\n"
+"Last-Translator: gisele perreault <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-20 05:09+0000\n"
-"X-Generator: Launchpad (build 16491)\n"
+"X-Launchpad-Export-Date: 2013-03-20 04:53+0000\n"
+"X-Generator: Launchpad (build 16532)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -253,6 +253,8 @@ msgid ""
 "Packages in Debian with a testsuite header will also be automatically added "
 "when they are synced to Ubuntu."
 msgstr ""
+"Les paquets dans Debian avec un en-tête testsuite seront également ajoutés "
+"automatiquement quand ils sont synchronisés avec Ubuntu."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
 msgid "Getting the test into Ubuntu"
@@ -307,6 +309,9 @@ msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel`_ to get in touch with developers who can help you."
 msgstr ""
+"Si vous rencontrez des problèmes, vous pouvez rejoindre le `canal IRC "
+"#ubuntu-quality`_ pour entrer en contact avec les développeurs qui peuvent "
+"vous aider."
 
 #: ../ubuntu-packaging-guide/backports.rst:3
 msgid "Backporting software updates"
@@ -339,7 +344,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/backports.rst:25
 msgid "Official Ubuntu Backports"
-msgstr ""
+msgstr "Backports Ubuntu officiels"
 
 #: ../ubuntu-packaging-guide/backports.rst:27
 msgid ""
@@ -417,6 +422,8 @@ msgid ""
 "If your version of ``debootstrap`` does not know about oneiric you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
+"Si votre version de ``debootstrap`` ne connaît pas oneiric, vous pouvez "
+"essayer la mise à niveau avec la version des ``backports``."
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
@@ -504,6 +511,9 @@ msgid ""
 "are made and hundreds of people interact every day, it is important to "
 "communicate effectively."
 msgstr ""
+"Dans un projet où des milliers de lignes de code sont modifiées, de "
+"nombreuses décisions sont prises et des centaines de personnes interagissent "
+"chaque jour, il est important de communiquer efficacement."
 
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
@@ -942,6 +952,8 @@ msgid ""
 "You are encouraged to use the newer 3.0 source format. It provides a number "
 "of new features:"
 msgstr ""
+"Nous vous encourageons à utiliser le nouveau format de source 3.0. Il "
+"fournit un certain nombre de nouvelles fonctionnalités :"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
 msgid "Support for additional compression formats: bzip2, lzma and xz"
