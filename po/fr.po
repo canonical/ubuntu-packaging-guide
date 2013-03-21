@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-03-19 21:06+0000\n"
-"Last-Translator: gisele perreault <Unknown>\n"
+"PO-Revision-Date: 2013-03-20 19:44+0000\n"
+"Last-Translator: Sylvie Gallet <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-20 04:53+0000\n"
+"X-Launchpad-Export-Date: 2013-03-21 04:45+0000\n"
 "X-Generator: Launchpad (build 16532)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -27,7 +27,7 @@ msgid ""
 "integrated into packages. To integrate a test into a package, all you need "
 "to do is:"
 msgstr ""
-"La `spécification DEP 8` _ définit la façon dont les tests automatiques "
+"La `spécification DEP 8`_ définit la façon dont les tests automatiques "
 "peuvent être très facilement intégrés dans les paquets. Pour intégrer un "
 "test dans un paquet, tout ce que vous devez faire est de :"
 
@@ -61,8 +61,8 @@ msgstr ""
 "Dans ``debian/tests/control`` vous spécifiez ce que vous attendez du banc "
 "d'essai. Ainsi, par exemple, vous listez tous les paquets nécessaires pour "
 "les tests, si le banc d'essai se casse lors de la construction ou si les "
-"autorisations ``root`` sont nécessaires. La `spécification DEP 8` \r\n"
-"_ répertorie toutes les options disponibles."
+"autorisations ``root`` sont nécessaires. La `spécification DEP 8`_ "
+"répertorie toutes les options disponibles."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
@@ -166,6 +166,8 @@ msgid ""
 "This command will create a pristine Raring AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Cette commande créera une machine virtuelle Raring AMD64 toute neuve à "
+"partir d'une image cloud. Pour lancer les tests, lancer simplement::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -206,6 +208,8 @@ msgid ""
 "The `libxml2 tests`_ are very similar. They also run a test-build of a "
 "simple piece of C code and execute it."
 msgstr ""
+"Les `tests libxml2`_ sont très similaires. Ils effectuent aussi un test de "
+"compilation d'un simple morceau de code C et l'exécutent."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
 msgid ""
@@ -220,7 +224,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
-msgstr ""
+msgstr "Dans les `tests ubiquity`_ la suite de test en amont est exécutée."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:144
 msgid ""
@@ -228,6 +232,9 @@ msgid ""
 "very interesting because they emulate usage of CDs, Samba, DAV and other "
 "bits."
 msgstr ""
+"Les `tests gvfs`_ ont un test complet de leur fonctionnalité et sont très "
+"intéressants car ils émulent l'utilisation de CD, Samba, DAV et autres "
+"bricoles."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:149
 msgid "Ubuntu infrastructure"
@@ -247,6 +254,10 @@ msgid ""
 "they should still be submitted to Debian, as DEP-8 is a Debian specification "
 "and Debian developers or users can still manually run the tests."
 msgstr ""
+"Bien que Debian ne dispose pas encore d'une infrastructure mise en place de "
+"test automatique, ils doivent encore être soumis à Debian, car DEP-8 est une "
+"spécification Debian et des développeurs ou utilisateurs Debian peuvent "
+"toujours exécuter manuellement les tests."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:160
 msgid ""
@@ -282,6 +293,7 @@ msgstr "ajouter le répertoire ``debian/tests``,"
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
 msgstr ""
+"écrire le ``debian/tests/control`` basé sur la  `spécification DEP 8`_,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid "add your test case(s) to ``debian/tests``,"
@@ -295,7 +307,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
 msgid "What you can do"
-msgstr ""
+msgstr "Ce que vous pouvez faire"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:181
 msgid ""
@@ -324,6 +336,11 @@ msgid ""
 "you have two options: either you `upload to a PPA "
 "<https://help.launchpad.net/Packaging/PPA>`_ or prepare a backport."
 msgstr ""
+"Parfois, vous souhaitez ajouter une nouvelle fonctionnalité qui ne concerne "
+"pas la correction de bug critique. Pour ce scénario, vous avez deux "
+"options : soit vous le `soumettez à un PPA "
+"<https://help.launchpad.net/Packaging/PPA>`_ soit vous préparez un rétro-"
+"portage."
 
 #: ../ubuntu-packaging-guide/backports.rst:12
 msgid "Personal Package Archive (PPA)"
@@ -335,16 +352,22 @@ msgid ""
 "don't need approval of anyone, but the downside of it is that your users "
 "will have to manually enable it. It is a non-standard software source."
 msgstr ""
+"L'utilisation d'un PPA a un certain nombre d'avantages. C'est assez simple, "
+"vous n'avez besoin d'aucune approbation, mais l'inconvénient, c'est que vos "
+"utilisateurs devront l'activer manuellement. C'est une source de logiciels "
+"non standard."
 
 #: ../ubuntu-packaging-guide/backports.rst:18
 msgid ""
 "The `PPA documentation on Launchpad`_ is fairly comprehensive and should get "
 "you up and running in no time."
 msgstr ""
+"La `documentation sur les PPA sur Launchpad`_ est assez complète et devrait "
+"vous permettre d'être opérationnel en un rien de temps."
 
 #: ../ubuntu-packaging-guide/backports.rst:25
 msgid "Official Ubuntu Backports"
-msgstr "Backports Ubuntu officiels"
+msgstr "Rétro-portages officiels de Ubuntu"
 
 #: ../ubuntu-packaging-guide/backports.rst:27
 msgid ""
@@ -451,21 +474,28 @@ msgid ""
 "To stop apt and other programs complaining about missing locales you can "
 "install your relevant language pack::"
 msgstr ""
+"Pour empêcher apt et d'autres programmes de se plaindre de l'absence "
+"d'informations linguistiques, vous pouvez installer les paquets "
+"linguistiques adéquats::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:44
 msgid ""
 "If you want to run X programs you will need to bind the /tmp directory into "
 "the chroot, from outside the chroot run::"
 msgstr ""
+"Si vous voulez exécuter des programmes X, vous devez lier le répertoire /tmp "
+"dans le chroot, en dehors de chroot, exécutez::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:50
 msgid "Some programs may need you to bind /dev or /proc."
-msgstr ""
+msgstr "Certains programmes peuvent nécessiter que vous liez /dev ou /proc."
 
 #: ../ubuntu-packaging-guide/chroots.rst:52
 msgid ""
 "For more information on chroots see our `Debootstrap Chroot wiki page`_."
 msgstr ""
+"Pour plus d'informations sur chroot consultez notre page wiki `debootstrap "
+"chroot` _."
 
 #: ../ubuntu-packaging-guide/chroots.rst:55
 msgid "Alternatives"
@@ -524,6 +554,9 @@ msgid ""
 "Mailing lists are a very important tool if you want to communicate ideas to "
 "a broader team and make sure that you reach everybody, even across timezones."
 msgstr ""
+"Les listes de diffusion sont un outil très important si vous voulez "
+"communiquer des idées à une plus large équipe et vous assurer d'atteindre "
+"tout le monde, quels que soient les fuseaux horaires."
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
@@ -667,6 +700,7 @@ msgid ""
 "For the Ubuntu ``hello`` package, the ``control`` file looks something like "
 "this:"
 msgstr ""
+"Pour le paquet ``hello`` de Ubuntu, le fichier ``control`` resemble à ceci :"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:101
 msgid ""
@@ -694,6 +728,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:120
 msgid "Each additional paragraph describes a binary package to be built."
 msgstr ""
+"Chaque paragraphe supplémentaire décrit un paquet binaire à compiler."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:122
 msgid ""
@@ -4771,6 +4806,7 @@ msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Florent (LSc) https://launchpad.net/~lorkscorguar\n"
+"  GillesY https://launchpad.net/~perso-gillesy\n"
 "  Gérard Duteil https://launchpad.net/~gerardduteil\n"
 "  Olivier FEBWIN https://launchpad.net/~febcrash\n"
 "  Pierre Slamich https://launchpad.net/~pierre-slamich\n"
