@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-03-20 17:12+0000\n"
-"Last-Translator: Hendrik Knackstedt <Unknown>\n"
+"PO-Revision-Date: 2013-03-21 16:07+0000\n"
+"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-21 04:45+0000\n"
+"X-Launchpad-Export-Date: 2013-03-22 05:05+0000\n"
 "X-Generator: Launchpad (build 16532)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -1260,6 +1260,9 @@ msgid ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
+"``man dpkg-source`` und `source/format section (Section 5.21) "
+"<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_ aus "
+"dem Debian New Maintainers' Guide haben weitere Details."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:377
 msgid "Additional Resources"
@@ -1505,6 +1508,10 @@ msgid ""
 "just omit the step to sign the source package) and ``pbuilder-dist`` will "
 "build the package from source for whatever ``release`` you choose."
 msgstr ""
+"Dies wird ein Quellpaket aus dem Inhalt des Zweiges (``-us -uc`` bewirkt, "
+"dass die Signierung des Pakets übersprungen wird) und ``pbuilder-dist`` wird "
+"die Pakete aus dem Quellcode bauen, für den ``release``, den Du ausgewählt "
+"hast.."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:132
 msgid ""
@@ -1650,6 +1657,10 @@ msgid ""
 "might want to have a look at our :doc:`Security and stable release "
 "updates<./security-and-stable-release-updates>` article."
 msgstr ""
+"Wenn deine Arbeit an einem Entwicklungszweig Fehler in einer stabilen "
+"Version oder eine Sicherheitslücke behebt, ist es wert einen Blick auf den "
+"Artikel doc:`Sicherheits- und Stabilitäts-Updates<./security-and-stable-"
+"release-updates>` zu werfen."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:3
 msgid "Tutorial: Fixing a bug in Ubuntu"
@@ -1719,6 +1730,9 @@ msgid ""
 "For Ubuntu the URL ``https://bugs.launchpad.net/ubuntu/+source/<package>`` "
 "should always take to the bug page of the source package in question."
 msgstr ""
+"Für Ubuntu wird die URL "
+"``https://bugs.launchpad.net/ubuntu/+source/<package>`` einen immer auf die "
+"Bug-Seite des jeweiligen Pakets führen."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:73
 msgid ""
@@ -1735,6 +1749,8 @@ msgid ""
 "For Debian the URL ``http://bugs.debian.org/src:<package>`` should always "
 "take to the bug page of the source package in question."
 msgstr ""
+"Für Debian wird die URL ``http://bugs.debian.org/src:<package>`` einen immer "
+"auf die Bug-Seite des jeweiligen Pakets führen."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:80
 msgid ""
@@ -1799,7 +1815,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:121
 msgid "So what we do next is run::"
-msgstr ""
+msgstr "Als nächstes führt man folgendes aus::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:125
 msgid ""
@@ -1852,6 +1868,9 @@ msgid ""
 "If you have a reference to a Launchpad bug which is fixed by the issue, add "
 "(``LP: #<bug number>``) to the changelog entry line, ie: ``(LP: #123456)``."
 msgstr ""
+"Falls man eine Referenz auf einen Bugreport in Launchpad hat, der mit der "
+"Änderung behoben wird, hängt man an die Changelog-Meldung (``LP: #<bug "
+"number>``) an, also z.B.: ``(LP: #123456)``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:193
 msgid ""
@@ -1864,6 +1883,8 @@ msgid ""
 "If it is a reference to an upstream or Debian bug or a mailing list "
 "discussion, mention it as well."
 msgstr ""
+"Wenn es eine Referenz zu einem Upstream- oder Debian-Bug ist, oder zu einer "
+"Mailinglisten-Unterhaltung, erwähne dies bitte auch."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:197
 msgid "Try to wrap your lines at 80 characters."
@@ -1874,6 +1895,9 @@ msgid ""
 "Try to be specific, not an essay, but enough for somebody (who did not "
 "deeply look into the issue) to understand."
 msgstr ""
+"Versuche präzise zu sein. Es muss kein Aufsatz sein, aber genau genug, damit "
+"jemand, der sich das Problem nicht in's kleinste Detail anschaut, auch "
+"versteht, was geändert wurde."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:200
 msgid "Mention how you fixed the issue and where."
@@ -1954,12 +1978,17 @@ msgid ""
 "If everything went well you should get a mail from Debian's bug tracking "
 "system with more information. This might sometimes take a few minutes."
 msgstr ""
+"Wenn alles geklappt hat, solltest Du eine Mail von Debian's Bug-Tracker mit "
+"weiteren Informationen bekommen. Dies kann manchmal einige Minuten dauern."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:257
 msgid ""
 "If the problem is just in Ubuntu, you might want to consider :doc:`Seeking "
 "Review and Sponsorship<./udd-sponsorship>` to get the fix included."
 msgstr ""
+"Sollte das Problem nur in Ubuntu bestehen, solltest Du Dir vielleicht "
+":doc:`Seeking Review and Sponsorship<./udd-sponsorship>` anschauen, um die "
+"Änderung direkt eingepflegt zu bekommen."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:263
 msgid "Additional considerations"
@@ -2070,12 +2099,17 @@ msgid ""
 "``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
 "isolated environment."
 msgstr ""
+"``pbuilder`` -- ein Werkzeug um reproduzierbare Builds eines Pakets in einer "
+"sauberen und isolierten Umgebung zu machen."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:56
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
 msgstr ""
+"``ubuntu-dev-tools`` (und ``devscripts``, eine direkte Abhängkigkeit) -- "
+"eine Sammlung von Werkzeugen, die viele Paketierungsaufgaben einfacher "
+"machen."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:58
 msgid ""
