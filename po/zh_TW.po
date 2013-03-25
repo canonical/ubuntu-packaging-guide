@@ -8,43 +8,43 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2012-08-23 12:54+0000\n"
-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
+"PO-Revision-Date: 2013-03-24 15:40+0000\n"
+"Last-Translator: Howard Chan <smartboyhw@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-02-20 05:10+0000\n"
-"X-Generator: Launchpad (build 16491)\n"
+"X-Launchpad-Export-Date: 2013-03-25 04:49+0000\n"
+"X-Generator: Launchpad (build 16540)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
-msgstr ""
+msgstr "autopkgtest: 套件自動測試"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
 "The `DEP 8 specification`_ defines how automatic testing can very easily be "
 "integrated into packages. To integrate a test into a package, all you need "
 "to do is:"
-msgstr ""
+msgstr "`DEP 8 規格`_介定了自動測試如何非常容易融入套件中。要把測試融入一個套件，您需要做的是："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
 msgid "add the following to the Source section in ``debian/control``::"
-msgstr ""
+msgstr "把下列文字家加入``debian/control``裏的原始碼分類中：："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:13
 msgid ""
 "add a file called ``debian/tests/control`` which specifies the requirements "
 "for the testbed,"
-msgstr ""
+msgstr "把一個叫做``debian/tests/control``的檔案加進以指定測試温床的要求，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
 msgid "add the tests in ``debian/tests/``."
-msgstr ""
+msgstr "把測試加進``debian/tests/``裏。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
 msgid "Testbed requirements"
-msgstr ""
+msgstr "測試温床要求"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:21
 msgid ""
@@ -53,32 +53,35 @@ msgid ""
 "gets broken during the build or if ``root`` permissions are required. The "
 "`DEP 8 specification`_ lists all available options."
 msgstr ""
+"在``debian/tests/control``裏您指定從測試温床裏預計甚麼。例如您列明測試要求的所有套件，測試温床會不會在建構中被破壞或需不需要使用`"
+"`root``權限。`DEP 8 規格`_列出所有能提供的選擇。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
-msgstr ""
+msgstr "下面我們會看一看``glib2.0``原始碼套件。在一個非常简單的例子中該檔案會是這樣子："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
+"於``debian/tests/build``的測試裏這會確保套件``libglib2.0-dev``及``build-essential``會被安装。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
 msgid ""
 "You can use ``@`` in the ``Depends`` line to indicate that you want all the "
 "packages installed which are built by the source package in question."
-msgstr ""
+msgstr "您可以在``Depends``行裏使用``@``来指明您想所有被原始碼套件建構的套件會被安装。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr ""
+msgstr "實際的測試"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
-msgstr ""
+msgstr "上面例子的随附測試可能是："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
 msgid ""
@@ -87,16 +90,18 @@ msgid ""
 "provided by `pkg-config`). Then the compiled binary, which just exercises "
 "some parts of core glib functionality, is run."
 msgstr ""
+"在這裏一篇非常简單的C碼會被寫到一個臨時資料夹裏。然後這會與系統文庫（利用由`pkg-"
+"config`提供的標誌及文庫路線）被編寫。然後編寫後的，只運行一部分核心glib功能的程試，會被運行。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:80
 msgid ""
 "While this test is very small and basic, it tests quite a number of core "
 "components on a system. This may help to uncover critical issues early on."
-msgstr ""
+msgstr "本測試是很微小和基本，但它會測試一些系統中的核心結構。這可以幫助早點發現重要問题。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
 msgid "Executing the test"
-msgstr ""
+msgstr "運行測試"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
 msgid ""
@@ -105,6 +110,8 @@ msgid ""
 "from the ``autopkgtest`` package to execute the test. The easiest way to do "
 "this is to run this command in the source tree::"
 msgstr ""
+"測試碼可以容易的自己運行，但如果您想確保測試温床是好好地設定，您可能會使用``autopkgtest``套件中的``adt-"
+"run``以運行測試最容易的辦法是在原始碼中運行這命令：："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:93
 msgid ""
@@ -115,20 +122,22 @@ msgid ""
 "uses a pristine virtual machine to run the tests. To set it up, firstly "
 "install the needed dependencies::"
 msgstr ""
+"這方法的壞處是您是在本機上測試，但是不能保正這會在一個最小環境下運作。例如確保所有要求的套件已經為測試而安装好會有困難。利用`lp:auto-"
+"package-testing`_我們有一個更全面的測試工具。它使用一個原始虚擬機器以運行測試。要把它設定好，先安装需要的依賴套件：："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
 msgid "Then, get the source code from Launchpad::"
-msgstr ""
+msgstr "然後，從Launchpad獲取原始碼：："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Raring AMD64 system::"
-msgstr ""
+msgstr "和建立一個Raring64位元系統：："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Raring AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
-msgstr ""
+msgstr "這命令會從雲端映像檔創立一個原始Raring64位元虚擬機器。要運行測試，简單地運行：："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -142,28 +151,32 @@ msgid ""
 "you can log into the virtual machine after the tests were run. This makes it "
 "very easy to debug issues."
 msgstr ""
+"這會使用於``/tmp/glib2.0-2.35.7``裏的原始碼套件並從這原始碼運行對從檔案庫裏的``glib2.0``的測試。選項``-"
+"S``會同時支持bzr, git和apt原始碼的計劃。如果您只標明原始碼以``-"
+"S``但没有標明套件名稱，這會另外建構分支並從那構建安装程試;如果你想在给Ubuntu裏的套件更新的套件，或那套件不在Ubuntu裏這會較為有用。如果使用"
+"``-k``選項您可以在測試運行後登入虚擬機器。這讓解臭蟲問题非常简單。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:127
 msgid ""
 "The `auto-package-testing documentation`_ has a lot more valuable "
 "information on other testing options."
-msgstr ""
+msgstr "`auto-package-testing 文件`_有更多關於其他測試選項的有價值的資訊。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:133
 msgid "Further examples"
-msgstr ""
+msgstr "更多例子"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:135
 msgid ""
 "This list is not comprehensive, but might help you get a better idea of how "
 "automated tests are implemented and used in Ubuntu."
-msgstr ""
+msgstr "這列單不是太全面，可是有可能幫助您更好了解自動測試如何在Ubuntu裏應用和使用。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:138
 msgid ""
 "The `libxml2 tests`_ are very similar. They also run a test-build of a "
 "simple piece of C code and execute it."
-msgstr ""
+msgstr "`libxml2 測試`_是非常相似。它們也會運行一片简單C碼的建構測試並運行它。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
 msgid ""
@@ -171,21 +184,23 @@ msgid ""
 "There is an additional \"python3-gi\" test which verifies that the GTK "
 "library can also be used through introspection."
 msgstr ""
+"`gtk+3.0 測試`_也會在\"build\"測試裏進行一個建構/連接/運行檢查。那裏也有一個额外的\"python3-"
+"gi\"測試来確應GTK軟件庫可以經内部使用。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
-msgstr ""
+msgstr "於`ubiquity 測試`_裏上游的測試套件也會被運行。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:144
 msgid ""
 "The `gvfs tests`_ have comprehensive testing of their functionality and are "
 "very interesting because they emulate usage of CDs, Samba, DAV and other "
 "bits."
-msgstr ""
+msgstr "`gvfs 測試`_全面測試它們的功能和非常有趣因為它們虚擬镭射光碟，Samba，DAV和其它部分。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:149
 msgid "Ubuntu infrastructure"
-msgstr ""
+msgstr "Ubuntu架構"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:151
 msgid ""
@@ -194,6 +209,8 @@ msgid ""
 "output of `automatically run autopkgtest tests`_ can be viewed on the web "
 "and is regularly updated."
 msgstr ""
+"有``autopkgtest``的套件會在它們上載或當它們的反依賴套件改變時運行測試。`自動運行autopkgtest測試`_的結果可以在網上瀏覽和會定時"
+"更新。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:156
 msgid ""
@@ -201,70 +218,73 @@ msgid ""
 "they should still be submitted to Debian, as DEP-8 is a Debian specification "
 "and Debian developers or users can still manually run the tests."
 msgstr ""
+"Debian没有設定它們自己的自動測試建構，但它們也應該被提交給Debian, 因為DEP-"
+"8是一個Debian規範而Debian開發者或用户也能手動測行測試。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:160
 msgid ""
 "Packages in Debian with a testsuite header will also be automatically added "
 "when they are synced to Ubuntu."
-msgstr ""
+msgstr "有測試套件頭置於Debian裏的套件在同步到Ubuntu中也會被自動加進。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
 msgid "Getting the test into Ubuntu"
-msgstr ""
+msgstr "把測試放進Ubuntu"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
+"提交autopkgtest的過程是與:doc:`fixing a bug in Ubuntu<./fixing-a-bug>`十分相似。基本上您只需："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "run ``bzr branch ubuntu:<packagename>``,"
-msgstr ""
+msgstr "運行``bzr branch ubuntu:<套件名稱>``，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
 msgid "edit ``debian/control`` to enable the tests,"
-msgstr ""
+msgstr "更改``debian/control``以起用測試，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
 msgid "add the ``debian/tests`` directory,"
-msgstr ""
+msgstr "建立``debian/tests``文件夹，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
-msgstr ""
+msgstr "基於`DEP 8 規範`_下寫出``debian/tests/control``，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid "add your test case(s) to ``debian/tests``,"
-msgstr ""
+msgstr "把您的測試（們）加進``debian/tests``，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:174
 msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
-msgstr ""
+msgstr "儲下您的改動，把它們推到Launchpad,提出合併和像於其它原始碼套件的改進一樣接受覆核。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
 msgid "What you can do"
-msgstr ""
+msgstr "您可以做甚麼"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:181
 msgid ""
 "The Ubuntu Engineering team put together a `list of required test-cases`_, "
 "where packages which need tests are put into different categories. Here you "
 "can find examples of these tests and easily assign them to yourself."
-msgstr ""
+msgstr "Ubuntu工程隊伍建構了一個`需要測試的名單`_，在那裏需要測試的套件會被放進不同類别。在這裏您可以找到這些測試的例子並指定它們給您。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:185
 msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel`_ to get in touch with developers who can help you."
-msgstr ""
+msgstr "如果您有甚麼問题，您可以加入`#ubuntu-quality 網络接力通訊频道`_去聯络能幫助您的開發者。"
 
 #: ../ubuntu-packaging-guide/backports.rst:3
 msgid "Backporting software updates"
-msgstr ""
+msgstr "把軟件更新帶後"
 
 #: ../ubuntu-packaging-guide/backports.rst:5
 msgid ""
@@ -273,27 +293,29 @@ msgid ""
 "you have two options: either you `upload to a PPA "
 "<https://help.launchpad.net/Packaging/PPA>`_ or prepare a backport."
 msgstr ""
+"有時後您可能會想把一些不關乎重要臭蟲修復的新功能提供在稳定發行中。在這些情境下您有两個選擇：您可以`上載到個人套件庫 "
+"<https://help.launchpad.net/Packaging/PPA>`_或準備一個軟件帶後。"
 
 #: ../ubuntu-packaging-guide/backports.rst:12
 msgid "Personal Package Archive (PPA)"
-msgstr ""
+msgstr "個人套件庫（PPA）"
 
 #: ../ubuntu-packaging-guide/backports.rst:14
 msgid ""
 "Using a PPA has a number of benefits. It is fairly straight-forward, you "
 "don't need approval of anyone, but the downside of it is that your users "
 "will have to manually enable it. It is a non-standard software source."
-msgstr ""
+msgstr "試用一個個人套件庫有多個好處。它是直来直往，您不要任何人的任可，但缺點是您的用户要手動起動它。它是一個非標準軟件来源。"
 
 #: ../ubuntu-packaging-guide/backports.rst:18
 msgid ""
 "The `PPA documentation on Launchpad`_ is fairly comprehensive and should get "
 "you up and running in no time."
-msgstr ""
+msgstr "`Launchpad裏的個人套件庫文件`_是較為全面且應該能夠令您在短時间内設定好。"
 
 #: ../ubuntu-packaging-guide/backports.rst:25
 msgid "Official Ubuntu Backports"
-msgstr ""
+msgstr "官方Ubuntu軟件帶後"
 
 #: ../ubuntu-packaging-guide/backports.rst:27
 msgid ""
@@ -305,6 +327,9 @@ msgid ""
 "the :doc:`Security Update or the Stable Release Update process<./security-"
 "and-stable-release-updates>`, as appropriate."
 msgstr ""
+"軟件帶後計劃是一個提供用户新功能的方法。因為軟件帶後過程中的潜在稳定性的風險，用户如果不做一些行動將不會得到帶後了的套件。這整體上令軟件帶後一個不合當的平"
+"台去修復臭蟲。如果一個在一個Ubuntu發行的套件中有臭蟲，它應該用:doc:`保安更新或稳定發行更新程序<./security-and-stable-"
+"release-updates>`中合當的選擇去修復。"
 
 #: ../ubuntu-packaging-guide/backports.rst:35
 msgid ""
@@ -313,6 +338,8 @@ msgid ""
 "``pbuilder-dist`` (in the ``ubuntu-dev-tools`` package) is a very handy tool "
 "to do this easily."
 msgstr ""
+"當您决定您要某套件帶後到一個稳定發行，您需要測試建構和測試它在指定的稳定發行。於``ubuntu-dev-tools``套件中的``pbuilder-"
+"dist``是一個非常好用的工具来简單地做這個工序。"
 
 #: ../ubuntu-packaging-guide/backports.rst:40
 msgid ""
@@ -322,6 +349,9 @@ msgid ""
 "be backported to, list all reverse-dependencies, and file the backporting "
 "request.  Also will it include a testing checklist in the bug."
 msgstr ""
+"以滙报軟件帶後的要求及讓它给軟件帶後團隊處理，您可以試用也在``ubuntu-dev-"
+"tools``套件裏的``requestbackport``工具。它會認定該套件需要被帶後到的中期發行，列出所有的反依賴套件，及滙报該軟件帶後的要求。它也"
+"會在該臭蟲中包括一個測試程序表。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
@@ -332,75 +362,75 @@ msgid ""
 "If you are running one version of Ubuntu but working on packages for another "
 "versions you can create the environment of the other version with a "
 "``chroot``."
-msgstr ""
+msgstr "如果您在一個Ubuntu版本但在開發其它版本的套件您可以使用``chroot``創作其它版本的環境。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:9
 msgid ""
 "A ``chroot`` allows you to have a full filesystem from another distribution "
 "which you can work in quite normally.  It avoids the overhead of running a "
 "full virtual machine."
-msgstr ""
+msgstr "一個``chroot``令您有一個從另一個發行来，您可以在裏面正常工作的完整的檔案系統。它避免了運行一個完正虚擬機器的需要。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
-msgstr ""
+msgstr "建立一個chroot"
 
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
-msgstr ""
+msgstr "使用``debootstrap``命令去建立一個新chroot:"
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
 "This will create a directory ``oneiric`` and install a minimal oneiric "
 "system into it."
-msgstr ""
+msgstr "這會建立一個資料夹``oneiric``及在裏面安装一個最小oneiric系統。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
 "If your version of ``debootstrap`` does not know about oneiric you can try "
 "upgrading to the version in ``backports``."
-msgstr ""
+msgstr "如果您的``debootstrap``版本不知道oneiric您可以試更新到``backports``裏的版本。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
-msgstr ""
+msgstr "您現在可以在chroot裏工作：："
 
 #: ../ubuntu-packaging-guide/chroots.rst:30
 msgid ""
 "Where you can install or remove any package you wish without affecting your "
 "main system."
-msgstr ""
+msgstr "在那裏您可以在不影響您的主要系統下安装或移去您想的任何套件。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:33
 msgid ""
 "You might want to copy your GPG/ssh keys and Bazaar configuration into the "
 "chroot so you can access and sign packages directly::"
-msgstr ""
+msgstr "您可能會想覆製您的GPG/ssh錀匙和Bazaar設定到您的chroot裏讓您能直接達到和簽出套件：："
 
 #: ../ubuntu-packaging-guide/chroots.rst:39
 msgid ""
 "To stop apt and other programs complaining about missing locales you can "
 "install your relevant language pack::"
-msgstr ""
+msgstr "要停止apt及其它程試投訴關於消失本地語言您可以安装關乎您的語言套件：："
 
 #: ../ubuntu-packaging-guide/chroots.rst:44
 msgid ""
 "If you want to run X programs you will need to bind the /tmp directory into "
 "the chroot, from outside the chroot run::"
-msgstr ""
+msgstr "如果您想要運行X程式您要把/tmp資料夹合進chroot,從chroot外面運行：："
 
 #: ../ubuntu-packaging-guide/chroots.rst:50
 msgid "Some programs may need you to bind /dev or /proc."
-msgstr ""
+msgstr "某些程式可能要您合/dev或/proc。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:52
 msgid ""
 "For more information on chroots see our `Debootstrap Chroot wiki page`_."
-msgstr ""
+msgstr "關於chroots的更多資訊請参阅我們的`Debootstrap Chroot 維基頁面`_。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:55
 msgid "Alternatives"
-msgstr ""
+msgstr "替代選擇"
 
 #: ../ubuntu-packaging-guide/chroots.rst:57
 msgid ""
@@ -409,6 +439,9 @@ msgid ""
 "building packages but takes some more setup compared to PBuilder.  See `the "
 "Security Team Build Environment wiki page`_ for a full explanation."
 msgstr ""
+"SBuild是一個相類於Pbuilder的系統， "
+"用於創做一個可以運行測試套件建構的環境。它相似於Launchpad建構套件的系統但需要比Pbuilder更多設定。請参阅`保安隊伍建構維基頁面`_以獲取完"
+"整的解釋。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:59
 msgid ""
@@ -416,6 +449,7 @@ msgid ""
 "TestDrive is a program to automate syncing and running daily ISO images, see "
 "`the TestDrive wiki page`_ for more information."
 msgstr ""
+"完正虚擬機器可以是在包装和測試程式上有用。TestDrive是一個自動同步及運行映像檔的程式，請参阅`TestDrive維基頁面`_以獲取更多資訊。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:63
 msgid ""
@@ -423,6 +457,8 @@ msgid ""
 "Copy C10shell from /usr/share/doc/pbuilder/examples into a directory and use "
 "the ``--hookdir=`` argument to point to it."
 msgstr ""
+"您也可以設定pbuilder在遇上建構失败時暫停。從/usr/share/doc/pbuilder/examples複製C10shell到一個文件夹並用`"
+"`--hookdir=``選項去指明它。"
 
 #: ../ubuntu-packaging-guide/chroots.rst:67
 msgid ""
@@ -431,53 +467,59 @@ msgid ""
 "package on those.  This is useful when you want to compile many packages at "
 "the same time or to overcome bandwidth restraints."
 msgstr ""
+"亞馬遜的`EC2雲端電腦`_讓您在付款每小時數美仙租用一部電腦，您可以設立任何支援的Ubuntu版本的系統並在那包装。如果您想同時间建構很多套件或除去網速"
+"限制，這會有幫助。"
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
-msgstr ""
+msgstr "Ubuntu開發通訊"
 
 #: ../ubuntu-packaging-guide/communication.rst:5
 msgid ""
 "In a project where thousands of lines of code are changed, lots of decisions "
 "are made and hundreds of people interact every day, it is important to "
 "communicate effectively."
-msgstr ""
+msgstr "在一個每天有數以千計的原始碼被改變，多個决定被定下和數以百計的人溝通的計劃，有效的溝通是重要的。"
 
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
-msgstr ""
+msgstr "郵寄清單"
 
 #: ../ubuntu-packaging-guide/communication.rst:12
 msgid ""
 "Mailing lists are a very important tool if you want to communicate ideas to "
 "a broader team and make sure that you reach everybody, even across timezones."
-msgstr ""
+msgstr "如果您想溝通想法去一個廣闊的團隊及確保您能達到所有人，甚至是跨時區的話，郵寄清單是一個很重要的工具。"
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
-msgstr ""
+msgstr "對開發来說，這些是最重要的："
 
 #: ../ubuntu-packaging-guide/communication.rst:18
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (announce-"
 "only, the most important development announcements go here)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce "
+"（只是宣布，最重要的開發宣布會到這裏）"
 
 #: ../ubuntu-packaging-guide/communication.rst:20
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (general Ubuntu "
 "development discussion)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel （整體Ubuntu開發討論）"
 
 #: ../ubuntu-packaging-guide/communication.rst:22
 msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu (MOTU Team discussion, "
 "get help with packaging)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu （MOTU團隊討論，獲取包装幫助）"
 
 #: ../ubuntu-packaging-guide/communication.rst:27
 msgid "IRC Channels"
-msgstr ""
+msgstr "IRC 頻道"
 
 #: ../ubuntu-packaging-guide/communication.rst:29
 msgid ""
@@ -4687,4 +4729,5 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Cheng-Chia Tseng https://launchpad.net/~zerng07"
+"  Cheng-Chia Tseng https://launchpad.net/~zerng07\n"
+"  Howard Chan https://launchpad.net/~smartboyhw"
