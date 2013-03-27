@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-03-24 11:51+0000\n"
-"Last-Translator: Hendrik Knackstedt <Unknown>\n"
+"PO-Revision-Date: 2013-03-26 08:58+0000\n"
+"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-25 04:49+0000\n"
+"X-Launchpad-Export-Date: 2013-03-27 05:05+0000\n"
 "X-Generator: Launchpad (build 16540)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -3626,6 +3626,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/python-packaging.rst:18
 msgid "Things in ``debian/control`` that are specific for a Python package:"
 msgstr ""
+"Einträge in ``debian/control`` die sich ausschließlich auf Python-Pakete "
+"beziehen:"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:20
 msgid ""
@@ -3633,6 +3635,9 @@ msgid ""
 "documentation package. For an application, a single binary package will be "
 "enough."
 msgstr ""
+"Der \"section\"-Eintrag der Modul-Pakete sollte ``python`` und ``doc`` für "
+"das Dokumentationspaket sein. Für eine Anwendung ist ein Paket mit nur einem "
+"Binärpaket ausreichend."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:21
 msgid ""
@@ -3640,6 +3645,10 @@ msgid ""
 "``python3-all (>= 3.1.2-7~)`` to make sure Python helpers are available (see "
 "the next section for details)."
 msgstr ""
+"Wir sollten Build-Abhängigkeiten auf ``python-all (>= 2.6.6-3~)`` und "
+"``python3-all (>= 3.1.2-7~)`` hinzufügen, um sicherzustellen, dass die "
+"Python-Hilfswerkzeuge verfügbar sind (der nächste Abschnitt hat hierzu mehr "
+"Informationen)."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:22
 msgid ""
@@ -3647,18 +3656,26 @@ msgid ""
 "fields — see “`Specifying Supported Versions`_” section of the Policy for "
 "details. For example::"
 msgstr ""
+"Es wird empfohlen ``X-Python-Version`` und ``X-Python3-Version`` Einträge "
+"hinzuzufügen — siehe Abschnitt “`Specifying Supported Versions`_” der Policy "
+"für weitere Details. Zum Beispiel::"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:27
 msgid ""
 "If your package works only with Python 2.x or 3.x, build depend only on one "
 "``-all`` package and use only one ``-Version`` field."
 msgstr ""
+"Sollte Dein Paket nur mit Python 2.x oder 3.x funktionieren, die Build-"
+"Abhängigkeit auf nur eines der ``-all`` Pakete wird ausreichen, ebenso "
+"reicht einer der ``-Version``-Einträge."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:28
 msgid ""
 "Module packages should have ``{python:Depends}`` and ``{python3:Depends}`` "
 "substitution variables (respectively) in their dependency lists."
 msgstr ""
+"Modulpakete sollten die Substitutionsvariablen ``{python:Depends}`` und "
+"respektive ``{python3:Depends}`` in ihren Abhängigkeitslisten haben."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:33
 msgid ""
@@ -3668,6 +3685,11 @@ msgid ""
 "do that manually in override sections (skip this if your package doesn’t "
 "support Python 3.x)."
 msgstr ""
+"Die empfohlenen Hilfsprogramme für Pythonmodule sind ``dh_python2`` und "
+"``dh_python3``. Unglücklicherweise baut  ``debhelper`` noch keine Python 3.x "
+"Pakete automatisch (siehe `bug 597105`_ im Debian BTS), also werden wir "
+"manuell in den \"override\" Abschnitten tun müssen (überspringe dies, wenn "
+"Dein Paket nicht Python 3.x unterstützt)."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:35
 msgid "Here’s our ``debian/rules`` file (with annotations):"
@@ -3804,11 +3826,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:126
 msgid "Debian `python-modules`_ and `python-apps`_ teams."
-msgstr ""
+msgstr "Debian `python-modules`_ und `python-apps`_ Teams."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:3
 msgid "Security and Stable Release Updates"
-msgstr ""
+msgstr "Security und Stable Release Updates"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:6
 msgid "Fixing a Security Bug in Ubuntu"
@@ -3857,7 +3879,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:46
 msgid "To create your patch using ``edit-patch``::"
-msgstr ""
+msgstr "Um einen Patch mit ``edit-patch`` anzulegen::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:51
 msgid ""
