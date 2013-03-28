@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-03-25 13:28+0000\n"
+"PO-Revision-Date: 2013-03-27 15:43+0000\n"
 "Last-Translator: Howard Chan <smartboyhw@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-26 04:51+0000\n"
-"X-Generator: Launchpad (build 16540)\n"
+"X-Launchpad-Export-Date: 2013-03-28 05:02+0000\n"
+"X-Generator: Launchpad (build 16546)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -525,19 +525,19 @@ msgstr "IRC 頻道"
 msgid ""
 "For real-time discussions, please connect to irc.freenode.net and join one "
 "or any of these channels:"
-msgstr ""
+msgstr "要進行實時通信，請連接到irc.freenode.net及加入任何一個下列的頻道："
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
-msgstr ""
+msgstr "#ubuntu-devel（综合開發討論）"
 
 #: ../ubuntu-packaging-guide/communication.rst:33
 msgid "#ubuntu-motu (for MOTU team discussion and generally getting help)"
-msgstr ""
+msgstr "#ubuntu-motu（MOTU團隊討論和综合求助）"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:2
 msgid "Basic Overview of the ``debian/`` Directory"
-msgstr ""
+msgstr "``debian/``資料夹的基本概覽"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:4
 msgid ""
@@ -549,10 +549,13 @@ msgid ""
 "configure the behavior of the package. Some of these files are discussed in "
 "this article, but this is not meant to be a complete list."
 msgstr ""
+"本文章將简單解釋不同於``debian/``資料夹裏對Ubuntu套件包装重要的檔案。當中最重要的是``changelog``，``control``，`"
+"`copyright``和``rules``。這些對所有套件都是必要的。一些於``debian/``資料夹裏的附加檔案可以用来指定及設定套件的性質。某些檔"
+"案會在這文章中討論到，但這不是一個完整的名單。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:13
 msgid "The changelog"
-msgstr ""
+msgstr "Changelog"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:15
 msgid ""
@@ -563,6 +566,9 @@ msgid ""
 "the same name and email address in ``changelog`` as you have in your key. "
 "The following is a template ``changelog``::"
 msgstr ""
+"本檔案名如其用，是一個每個版本的改變的列表。它有一個特定的規格，列明套件的名稱，版本，發行，改變，和當時做改變的人。如果您有一個GPG錀匙（参見::doc"
+":`Getting set up<./getting-set-"
+"up/>`)，確保您在``changelog``裏使用與錀匙一樣的名稱和電子郵件地址。下面是一個``changelog``的範本：："
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:31
 msgid ""
@@ -571,29 +577,33 @@ msgid ""
 "For convenience, the command ``dch`` may be used to edit changelog. It will "
 "update the date automatically."
 msgstr ""
+"該規格（尤其是日期）是相當重要。該日期該是:rfc:`5322`規格，您可以使用``date -"
+"R``命令獲得。為了方便起見，``dch``命令可以用来修改changelog，它會自動更新日期。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:36
 msgid ""
 "Minor bullet points are indicated by a dash \"-\", while major points use an "
 "asterisk \"*\"."
-msgstr ""
+msgstr "小列點用\"-\"来標示，大列點用星號\"*\"標示。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:39
 msgid ""
 "If you are packaging from scratch, ``dch --create`` (``dch`` is in the "
 "``devscripts`` package) will create a standard ``debian/changelog`` for you."
 msgstr ""
+"如果您是從零包装套件，``dch --"
+"create``（``dch``是在``devscripts``套件裏）會為您創造一個標準的``debian/changelog``。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
-msgstr ""
+msgstr "這裏是一個為hello套件的``changelog``檔案範本：："
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:52
 msgid ""
 "Notice that the version has a ``-0ubuntu1`` appended to it, this is the "
 "distro revision, used so that the packaging can be updated (to fix bugs for "
 "example) with new uploads within the same source release version."
-msgstr ""
+msgstr "留意版本中``-0ubuntu1``是被附加在它旁邊，這是系統版本，能讓包装可以於同一原始碼發行版本裏跟據新上載而更新（例如修復臭蟲）。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:56
 msgid ""
@@ -605,6 +615,10 @@ msgid ""
 "``2.6-1ubuntu1``. If a package for the application does not exist in Debian, "
 "then the Debian revision is ``0`` (e.g. ``2.6-0ubuntu1``)."
 msgstr ""
+"Ubuntu和Debian有稍微不同的版本命名系統以避免令有相同原始碼的套件互相分歧。如果一個Debian套件在Ubuntu裏被改變，它的Debian版本"
+"後面會加上``ubuntuX``（``X``是Ubuntu的版本號碼）。所以如果Debian的hello``2.6-"
+"1``套件被Ubuntu改變，版本名稱將會是``2.6-"
+"1ubuntu1``.如果該套件不在Debian裏存在，Debian版本號碼會是``0``（例如``2.6-0ubuntu1``）。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:64
 msgid ""
@@ -612,10 +626,12 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
 "of the Debian Policy Manual."
 msgstr ""
+"更多資訊，請参閱Debian規格手册裏的`changelog段落（段4.4）<http://www.debian.org/doc/debian-"
+"policy/ch-source.html#s-dpkgchangelog>`_"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
-msgstr ""
+msgstr "control檔案"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:72
 msgid ""
@@ -623,12 +639,14 @@ msgid ""
 "as ``apt-get``, ``synaptic``, and ``adept``) uses, build-time dependencies, "
 "maintainer information, and much more."
 msgstr ""
+"``control``檔案包括套件管理員（例如``apt-"
+"get``，``synaptic``，和``adpet``）使用的資料，建構時的依賴套件，維護者資訊，和更多。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:76
 msgid ""
 "For the Ubuntu ``hello`` package, the ``control`` file looks something like "
 "this:"
-msgstr ""
+msgstr "Ubuntu``hello`套件裏的``control``檔案是這個樣子的："
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:101
 msgid ""
@@ -638,6 +656,9 @@ msgid ""
 "the version of Debian Policy that the package complies with, the location of "
 "the packaging version control repository, and the upstream home page."
 msgstr ""
+"第一段描述原始碼套件包括於``Build-"
+"Depends``行裏需要用来建構套件的種種套件。它也包括一些综合資訊例如維護者名字，該套件建構時使用的Debian規格版本，包装版本控制分支的位置，及上"
+"游軟件的首頁。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:108
 msgid ""
@@ -652,10 +673,14 @@ msgid ""
 "For further information, see the `Debian Maintainer Field spec "
 "<https://wiki.ubuntu.com/DebianMaintainerField>`_ on the Ubuntu wiki."
 msgstr ""
+"要注意的是在Ubuntu，我們設定``Maintainer``欄為一個總體地址因為任何人能更改任何套件（這與更改套件是限制到一個人或一個團隊的Debian"
+"有不同。Ubuntu的套件總體應把``Maintainer``欄設定為``Ubuntu Developers <ubuntu-devel-"
+"discuss@lists.ubuntu.com>``。如果``Maintainer``欄被改變，舊的選項應該被儲存在``XSBC-Original-"
+"Maintainer``欄裏。這可以由在``ubuntu-dev-tools``套件裏的``update-maintainer``去自動完成。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:120
 msgid "Each additional paragraph describes a binary package to be built."
-msgstr ""
+msgstr "每個附加的段落形容一個要建構的程試套件。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:122
 msgid ""
@@ -663,10 +688,12 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the "
 "Debian Policy Manual."
 msgstr ""
+"更多資訊，請参閱Debian規格手册裏的`control檔案段落（段5）<http://www.debian.org/doc/debian-"
+"policy/ch-controlfields.html>`_"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
 msgid "The copyright file"
-msgstr ""
+msgstr "copyright檔案"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:130
 msgid ""
@@ -676,6 +703,9 @@ msgid ""
 "require that each package installs a verbatim copy of its copyright and "
 "license information to ``/usr/share/doc/$(package_name)/copyright``."
 msgstr ""
+"這檔案提供上游原始碼及包装的版權資訊。Ubuntu及`Debian規格（段12.5）<http://www.debian.org/doc/debian-"
+"policy/ch-docs.html#s-"
+"copyrightfile>`_要求每個套件安装一個詳细的版權和許可証資訊到``/usr/share/doc/$(套件名稱)/copyright``。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:136
 msgid ""
@@ -685,6 +715,8 @@ msgid ""
 "Copyright line with the year and copyright holder, and the text of the "
 "copyright itself. An example template would be::"
 msgstr ""
+"總體上，版權資訊會在程試原始碼資料夹中的``COPYING``檔案找到。這檔案應該包括資訊例如作者和包装者的名字，原始碼来原的連接，有年份和版權持有者的版"
+"權欄，及版權自己的文字。一個設例範本會是：："
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:178
 msgid ""
@@ -692,10 +724,12 @@ msgid ""
 "<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ "
 "format. You are encouraged to use this format as well."
 msgstr ""
+"本例子根據`機器能閱讀的debian/copyright <http://www.debian.org/doc/packaging-"
+"manuals/copyright-format/1.0>`_規格。您會被推介去一樣使用本規格。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:184
 msgid "The rules file"
-msgstr ""
+msgstr "rules檔案"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:186
 msgid ""
@@ -705,12 +739,14 @@ msgid ""
 "also has a target to clean up all the build files so you end up with just a "
 "source package again."
 msgstr ""
+"最後一個我們要看一看的是``rules``。這擔任所有創造我們的套件的工作。它是一個有目標的建構檔案，會建構並安装該應用程試，然後從安装了的檔案創造``."
+"deb``檔案。它也有一個目標去清除所有的建構檔案，所以您會最後再得到一個原始碼套件。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:194
 msgid ""
 "Here is a simplified version of the rules file created by ``dh_make`` (which "
 "can be found in the ``dh-make`` package):"
-msgstr ""
+msgstr "這是一個從``dh_make``（能在``dh-make``套件中找到）創造的简化了的rules檔案："
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:208
 msgid ""
@@ -718,6 +754,8 @@ msgid ""
 "build target that ``debian/rules`` is called with as an argument to "
 "``/usr/bin/dh``, which itself will call all the necessary ``dh_*`` commands."
 msgstr ""
+"讓我們詳细地看一看這檔案。這做的是把所有``debian/rules``要求的所有的建構目標傳送為一個給``/usr/bin/dh``的選項，而自己就會運"
+"行所有的需要的``dh_*``命令。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:212
 msgid ""
@@ -726,6 +764,8 @@ msgid ""
 "\"install\", \"binary-arch\", \"binary-indep\", and \"binary\". In order to "
 "see what commands are run in each target, run::"
 msgstr ""
+"``dh``運行一系列的debhelper命令。支援的次序相應一個``debian/rules``檔案的目標：\"build\"，\"clean\"，\""
+"install“，\"binary-arch\"，\"binary-indep\"，及\"binary\"。要看在每一個目標裏會被運行的命令，請運行：："
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:221
 msgid ""
@@ -734,6 +774,8 @@ msgid ""
 "arch sequences are passed the \"-a\" option to ensure they only work on "
 "architecture dependent packages."
 msgstr ""
+"在binary-indep次序的命令會被傳送以\"-i\"選項以確保它們只會在程式獨立套件上運作，而在binary-arch次序裏的命令會被傳送以\"-"
+"a\"選項以確保它們只會在位元依賴套件上運作。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:226
 msgid ""
@@ -742,6 +784,8 @@ msgid ""
 "which commands have already been run, for which packages, and skip running "
 "those commands again."
 msgstr ""
+"每個debhelper命令會在``debian/package.debhelper.log``（會被dh_clean删除）裏成功運行時記錄讓dh能分辨哪些"
+"命令已經被運行和為哪個套件，和跳過再次運行這些命令。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:231
 msgid ""
@@ -750,6 +794,8 @@ msgid ""
 "command in the sequence. The ``--until``, ``--before``, ``--after``, and ``--"
 "remaining`` options can override this behavior."
 msgstr ""
+"每一次``dh``運行，它會檢查記錄，和找出在指定次序裏最後被記錄的命令。它然後會從次序裏下一個命令繼續。``--until``，``--"
+"before``，``--after``，及``--remaining``選項能覆盖這種動作。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:236
 msgid ""
@@ -771,28 +817,28 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:251
 msgid "Additional Files"
-msgstr ""
+msgstr "附加檔案"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:254
 msgid "The install file"
-msgstr ""
+msgstr "install檔案"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:256
 msgid ""
 "The ``install`` file is used by ``dh_install`` to install files into the "
 "binary package. It has two standard use cases:"
-msgstr ""
+msgstr "``install``檔案是被``dh_install``使用来安装檔案到程試套件。它有两個標準使用個案："
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:259
 msgid ""
 "To install files into your package that are not handled by the upstream "
 "build system."
-msgstr ""
+msgstr "安装不被上游建構系統接手的檔案到您的套件。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:260
 msgid ""
 "Splitting a single large source package into multiple binary packages."
-msgstr ""
+msgstr "把一個單一大原始碼套件分開做多個程式套件。"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:262
 msgid ""
