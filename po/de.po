@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-18 16:29+0000\n"
-"PO-Revision-Date: 2013-04-11 08:30+0000\n"
-"Last-Translator: M Oberhauser <limurx@streber24.de>\n"
+"PO-Revision-Date: 2013-04-12 13:55+0000\n"
+"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-04-12 05:36+0000\n"
+"X-Launchpad-Export-Date: 2013-04-13 05:41+0000\n"
 "X-Generator: Launchpad (build 16564)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -2669,6 +2669,9 @@ msgid ""
 "of Ubuntu platform developers is always interested in helping peers getting "
 "started."
 msgstr ""
+"Das heißt, Du kannst selbst aktiv werden und die Dinge verbessern. Die "
+"Gemeinschaft der Ubuntu Plattform Entwickler ist immer an neuen Kollegen, "
+"die gerade anfangen, interessiert."
 
 #: ../ubuntu-packaging-guide/index.rst:30
 msgid ""
@@ -2677,6 +2680,10 @@ msgid ""
 "want you to be involved as well. We want you to get involved, to ask "
 "questions, to make Ubuntu better together with us."
 msgstr ""
+"Ubuntu ist außerdem eine Gemeinschaft von tollen Leuten, die an freie "
+"Software glauben und dass jeder Zugang dazu haben sollte. Die Mitglieder "
+"sind einladend und freuen sich, wenn Du mit machen willst. Wir freuen uns "
+"über Fragen und wenn Du anfängst, Ubuntu zusammen mit uns besser zu machen."
 
 #: ../ubuntu-packaging-guide/index.rst:35
 msgid ""
@@ -2684,6 +2691,9 @@ msgid ""
 "article<./communication>` and you will find out how to most easily get in "
 "touch with other developers."
 msgstr ""
+"Solltest Du Probleme haben: keine Panik! Schau Dir den :doc:`Artikel über "
+"Kommunication<./communication>` an und Du wirst sehen, wie Du am leichtesten "
+"in Kontakt mit anderen Entwicklern kommst."
 
 #: ../ubuntu-packaging-guide/index.rst:39
 msgid "The guide is split up into two sections:"
@@ -2691,13 +2701,15 @@ msgstr "Die Anleitung teilt sich in zwei Bereiche auf:"
 
 #: ../ubuntu-packaging-guide/index.rst:41
 msgid "A list of articles based on tasks, things you want to get done."
-msgstr ""
+msgstr "Eine Liste von Artikel, die spezifische Aufgaben betreffen."
 
 #: ../ubuntu-packaging-guide/index.rst:42
 msgid ""
 "A set of knowledge-base articles that dig deeper into specific bits of our "
 "tools and workflows."
 msgstr ""
+"Eine Sammlung von Knowledge-Base Artikel, die in's Detail gehen und "
+"Werkzeuge und Workflows erklären."
 
 #: ../ubuntu-packaging-guide/index.rst:45
 msgid ""
@@ -2867,6 +2879,9 @@ msgid ""
 "Upstream and see if the problem (or a possible solution) is known already "
 "and, if not, do your best to make the solution a concerted effort."
 msgstr ""
+"Wenn Du eine Lösung suchst ist es eine gute Idee zu prüfen, ob Upstream das "
+"Problem bekannt ist. Wenn es noch keine Lösung gibt, macht es Sinn, daran "
+"gemeinsam zu arbeiten."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:116
 msgid ""
@@ -2892,6 +2907,10 @@ msgid ""
 "friends and people with the same passion that you have: making the world a "
 "better place by making better Open Source software."
 msgstr ""
+"Gute Plätze um Fragen zu stellen, sind ``ubuntu-motu@lists.ubuntu.com`` und "
+"``#ubuntu-motu`` auf ``irc.freenode.net``. Du wirst sehr einfach neue "
+"Freunde finden und Leute, die dieselbe Leidenschaft haben wie Du: die Welt "
+"zu einem bessern Platz zu machen durch Open Source Software."
 
 #: ../ubuntu-packaging-guide/kde.rst:3
 msgid "KDE Packaging"
