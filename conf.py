@@ -42,7 +42,7 @@ master_doc = 'ubuntu-packaging-guide/index'
 # General information about the project.
 project = u'ubuntu-packaging-guide'
 authors = 'Ubuntu Developers'
-copyright = u'2010-2012, '+authors
+copyright = u'2010-2013, '+authors
 
 
 changelog = "debian/changelog"

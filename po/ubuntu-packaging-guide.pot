@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2010-2012, Ubuntu Developers
+# Copyright (C) 2010-2013, Ubuntu Developers
 # This file is distributed under the same license as the ubuntu-packaging-guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ubuntu-packaging-guide 0.3.1\n"
+"Project-Id-Version: ubuntu-packaging-guide 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-18 16:29\n"
+"POT-Creation-Date: 2013-04-21 06:31\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
