@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-04-21 06:31+0000\n"
-"PO-Revision-Date: 2013-03-27 15:43+0000\n"
-"Last-Translator: Howard Chan <smartboyhw@gmail.com>\n"
+"PO-Revision-Date: 2013-04-21 19:06+0000\n"
+"Last-Translator: Z.X.Lyn <Unknown>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-04-21 04:46+0000\n"
+"X-Launchpad-Export-Date: 2013-04-22 05:38+0000\n"
 "X-Generator: Launchpad (build 16567)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -26,21 +26,21 @@ msgid ""
 "The `DEP 8 specification`_ defines how automatic testing can very easily be "
 "integrated into packages. To integrate a test into a package, all you need "
 "to do is:"
-msgstr "`DEP 8 規格`_介定了自動測試如何非常容易融入套件中。要把測試融入一個套件，您需要做的是："
+msgstr "`DEP 8 規格`_ 介定了自動測試如何非常容易融入套件中。要把測試融入一個套件，您需要做的是："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
 msgid "add the following to the Source section in ``debian/control``::"
-msgstr "把下列文字家加入``debian/control``裏的原始碼分類中：："
+msgstr "把下列文字加入 ``debian/control`` 裏的原始碼分類中："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:13
 msgid ""
 "add a file called ``debian/tests/control`` which specifies the requirements "
 "for the testbed,"
-msgstr "把一個叫做``debian/tests/control``的檔案加進以指定測試温床的要求，"
+msgstr "把一個叫做 ``debian/tests/control`` 的檔案加進以指定測試平臺的要求，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
 msgid "add the tests in ``debian/tests/``."
-msgstr "把測試加進``debian/tests/``裏。"
+msgstr "把測試加進 ``debian/tests/`` 裏。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
 msgid "Testbed requirements"
@@ -53,27 +53,29 @@ msgid ""
 "gets broken during the build or if ``root`` permissions are required. The "
 "`DEP 8 specification`_ lists all available options."
 msgstr ""
-"在``debian/tests/control``裏您指定從測試温床裏預計甚麼。例如您列明測試要求的所有套件，測試温床會不會在建構中被破壞或需不需要使用`"
-"`root``權限。`DEP 8 規格`_列出所有能提供的選擇。"
+"在 ``debian/tests/control`` "
+"裏您指定從測試平臺裏預計甚麼。例如您列明測試要求的所有套件，測試平臺會不會在建構中被破壞或需不需要使用 ``root`` 權限。`DEP 8 規格`_ "
+"列出所有能提供的選擇。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
-msgstr "下面我們會看一看``glib2.0``原始碼套件。在一個非常简單的例子中該檔案會是這樣子："
+msgstr "下面我們會看一看 ``glib2.0`` 原始碼套件。在一個非常简單的例子中該檔案會是這樣子："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
-"於``debian/tests/build``的測試裏這會確保套件``libglib2.0-dev``及``build-essential``會被安装。"
+"爲了 ``debian/tests/build`` 中的測試，這會確保套件 ``libglib2.0-dev`` 及 ``build-"
+"essential`` 會被安装。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
 msgid ""
 "You can use ``@`` in the ``Depends`` line to indicate that you want all the "
 "packages installed which are built by the source package in question."
-msgstr "您可以在``Depends``行裏使用``@``来指明您想所有被原始碼套件建構的套件會被安装。"
+msgstr "您可以在 ``Depends`` 行裏使用 ``@`` 来指明所有此套件依赖的需要构建的套件。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
@@ -90,14 +92,14 @@ msgid ""
 "provided by `pkg-config`). Then the compiled binary, which just exercises "
 "some parts of core glib functionality, is run."
 msgstr ""
-"在這裏一篇非常简單的C碼會被寫到一個臨時資料夹裏。然後這會與系統文庫（利用由`pkg-"
-"config`提供的標誌及文庫路線）被編寫。然後編寫後的，只運行一部分核心glib功能的程試，會被運行。"
+"在這裏一篇非常简單的 C 代碼會被寫到一個臨時資料夹裏。然後（利用由 `pkg-config` "
+"提供的標誌及庫路徑）代码會用系統庫編譯。編譯後，這個只實現了一部分核心 glib 功能的程序會被測試運行。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:80
 msgid ""
 "While this test is very small and basic, it tests quite a number of core "
 "components on a system. This may help to uncover critical issues early on."
-msgstr "本測試是很微小和基本，但它會測試一些系統中的核心結構。這可以幫助早點發現重要問题。"
+msgstr "雖然這個測試是非常小和基本的，但它測試系統上的相當數量的核心組件。這可能有助於早期發現關鍵問題。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
 msgid "Executing the test"
@@ -110,8 +112,8 @@ msgid ""
 "from the ``autopkgtest`` package to execute the test. The easiest way to do "
 "this is to run this command in the source tree::"
 msgstr ""
-"測試碼可以容易的自己運行，但如果您想確保測試温床是好好地設定，您可能會使用``autopkgtest``套件中的``adt-"
-"run``以運行測試最容易的辦法是在原始碼中運行這命令：："
+"測試腳本可以很容易執行自己，但如果您想確保正確設置了測試平台，您可能要使用 ``adt-run`` ``autopkgtest`` "
+"包來執行測試。做到這一點最簡單的方法是在源代碼樹來運行這個命令："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:93
 msgid ""
@@ -122,22 +124,22 @@ msgid ""
 "uses a pristine virtual machine to run the tests. To set it up, firstly "
 "install the needed dependencies::"
 msgstr ""
-"這方法的壞處是您是在本機上測試，但是不能保正這會在一個最小環境下運作。例如確保所有要求的套件已經為測試而安装好會有困難。利用`lp:auto-"
-"package-testing`_我們有一個更全面的測試工具。它使用一個原始虚擬機器以運行測試。要把它設定好，先安装需要的依賴套件：："
+"這方法的壞處是您是在本機上測試，但是不能保正這會在一個最小環境下運作。例如確保所有要求的套件已經為測試而安装好會有困難。利用 `lp:auto-"
+"package-testing`_ 我們有一個更全面的測試工具。它使用一個原始虚擬機器以運行測試。要把它設定好，先安装需要的依賴套件："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
 msgid "Then, get the source code from Launchpad::"
-msgstr "然後，從Launchpad獲取原始碼：："
+msgstr "然後，從 Launchpad 獲取原始碼："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Raring AMD64 system::"
-msgstr "和建立一個Raring64位元系統：："
+msgstr "和建立一個 Raring64 位元系統："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Raring AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
-msgstr "這命令會從雲端映像檔創立一個原始Raring64位元虚擬機器。要運行測試，简單地運行：："
+msgstr "這命令會從雲端映像檔創立一個原始 Raring64 位元虚擬機器。要運行測試，简單地運行："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -151,16 +153,16 @@ msgid ""
 "you can log into the virtual machine after the tests were run. This makes it "
 "very easy to debug issues."
 msgstr ""
-"這會使用於``/tmp/glib2.0-2.35.7``裏的原始碼套件並從這原始碼運行對從檔案庫裏的``glib2.0``的測試。選項``-"
-"S``會同時支持bzr, git和apt原始碼的計劃。如果您只標明原始碼以``-"
-"S``但没有標明套件名稱，這會另外建構分支並從那構建安装程試;如果你想在给Ubuntu裏的套件更新的套件，或那套件不在Ubuntu裏這會較為有用。如果使用"
-"``-k``選項您可以在測試運行後登入虚擬機器。這讓解臭蟲問题非常简單。"
+"這會使用 ``/tmp/glib2.0-2.35.7`` 中的原始碼套件運行，而不是對檔案庫裏的 ``glib2.0`` 測試。選項 ``-S`` "
+"會同時支持 bzr, git 和 apt 原始碼的計劃。如果您只標明原始碼以 ``-S`` "
+"但没有標明套件名稱，這會另外建構分支並從那構建和安装程式；如果您想给 Ubuntu 更新的套件，或那套件不在 Ubuntu 裏，這會較為有用。如果使用 "
+"``-k`` 選項您可以在測試運行後登入虚擬機器。這讓解臭蟲問题非常简單。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:127
 msgid ""
 "The `auto-package-testing documentation`_ has a lot more valuable "
 "information on other testing options."
-msgstr "`auto-package-testing 文件`_有更多關於其他測試選項的有價值的資訊。"
+msgstr "`auto-package-testing 文件`_ 有更多關於其他測試選項的有價值的資訊。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:133
 msgid "Further examples"
@@ -176,7 +178,7 @@ msgstr "這列單不是太全面，可是有可能幫助您更好了解自動測
 msgid ""
 "The `libxml2 tests`_ are very similar. They also run a test-build of a "
 "simple piece of C code and execute it."
-msgstr "`libxml2 測試`_是非常相似。它們也會運行一片简單C碼的建構測試並運行它。"
+msgstr "`libxml2 測試`_ 与之非常相似。它們也會運行一片简單 C 碼的建構測試並運行它。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
 msgid ""
@@ -184,19 +186,19 @@ msgid ""
 "There is an additional \"python3-gi\" test which verifies that the GTK "
 "library can also be used through introspection."
 msgstr ""
-"`gtk+3.0 測試`_也會在\"build\"測試裏進行一個建構/連接/運行檢查。那裏也有一個额外的\"python3-"
-"gi\"測試来確應GTK軟件庫可以經内部使用。"
+"`gtk+3.0 測試`_ 也會在 \"build\" 測試裏進行一個建構/連接/運行檢查。那裏也有一個额外的 \"python3-gi\" 測試来確應 "
+"GTK 庫可以經内部使用。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
-msgstr "於`ubiquity 測試`_裏上游的測試套件也會被運行。"
+msgstr "於`ubiquity 測試`_ 裏上游的測試套件也會被運行。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:144
 msgid ""
 "The `gvfs tests`_ have comprehensive testing of their functionality and are "
 "very interesting because they emulate usage of CDs, Samba, DAV and other "
 "bits."
-msgstr "`gvfs 測試`_全面測試它們的功能和非常有趣因為它們虚擬镭射光碟，Samba，DAV和其它部分。"
+msgstr "`gvfs 測試`_ 全面測試它們的功能，非常有趣，因為它們虚擬了镭射光碟，Samba，DAV和其它部分。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:149
 msgid "Ubuntu infrastructure"
@@ -209,8 +211,8 @@ msgid ""
 "output of `automatically run autopkgtest tests`_ can be viewed on the web "
 "and is regularly updated."
 msgstr ""
-"有``autopkgtest``的套件會在它們上載或當它們的反依賴套件改變時運行測試。`自動運行autopkgtest測試`_的結果可以在網上瀏覽和會定時"
-"更新。"
+"開啓 ``自動打包測試`` 的套件，每當它們被上傳或它們的反向依賴套件改變時，都可以運行測試。`自動運行autopkgtest測試`_ "
+"的結果可以在網上瀏覽和會定時更新。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:156
 msgid ""
@@ -236,28 +238,28 @@ msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
-"提交autopkgtest的過程是與:doc:`fixing a bug in Ubuntu<./fixing-a-bug>`十分相似。基本上您只需："
+"提交 autopkgtest 的過程與: doc:`修復 Ubuntu 的 bug<./fixing-a-bug>` 十分相似。基本上您只需："
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "run ``bzr branch ubuntu:<packagename>``,"
-msgstr "運行``bzr branch ubuntu:<套件名稱>``，"
+msgstr "運行 ``bzr branch ubuntu:<套件名稱>`` ，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
 msgid "edit ``debian/control`` to enable the tests,"
-msgstr "更改``debian/control``以起用測試，"
+msgstr "更改 ``debian/control`` 以啓用測試，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
 msgid "add the ``debian/tests`` directory,"
-msgstr "建立``debian/tests``文件夹，"
+msgstr "建立 ``debian/tests`` 文件夹，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
-msgstr "基於`DEP 8 規範`_下寫出``debian/tests/control``，"
+msgstr "基於 `DEP 8 規格`_ 下寫出 ``debian/tests/control`` ，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid "add your test case(s) to ``debian/tests``,"
-msgstr "把您的測試（們）加進``debian/tests``，"
+msgstr "把您的測試（們）加進 ``debian/tests`` ，"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:174
 msgid ""
@@ -267,14 +269,15 @@ msgstr "儲下您的改動，把它們推到Launchpad,提出合併和像於其�
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
 msgid "What you can do"
-msgstr "您可以做甚麼"
+msgstr "您可以做的事情"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:181
 msgid ""
 "The Ubuntu Engineering team put together a `list of required test-cases`_, "
 "where packages which need tests are put into different categories. Here you "
 "can find examples of these tests and easily assign them to yourself."
-msgstr "Ubuntu工程隊伍建構了一個`需要測試的名單`_，在那裏需要測試的套件會被放進不同類别。在這裏您可以找到這些測試的例子並指定它們給您。"
+msgstr ""
+"Ubuntu工程隊伍建構了一個 `需要測試的列表`_ ，在那裏需要測試的套件會被放進不同類别。在這裏您可以找到這些測試的例子並指定它們給您。"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:185
 msgid ""
@@ -1388,10 +1391,12 @@ msgid ""
 "unfortunately often different for every package you have a look at, but if "
 "you search the web for it, you should in most cases find it pretty easily."
 msgstr ""
+"我們正在研究的是特別的問題，因爲它僅僅與  ``bumprace`` 包相關。如果源碼包出現問題，最好檢查上游的 bug "
+"跟踪系統。雖然通常你查看的每包各不相同，但是如果您在網上搜索，您可以相當容易的找到。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:88
 msgid "Offering help"
-msgstr ""
+msgstr "提供幫助"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:90
 msgid ""
@@ -1400,6 +1405,8 @@ msgid ""
 "include as much information as you can: Under which circumstances does the "
 "bug occur? How did you fix the problem? Did you test your solution?"
 msgstr ""
+"如果您發現了一個開放的錯誤，它沒有分配給某人，您在這個修復者的位置，您應該對此發表評論，附上您的解決方案。一定要包括盡可能多的信息，你可以發表：這是在什麼"
+"情況下出現的bug，您是怎麼解決這個問題的，您是否測試您的解決方案。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:95
 msgid ""
@@ -1408,14 +1415,16 @@ msgid ""
 "to commit it is good enough? Did you manage to only partially fix the issue "
 "and you want to at least share your part of it?"
 msgstr ""
+"如果沒有已提交的錯誤報告，您可以提交一個錯誤報告。您可能要牢記的是：這問題是如此之小，只需要求別人提交夠不夠好？你是不是部分地解決這個問題，你要至少分享你"
+"的修復部分嗎？"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:100
 msgid "It is great if you can offer help and will surely be appreciated."
-msgstr ""
+msgstr "如果你能提供幫助，那就太棒了，一定會受讚賞的。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:104
 msgid "Fixing the issue"
-msgstr ""
+msgstr "修復問題"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:106
 msgid ""
@@ -1423,13 +1432,13 @@ msgid ""
 "and find the homepage of it. Be sure it is a live site and not just a "
 "software catalogue. http://www.linux-games.com/bumprace/ looks like it is "
 "the proper place."
-msgstr ""
+msgstr "對於這個特定的例子，使用搜索引擎找尋到 ``bumprace`` 的主頁就可以了。當然要確定它是這個軟件的主頁而不是一個軟件目錄。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:111
 msgid ""
 "To address the issue in the source package, we first need the source and we "
 "can easily get it by running::"
-msgstr ""
+msgstr "為了在源代碼包中解決這個問題，我們首先需要得到源代碼，我們可以通過運行下面的命令很容易地得到它："
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:117
 msgid ""
@@ -1438,10 +1447,12 @@ msgid ""
 "the first part of ``debian/control``, the section which starts with "
 "``Source:``."
 msgstr ""
+"在此之前，如果您閱讀了 doc:`the Debian Directory Overview<./debian-dir-overview>` "
+"，您可能還記得軟件包的主頁在 ``debian/control`` 的 ``Source:`` 處指定的。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:121
 msgid "So what we do next is run::"
-msgstr ""
+msgstr "所以，我們下一步要做的就是運行："
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:125
 msgid ""
@@ -1449,14 +1460,16 @@ msgid ""
 "games.com/bumprace/``. At the end of the first section should be a good "
 "place for it. Once you have done this, save the file."
 msgstr ""
+"編輯 ``debian/control`` ，在第一節的最後一行添加 ``Homepage: http://www.linux-"
+"games.com/bumprace/``，之後保存文件。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:129
 msgid "If you now run::"
-msgstr ""
+msgstr "如果你現在運行："
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:133
 msgid "you should see something like this:"
-msgstr ""
+msgstr "你應該看到像這樣的東西："
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:149
 msgid ""
@@ -1464,12 +1477,14 @@ msgid ""
 "was added. In our cases it was added just before the second section, "
 "starting with ``Package``, which indicates a resulting binary package."
 msgstr ""
+"diff 文件相當容易理解。 ``+`` 號表示添加的一行。在我們這個例子中，添加主頁到了第二節 ``Package`` 的前邊， "
+"``Package`` 表示所產生的二進制軟件包。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:157
 msgid ""
 "It is important to explain to your fellow developers what exactly you did. "
 "If you run::"
-msgstr ""
+msgstr "向您的開發者夥伴解釋究竟你做了什麼非常重要。如果你運行："
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:163
 msgid ""
@@ -1478,46 +1493,52 @@ msgid ""
 "project's homepage.`` should do. Then save the file. To double-check this "
 "worked out, run::"
 msgstr ""
+"這將啟動一個編輯器，你只需要填寫一個 changelog 樣板的條目。在我們的這個例子中會是這樣 ``debian/control:Added "
+"project's homepage.`` 。然後保存文件。再次查看這個文件，可以運行："
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:170
 msgid "and you will see something like this:"
-msgstr ""
+msgstr "您會看到："
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:189
 msgid "A few additional considerations:"
-msgstr ""
+msgstr "另外幾個注意事項："
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:191
 msgid ""
 "If you have a reference to a Launchpad bug which is fixed by the issue, add "
 "(``LP: #<bug number>``) to the changelog entry line, ie: ``(LP: #123456)``."
 msgstr ""
+"如果您的提交，有一個相關的 Launchpad 的 bug 號，請添加 (``LP: #<bug number>``) 到 changelog "
+"條目，例如： ``(LP: #123456)`` 。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:193
 msgid ""
 "If you want to get your fix included in Debian, for a Debian bug the syntax "
 "is ``(Closes: #<bug number>)``, ie: ``(Closes: #123456)``."
 msgstr ""
+"如果您想要讓您的修復放入到 Debian 中，Debian 的語法錯誤是 ``(Closes: #<bug number>)`` ，也就是： "
+"``(Closes: #123456)`` 。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:195
 msgid ""
 "If it is a reference to an upstream or Debian bug or a mailing list "
 "discussion, mention it as well."
-msgstr ""
+msgstr "如果它相關與一個上游或 Debian 錯誤或郵件列表討論，提及它。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:197
 msgid "Try to wrap your lines at 80 characters."
-msgstr ""
+msgstr "嘗試編輯使得每行80個字符。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:198
 msgid ""
 "Try to be specific, not an essay, but enough for somebody (who did not "
 "deeply look into the issue) to understand."
-msgstr ""
+msgstr "這不是寫一篇短文，足夠明確讓人理解就可以（沒有誰深入研究這個問題）。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:200
 msgid "Mention how you fixed the issue and where."
-msgstr ""
+msgstr "提提您是如何以及在哪里修復它的。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:206
 msgid ""
@@ -1525,13 +1546,15 @@ msgid ""
 "up<./getting-set-up>`, then to build the package, install it and verify the "
 "problem is solved. In our case this would be::"
 msgstr ""
+"要測試修復，您需要 doc:`have your development environment set up<./getting-set-up>` "
+"，然後構建包，安裝它驗證問題是否解決。在我們的這個例子中："
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:214
 msgid ""
 "In step one we build the source package from the branch, then build it by "
 "using ``pbuilder``, then inspect the resulting package to check if the "
 "Homepage field was added properly."
-msgstr ""
+msgstr "第一個步驟，我們從分支編譯源代碼包，然後通過使用 ``pbuilder`` 構建它，再查生成的包看看是否正確添加了包的主頁字段。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:218
 msgid ""
@@ -1541,23 +1564,26 @@ msgid ""
 "them via ``sudo dpkg -i <package>.deb`` or by double-clicking on them in "
 "your file manager."
 msgstr ""
+"在很多情況下，你將需要實際安裝包，以確保它如預期工作。我們的這個案例容易得多。如果構建成功，您將會在 "
+"``~/pbuider/<release>_result`` 中找到二進制包。使用 ``sudo dpkg -i <package>.deb`` "
+"或者雙擊它來安裝。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:225
 msgid ""
 "As we verified, the problem is now solved, so the next step is sharing our "
 "solution with the world."
-msgstr ""
+msgstr "正如我們核實的，這個問題現在已經解決了，所以下一步就是與世界分享我們的解決方案。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:229
 msgid "Getting the fix included"
-msgstr ""
+msgstr "提交修復"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:231
 msgid ""
 "It makes to get fix included as Upstream as possible. Doing that you can "
 "guarantee that everybody can take the Upstream source as-is and don't need "
 "to have local modifications to fix it."
-msgstr ""
+msgstr "這盡可能使上游得到修復。這樣做，您能保證每個人都可以採取上游源而不需要有本地的修改來解決它。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:235
 msgid ""
@@ -1569,56 +1595,62 @@ msgid ""
 "possible, you will need to send the solution to multiple bug trackers. "
 "Provided the issue affects all parties in question."
 msgstr ""
+"在我們的例子中，我們我们确定我们有一个问题，打包給 Ubuntu 和 Debian。由於 Ubuntu 是基於 Debian 的，我們將修復發送給 "
+"Debian 使用。一旦它被包括在其中，最終 Ubuntu "
+"會啓用它。我們的教程中解決的是個非關鍵的問題，這種做法是有道理的(簡明地說明問題)。如果某個問題需要盡快解決，您將需要發送解決方案到多個 bug "
+"跟踪系統。假如問題會影響所有各方。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:243
 msgid "To submit the patch to Debian, simply run::"
-msgstr ""
+msgstr "要提交補丁到 Debian，只需運行："
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:247
 msgid ""
 "This will take you through a series of steps to make sure the bug ends up in "
 "the correct place. Be sure to review the diff again to make sure it does not "
 "include random changes you made earlier."
-msgstr ""
+msgstr "這將帶你通過一系列的步驟，以確保錯誤結束在正確的地方。務必再次檢查diff，以確保它不包括您剛才的隨機更動。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:251
 msgid ""
 "Communication is important, so when you add some more description to it to "
 "the inclusion request, be friendly, explain it well."
-msgstr ""
+msgstr "溝通是很重要的，所以當您爲列入請求添加一些更多的描述，友好些，解釋好些。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:254
 msgid ""
 "If everything went well you should get a mail from Debian's bug tracking "
 "system with more information. This might sometimes take a few minutes."
-msgstr ""
+msgstr "如果一切順利，你應該得到一封從 Debian 的 bug 跟踪系統郵件，提供更多的信息。有時這可能需要幾分鐘。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:257
 msgid ""
 "If the problem is just in Ubuntu, you might want to consider :doc:`Seeking "
 "Review and Sponsorship<./udd-sponsorship>` to get the fix included."
 msgstr ""
+"如果問題僅僅是在Ubuntu，你可能要考慮 doc:`Seeking Review and Sponsorship<./udd-"
+"sponsorship>` 來釋出修復。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:263
 msgid "Additional considerations"
-msgstr ""
+msgstr "其他注意事項"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:265
 msgid ""
 "If you find a package and find that there are a couple of trivial things you "
 "can fix at the same time, do it. This will speed up review and inclusion."
-msgstr ""
+msgstr "如果你找到一個包，發現有幾個瑣碎的事情而且你同時可以修復它們，那就修復它們吧 。這將加快審查和修復入庫。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:268
 msgid ""
 "If there are multiple big things you want to fix, it might be advisable to "
 "send individual patches or merge proposals instead. If there are individual "
 "bugs filed for the issues already, this makes it even easier."
-msgstr ""
+msgstr "如果您要修復多個大的問題，最好發送單個補丁或建議，而不是合併。如果是個別臭蟲的問題會更容易解決。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
 msgid "Getting Set Up"
-msgstr ""
+msgstr "快速設置"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:5
 msgid ""
@@ -1627,40 +1659,42 @@ msgid ""
 "start working with packages, and upload your packages to Ubuntu's hosting "
 "platform, Launchpad. Here's what we'll cover:"
 msgstr ""
+"要開始為 Ubuntu 開發，您需要做一些准备。本文的目的是讓您的電腦設置好，您就可以開始开发您的软件包，並上傳您的軟件包到 Ubuntu 的  "
+"託管平台， Launchpad。下面我們將討論："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:10
 msgid "Installing packaging-related software. This includes:"
-msgstr ""
+msgstr "安裝與包裝相關的軟件。這包括："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:12
 msgid "Ubuntu-specific packaging utilities"
-msgstr ""
+msgstr "Ubuntu的特定打包工具"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:13
 msgid "Encryption software so your work can be verified as being done by you"
-msgstr ""
+msgstr "加密軟件，所以驗證由您完成的工作是您的付出"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:14
 msgid "Additional encryption software so you can securely transfer files"
-msgstr ""
+msgstr "額外的加密軟件，這樣你就可以安全地傳輸文件"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
 msgid "Creating and configuring your account on Launchpad"
-msgstr ""
+msgstr "在 Launchpad 上創建和配置您的帳戶"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:17
 msgid ""
 "Setting up your development environment to help you do local builds of "
 "packages, interact with other developers, and propose your changes on "
 "Launchpad."
-msgstr ""
+msgstr "設置您的開發環境來幫你做本地編譯軟件包，與其他開發人員互動，並提出您的變化到 Launchpad 上。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:22
 msgid ""
 "It is advisable to do packaging work using the current development version "
 "of Ubuntu. Doing so will allow you to test changes in the same environment "
 "where those changes will actually be applied and used."
-msgstr ""
+msgstr "建議最好是使用當前開發版本的 Ubuntu 做打包工作。這樣做可以讓你測試在同樣的環境的開發，這些開發成果將實際地被應用和使用。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:26
 msgid ""
@@ -1668,17 +1702,19 @@ msgid ""
 "<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways "
 "to safely use the development release."
 msgstr ""
+"別擔心，Ubuntu 開發版本的 wiki <https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ "
+"顯示各種各樣的方式安全地使用開發版本。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
-msgstr ""
+msgstr "安裝基本的打包軟件"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:34
 msgid ""
 "There are a number of tools that will make your life as an Ubuntu developer "
 "much easier.  You will encounter these tools later in this guide.  To "
 "install most of the tools you will need run this command::"
-msgstr ""
+msgstr "有許多開發工具可以使你的 Ubuntu 開發者生活更輕鬆。本指南中，你會遇到這些工具。要安裝的大部分工具，你需要運行這個命令："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:41
 msgid ""
@@ -1687,10 +1723,12 @@ msgid ""
 "install the above and other tools which are quite common in Ubuntu "
 "development::"
 msgstr ""
+"注意：自從 Ubuntu 11.10 \"Oneiric Ocelot\" （或者如果您在 backports "
+"中啟用當前支持的版本），下面的命令將安裝上述和其他工具，這些工具在在 Ubuntu 開發中很常見。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:49
 msgid "This command will install the following software:"
-msgstr ""
+msgstr "這個命令會安裝以下軟件："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:51
 msgid ""
@@ -1698,18 +1736,20 @@ msgid ""
 "cryptographic key with which you will sign files you want to upload to "
 "Launchpad."
 msgstr ""
+"``gnupg`` -- `GNU Privacy Guard`_ 包含工具，你需要創建一個加密用的密鑰，你將用它簽署要上傳到 Launchpad "
+"的文件。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:54
 msgid ""
 "``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
 "isolated environment."
-msgstr ""
+msgstr "``pbuilder`` —— 一個工具，用來在乾淨的和孤立的環境中重現構建一個包。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:56
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
-msgstr ""
+msgstr "``ubuntu-dev-tools`` （和 ``devscripts`` ，一个直接依賴）——一個工具集，使許多打包任務更容易。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:58
 msgid ""
@@ -1718,16 +1758,18 @@ msgid ""
 "easy for many developers to collaborate and work on the same code while "
 "keeping it trivial to merge each other's work."
 msgstr ""
+"``bzr-builddeb`` （和 ``bzr`` ，一个依赖）—— Bazaar 分佈式版本控制 ，一種新的 Ubuntu "
+"的軟件包开发方式，這將使很多開發人員在相同的代碼上協作和工作，同時保持它的细微差别，很容易地合併彼此的成果。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:62
 msgid ""
 "``apt-file`` provides an easy way to find the binary package that contains a "
 "given file."
-msgstr ""
+msgstr "``apt-file`` 提供了一個簡單的方法來查找包含一個給定文件的是哪个二進制包。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:67
 msgid "Create your GPG key"
-msgstr ""
+msgstr "創建你的GPG密鑰"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:69
 msgid ""
@@ -1738,10 +1780,13 @@ msgid ""
 "you upload a source package to Launchpad, it will only accept the package if "
 "it can absolutely determine who uploaded the package."
 msgstr ""
+"GPG代表 `GNU Privacy Guard`_ ，它是 OpenPGP "
+"標準的實現，它允許您進行簽名和加密消息和文件。這对很多事情都有用。在我們的情況下，重要的是你可以用你的鑰匙簽署文件。这样文件就可以被确认是您的工作。如果您"
+"要上傳一個源碼包到 Launchpad，它將只接受那些可以确定是誰上传的包。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:76
 msgid "To generate a new GPG key, run::"
-msgstr ""
+msgstr "要生成一個新的GPG密鑰，運行："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:80
 msgid ""
@@ -1756,6 +1801,11 @@ msgid ""
 "passphrase, choose a safe one (a passphrase is just a password which is "
 "allowed to include spaces)."
 msgstr ""
+"GPG "
+"首先會問您，您要產生哪一種密鑰。選擇默認（RSA和DSA）的罰款。接下來，它會問你關於密鑰大小。默認值（目前為2048）可以，但4096是更安全的。之後，"
+"它會問你，如果你想讓它過期的时间是在什么时候。“0” 就很安全了，這意味著密鑰永遠不會過期。最後一個問題是您的姓名和電子郵件地址。只要挑選那些您要在 "
+"Ubuntu "
+"開發使用的邮件地址就可以，你也可以之後添加電子郵件地址後。添加評論不是必要的。然後，您必須設置一個密碼，選擇一個安全的密碼（密碼允許包括空格）。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:90
 msgid ""
@@ -1764,20 +1814,22 @@ msgid ""
 "just fine.  Move the cursor around, type some paragraphs of random text, "
 "load some web page."
 msgstr ""
+"GPG為您將創建一個密鑰，這可能需要一點點的時間，它需要隨機字節，所以如果你給系統一些工作要做，它會就好了。左右移動光標，​​鍵入一些隨機文本段落，加載一"
+"些網頁。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:95
 msgid "Once this is done, you will get a message similar to this one::"
-msgstr ""
+msgstr "一旦做到這一點，你會得到一個類似這個消息："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:102
 msgid "In this case ``43CDE61D`` is the *key ID*."
-msgstr ""
+msgstr "在這裏的情況下  ``43CDE61D`` 就是 *密鑰 ID*."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:104
 msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
-msgstr ""
+msgstr "接下來，您需要上傳你的密鑰的公共部分，所以世界密鑰服務器可以識別您的消息和文件。要做到這一點，請輸入："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:109
 msgid ""
@@ -1786,10 +1838,11 @@ msgid ""
 "complete, your signed public key will be ready to verify your contributions "
 "around the world."
 msgstr ""
+"這將發送您的密鑰到一個密鑰服務器，但它們之間的網絡密鑰服務器會自動同步密鑰。一旦此同步完成後，您簽名的公鑰已準備好在世界範圍上驗證您的貢獻。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:116
 msgid "Create your SSH key"
-msgstr ""
+msgstr "創建您的 SSH 密鑰"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:118
 msgid ""
@@ -1799,48 +1852,50 @@ msgid ""
 "transfer files. For our purposes, we will mainly be using SSH to securely "
 "upload source packages to Launchpad."
 msgstr ""
+"SSH_ 表示 *Secure Shell* ， 它是一個協議，允許您以安全的方式通過網絡進行數據交換。通常，我們使用 SSH 訪問另一台電腦 "
+"，打開一個 shell，並用它來安全地傳輸文件。對於我們這裏目的，我們將主要使用 SSH 安全地把源碼包上傳到 Launchpad。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:124
 msgid "To generate an SSH key, enter::"
-msgstr ""
+msgstr "要生成SSH密鑰，輸入："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:128
 msgid ""
 "The default file name usually makes sense, so you can just leave it as it "
 "is. For security purposes, it is highly recommended that you use a "
 "passphrase."
-msgstr ""
+msgstr "默認的文件名通常是有道理的，所以你可以不用理會它。為了安全起見，我們強烈建議您使用一個口令。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:133
 msgid "Set up pbuilder"
-msgstr ""
+msgstr "設置 pbuilder"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:135
 msgid ""
 "``pbuilder`` allows you to build packages locally on your machine. It serves "
 "a couple of purposes:"
-msgstr ""
+msgstr "``pbuilder`` 允許您建立您機器上的本地包。它提供許多的用途："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:138
 msgid ""
 "The build will be done in a minimal and clean environment. This helps you "
 "make sure your builds succeed in a reproducible way, but without modifying "
 "your local system"
-msgstr ""
+msgstr "構建工作將在最小和清潔的環境。這將幫助您確保您以一個可重複的方式成功構建，卻沒有修改您的本地系統"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:141
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
-msgstr ""
+msgstr "沒有必要本地安裝所有必需的 *構建依賴*"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:142
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
-msgstr ""
+msgstr "您可以設置 Ubuntu 和 Debian 發行版的多個不同的實例"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:144
 msgid "Setting ``pbuilder`` up is very easy, run::"
-msgstr ""
+msgstr "設置 ``pbuilder`` 很簡單，直接運行："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:148
 msgid ""
@@ -1849,37 +1904,39 @@ msgid ""
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
+"其中 <release> 如 `natty`, `maverick`, `lucid` 或其他情況如 Debian "
+"`sid`。這將需要一段時間，因為它會下載一個“最小化安裝”的所有必要的軟件包。這些（安裝）會有緩存。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:154
 msgid "Get set up to work with Launchpad"
-msgstr ""
+msgstr "設置 LaunchPad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:156
 msgid ""
 "With a basic local configuration in place, your next step will be to "
 "configure your system to work with Launchpad. This section will focus on the "
 "following topics:"
-msgstr ""
+msgstr "隨著本地的基本配置到位，下一步將是配置您的系統與 Launchpad 工作。本節重點在以下主題："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid "What Launchpad is and creating a Launchpad account"
-msgstr ""
+msgstr "LaunchPad 介紹和創建一個 Launchpad 帳戶"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:161
 msgid "Uploading your GPG and SSH keys to Launchpad"
-msgstr ""
+msgstr "上傳您的 GPG 和 SSH 密鑰到 Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:162
 msgid "Configuring Bazaar to work with Launchpad"
-msgstr ""
+msgstr "配置 bazaar 於 LaunchPad 工作"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:163
 msgid "Configuring Bash to work with Bazaar"
-msgstr ""
+msgstr "配置 Bash 與 bazaar 工作"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:167
 msgid "About Launchpad"
-msgstr ""
+msgstr "關於 Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid ""
@@ -1889,13 +1946,15 @@ msgid ""
 "team memberships.  You will also use Launchpad to publish your proposed "
 "fixes, and get other Ubuntu developers to review and sponsor them."
 msgstr ""
+"LaunchPad 是我們使用 Ubuntu 中的 Ubuntu 基礎設施的中心部分。它不僅存儲了我們的包和我們的代碼，還有還翻譯，bug報告，以及在 "
+"Ubuntu 工作的人和他們的團隊成員的信息等等。您還將使用 Launchpad 的發布您的建議修復，並得到其他 Ubuntu 的開發者的審查和贊助。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:175
 msgid ""
 "You will need to register with Launchpad and provide a minimal amount of "
 "information. This will allow you to download and upload code, submit bug "
 "reports, and more."
-msgstr ""
+msgstr "您需要註冊 Launchpad 和提供少量的信息。這將允許您下載和上傳代碼，提交 bug 報告，以及更多。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:179
 msgid ""
@@ -1903,10 +1962,12 @@ msgid ""
 "more information see the `Launchpad Help wiki "
 "<https://help.launchpad.net/>`_."
 msgstr ""
+"除了託管 Ubuntu 的項目，Launchpad 可以舉辦任何自由軟件項目。欲了解更多信息，請參閱 `Launchpad Help wiki "
+"<https://help.launchpad.net/>`_ 。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:184
 msgid "Get a Launchpad account"
-msgstr ""
+msgstr "獲取 Launchpad 帳戶"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:186
 msgid ""
@@ -1915,13 +1976,15 @@ msgid ""
 "can find this out by going to https://launchpad.net/~ and looking for the "
 "part after the `~` in the URL."
 msgstr ""
+"如果您還沒有一個啟動帳戶，您可以很容易 `create one`_ 。如果您有一個 Launchpad 但是忘記了您的 ID ，您可以看一下 "
+"https://launchpad.net/~ ，您的 ID 就在 URL 連接的～後邊。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:191
 msgid ""
 "Launchpad's registration process will ask you to choose a display name. It "
 "is encouraged for you to use your real name here so that your Ubuntu "
 "developer colleagues will be able to get to know you better."
-msgstr ""
+msgstr "Launchpad 的註冊過程中會問您選擇的顯示名稱。鼓勵您使用您的真實姓名，讓您的 Ubuntu 開發的同事將能夠得到更好地了解您。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:195
 msgid ""
@@ -1929,6 +1992,8 @@ msgid ""
 "link you need to open in your browser in order to verify your email address. "
 "If you don't receive it, check in your spam folder."
 msgstr ""
+"當您註冊一個新帳戶，LaunchPad將發送給您一封電子郵件，其中有個一個鏈接。您需要在您的瀏覽器中打開它，以驗證您的電子郵件地址。如果您未收到郵件，請檢"
+"查您的垃圾郵件文件夾中。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:199
 msgid ""
@@ -1936,18 +2001,20 @@ msgid ""
 "<https://help.launchpad.net/YourAccount/NewAccount>`_ on Launchpad has more "
 "information about the process and additional settings you can change."
 msgstr ""
+"Launchpad 上的 `新帳戶幫助頁面 <https://help.launchpad.net/YourAccount/NewAccount>`_  "
+"有更多信息關於此過程和您可以改變的額外設置。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:205
 msgid "Upload your GPG key to Launchpad"
-msgstr ""
+msgstr "上傳您的 GPG 公鑰到 Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:207
 msgid "To find about your GPG fingerprint, run::"
-msgstr ""
+msgstr "要找到你的 GPG 指紋，運行："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:211
 msgid "and it will print out something like::"
-msgstr ""
+msgstr "它會打印出類似："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:219
 msgid ""
@@ -1955,6 +2022,8 @@ msgid ""
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
 "FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on \"Import Key\"."
 msgstr ""
+"打開連接 https://launchpad.net/~/+editpgpkeys 然後複製 “密鑰指紋”到文本框中。在這裏例子中是 ``5C28 "
+"0144 FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D`` 。現在點擊“導入公鑰”。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:224
 msgid ""
@@ -1965,6 +2034,10 @@ msgid ""
 "you for the password you chose for the key when GPG generated it. Enter the "
 "password, then click the link to confirm that the key is yours.`"
 msgstr ""
+"LaunchPad 將使用指紋在 Ubuntu "
+"的密鑰服務器上查找您的公鑰，如果成功的話，將給您發送一個加密電子郵件，要求您確認導入的公鑰。請檢查您的電子郵件帳戶，閱讀 Launchpad "
+"發送您的電子郵件 。` 如果您的電子郵件客戶端支持 OpenPGP 加密，它會提示您選擇 "
+"GPG生成的密鑰。輸入對應的密碼，然後點擊鏈接以確認公鑰是您的。`"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:231
 msgid ""
@@ -1976,12 +2049,15 @@ msgid ""
 "the encrypted email's contents, type ``gpg`` in your terminal, then paste "
 "the email contents into your terminal window."
 msgstr ""
+"Launchpad 使用您的公鑰加密了電子郵件,因此它可以肯定公鑰是您的。如果您正在使用Thunderbird，Ubuntu "
+"默認的電子郵件客戶端，你可以安裝 `Enigmail plugin "
+"<https://apps.ubuntu.com/cat/applications/enigmail/>`_ 來方便的（用您的密鑰）解密信息。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:240
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
-msgstr ""
+msgstr "返回到 Launchpad 網站上，點擊“確認”按鈕，Launchpad 將完成您的 OpenPGP 公鑰導入。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:243
 msgid ""
