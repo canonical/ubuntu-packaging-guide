@@ -104,12 +104,12 @@ In this case ``43CDE61D`` is the *key ID*.
 Next, you need to upload the public part of your key to a keyserver so the 
 world can identify messages and files as yours. To do so, enter::
 
-    $ gpg --send-keys <KEY ID>
+    $ gpg --send-keys --keyserver keyserver.ubuntu.com <KEY ID>
 
-This will send your key to one keyserver, but a network of keyservers will 
-automatically sync the key between themselves. Once this syncing is complete, 
-your signed public key will be ready to verify your contributions around the
-world.
+This will send your key to the Ubuntu keyserver, but a network of keyservers 
+will automatically sync the key between themselves. Once this syncing is 
+complete, your signed public key will be ready to verify your contributions 
+around the world.
 
 
 Create your SSH key
