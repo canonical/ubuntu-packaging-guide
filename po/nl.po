@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-04-26 09:44+0000\n"
-"PO-Revision-Date: 2013-05-04 07:33+0000\n"
+"PO-Revision-Date: 2013-05-13 06:37+0000\n"
 "Last-Translator: Hannie Dumoleyn <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-05 05:27+0000\n"
-"X-Generator: Launchpad (build 16598)\n"
+"X-Launchpad-Export-Date: 2013-05-14 05:39+0000\n"
+"X-Generator: Launchpad (build 16617)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -144,20 +144,29 @@ msgid ""
 "uses a pristine virtual machine to run the tests. To set it up, firstly "
 "install the needed dependencies::"
 msgstr ""
+"Het nadeel van deze aanpak is dat het lokaal getest wordt, hetgeen geen "
+"zekerheid geeft of het ook zal werken in een minimale omgeving. Zo zal het "
+"moeilijk zijn ervoor te zorgen dat alle vereiste pakketten zijn "
+"geïnstalleerd voor de test. Met `lp:auto-package-testing`_ hebben we een "
+"uitgebreider testhulpmiddel. Het gebruikt een schone virtuele machine om de "
+"testen te draaien. Om het in te stellen dient u eerst de nodige "
+"afhankelijkheden te installeren::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
 msgid "Then, get the source code from Launchpad::"
-msgstr ""
+msgstr "Haal daarna de broncode op van Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Raring AMD64 system::"
-msgstr ""
+msgstr "En zorg voor een Raring AMD64 systeem::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Raring AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Deze opdracht maakt een schone Raring AMD64 VM aan van een cloud-image. Voer "
+"het volgende uit om de testen uit te voeren::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -171,28 +180,43 @@ msgid ""
 "you can log into the virtual machine after the tests were run. This makes it "
 "very easy to debug issues."
 msgstr ""
+"Dit gebruikt het bronpakket in ``/tmp/glib2.0-2.35.7/`` en voert de testen "
+"hier vandaan uit tegenover het pakket ``glib2.0`` van het archief. De optie "
+"``-S`` ondersteunt ook schema's voor bzr-, git- en apt-bronnen. Als u alleen "
+"een bron opgeeft met ``-S``, maar niet een pakketnaam, dan zal dit de branch "
+"opzetten en de binaire bestanden installeren van die bouwversie; dit is "
+"handig als u testen wilt uitvoeren op een nieuwere versie dan die in Ubuntu, "
+"of als het pakket helemaal niet in Ubuntu zit. Als u de vlag ``-k`` "
+"gebruikt, dan kunt u zich aanmelden bij de virtuele machine nadat de testen "
+"zijn uitgevoerd. Dit vergemakkelijkt het oplossen van problemen."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:127
 msgid ""
 "The `auto-package-testing documentation`_ has a lot more valuable "
 "information on other testing options."
 msgstr ""
+"In de `auto-package-testing-documentatie`_ staat nog veel meer waardevolle "
+"informatie over andere testopties."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:133
 msgid "Further examples"
-msgstr ""
+msgstr "Meer voorbeelden"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:135
 msgid ""
 "This list is not comprehensive, but might help you get a better idea of how "
 "automated tests are implemented and used in Ubuntu."
 msgstr ""
+"Deze lijst is niet volledig, maar kan u helpen meer inzicht te krijgen in "
+"hoe automatische testen worden uitgevoerd en gebruikt in Ubuntu."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:138
 msgid ""
 "The `libxml2 tests`_ are very similar. They also run a test-build of a "
 "simple piece of C code and execute it."
 msgstr ""
+"De `libxml2 tests`_ werken op dezelfde manier. Ze voeren ook een test-build "
+"uit van een eenvoudig stukje C-code en voeren dat uit."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
 msgid ""
@@ -200,6 +224,9 @@ msgid ""
 "There is an additional \"python3-gi\" test which verifies that the GTK "
 "library can also be used through introspection."
 msgstr ""
+"De `gtk+3.0 tests`_ voeren ook een compileer/link/uitvoeren-controle uit in "
+"de \"bouw\"-test. Er is een extra \"python3-gi\"-test die nagaat of de GTK-"
+"bibliotheek ook gebruikt kan worden door middel van introspectie."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
