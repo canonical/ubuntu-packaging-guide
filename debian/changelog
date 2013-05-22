@@ -11,6 +11,9 @@ ubuntu-packaging-guide (0.3.2) UNRELEASED; urgency=low
 
   [ Daniel Holbach ]
   * add Brazilian Portuguese.
+  * Update UDS information to the new world of UDSes.
+  * Update information about "CD images". They are not explicitly for CDs and
+    never were. 
 
   [ Andrew Starr-Bochicchio ]
   * getting-set-up: Launchpad finds developer gpg keys quicker if they

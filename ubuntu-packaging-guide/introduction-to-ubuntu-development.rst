@@ -16,10 +16,13 @@ a change to the source code that goes into Ubuntu, the source package must be
 uploaded to Launchpad's build machines to be compiled. The resulting binary
 packages then are distributed to the archive and its mirrors in different
 countries. The URLs in ``/etc/apt/sources.list`` point to an archive or mirror. 
-Every day CD images are built for a selection of different Ubuntu flavours. 
-Ubuntu Desktop, Ubuntu Server, Kubuntu and others specify a list of required 
-packages that get on the CD. These CD images are then used for installation 
-tests and provide the feedback for further release planning.
+Every day images are built for a selection of different Ubuntu flavours. They
+can be used in various circumstances. There are images you can put on a USB
+key, you can burn them on DVDs, you can use netboot images and there are 
+images suitable for your phone and table. Ubuntu Desktop, Ubuntu Server, 
+Kubuntu and others specify a list of required packages that get on the image. 
+These images are then used for installation tests and provide the feedback 
+for further release planning.
 
 Ubuntu's development is very much dependent on the current stage of the 
 release cycle. We release a new version of Ubuntu every six months, which is 
@@ -38,15 +41,15 @@ becomes the final release.
 
 Thousands of source packages, billions of lines of code, hundreds of
 contributors require a lot of communication and planning to maintain
-high standards of quality. At the beginning of each release cycle we have the 
-Ubuntu Developer Summit where developers and contributors come together to 
-plan the features of the next releases. Every feature is discussed by its 
-stakeholders and a specification is written that contains detailed 
-information about its assumptions, implementation, the necessary changes in 
-other places, how to test it and so on. This is all done in an open and 
-transparent fashion, so even if you cannot attend the event in person, you 
-can participate remotely and listen to a streamcast, chat with attendants and 
-subscribe to changes of specifications, so you are always up to date.
+high standards of quality. At the beginning and in the middle of each release 
+cycle we have the Ubuntu Developer Summit where developers and contributors 
+come together to plan the features of the next releases. Every feature is 
+discussed by its stakeholders and a specification is written that contains 
+detailed information about its assumptions, implementation, the necessary 
+changes in other places, how to test it and so on. This is all done in an 
+open and transparent fashion, so you can participate remotely and listen to 
+a videocast, chat with attendants and subscribe to changes of specifications, 
+so you are always up to date.
 
 Not every single change can be discussed in a meeting though, particularly 
 because Ubuntu relies on changes that are done in other projects. That is why 
