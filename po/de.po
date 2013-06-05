@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-05-22 20:55+0000\n"
-"PO-Revision-Date: 2013-05-24 13:25+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2013-06-04 23:04+0000\n"
+"Last-Translator: M Oberhauser <limurx@streber24.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-25 05:35+0000\n"
-"X-Generator: Launchpad (build 16640)\n"
+"X-Launchpad-Export-Date: 2013-06-05 05:45+0000\n"
+"X-Generator: Launchpad (build 16660)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -3008,6 +3008,10 @@ msgid ""
 "documentation and ask questions, being a team player and enjoying some "
 "detective work."
 msgstr ""
+"Die wichtigsten Anforderungen für den Erfolg in der Ubuntu-Entwicklung sind: "
+"Der Drang »Dinge wieder zum Laufen zu bringen«, keine Angst davor zu haben "
+"Dokumentationen zu lesen und Fragen zu stellen, Teamgeist zu zeigen und ein "
+"wenig Detektivarbeit genießen zu können."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:126
 msgid ""
@@ -3032,6 +3036,11 @@ msgid ""
 "``#kubuntu-devel`` Freenode IRC channel.  More information about Kubuntu "
 "development is on the `Kubuntu wiki page`_."
 msgstr ""
+"Das Paketieren von KDE-Programmen in Ubuntu wird von den Kubuntu- und MOTU-"
+"Teams übernommen. Sie können das Kubuntu-Team über die `Kubuntu-Mailingliste "
+"<Kubuntu mailing list>`_ und den IRC-Kanal ``#kubuntu-devel`` auf Freenode "
+"kontaktieren. Weitere Information über die Kubuntu-Entwicklung finden Sie "
+"auf der `Kubuntu-Wiki-Seite <Kubuntu wiki page>`_."
 
 #: ../ubuntu-packaging-guide/kde.rst:10
 msgid ""
@@ -3045,7 +3054,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:15
 msgid "Patching Policy"
-msgstr ""
+msgstr "Richtlinien für Fehlerkorrekturen"
 
 #: ../ubuntu-packaging-guide/kde.rst:17
 msgid ""
@@ -3053,6 +3062,10 @@ msgid ""
 "upstream authors or submitted upstream with the expectation they will be "
 "merged soon or we have consulted the issue with the upstream authors."
 msgstr ""
+"Kubuntu führt keine Fehlerkorrekturen an KDE-Programmen durch solange sie "
+"nicht von Upstream-Autoren oder dortigen Einreichungen stammen, mit der "
+"Absicht sie bald in das Programm einfließen zu lassen, oder das Problem mit "
+"den Upstream-Autoren abgesprochen wurde."
 
 #: ../ubuntu-packaging-guide/kde.rst:22
 msgid ""
@@ -3060,6 +3073,9 @@ msgid ""
 "expects this (such as the top left logo of the Kickoff menu) or to simplify "
 "(such as removing splash screens)."
 msgstr ""
+"Kubuntu ändert keine Paketbezeichnungen mit Ausnahme dort, wo Upstream dies "
+"erwartet (wie das Logo des Kickoff-Menüs links oben) oder es der "
+"Vereinfachung dient (wie der Entfernung des Begrüßungsbildschirms)."
 
 #: ../ubuntu-packaging-guide/kde.rst:27
 #: ../ubuntu-packaging-guide/python-packaging.rst:31
@@ -3080,6 +3096,10 @@ msgid ""
 "will ensure the correct build flags are used and add options such as "
 "handling kdeinit stubs and translations::"
 msgstr ""
+"Pakete, welche Debhelper 7 verwenden, sollten die Option ``--with=kde`` "
+"anhängen. Dies stellt sicher, dass die richtigen Flags zum Bauen benutzt "
+"werden und Optionen zum Umgang mit kdeinit-Stubs and Übersetzungen "
+"hinzugefügt werden::"
 
 #: ../ubuntu-packaging-guide/kde.rst:39
 msgid ""
@@ -3108,6 +3128,9 @@ msgid ""
 "make available upstream translations and handle ``.desktop`` file "
 "translations."
 msgstr ""
+"Daher muss jedes KDE-Paket Übersetzungsvorlagen generieren, Upstream-"
+"Übersetzungen verwenden oder bereitstellen und Übersetzungen für "
+"``.desktop``-Dateien interpretieren können."
 
 #: ../ubuntu-packaging-guide/kde.rst:56
 msgid ""
