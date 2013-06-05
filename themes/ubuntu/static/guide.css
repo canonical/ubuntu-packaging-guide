@@ -1,5 +1,5 @@
 /* CSS style bits for Ubuntu developer guide */
-/* Author: Dmitry Shachnev <mitya57@gmail.com>, 2012 */
+/* Author: Dmitry Shachnev <mitya57@ubuntu.com>, 2012-2013 */
 
 .section li, ul.search li {
     list-style-type: disc;
@@ -46,4 +46,16 @@ ul.search li a {
 
 .context {
     margin-left: 30px;
+}
+
+th.field-name {
+    font-weight: bold;
+}
+
+table.field-list {
+    margin-bottom: 10px;
+}
+
+table.field-list td, table.field-list th {
+    padding: 2px;
 }
