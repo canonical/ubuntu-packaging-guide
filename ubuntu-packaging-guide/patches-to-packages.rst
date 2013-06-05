@@ -100,6 +100,22 @@ already been made.  The above example changes a user interface string for
 example, so it would break all translations.  If in doubt, do ask the upstream
 author before adding a patch.
 
+
+Patch Headers
+-------------
+
+We recommend that you tag every patch with DEP-3_ headers by putting them at the top
+of patch file. Here are some headers that you can use:
+
+:Description: Description of what the patch does.
+:Author:      Who wrote the patch (i.e. "Jane Doe <packager@example.com>").
+:Origin:      Where this patch comes from (i.e. "upstream"), when *Author* is
+              not present.
+:Forwarded:   Whether the patch was forwarded upstream. Either "yes", "no" or
+              "not-needed".
+:Last-Update: Date of the last revision (in form "YYYY-MM-DD").
+
+
 Upgrading to New Upstream Versions
 -----------------------------------
 
@@ -159,6 +175,22 @@ Older packages using source format 1.0 will need to explicitly use
 Quilt, usually by including a makefile into ``debian/rules``.
 
 
+Configuring Quilt
+-----------------
+
+You can use ``~/.quiltrc`` file to configure quilt. Here are some options
+that can be useful for using quilt with debian/packages:
+
+.. code-block:: sh
+
+   # Set the patches directory
+   QUILT_PATCHES="debian/patches"
+   # Remove all useless formatting from the patches
+   QUILT_REFRESH_ARGS="-p ab --no-timestamps --no-index"
+   # The same for quilt diff command, and use colored output
+   QUILT_DIFF_ARGS="-p ab --no-timestamps --no-index --color=auto"
+
+
 Other Patch Systems
 --------------------
 
@@ -180,3 +212,4 @@ feel free to add Quilt.
 
 .. _`Quilt`: http://wiki.debian.org/UsingQuilt
 .. _`bug 815854`: https://bugs.launchpad.net/bzr-builddeb/+bug/815854
+.. _DEP-3: http://dep.debian.net/deps/dep3/
