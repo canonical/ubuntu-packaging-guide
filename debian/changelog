@@ -10,6 +10,7 @@ ubuntu-packaging-guide (0.3.2) UNRELEASED; urgency=low
   * po/pt_BR.po: use correct backticks (LP: #1154087).
   * patches-to-packages.rst: add "Patch Headers" and "Configuring Quilt"
     sections.
+  * style.css: add styling for Docutils field lists.
 
   [ Daniel Holbach ]
   * add Brazilian Portuguese.
