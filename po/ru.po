@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-22 20:55+0000\n"
+"POT-Creation-Date: 2013-06-05 11:24+0000\n"
 "PO-Revision-Date: 2013-04-02 15:19+0000\n"
 "Last-Translator: Dmitry Shachnev <mitya57@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-23 05:43+0000\n"
-"X-Generator: Launchpad (build 16640)\n"
+"X-Launchpad-Export-Date: 2013-06-06 05:36+0000\n"
+"X-Generator: Launchpad (build 16667)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -4056,11 +4056,45 @@ msgstr ""
 "все переводы.  Если сомневаетесь, спросите автора из апстрима перед тем, как "
 "добавить патч."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:104
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:105
+msgid "Patch Headers"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:107
+msgid ""
+"We recommend that you tag every patch with DEP-3_ headers by putting them at "
+"the top of patch file. Here are some headers that you can use:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:110
+msgid "Description of what the patch does."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:111
+msgid "Who wrote the patch (i.e. \"Jane Doe <packager@example.com>\")."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:112
+msgid ""
+"Where this patch comes from (i.e. \"upstream\"), when *Author* is not "
+"present."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:114
+msgid ""
+"Whether the patch was forwarded upstream. Either \"yes\", \"no\" or \"not-"
+"needed\"."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:116
+msgid "Date of the last revision (in form \"YYYY-MM-DD\")."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:120
 msgid "Upgrading to New Upstream Versions"
 msgstr "Обновление до новых версий из апстрима"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:106
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:122
 msgid ""
 "When you upgrade to a new upstream version, patches will often become out of "
 "date.  They might need to be refreshed to match the new upstream source or "
@@ -4070,23 +4104,23 @@ msgstr ""
 "устаревшими.  Может понадобиться обновить их для соответствия новому "
 "исходному коду или вообще удалить."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:110
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:126
 msgid ""
 "You should start by ensuring no patches are applied.  Unfortunately a commit "
 "is needed before you can merge in the new upstream (this is `bug 815854`_)::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:116
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:132
 msgid "Then upgrade to the new version::"
 msgstr "Затем выполните обновление на новую версию::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:120
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:136
 msgid "Then apply the patches one at a time to check for problems::"
 msgstr ""
 "После этого применяйте патчи по одному за раз и проверяйте, не возникнут ли "
 "проблемы::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:129
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:145
 msgid ""
 "If it can be reverse-applied this means the patch has been applied already "
 "by upstream, so we can delete the patch::"
@@ -4094,11 +4128,11 @@ msgstr ""
 "Если для патча указано ``it can be reverse-applied``, значит патч уже был "
 "применён апстримом, так что мы можем удалить этот патч::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:135
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:151
 msgid "Then carry on::"
 msgstr "Затем продолжайте::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:140
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:156
 msgid ""
 "It is a good idea to run refresh, this will update the patch relative to the "
 "changed upstream source::"
@@ -4106,21 +4140,21 @@ msgstr ""
 "Неплохой мыслью будет выполнить refresh, это обновит патч относительно "
 "изменений исходного кода в апстриме::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:146
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:162
 msgid "Then commit as usual::"
 msgstr "Затем выполните фиксацию, как обычно::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:152
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:168
 msgid "Making A Package Use Quilt"
 msgstr "Создание пакета с использованием Quilt"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:154
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:170
 msgid ""
 "Modern packages use Quilt by default, it is built into the packaging format. "
 " Check in ``debian/source/format`` to ensure it says ``3.0 (quilt)``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:158
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:174
 msgid ""
 "Older packages using source format 1.0 will need to explicitly use Quilt, "
 "usually by including a makefile into ``debian/rules``."
@@ -4128,11 +4162,21 @@ msgstr ""
 "Для более старых пакетов, использующих формат 1.0, необходимо использовать "
 "Quilt явно, обычно с помощью включения make-фала в ``debian/rules``."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:163
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:179
+msgid "Configuring Quilt"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:181
+msgid ""
+"You can use ``~/.quiltrc`` file to configure quilt. Here are some options "
+"that can be useful for using quilt with debian/packages:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:195
 msgid "Other Patch Systems"
 msgstr "Другие системы управления патчами"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:165
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:197
 msgid ""
 "Other patch systems used by packages include ``dpatch`` and ``cdbs simple-"
 "patchsys``, these work similarly to Quilt by keeping patches in "
@@ -4143,14 +4187,14 @@ msgid ""
 "a reliable way to work with all systems."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:173
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:205
 msgid ""
 "In even older packages changes will be included directly to sources and kept "
 "in the ``diff.gz`` source file.  This makes it hard to upgrade to new "
 "upstream versions or differentiate between patches and is best avoided."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:177
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:209
 msgid ""
 "Do not change a package's patch system without discussing it with the Debian "
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "
