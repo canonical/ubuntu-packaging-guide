@@ -20,9 +20,10 @@ Merging from Debian
 ===================
 
 Next run ``bzr merge`` passing the URL of the branch to merge from.  For
-example, to merge from the version of the package in Debian Squeeze_ run::
+example, to merge from the version of the package in Debian Unstable
+run [#]_::
 
-    $ bzr merge debianlp:squeeze/tomboy
+    $ bzr merge lp:debian/tomboy
 
 This will merge the changes since the last merge point and leave you with
 changes to review.  This may cause some conflicts.  You can see everything
@@ -116,11 +117,12 @@ upstream version present there; e.g., if the last Ubuntu release was
 want to use as the tip of the upstream branch.
 
 
-.. _Squeeze: http://wiki.debian.org/DebianSqueeze
-
 .. [#] You will need newer versions of ``bzr`` and the ``bzr-builddeb`` for
    the ``merge`` command to work.  Use the versions from Ubuntu 12.04
    (Precise) or the development versions from the ``bzr`` PPA.  Specifically,
    you need ``bzr`` version 2.5 beta 5 or newer, and ``bzr-builddeb`` version
    2.8.1 or newer.  For older versions, use the ``bzr merge-package`` command
    instead.
+
+.. [#] To check other available branches of a package in Debian, see
+       package code page. E.g. https://code.launchpad.net/debian/+source/tomboy
