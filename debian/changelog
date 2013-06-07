@@ -22,6 +22,10 @@ ubuntu-packaging-guide (0.3.2) UNRELEASED; urgency=low
   * getting-set-up: Launchpad finds developer gpg keys quicker if they
     are uploaded directly to the Ubuntu keyserver (LP: #1172810).
 
+  [ Dmitrijs Ledkovs ]
+  * Always recommend merging from lp:debian/package, instead of a
+    particular debian release.
+
  -- Andrew Starr-Bochicchio <asb@debian.org>  Fri, 08 Mar 2013 20:20:29 -0500
 
 ubuntu-packaging-guide (0.3.1) experimental; urgency=low
