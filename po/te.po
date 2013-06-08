@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-06-05 11:24+0000\n"
+"POT-Creation-Date: 2013-06-07 16:37+0000\n"
 "PO-Revision-Date: 2012-12-06 04:49+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Telugu <te@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-06 05:36+0000\n"
+"X-Launchpad-Export-Date: 2013-06-08 06:02+0000\n"
 "X-Generator: Launchpad (build 16667)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4133,59 +4133,60 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-merging.rst:22
 msgid ""
 "Next run ``bzr merge`` passing the URL of the branch to merge from.  For "
-"example, to merge from the version of the package in Debian Squeeze_ run::"
+"example, to merge from the version of the package in Debian Unstable run "
+"[#]_::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:27
+#: ../ubuntu-packaging-guide/udd-merging.rst:28
 msgid ""
 "This will merge the changes since the last merge point and leave you with "
 "changes to review.  This may cause some conflicts.  You can see everything "
 "that the ``merge`` command did by running::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:34
+#: ../ubuntu-packaging-guide/udd-merging.rst:35
 msgid ""
 "If conflicts are reported then you need to edit those files to make them "
 "look how they should, removing the *conflict markers*.  Once you have done "
 "this, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:41
+#: ../ubuntu-packaging-guide/udd-merging.rst:42
 msgid ""
 "This will resolve any conflicted files that you fixed, and then tell you "
 "what else you have to deal with."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:44
+#: ../ubuntu-packaging-guide/udd-merging.rst:45
 msgid ""
 "Once any conflicts are resolved, and you have made any other changes that "
 "you need, you will add a new changelog entry, and commit::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:50
+#: ../ubuntu-packaging-guide/udd-merging.rst:51
 msgid "as described earlier."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:52
+#: ../ubuntu-packaging-guide/udd-merging.rst:53
 msgid ""
 "However, before you commit, it is always a good thing to check all the "
 "Ubuntu changes by running::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:57
+#: ../ubuntu-packaging-guide/udd-merging.rst:58
 msgid ""
 "which will show the differences between the Debian (0.6.10-5) and Ubuntu "
 "versions (0.6.10-5ubuntu1).  In similar way you can compare to any other "
 "versions.  To see all available versions run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:63
+#: ../ubuntu-packaging-guide/udd-merging.rst:64
 msgid ""
 "After testing and committing the merge, you will need to seek sponsorship or "
 "upload to the archive in the normal way."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:66
+#: ../ubuntu-packaging-guide/udd-merging.rst:67
 msgid ""
 "If you are going to build the source package from this merged branch, you "
 "would use the ``-S`` option to the ``bd`` command.  One other thing you'll "
@@ -4195,43 +4196,43 @@ msgid ""
 "your ``_source.changes`` file.  For example::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:77
+#: ../ubuntu-packaging-guide/udd-merging.rst:78
 msgid "Merging a new upstream version"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:79
+#: ../ubuntu-packaging-guide/udd-merging.rst:80
 msgid ""
 "When upstream releases a new version (or you want to package a snapshot), "
 "you have to merge a tarball into your branch."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:82
+#: ../ubuntu-packaging-guide/udd-merging.rst:83
 msgid ""
 "This is done using the ``bzr merge-upstream`` command.  If your package has "
 "a valid ``debian/watch`` file, from inside the branch that you want to merge "
 "to, just type this::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:88
+#: ../ubuntu-packaging-guide/udd-merging.rst:89
 msgid ""
 "This will download the tarball and merge it into your branch, automatically "
 "adding a ``debian/changelog`` entry for you.  ``bzr-builddeb`` looks at the "
 "``debian/watch`` file for the upstream tarball location."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:92
+#: ../ubuntu-packaging-guide/udd-merging.rst:93
 msgid ""
 "If you do *not* have a ``debian/watch`` file, you'll need to specify the "
 "location of the upstream tarball, and the version manually::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:97
+#: ../ubuntu-packaging-guide/udd-merging.rst:98
 msgid ""
 "The ``--version`` option is used to specify the upstream version that is "
 "being merged in, as the command isn't able to infer that (yet)."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:100
+#: ../ubuntu-packaging-guide/udd-merging.rst:101
 msgid ""
 "The last parameter is the location of the tarball that you are upgrading to; "
 "this can either be a local filesystem path, or a http, ftp, sftp, etc. URI "
@@ -4239,14 +4240,14 @@ msgid ""
 "tarball will be renamed appropriately and, if required, converted to ``.gz``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:105
+#: ../ubuntu-packaging-guide/udd-merging.rst:106
 msgid ""
 "The `merge-upstream` command will either tell you that it completed "
 "successfully, or that there were conflicts.  Either way you will be able to "
 "review the changes before committing as normal."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:109
+#: ../ubuntu-packaging-guide/udd-merging.rst:110
 msgid ""
 "If you are merging an upstream release into an existing Bazaar branch that "
 "has not previously used the UDD layout, ``bzr merge-upstream`` will fail "
@@ -4258,13 +4259,19 @@ msgid ""
 "bzr revision you want to use as the tip of the upstream branch."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/udd-merging.rst:121
+#: ../ubuntu-packaging-guide/udd-merging.rst:120
 msgid ""
 "You will need newer versions of ``bzr`` and the ``bzr-builddeb`` for the "
 "``merge`` command to work.  Use the versions from Ubuntu 12.04 (Precise) or "
 "the development versions from the ``bzr`` PPA.  Specifically, you need "
 "``bzr`` version 2.5 beta 5 or newer, and ``bzr-builddeb`` version 2.8.1 or "
 "newer.  For older versions, use the ``bzr merge-package`` command instead."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/udd-merging.rst:127
+msgid ""
+"To check other available branches of a package in Debian, see package code "
+"page. E.g. https://code.launchpad.net/debian/+source/tomboy"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:3
