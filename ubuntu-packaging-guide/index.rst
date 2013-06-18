@@ -84,3 +84,19 @@ Knowledge Base
    traditional-packaging
    python-packaging
    kde
+
+Further Reading
+---------------
+
+You can read this guide offline in different formats, if you install one of
+the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide>`_.
+
+If you want to learn more about building Debian packages, here are some Debian
+resources you may find useful:
+
+* `How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;
+* `Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;
+* `Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-guide/>`_
+  — available in many languages;
+* `Packaging tutorial <http://www.debian.org/doc/manuals/packaging-tutorial/>`_ (also
+  available as a `package <https://launchpad.net/ubuntu/+source/packaging-tutorial>`_).
