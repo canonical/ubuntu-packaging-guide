@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-07 16:37\n"
+"POT-Creation-Date: 2013-06-18 16:31\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1367,6 +1367,35 @@ msgstr ""
 msgid "Knowledge Base"
 msgstr ""
 
+#: ../ubuntu-packaging-guide/index.rst:89
+#: ../ubuntu-packaging-guide/libraries.rst:150
+msgid "Further Reading"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:91
+msgid "You can read this guide offline in different formats, if you install one of the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide>`_."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:94
+msgid "If you want to learn more about building Debian packages, here are some Debian resources you may find useful:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:97
+msgid "`How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:98
+msgid "`Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:99
+msgid "`Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-guide/>`_ — available in many languages;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:101
+msgid "`Packaging tutorial <http://www.debian.org/doc/manuals/packaging-tutorial/>`_ (also available as a `package <https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
+msgstr ""
+
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
 msgstr ""
@@ -1618,10 +1647,6 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:145
 msgid "C++ has even more exacting standards of binary compatibility than C.  The Debian Qt/KDE Team maintain some scripts to handle this, see their `Working with symbols files`_ page for how to use them."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/libraries.rst:150
-msgid "Further Reading"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:152
