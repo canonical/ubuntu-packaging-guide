@@ -11,6 +11,7 @@ ubuntu-packaging-guide (0.3.2) UNRELEASED; urgency=low
   * patches-to-packages.rst: add "Patch Headers" and "Configuring Quilt"
     sections.
   * style.css: add styling for Docutils field lists.
+  * Add "Further Reading" section.
 
   [ Daniel Holbach ]
   * add Brazilian Portuguese.
