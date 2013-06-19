@@ -12,6 +12,8 @@ ubuntu-packaging-guide (0.3.2) UNRELEASED; urgency=low
     sections.
   * style.css: add styling for Docutils field lists.
   * Add "Further Reading" section.
+  * Build-depend on texlive-lang-portuguese and texlive-lang-spanish
+    (LP: #1188112).
 
   [ Daniel Holbach ]
   * add Brazilian Portuguese.
