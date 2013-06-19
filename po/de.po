@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-07 16:37+0000\n"
-"PO-Revision-Date: 2013-06-04 23:04+0000\n"
+"POT-Creation-Date: 2013-06-18 16:31+0000\n"
+"PO-Revision-Date: 2013-06-18 12:59+0000\n"
 "Last-Translator: M Oberhauser <limurx@streber24.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-08 06:01+0000\n"
-"X-Generator: Launchpad (build 16667)\n"
+"X-Launchpad-Export-Date: 2013-06-19 05:37+0000\n"
+"X-Generator: Launchpad (build 16673)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -2813,6 +2813,46 @@ msgstr "Artikel"
 msgid "Knowledge Base"
 msgstr "Wissensdatenbank"
 
+#: ../ubuntu-packaging-guide/index.rst:89
+#: ../ubuntu-packaging-guide/libraries.rst:150
+msgid "Further Reading"
+msgstr "Weiterführende Literatur"
+
+#: ../ubuntu-packaging-guide/index.rst:91
+msgid ""
+"You can read this guide offline in different formats, if you install one of "
+"the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-"
+"guide>`_."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:94
+msgid ""
+"If you want to learn more about building Debian packages, here are some "
+"Debian resources you may find useful:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:97
+msgid ""
+"`How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:98
+msgid "`Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:99
+msgid ""
+"`Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-"
+"guide/>`_ — available in many languages;"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:101
+msgid ""
+"`Packaging tutorial <http://www.debian.org/doc/manuals/packaging-"
+"tutorial/>`_ (also available as a `package "
+"<https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
+msgstr ""
+
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
 msgstr "Einführung in die Ubuntu-Entwicklung"
@@ -3037,9 +3077,9 @@ msgid ""
 "development is on the `Kubuntu wiki page`_."
 msgstr ""
 "Das Paketieren von KDE-Programmen in Ubuntu wird von den Kubuntu- und MOTU-"
-"Teams übernommen. Sie können das Kubuntu-Team über die `Kubuntu-Mailingliste "
+"Teams übernommen. Du kannst das Kubuntu-Team über die `Kubuntu-Mailingliste "
 "<Kubuntu mailing list>`_ und den IRC-Kanal ``#kubuntu-devel`` auf Freenode "
-"kontaktieren. Weitere Information über die Kubuntu-Entwicklung finden Sie "
+"kontaktieren. Weitere Information über die Kubuntu-Entwicklung findest du "
 "auf der `Kubuntu-Wiki-Seite <Kubuntu wiki page>`_."
 
 #: ../ubuntu-packaging-guide/kde.rst:10
@@ -3257,6 +3297,14 @@ msgid ""
 "introduce incompatibilities without changing their version number and we "
 "will need to change ours."
 msgstr ""
+"Wenn im Upstream inkompatible Änderungen an den Bibliotheken durchgeführt "
+"werden, müssen sie eine neue Revision des SONAME erstellen und wir werden "
+"unsere Bibliothek umbenennen müssen. Jedes andere Paket welches unsere "
+"Bibliotheks-Paket verwendet, muss dann wieder gegen die neue Version "
+"kompiliert werden; das nennt man Transition und kann einigen Aufwand "
+"verursachen. Im besten Fall bleibt unsere ABI-Nummer passend zu SONAME des "
+"Upstreams, aber manchmal führen sie Inkompatibilitäten ein ohne ihre "
+"Versionsnummer zu ändern und so müssen wir unsere anpassen."
 
 #: ../ubuntu-packaging-guide/libraries.rst:60
 msgid ""
@@ -3272,6 +3320,11 @@ msgid ""
 "symlink is what programs using the library will look for, the running "
 "programs do not care about the minor version number."
 msgstr ""
+"Das letzte is die eigentliche Bibliothek, komplett mit Unter- und "
+"Punkversionsnummer. Das erste ist ein Symlink welcher auf die eigentliche "
+"Bibliothek verweist. Der Symlink ist das, nach dem die Programme welche "
+"Bibliothek benutzen suchen, sie kümmern sich nicht um die "
+"Unterversionsnummern."
 
 #: ../ubuntu-packaging-guide/libraries.rst:70
 msgid ""
@@ -3334,6 +3387,8 @@ msgid ""
 "libnova has no symbols file so we can create one.  Start by compiling the "
 "package::"
 msgstr ""
+"libnova hat keine Symboldatei, also können wir eine erstellen. Beginne damit "
+"das Paket zu kompilieren::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:112
 msgid ""
@@ -3344,7 +3399,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:119
 msgid "This makes a diff file which you can self apply::"
-msgstr ""
+msgstr "Dies erstellt eine Diff-Datei welche du selbst anwenden kannst::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:123
 msgid ""
@@ -3366,6 +3421,10 @@ msgid ""
 "upstream version of libnova you would run dpkg-gensymbols again and it will "
 "give a diff to update the symbols file."
 msgstr ""
+"Wenn es erfolgreich kompiliert ist die Symboldatei in Ordnung. Mit der "
+"nächsten Upstream-Version von libnova würdest du erneut dpkg-gensymbols "
+"ausführen und es liefert eine Auflistung der Unterschiede um die Symboldatei "
+"zu aktualisieren."
 
 #: ../ubuntu-packaging-guide/libraries.rst:143
 msgid "C++ Library Symbols Files"
@@ -3377,10 +3436,6 @@ msgid ""
 "Debian Qt/KDE Team maintain some scripts to handle this, see their `Working "
 "with symbols files`_ page for how to use them."
 msgstr ""
-
-#: ../ubuntu-packaging-guide/libraries.rst:150
-msgid "Further Reading"
-msgstr "Weiterführende Literatur"
 
 #: ../ubuntu-packaging-guide/libraries.rst:152
 msgid ""
