@@ -12,6 +12,8 @@ Build-Depends: cm-super-minimal,
                python3-sphinx (>= 1.1.3+dfsg-6~) | python-sphinx (>= 1.1.3+dfsg-6~),
                texlive-fonts-recommended,
                texlive-lang-cyrillic,
+               texlive-lang-portuguese,
+               texlive-lang-spanish,
                texlive-latex-extra,
                texlive-latex-recommended
 #              texlive-lang-cjk,
