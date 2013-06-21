@@ -111,6 +111,10 @@ of patch file. Here are some headers that you can use:
 :Author:      Who wrote the patch (i.e. "Jane Doe <packager@example.com>").
 :Origin:      Where this patch comes from (i.e. "upstream"), when *Author* is
               not present.
+:Bug-Ubuntu:  A link to Launchpad bug, a short form is preferred (like
+              *https://bugs.launchpad.net/bugs/XXXXXXX*). If there are also
+              bugs in upstream or Debian bugtrackers, add *Bug* or *Bug-Debian*
+              headers.
 :Forwarded:   Whether the patch was forwarded upstream. Either "yes", "no" or
               "not-needed".
 :Last-Update: Date of the last revision (in form "YYYY-MM-DD").
@@ -119,21 +123,14 @@ of patch file. Here are some headers that you can use:
 Upgrading to New Upstream Versions
 -----------------------------------
 
-When you upgrade to a new upstream version, patches will often become out of
-date.  They might need to be refreshed to match the new upstream source or they
-might need to be removed altogether.
-
-You should start by ensuring no patches are applied.  Unfortunately a commit is
-needed before you can merge in the new upstream (this is `bug 815854`_)::
-
-    $ quilt pop -a
-    $ bzr commit -m "remove patches"
-
-Then upgrade to the new version::
+To upgrade to the new version, you can use ``bzr merge-upstream`` command::
 
     $ bzr merge-upstream --version 2.0.2 https://launchpad.net/ubuntu/+archive/primary/+files/kamoso_2.0.2.orig.tar.bz2
 
-Then apply the patches one at a time to check for problems::
+When you run this command, all patches will be unapplied, because they can
+become out of date. They might need to be refreshed to match the new upstream
+source or they might need to be removed altogether. To check for problems,
+apply the patches one at a time::
 
     $ quilt push
     Applying patch kubuntu_01_fix_qmax_on_armel.diff
@@ -211,5 +208,4 @@ maintainer or relevant Ubuntu team.  If there is no existing patch system then
 feel free to add Quilt.
 
 .. _`Quilt`: http://wiki.debian.org/UsingQuilt
-.. _`bug 815854`: https://bugs.launchpad.net/bzr-builddeb/+bug/815854
 .. _DEP-3: http://dep.debian.net/deps/dep3/
