@@ -149,7 +149,7 @@ Ubuntu infrastructure
 =====================
 
 Packages which have ``autopkgtest`` enabled will have their tests run whenever
-they get uploaded or any of their reverse-dependencies change. The output of
+they get uploaded or any of their dependencies change. The output of
 `automatically run autopkgtest tests`_ can be viewed on the web and is 
 regularly updated.
 
