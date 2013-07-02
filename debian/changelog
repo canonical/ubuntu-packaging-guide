@@ -32,9 +32,11 @@ ubuntu-packaging-guide (0.3.2) UNRELEASED; urgency=low
     particular debian release.
 
   [ Colin Watson ]
-  * auto-pkg-test.rst: We run tests for packages when their dependencies
-    change, not their reverse-dependencies (i.e. each upload triggers tests
-    for its reverse-dependencies).
+  * auto-pkg-test.rst:
+    - We run tests for packages when their dependencies change, not their
+      reverse-dependencies (i.e. each upload triggers tests for its
+      reverse-dependencies).
+    - Update for saucy.
 
  -- Andrew Starr-Bochicchio <asb@debian.org>  Fri, 08 Mar 2013 20:20:29 -0500
 
