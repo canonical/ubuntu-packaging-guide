@@ -104,14 +104,14 @@ Then, get the source code from Launchpad::
         bzr branch lp:auto-package-testing
         cd auto-package-testing
 
-And provision a Raring AMD64 system::
+And provision a Saucy AMD64 system::
 
-    ./bin/prepare-testbed -r raring amd64
+    ./bin/prepare-testbed -r saucy amd64
 
-This command will create a pristine Raring AMD64 VM from a cloud image. To 
+This command will create a pristine Saucy AMD64 VM from a cloud image. To
 run the tests, simply run::
 
-        ./bin/run-adt-test -r raring -a amd64 \
+        ./bin/run-adt-test -r saucy -a amd64 \
             -S file:///tmp/glib2.0-2.35.7/ glib2.0
 
 This would use the source package in ``/tmp/glib2.0-2.35.7/`` and run the
@@ -186,11 +186,11 @@ If you should run into any problems, you can join the `#ubuntu-quality IRC
 channel`_ to get in touch with developers who can help you.
 
 .. _`DEP 8 Specification`: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob_plain;f=doc/README.package-tests;hb=HEAD
-.. _`libxml2 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/raring/libxml2/raring/files/head:/debian/tests/
-.. _`gvfs tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/raring/gvfs/raring/files/head:/debian/tests/
-.. _`gtk+3.0 tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/raring/gtk+3.0/raring/files/head:/debian/tests/
-.. _`ubiquity tests`: http://bazaar.launchpad.net/~ubuntu-branches/ubuntu/raring/ubiquity/raring/files/head:/debian/tests/
-.. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Raring/view/AutoPkgTest/
+.. _`libxml2 tests`: https://bazaar.launchpad.net/+branch/ubuntu/libxml2/files/head:/debian/tests/
+.. _`gvfs tests`: https://bazaar.launchpad.net/+branch/ubuntu/gvfs/files/head:/debian/tests/
+.. _`gtk+3.0 tests`: https://bazaar.launchpad.net/+branch/ubuntu/gtk+3.0/files/head:/debian/tests/
+.. _`ubiquity tests`: https://bazaar.launchpad.net/+branch/ubiquity/files/head:/debian/tests/
+.. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Saucy/view/AutoPkgTest/
 .. _`lp:auto-package-testing`: https://code.launchpad.net/auto-package-testing
 .. _`auto-package-testing documentation`: http://bazaar.launchpad.net/~auto-package-testing-dev/auto-package-testing/trunk/view/head:/doc/USAGE.md
 .. _`list of required test-cases`: https://wiki.ubuntu.com/QATeam/RequiredTests
