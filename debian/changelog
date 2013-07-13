@@ -1,4 +1,12 @@
-ubuntu-packaging-guide (0.3.2) UNRELEASED; urgency=low
+ubuntu-packaging-guide (0.3.3) UNRELEASED; urgency=low
+
+  * 
+
+ -- Andrew Starr-Bochicchio <asb@debian.org>  Sat, 13 Jul 2013 13:40:17 -0400
+
+ubuntu-packaging-guide (0.3.2) unstable; urgency=low
+
+  * Upload to unstable.
 
   [ Dmitry Shachnev ]
   * debian/scripts/add-languages:
@@ -39,7 +47,7 @@ ubuntu-packaging-guide (0.3.2) UNRELEASED; urgency=low
       reverse-dependencies).
     - Update for saucy.
 
- -- Andrew Starr-Bochicchio <asb@debian.org>  Fri, 08 Mar 2013 20:20:29 -0500
+ -- Andrew Starr-Bochicchio <asb@debian.org>  Sat, 13 Jul 2013 13:24:42 -0400
 
 ubuntu-packaging-guide (0.3.1) experimental; urgency=low
 
