@@ -19,6 +19,7 @@ ubuntu-packaging-guide (0.3.2) UNRELEASED; urgency=low
 
   [ Daniel Holbach ]
   * add Brazilian Portuguese.
+  * add German, build-depends on texlive-lang-german.
   * Update UDS information to the new world of UDSes.
   * Update information about "CD images". They are not explicitly for CDs and
     never were. 

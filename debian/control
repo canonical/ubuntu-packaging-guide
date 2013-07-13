@@ -12,6 +12,7 @@ Build-Depends: cm-super-minimal,
                python3-sphinx (>= 1.1.3+dfsg-6~) | python-sphinx (>= 1.1.3+dfsg-6~),
                texlive-fonts-recommended,
                texlive-lang-cyrillic,
+               texlive-lang-german,
                texlive-lang-portuguese,
                texlive-lang-spanish,
                texlive-latex-extra,
@@ -209,3 +210,45 @@ Description: Ubuntu Packaging Guide - EPUB guide - Brazilian Portuguese version
  This package contains the EPUB version of the guide.
  .
  This is the Brazilian Portuguese version.
+
+Package: ubuntu-packaging-guide-html-de
+Depends: ubuntu-packaging-guide-common, ${misc:Depends}
+Architecture: all
+Description: Ubuntu Packaging Guide - HTML guide - German version
+ The Ubuntu Packaging Guide is a set of articles that should help you to get
+ involved with packaging and development of Ubuntu. It's not meant to replace
+ other great documentation like the Debian New Maintainer's Guide or the
+ Debian policy, but serve as a starting point with easy and simple to
+ understand articles.
+ .
+ This package contains the HTML version of the guide.
+ .
+ This is the German version.
+
+Package: ubuntu-packaging-guide-pdf-de
+Depends: ${misc:Depends}
+Architecture: all
+Description: Ubuntu Packaging Guide - PDF guide - German version
+ The Ubuntu Packaging Guide is a set of articles that should help you to get
+ involved with packaging and development of Ubuntu. It's not meant to replace
+ other great documentation like the Debian New Maintainer's Guide or the
+ Debian policy, but serve as a starting point with easy and simple to
+ understand articles.
+ .
+ This package contains the PDF version of the guide.
+ .
+ This is the German version.
+
+Package: ubuntu-packaging-guide-epub-de
+Depends: libjs-sphinxdoc, ${misc:Depends}
+Architecture: all
+Description: Ubuntu Packaging Guide - EPUB guide - German version
+ The Ubuntu Packaging Guide is a set of articles that should help you to get
+ involved with packaging and development of Ubuntu. It's not meant to replace
+ other great documentation like the Debian New Maintainer's Guide or the
+ Debian policy, but serve as a starting point with easy and simple to
+ understand articles.
+ .
+ This package contains the EPUB version of the guide.
+ .
+ This is the German version.
