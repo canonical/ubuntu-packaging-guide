@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-04-22 12:59+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2013-07-14 11:52+0000\n"
+"Last-Translator: Joachim Johansson <Unknown>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-12 06:12+0000\n"
+"X-Launchpad-Export-Date: 2013-07-15 04:58+0000\n"
 "X-Generator: Launchpad (build 16696)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
-msgstr ""
+msgstr "autopkgtest: Automatisk testning av paket"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
@@ -30,21 +30,23 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
 msgid "add the following to the Source section in ``debian/control``::"
-msgstr ""
+msgstr "Lägg till följande till sektionen Source i ``debian/control``::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:13
 msgid ""
 "add a file called ``debian/tests/control`` which specifies the requirements "
 "for the testbed,"
 msgstr ""
+"Lägg till en fil med namnet ``debian/tests/control`` som specificerar kraven "
+"för testunderlaget."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
 msgid "add the tests in ``debian/tests/``."
-msgstr ""
+msgstr "Lägg till testerna i ''debian/tests/''."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
 msgid "Testbed requirements"
-msgstr ""
+msgstr "Kraven för testunderlaget"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:21
 msgid ""
@@ -59,18 +61,24 @@ msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
 msgstr ""
+"Nedan tar vi en titt på källkodspaketet för ``glib2.0``. I ett väldigt "
+"enkelt fall skulle filen se ut så här::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
+"För testet i ``debian/tests/build`` skulle detta säkerställa att paketen "
+"``libglib2.0-dev`` och ``build-essential`` är installerade."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
 msgid ""
 "You can use ``@`` in the ``Depends`` line to indicate that you want all the "
 "packages installed which are built by the source package in question."
 msgstr ""
+"Du kan använda ``@`` på raden ``Depends`` för att indikera att du vill ha "
+"alla paket installerade som är byggda av källpaketet i fråga."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
@@ -78,7 +86,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
-msgstr ""
+msgstr "Det åtföljande testet för exemplet ovan skulle vara:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
 msgid ""
@@ -118,7 +126,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
 msgid "Then, get the source code from Launchpad::"
-msgstr ""
+msgstr "Hämta sedan källkoden från Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Saucy AMD64 system::"
@@ -151,7 +159,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:133
 msgid "Further examples"
-msgstr ""
+msgstr "Ytterligare exempel"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:135
 msgid ""
@@ -207,6 +215,8 @@ msgid ""
 "Packages in Debian with a testsuite header will also be automatically added "
 "when they are synced to Ubuntu."
 msgstr ""
+"Paket i Debian med testsekvensrubrik kommer automatiskt att läggas till då "
+"de synkroniseras med Ubuntu."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
 msgid "Getting the test into Ubuntu"
@@ -325,7 +335,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
-msgstr ""
+msgstr "Använda Chroot"
 
 #: ../ubuntu-packaging-guide/chroots.rst:5
 msgid ""
@@ -333,6 +343,9 @@ msgid ""
 "versions you can create the environment of the other version with a "
 "``chroot``."
 msgstr ""
+"Om du använder en version av Ubuntu, men arbetar på paket till en annan "
+"version, kan du skapa en miljö av den andra versionen med hjälp av "
+"''chroot''."
 
 #: ../ubuntu-packaging-guide/chroots.rst:9
 msgid ""
@@ -343,7 +356,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
-msgstr ""
+msgstr "Skapa en Chroot"
 
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
@@ -442,6 +455,9 @@ msgid ""
 "are made and hundreds of people interact every day, it is important to "
 "communicate effectively."
 msgstr ""
+"I ett projekt där tusentals rader kod ändras, många beslut tas och "
+"hundratals personer interagerar varje dag, är det viktigt att kommunicera "
+"effektivt."
 
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
@@ -455,7 +471,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
-msgstr ""
+msgstr "När det handlar om utveckling, är dessa de viktigaste:"
 
 #: ../ubuntu-packaging-guide/communication.rst:18
 msgid ""
@@ -487,7 +503,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
-msgstr ""
+msgstr "#ubuntu-devel (för generella diskussioner om utveckling)"
 
 #: ../ubuntu-packaging-guide/communication.rst:33
 msgid "#ubuntu-motu (for MOTU team discussion and generally getting help)"
@@ -573,7 +589,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
-msgstr ""
+msgstr "Kontrollfilen"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:72
 msgid ""
@@ -624,7 +640,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
 msgid "The copyright file"
-msgstr ""
+msgstr "Copyright-filen"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:130
 msgid ""
@@ -4777,4 +4793,5 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Daniel Holbach https://launchpad.net/~dholbach\n"
 "  Dmitry Shachnev https://launchpad.net/~mitya57\n"
+"  Joachim Johansson https://launchpad.net/~joachim-j\n"
 "  Peter Ahlgren https://launchpad.net/~peter.ahlgren"

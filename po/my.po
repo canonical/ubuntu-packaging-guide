@@ -1,16 +1,16 @@
-# Turkish translation for ubuntu-packaging-guide
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# Burmese translation for ubuntu-packaging-guide
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the ubuntu-packaging-guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-07-14 21:51+0000\n"
-"Last-Translator: İbrahim <ikorucu77@gmail.com>\n"
-"Language-Team: Turkish <tr@li.org>\n"
+"PO-Revision-Date: 2013-07-14 19:43+0000\n"
+"Last-Translator: Launchpad Translations Administrators <Unknown>\n"
+"Language-Team: Burmese <my@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
-msgstr "autopkgtest: Paketler için Otomatik Test"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
@@ -30,23 +30,21 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
 msgid "add the following to the Source section in ``debian/control``::"
-msgstr "\"debian/control\" ifadesini Kaynak kısmına ekleyin."
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:13
 msgid ""
 "add a file called ``debian/tests/control`` which specifies the requirements "
 "for the testbed,"
 msgstr ""
-"\"debian/test/control\" isimli ve test ortamı için gerekliliklerin neler "
-"olduğunu belirten bir dosya ekleyin."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
 msgid "add the tests in ``debian/tests/``."
-msgstr "\"debian/tests/\" alanına testleri ekleyin."
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
 msgid "Testbed requirements"
-msgstr "Test ortamı gereklilikleri"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:21
 msgid ""
@@ -61,16 +59,12 @@ msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
 msgstr ""
-"Alt kısımda \"glib2.0\" kaynak paketini inceliyoruz. Çok basit bir durumda "
-"dosya şöyle görünmektedir."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
-"\"debian/tests/build\" testi, 'libglib2.0-dev' ve 'build-essential' "
-"paketlerinin yüklü olup olmadıklarını kontrol eder."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
 msgid ""
@@ -80,11 +74,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr "Güncel tester"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
-msgstr "Yukarıdaki örnek için ilgili test şöyle olabilir:"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
 msgid ""
@@ -93,23 +87,16 @@ msgid ""
 "provided by `pkg-config`). Then the compiled binary, which just exercises "
 "some parts of core glib functionality, is run."
 msgstr ""
-"İşte size Geçici bir klasör içine yazılmış basit bir C kodlama örneği.  "
-"Sonra bu kodlar Sistem kütüphaneleri tarafından (pkg-config tarafından "
-"sağlanan işaret ve kütüphaneler kullanılır) derlenmektedir. Bu derlenen "
-"program, glib ana fonksiyonunun bir kısım parçalarını test eder."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:80
 msgid ""
 "While this test is very small and basic, it tests quite a number of core "
 "components on a system. This may help to uncover critical issues early on."
 msgstr ""
-"Bu test küçük ve temel olmasına rağmen yine de sistemdeki, oldukça önemli "
-"miktarda ana elemanı kontrol eder. Bu da bize, kritik olayları erkenden "
-"ortaya çıkarmamıza yardım eder."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
 msgid "Executing the test"
-msgstr "Testi uygulamak"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
 msgid ""
@@ -131,7 +118,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
 msgid "Then, get the source code from Launchpad::"
-msgstr "Sonra, kaynak kodu Launchpad sisteminden alın"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Saucy AMD64 system::"
@@ -742,7 +729,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:251
 msgid "Additional Files"
-msgstr "Ek Dosyalar"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:254
 msgid "The install file"
@@ -4787,9 +4774,3 @@ msgstr ""
 
 msgid "translator-credits"
 msgstr ""
-"Launchpad Contributions:\n"
-"  Daniel Holbach https://launchpad.net/~dholbach\n"
-"  Dmitry Shachnev https://launchpad.net/~mitya57\n"
-"  Semetey Coşkun https://launchpad.net/~sem0900\n"
-"  Sinan Ateş https://launchpad.net/~sinanates\n"
-"  İbrahim https://launchpad.net/~ikorucu77"
