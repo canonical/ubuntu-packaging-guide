@@ -9,13 +9,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-07-12 09:30+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
+"PO-Revision-Date: 2013-07-14 21:34+0000\n"
+"Last-Translator: Jose Luis Tirado <Unknown>\n"
 "Language-Team: Español; Castellano <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-13 06:10+0000\n"
+"X-Launchpad-Export-Date: 2013-07-15 04:58+0000\n"
 "X-Generator: Launchpad (build 16696)\n"
 "Language: es\n"
 
@@ -160,13 +160,15 @@ msgstr "Luego, obtenga el código fuente desde Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Saucy AMD64 system::"
-msgstr ""
+msgstr "Y disponer de un sistema Saucy AMD64::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Saucy AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Esta orden creará una MV de Saucy AMD64 completamente limpia, a partir de "
+"una imagen de la nube. Para correr las pruebas, simplemente ejecute::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -255,6 +257,10 @@ msgid ""
 "of `automatically run autopkgtest tests`_ can be viewed on the web and is "
 "regularly updated."
 msgstr ""
+"Los paquetes que tienen activado ``autopkgtest`` ejecutarán sus pruebas "
+"siempre que se suban o cambie alguna de sus dependencias. La salida de "
+"`automatically run autopkgtest tests`_  se puede ver en la web y se "
+"actualiza de forma regular."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:156
 msgid ""
@@ -1159,7 +1165,7 @@ msgstr ""
 "informa no estar sincronizados con las versiones originales véase la página "
 "`Ubuntu External Health Status "
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_ (estado de salud externa "
-"de Ubuntu, en inglés)`."
+"de Ubuntu, en inglés)."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
 msgid "The source/format file"
@@ -2355,6 +2361,10 @@ msgid ""
 "complete, your signed public key will be ready to verify your contributions "
 "around the world."
 msgstr ""
+"Esto mandará su clave al servidor de claves de Ubuntu, pero una red de "
+"servidores de claves la sincronizarán automáticamente entre ellos. Una vez "
+"que se complete esta sincronización, su clave pública firmada estará lista "
+"para verificar sus contribuciones por todo el mundo."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:116
 msgid "Create your SSH key"
@@ -2859,27 +2869,38 @@ msgid ""
 "the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-"
 "guide>`_."
 msgstr ""
+"Puede leer esta guía sin conexión en diferentes formatos, si instala uno de "
+"los `paquetes binarios <https://launchpad.net/ubuntu/+source/ubuntu-"
+"packaging-guide>`_."
 
 #: ../ubuntu-packaging-guide/index.rst:94
 msgid ""
 "If you want to learn more about building Debian packages, here are some "
 "Debian resources you may find useful:"
 msgstr ""
+"Si quiere conocer más sobre la construcción de paquetes Debian, aquí tiene "
+"algunos recursos Debian que pueden resultarle útiles:"
 
 #: ../ubuntu-packaging-guide/index.rst:97
 msgid ""
 "`How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;"
 msgstr ""
+"`Cómo empaquetar para Debian "
+"<https://wiki.debian.org/HowToPackageForDebian>`_;"
 
 #: ../ubuntu-packaging-guide/index.rst:98
 msgid "`Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;"
 msgstr ""
+"`Manual de políticas de Debian <http://www.debian.org/doc/debian-policy/>`_;"
 
 #: ../ubuntu-packaging-guide/index.rst:99
 msgid ""
 "`Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-"
 "guide/>`_ — available in many languages;"
 msgstr ""
+"`Guía de los nuevos mantenedores de Debian "
+"<http://www.debian.org/doc/manuals/maint-guide/>`_ — disponible en muchos "
+"idiomas;"
 
 #: ../ubuntu-packaging-guide/index.rst:101
 msgid ""
@@ -2931,6 +2952,19 @@ msgid ""
 "packages that get on the image. These images are then used for installation "
 "tests and provide the feedback for further release planning."
 msgstr ""
+"Cada vez que se libera una nueva versión de una aplicación, o cuando alguien "
+"hace cambios al código fuente que va a Ubuntu, el paquete fuente debe ser "
+"subido a las máquinas de compilación de Launchpad para ser compilado. Los "
+"paquetes binarios resultantes se distribuyen entonces a los repositorios y "
+"sus espejos en distintos países. Las URLs de ``/etc/apt/sources.list`` "
+"apuntan a un repositorio o a un espejo. Cada día se crean imágenes para una "
+"selección de variaciones de Ubuntu. Estas imágenes se pueden usar en varias "
+"situaciones. Hay imágenes que se pueden cargar en una llave USB, grabar en "
+"DVDs, emplear imágenes para arranque en red e imágenes adecuadas para su "
+"teléfono o tableta. Ubuntu Desktop, Ubuntu Server, Kubuntu y otros "
+"especifican una lista de paquetes requeridos que son incluidos en la imagen. "
+"Estas imágenes se usan para pruebas de instalación y proporcionan "
+"información para la planificación de emisiones."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:27
 msgid ""
@@ -2976,6 +3010,19 @@ msgid ""
 "a videocast, chat with attendants and subscribe to changes of "
 "specifications, so you are always up to date."
 msgstr ""
+"Miles de los paquetes fuente, miles de millones de líneas de código, cientos "
+"de contribuyentes requieren de mucha comunicación y planificación para "
+"mantener altos estándares de calidad. Al principio y hacia la mitad de cada "
+"ciclo de emisión tiene lugar la «Ubuntu Developer Summit» (cumbre de "
+"desarrolladores de Ubuntu) en la que los desarrolladores y contribuyentes se "
+"juntan para planificar las características de las próximas versiones. Cada "
+"característica es discutida por sus accionistas y se escribe una "
+"especificación que contiene información detallada sobre sus supuestos, "
+"implementación, cambios necesarios en otras partes, cómo probarla y así "
+"sucesivamente. Todo esto se hace de forma abierta y transparente, así que "
+"puede participar remotamente y escuchar una transmisión de vídeo, chalar con "
+"los asistentes y suscribirse a cambios en las especificaciones, de forma que "
+"siempre esté al día."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:54
 msgid ""
@@ -3078,11 +3125,11 @@ msgid ""
 msgstr ""
 "Los desarrollos de código abierto se producen en un mundo distribuido con "
 "distintos objetivos diferentes y con áreas de interés diferentes. Por "
-"ejemplo, podría darse el caso de que un «upstream» en particular esté "
+"ejemplo, podría darse el caso de que alguien aguas arriba («upstream») esté "
 "interesado en trabajar en una nueva funcionalidad importante mientras que "
-"Ubuntu, debido a su estricta planificación de publicaciones, está interesado "
-"en distribuir una versión sólida con solo algunas correcciones de errores. "
-"Es por ello que se usa el «desarrollo distribuido», en el que se trabaja en "
+"Ubuntu, debido a su estricta planificación de emisiones, está interesado en "
+"distribuir una versión sólida solo con algunas correcciones de errores. Es "
+"por ello que se usa el «desarrollo distribuido», en el que se trabaja en "
 "distintas ramas de código que son combinadas con las demás después de "
 "revisiones de código y suficientes discusiones."
 
@@ -3094,12 +3141,11 @@ msgid ""
 "It would be the best possible compromise and a situation where everybody "
 "wins."
 msgstr ""
-"En el ejemplo mencionado anteriormente tendría sentido publicar Ubuntu con "
-"una versión existente del proyecto, añadir la corrección del error, "
-"integrarla aguas arriba («upstream») para su próxima publicación y "
-"distribuirla (si fuera conveniente) en la próxima publicación de Ubuntu. "
-"Sería el mejor compromiso posible y una situación en la que todo el mundo "
-"gana."
+"En el ejemplo mencionado anteriormente tendría sentido emitir Ubuntu con una "
+"versión existente del proyecto, añadir la corrección del error, integrarla "
+"aguas arriba («upstream») para su próxima emisión y distribuirla (si fuera "
+"conveniente) en la próxima emisión de Ubuntu. Sería el mejor compromiso "
+"posible y una situación en la que todo el mundo gana."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:106
 msgid ""
@@ -3125,9 +3171,9 @@ msgid ""
 "and, if not, do your best to make the solution a concerted effort."
 msgstr ""
 "Cuando intente encontrar una solución, habitualmente es una buena idea "
-"comprobar los proyectos «upstreams» para ver si el problema (o una posible "
-"solución) es conocido y, si no, hacer lo posible para que la solución sea un "
-"esfuerzo concertado."
+"comprobar los proyectos aguas arriba («upstreams») para ver si el problema "
+"(o una posible solución) es conocido y, si no, hacer lo posible para que la "
+"solución sea un esfuerzo concertado."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:119
 msgid ""
@@ -3513,7 +3559,7 @@ msgstr ""
 "Los archivos ``.la`` de libtool son necesarios en algunos sistemas no-Linux "
 "con soporte de bibliotecas pobre, pero en sistemas Debian normalmente causan "
 "más problemas que los que resuelven. Actualmente es un objetivo de Debian "
-"eliminar los archivos .la `Debian goal to remove .la files`_ y deberíamos "
+"eliminar los archivos .la (`Debian goal to remove .la files`_) y deberíamos "
 "ayudar a hacerlo."
 
 #: ../ubuntu-packaging-guide/libraries.rst:82
@@ -4221,27 +4267,34 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:105
 msgid "Patch Headers"
-msgstr ""
+msgstr "Cabeceras de parche"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:107
 msgid ""
 "We recommend that you tag every patch with DEP-3_ headers by putting them at "
 "the top of patch file. Here are some headers that you can use:"
 msgstr ""
+"Le recomendamos que etiquete cada parche con cabeceras DEP-3_ añadiéndolas "
+"al comienzo de cada archivo de parche. Estas son algunas de las cabeceras "
+"que puede usar:"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
 msgid "Description of what the patch does."
-msgstr ""
+msgstr "Descripción de lo que hace el parche."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:111
 msgid "Who wrote the patch (i.e. \"Jane Doe <packager@example.com>\")."
 msgstr ""
+"Quién escribió el parque (por ejemplo, «Juana Nadie "
+"<empaquetador@ejemplo.com>\")."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:112
 msgid ""
 "Where this patch comes from (i.e. \"upstream\"), when *Author* is not "
 "present."
 msgstr ""
+"De dónde proviene el parche (por ejemplo, «upstream», aguas arriba), cuando "
+"no se indica el autor (*Author*)."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:114
 msgid ""
@@ -4249,16 +4302,21 @@ msgid ""
 "*https://bugs.launchpad.net/bugs/XXXXXXX*). If there are also bugs in "
 "upstream or Debian bugtrackers, add *Bug* or *Bug-Debian* headers."
 msgstr ""
+"Un enlace al error en Launchpad, prefiriéndose una forma corta (como "
+"*https://bugs.launchpad.net/bugs/XXXXXXX*). Si existen tambien errores aguas "
+"arriba o , añadir cabeceras *Bug* o *Bug-Debian*."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:118
 msgid ""
 "Whether the patch was forwarded upstream. Either \"yes\", \"no\" or \"not-"
 "needed\"."
 msgstr ""
+"Si el parche se reenvió aguas arriba. Uno de «yes» (sí), «no» (no) o «not-"
+"needed» (no necedsario)."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:120
 msgid "Date of the last revision (in form \"YYYY-MM-DD\")."
-msgstr ""
+msgstr "Fecha de la última revisión (en formato «YYYY-MM-DD»)."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:124
 msgid "Upgrading to New Upstream Versions"
@@ -4268,6 +4326,8 @@ msgstr "Actualizar a nuevas versiones de aguas arriba"
 msgid ""
 "To upgrade to the new version, you can use ``bzr merge-upstream`` command::"
 msgstr ""
+"Para actualizar a la nueva versión, puede usar la orden ``bzr merge-"
+"upstream``::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:130
 msgid ""
@@ -4276,6 +4336,10 @@ msgid ""
 "upstream source or they might need to be removed altogether. To check for "
 "problems, apply the patches one at a time::"
 msgstr ""
+"Cuando ejecute esa orden, se des-aplicarán todos los parches, porque pueden "
+"quedarse obsoletos. Podría ser necesario refrescarlos para que se adapten al "
+"nuevo código fuentes aguas arriba o deban ser eliminados completamente. Para "
+"comprobar posibles problemas, aplique los parches uno a uno::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:142
 msgid ""
@@ -4325,13 +4389,16 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:176
 msgid "Configuring Quilt"
-msgstr ""
+msgstr "Configurando Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:178
 msgid ""
 "You can use ``~/.quiltrc`` file to configure quilt. Here are some options "
 "that can be useful for using quilt with debian/packages:"
 msgstr ""
+"Puede usar el archivo ``~/.quiltrc`` para configurar quilt. Estas son "
+"algunas opciones que pueden resultar útiles para usar quilt con paquetes "
+"debian:"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:192
 msgid "Other Patch Systems"
@@ -5795,6 +5862,9 @@ msgid ""
 "example, to merge from the version of the package in Debian Unstable run "
 "[#]_::"
 msgstr ""
+"Después ejecute ``bzr merge`` pasándole la URL de la rama desde la que "
+"fusionar. Por ejemplo, para fusionar desde la versión del paquete de Debian "
+"Unstable_ ejecute::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:28
 msgid ""
@@ -5991,6 +6061,9 @@ msgid ""
 "To check other available branches of a package in Debian, see package code "
 "page. E.g. https://code.launchpad.net/debian/+source/tomboy"
 msgstr ""
+"Para comprobar otras ramas disponibles de un paquete en Debian, visite la "
+"página de código del paquete. Por ejemplo, "
+"https://code.launchpad.net/debian/+source/tomboy"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:3
 msgid "Seeking Review and Sponsorship"
@@ -6030,10 +6103,10 @@ msgid ""
 "via-changelog>` using ``dch`` and ``bzr commit``.  However, the branch and "
 "bug don't actually get linked until you push the branch to Launchpad."
 msgstr ""
-"Anteriormente le mostramos cómo asociar su rama al error (:ref:`associate "
-"your branch to the bug <link-via-changelog>`) usando ``dch`` y ``bzr "
-"commit``. Sin embargo, la rama y el error no se enlazan de forma efectiva "
-"hasta que se sube la rama a Launchpad."
+"Anteriormente le hemos mostrado cómo asociar su rama al error "
+"(:ref:`associate your branch to the bug <link-via-changelog>`) usando "
+"``dch`` y ``bzr commit``. Sin embargo, la rama y el error no se enlazan de "
+"forma efectiva hasta que se sube la rama a Launchpad."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:25
 msgid ""
