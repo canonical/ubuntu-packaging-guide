@@ -1,6 +1,7 @@
 ubuntu-packaging-guide (0.3.3) UNRELEASED; urgency=low
 
-  * 
+  * Use un-minified versions of 960.css and reset.css (Closes: #717008,
+    LP: #1201636). 
 
  -- Andrew Starr-Bochicchio <asb@debian.org>  Sat, 13 Jul 2013 13:40:17 -0400
 
