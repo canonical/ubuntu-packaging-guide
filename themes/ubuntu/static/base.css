@@ -421,11 +421,11 @@ footer p {
 .box-clear {
 	margin-bottom: 40px;
 }
-.box-clear .grid-4.first {
+.box-clear .grid_4.first {
 	margin-right: 15px;
 	padding-right: 15px;
 }
-.box-clear .grid-4 {
+.box-clear .grid_4 {
 	margin-left: 0;
 	margin-right: 10px;
 	padding-right: 10px;
