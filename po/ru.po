@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-04-02 15:19+0000\n"
-"Last-Translator: Dmitry Shachnev <mitya57@gmail.com>\n"
+"PO-Revision-Date: 2013-07-17 11:31+0000\n"
+"Last-Translator: Aleksey Kabanov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-12 06:12+0000\n"
+"X-Launchpad-Export-Date: 2013-07-18 06:21+0000\n"
 "X-Generator: Launchpad (build 16696)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -2312,6 +2312,10 @@ msgid ""
 "complete, your signed public key will be ready to verify your contributions "
 "around the world."
 msgstr ""
+"Эта команда отправит ваш ключ на сервер ключей Ubuntu, а сеть серверов "
+"ключей автоматически синхронизирует ключ между собой. После того, как эта "
+"синхронизация завершится, ваш подписанный открытый ключ будет готов для "
+"удостоверения сделанного вами вклада во всём мире."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:116
 msgid "Create your SSH key"
@@ -2816,12 +2820,17 @@ msgid ""
 "the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-"
 "guide>`_."
 msgstr ""
+"Вы сможете прочитать это руководство в оффлайне в других форматах, если "
+"установите один из `двоичных пакетов "
+"<https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide>`_."
 
 #: ../ubuntu-packaging-guide/index.rst:94
 msgid ""
 "If you want to learn more about building Debian packages, here are some "
 "Debian resources you may find useful:"
 msgstr ""
+"Если вы желаете узнать больше о сборке пакетов Debian, вот несколько "
+"ресурсов Debian, которые могут быть вам полезны:"
 
 #: ../ubuntu-packaging-guide/index.rst:97
 msgid ""
@@ -2837,6 +2846,9 @@ msgid ""
 "`Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-"
 "guide/>`_ — available in many languages;"
 msgstr ""
+"`Руководство начинающего разработчика Debian' "
+"<http://www.debian.org/doc/manuals/maint-guide/>`_ — доступно на многих "
+"языках;"
 
 #: ../ubuntu-packaging-guide/index.rst:101
 msgid ""
@@ -4098,11 +4110,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
 msgid "Description of what the patch does."
-msgstr ""
+msgstr "Описание того, что делает патч."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:111
 msgid "Who wrote the patch (i.e. \"Jane Doe <packager@example.com>\")."
-msgstr ""
+msgstr "Кто написал патч (например, \"Jane Doe <packager@example.com>\")."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:112
 msgid ""
