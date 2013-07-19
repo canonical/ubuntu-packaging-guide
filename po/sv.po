@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-07-15 08:32+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2013-07-18 12:24+0000\n"
+"Last-Translator: Peter Ahlgren <Unknown>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-17 06:58+0000\n"
+"X-Launchpad-Export-Date: 2013-07-19 06:18+0000\n"
 "X-Generator: Launchpad (build 16696)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -27,6 +27,9 @@ msgid ""
 "integrated into packages. To integrate a test into a package, all you need "
 "to do is:"
 msgstr ""
+"'DEP 8-specifikationen' definierar hur automatisk testning väldigt enkelt "
+"kan integreras i paketen. För att integrera ett test i ett paket, behöver du "
+"bara göra:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
 msgid "add the following to the Source section in ``debian/control``::"
@@ -55,6 +58,10 @@ msgid ""
 "gets broken during the build or if ``root`` permissions are required. The "
 "`DEP 8 specification`_ lists all available options."
 msgstr ""
+"I \"debian/tests/control\" specificerar du vad du förväntar dig från "
+"testbänken. Du kan till exempel ange alla de paket som krävs för testet, om "
+"testbänken går sönder under bygget, eller om root-privilegier krävs. 'DEP 8-"
+"specifikationen' listar alla tillgängliga alternativ."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
@@ -82,7 +89,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr ""
+msgstr "De riktiga testerna"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
@@ -95,16 +102,23 @@ msgid ""
 "provided by `pkg-config`). Then the compiled binary, which just exercises "
 "some parts of core glib functionality, is run."
 msgstr ""
+"Här är en enkel snutt C-kod som skrivs till en temporär mapp. Koden "
+"kompileras med systembiblioteken (med de flaggor och sökvägar som ges i 'pkg-"
+"config'). Sen körs den kompilerade binärfilen, som i det här fallet visar "
+"några funktioner från 'core glib'."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:80
 msgid ""
 "While this test is very small and basic, it tests quite a number of core "
 "components on a system. This may help to uncover critical issues early on."
 msgstr ""
+"Även om detta test är väldigt litet och enkelt, testar det ett stort antal "
+"kärnkomponenter i ett system. Det kan hjälpa till att avslöja  kritiska fel "
+"i ett tidigt skede."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
 msgid "Executing the test"
-msgstr ""
+msgstr "Verkställ testet"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
 msgid ""
@@ -113,6 +127,10 @@ msgid ""
 "from the ``autopkgtest`` package to execute the test. The easiest way to do "
 "this is to run this command in the source tree::"
 msgstr ""
+"Testskriptet kan enkelt verkställas för sig själv, men om du vill "
+"säkerställa att testbänken är rätt inställd så kanske du vill använda \"adt-"
+"run\" från paketet \"autopkgtest\" för att verkställa testet. Det enklaste "
+"sättet att göra detta är att köra kommandot i source-trädet::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:93
 msgid ""
@@ -123,6 +141,12 @@ msgid ""
 "uses a pristine virtual machine to run the tests. To set it up, firstly "
 "install the needed dependencies::"
 msgstr ""
+"Baksidan med den här metoden är att du testar det lokalt, utan att "
+"säkerställa att det fungerar i en minimal miljö. Till exempel är det svårt "
+"att säkerställa att alla nödvändiga paket för testet finns installerade. Med "
+"'lp:auto-package-testing' har vi ett mer uttömmande testverktyg. Det "
+"använder en helt ren virtuell maskin för att köra testet.  För att starta "
+"det måste du installera följande paket-beroenden::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
 msgid "Then, get the source code from Launchpad::"
@@ -130,13 +154,15 @@ msgstr "Hämta sedan källkoden från Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Saucy AMD64 system::"
-msgstr ""
+msgstr "Och tillhandahålla ett Saucy AMD64-system::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Saucy AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Detta kommando kommer att skapa en helt ren Saucy AMD64 virtuell maskin från "
+"en avbildning i molnet. För att köra testet kör du::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -150,12 +176,23 @@ msgid ""
 "you can log into the virtual machine after the tests were run. This makes it "
 "very easy to debug issues."
 msgstr ""
+"Det här kommer att använda källpaketet i \"/tmp/glib2.0-2.35.7/\" och kommer "
+"att köra testerna från trädet mot paketet \"glib2.0\" från arkivet. "
+"Alternativet \"-S\" stöder också scheman för bzr-, git-, och apt-källor. Om "
+"du bara specificerar källan med \"-S\" utan att ange paketnamnet, så kommer "
+"det istället att bygga förgreningen och installera binärerna från det "
+"bygget. Det kan vara användbart om du vill testa nyare versioner än de som "
+"finns paketerade i Ubuntu, eller om paketet inte alls finns i Ubuntu. Om du "
+"använder flaggan \"-k\" kan du logga in i den virtuella maskinen efter att "
+"testerna har körts vilket gör det enklare att felsöka problem."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:127
 msgid ""
 "The `auto-package-testing documentation`_ has a lot more valuable "
 "information on other testing options."
 msgstr ""
+"I 'auto-package-testing documentation'_ finns värdefull information om "
+"ytterligare testalternativ."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:133
 msgid "Further examples"
@@ -166,12 +203,16 @@ msgid ""
 "This list is not comprehensive, but might help you get a better idea of how "
 "automated tests are implemented and used in Ubuntu."
 msgstr ""
+"Den här listan är inte fullständig, men den kan ge dig insikter i hur "
+"automatiserade tester implementeras och används i Ubuntu."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:138
 msgid ""
 "The `libxml2 tests`_ are very similar. They also run a test-build of a "
 "simple piece of C code and execute it."
 msgstr ""
+"Testerna i \"libxml2 tests\"_ fungerar på ett liknande sätt. De kör också "
+"ett testbygge av en enkel snutt C-kod och verkställer den."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
 msgid ""
@@ -179,10 +220,13 @@ msgid ""
 "There is an additional \"python3-gi\" test which verifies that the GTK "
 "library can also be used through introspection."
 msgstr ""
+"Testerna i 'gtk+3.0 tests'_ gör även en  kompilera/länka/kör-kontroll i bygg-"
+"testerna. Det finns även ett \"python3-gi\"-test som verifierar att GTK-"
+"biblioteket kan användas."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
-msgstr ""
+msgstr "I 'ubiquity tests'_ verkställs testsekvenserna från uppströmmen."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:144
 msgid ""
@@ -190,10 +234,12 @@ msgid ""
 "very interesting because they emulate usage of CDs, Samba, DAV and other "
 "bits."
 msgstr ""
+"I 'gvfs tests'_ finns omfattande funktionstester som är intressanta då de "
+"emulerar användningen av cd-skivor, Samba, DAV och andra bitar."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:149
 msgid "Ubuntu infrastructure"
-msgstr ""
+msgstr "Ubuntu-infrastruktur"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:151
 msgid ""
@@ -202,6 +248,9 @@ msgid ""
 "of `automatically run autopkgtest tests`_ can be viewed on the web and is "
 "regularly updated."
 msgstr ""
+"Paket som har \"autopkgtest\" aktiverat kommer att testas när de laddas upp "
+"eller då deras beroenden ändras. Resultatet av 'automatically run "
+"autopkgtest tests'_ kan ses på nätet och uppdateras regelbundet."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:156
 msgid ""
@@ -209,6 +258,9 @@ msgid ""
 "they should still be submitted to Debian, as DEP-8 is a Debian specification "
 "and Debian developers or users can still manually run the tests."
 msgstr ""
+"Även om Debian saknar en automatisk infrastruktur för automatiska tester, så "
+"bör de ändå skickas till Debian, då DEP-8 är en Debian-specifikation och "
+"Debian-utvecklare och -användare kan fortfarande köra testerna manuellt."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:160
 msgid ""
@@ -220,34 +272,37 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
 msgid "Getting the test into Ubuntu"
-msgstr ""
+msgstr "Att få med testerna i Ubuntu"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
+"Processen för att lämna in en autopkgtest för ett paket, är i stort sett "
+"likadant som :doc:'fixa en bugg i Ubuntu<./fixing-a-bug>'. I stort sett gör "
+"du bara:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "run ``bzr branch ubuntu:<packagename>``,"
-msgstr ""
+msgstr "kör ``bzr branch ubuntu:<namn-på-paketet>``,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
 msgid "edit ``debian/control`` to enable the tests,"
-msgstr ""
+msgstr "ändra ``debian/control`` för att aktivera testerna,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
 msgid "add the ``debian/tests`` directory,"
-msgstr ""
+msgstr "lägg till ``debian/tests`` katalogen,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
-msgstr ""
+msgstr "Skriv ``debian/tests/control``baserat på `DEP 8 Specifikationen`_,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid "add your test case(s) to ``debian/tests``,"
-msgstr ""
+msgstr "lägg till dina testfall till ``debian/tests``,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:174
 msgid ""
@@ -257,7 +312,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
 msgid "What you can do"
-msgstr ""
+msgstr "Vad du kan göra"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:181
 msgid ""
@@ -265,12 +320,17 @@ msgid ""
 "where packages which need tests are put into different categories. Here you "
 "can find examples of these tests and easily assign them to yourself."
 msgstr ""
+"Teknikerna i Ubuntu-teamet har satt ihop en `lista med de nödvändiga "
+"testfallen`_, där paket som behöver tester sorteras i olika kategorier. Här "
+"kan du finna exempel på dessa tester och enkelt tilldela dom till dig själv."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:185
 msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel`_ to get in touch with developers who can help you."
 msgstr ""
+"Om du stöter på några problem, kan du gå med i IRC-kanelen `#ubuntu-quality` "
+"för att komma i kontakt med utvecklare som kan hjälpa dig."
 
 #: ../ubuntu-packaging-guide/backports.rst:3
 msgid "Backporting software updates"
@@ -294,6 +354,9 @@ msgid ""
 "don't need approval of anyone, but the downside of it is that your users "
 "will have to manually enable it. It is a non-standard software source."
 msgstr ""
+"Att använda sig av PPA har en rad av fördelar. Det är ganska enkelt. Du "
+"behöver inte godkännande av någon, men nackdelen  är att dina användare "
+"måste manuellt aktivera det. Det är en icke-standard mjukvaru-källa."
 
 #: ../ubuntu-packaging-guide/backports.rst:18
 msgid ""
@@ -360,13 +423,15 @@ msgstr "Skapa en Chroot"
 
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
-msgstr ""
+msgstr "Använd kommandot ''debootstrap'' till att skapa en ny chroot::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
 "This will create a directory ``oneiric`` and install a minimal oneiric "
 "system into it."
 msgstr ""
+"Detta kommer skapa katalogen ``oneiric`` och installera ett minimalt oneiric "
+"system i den."
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
@@ -376,19 +441,23 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
-msgstr ""
+msgstr "Du kan då arbeta i chroot::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:30
 msgid ""
 "Where you can install or remove any package you wish without affecting your "
 "main system."
 msgstr ""
+"Där kan du installera eller radera vilka paket du vill utan att påverka ditt "
+"huvudsystem."
 
 #: ../ubuntu-packaging-guide/chroots.rst:33
 msgid ""
 "You might want to copy your GPG/ssh keys and Bazaar configuration into the "
 "chroot so you can access and sign packages directly::"
 msgstr ""
+"Du kanske vill kopiera dina GPG/ssh-nycklar och din konfiguration för Bazaar "
+"in i chroot'en, så att du kan komma åt och signera paket direkt::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:39
 msgid ""
@@ -413,7 +482,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:55
 msgid "Alternatives"
-msgstr ""
+msgstr "Alternativ"
 
 #: ../ubuntu-packaging-guide/chroots.rst:57
 msgid ""
@@ -447,7 +516,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
-msgstr ""
+msgstr "Kommunikation inon Ubuntu Utveckling"
 
 #: ../ubuntu-packaging-guide/communication.rst:5
 msgid ""
@@ -461,13 +530,16 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:10
 msgid "Mailing lists"
-msgstr ""
+msgstr "E-postlista"
 
 #: ../ubuntu-packaging-guide/communication.rst:12
 msgid ""
 "Mailing lists are a very important tool if you want to communicate ideas to "
 "a broader team and make sure that you reach everybody, even across timezones."
 msgstr ""
+"E-postlistor är ett väldigt viktigt verktyg om du vill nå ut med ideer till "
+"ett större team, och vara säker på att nå ut till alla, även i andra "
+"tidzoner."
 
 #: ../ubuntu-packaging-guide/communication.rst:16
 msgid "In terms of development, these are the most important ones:"
@@ -484,6 +556,8 @@ msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (general Ubuntu "
 "development discussion)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel (generella Ubuntu "
+"utvecklings diskussioner)"
 
 #: ../ubuntu-packaging-guide/communication.rst:22
 msgid ""
@@ -493,7 +567,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:27
 msgid "IRC Channels"
-msgstr ""
+msgstr "IRC-kanaler"
 
 #: ../ubuntu-packaging-guide/communication.rst:29
 msgid ""

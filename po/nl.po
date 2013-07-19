@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-05-13 06:37+0000\n"
+"PO-Revision-Date: 2013-07-18 15:30+0000\n"
 "Last-Translator: Hannie Dumoleyn <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-12 06:12+0000\n"
+"X-Launchpad-Export-Date: 2013-07-19 06:18+0000\n"
 "X-Generator: Launchpad (build 16696)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -158,13 +158,15 @@ msgstr "Haal daarna de broncode op van Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Saucy AMD64 system::"
-msgstr ""
+msgstr "En maak een Saucy AMD64-systeem aan::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Saucy AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Deze opdracht zal een schone Saucy AMD VM aanmaken van een cloud-"
+"imagebestand. Voer de testen uit met::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -228,7 +230,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
 msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
-msgstr ""
+msgstr "Bij de `ubiquity tests`_ wordt de upstream test-suite uitgevoerd."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:144
 msgid ""
@@ -236,10 +238,13 @@ msgid ""
 "very interesting because they emulate usage of CDs, Samba, DAV and other "
 "bits."
 msgstr ""
+"De `gvfs tests`_ bevatten uitgebreide testen van hun functionaliteit en zijn "
+"zeer interessant omdat ze het gebruik van cd's, Samba, DAV en nog meer "
+"emuleren."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:149
 msgid "Ubuntu infrastructure"
-msgstr ""
+msgstr "Ubuntu-infrastructuur"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:151
 msgid ""
@@ -248,6 +253,10 @@ msgid ""
 "of `automatically run autopkgtest tests`_ can be viewed on the web and is "
 "regularly updated."
 msgstr ""
+"Bij pakketten waarin `autopkgtest`` is ingeschakeld, worden de testen elke "
+"keer dat ze worden geüpload of wanneer de afhankelijkheden ervan worden "
+"gewijzigd uitgevoerd. De uitvoer van `automatically run autopkgtest tests`_ "
+"kan worden bekeken op het internet en wordt regelmatig bijgewerkt."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:156
 msgid ""
@@ -274,34 +283,39 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "run ``bzr branch ubuntu:<packagename>``,"
-msgstr ""
+msgstr "voer ``bzr branch ubuntu:<packagename>``uit,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
 msgid "edit ``debian/control`` to enable the tests,"
-msgstr ""
+msgstr "bewerk ``debian/control`` om de testen in te schakelen,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
 msgid "add the ``debian/tests`` directory,"
-msgstr ""
+msgstr "voeg de map ``debian/tests`` toe,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
 msgstr ""
+"schrijf het bestand ``debian/tests/control`` gebaseerd op de `DEP 8 "
+"Specification`_,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid "add your test case(s) to ``debian/tests``,"
-msgstr ""
+msgstr "voeg uw test(en) toe aan ``debian/tests``,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:174
 msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
 msgstr ""
+"commit uw wijzigingen, push ze naar Launchpad, vraag om te worden "
+"samengevoegd en laat het nakijken net als elke andere verbetering in een "
+"bronpakket."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
 msgid "What you can do"
-msgstr ""
+msgstr "Wat u kunt doen"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:181
 msgid ""
@@ -309,6 +323,10 @@ msgid ""
 "where packages which need tests are put into different categories. Here you "
 "can find examples of these tests and easily assign them to yourself."
 msgstr ""
+"Het Ubuntu technisch team heeft een `lijst van vereiste testcases`_, "
+"samengesteld waar pakketten die getest moeten worden in verschillende "
+"categorieën zijn ondergebracht. Hier kunt u voorbeelden van deze testen "
+"vinden en aan uzelf toewijzen."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:185
 msgid ""
