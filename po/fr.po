@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-04-27 14:04+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2013-07-23 15:51+0000\n"
+"Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-12 06:12+0000\n"
-"X-Generator: Launchpad (build 16696)\n"
+"X-Launchpad-Export-Date: 2013-07-24 05:42+0000\n"
+"X-Generator: Launchpad (build 16700)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -385,6 +385,10 @@ msgid ""
 "``pbuilder-dist`` (in the ``ubuntu-dev-tools`` package) is a very handy tool "
 "to do this easily."
 msgstr ""
+"Une fois que vous avez déterminé un paquet à rétro-porter vers une version "
+"stable, vous aurez besoin de le tester y compris en construction sur la "
+"version stable donnée. ``Pbuilder-dist`` (dans le paquet ``ubuntu-dev-"
+"tools``) est un outil très pratique pour y arriver facilement."
 
 #: ../ubuntu-packaging-guide/backports.rst:40
 msgid ""
@@ -601,6 +605,8 @@ msgstr "#ubuntu-devel (pour une discussion générale sur le développement)"
 #: ../ubuntu-packaging-guide/communication.rst:33
 msgid "#ubuntu-motu (for MOTU team discussion and generally getting help)"
 msgstr ""
+"#ubuntu-motu (pour une discussion avec l'équipe MOTU et généralement obtenir "
+"de l'aide)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:2
 msgid "Basic Overview of the ``debian/`` Directory"
@@ -737,7 +743,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
 msgid "The copyright file"
-msgstr ""
+msgstr "Le fichier de copyright"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:130
 msgid ""
@@ -4896,9 +4902,13 @@ msgstr ""
 "  GillesY https://launchpad.net/~perso-gillesy\n"
 "  Gérard Duteil https://launchpad.net/~gerardduteil\n"
 "  Olivier Febwin https://launchpad.net/~febcrash\n"
+"  Pa2squale https://launchpad.net/~pmaugendre\n"
+"  Paquelier Alain https://launchpad.net/~paquelier-alain\n"
 "  Pierre Slamich https://launchpad.net/~pierre-slamich\n"
 "  Sylvie Gallet https://launchpad.net/~sylvie-gallet\n"
+"  Tubuntu https://launchpad.net/~t-ubuntu\n"
 "  Winael https://launchpad.net/~vinzjobard\n"
+"  flaipe https://launchpad.net/~flaipe1\n"
 "  gisele perreault https://launchpad.net/~gisele-perreault"
 
 #~ msgid ""
