@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-07-23 07:53+0000\n"
+"PO-Revision-Date: 2013-07-24 18:03+0000\n"
 "Last-Translator: ufuk <ufukl@yandex.com.tr>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-24 05:42+0000\n"
+"X-Launchpad-Export-Date: 2013-07-25 05:25+0000\n"
 "X-Generator: Launchpad (build 16700)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4213,7 +4213,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:51
 msgid "as described earlier."
-msgstr ""
+msgstr "daha önce açıklandığı gibi."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:53
 msgid ""
@@ -4621,7 +4621,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:103
 msgid "Canceling an upload"
-msgstr ""
+msgstr "Bir yüklemeyi iptal etmek"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:105
 msgid ""
