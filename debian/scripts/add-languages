@@ -207,7 +207,7 @@ class Package(object):
         with open(new_file, "w") as new_file:
             for line in lines:
                 if line.startswith("Document:"):
-                    line = "Document: " + new_package_name + "\n"
+                    line += ("-%s" % self.fix_name(language))
                 elif line.startswith("Index:") | line.startswith("Files:"):
                     line = line.replace("-%s" % doc_type,
                            "-%s-%s" % (doc_type, self.fix_name(language)))

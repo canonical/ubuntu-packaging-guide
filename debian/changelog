@@ -1,7 +1,12 @@
 ubuntu-packaging-guide (0.3.3) UNRELEASED; urgency=low
 
+  [ Andrew Starr-Bochicchio ]
   * Use un-minified versions of 960.css and reset.css (Closes: #717008,
     LP: #1201636). 
+
+  [ Dmitry Shachnev ]
+  * Use different name for singlehtml doc-base files, to prevent warnings
+    from doc-base.
 
  -- Andrew Starr-Bochicchio <asb@debian.org>  Sat, 13 Jul 2013 13:40:17 -0400
 
