@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-07-24 07:58+0000\n"
-"Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
+"PO-Revision-Date: 2013-07-26 14:33+0000\n"
+"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-25 05:25+0000\n"
+"X-Launchpad-Export-Date: 2013-07-27 05:19+0000\n"
 "X-Generator: Launchpad (build 16700)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -166,6 +166,8 @@ msgid ""
 "This command will create a pristine Saucy AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Cette commande va créer une Machine Virtuelle AMD 64 Saucy depuis une image "
+"issue du nuage. Pour lancer les tests, exécutez simplement ::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -658,6 +660,8 @@ msgid ""
 "If you are packaging from scratch, ``dch --create`` (``dch`` is in the "
 "``devscripts`` package) will create a standard ``debian/changelog`` for you."
 msgstr ""
+"Si vous êtes parti de zéro pour l'empaquetage, ``dch --create`` (``dch`` est "
+"dans le paquet ``devscripts``) vous créera un ``debian /changelog`` standard."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
@@ -1547,10 +1551,12 @@ msgid ""
 "Try to be specific, not an essay, but enough for somebody (who did not "
 "deeply look into the issue) to understand."
 msgstr ""
+"Essayez d'être concis, pas de roman, mais suffisamment pour que quelqu'un "
+"(qui ne s'est pas profondément penché sur la question) puisse comprendre."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:200
 msgid "Mention how you fixed the issue and where."
-msgstr ""
+msgstr "Indiquez comment vous avez résolu le problème et où."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:206
 msgid ""
@@ -1580,10 +1586,12 @@ msgid ""
 "As we verified, the problem is now solved, so the next step is sharing our "
 "solution with the world."
 msgstr ""
+"Puisque nous l'avons vérifié, le problème est désormais résolu. La prochaine "
+"étape est de partager notre solution avec tout le monde."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:229
 msgid "Getting the fix included"
-msgstr ""
+msgstr "Obtenir l'inclusion du correctif"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:231
 msgid ""
@@ -1605,7 +1613,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:243
 msgid "To submit the patch to Debian, simply run::"
-msgstr ""
+msgstr "Pour soumettre le patch à Debian, lancez simplement::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:247
 msgid ""
@@ -1634,7 +1642,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:263
 msgid "Additional considerations"
-msgstr ""
+msgstr "Considérations supplémentaires"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:265
 msgid ""
@@ -1679,7 +1687,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
 msgid "Creating and configuring your account on Launchpad"
-msgstr ""
+msgstr "Création et configuration de votre compte sur Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:17
 msgid ""
@@ -1723,7 +1731,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:49
 msgid "This command will install the following software:"
-msgstr ""
+msgstr "Cette commande va installer les logiciels suivants :"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:51
 msgid ""
@@ -1760,7 +1768,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:67
 msgid "Create your GPG key"
-msgstr ""
+msgstr "Créez votre clé GPG"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:69
 msgid ""
@@ -1774,7 +1782,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:76
 msgid "To generate a new GPG key, run::"
-msgstr ""
+msgstr "Pour générer une nouvelle clé GPG, exécutez ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:80
 msgid ""
@@ -1801,6 +1809,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/getting-set-up.rst:95
 msgid "Once this is done, you will get a message similar to this one::"
 msgstr ""
+"Une fois cela fait, vous obtiendrez un message similaire à celui-ci ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:102
 msgid "In this case ``43CDE61D`` is the *key ID*."
@@ -1822,7 +1831,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:116
 msgid "Create your SSH key"
-msgstr ""
+msgstr "Créez votre clé SSH"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:118
 msgid ""
@@ -1835,7 +1844,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:124
 msgid "To generate an SSH key, enter::"
-msgstr ""
+msgstr "Pour générer une clé SSH, saisissez ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:128
 msgid ""
@@ -1912,7 +1921,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:167
 msgid "About Launchpad"
-msgstr ""
+msgstr "À propos de Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid ""
@@ -1939,7 +1948,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:184
 msgid "Get a Launchpad account"
-msgstr ""
+msgstr "Créer un compte Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:186
 msgid ""
@@ -1972,7 +1981,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:205
 msgid "Upload your GPG key to Launchpad"
-msgstr ""
+msgstr "Téléversez votre clé GPG sur Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:207
 msgid "To find about your GPG fingerprint, run::"
@@ -2044,7 +2053,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:261
 msgid "Configure Bazaar"
-msgstr ""
+msgstr "Configurer Bazaar"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:263
 msgid ""
@@ -2056,7 +2065,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:268
 msgid "To tell Bazaar who you are, simply run::"
-msgstr ""
+msgstr "Pour dire à Bazaar qui vous êtes, il suffit de lancer ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:273
 msgid ""
@@ -2074,7 +2083,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:283
 msgid "Configure your shell"
-msgstr ""
+msgstr "Configurez votre shell"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:284
 msgid ""
@@ -2086,6 +2095,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/getting-set-up.rst:291
 msgid "Now save the file and either restart your terminal or run::"
 msgstr ""
+"Maintenant, sauvegardez le fichier et redémarrez votre terminal ou "
+"exécutez ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:295
 msgid ""
