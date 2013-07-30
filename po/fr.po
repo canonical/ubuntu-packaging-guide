@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-07-26 14:33+0000\n"
-"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
+"PO-Revision-Date: 2013-07-29 11:56+0000\n"
+"Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-27 05:19+0000\n"
+"X-Launchpad-Export-Date: 2013-07-30 04:47+0000\n"
 "X-Generator: Launchpad (build 16700)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -269,7 +269,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
 msgid "Getting the test into Ubuntu"
-msgstr ""
+msgstr "Faire passer le test dans Ubuntu"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
 msgid ""
@@ -691,6 +691,9 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
 "of the Debian Policy Manual."
 msgstr ""
+"Pour plus d'informations, consultez la section `changelog (Section 4.4) "
+"<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>` _ "
+"de la Charte Debian."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
@@ -863,6 +866,8 @@ msgid ""
 "The ``install`` file is used by ``dh_install`` to install files into the "
 "binary package. It has two standard use cases:"
 msgstr ""
+"Le fichier ``install`` est utilisé par ``dh_install`` pour installer les "
+"fichiers dans le paquet binaire. Il s'utilise classiquement dans deux cas :"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:259
 msgid ""
