@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-07-26 08:09+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2013-07-31 08:41+0000\n"
+"Last-Translator: M Oberhauser <limurx@streber24.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-27 05:19+0000\n"
-"X-Generator: Launchpad (build 16700)\n"
+"X-Launchpad-Export-Date: 2013-08-01 05:36+0000\n"
+"X-Generator: Launchpad (build 16718)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -1690,6 +1690,10 @@ msgid ""
 "browser. There find the \"(+) Propose for merging\" link, click it to get "
 "the change reviewed by somebody and included in Ubuntu."
 msgstr ""
+"sollte alles erledigt sein. Der Befehl push befördert es auf Launchpad und "
+"das nächste Kommando öffnet die Launchpad-Webseite mit dem Remotezweig in "
+"deinem Browser. Nach dem Klick auf den Link \"(+) Propose for merging\" wird "
+"die Änderung überprüft und in Ubuntu eingefügt."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:209
 msgid ""
@@ -2788,20 +2792,20 @@ msgid ""
 "development,"
 msgstr ""
 "von den wichtigsten Spielern, Prozessen und Werkzeugen in der Ubuntu-"
-"Entwicklung gehört haben,"
+"Entwicklung gehört,"
 
 #: ../ubuntu-packaging-guide/index.rst:17
 msgid "your development environment set up correctly,"
-msgstr "Deine Entwicklungsumgebung erfolgreich eingerichtet"
+msgstr "deine Entwicklungsumgebung erfolgreich eingerichtet,"
 
 #: ../ubuntu-packaging-guide/index.rst:18
 msgid "a better idea of how to join our community,"
-msgstr "eine bessere Idee umserer Gemeinschaft beizutreten,"
+msgstr "eine bessere Vorstellung von der Gemeinschaft und ihrem Zugang,"
 
 #: ../ubuntu-packaging-guide/index.rst:19
 msgid "fixed an actual Ubuntu bug as part of the tutorials."
 msgstr ""
-"einen tatsächlichen Fehler in Ubuntu als Teil der Anleitungen behoben."
+"einen tatsächlichen Fehler in Ubuntu als Teil der Anleitungen behoben haben."
 
 #: ../ubuntu-packaging-guide/index.rst:21
 msgid ""
