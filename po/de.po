@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-07-31 08:41+0000\n"
+"PO-Revision-Date: 2013-08-07 08:01+0000\n"
 "Last-Translator: M Oberhauser <limurx@streber24.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-01 05:36+0000\n"
-"X-Generator: Launchpad (build 16718)\n"
+"X-Launchpad-Export-Date: 2013-08-08 04:49+0000\n"
+"X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -5275,17 +5275,19 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:3
 msgid "Getting The Latest"
-msgstr "Die Neuste bekommen"
+msgstr "Auf dem Laufenden bleiben"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:5
 msgid ""
 "If someone else has landed changes on a package, you will want to pull those "
 "changes in your own copies of the package branches."
 msgstr ""
+"Falls bereits jemand anderes Änderungen an einem Paket vorgenommen hat, "
+"wirst du sie in deine eigenen Kopien des Pakets einbinden wollen."
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:10
 msgid "Updating your main branch"
-msgstr "Deinen Hauptzweig aktualisieren"
+msgstr "Hauptzweig aktualisieren"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:12
 msgid ""
@@ -5293,16 +5295,21 @@ msgid ""
 "particular release is very simple, simply use `bzr pull` from the "
 "appropriate directory::"
 msgstr ""
+"Das Aktualisieren deiner Kopie des Zweiges, welcher zu dem Paket in der "
+"jeweiligen Veröffentlichung gehört,  ist sehr einfach. Verwende lediglich "
+"`bzr pull` aus dem entsprechendem Verzeichnis heraus::"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:18
 msgid ""
 "This works wherever you have a checkout of a branch, so it will work for "
 "things like branches of `maverick`, `hardy-proposed`, etc."
 msgstr ""
+"Das funktioniert überall wo auch eine Zweigstelle vorhanden ist, so zum "
+"Beispiel für Zweige von `maverick`, `hardy-proposed`, etc."
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:23
 msgid "Getting the latest in to your working branches"
-msgstr "Ihre Arbeitszweige aktualisieren"
+msgstr "Arbeitszweige aktualisieren"
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:25
 msgid ""
@@ -5358,6 +5365,7 @@ msgstr ""
 msgid ""
 "This shows you the difference between package version 0.1-1 and 0.1-2."
 msgstr ""
+"Das zeigt den Unterschied zwischen den Paketversionen 0.1-1 und 0.1-2."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:3
 msgid "Merging — Updating from Debian and Upstream"
