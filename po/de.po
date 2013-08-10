@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-08-07 08:01+0000\n"
-"Last-Translator: M Oberhauser <limurx@streber24.de>\n"
+"PO-Revision-Date: 2013-08-09 08:48+0000\n"
+"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-08 04:49+0000\n"
+"X-Launchpad-Export-Date: 2013-08-10 05:15+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4060,6 +4060,9 @@ msgid ""
 "prospective Debian Developers. It is where you can find a sponsor to upload "
 "your package to the archive."
 msgstr ""
+"`Debian Mentors FAQ`_ - Das debian-mentors Team kümmert sich um neue und "
+"zukünftige Debian-Entwickler. Hier kannst du Sponsoren finden, die deine "
+"Pakete in das Archiv hoch laden,"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:212
 msgid ""
@@ -4067,6 +4070,9 @@ msgid ""
 "\"Intent to Package\" and \"Request for Package\" bugs as well as list of "
 "open ITPs and RFPs."
 msgstr ""
+"`Work-Needing and Prospective Packages`_ - Information darüber, wie man "
+"\"Intent to Package\" und \"Request for Package\" Bug-Reports schreibt und "
+"aktuelle Listen von offenen ITPs und RFPs."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:216
 msgid ""
@@ -4074,6 +4080,9 @@ msgid ""
 "invaluable for both Ubuntu and Debian packagers. This section documents "
 "processes for submitting new packages."
 msgstr ""
+"`Debian Developer's Reference, 5.1. New packages`_ - Das gesamte Dokument "
+"ist wichtig für Ubuntu- und Debian-Entwickler. Dieser Abschnitt beschäftigt "
+"sich mit den Prozessen für das Hochladen von neuen Paketen."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:220
 msgid ""
@@ -4105,6 +4114,9 @@ msgid ""
 "fortunately we are standardizing on one system, `Quilt`_, which is now used "
 "by most packages."
 msgstr ""
+"Man kann Patches in Debian-Paketen auf unterschiedliche Arten handhaben, "
+"glücklicherweise stellt sich `Quilt`_ als Standard heraus, weil es von den "
+"meisten Paketen verwendet wird."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:18
 msgid "Let's look at an example package, ``kamoso`` in Natty::"
@@ -4123,6 +4135,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:29
 msgid "The order of patches to apply is kept in ``debian/patches/series``."
 msgstr ""
+"Die Reihenfolge in der Patches angewandt werden ist in "
+"``debian/patches/series`` definiert."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:32
 msgid "Patches with Quilt"
@@ -4136,13 +4150,16 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:39
 msgid "And source the file to apply the new export::"
-msgstr ""
+msgstr "Und verwende ``source``, um die neuen Exports anzuwenden::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:43
 msgid ""
 "By default all patches are applied already to UDD checkouts or downloaded "
 "packages.  You can check this with::"
 msgstr ""
+"Standardmäßig werden alle Patches angewandt, wenn Du UDD Checkouts or "
+"heruntergeladene Quellpakete benutzt. Du kannst dies folgendermaßen "
+"überprüfen::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:49
 msgid "If you wanted to remove the patch you would run ``pop``::"
@@ -4150,7 +4167,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:57
 msgid "And to apply a patch you use ``push``::"
-msgstr ""
+msgstr "Und um einen Patch anzuwenden, verwendst du ``push``::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:67
 msgid "Adding a New Patch"
@@ -4193,7 +4210,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:105
 msgid "Patch Headers"
-msgstr ""
+msgstr "Patch Headers"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:107
 msgid ""
@@ -4203,11 +4220,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
 msgid "Description of what the patch does."
-msgstr ""
+msgstr "Beschreibung davon, was der Patch tut."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:111
 msgid "Who wrote the patch (i.e. \"Jane Doe <packager@example.com>\")."
-msgstr ""
+msgstr "Autor des Patches (i.e. \"Jane Doe <packager@example.com>\")."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:112
 msgid ""
@@ -4227,10 +4244,12 @@ msgid ""
 "Whether the patch was forwarded upstream. Either \"yes\", \"no\" or \"not-"
 "needed\"."
 msgstr ""
+"Ob der Patch an Upstream weitergeleitet wurde. Entweder \"yes\", \"no\" oder "
+"\"not-needed\"."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:120
 msgid "Date of the last revision (in form \"YYYY-MM-DD\")."
-msgstr ""
+msgstr "Datum der letzten Revision (in der Form \"YYYY-MM-DD\")."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:124
 msgid "Upgrading to New Upstream Versions"
@@ -4271,7 +4290,7 @@ msgstr "Dann committe wie ueblich::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:165
 msgid "Making A Package Use Quilt"
-msgstr ""
+msgstr "Quilt im Paket verwenden"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:167
 msgid ""

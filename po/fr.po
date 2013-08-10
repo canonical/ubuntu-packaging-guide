@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-07-29 11:56+0000\n"
+"PO-Revision-Date: 2013-08-09 10:10+0000\n"
 "Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-30 04:47+0000\n"
-"X-Generator: Launchpad (build 16700)\n"
+"X-Launchpad-Export-Date: 2013-08-10 05:15+0000\n"
+"X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -304,6 +304,9 @@ msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
 msgstr ""
+"valider vos modifications, les téléverser vers Launchpad, proposer une "
+"fusion et obtenir son examen, exactement comme pour  toute autre "
+"amélioration dans un paquet source."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
 msgid "What you can do"
@@ -571,6 +574,8 @@ msgid ""
 "https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (announce-"
 "only, the most important development announcements go here)"
 msgstr ""
+"https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce (annonces "
+"uniquement, les annonces de développement les plus importantes vont ici)"
 
 #: ../ubuntu-packaging-guide/communication.rst:20
 msgid ""
@@ -1275,15 +1280,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 msgid "where the change was done"
-msgstr ""
+msgstr "où la modification a été apportée"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
 msgid "what was changed"
-msgstr ""
+msgstr "ce qui a été modifié"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:170
 msgid "where the discussion of the change happened"
-msgstr ""
+msgstr "où le débat sur la modification s'est passé"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:172
 msgid ""
@@ -1346,7 +1351,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:3
 msgid "Tutorial: Fixing a bug in Ubuntu"
-msgstr ""
+msgstr "Tutoriel : Correction d'un bogue dans Ubuntu"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:5
 msgid ""
@@ -1365,7 +1370,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:15
 msgid "Confirming the problem"
-msgstr ""
+msgstr "Confirmer le problème"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:17
 msgid ""
@@ -1377,11 +1382,12 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:23
 msgid "The output should be similar to this::"
-msgstr ""
+msgstr "La sortie devrait être similaire à ceci ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:49
 msgid "A counter-example would be ``gedit``, which has a homepage set::"
 msgstr ""
+"Un contre-exemple serait ``gedit``, qui dispose d'une page d'accueil ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:55
 msgid ""
@@ -1433,7 +1439,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:88
 msgid "Offering help"
-msgstr ""
+msgstr "Offrir de l'aide"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:90
 msgid ""
@@ -1457,7 +1463,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:104
 msgid "Fixing the issue"
-msgstr ""
+msgstr "Résoudre le problème"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:106
 msgid ""
@@ -1494,11 +1500,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:129
 msgid "If you now run::"
-msgstr ""
+msgstr "Si désormais vous exécutez ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:133
 msgid "you should see something like this:"
-msgstr ""
+msgstr "vous devriez voir quelque chose comme ceci :"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:149
 msgid ""
@@ -1512,6 +1518,8 @@ msgid ""
 "It is important to explain to your fellow developers what exactly you did. "
 "If you run::"
 msgstr ""
+"Il est important d'expliquer à vos collègues développeurs ce que vous avez "
+"fait exactement. Si vous exécutez ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:163
 msgid ""
@@ -1523,11 +1531,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:170
 msgid "and you will see something like this:"
-msgstr ""
+msgstr "et vous verrez quelque chose comme ceci :"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:189
 msgid "A few additional considerations:"
-msgstr ""
+msgstr "Quelques remarques complémentaires :"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:191
 msgid ""
@@ -4018,7 +4026,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:14
 msgid "Traditional Packaging Limitations"
-msgstr ""
+msgstr "Limites de l'empaquetage traditionnel"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:16
 msgid ""
@@ -4053,7 +4061,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:40
 msgid "Ubuntu Distributed Development"
-msgstr ""
+msgstr "Développement Distribué Ubuntu"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:42
 msgid ""
@@ -4913,6 +4921,7 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Calinou https://launchpad.net/~calinou9999spam\n"
 "  Daniel Holbach https://launchpad.net/~dholbach\n"
 "  Florent (LSc) https://launchpad.net/~lorkscorguar\n"
 "  GillesY https://launchpad.net/~perso-gillesy\n"
