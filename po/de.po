@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-08-09 08:48+0000\n"
+"PO-Revision-Date: 2013-08-10 06:31+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-10 05:15+0000\n"
+"X-Launchpad-Export-Date: 2013-08-11 04:51+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4147,6 +4147,8 @@ msgid ""
 "Before working with Quilt you need to tell it where to find the patches.  "
 "Add this to your ``~/.bashrc``::"
 msgstr ""
+"Bevor Du mit Quilt arbeitest, musst Du spezifizieren, wo die Patches liegen. "
+"Füge dies in Deine ``~/.bashrc`` hinzu::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:39
 msgid "And source the file to apply the new export::"
@@ -4163,7 +4165,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:49
 msgid "If you wanted to remove the patch you would run ``pop``::"
-msgstr ""
+msgstr "Wenn Du den Patch entfernen wolltest, würdest du ``pop`` ausführen::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:57
 msgid "And to apply a patch you use ``push``::"
@@ -4184,6 +4186,8 @@ msgid ""
 "The ``quilt add`` step is important, if you forget it the files will not end "
 "up in the patch."
 msgstr ""
+"Der ``quilt add`` ist sehr wichtig, wenn du ihn vergisst, werden die Dateien "
+"nicht im Patch auftauchen."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:84
 msgid ""
@@ -4192,6 +4196,10 @@ msgid ""
 "file will have had the new patch added to it.  You should add the new file "
 "to the packaging::"
 msgstr ""
+"Die Änderung wird jetzt in "
+"``debian/patches/kubuntu_02_program_description.diff`` sein und die "
+"``series`` Datei wird den Patch auflisten. Du solltest die neue Datei zur "
+"Paketierung hinzufügen::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:94
 msgid ""
@@ -4217,6 +4225,8 @@ msgid ""
 "We recommend that you tag every patch with DEP-3_ headers by putting them at "
 "the top of patch file. Here are some headers that you can use:"
 msgstr ""
+"Wir empfehlen, dass du jeden Patch mit den DEP-3_ Kopfzeilen versiehst. Hier "
+"sind einige Einträge, die du verwenden kannst:"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
 msgid "Description of what the patch does."
@@ -4231,6 +4241,8 @@ msgid ""
 "Where this patch comes from (i.e. \"upstream\"), when *Author* is not "
 "present."
 msgstr ""
+"Wo der Patch herkommt (z.B. \"upstream\"), wenn *Author* nicht verwendet "
+"wird."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:114
 msgid ""
@@ -4238,6 +4250,10 @@ msgid ""
 "*https://bugs.launchpad.net/bugs/XXXXXXX*). If there are also bugs in "
 "upstream or Debian bugtrackers, add *Bug* or *Bug-Debian* headers."
 msgstr ""
+"Ein Link zu einem Launchpad-Bug, eine Kurzform wird vorgezogen (wie z.B. "
+"*https://bugs.launchpad.net/bugs/XXXXXXX*). Wenn es auch Bugs in Upstream-"
+"Bugtracker oder in Debian gibt, füge auch *Bug* oder *Bug-Debian* Einträge "
+"hinzu."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:118
 msgid ""
@@ -4259,6 +4275,8 @@ msgstr "Auf neue Upstream Versionen aktualisieren"
 msgid ""
 "To upgrade to the new version, you can use ``bzr merge-upstream`` command::"
 msgstr ""
+"Um zur neuen Version zu upgraden, kannst du das ``bzr merge-upstream`` "
+"Kommando verwenden::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:130
 msgid ""
@@ -4306,7 +4324,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:176
 msgid "Configuring Quilt"
-msgstr ""
+msgstr "Quilt konfigurieren"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:178
 msgid ""
