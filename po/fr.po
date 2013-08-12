@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-08-10 09:13+0000\n"
-"Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
+"PO-Revision-Date: 2013-08-11 14:31+0000\n"
+"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-11 04:51+0000\n"
+"X-Launchpad-Export-Date: 2013-08-12 04:53+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -1070,7 +1070,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:6
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:9
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:8
 msgid ""
@@ -1144,7 +1144,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:66
 msgid "Getting the code"
-msgstr ""
+msgstr "Obtenir le code"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:68
 msgid ""
@@ -1468,6 +1468,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:100
 msgid "It is great if you can offer help and will surely be appreciated."
 msgstr ""
+"C'est très bien si vous pouvez offrir votre aide, et elle sera assurément "
+"appréciée."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:104
 msgid "Fixing the issue"
@@ -1562,6 +1564,9 @@ msgid ""
 "If it is a reference to an upstream or Debian bug or a mailing list "
 "discussion, mention it as well."
 msgstr ""
+"S'il s'agit d'une référence à un bogue amont ou un bogue Debian ou encore "
+"une discussion par liste de diffusion email, vous pouvez le mentionner "
+"également."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:197
 msgid "Try to wrap your lines at 80 characters."
@@ -1654,6 +1659,9 @@ msgid ""
 "If everything went well you should get a mail from Debian's bug tracking "
 "system with more information. This might sometimes take a few minutes."
 msgstr ""
+"Si tout s'est bien déroulé, vous obtenez un message du système de suivi des "
+"bogues Debian avec plus d'informations. Cela peut parfois prendre quelques "
+"minutes."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:257
 msgid ""
@@ -1670,6 +1678,9 @@ msgid ""
 "If you find a package and find that there are a couple of trivial things you "
 "can fix at the same time, do it. This will speed up review and inclusion."
 msgstr ""
+"Si vous trouvez qu'il y a un certain nombre de choses triviales possibles à "
+"corriger en même temps dans un paquet, faites-le. Cela permettra d'accélérer "
+"l'examen et l'inclusion."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:268
 msgid ""
@@ -1680,7 +1691,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
 msgid "Getting Set Up"
-msgstr ""
+msgstr "Mise en route"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:5
 msgid ""
@@ -1701,10 +1712,14 @@ msgstr ""
 #: ../ubuntu-packaging-guide/getting-set-up.rst:13
 msgid "Encryption software so your work can be verified as being done by you"
 msgstr ""
+"Logiciel de chiffrement afin que votre travail soit reconnu comme étant bien "
+"réalisé par vous"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:14
 msgid "Additional encryption software so you can securely transfer files"
 msgstr ""
+"Logiciel de chiffrement supplémentaire afin de transférer des fichiers en "
+"toute sécurité"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
 msgid "Creating and configuring your account on Launchpad"
@@ -1733,7 +1748,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
-msgstr ""
+msgstr "Installer les logiciels d'empaquetage de base"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:34
 msgid ""
@@ -1876,7 +1891,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:133
 msgid "Set up pbuilder"
-msgstr ""
+msgstr "Configurer pbuilder"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:135
 msgid ""
@@ -1900,6 +1915,8 @@ msgstr ""
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
 msgstr ""
+"Vous pouvez configurer plusieurs instances pour différentes versions "
+"d'Ubuntu et de Debian"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:144
 msgid "Setting ``pbuilder`` up is very easy, run::"
@@ -1926,11 +1943,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid "What Launchpad is and creating a Launchpad account"
-msgstr ""
+msgstr "Description de Launchpad et création d'un compte Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:161
 msgid "Uploading your GPG and SSH keys to Launchpad"
-msgstr ""
+msgstr "Téléversement de vos clés GPG et SSH vers Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:162
 msgid "Configuring Bazaar to work with Launchpad"
@@ -2210,16 +2227,16 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:52
 msgid "Articles"
-msgstr ""
+msgstr "Articles"
 
 #: ../ubuntu-packaging-guide/index.rst:69
 msgid "Knowledge Base"
-msgstr ""
+msgstr "Base de connaissances"
 
 #: ../ubuntu-packaging-guide/index.rst:89
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
-msgstr ""
+msgstr "Lectures complémentaires"
 
 #: ../ubuntu-packaging-guide/index.rst:91
 msgid ""
@@ -2497,13 +2514,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:47
 msgid "Translations"
-msgstr ""
+msgstr "Traductions"
 
 #: ../ubuntu-packaging-guide/kde.rst:49
 msgid ""
 "Packages in main have their translations imported into Launchpad and "
 "exported from Launchpad into Ubuntu's language-packs."
 msgstr ""
+"Les traductions des paquets principaux sont importées dans Launchpad et "
+"exportés de Launchpad vers Ubuntu dans les paquets de langues."
 
 #: ../ubuntu-packaging-guide/kde.rst:52
 msgid ""
@@ -4942,7 +4961,8 @@ msgstr ""
 "  Tubuntu https://launchpad.net/~t-ubuntu\n"
 "  Winael https://launchpad.net/~vinzjobard\n"
 "  flaipe https://launchpad.net/~flaipe1\n"
-"  gisele perreault https://launchpad.net/~gisele-perreault"
+"  gisele perreault https://launchpad.net/~gisele-perreault\n"
+"  jean-bernard marcon https://launchpad.net/~jean-bernard-marcon"
 
 #~ msgid ""
 #~ "This command will create a pristine Raring AMD64 VM from a cloud image. To "
