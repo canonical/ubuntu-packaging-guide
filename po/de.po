@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-08-10 06:31+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2013-08-12 12:20+0000\n"
+"Last-Translator: Mathias Dietrich <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-11 04:51+0000\n"
+"X-Launchpad-Export-Date: 2013-08-13 05:53+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4206,6 +4206,9 @@ msgid ""
 "Quilt keeps its metadata in the ``.pc/`` directory, so currently you need to "
 "add that to the packaging too.  This should be improved in future."
 msgstr ""
+"Quilt behält seine Metadaten im ``.pc/`` Verzeichnis, sodass dieses momentan "
+"ebenfalls für das Paketieren hinzugefügt werden muss. In der Zukunft sollte "
+"das verbessert werden."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:97
 msgid ""
@@ -4321,6 +4324,9 @@ msgid ""
 "Older packages using source format 1.0 will need to explicitly use Quilt, "
 "usually by including a makefile into ``debian/rules``."
 msgstr ""
+"Ältere Pakete, die das Quellformat 1.0 verwenden, werden explizit Quilt "
+"verwenden müssen, normalerweise in dem ein Makefile in ``debian/rules`` "
+"eingebunden wird."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:176
 msgid "Configuring Quilt"
@@ -4331,6 +4337,9 @@ msgid ""
 "You can use ``~/.quiltrc`` file to configure quilt. Here are some options "
 "that can be useful for using quilt with debian/packages:"
 msgstr ""
+"Die ``~/.quiltrc`` Datei kann verwendet werden um quilt zu konfigurieren. "
+"Hier sind einige Optionen, die nützlich sein können, für die Verwendung von "
+"quilt mit debian/packages:"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:192
 msgid "Other Patch Systems"
@@ -4374,7 +4383,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:7
 msgid "There are two types of Python packages — *modules* and *apps*."
-msgstr ""
+msgstr "Es gibt zwei Arten von Python Paketen — *Module* und *Anwendungen*"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:9
 msgid ""
@@ -4510,7 +4519,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:84
 msgid "and ``python3-markdown.install`` will only have one line::"
-msgstr ""
+msgstr "und ``python3-markdown.install`` wird nur eine Zeile haben::"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:89
 msgid "The ``-doc`` package"
@@ -6124,6 +6133,7 @@ msgstr ""
 "  Hendrik Knackstedt https://launchpad.net/~hennekn\n"
 "  Lars Schütze https://launchpad.net/~laze1989\n"
 "  M Oberhauser https://launchpad.net/~limurx\n"
+"  Mathias Dietrich https://launchpad.net/~theghost\n"
 "  Phillip Sz https://launchpad.net/~phillip-sz\n"
 "  Richard Stromer https://launchpad.net/~noxan\n"
 "  Robin Gloster https://launchpad.net/~robin-gloster\n"
