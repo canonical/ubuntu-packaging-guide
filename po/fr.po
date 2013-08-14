@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-08-12 08:43+0000\n"
-"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
+"PO-Revision-Date: 2013-08-13 19:25+0000\n"
+"Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-13 05:53+0000\n"
+"X-Launchpad-Export-Date: 2013-08-14 05:49+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4379,6 +4379,8 @@ msgid ""
 "However, before you commit, it is always a good thing to check all the "
 "Ubuntu changes by running::"
 msgstr ""
+"Toutefois, avant de soumettre, il est toujours bon de vérifier toutes les "
+"modifications d'Ubuntu en exécutant ::"
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:58
 msgid ""
@@ -4392,6 +4394,8 @@ msgid ""
 "After testing and committing the merge, you will need to seek sponsorship or "
 "upload to the archive in the normal way."
 msgstr ""
+"Après avoir testé et soumis votre fusion, vous devrez rechercher un "
+"parrainage ou télécharger vers l'archive de la manière habituelle."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:67
 msgid ""
@@ -4446,6 +4450,11 @@ msgid ""
 "as shown.  The command will automatically download the tarball for you.  The "
 "tarball will be renamed appropriately and, if required, converted to ``.gz``."
 msgstr ""
+"Le dernier paramètre est l'emplacement de l'archive que vous mettez à "
+"niveau ; cela peut être soit un chemin du système de fichiers local, soit "
+"une URI http, ftp, sftp, etc. comme indiqué. La commande va vous télécharger "
+"automatiquement l'archive. Elle sera renommée convenablement et, si "
+"nécessaire, convertie en ``.gz``."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:106
 msgid ""
@@ -4453,6 +4462,9 @@ msgid ""
 "successfully, or that there were conflicts.  Either way you will be able to "
 "review the changes before committing as normal."
 msgstr ""
+"La commande `merge-upstream` va vous indiquer sa réussite ou si il y a eu "
+"des conflits. De toute façon, vous serez en mesure d'examiner les "
+"modifications avant la soumission habituelle."
 
 #: ../ubuntu-packaging-guide/udd-merging.rst:110
 msgid ""
@@ -4517,36 +4529,47 @@ msgid ""
 "It is not critical to have a link to a bug for every change you make, but if "
 "you are fixing reported bugs then linking to them will be useful."
 msgstr ""
+"Il n'est pas essentiel d'avoir un lien vers un bogue pour chaque "
+"modification que vous apportez, mais si vous corrigez des bogues déjà "
+"rapportés, les relier sera utile."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:28
 msgid "The general form of the URL you should push your branch to is::"
-msgstr ""
+msgstr "La forme générale de l'URL pour publier votre branche est ::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:32
 msgid ""
 "For example, to push your fix for bug 12345 in the Tomboy package for Natty, "
 "you'd use::"
 msgstr ""
+"Par exemple, pour publier votre correctif au bogue 12345 dans le paquet "
+"Tomboy pour Natty, vous devriez utiliser ::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:37
 msgid ""
 "The last component of the path is arbitrary; it's up to you to pick "
 "something meaningful."
 msgstr ""
+"Le dernier élément du chemin est arbitraire ; c'est à vous de choisir "
+"quelque chose d'expressif."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:40
 msgid ""
 "However, this usually isn't enough to get Ubuntu developers to review and "
 "sponsor your change.  You should next submit a *merge proposal*."
 msgstr ""
+"Toutefois, ce n'est généralement pas suffisant pour obtenir la relecture et "
+"le parrainage de vos modifications pas les développeurs d'Ubuntu. Vous devez "
+"ensuite soumettre une * proposition de fusion*."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:43
 msgid "To do this open the bug page in a browser, e.g.::"
 msgstr ""
+"Pour ce faire, ouvrez la page de bogue dans un navigateur, par exemple ::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:47
 msgid "If that fails, then you can use::"
-msgstr ""
+msgstr "En cas d'échec, vous pouvez utiliser ::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:51
 msgid ""
@@ -4555,6 +4578,11 @@ msgid ""
 "in an explanation of your change in the *Initial Comment* box.  Lastly, "
 "click *Propose Merge* to complete the process."
 msgstr ""
+"où la plupart des URL correspond à ce que vous avez utilisé pour `bzr push`. "
+"Sur cette page, vous verrez un lien *Proposer la fusion vers une autre "
+"branche*. Tapez une explication de votre modification dans la boîte de "
+"dialogue *Commentaire initial*. Enfin, cliquez sur *Proposer la fusion* pour "
+"terminer le processus."
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:56
 msgid ""
@@ -4728,10 +4756,14 @@ msgid ""
 "This tag will tell the package importer that what is in the Bazaar branch is "
 "the same as in the archive."
 msgstr ""
+"Cette balise indique à l'importateur du paquet que le contenu de la branche "
+"Bazaar est le même que celui de l'archive."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:63
 msgid "Now you can push the changes back to Launchpad::"
 msgstr ""
+"Maintenant, vous pouvez publier de nouveau vos modifications dans "
+"Launchpad ::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:67
 msgid "(Change the destination if you are uploading an SRU or similar.)"
@@ -4788,6 +4820,9 @@ msgid ""
 "At any time before you `dput` the source package you can decide to cancel an "
 "upload and revert the changes::"
 msgstr ""
+"A chaque fois que vous allez exécuter `dput` sur le paquet source, vous "
+"pouvez décider d'annuler un téléchargement et de revenir sur les "
+"modifications ::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:110
 msgid ""
@@ -4832,7 +4867,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-working.rst:3
 msgid "Working on a Package"
-msgstr ""
+msgstr "Travail sur un paquet"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:5
 msgid ""
@@ -4853,6 +4888,9 @@ msgid ""
 "The first thing to do is to make sure your source package branch is up-to-"
 "date.  It will be if you just checked it out, otherwise do this::"
 msgstr ""
+"La première chose à faire est de vous assurer que votre branche du paquet "
+"source est à jour. Elle le sera si vous venez juste de l'extraire, sinon "
+"faites ::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:21
 msgid ""
@@ -4878,6 +4916,8 @@ msgid ""
 "This will drop you in an editor to add an entry to the `debian/changelog` "
 "file."
 msgstr ""
+"Cela vous ouvre un éditeur pour ajouter une entrée au fichier "
+"`debian/changelog`."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:44
 msgid ""
@@ -4910,12 +4950,17 @@ msgid ""
 "Along the way, you'll want to build your branch so that you can test it to "
 "make sure it does actually fix the bug."
 msgstr ""
+"Tout au long du développement, vous construirez votre branche de manière à "
+"la tester pour être sûr qu'elle corrige réellement le bogue."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:74
 msgid ""
 "In order to build the package you can use the ``bzr builddeb`` command from "
 "the ``bzr-builddeb`` package.  You can build a source package with::"
 msgstr ""
+"De manière à construire le paquet, vous pouvez utiliser la commande ``bzr "
+"builddeb`` du paquet ``bzr-builddeb``. Vous pouvez construire un paquet "
+"source avec ::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:79
 msgid ""
@@ -4928,6 +4973,9 @@ msgid ""
 "It is also possible to use your normal tools, as long as they are able to "
 "strip the .bzr directories from the package, e.g.::"
 msgstr ""
+"Il est également possible d'utiliser vos outils habituels, aussi longtemps "
+"qu'ils sont capables d'extraire les répertoires .bzr depuis le paquet, par "
+"exemple ::"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:87
 msgid ""
@@ -4944,10 +4992,13 @@ msgid ""
 "Once you've got the source package, you can build it as normal with "
 "``pbuilder-dist`` (or ``pbuilder`` or `sbuild`_)."
 msgstr ""
+"Une fois que vous avez obtenu le paquet source, vous pouvez le construire "
+"comme d'habitude avec ``pbuilder-dist``  (ou ``pbuilder`` ou `sbuild` _)."
 
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Anne https://launchpad.net/~anneonyme017\n"
 "  Calinou https://launchpad.net/~calinou9999spam\n"
 "  Daniel Holbach https://launchpad.net/~dholbach\n"
 "  Florent (LSc) https://launchpad.net/~lorkscorguar\n"
