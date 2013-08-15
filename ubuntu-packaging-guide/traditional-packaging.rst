@@ -102,7 +102,7 @@ version that it was created against::
 
     $ pull-lp-source xicc 0.2-3
 
-Then in a terminal, change the to the directory where the source was
+Then in a terminal, change to the directory where the source was 
 uncompressed::
 
     $ cd xicc-0.2
