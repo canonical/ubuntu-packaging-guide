@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-08-13 10:03+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2013-08-14 10:28+0000\n"
+"Last-Translator: M Oberhauser <limurx@streber24.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-14 05:49+0000\n"
+"X-Launchpad-Export-Date: 2013-08-15 05:39+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -2167,10 +2167,10 @@ msgid ""
 "start working with packages, and upload your packages to Ubuntu's hosting "
 "platform, Launchpad. Here's what we'll cover:"
 msgstr ""
-"Du musst einige Dinge tun, bevor Du loslegen und Ubuntu mit entwickeln "
-"kannst. Dieser Artikel wird Dir helfen, dein System so einzurichten, dass Du "
-"mit Paketen arbeiten kannst und Deine Pakete auf Ubuntu's Hosting-Platform, "
-"Launchpad, hoch laden kannst. Hierüber werden wir reden:"
+"Es gibt einiges zu tun, bevor Du mit der Ubuntu-Entwicklung loslegen kannst. "
+"Dieser Artikel wird Dir helfen, dein System so einzurichten, dass Du mit "
+"Paketen arbeiten und Deine Pakete auf Ubuntu's Hosting-Platform, Launchpad, "
+"hochladen kannst. Hierüber werden wir reden:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:10
 msgid "Installing packaging-related software. This includes:"
@@ -2930,7 +2930,7 @@ msgid ""
 "guide/>`_ — available in many languages;"
 msgstr ""
 "`Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-"
-"guide/>`_ — available in many languages;"
+"guide/>`_ — verfügbar in vielen Sprachen;"
 
 #: ../ubuntu-packaging-guide/index.rst:101
 msgid ""
@@ -2991,8 +2991,8 @@ msgstr ""
 "``/etc/apt/sources.list`` verweisen auf das Hauptarchiv oder Spiegelserver. "
 "Jeden Tag werden diverse Abbilddateien von Ubuntu erzeugt, die für die "
 "verschiedenen Einsatzbereiche optimiert sind. Es gibt beispielsweise "
-"Abbilddateien, die Sie auf einem USB Stick ablegen oder auf eine DVD brennen "
-"können, andere sind für das Starten über ein Netzwerk optimiert und wider "
+"Abbilddateien, die Sie auf einem USB-Stick ablegen oder auf eine DVD brennen "
+"können, andere sind für das Starten über ein Netzwerk optimiert und wieder "
 "andere können auf Mobiltelefonen oder Tablet-PCs installiert werden. Ubuntu "
 "Desktop, Ubuntu Server, Kubuntu und weitere Versionen benötigen "
 "unterschiedliche Pakete für ihre jeweilige Abbilddatei. Die so entstandene "
@@ -4094,7 +4094,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
 msgid "Patches to Packages"
-msgstr "Patches fuer Pakete"
+msgstr "Patches für Pakete"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:5
 msgid ""
@@ -4372,7 +4372,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:3
 msgid "Packaging Python modules and applications"
-msgstr "Pakete fuer Python-Module und -Anwendungen erstellen"
+msgstr "Pakete für Python-Module und -Anwendungen erstellen"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:5
 msgid ""
@@ -5766,7 +5766,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:3
 msgid "Uploading a package"
-msgstr "Ein Paket hochladen."
+msgstr "Ein Paket hochladen"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:5
 msgid ""
@@ -5775,6 +5775,11 @@ msgid ""
 "`Personal Package Archive`_ (PPA).  You might also want to do an upload if "
 "you are sponsoring someone else's changes."
 msgstr ""
+"Ist der Vorschlag zum Merge erst einmal gesichtet und bestätigt, kann das "
+"Paket in das Archiv (falls du die benötigten Berechtigungen besitzt) oder in "
+"eigenes `Personal Package Archive`_ (PPA) hochgeladen werden. Sponsoren "
+"laden gerne auch selbst die Pakete hoch, deren Änderungen sie finanziert "
+"haben."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:12
 msgid "Uploading a change made by you"
@@ -5840,6 +5845,9 @@ msgid ""
 "``bzr diff``.  This should show you the same changes as a debdiff would "
 "before you upload the source package."
 msgstr ""
+"Ist das einmal gemacht, solltest du die zu commitende Änderung mit ``bzr "
+"diff`` überprüfen. Das sollte dieselben Unterschiede anzeigen wie debdiff "
+"bevor ein Quellpaket hochgeladen wird."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:48
 msgid ""
@@ -5862,6 +5870,8 @@ msgid ""
 "This tag will tell the package importer that what is in the Bazaar branch is "
 "the same as in the archive."
 msgstr ""
+"Dieser Tag signalisiert dem Paketimporter, dass der Bazaar-Zweig denselben "
+"Inhalt hat wie das Archiv."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:63
 msgid "Now you can push the changes back to Launchpad::"
