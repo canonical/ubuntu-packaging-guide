@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ubuntu-packaging-guide 0.3.2\n"
+"Project-Id-Version: ubuntu-packaging-guide 0.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-11 07:27\n"
+"POT-Creation-Date: 2013-08-15 14:51\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2372,7 +2372,7 @@ msgid "In order to apply a debdiff, first make sure you have the source code of 
 msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:105
-msgid "Then in a terminal, change the to the directory where the source was uncompressed::"
+msgid "Then in a terminal, change to the directory where the source was uncompressed::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:110

@@ -1,5 +1,8 @@
 ubuntu-packaging-guide (0.3.3) UNRELEASED; urgency=low
 
+  [ Daniel Holbach ]
+  * remove superfluous "the". (LP: #1211488)
+
   [ Andrew Starr-Bochicchio ]
   * Use un-minified versions of 960.css and reset.css (Closes: #717008,
     LP: #1201636). 
