@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-07-11 07:27+0000\n"
+"POT-Creation-Date: 2013-08-15 14:51+0000\n"
 "PO-Revision-Date: 2013-07-17 11:31+0000\n"
 "Last-Translator: Aleksey Kabanov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-18 06:21+0000\n"
-"X-Generator: Launchpad (build 16696)\n"
+"X-Launchpad-Export-Date: 2013-08-16 05:53+0000\n"
+"X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -4905,10 +4905,9 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:105
 msgid ""
-"Then in a terminal, change the to the directory where the source was "
+"Then in a terminal, change to the directory where the source was "
 "uncompressed::"
 msgstr ""
-"Затем в терминале перейдите в каталог, куда распакован исходный код::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:110
 msgid "A debdiff is just like a normal patch file. Apply it as usual with::"
@@ -6222,6 +6221,12 @@ msgstr ""
 #~ msgstr ""
 #~ "После этого применяйте патчи по одному за раз и проверяйте, не возникнут ли "
 #~ "проблемы::"
+
+#~ msgid ""
+#~ "Then in a terminal, change the to the directory where the source was "
+#~ "uncompressed::"
+#~ msgstr ""
+#~ "Затем в терминале перейдите в каталог, куда распакован исходный код::"
 
 #~ msgid ""
 #~ "This will send your key to one keyserver, but a network of keyservers will "
