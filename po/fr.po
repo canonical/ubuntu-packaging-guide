@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-07-11 07:27+0000\n"
-"PO-Revision-Date: 2013-08-14 13:43+0000\n"
+"POT-Creation-Date: 2013-08-15 14:51+0000\n"
+"PO-Revision-Date: 2013-08-15 09:33+0000\n"
 "Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-15 05:39+0000\n"
+"X-Launchpad-Export-Date: 2013-08-16 05:52+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -1089,7 +1089,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:20
 msgid "Finding the problem"
-msgstr ""
+msgstr "Trouver le problème"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:22
 msgid ""
@@ -1108,7 +1108,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:35
 msgid "Figuring out what to fix"
-msgstr ""
+msgstr "Déterminer ce qu'il faut corriger"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:37
 msgid ""
@@ -1140,7 +1140,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:63
 msgid "``apt-cache`` is part of the standard installation of Ubuntu."
-msgstr ""
+msgstr "``apt-cache`` fait partie de l'installation standard d'Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:66
 msgid "Getting the code"
@@ -1227,11 +1227,13 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:121
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:204
 msgid "Testing the fix"
-msgstr ""
+msgstr "Tester le correctif"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:123
 msgid "To build a test package with your changes, run these commands::"
 msgstr ""
+"Pour construire un paquet de test avec vos modifications, exécutez ces "
+"commandes::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:128
 msgid ""
@@ -1246,11 +1248,14 @@ msgid ""
 "``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i "
 "<package>_<version>.deb``).  Then test to see if the bug is fixed."
 msgstr ""
+"Une fois la construction réussie, installez le paquet depuis  ``~/pbuilder "
+"/<release>_result/`` (en utilisant ``sudo dpkg -i <paquet>_<version>.deb``). "
+"Puis testez pour vérifier si le bogue est corrigé."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:139
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:155
 msgid "Documenting the fix"
-msgstr ""
+msgstr "Documenter le correctif"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:141
 msgid ""
@@ -3860,7 +3865,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:105
 msgid ""
-"Then in a terminal, change the to the directory where the source was "
+"Then in a terminal, change to the directory where the source was "
 "uncompressed::"
 msgstr ""
 
