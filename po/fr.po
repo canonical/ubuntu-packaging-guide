@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-15 14:51+0000\n"
-"PO-Revision-Date: 2013-08-15 09:33+0000\n"
-"Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
+"PO-Revision-Date: 2013-08-16 08:19+0000\n"
+"Last-Translator: Sebastien Bacher <seb128@ubuntu.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-16 05:52+0000\n"
+"X-Launchpad-Export-Date: 2013-08-17 06:05+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -548,7 +548,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
-msgstr ""
+msgstr "Communication dans Ubuntu développement"
 
 #: ../ubuntu-packaging-guide/communication.rst:5
 msgid ""
@@ -678,7 +678,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
-msgstr ""
+msgstr "Voici un exemple de fichier ``changelog`` pour bonjour::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:52
 msgid ""
@@ -887,6 +887,8 @@ msgid ""
 "To install files into your package that are not handled by the upstream "
 "build system."
 msgstr ""
+"Pour installer des fichiers dans votre paquet lorsqu'ils ne sont pas gérés "
+"par le système de construction en amont."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:260
 msgid ""
@@ -979,25 +981,30 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
 msgid "The source/format file"
-msgstr ""
+msgstr "Le fichier source/format"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:344
 msgid ""
 "This file indicates the format of the source package. It should contain a "
 "single line indicating the desired format:"
 msgstr ""
+"Ce fichier indique le format du paquet source. Il doit contenir une seule "
+"ligne indiquant le format désiré :"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:347
 msgid "``3.0 (native)`` for Debian native packages (no upstream version)"
 msgstr ""
+"`` 3.0 (native) `` pour les paquets Debian natifs (pas de version amont)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:349
 msgid "``3.0 (quilt)`` for packages with a separate upstream tarball"
-msgstr ""
+msgstr "`` 3.0 (quilt) `` pour les paquets avec une archive séparée en amont"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:351
 msgid "``1.0`` for packages wishing to explicitly declare the default format"
 msgstr ""
+"`` 1.0 `` pour les paquets souhaitant déclarer explicitement le format par "
+"défaut"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:353
 msgid ""
@@ -1019,10 +1026,11 @@ msgstr ""
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
 msgid "Support for additional compression formats: bzip2, lzma and xz"
 msgstr ""
+"Prise en charge de formats de compression supplémentaires : bzip2, lzma et xz"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:363
 msgid "Support for multiple upstream tarballs"
-msgstr ""
+msgstr "Prise en charge de plusieurs archives amont"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:365
 msgid ""
@@ -5034,6 +5042,7 @@ msgstr ""
 "  Pa2squale https://launchpad.net/~pmaugendre\n"
 "  Paquelier Alain https://launchpad.net/~paquelier-alain\n"
 "  Pierre Slamich https://launchpad.net/~pierre-slamich\n"
+"  Sebastien Bacher https://launchpad.net/~seb128\n"
 "  Sylvie Gallet https://launchpad.net/~sylvie-gallet\n"
 "  Tubuntu https://launchpad.net/~t-ubuntu\n"
 "  Winael https://launchpad.net/~vinzjobard\n"
