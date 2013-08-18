@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-15 14:51+0000\n"
-"PO-Revision-Date: 2013-07-17 11:31+0000\n"
+"PO-Revision-Date: 2013-08-17 15:17+0000\n"
 "Last-Translator: Aleksey Kabanov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-16 05:53+0000\n"
+"X-Launchpad-Export-Date: 2013-08-18 04:52+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -165,6 +165,8 @@ msgid ""
 "This command will create a pristine Saucy AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Эта команда создаст чистую виртуальную машину Saucy AMD64 из облачного "
+"образа. Чтобы запустить тесты, просто наберите::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -2836,6 +2838,8 @@ msgstr ""
 msgid ""
 "`How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;"
 msgstr ""
+"`Как создавать пакеты для Debian "
+"<https://wiki.debian.org/HowToPackageForDebian>`_;"
 
 #: ../ubuntu-packaging-guide/index.rst:98
 msgid "`Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;"
@@ -2856,6 +2860,9 @@ msgid ""
 "tutorial/>`_ (also available as a `package "
 "<https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
 msgstr ""
+"`Учебник по сборке пакетов <http://www.debian.org/doc/manuals/packaging-"
+"tutorial/>`_ (также доступен в виде `пакета "
+"<https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
@@ -4121,6 +4128,8 @@ msgid ""
 "Where this patch comes from (i.e. \"upstream\"), when *Author* is not "
 "present."
 msgstr ""
+"Откуда пришёл этот патч (например, \"upstream\"), если заголовок *Author* "
+"отсутствует."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:114
 msgid ""
@@ -4128,6 +4137,10 @@ msgid ""
 "*https://bugs.launchpad.net/bugs/XXXXXXX*). If there are also bugs in "
 "upstream or Debian bugtrackers, add *Bug* or *Bug-Debian* headers."
 msgstr ""
+"Ссылка на информацию об ошибке на Launchpad, предпочтительно, в краткой "
+"форме (наподобие *https://bugs.launchpad.net/bugs/XXXXXXX*). Если также "
+"имеются отчёты об ошибках в апстриме или системах отслеживания ошибок "
+"Debian, добавьте заголовки *Bug* или *Bug-Debian*."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:118
 msgid ""
@@ -4137,7 +4150,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:120
 msgid "Date of the last revision (in form \"YYYY-MM-DD\")."
-msgstr ""
+msgstr "Дата последней ревизии (в форме \"ГГГГ-ММ-ДД\")."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:124
 msgid "Upgrading to New Upstream Versions"
@@ -4147,6 +4160,8 @@ msgstr "Обновление до новых версий из апстрима"
 msgid ""
 "To upgrade to the new version, you can use ``bzr merge-upstream`` command::"
 msgstr ""
+"Чтобы выполнить обновление до последней версии, вы можете использовать "
+"команду ``bzr merge-upstream``::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:130
 msgid ""
@@ -4200,7 +4215,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:176
 msgid "Configuring Quilt"
-msgstr ""
+msgstr "Конфигурирование Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:178
 msgid ""
@@ -4236,6 +4251,9 @@ msgid ""
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "
 "then feel free to add Quilt."
 msgstr ""
+"Не изменяйте систему патчей, не обсудив это с сопровождающим Debian или "
+"имеющей отношение к делу командой Ubuntu. Если существующей системы патчей "
+"нет, можете добавить Quilt."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:3
 msgid "Packaging Python modules and applications"
@@ -4417,6 +4435,9 @@ msgid ""
 "Sphinx documentation to your package (using ``dh_sphinxdoc`` helper), you "
 "should:"
 msgstr ""
+"Инструмент, наиболее часто используемый для сборки документации для "
+"приложений на Python — это `Sphinx`_. Чтобы добавить документацию Sphinx к "
+"вашему пакету (используя помощник ``dh_sphinxdoc``), вам следует:"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:93
 msgid ""
