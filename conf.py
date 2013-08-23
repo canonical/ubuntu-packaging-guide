@@ -269,6 +269,8 @@ epub_author = authors
 epub_publisher = authors
 epub_copyright = copyright
 
+epub_theme = 'nature'
+
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
 #epub_language = ''
