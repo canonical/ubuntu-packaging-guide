@@ -42,7 +42,8 @@ master_doc = 'ubuntu-packaging-guide/index'
 # General information about the project.
 project = u'ubuntu-packaging-guide'
 authors = 'Ubuntu Developers'
-copyright = u'2010-2013, '+authors
+licence = 'Creative Commons Attribution-ShareAlike 3.0'
+copyright = u'2010-2013 , ' + authors + ', ' + licence
 
 
 changelog = "debian/changelog"
@@ -227,12 +228,12 @@ custom_preamble = u"""
         \\fancyhead[LO]{{\\py@HeaderFamily\\nouppercase{\\rightmark}}}
         \\fancyhead[RE]{{\\py@HeaderFamily\\nouppercase{\\leftmark}}}
         \\fancyfoot[LE,RO]{{\\py@HeaderFamily\\thepage}}
-        \\fancyfoot[LO,RE]{\\footnotesize © Ubuntu Developers, Creative Commons Attribution-ShareAlike 3.0}
+        \\fancyfoot[LO,RE]{\\footnotesize © %s}
         \\renewcommand{\\headrulewidth}{0.4pt}
         \\renewcommand{\\footrulewidth}{0.4pt}
     }
 \\makeatother
-"""
+""" % copyright
 
 # Disable useless index in PDFs (only one item).
 latex_elements = {'printindex': '', 'preamble': custom_preamble}
