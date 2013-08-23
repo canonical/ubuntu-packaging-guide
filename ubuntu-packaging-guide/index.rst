@@ -100,3 +100,10 @@ resources you may find useful:
   — available in many languages;
 * `Packaging tutorial <http://www.debian.org/doc/manuals/packaging-tutorial/>`_ (also
   available as a `package <https://launchpad.net/ubuntu/+source/packaging-tutorial>`_).
+
+We are always looking to improve this guide. If you find any problems or have
+some suggestions, please `report a bug on Launchpad 
+<https://bugs.launchpad.net/ubuntu-packaging-guide>`_. If you'd like to help
+work on the guide, `grab the source
+<https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk>`_
+there as well.
