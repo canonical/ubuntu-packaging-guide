@@ -219,8 +219,23 @@ latex_logo = 'images/logo-ubuntu_cof-orange-hex.png'
 # If false, no module index is generated.
 #latex_domain_indices = True
 
+custom_preamble = u"""
+\\makeatletter
+    \\fancypagestyle{normal}{
+        \\fancyhf{}
+        \\fancyhead[LE,RO]{{\\py@HeaderFamily \\@title}}
+        \\fancyhead[LO]{{\\py@HeaderFamily\\nouppercase{\\rightmark}}}
+        \\fancyhead[RE]{{\\py@HeaderFamily\\nouppercase{\\leftmark}}}
+        \\fancyfoot[LE,RO]{{\\py@HeaderFamily\\thepage}}
+        \\fancyfoot[LO,RE]{\\footnotesize © Ubuntu Developers, Creative Commons Attribution-ShareAlike 3.0}
+        \\renewcommand{\\headrulewidth}{0.4pt}
+        \\renewcommand{\\footrulewidth}{0.4pt}
+    }
+\\makeatother
+"""
+
 # Disable useless index in PDFs (only one item).
-latex_elements = {'printindex': ''}
+latex_elements = {'printindex': '', 'preamble': custom_preamble}
 
 # -- Options for manual page output --------------------------------------------
 
