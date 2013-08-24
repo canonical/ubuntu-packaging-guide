@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-15 14:51+0000\n"
-"PO-Revision-Date: 2013-08-16 10:17+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2013-08-23 14:44+0000\n"
+"Last-Translator: Hannie Dumoleyn <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-17 06:05+0000\n"
-"X-Generator: Launchpad (build 16723)\n"
+"X-Launchpad-Export-Date: 2013-08-24 05:12+0000\n"
+"X-Generator: Launchpad (build 16738)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -264,22 +264,31 @@ msgid ""
 "they should still be submitted to Debian, as DEP-8 is a Debian specification "
 "and Debian developers or users can still manually run the tests."
 msgstr ""
+"Zolang Debian nog geen automatische testinfrastructuur heeft, moeten ze nog "
+"ingediend worden bij Debian, aangezien DEP-8 een Debian-specificatie is en "
+"Debian-ontwikkelaars of -gebruikers de testen nog steeds handmatig kunnen "
+"uitvoeren."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:160
 msgid ""
 "Packages in Debian with a testsuite header will also be automatically added "
 "when they are synced to Ubuntu."
 msgstr ""
+"Pakketten in Debian met een testsuite-header worden ook automatisch "
+"toegevoegd op het moment dat ze worden gesynchroniseerd met Ubuntu."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
 msgid "Getting the test into Ubuntu"
-msgstr ""
+msgstr "De test in Ubuntu krijgen"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
+"Het proces van indienen van een autopkgtest voor een pakket is grotendeels "
+"gelijk aan :doc:`fixing a bug in Ubuntu<./fixing-a-bug>`.  U hoeft eigenlijk "
+"alleen:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid "run ``bzr branch ubuntu:<packagename>``,"
@@ -333,10 +342,12 @@ msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel`_ to get in touch with developers who can help you."
 msgstr ""
+"Als u tegen problemen aanloopt, kunt u gaan naar `#ubuntu-quality IRC "
+"channel`_ om in contact te komen met ontwikkelaars die u kunnen helpen."
 
 #: ../ubuntu-packaging-guide/backports.rst:3
 msgid "Backporting software updates"
-msgstr ""
+msgstr "Software-updates backporten"
 
 #: ../ubuntu-packaging-guide/backports.rst:5
 msgid ""
@@ -345,10 +356,14 @@ msgid ""
 "you have two options: either you `upload to a PPA "
 "<https://help.launchpad.net/Packaging/PPA>`_ or prepare a backport."
 msgstr ""
+"Soms wilt u in een stabiele versie nieuwe functionaliteit beschikbaar maken "
+"die geen verband houdt met het repareren van een kritieke fout. Voor deze "
+"scenario's heeft u twee opties: `uploaden naar een PPA "
+"<https://help.launchpad.net/Packaging/PPA>`_ of een backport aanmaken."
 
 #: ../ubuntu-packaging-guide/backports.rst:12
 msgid "Personal Package Archive (PPA)"
-msgstr ""
+msgstr "Personal Package Archive (PPA)"
 
 #: ../ubuntu-packaging-guide/backports.rst:14
 msgid ""
@@ -356,16 +371,22 @@ msgid ""
 "don't need approval of anyone, but the downside of it is that your users "
 "will have to manually enable it. It is a non-standard software source."
 msgstr ""
+"Het gebruik van een PPA heeft een aantal voordelen. Het is niet al te "
+"ingewikkeld, en u heeft van niemand toestemming nodig. Maar het nadeel is "
+"dat de gebruikers ervan het handmatig moeten inschakelen. Het is een niet-"
+"standaard softwarebron."
 
 #: ../ubuntu-packaging-guide/backports.rst:18
 msgid ""
 "The `PPA documentation on Launchpad`_ is fairly comprehensive and should get "
 "you up and running in no time."
 msgstr ""
+"De `PPA-documentatie in Launchpad`_ is aardig compleet, zodat u binnen de "
+"kortste keren aan de slag kunt."
 
 #: ../ubuntu-packaging-guide/backports.rst:25
 msgid "Official Ubuntu Backports"
-msgstr ""
+msgstr "Officiële Ubuntu-backports"
 
 #: ../ubuntu-packaging-guide/backports.rst:27
 msgid ""
@@ -377,6 +398,14 @@ msgid ""
 "the :doc:`Security Update or the Stable Release Update process<./security-"
 "and-stable-release-updates>`, as appropriate."
 msgstr ""
+"Het Backports-project is een manier om gebruikers van nieuwe functies te "
+"voorzien. Vanwege de inherente stabiliteitsrisico's, kunnen gebruikers "
+"backport-pakketten pas verkrijgen na het uitvoeren van bepaalde handelingen. "
+"Hierdoor is het gebruik van backports over het algemeen niet geschikt voor "
+"het repareren van fouten. Als een pakket in een Ubuntu-versie een fout "
+"bevat, dient die gerepareerd te worden via het proces "
+":doc:`Beveiligingsupdate of Stabiele versie-update<./security-and-stable-"
+"release-updates>`"
 
 #: ../ubuntu-packaging-guide/backports.rst:35
 msgid ""
@@ -385,6 +414,10 @@ msgid ""
 "``pbuilder-dist`` (in the ``ubuntu-dev-tools`` package) is a very handy tool "
 "to do this easily."
 msgstr ""
+"Als u eenmaal bepaald heeft dat u een pakket wilt backporten naar een "
+"stabiele versie, dan moet u test-build gebruiken en het pakket testen in de "
+"bedoelde stabiele versie. ``pbuilder-dist`` (in het pakket ``ubuntu-dev-"
+"tools``) is een heel handig hulpmiddel om dit eenvoudig te doen."
 
 #: ../ubuntu-packaging-guide/backports.rst:40
 msgid ""
@@ -460,6 +493,8 @@ msgid ""
 "You might want to copy your GPG/ssh keys and Bazaar configuration into the "
 "chroot so you can access and sign packages directly::"
 msgstr ""
+"U kunt uw GPG/ssh-sleutels en de Bazaar-configuratie kopiëren naar chroot, "
+"zodat u direct toegang heeft tot pakketten en ze kunt ondertekenen::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:39
 msgid ""
@@ -474,19 +509,23 @@ msgid ""
 "If you want to run X programs you will need to bind the /tmp directory into "
 "the chroot, from outside the chroot run::"
 msgstr ""
+"Indien u X-programma's wilt draaien dient u de /tmp directory in chroot te "
+"binden; voer buiten de chroot het volgende uit::"
 
 #: ../ubuntu-packaging-guide/chroots.rst:50
 msgid "Some programs may need you to bind /dev or /proc."
-msgstr ""
+msgstr "Voor sommige programma's is het nodig /dev of /proc te binden."
 
 #: ../ubuntu-packaging-guide/chroots.rst:52
 msgid ""
 "For more information on chroots see our `Debootstrap Chroot wiki page`_."
 msgstr ""
+"Voor meer informatie over chroots kunt u de `Debootstrap Chroot wiki-"
+"pagina`_ raadplegen."
 
 #: ../ubuntu-packaging-guide/chroots.rst:55
 msgid "Alternatives"
-msgstr ""
+msgstr "Alternatieven"
 
 #: ../ubuntu-packaging-guide/chroots.rst:57
 msgid ""
@@ -495,6 +534,10 @@ msgid ""
 "building packages but takes some more setup compared to PBuilder.  See `the "
 "Security Team Build Environment wiki page`_ for a full explanation."
 msgstr ""
+"SBuild kan net als PBuilder een omgeving aanmaken waarin testpakketten "
+"kunnen draaien. Het lijkt meer op hoe Launchpad  pakketten maakt, maar het "
+"instellen ervan neemt wat meer tijd in beslag vergeleken met PBuilder. Zie "
+"`the Security Team Build Environment wiki page`_ voor een volledige uitleg."
 
 #: ../ubuntu-packaging-guide/chroots.rst:59
 msgid ""
@@ -502,6 +545,10 @@ msgid ""
 "TestDrive is a program to automate syncing and running daily ISO images, see "
 "`the TestDrive wiki page`_ for more information."
 msgstr ""
+"Volledige virtuele machines kunnen gebruikt worden voor het maken en testen "
+"van pakketten. TestDrive is een programma voor het automatisch "
+"synchroniseren en draaien van dagelijkse ISO-imagebestanden, zie `the "
+"TestDrive wiki page`_ voor meer informatie."
 
 #: ../ubuntu-packaging-guide/chroots.rst:63
 msgid ""
