@@ -42,7 +42,8 @@ master_doc = 'ubuntu-packaging-guide/index'
 # General information about the project.
 project = u'ubuntu-packaging-guide'
 authors = 'Ubuntu Developers'
-copyright = u'2010-2013, '+authors
+licence = 'Creative Commons Attribution-ShareAlike 3.0'
+copyright = u'2010-2013 , ' + authors + ', ' + licence
 
 
 changelog = "debian/changelog"
@@ -219,8 +220,23 @@ latex_logo = 'images/logo-ubuntu_cof-orange-hex.png'
 # If false, no module index is generated.
 #latex_domain_indices = True
 
+custom_preamble = u"""
+\\makeatletter
+    \\fancypagestyle{normal}{
+        \\fancyhf{}
+        \\fancyhead[LE,RO]{{\\py@HeaderFamily \\@title}}
+        \\fancyhead[LO]{{\\py@HeaderFamily\\nouppercase{\\rightmark}}}
+        \\fancyhead[RE]{{\\py@HeaderFamily\\nouppercase{\\leftmark}}}
+        \\fancyfoot[LE,RO]{{\\py@HeaderFamily\\thepage}}
+        \\fancyfoot[LO,RE]{\\footnotesize © %s}
+        \\renewcommand{\\headrulewidth}{0.4pt}
+        \\renewcommand{\\footrulewidth}{0.4pt}
+    }
+\\makeatother
+""" % copyright
+
 # Disable useless index in PDFs (only one item).
-latex_elements = {'printindex': ''}
+latex_elements = {'printindex': '', 'preamble': custom_preamble}
 
 # -- Options for manual page output --------------------------------------------
 
@@ -252,6 +268,8 @@ epub_title = html_title
 epub_author = authors
 epub_publisher = authors
 epub_copyright = copyright
+
+epub_theme = 'nature'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
