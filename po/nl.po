@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-15 14:51+0000\n"
-"PO-Revision-Date: 2013-08-23 14:44+0000\n"
+"PO-Revision-Date: 2013-08-30 15:46+0000\n"
 "Last-Translator: Hannie Dumoleyn <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-24 05:12+0000\n"
-"X-Generator: Launchpad (build 16738)\n"
+"X-Launchpad-Export-Date: 2013-08-31 05:18+0000\n"
+"X-Generator: Launchpad (build 16750)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -556,6 +556,10 @@ msgid ""
 "Copy C10shell from /usr/share/doc/pbuilder/examples into a directory and use "
 "the ``--hookdir=`` argument to point to it."
 msgstr ""
+"U kunt pbuilder ook zo instellen dat het programma pauseert wanneer er bij "
+"het bouwen iets niet goed gaat. Kopieer C10shell van "
+"/usr/share/doc/pbuilder/examples naar een map en gebruik het ``--hookdir=`` "
+"argument om er naar te verwijzen."
 
 #: ../ubuntu-packaging-guide/chroots.rst:67
 msgid ""
@@ -564,10 +568,14 @@ msgid ""
 "package on those.  This is useful when you want to compile many packages at "
 "the same time or to overcome bandwidth restraints."
 msgstr ""
+"Bij Amazon's `EC2 cloud computers`_ kunt u voor een paar dollarcent per uur "
+"een computer huren; u kunt Ubuntu-machines opzetten met elke ondersteunde "
+"versie en daarop pakketten maken. Dit is handig wanneer u vele pakketten "
+"tegelijk wilt samenstellen of wanneer u te weinig bandbreedte heeft."
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
-msgstr ""
+msgstr "Communicatie bij Ubuntu Development"
 
 #: ../ubuntu-packaging-guide/communication.rst:5
 msgid ""
@@ -635,15 +643,17 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/communication.rst:32
 msgid "#ubuntu-devel (for general development discussion)"
-msgstr ""
+msgstr "#ubuntu-devel (voor discussies over ontwikkeling van algemene aard)"
 
 #: ../ubuntu-packaging-guide/communication.rst:33
 msgid "#ubuntu-motu (for MOTU team discussion and generally getting help)"
 msgstr ""
+"#ubuntu-motu (voor discussies van het MOTU-team en hulp krijgen in het "
+"algemeen)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:2
 msgid "Basic Overview of the ``debian/`` Directory"
-msgstr ""
+msgstr "Algemeen overzicht van de ``debian/``-map"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:4
 msgid ""
@@ -655,10 +665,17 @@ msgid ""
 "configure the behavior of the package. Some of these files are discussed in "
 "this article, but this is not meant to be a complete list."
 msgstr ""
+"Dit artikel geeft korte uitleg over de verschillende bestanden die "
+"belangrijk zijn bij het maken van Ubuntu-pakketten en die zich bevinden in "
+"de ``debian/``-map. De belangrijkste bestanden zijn ``changelog``, "
+"``control``, ``copyright`` en ``rules``. Deze zijn nodig voor alle "
+"pakketten. Andere bestanden in de map ``debian/`` kunnen gebruikt worden om "
+"het gedrag van het pakket aan te passen en te configureren. Sommige van deze "
+"bestanden worden besproken in dit artikel, maar het is geen complete lijst."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:13
 msgid "The changelog"
-msgstr ""
+msgstr "De changelog"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:15
 msgid ""
@@ -669,6 +686,13 @@ msgid ""
 "the same name and email address in ``changelog`` as you have in your key. "
 "The following is a template ``changelog``::"
 msgstr ""
+"Dit bestand is, zoals de naam zegt, een lijst met wijzigingen gemaakt in "
+"elke versie. Het heeft een speciale vorm met de naam, versie, distributie, "
+"wijzigingen van het pakket, en wie op welk tijdstip wijzigingen heeft "
+"aangebracht. Als u een GPG-sleutel heeft ( zie: :doc:`Getting set "
+"up<./getting-set-up/>`), zorg er dan voor dat u in  ``changelog`` dezelfde "
+"naam en e-mailadres gebruikt als voor uw sleutel. Hier volgt een voorbeeld "
+"van ``changelog``::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:31
 msgid ""
