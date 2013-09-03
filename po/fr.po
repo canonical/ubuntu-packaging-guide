@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-15 14:51+0000\n"
-"PO-Revision-Date: 2013-08-29 21:43+0000\n"
-"Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
+"PO-Revision-Date: 2013-09-02 20:30+0000\n"
+"Last-Translator: Anne <anneonyme017@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-30 05:15+0000\n"
-"X-Generator: Launchpad (build 16750)\n"
+"X-Launchpad-Export-Date: 2013-09-03 05:58+0000\n"
+"X-Generator: Launchpad (build 16753)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -1169,10 +1169,14 @@ msgid ""
 "command line.  To find the binary package containing this application, use "
 "this command::"
 msgstr ""
+"Admettons que vous ayez trouvé un bogue dans Tomboy, une application de "
+"prise de notes sur le bureau. L'application Tomboy peut être démarrée en "
+"exécutant ``/usr/bin/tomboy`` en ligne de commande. Pour trouver le paquet "
+"binaire contenant cette application, utilisez la commande ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:48
 msgid "This would print out::"
-msgstr ""
+msgstr "Cela affichera ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:52
 msgid ""
@@ -1218,6 +1222,8 @@ msgid ""
 "We'll describe specifics on how to branch the code, push your fix, and "
 "request a review in the following sections."
 msgstr ""
+"Nous allons décrire en détail la façon de ramifier le code, de soumettre "
+"votre solution et d'en demander un examen dans les sections suivantes."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:89
 msgid "Work on a fix"
@@ -1230,6 +1236,11 @@ msgid ""
 "such as obvious typos first. Try to keep changes as minimal as possible and "
 "document your change and assumptions clearly."
 msgstr ""
+"Il existe des livres entiers sur la façon de trouver des bogues, de les "
+"corriger, de les tester, etc. Si vous êtes complètement novice en "
+"programmation, essayez en premier lieu de corriger les bogues simples comme "
+"les fautes de frappe évidentes. Essayez de minimiser les changements autant "
+"que possible et documentez clairement vos modifications et hypothèses."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
 msgid ""
@@ -1244,6 +1255,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
+"Traceur de bogues en amont (et dans Debian) (bogues ouverts et fermés),"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
 msgid ""
@@ -1259,18 +1271,27 @@ msgid ""
 "You now want to create a patch which includes the fix.  The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
+"Vous souhaitez maintenant créer un correctif incluant la solution. La "
+"commande ``edit-patch`` est une façon simple d'ajouter un correctif à un "
+"paquet. Lancez ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:111
 msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
 msgstr ""
+"Cela va copier l'empaquetage dans un répertoire temporaire. Vous pouvez "
+"maintenant éditer les fichiers avec un éditeur de texte ou appliquer des "
+"correctifs en amont, par exemple::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:116
 msgid ""
 "After editing the file type ``exit`` or press ``control-d`` to quit the "
 "temporary shell.  The new patch will have been added into ``debian/patches``."
 msgstr ""
+"Après avoir modifié le fichier, saisissez ``exit`` ou appuyez sur ``ctrl+d`` "
+"pour quitter l'environnement temporaire. Le nouveau correctif a été ajouté "
+"dans ``debian/patches``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:121
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:204
@@ -1289,6 +1310,10 @@ msgid ""
 "just omit the step to sign the source package) and ``pbuilder-dist`` will "
 "build the package from source for whatever ``release`` you choose."
 msgstr ""
+"Cela créera un paquet source à partir des contenus de la ramification (``-us "
+"-uc`` permettra de s'affranchir de l'étape de signature du paquet source) et "
+"``pbuilder-dist`` construira le paquet à partir des sources de la "
+"``version`` de votre choix."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:132
 msgid ""
@@ -1313,6 +1338,11 @@ msgid ""
 "includes ``debian/changelog``, where changes of each uploaded package are "
 "tracked."
 msgstr ""
+"Il est très important de documenter abondamment vos modifications afin que "
+"les développeurs qui reliront votre code dans le futur n'aient pas à deviner "
+"ce qu'étaient votre raisonnement et vos hypothèses. Chaque paquet source "
+"Debian et Ubuntu inclut ``debian/changelog``, où les modifications de chaque "
+"paquet téléchargé sont suivies."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:146
 msgid "The easiest way to update this is to run::"
@@ -1332,12 +1362,20 @@ msgid ""
 "always is 'low'). The last line always contains the name, email address and "
 "timestamp (in :rfc:`5322` format) of the change."
 msgstr ""
+"``dch`` doit déjà remplir pour vous la première et la dernière ligne d'une "
+"telle entrée du changelog. La ligne 1 se compose du nom du paquet source, du "
+"numéro de version, de la version d'Ubuntu vers laquelle le paquet est "
+"transféré, du niveau d'urgence (qui est presque toujours «{nbsp]faible »). "
+"La dernière ligne contient toujours le nom, l'adresse électronique et "
+"l'horodatage du changement (au format :rfc:`5322`)."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
 msgid ""
 "With that out of the way, let's focus on the actual changelog entry itself: "
 "it is very important to document:"
 msgstr ""
+"Ces préoccupations en moins, concentrons-nous sur l'entrée effective du "
+"changelog elle-même : il est très important de renseigner :"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 msgid "where the change was done"
@@ -1459,7 +1497,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:61
 msgid "Research bug situation"
-msgstr ""
+msgstr "Localisation de bogue"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:63
 msgid ""
@@ -1469,12 +1507,21 @@ msgid ""
 "https://bugs.launchpad.net/ubuntu/+source/bumprace and there is no open bug "
 "with our problem there."
 msgstr ""
+"En premier lieu, nous devons vérifier l'existence préalable d'un bogue pour "
+"ce problème dans Ubuntu. Peut-être que quelqu'un travaille déjà sur un "
+"correctif, ou nous pouvons contribuer à la solution d'une manière ou d'une "
+"autre. Pour Ubuntu, nous jetons un coup d’œil à "
+"https://bugs.launchpad.net/ubuntu/+source/bumprace et constatons qu'aucun "
+"bogue n'y est ouvert avec notre problème."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:69
 msgid ""
 "For Ubuntu the URL ``https://bugs.launchpad.net/ubuntu/+source/<package>`` "
 "should always take to the bug page of the source package in question."
 msgstr ""
+"Pour Ubuntu, l'URL ``https://bugs.launchpad.net/ubuntu/+source/<paquet>`` "
+"devrait toujours afficher la page concernant les bogues du paquet source en "
+"question."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:73
 msgid ""
@@ -1482,12 +1529,17 @@ msgid ""
 "at http://bugs.debian.org/src:bumprace and can't find a bug report for our "
 "problem either."
 msgstr ""
+"Pour Debian, qui est la principale source des paquets d'Ubuntu, nous jetons "
+"un œil sur http://bugs.debian.org/src:bumprace et nous ne pouvons de nouveau "
+"pas trouver de rapport de bogue pour notre problème."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:77
 msgid ""
 "For Debian the URL ``http://bugs.debian.org/src:<package>`` should always "
 "take to the bug page of the source package in question."
 msgstr ""
+"Pour Debian, l'URL ``http://bugs.debian.org/src:<paquet>`` devrait toujours "
+"afficher la page concernant les bogues du paquet source en question."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:80
 msgid ""
@@ -1509,6 +1561,11 @@ msgid ""
 "include as much information as you can: Under which circumstances does the "
 "bug occur? How did you fix the problem? Did you test your solution?"
 msgstr ""
+"Si vous avez trouvé un bogue ouvert, qu'il n'est affecté à personne et que "
+"vous êtes en mesure de régler le problème, vous pouvez le commenter avec "
+"votre solution. N'oubliez pas d'inclure autant d'informations que possible : "
+"dans quelles circonstances se produit le bogue ? Comment avez-vous résolu le "
+"problème ? Avez-vous testé votre solution ?"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:95
 msgid ""
@@ -1535,12 +1592,18 @@ msgid ""
 "software catalogue. http://www.linux-games.com/bumprace/ looks like it is "
 "the proper place."
 msgstr ""
+"Pour cet exemple spécifique, il suffit de chercher ``bumprace`` sur internet "
+"et de trouver sa page d'accueil. Assurez-vous qu'il s'agisse du vrai site et "
+"non d'un simple catalogue de logiciels. http://www.linux-games.com/bumprace/ "
+"semble être sa bonne localisation."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:111
 msgid ""
 "To address the issue in the source package, we first need the source and we "
 "can easily get it by running::"
 msgstr ""
+"Pour résoudre le problème dans le paquet source, nous avons d'abord besoin "
+"de la source et nous pouvons facilement l'obtenir en exécutant ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:117
 msgid ""
@@ -1552,7 +1615,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:121
 msgid "So what we do next is run::"
-msgstr ""
+msgstr "Ainsi, nous lançons ensuite ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:125
 msgid ""
@@ -1560,6 +1623,9 @@ msgid ""
 "games.com/bumprace/``. At the end of the first section should be a good "
 "place for it. Once you have done this, save the file."
 msgstr ""
+"et modifions ``debian/control`` pour y ajouter ``Homepage: http://www.linux-"
+"games.com/bumprace/``. La fin de la première section est un bon endroit pour "
+"cela. Une fois que vous avez réalisé cela, enregistrez le fichier."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:129
 msgid "If you now run::"
@@ -1575,6 +1641,9 @@ msgid ""
 "was added. In our cases it was added just before the second section, "
 "starting with ``Package``, which indicates a resulting binary package."
 msgstr ""
+"La différence est assez simple à comprendre. Le ``+`` indique une ligne "
+"rajoutée. Dans notre cas, elle a été ajoutée juste avant la seconde section, "
+"débutant par ``Package``, qui indique le paquet binaire résultant."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:157
 msgid ""
@@ -1605,12 +1674,18 @@ msgid ""
 "If you have a reference to a Launchpad bug which is fixed by the issue, add "
 "(``LP: #<bug number>``) to the changelog entry line, ie: ``(LP: #123456)``."
 msgstr ""
+"Si vous faites référence à un numéro Launchpad du bogue résolu par votre "
+"publication, ajoutez (``LP: #<numéro de bogue>``) sur la ligne d'entrée du "
+"changelog, c'est à dire : ``(LP: #123456)``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:193
 msgid ""
 "If you want to get your fix included in Debian, for a Debian bug the syntax "
 "is ``(Closes: #<bug number>)``, ie: ``(Closes: #123456)``."
 msgstr ""
+"Si vous souhaitez que votre correctif soit inclus dans Debian, la syntaxe "
+"pour un bogue Debian est ``(Closes: #<numéro de bogue>)``, c'est à dire : "
+"``(Closes: #123456)``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:195
 msgid ""
@@ -1623,7 +1698,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:197
 msgid "Try to wrap your lines at 80 characters."
-msgstr ""
+msgstr "Essayez de limiter vos lignes à 80 caractères."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:198
 msgid ""
@@ -1643,6 +1718,10 @@ msgid ""
 "up<./getting-set-up>`, then to build the package, install it and verify the "
 "problem is solved. In our case this would be::"
 msgstr ""
+"Pour tester le correctif, vous devez :doc:`avoir configuré votre "
+"environnement de développement<./getting-set-up>`, puis pour construire le "
+"paquet, l'installer et vérifier que le problème est résolu. Dans notre cas, "
+"ce serait ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:214
 msgid ""
@@ -1650,6 +1729,10 @@ msgid ""
 "using ``pbuilder``, then inspect the resulting package to check if the "
 "Homepage field was added properly."
 msgstr ""
+"Dans la première étape nous construisons le paquet source depuis la "
+"ramification, puis le construisons en utilisant ``pbuilder``, et inspectons "
+"ensuite le paquet résultant pour vérifier si le champ « Page d'accueil » a "
+"été correctement ajouté."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:218
 msgid ""
@@ -1659,6 +1742,12 @@ msgid ""
 "them via ``sudo dpkg -i <package>.deb`` or by double-clicking on them in "
 "your file manager."
 msgstr ""
+"Dans de nombreux cas vous devrez réellement installer le paquet pour vous "
+"assurer qu'il fonctionne comme prévu. Notre cas est largement plus simple. "
+"Si la construction réussit, vous trouverez les paquets binaires dans "
+"``~/pbuilder/<release>_result``. Installez-les à l'aide de la commande "
+"``sudo dpkg -i <package>.deb`` ou en double-cliquant dessus dans votre "
+"gestionnaire de fichiers."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:225
 msgid ""
@@ -1678,6 +1767,9 @@ msgid ""
 "guarantee that everybody can take the Upstream source as-is and don't need "
 "to have local modifications to fix it."
 msgstr ""
+"Cela permet d'inclure le correctif le plus en amont possible. Procéder ainsi "
+"garantit que chacun puisse prendre la source en amont telle quelle et n'ait "
+"pas besoin d'effectuer des modifications en local pour la corriger."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:235
 msgid ""
@@ -1700,12 +1792,18 @@ msgid ""
 "the correct place. Be sure to review the diff again to make sure it does not "
 "include random changes you made earlier."
 msgstr ""
+"Cela vous mènera à travers une série de mesures pour vous assurer que le "
+"bogue se retrouve au bon endroit. Assurez-vous de contrôler de nouveau la "
+"différence pour être certain qu'elle ne comprenne aucune modification "
+"antérieure non désirée."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:251
 msgid ""
 "Communication is important, so when you add some more description to it to "
 "the inclusion request, be friendly, explain it well."
 msgstr ""
+"La communication est importante, lorsque vous ajoutez une description à "
+"votre demande d'inclusion, soyez gentil de bien l'expliquer."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:254
 msgid ""
@@ -1741,6 +1839,10 @@ msgid ""
 "send individual patches or merge proposals instead. If there are individual "
 "bugs filed for the issues already, this makes it even easier."
 msgstr ""
+"S'il y a plusieurs choses importantes que vous souhaitez corriger, il "
+"pourrait être plus judicieux d'envoyer des correctifs individuels ou de "
+"fusionner des propositions. S'il y a déjà des bogues individuels déposés sur "
+"le sujet, cela rend la chose encore plus aisée."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
 msgid "Getting Set Up"
@@ -1753,14 +1855,19 @@ msgid ""
 "start working with packages, and upload your packages to Ubuntu's hosting "
 "platform, Launchpad. Here's what we'll cover:"
 msgstr ""
+"Un certain nombre de choses doivent être accomplies pour commencer à "
+"développer pour Ubuntu. Cet article est conçu pour configurer votre "
+"ordinateur de sorte que vous puissiez commencer à travailler avec des "
+"paquets, puis télécharger vos paquets vers la plate-forme d'hébergement "
+"d'Ubuntu, Launchpad. Voici ce que nous allons aborder :"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:10
 msgid "Installing packaging-related software. This includes:"
-msgstr ""
+msgstr "Installation des logiciels relatifs à l'empaquetage. Cela comprend :"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:12
 msgid "Ubuntu-specific packaging utilities"
-msgstr ""
+msgstr "Les utilitaires d'empaquetage spécifiques à Ubuntu"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:13
 msgid "Encryption software so your work can be verified as being done by you"
