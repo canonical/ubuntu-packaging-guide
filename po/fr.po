@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-15 14:51+0000\n"
-"PO-Revision-Date: 2013-09-02 20:30+0000\n"
+"PO-Revision-Date: 2013-09-07 14:07+0000\n"
 "Last-Translator: Anne <anneonyme017@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-03 05:58+0000\n"
-"X-Generator: Launchpad (build 16753)\n"
+"X-Launchpad-Export-Date: 2013-09-08 04:47+0000\n"
+"X-Generator: Launchpad (build 16760)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -1891,6 +1891,9 @@ msgid ""
 "packages, interact with other developers, and propose your changes on "
 "Launchpad."
 msgstr ""
+"Configuration de votre environnement de développement pour vous aider à "
+"construire des paquets localement, à interagir avec d'autres développeurs, "
+"et à proposer vos modifications sur Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:22
 msgid ""
@@ -1898,6 +1901,10 @@ msgid ""
 "of Ubuntu. Doing so will allow you to test changes in the same environment "
 "where those changes will actually be applied and used."
 msgstr ""
+"Il est conseillé de travailler sur l'empaquetage en utilisant la version de "
+"développement actuelle d'Ubuntu. Procéder ainsi vous permettra de tester les "
+"modifications dans le même environnement où elles seront effectivement "
+"appliquées et utilisées."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:26
 msgid ""
@@ -1905,6 +1912,9 @@ msgid ""
 "<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways "
 "to safely use the development release."
 msgstr ""
+"Ne vous inquiétez pas, la `page wiki de la version de développement d'Ubuntu "
+"<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ indique de multiples "
+"façons d'utiliser la version de développement en toute sécurité."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
@@ -1916,6 +1926,9 @@ msgid ""
 "much easier.  You will encounter these tools later in this guide.  To "
 "install most of the tools you will need run this command::"
 msgstr ""
+"Il existe de nombreux outils qui simplifieront votre vie de développeur "
+"d'Ubuntu. Vous croiserez ces outils plus loin dans ce guide. Pour installer "
+"la plupart des outils dont vous aurez besoin, exécutez cette commande ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:41
 msgid ""
@@ -1924,6 +1937,10 @@ msgid ""
 "install the above and other tools which are quite common in Ubuntu "
 "development::"
 msgstr ""
+"Remarque : Depuis Ubuntu 11.10 \"Ocelot Onirique\" (ou si vous avez des "
+"rétroportages activés sur une version actuellement prise en charge), la "
+"commande suivante installe les outils ci-dessus et quelques autres, assez "
+"communs dans le développement d'Ubuntu ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:49
 msgid "This command will install the following software:"
@@ -1935,18 +1952,25 @@ msgid ""
 "cryptographic key with which you will sign files you want to upload to "
 "Launchpad."
 msgstr ""
+"``gnupg`` -- `GNU Privacy Guard`_ contient les outils dont vous aurez besoin "
+"pour créer une clé de chiffrement avec laquelle vous signerez les fichiers "
+"que vous souhaiterez télécharger vers Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:54
 msgid ""
 "``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
 "isolated environment."
 msgstr ""
+"``pbuilder`` -- un outil pour réaliser des constructions reproductibles d'un "
+"paquet dans un environnement propre et isolé."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:56
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
 msgstr ""
+"``ubuntu-dev-tools`` (et ``devscripts``, sa dépendance directe) -- une "
+"collection d'outils simplifiant les nombreuses tâches d'empaquetage."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:58
 msgid ""
@@ -1955,12 +1979,18 @@ msgid ""
 "easy for many developers to collaborate and work on the same code while "
 "keeping it trivial to merge each other's work."
 msgstr ""
+"``bzr-builddeb`` (et ``bzr``, une dépendance) -- contrôle de la version "
+"distribuée avec Bazaar, une nouvelle façon de travailler avec les paquets "
+"pour Ubuntu facilitant la collaboration de nombreux développeurs sur le même "
+"code, tout en gardant la simplicité de fusionner le travail de chacun."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:62
 msgid ""
 "``apt-file`` provides an easy way to find the binary package that contains a "
 "given file."
 msgstr ""
+"``apt-file`` donne un moyen facile de trouver le paquet binaire contenant un "
+"fichier donné."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:67
 msgid "Create your GPG key"
@@ -1975,6 +2005,13 @@ msgid ""
 "you upload a source package to Launchpad, it will only accept the package if "
 "it can absolutely determine who uploaded the package."
 msgstr ""
+"GPG signifie `GNU Privacy Guard`_ et implémente le standard OpenPGP vous "
+"permettant de signer et de crypter des messages et des fichiers. Ceci est "
+"utile pour plusieurs raisons. Dans notre cas, il est important que vous "
+"puissiez signer des fichiers avec votre clé afin qu'ils puissent être "
+"identifiés comme quelque chose sur laquelle vous avez travaillé. Si vous "
+"téléchargez un paquet source vers Launchpad, ce dernier n'acceptera le "
+"paquet que s'il peut formellement déterminer qui l'a envoyé."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:76
 msgid "To generate a new GPG key, run::"
@@ -1993,6 +2030,18 @@ msgid ""
 "passphrase, choose a safe one (a passphrase is just a password which is "
 "allowed to include spaces)."
 msgstr ""
+"GPG vous demandera d'abord le type de clé que vous souhaitez générer. Le "
+"choix par défaut (RSA et DSA) convient. Ensuite, il vous demandera la taille "
+"de clé. La valeur par défaut (actuellement 2048) est correcte, mais 4096 est "
+"plus sécurisé. Par la suite, il vous sera demandé si vous souhaitez faire "
+"expirer la clé à un certain stade. Vous pouvez sans danger indiquer \"0\", "
+"ce qui signifie que la clé n'expirera jamais. Les dernières questions seront "
+"à propos de votre nom et de votre adresse de courriel. Il suffit ici de "
+"choisir ceux que vous allez utiliser pour le développement d'Ubuntu, vous "
+"pourrez ajouter des adresses de courriel supplémentaires plus tard. Ajouter "
+"un commentaire n'est pas nécessaire. Ensuite, vous devrez définir une phrase "
+"secrète, choisissez-en une sûre (une phrase secrète est juste un mot de "
+"passe qui autorise les espaces)."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:90
 msgid ""
@@ -2001,6 +2050,11 @@ msgid ""
 "just fine.  Move the cursor around, type some paragraphs of random text, "
 "load some web page."
 msgstr ""
+"GPG va maintenant vous créer une clé, ce qui peut prendre un peu de temps ; "
+"comme GPG a besoin d'octets aléatoires, il serait souhaitable que vous "
+"donniez quelques tâches à réaliser au système. Déplacez le curseur, tapez "
+"quelques paragraphes de texte aléatoire, chargez quelques pages dans votre "
+"navigateur internet, etc."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:95
 msgid "Once this is done, you will get a message similar to this one::"
@@ -2009,13 +2063,16 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:102
 msgid "In this case ``43CDE61D`` is the *key ID*."
-msgstr ""
+msgstr "Dans ce cas ``43CDE61D`` est l'*identifiant clé*."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:104
 msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
 msgstr ""
+"Ensuite, vous devez envoyer la partie publique de votre clé à un serveur de "
+"sorte que tout le monde puisse identifier vos messages et fichiers. Pour ce "
+"faire, entrez ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:109
 msgid ""
@@ -2024,6 +2081,10 @@ msgid ""
 "complete, your signed public key will be ready to verify your contributions "
 "around the world."
 msgstr ""
+"Cela enverra votre clé au serveur de trousseau d'Ubuntu, inclus dans un "
+"réseau d'autres serveurs de trousseaux qui se synchroniseront entre eux. Une "
+"fois cette synchronisation terminée, votre clé publique signée sera prête à "
+"vérifier vos contributions partout dans le monde."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:116
 msgid "Create your SSH key"
@@ -2037,6 +2098,12 @@ msgid ""
 "transfer files. For our purposes, we will mainly be using SSH to securely "
 "upload source packages to Launchpad."
 msgstr ""
+"SSH_ signifie *Secure Shell* , le protocole permettant d'échanger des "
+"données de façon sécurisée sur un réseau. Il est courant d'utiliser SSH pour "
+"accéder à un environnement, l'ouvrir sur un autre ordinateur et l'utiliser "
+"pour transférer des fichiers en toute sécurité. Dans notre cas, nous allons "
+"principalement utiliser SSH pour télécharger en toute sécurité nos paquets "
+"source vers Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:124
 msgid "To generate an SSH key, enter::"
@@ -2048,6 +2115,9 @@ msgid ""
 "is. For security purposes, it is highly recommended that you use a "
 "passphrase."
 msgstr ""
+"Le nom de fichier par défaut est généralement logique, vous pouvez donc "
+"simplement le laisser tel quel. Pour des raisons de sécurité, il est "
+"fortement recommandé d'utiliser une phrase secrète."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:133
 msgid "Set up pbuilder"
@@ -2058,6 +2128,8 @@ msgid ""
 "``pbuilder`` allows you to build packages locally on your machine. It serves "
 "a couple of purposes:"
 msgstr ""
+"``pbuilder`` vous permet de construire des paquets en local sur votre "
+"machine. Il dispose de différentes fonctions :"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:138
 msgid ""
@@ -2065,11 +2137,16 @@ msgid ""
 "make sure your builds succeed in a reproducible way, but without modifying "
 "your local system"
 msgstr ""
+"La construction se fera dans un environnement minimal et propre. Cela vous "
+"aide à vous assurer que vos constructions réussiront de façon reproductible, "
+"mais sans modifier votre système local"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:141
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
 msgstr ""
+"Il est inutile d'installer toutes les *dépendances de construction* "
+"nécessaires en local"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:142
 msgid ""
@@ -2080,7 +2157,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:144
 msgid "Setting ``pbuilder`` up is very easy, run::"
-msgstr ""
+msgstr "Configurer ``pbuilder`` est très simple, lancez ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:148
 msgid ""
@@ -2089,10 +2166,14 @@ msgid ""
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
+"où <release> est par exemple `natty`, `maverick`, `lucid` ou, dans le cas de "
+"Debian, peut-être `sid`. Cela va prendre un certain temps, car il faut "
+"télécharger tous les paquets nécessaires à une \"installation minimale\". "
+"Cependant, ceux-ci seront mis en cache."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:154
 msgid "Get set up to work with Launchpad"
-msgstr ""
+msgstr "Mettez vous en place pour travailler avec Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:156
 msgid ""
@@ -2100,6 +2181,9 @@ msgid ""
 "configure your system to work with Launchpad. This section will focus on the "
 "following topics:"
 msgstr ""
+"Avec l'installation d'une configuration de base en local, la prochaine étape "
+"sera de configurer votre système pour travailler avec Launchpad. Cette "
+"section portera sur les sujets suivants :"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid "What Launchpad is and creating a Launchpad account"
@@ -2111,11 +2195,11 @@ msgstr "Téléversement de vos clés GPG et SSH vers Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:162
 msgid "Configuring Bazaar to work with Launchpad"
-msgstr ""
+msgstr "Configurer Bazaar pour travailler avec Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:163
 msgid "Configuring Bash to work with Bazaar"
-msgstr ""
+msgstr "Configurer Bash pour travailler avec Bazaar"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:167
 msgid "About Launchpad"
@@ -2129,6 +2213,13 @@ msgid ""
 "team memberships.  You will also use Launchpad to publish your proposed "
 "fixes, and get other Ubuntu developers to review and sponsor them."
 msgstr ""
+"Launchpad est la pièce maîtresse de l'infrastructure que nous utilisons dans "
+"Ubuntu. Il stocke non seulement nos paquets et notre code, mais également "
+"d'autres choses comme les traductions, les rapports de bogues et les "
+"informations sur les personnes qui travaillent sur Ubuntu et leurs "
+"équipiers. Vous pourrez également utiliser Launchpad pour publier vos "
+"propositions de corrections et obtenir leur examen et leur parrainage par "
+"d'autres développeurs d'Ubuntu."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:175
 msgid ""
@@ -2136,6 +2227,9 @@ msgid ""
 "information. This will allow you to download and upload code, submit bug "
 "reports, and more."
 msgstr ""
+"Vous devez vous inscrire à Launchpad et fournir un minimum d'informations. "
+"Cela vous permettra de télécharger du code depuis et vers Launchpad, de "
+"soumettre des rapports de bogues et plus encore."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:179
 msgid ""
@@ -2143,6 +2237,9 @@ msgid ""
 "more information see the `Launchpad Help wiki "
 "<https://help.launchpad.net/>`_."
 msgstr ""
+"Outre l'hébergement d'Ubuntu, Launchpad peut accueillir tout projet de "
+"logiciel libre. Pour plus d'informations, voir le wiki `Aide de Launchpad "
+"<https://help.launchpad.net/>`_."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:184
 msgid "Get a Launchpad account"
@@ -2155,6 +2252,10 @@ msgid ""
 "can find this out by going to https://launchpad.net/~ and looking for the "
 "part after the `~` in the URL."
 msgstr ""
+"Si vous ne possédez pas encore de compte Launchpad, vous pouvez facilement "
+"`en créer un`_. Si vous avez un compte Launchpad, dont vous ne vous rappelez "
+"plus l'identifiant, vous pouvez le retrouver en allant sur "
+"https://launchpad.net/~ et rechercher la partie après le `~` de l'URL."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:191
 msgid ""
@@ -2162,6 +2263,9 @@ msgid ""
 "is encouraged for you to use your real name here so that your Ubuntu "
 "developer colleagues will be able to get to know you better."
 msgstr ""
+"Le processus d'inscription à Launchpad vous demandera de choisir un nom à "
+"afficher. Il vous est recommandé d'utiliser votre vrai nom, afin que vos "
+"collègues développeurs sur Ubuntu soient en mesure de mieux vous connaître."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:195
 msgid ""
@@ -2169,6 +2273,10 @@ msgid ""
 "link you need to open in your browser in order to verify your email address. "
 "If you don't receive it, check in your spam folder."
 msgstr ""
+"Lorsque vous enregistrez un nouveau compte, Launchpad envoie un courriel "
+"avec un lien que vous devez ouvrir dans votre navigateur afin de faire "
+"vérifier votre adresse de courriel. Si vous ne le recevez pas, vérifiez dans "
+"votre dossier de pourriel."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:199
 msgid ""
@@ -2176,6 +2284,10 @@ msgid ""
 "<https://help.launchpad.net/YourAccount/NewAccount>`_ on Launchpad has more "
 "information about the process and additional settings you can change."
 msgstr ""
+"`La page d'aide pour un nouveau compte "
+"<https://help.launchpad.net/YourAccount/NewAccount>`_ sur Launchpad donne "
+"plus d'informations sur le processus et les paramètres supplémentaires "
+"modifiables."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:205
 msgid "Upload your GPG key to Launchpad"
@@ -2183,11 +2295,11 @@ msgstr "Téléversez votre clé GPG sur Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:207
 msgid "To find about your GPG fingerprint, run::"
-msgstr ""
+msgstr "Pour connaître votre empreinte GPG, exécutez ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:211
 msgid "and it will print out something like::"
-msgstr ""
+msgstr "et cela affichera quelque chose comme ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:219
 msgid ""
@@ -2195,6 +2307,10 @@ msgid ""
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
 "FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on \"Import Key\"."
 msgstr ""
+"Dirigez-vous vers https://launchpad.net/~/+editpgpkeys et copiez le fichier "
+"\"Key fingerprint\" dans la zone de texte. Dans le cas ci-dessus ce serait "
+"``5C28 0144 FB08 91C0 2CF3 37AC 6F0B F90F 43CD E61D``. Ensuite, cliquez sur "
+"\"Importer la clé\"."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:224
 msgid ""
@@ -2205,6 +2321,14 @@ msgid ""
 "you for the password you chose for the key when GPG generated it. Enter the "
 "password, then click the link to confirm that the key is yours.`"
 msgstr ""
+"Launchpad utilise l'empreinte pour vérifier votre clé sur le serveur de "
+"trousseau d'Ubuntu et, en cas de succès, vous envoie un courriel crypté vous "
+"demandant de confirmer l'import de la clé. Vérifiez votre compte de "
+"messagerie et lisez le courriel envoyé par Launchpad. `Si votre client de "
+"messagerie prend en charge le chiffrement OpenPGP, il vous demandera "
+"d'entrer le mot de passe choisi pour la clé lors de la génération GPG. "
+"Entrez le mot de passe, puis cliquez sur le lien pour confirmer que la clé "
+"est la vôtre.`"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:231
 msgid ""
@@ -2216,22 +2340,33 @@ msgid ""
 "the encrypted email's contents, type ``gpg`` in your terminal, then paste "
 "the email contents into your terminal window."
 msgstr ""
+"Launchpad chiffre le courriel en utilisant votre clé publique, ce qui assure "
+"que votre clé vous est propre. Si vous utilisez Thunderbird, le client de "
+"messagerie par défaut d'Ubuntu, vous pouvez installer le  `greffon Enigmail "
+"<https://apps.ubuntu.com/cat/applications/enigmail/>`_ pour déchiffrer "
+"aisément le message. Si votre logiciel de messagerie ne prend pas OpenPGP en "
+"charge, copiez le contenu du courriel chiffré, tapez ``gpg`` dans une "
+"fenêtre de terminal, puis collez-y le contenu du courriel."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:240
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
 msgstr ""
+"De retour sur le site Launchpad, utilisez le bouton \"Confirmer\" et "
+"Launchpad terminera l'import de votre clé OpenPGP."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:243
 msgid ""
 "Find more information at "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 msgstr ""
+"Vous trouverez plus d'informations sur "
+"https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:247
 msgid "Upload your SSH key to Launchpad"
-msgstr ""
+msgstr "Téléchargez votre clé SSH vers Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:249
 msgid ""
@@ -2241,6 +2376,12 @@ msgid ""
 "and paste them into the text box on the web page that says \"Add an SSH "
 "key\". Now click \"Import Public Key\"."
 msgstr ""
+"Ouvrez https://launchpad.net/~/+editsshkeys dans un navigateur internet, "
+"ainsi que ``~/.ssh/id_rsa.pub`` dans un éditeur de texte. Il s'agit de la "
+"partie publique de votre clé SSH, il est donc sûr de la partager avec "
+"Launchpad. Copiez le contenu du fichier et collez-le dans la zone de texte "
+"sur la page Web affichant \"Ajouter une clé SSH\". Ensuite, cliquez sur "
+"\"Importer la clé publique\"."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:255
 msgid ""
@@ -2248,6 +2389,10 @@ msgid ""
 "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
 "Launchpad."
 msgstr ""
+"Pour plus d'informations sur ce processus, veuillez consulter la page `créer "
+"un appariement de clés SSH "
+"<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ sur "
+"Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:261
 msgid "Configure Bazaar"
@@ -2260,6 +2405,11 @@ msgid ""
 "concurrently.  It is used for the new Ubuntu Distributed Development method "
 "of working with Ubuntu packages."
 msgstr ""
+"Bazaar est l'outil que nous utilisons pour stocker de manière logique les "
+"modifications de code, échanger des propositions de modifications et les "
+"fusionner, même si le développement est en cours. Il est utilisé dans la "
+"nouvelle méthode de Développement des Distributions Ubuntu pour travailler "
+"avec les paquets Ubuntu."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:268
 msgid "To tell Bazaar who you are, simply run::"
@@ -2278,6 +2428,9 @@ msgid ""
 "where it redirects you. The part after the \"~\" in the URL is your "
 "Launchpad ID.)"
 msgstr ""
+"Remarque : Si vous ne vous souvenez plus de l'identifiant, allez à "
+"https://launchpad.net/~ et regardez où cela vous redirige. La partie après "
+"le \"~\" de l'URL est votre identifiant Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:283
 msgid "Configure your shell"
@@ -2289,6 +2442,10 @@ msgid ""
 "as well. Simply open your `~/.bashrc` in a text editor and add something "
 "like this to the bottom of it::"
 msgstr ""
+"De manière similaire à Bazaar, les outils de gestion des paquets de "
+"Debian/Ubuntu ont également besoin de vous connaître. Il suffit d'ouvrir "
+"votre fichier `~/.bashrc` dans un éditeur de texte et d'y rajouter à la fin "
+"quelques lignes comme ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:291
 msgid "Now save the file and either restart your terminal or run::"
@@ -2301,10 +2458,12 @@ msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
 msgstr ""
+"(Si vous n'utilisez pas l'environnement par défaut, `bash`, veuillez "
+"modifier en conséquence le fichier de configuration pour cet environnement.)"
 
 #: ../ubuntu-packaging-guide/index.rst:9
 msgid "Ubuntu Packaging Guide"
-msgstr ""
+msgstr "Guide d'empaquetage pour Ubuntu"
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
@@ -2312,24 +2471,29 @@ msgid ""
 "place for learning all about Ubuntu Development and packaging. After reading "
 "this guide you will have:"
 msgstr ""
+"Bienvenue dans le Guide d'empaquetage et de développement dans Ubunutu ! Il "
+"s'agit de l'endroit officiel  pour tout apprendre sur le développement et "
+"l'empaquetage dans Ubuntu. Après avoir lu ce guide, vous aurez :"
 
 #: ../ubuntu-packaging-guide/index.rst:15
 msgid ""
 "heard about the most important players, processes and tools in Ubuntu "
 "development,"
 msgstr ""
+"entendu parlé des plus importants lecteurs, processus et outils dans le "
+"développement d'Ubuntu,"
 
 #: ../ubuntu-packaging-guide/index.rst:17
 msgid "your development environment set up correctly,"
-msgstr ""
+msgstr "configuré correctement votre environnement de développement,"
 
 #: ../ubuntu-packaging-guide/index.rst:18
 msgid "a better idea of how to join our community,"
-msgstr ""
+msgstr "une meilleure idée de la façon de rejoindre notre communauté,"
 
 #: ../ubuntu-packaging-guide/index.rst:19
 msgid "fixed an actual Ubuntu bug as part of the tutorials."
-msgstr ""
+msgstr "corrigé un vrai bogue Ubuntu dans une partie des tutoriels."
 
 #: ../ubuntu-packaging-guide/index.rst:21
 msgid ""
@@ -2338,6 +2502,10 @@ msgid ""
 "single component can be obtained easily and every single change to the "
 "Ubuntu platform can be reviewed."
 msgstr ""
+"Ubuntu n'est pas seulement un système d'exploitation libre et open source, "
+"sa plate-forme est également ouverte et développée de manière transparente. "
+"Le code source de chaque composant s'obtient aisément et chaque modification "
+"de la plate-forme Ubuntu peut être examinée."
 
 #: ../ubuntu-packaging-guide/index.rst:26
 msgid ""
@@ -2345,6 +2513,9 @@ msgid ""
 "of Ubuntu platform developers is always interested in helping peers getting "
 "started."
 msgstr ""
+"Cela signifie que vous pouvez activement participer à son amélioration et "
+"que la communauté des développeurs de la plate-forme Ubuntu se sent toujours "
+"concernée pour aider ses pairs à démarrer."
 
 #: ../ubuntu-packaging-guide/index.rst:30
 msgid ""
@@ -2353,6 +2524,11 @@ msgid ""
 "want you to be involved as well. We want you to get involved, to ask "
 "questions, to make Ubuntu better together with us."
 msgstr ""
+"Ubuntu est également une communauté de personnes formidables qui croient au "
+"logiciel libre afin qu'il reste accessible au plus grand nombre. Ses membres "
+"sont accueillants et souhaitent également votre participation. Nous "
+"souhaitons que vous vous impliquiez, posiez des questions, rendiez Ubuntu "
+"meilleur avec nous."
 
 #: ../ubuntu-packaging-guide/index.rst:35
 msgid ""
@@ -2360,20 +2536,27 @@ msgid ""
 "article<./communication>` and you will find out how to most easily get in "
 "touch with other developers."
 msgstr ""
+"Si vous rencontrez des problèmes : pas de panique ! Vérifiez l':doc:`article "
+"decommunication<./communication>` et vous découvrirez comment rentrer plus "
+"facilement en contact avec d'autres développeurs."
 
 #: ../ubuntu-packaging-guide/index.rst:39
 msgid "The guide is split up into two sections:"
-msgstr ""
+msgstr "Le guide est divisé en deux sections :"
 
 #: ../ubuntu-packaging-guide/index.rst:41
 msgid "A list of articles based on tasks, things you want to get done."
 msgstr ""
+"Une liste d'articles basés sur les tâches ou les choses que vous "
+"souhaiteriez voir traitées."
 
 #: ../ubuntu-packaging-guide/index.rst:42
 msgid ""
 "A set of knowledge-base articles that dig deeper into specific bits of our "
 "tools and workflows."
 msgstr ""
+"Un ensemble d'articles composant une base de connaissances plus approfondies "
+"sur des parties spécifiques de nos outils et nos flux de travail."
 
 #: ../ubuntu-packaging-guide/index.rst:45
 msgid ""
@@ -2404,27 +2587,37 @@ msgid ""
 "the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-"
 "guide>`_."
 msgstr ""
+"Vous pouvez consulter ce guide hors-ligne dans différents formats, si vous "
+"installez un des `paquets binaires "
+"<https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide>`_."
 
 #: ../ubuntu-packaging-guide/index.rst:94
 msgid ""
 "If you want to learn more about building Debian packages, here are some "
 "Debian resources you may find useful:"
 msgstr ""
+"Si vous souhaitez en savoir plus à propos de la construction de paquets "
+"Debian, voici quelques ressources Debian que vous trouverez utiles :"
 
 #: ../ubuntu-packaging-guide/index.rst:97
 msgid ""
 "`How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;"
 msgstr ""
+"`Comment empaqueter pour Debian "
+"<https://wiki.debian.org/HowToPackageForDebian>`_;"
 
 #: ../ubuntu-packaging-guide/index.rst:98
 msgid "`Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;"
-msgstr ""
+msgstr "`Charte Debian <http://www.debian.org/doc/debian-policy/>`_;"
 
 #: ../ubuntu-packaging-guide/index.rst:99
 msgid ""
 "`Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-"
 "guide/>`_ — available in many languages;"
 msgstr ""
+"`Le Guide des Nouveaux Mainteneurs Debian "
+"<http://www.debian.org/doc/manuals/maint-guide/>`_ — disponible en plusieurs "
+"langues ;"
 
 #: ../ubuntu-packaging-guide/index.rst:101
 msgid ""
@@ -2432,10 +2625,13 @@ msgid ""
 "tutorial/>`_ (also available as a `package "
 "<https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
 msgstr ""
+"`Tutoriel d'empaquetage <http://www.debian.org/doc/manuals/packaging-"
+"tutorial/>`_ (également disponible comme `paquet "
+"<https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
-msgstr ""
+msgstr "Introduction au Développement d'Ubuntu"
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:5
 msgid ""
@@ -2448,6 +2644,16 @@ msgid ""
 "package. Once this source package is compiled, the build process provides "
 "binary packages, which are the .deb files users can install."
 msgstr ""
+"Ubuntu est constitué de milliers de composants différents, écrits dans de "
+"multiples langages de programmation. Chaque composant - pouvant être une "
+"bibliothèque logicielle, un outil ou une application graphique - est "
+"disponible sous forme d'un paquet source. Dans la plupart des cas, les "
+"paquets sources se composent de deux parties : le code source réel et les "
+"métadonnées. Ces dernières comprennent les dépendances du paquet, les droits "
+"d'auteur et les informations de licence, ainsi que des instructions sur la "
+"façon de construire le paquet. Une fois ce paquet source compilé, le "
+"processus de construction fournit les paquets binaires, en d'autres termes, "
+"les fichiers .deb que les utilisateurs peuvent installer."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:14
 msgid ""
@@ -2464,6 +2670,21 @@ msgid ""
 "packages that get on the image. These images are then used for installation "
 "tests and provide the feedback for further release planning."
 msgstr ""
+"A chaque sortie d'une nouvelle version, ou lorsqu'une personne applique des "
+"modifications au code source à destination d'Ubuntu, le paquet source doit "
+"être téléchargé vers les machines de construction de Launchpad en vue d'être "
+"compilé. Les paquets binaires en résultant sont alors distribués vers une "
+"archive et ses miroirs dans différents pays. Les adresses dans "
+"``/etc/apt/sources.list`` pointent vers une archive ou un miroir. Chaque "
+"jour, des images sont construites pour une sélection des différentes "
+"versions d'Ubuntu. Elles peuvent être utilisées dans des circonstances "
+"diverses. Ces images peuvent être placées sur une clé USB, gravées sur des "
+"DVD, vous pouvez utiliser des images pour un miniportable ou même adaptées à "
+"votre téléphone ou à votre tablette. Ubuntu Desktop, Ubuntu Server, Kubuntu "
+"et les autres versions précisent la liste des paquets requis pour leur "
+"image. Ces images sont utilisées pour les tests d'installation et "
+"fournissent le retour d'information sur la planification des livraisons "
+"ultérieures."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:27
 msgid ""
@@ -2480,6 +2701,19 @@ msgid ""
 "candidate release is made and if it does not contain any serious problems, "
 "it becomes the final release."
 msgstr ""
+"Le développement d'Ubuntu est très dépendant de la phase actuelle du cycle "
+"de sortie. Nous publions une nouvelle version d'Ubuntu tous les six mois, ce "
+"qui est rendu possible par l'établissement dates strictement figées. À "
+"chaque échéance atteinte, les développeurs doivent faire moins de "
+"modifications, ou les moins intrusives possibles. Le gel des fonctionnalités "
+"est la première grosse échéance après la première moitié du cycle. À ce "
+"stade, les nouvelles fonctionnalités doivent être largement appliquées. Le "
+"reste du cycle est censé se concentrer sur la correction des bogues. "
+"Ensuite, l'interface utilisateur, puis la documentation, le noyau, etc. sont "
+"gelés, puis la version bêta est mise en ligne pour recevoir un maximum de "
+"tests. À partir de la version bêta, seuls les bogues critiques sont "
+"corrigés, une version `candidate` est créée et lorsqu'elle ne contient pas "
+"de problèmes graves, elle devient la version finale."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:42
 msgid ""
