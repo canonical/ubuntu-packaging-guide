@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-15 14:51+0000\n"
-"PO-Revision-Date: 2013-09-08 12:41+0000\n"
-"Last-Translator: Anne <anneonyme017@gmail.com>\n"
+"PO-Revision-Date: 2013-09-10 17:16+0000\n"
+"Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-09 04:49+0000\n"
-"X-Generator: Launchpad (build 16760)\n"
+"X-Launchpad-Export-Date: 2013-09-11 05:12+0000\n"
+"X-Generator: Launchpad (build 16761)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -3259,7 +3259,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/libraries.rst:82
 msgid "Static Libraries"
-msgstr ""
+msgstr "Les bibliothèques statiques"
 
 #: ../ubuntu-packaging-guide/libraries.rst:84
 msgid ""
@@ -3271,10 +3271,18 @@ msgid ""
 "with the library until the program is recompiled.  For this reason programs "
 "using static libraries are discouraged."
 msgstr ""
+"Les paquets -dev délivrent aussi ``usr/lib/libnova.a``. Il s'agit d'une "
+"bibliothèque statique, une alternative à la bibliothèque partagée. Tout "
+"programme compilé avec la bibliothèque statique comprendra le répertoire du "
+"code en lui-même. Cela contourne le souci de la compatibilité binaire de la "
+"bibliothèque. Mais cela signifie aussi que tous les bogues, y compris les "
+"problèmes de sécurité, ne seront pas mis à jour avec la bibliothèque jusqu'à "
+"ce que le programme soit recompilé. Pour cette raison, l'usage de programmes "
+"utilisant des bibliothèques statiques est déconseillé."
 
 #: ../ubuntu-packaging-guide/libraries.rst:94
 msgid "Symbol Files"
-msgstr ""
+msgstr "Les fichiers de symboles"
 
 #: ../ubuntu-packaging-guide/libraries.rst:96
 msgid ""
@@ -3286,18 +3294,32 @@ msgid ""
 "if new symbols get added in libnova 2.1 a program using these symbols could "
 "still be installed against libnova ABI 2.0 which would then crash."
 msgstr ""
+"Quand un paquet est construit à partir d'une bibliothèque, le mécanisme "
+"``shlibs`` ajoute une dépendance de paquet sur cette bibliothèque. C'est "
+"pourquoi de nombreux programmes auront ``Depends: ${shlibs:Depends}`` dans "
+"``debian/control``. Ceci est remplacé par les dépendances de bibliothèque à "
+"la compilation. Cependant shlibs peut seulement le faire dépendre du numéro "
+"de version majeure ABI, ``2`` dans notre exemple libnova. Si de nouveaux "
+"symboles sont ajoutés à libnova 2.1, un programme utilisant ces symboles "
+"pourrait toujours être installé avec libnova ABI 2.0, ce qui provoquerait "
+"son plantage."
 
 #: ../ubuntu-packaging-guide/libraries.rst:104
 msgid ""
 "To make the library dependencies more precise we keep ``.symbols`` files "
 "that list all the symbols in a library and the version they appeared in."
 msgstr ""
+"Pour rendre les dépendances de bibliothèques plus précises, nous gardons les "
+"fichiers ``.symbols`` qui répertorient tous les symboles d'une bibliothèque "
+"et la version à laquelle ils sont apparus."
 
 #: ../ubuntu-packaging-guide/libraries.rst:107
 msgid ""
 "libnova has no symbols file so we can create one.  Start by compiling the "
 "package::"
 msgstr ""
+"libnova n'a pas de fichier de symboles, nous pouvons donc en créer un. "
+"Commencez par la compilation du paquet ::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:112
 msgid ""
@@ -3305,6 +3327,9 @@ msgid ""
 "removing the built files.  Change to the build and run ``dpkg-gensymbols`` "
 "for the library package::"
 msgstr ""
+"Le ``-nc`` terminera la compilation sans supprimer les fichiers de "
+"construction. Modifiez le fichier compilé et exécutez ``dpkg-gensymbols`` "
+"pour le paquet de bibliothèque ::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:119
 msgid "This makes a diff file which you can self apply::"
@@ -3318,6 +3343,12 @@ msgid ""
 "new symbols are not generally added by new packaging versions, but by the "
 "upstream developers::"
 msgstr ""
+"Ce qui va créer un fichier nommé de manière similaire à ``dpkg-"
+"gensymbolsnY_WWI`` listant tous les symboles. Il répertorie également la "
+"version actuelle du paquet. Nous pouvons supprimer la version d'empaquetage "
+"de celles indiquées dans le fichier de symboles car de nouveaux symboles ne "
+"sont généralement pas ajoutés par de nouvelles versions d'empaquetage, mais "
+"par les développeurs de l'amont ::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:130
 msgid "Now move the file into its location, commit and do a test build::"
@@ -3329,10 +3360,14 @@ msgid ""
 "upstream version of libnova you would run dpkg-gensymbols again and it will "
 "give a diff to update the symbols file."
 msgstr ""
+"Si la compilation s'achève avec succès, le fichier de symboles est correct. "
+"Avec la prochaine version amont de libnova, vous devrez exécuter dpkg-"
+"gensymbols à nouveau et cela vous donnera un fichier diff pour mettre à jour "
+"le fichier de symboles."
 
 #: ../ubuntu-packaging-guide/libraries.rst:143
 msgid "C++ Library Symbols Files"
-msgstr ""
+msgstr "Les fichiers C++ de la bibliothèque de symboles"
 
 #: ../ubuntu-packaging-guide/libraries.rst:145
 msgid ""
@@ -3340,16 +3375,22 @@ msgid ""
 "Debian Qt/KDE Team maintain some scripts to handle this, see their `Working "
 "with symbols files`_ page for how to use them."
 msgstr ""
+"C++ a des normes encore plus strictes pour la compatibilité binaire que C. "
+"L'équipe Debian Qt/KDE maintient des scripts pour gérer cela, se référer à "
+"leur page `Travailler avec les fichiers de symboles`_ pour savoir comment "
+"les utiliser."
 
 #: ../ubuntu-packaging-guide/libraries.rst:152
 msgid ""
 "Junichi Uekawa's `Debian Library Packaging Guide`_ goes into this topic in "
 "more detail."
 msgstr ""
+"Le `Guide de l'Empaquetage de la Bibliothèque Debian`_ de Junichi Uekawa "
+"explore ce sujet plus en détail."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:3
 msgid "Packaging New Software"
-msgstr ""
+msgstr "L'empaquetage de nouveaux logiciels"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:5
 msgid ""
@@ -3359,16 +3400,25 @@ msgid ""
 "at creating a package for Ubuntu or a PPA_. This guide will take you through "
 "the steps of packaging new software."
 msgstr ""
+"Bien qu'il existe des milliers de paquets dans l'archive d'Ubuntu, il y en "
+"reste encore beaucoup que personne n'a pu obtenir jusqu'à maintenant. S'il "
+"existe une nouvelle et passionnante partie de logiciel pour laquelle vous "
+"sentez le besoin d'une exposition plus large, peut-être voudriez-vous vous "
+"essayer à la création d'un paquet pour Ubuntu ou d'un PPA_. Ce guide vous "
+"mènera à travers les étapes d'empaquetage de nouveaux logiciels."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:11
 msgid ""
 "You will want to read the :doc:`Getting Set Up<./getting-set-up>` article "
 "first in order to prepare your development environment."
 msgstr ""
+"Vous aurez envie en premier lieu de lire l'article :doc:`Mise en "
+"route<./getting-set-up>` afin de préparer votre environnement de "
+"développement."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:15
 msgid "Checking the Program"
-msgstr ""
+msgstr "Vérification du programme"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:17
 msgid ""
@@ -3376,36 +3426,46 @@ msgid ""
 "call the authors of applications \"upstream\") and check that it compiles "
 "and runs."
 msgstr ""
+"La première étape de l'empaquetage est d'obtenir le fichier .tar issu de "
+"l'amont (nous appelons les auteurs d'applications « l'amont ») et de "
+"vérifier qu'il se compile et s'exécute."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:20
 msgid ""
 "This guide will take you through packaging a simple application called GNU "
 "Hello which has been posted on GNU.org_."
 msgstr ""
+"Ce guide vous mènera à travers l'empaquetage d'une application simple, "
+"appelée GNU Bonjour, postée sur GNU.org_."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:23
 msgid ""
 "If you don't have the build tools lets make sure we have them first.  Also "
 "if you don't have the required dependencies lets install those as well."
 msgstr ""
+"Si vous n'avez pas les outils de compilation, assurez-vous de les obtenir au "
+"préalable. De même, si vous n'avez pas les dépendances requises, installez-"
+"les également."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:26
 msgid "Install build tools::"
-msgstr ""
+msgstr "Installez les outils de compilation ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:30
 msgid "Download main package::"
-msgstr ""
+msgstr "Téléchargez le paquet principal ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:34
 msgid "Now uncompress main package::"
-msgstr ""
+msgstr "Maintenant, décompressez le paquet principal ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:39
 msgid ""
 "This application uses the autoconf build system so we want to run "
 "``./configure`` to prepare for compilation."
 msgstr ""
+"Cette application utilise le système de construction autoconf, nous "
+"exécuterons donc ``./configure`` pour préparer la compilation."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:42
 msgid ""
@@ -3415,19 +3475,27 @@ msgid ""
 "libraries and development files. Install the needed packages and repeat "
 "until the command runs successfully.::"
 msgstr ""
+"Cela vérifiera les dépendances de construction nécessaires. Comme "
+"``bonjour`` est un exemple simple, ``build-essential`` doit fournir tout ce "
+"dont nous avons besoin. Pour les programmes plus complexes, la commande "
+"échouera si vous n'avez pas les bibliothèques et les fichiers de "
+"développement nécessaires. Installez les paquets nécessaires et recommencez "
+"jusqu'à ce que la commande s'exécute avec succès.::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:50
 msgid "Now you can compile the source::"
-msgstr ""
+msgstr "Maintenant vous pouvez compiler la source ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:54
 msgid ""
 "If compilation completes successfully you can install and run the program::"
 msgstr ""
+"Si la compilation se termine avec succès, vous pouvez installer et exécuter "
+"le programme ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:60
 msgid "Starting a Package"
-msgstr ""
+msgstr "Commencer un paquet"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:62
 msgid ""
@@ -3436,6 +3504,11 @@ msgid ""
 "have these if you installed ``packaging-dev``. Run the command providing the "
 "package name, version number, and path to the upstream tarball::"
 msgstr ""
+"``bzr-builddeb`` inclut un greffon pour créer un nouveau paquet à partir "
+"d'un modèle. Ce greffon est une surcouche de la commande ``dh_make``. Ces "
+"programmes devraient déjà être présents si vous avez installé ``packaging-"
+"dev``. Exécutez la commande fournissant le nom du paquet, le numéro de "
+"version et le chemin vers l'archive de l'amont ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:71
 msgid ""
@@ -3445,10 +3518,16 @@ msgid ""
 "specialist packages (such as Emacs modules) so you can start by removing the "
 "optional example files::"
 msgstr ""
+"Lorsqu'il vous est demandé le type de paquet, entrez ``s`` pour binaire "
+"unique. Ceci importera le code dans une branche et ajoutera le répertoire "
+"d'empaquetage ``debian/``. Jetez un œil sur son contenu. La plupart des "
+"fichiers ajoutés ne sont nécessaires que pour les paquets spécialisés (tels "
+"que les modules d'Emacs) de sorte que vous pouvez commencer par supprimer "
+"les fichiers optionnels d'exemple ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:80
 msgid "You should now customise each of the files."
-msgstr ""
+msgstr "Vous devriez maintenant personnaliser chacun des fichiers."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:82
 msgid ""
@@ -3457,6 +3536,10 @@ msgid ""
 " Also change ``unstable`` to the current development Ubuntu release such as "
 "``precise``."
 msgstr ""
+"Dans ``debian/changelog`` modifiez le numéro de version en une version "
+"Ubuntu : ``2.7-0ubuntu1`` (version 2.7 de l'amont, version 0 de Debian, "
+"version 1 d'Ubuntu). Modifiez également ``unstable`` en la version d'Ubuntu "
+"en cours de développement, comme ``precise``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:87
 msgid ""
@@ -3466,6 +3549,11 @@ msgid ""
 "You will generally want to set this to the most recent version which is "
 "``8``."
 msgstr ""
+"La plupart des travaux de compilation du paquet est réalisée par une série "
+"de scripts appelé ``debhelper``. Le comportement exact de``debhelper`` "
+"change avec les nouvelles versions majeures, le fichier de compatibilité "
+"instruit ``debhelper`` sur la version selon laquelle il doit agir. "
+"Généralement, vous la réglerez sur la version la plus récente, soit ``8``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:93
 msgid ""
@@ -3481,30 +3569,42 @@ msgid ""
 "You will also need to fill in a description of the program in the "
 "``Description:`` field."
 msgstr ""
+"Vous devrez également remplir une description du programme dans le champ "
+"``Description:``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:104
 msgid ""
 "``copyright`` needs to be filled in to follow the licence of the upstream "
 "source.  According to the hello/COPYING file this is GNU GPL 3 or later."
 msgstr ""
+"Le ``copyright`` doit être rempli pour suivre la licence de la source en "
+"amont. Selon le fichier bonjour/COPYING, il s'agit de la licence GNU GPL 3 "
+"ou ultérieure."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:107
 msgid ""
 "``docs`` contains any upstream documentation files you think should be "
 "included in the final package."
 msgstr ""
+"``docs`` contient les fichiers de documentation de l'amont qui, selon vous, "
+"devraient être inclus dans le paquet final."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:110
 msgid ""
 "``README.source`` and ``README.Debian`` are only needed if your package has "
 "any non-standard features, we don't so you can delete them."
 msgstr ""
+"``README.source`` et ``README.Debian`` ne sont nécessaires que si votre "
+"paquet possède une caractéristique non standard, ce qui n'est pas le cas "
+"donc vous pouvez les supprimer."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:113
 msgid ""
 "``source/format`` can be left as is, this describes the version format of "
 "the source package and should be ``3.0 (quilt)``."
 msgstr ""
+"``source/format`` peut être laissé tel quel, il décrit le format de version "
+"du paquet source et devrait être ``3.0 (quilt)``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:116
 msgid ""
