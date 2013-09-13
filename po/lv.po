@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-15 14:51+0000\n"
-"PO-Revision-Date: 2013-08-16 10:19+0000\n"
-"Last-Translator: Jānis-Marks Gailis <jeanmarc.gailis@gmail.com>\n"
+"PO-Revision-Date: 2013-09-12 22:10+0000\n"
+"Last-Translator: Janisk <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-17 06:05+0000\n"
-"X-Generator: Launchpad (build 16723)\n"
+"X-Launchpad-Export-Date: 2013-09-13 05:53+0000\n"
+"X-Generator: Launchpad (build 16761)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -325,7 +325,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:3
 msgid "Using Chroots"
-msgstr ""
+msgstr "Chroot izmantošana"
 
 #: ../ubuntu-packaging-guide/chroots.rst:5
 msgid ""
@@ -333,6 +333,9 @@ msgid ""
 "versions you can create the environment of the other version with a "
 "``chroot``."
 msgstr ""
+"Lietojot vienu Ubuntu versiju, bet strādajot ar pakotnēm priekš citas "
+"versijas, tad izmantojot ``chroot`` komandu ir iespējams izveidot vajadzigo "
+"vidi ar citu versiju."
 
 #: ../ubuntu-packaging-guide/chroots.rst:9
 msgid ""
@@ -340,14 +343,17 @@ msgid ""
 "which you can work in quite normally.  It avoids the overhead of running a "
 "full virtual machine."
 msgstr ""
+"ar komandu ``chroot`` ir iespējams izveidot pilnu citas distribūcijas "
+"filesistēmu un darobites tajā. Tādā veidā novēršot papildus slodzi sistēmai "
+"ko radītu virtualizācijas lietošana"
 
 #: ../ubuntu-packaging-guide/chroots.rst:14
 msgid "Creating a Chroot"
-msgstr ""
+msgstr "Chroot izveidošana"
 
 #: ../ubuntu-packaging-guide/chroots.rst:16
 msgid "Use the command ``debootstrap`` to create a new chroot::"
-msgstr ""
+msgstr "lietojiet  komandu ``debootstrap`` lai izveidotu jaunu chroot"
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
