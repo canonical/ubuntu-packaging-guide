@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-15 14:51+0000\n"
-"PO-Revision-Date: 2013-09-10 17:16+0000\n"
-"Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
+"PO-Revision-Date: 2013-09-29 14:25+0000\n"
+"Last-Translator: Anne <anneonyme017@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-11 05:12+0000\n"
-"X-Generator: Launchpad (build 16761)\n"
+"X-Launchpad-Export-Date: 2013-09-30 05:21+0000\n"
+"X-Generator: Launchpad (build 16774)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -3619,21 +3619,25 @@ msgid ""
 "All of these file are explained in more detail in the :doc:`overview of the "
 "debian directory<./debian-dir-overview>` article."
 msgstr ""
+"Tous ces fichiers sont expliqués plus en détail dans l'article :doc:`aperçu "
+"du répertoire Debian<./debian-dir-overview>`."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:124
 msgid "Finally commit the code to your packaging branch::"
-msgstr ""
+msgstr "Enfin, soumettez le code à votre branche d'empaquetage ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:129
 #: ../ubuntu-packaging-guide/udd-working.rst:69
 msgid "Building the package"
-msgstr ""
+msgstr "Construisez le paquet"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:131
 msgid ""
 "Now we need to check that our packaging successfully compiles the package "
 "and builds the .deb binary package::"
 msgstr ""
+"Maintenant, nous devons vérifier que notre empaquetage compile le paquet "
+"correctement et construit le paquet binaire .deb ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:137
 msgid ""
@@ -3641,18 +3645,21 @@ msgid ""
 "The ``-us -uc`` tell it there is no need to GPG sign the package.  The "
 "result will be placed in ``..``."
 msgstr ""
+"``bzr builddeb`` est une commande pour construire le paquet dans son "
+"emplacement actuel. Le ``-us -uc`` indique que GPG n'a pas besoin de signer "
+"le paquet. Le résultat sera placé dans le dossier ``..``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:141
 msgid "You can view the contents of the package with::"
-msgstr ""
+msgstr "Vous pouvez afficher le contenu du paquet avec ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:145
 msgid "Install the package and check it works::"
-msgstr ""
+msgstr "Installez le paquet et vérifiez qu'il fonctionne ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:150
 msgid "Next Steps"
-msgstr ""
+msgstr "Étapes suivantes"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:152
 msgid ""
@@ -3660,18 +3667,27 @@ msgid ""
 "Many errors can be automatically detected by our tool ``lintian`` which can "
 "be run on both the source .dsc metadata file and the .deb binary package::"
 msgstr ""
+"Même si votre paquet binaire .deb est construit, l'empaquetage peut contenir "
+"des bogues. De nombreuses erreurs peuvent être détectées automatiquement par "
+"notre outil ``lintian`` pouvant être exécuté soit sur le fichier source de "
+"métadonnées .dsc, soit sur le paquet binaire .deb ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:160
 msgid ""
 "A description of each of the problems it reports can be found on the "
 "`lintian website`_."
 msgstr ""
+"Une description de chacun des problèmes rapportés est disponible sur le "
+"`site Internet lintian`_."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:163
 msgid ""
 "After making a fix to the packaging you can rebuild using ``-nc`` \"no "
 "clean\" without having to build from scratch::"
 msgstr ""
+"Après avoir établi un correctif pour l'empaquetage, vous pouvez le "
+"reconstruire en utilisant ``-nc`` pour « no clean » afin d'éviter d'avoir à "
+"le reconstruire à partir de zéro ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:168
 msgid ""
@@ -3684,12 +3700,25 @@ msgid ""
 "have set up GPG. If you haven't set up ``pbuilder-dist`` or GPG yet, "
 ":doc:`do so now<./getting-set-up>`::"
 msgstr ""
+"Après avoir vérifié que le paquet est construit localement, vous devez vous "
+"assurer qu'il peut se compiler sur un système propre à l'aide de "
+"``pbuilder``. Puisque nous allons bientôt l'ajouter à un PPA (Personal "
+"Package Archives), ce téléchargement doit être *signé* pour permettre à "
+"Launchpad de vérifier que le téléchargement émane de vous (vous pouvez dire "
+"que le téléchargement sera signé car les options ``-us`` et ``-uc`` ne sont "
+"pas transmises à ``bzr builddeb`` comme auparavant). Pour que la signature "
+"fonctionne, vous devez avoir configuré GPG. Si vous n'avez pas encore "
+"configuré ``pbuilder-dist`` ou GPG, :doc:`faites le maintenant<./getting-set-"
+"up>` ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:181
 msgid ""
 "When you are happy with your package you will want others to review it.  You "
 "can upload the branch to Launchpad for review::"
 msgstr ""
+"Lorsque vous serez satisfait de votre paquet, vous souhaiterez en obtenir la "
+"relecture par d'autres. Vous pouvez télécharger la branche vers Launchpad "
+"pour la relecture ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:186
 msgid ""
@@ -3697,10 +3726,15 @@ msgid ""
 "others to test the binary packages.  You will need to set up a PPA in "
 "Launchpad and then upload with ``dput``::"
 msgstr ""
+"Le télécharger vers un PPA assurera qu'il se construit et donnera un moyen "
+"aisé pour vous et les autres de tester les paquets binaires. Vous avez "
+"besoin de configurer un PPA dans Launchpad puis de télécharger avec "
+"``dput`` ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:192
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
 msgstr ""
+"Voir :doc:`téléchargement<./udd-uploading>` pour plus d'informations."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:194
 msgid ""
@@ -3708,10 +3742,14 @@ msgid ""
 "mailing list`_.  There might also be a more specific team you could ask such "
 "as the GNU team for more specific questions."
 msgstr ""
+"Vous pouvez demander des relectures sur le canal IRC ``#ubuntu-motu``, ou "
+"sur `la liste de diffusion MOTU`_. Vous pourriez également interroger une "
+"équipe plus spécifique, comme l'équipe de GNU pour des questions plus "
+"pointues."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:199
 msgid "Submitting for inclusion"
-msgstr ""
+msgstr "Soumettez pour inclusion"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:201
 msgid ""
@@ -3721,6 +3759,12 @@ msgid ""
 "available in not just Debian and Ubuntu but all of their derivatives as "
 "well. Here are some useful links for submitting new packages to Debian:"
 msgstr ""
+"Il existe nombre de chemins que peut emprunter un paquet pour entrer dans "
+"Ubuntu. Dans la plupart des cas, passer par Debian en premier peut s'avérer "
+"la meilleure voie. Cette façon vous assure que votre paquet atteindra le "
+"plus grand nombre d'utilisateurs, car il sera disponible non seulement dans "
+"Debian et Ubuntu, mais également dans l'ensemble de leurs dérivés. Voici "
+"quelques liens utiles pour soumettre de nouveaux paquets à Debian :"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:208
 msgid ""
@@ -3750,10 +3794,15 @@ msgid ""
 "will make it into Ubuntu in time for the next release. This process is "
 "documented on the `\"New Packages\"`_ section of the Ubuntu wiki."
 msgstr ""
+"Dans certains cas, il peut être judicieux d'aller directement dans Ubuntu en "
+"premier. Par exemple, Debian peut se trouver en phase de gel rendant peu "
+"probable le fait que votre paquet fasse partie d'Ubuntu à temps pour la "
+"prochaine version. Ce processus est documenté dans la section `« Nouveaux "
+"paquets »`_ du wiki d'Ubuntu."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
 msgid "Patches to Packages"
-msgstr ""
+msgstr "Correctifs aux paquets"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:5
 msgid ""
@@ -3766,6 +3815,16 @@ msgid ""
 "or extract the change to submit to the upstream project.  Instead, we keep "
 "these changes as separate patches, in the form of diff files."
 msgstr ""
+"Parfois, les mainteneurs de paquets d'Ubuntu doivent modifier le code source "
+"en amont afin de le faire fonctionner correctement avec Ubuntu. Les exemples "
+"incluent les correctifs vers l'amont qui n'ont pas encore été repris dans "
+"une version finale, ou les modifications du système de compilation de "
+"l'amont uniquement nécessaires pour la compilation avec Ubuntu. Nous "
+"pourrions modifier le code source en amont directement (mais en faisant cela "
+"il devient plus difficile d'enlever les correctifs plus tard, lorsque "
+"l'amont les a intégré) ou extraire les modifications pour les soumettre au "
+"projet de l'amont. Au lieu de ça, nous gardons ces modifications comme des "
+"correctifs séparés, sous la forme de fichiers diff."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:14
 msgid ""
@@ -3773,10 +3832,13 @@ msgid ""
 "fortunately we are standardizing on one system, `Quilt`_, which is now used "
 "by most packages."
 msgstr ""
+"Il existe de nombreuses façons différentes de gérer les correctifs dans les "
+"paquets Debian. Heureusement, nous sommes en cours de standardisation sur un "
+"système, `Quilt`_, qui est désormais utilisé par la majorité des paquets."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:18
 msgid "Let's look at an example package, ``kamoso`` in Natty::"
-msgstr ""
+msgstr "Regardons un exemple de paquet, ``kamoso`` dans Natty ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:22
 msgid ""
@@ -3787,54 +3849,72 @@ msgid ""
 "in this case the Kubuntu team adds their own prefix to show the patch comes "
 "from them rather than from Debian."
 msgstr ""
+"Les correctifs sont conservés dans ``debian/patches``. Ce paquet a un "
+"correctif ``kubuntu_01_fix_qmax_on_armel.diff`` pour résoudre un échec de "
+"compilation sur ARM. Le correctif a un nom explicite pour décrire ce qu'il "
+"fait, un numéro pour garder les correctifs dans l'ordre (deux correctifs "
+"peuvent se chevaucher s'ils modifient le même fichier) et dans ce cas "
+"l'équipe de Kubuntu ajoute son propre préfixe pour montrer que le correctif "
+"provient d'eux plutôt que de Debian."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:29
 msgid "The order of patches to apply is kept in ``debian/patches/series``."
 msgstr ""
+"L'ordre des correctifs à appliquer est conservé dans "
+"``debian/patches/series``."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:32
 msgid "Patches with Quilt"
-msgstr ""
+msgstr "Les correctifs avec Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:34
 msgid ""
 "Before working with Quilt you need to tell it where to find the patches.  "
 "Add this to your ``~/.bashrc``::"
 msgstr ""
+"Avant de travailler avec Quilt, vous devrez lui dire où trouver les "
+"correctifs. Ajoutez ceci à votre ``~/.bashrc`` ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:39
 msgid "And source the file to apply the new export::"
-msgstr ""
+msgstr "Et renseignez sur quel fichier appliquer le nouvel export ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:43
 msgid ""
 "By default all patches are applied already to UDD checkouts or downloaded "
 "packages.  You can check this with::"
 msgstr ""
+"Par défaut, tous les correctifs sont déjà appliqués sur les vérifications "
+"UDD ou les paquets téléchargés. Vous pouvez le vérifier avec ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:49
 msgid "If you wanted to remove the patch you would run ``pop``::"
-msgstr ""
+msgstr "Si vous voulez supprimer le correctif, vous lancerez ``pop`` ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:57
 msgid "And to apply a patch you use ``push``::"
-msgstr ""
+msgstr "Et pour appliquer un correctif, vous utiliserez ``push`` ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:67
 msgid "Adding a New Patch"
-msgstr ""
+msgstr "Ajout d'un nouveau correctif"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:69
 msgid ""
 "To add a new patch you need to tell Quilt to create a new patch, tell it "
 "which files that patch should change, edit the files then refresh the patch::"
 msgstr ""
+"Pour ajouter un nouveau correctif, vous devez dire à Quilt de créer un "
+"nouveau correctif, lui dire quels sont les fichiers que le correctif doit "
+"modifier, éditer les fichiers et ensuite actualiser le correctif ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:81
 msgid ""
 "The ``quilt add`` step is important, if you forget it the files will not end "
 "up in the patch."
 msgstr ""
+"L'étape ``quilt add`` est importante, si vous l'oubliez les fichiers ne se "
+"retrouveront pas dans le correctif."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:84
 msgid ""
@@ -3843,12 +3923,19 @@ msgid ""
 "file will have had the new patch added to it.  You should add the new file "
 "to the packaging::"
 msgstr ""
+"La modification sera désormais dans "
+"``debian/patches/kubuntu_02_program_description.diff`` et le dossier "
+"``series`` sera complété par le nouveau correctif. Vous devez ajouter le "
+"nouveau fichier à l'empaquetage ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:94
 msgid ""
 "Quilt keeps its metadata in the ``.pc/`` directory, so currently you need to "
 "add that to the packaging too.  This should be improved in future."
 msgstr ""
+"Quilt conserve ses métadonnées dans le répertoire ``.pc/``, vous devez donc "
+"actuellement l'ajouter également à l'empaquetage. Cela devrait être amélioré "
+"à l'avenir."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:97
 msgid ""
@@ -3858,30 +3945,42 @@ msgid ""
 "for example, so it would break all translations.  If in doubt, do ask the "
 "upstream author before adding a patch."
 msgstr ""
+"Comme règle générale, vous devez rester prudent dans l'ajout de correctifs "
+"aux programmes à moins qu'ils ne proviennent de l'amont, car il existe "
+"souvent une bonne raison pour que la modification n'ait pas encore été "
+"faite. L'exemple ci-dessus modifie une chaîne de l'interface par exemple, "
+"elle pourrait donc briser toutes les traductions. En cas de doute, n'hésitez "
+"pas à consulter l'auteur de l'amont avant d'ajouter un patch."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:105
 msgid "Patch Headers"
-msgstr ""
+msgstr "En-têtes de correctifs"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:107
 msgid ""
 "We recommend that you tag every patch with DEP-3_ headers by putting them at "
 "the top of patch file. Here are some headers that you can use:"
 msgstr ""
+"Nous vous recommandons de marquer chaque correctif avec des en-têtes DEP-3_, "
+"en les plaçant au début du fichier de correctif. Voici quelques en-têtes que "
+"vous pouvez utiliser :"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
 msgid "Description of what the patch does."
-msgstr ""
+msgstr "Description de ce que fait le correctif."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:111
 msgid "Who wrote the patch (i.e. \"Jane Doe <packager@example.com>\")."
 msgstr ""
+"Qui a écrit le correctif (par exemple, « Jane Doe <packager@example.com> »)."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:112
 msgid ""
 "Where this patch comes from (i.e. \"upstream\"), when *Author* is not "
 "present."
 msgstr ""
+"D'où provient ce correctif (par exemple « de l'amont »), lorsque *Auteur* "
+"n'est pas renseigné."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:114
 msgid ""
@@ -3889,12 +3988,18 @@ msgid ""
 "*https://bugs.launchpad.net/bugs/XXXXXXX*). If there are also bugs in "
 "upstream or Debian bugtrackers, add *Bug* or *Bug-Debian* headers."
 msgstr ""
+"Un lien vers le traceur de bogues Launchpad, un format court étant "
+"préférable (comme *https://bugs.launchpad.net/bugs/XXXXXXX*). S'il existe "
+"également des bogues dans les traceurs de bogues de l'amont ou de Debian, "
+"ajoutez les en-têtes *Bug* ou *Bug-Debian*."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:118
 msgid ""
 "Whether the patch was forwarded upstream. Either \"yes\", \"no\" or \"not-"
 "needed\"."
 msgstr ""
+"Si le correctif a été transmis à l'amont. Soit « yes », « no » ou « not-"
+"needed »."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:120
 msgid "Date of the last revision (in form \"YYYY-MM-DD\")."
@@ -3902,7 +4007,7 @@ msgstr "Date de la dernière révision (au format \\\"AAAA-MM-JJ\\\")."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:124
 msgid "Upgrading to New Upstream Versions"
-msgstr ""
+msgstr "Mise à niveau vers les nouvelles versions de l'amont"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:126
 msgid ""
@@ -3918,26 +4023,35 @@ msgid ""
 "upstream source or they might need to be removed altogether. To check for "
 "problems, apply the patches one at a time::"
 msgstr ""
+"Lorsque vous lancez cette commande, tous les correctifs ne seront pas "
+"appliqués, car ils peuvent devenir obsolètes. Ils pourraient avoir besoin "
+"d'être actualisés, pour correspondre à la nouvelle source de l'amont, ou "
+"entièrement supprimés. Pour vérifier les problèmes, appliquez les correctifs "
+"un par un ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:142
 msgid ""
 "If it can be reverse-applied this means the patch has been applied already "
 "by upstream, so we can delete the patch::"
 msgstr ""
+"S'il peut être rétro-appliqué, cela signifie que le correctif a déjà été "
+"appliqué par l'amont, nous pouvons donc le supprimer ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:148
 msgid "Then carry on::"
-msgstr ""
+msgstr "Ensuite, continuons ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:153
 msgid ""
 "It is a good idea to run refresh, this will update the patch relative to the "
 "changed upstream source::"
 msgstr ""
+"C'est une bonne idée de lancer l'actualisation, cela va mettre à jour le "
+"correctif relatif à la source modifiée par l'amont ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:159
 msgid "Then commit as usual::"
-msgstr ""
+msgstr "Ensuite, soumettez comme d'habitude ::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:165
 msgid "Making A Package Use Quilt"
@@ -3973,7 +4087,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:192
 msgid "Other Patch Systems"
-msgstr ""
+msgstr "Autres systèmes de correctifs"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:194
 msgid ""
@@ -3985,6 +4099,15 @@ msgid ""
 "use ``edit-patch``, shown in :ref:`previous chapters <working-on-a-fix>`, as "
 "a reliable way to work with all systems."
 msgstr ""
+"Les autres systèmes de correctifs utilisés par les paquets incluent "
+"``dpatch`` et ``cdbs simple-patchsys``, qui travaillent de manière similaire "
+"à Quilt en conservant les correctifs dans ``debian/patches``, mais possèdent "
+"des commandes différentes pour rendre applicables, non-applicables ou créer "
+"des correctifs. Vous pouvez savoir quel système de correctif est utilisé par "
+"un paquet en utilisant la commande ``what-patch`` (issue du paquet ``ubuntu-"
+"dev-tools``). Vous pouvez utiliser ``edit-patch``, illustré dans un "
+":ref:`chapitre précédent<working-on-a-fix>`, comme un moyen fiable pour "
+"travailler avec tous les systèmes de correctifs."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:202
 msgid ""
@@ -3992,6 +4115,10 @@ msgid ""
 "in the ``diff.gz`` source file.  This makes it hard to upgrade to new "
 "upstream versions or differentiate between patches and is best avoided."
 msgstr ""
+"Dans des paquets encore plus anciens, les modifications sont incluses "
+"directement aux sources et conservées dans le fichier source ``diff.gz``. "
+"Cela rend difficile leur mise à niveau vers les nouvelles versions de "
+"l'amont ou la différenciation des correctifs. Il vaut mieux l'éviter."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:206
 msgid ""
@@ -3999,6 +4126,9 @@ msgid ""
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "
 "then feel free to add Quilt."
 msgstr ""
+"Ne modifiez pas un système de correctif d'un paquet sans en discuter avec le "
+"responsable Debian ou l'équipe Ubuntu adéquate. S'il n'existe pas de système "
+"de correctif existant, alors n'hésitez pas à ajouter Quilt."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:3
 msgid "Packaging Python modules and applications"
@@ -4010,6 +4140,10 @@ msgid ""
 "markdown`_ package as an example, which can be downloaded from `PyPI`_. You "
 "can look at its packaging at its `Subversion repository`_."
 msgstr ""
+"Nos empaquetages suivent la `Charte Python`_ de Debian. Nous allons utiliser "
+"le paquet `python-markdown`_ comme un exemple, qui peut être téléchargé à "
+"partir de `PyPI`_. Vous pouvez examiner son empaquetage dans son `dépôt "
+"Subversion`_."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:7
 msgid "There are two types of Python packages — *modules* and *apps*."
@@ -4022,6 +4156,11 @@ msgid ""
 "2.x version, and ``/usr/bin/python3`` — to a default Python 3.x version. "
 "Python modules should be built against all supported Python versions."
 msgstr ""
+"Au moment d'écrire ces lignes, Ubuntu dispose de deux versions incompatibles "
+"de Python  *2.x* et *3.x*. ``/usr/bin/python`` est un lien symbolique vers "
+"une version par défaut de Python 2.x, et ``/usr/bin/python3`` vers une "
+"version par défaut de Python 3.x. Les modules Python devraient être "
+"construits pour toutes les versions de Python prises en charge."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:11
 msgid ""
@@ -4044,6 +4183,11 @@ msgid ""
 "``python3-markdown`` for module packages and ``python-markdown-doc`` for the "
 "documentation package."
 msgstr ""
+"Les versions Python 2.x et 3.x du paquet doivent se trouver en paquets "
+"binaires séparés. Les noms doivent être formatés en ``python{,3}-"
+"nomdemodule`` (comme : ``python3-dbus.mainloop.qt``). Ici, nous allons "
+"utiliser ``python-markdown`` et ``python3-markdown`` pour les paquets de "
+"module et ``python-markdown-doc`` pour la documentation du paquet."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:18
 msgid "Things in ``debian/control`` that are specific for a Python package:"
