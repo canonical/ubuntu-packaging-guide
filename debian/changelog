@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (0.3.3) UNRELEASED; urgency=low
+ubuntu-packaging-guide (0.3.3) unstable; urgency=low
 
   [ Daniel Holbach ]
   * remove superfluous "the". (LP: #1211488)
@@ -11,7 +11,7 @@ ubuntu-packaging-guide (0.3.3) UNRELEASED; urgency=low
   * Use different name for singlehtml doc-base files, to prevent warnings
     from doc-base.
 
- -- Andrew Starr-Bochicchio <asb@debian.org>  Sat, 13 Jul 2013 13:40:17 -0400
+ -- Andrew Starr-Bochicchio <asb@debian.org>  Sat, 05 Oct 2013 12:00:48 -0400
 
 ubuntu-packaging-guide (0.3.2) unstable; urgency=low
 
