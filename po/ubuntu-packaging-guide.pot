@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2010-2013, Ubuntu Developers
+# Copyright (C) 2010-2013 , Ubuntu Developers, Creative Commons Attribution-ShareAlike 3.0
 # This file is distributed under the same license as the ubuntu-packaging-guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-15 14:51\n"
+"POT-Creation-Date: 2013-10-15 16:19\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1396,6 +1396,10 @@ msgstr ""
 msgid "`Packaging tutorial <http://www.debian.org/doc/manuals/packaging-tutorial/>`_ (also available as a `package <https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
 msgstr ""
 
+#: ../ubuntu-packaging-guide/index.rst:104
+msgid "We are always looking to improve this guide. If you find any problems or have some suggestions, please `report a bug on Launchpad <https://bugs.launchpad.net/ubuntu-packaging-guide>`_. If you'd like to help work on the guide, `grab the source <https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk>`_ there as well."
+msgstr ""
+
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
 msgstr ""
@@ -1726,11 +1730,11 @@ msgid "You should now customise each of the files."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:82
-msgid "In ``debian/changelog`` change the version number to an Ubuntu version: ``2.7-0ubuntu1`` (upstream version 2.7, Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current development Ubuntu release such as ``precise``."
+msgid "In ``debian/changelog`` change the version number to an Ubuntu version: ``2.9-0ubuntu1`` (upstream version 2.9, Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current development Ubuntu release such as ``saucy``."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:87
-msgid "Much of the package building work is done by a series of scripts called ``debhelper``.  The exact behaviour of ``debhelper`` changes with new major versions, the compat file instructs ``debhelper`` which version to act as.  You will generally want to set this to the most recent version which is ``8``."
+msgid "Much of the package building work is done by a series of scripts called ``debhelper``.  The exact behaviour of ``debhelper`` changes with new major versions, the compat file instructs ``debhelper`` which version to act as.  You will generally want to set this to the most recent version which is ``9``."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:93
