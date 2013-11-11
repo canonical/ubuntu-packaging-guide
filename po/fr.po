@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-10-15 16:19+0000\n"
-"PO-Revision-Date: 2013-11-04 09:09+0000\n"
+"PO-Revision-Date: 2013-11-10 17:50+0000\n"
 "Last-Translator: Pa2squale <pmaugendre@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-05 05:48+0000\n"
+"X-Launchpad-Export-Date: 2013-11-11 05:26+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4432,6 +4432,10 @@ msgid ""
 "10.04 LTS (Lucid Lynx). So first you need to determine the version of the "
 "package you want to download. We can use the ``rmadison`` to help with this::"
 msgstr ""
+"Dans cet exemple, nous savons déjà que nous voulons corriger le paquet dbus "
+"dans Ubuntu 10.04 LTS (Lucid Lynx). Ainsi, vous devez en premier lieu "
+"déterminer la version du paquet que vous souhaitez télécharger. Nous pouvons "
+"utiliser le « rmadison » pour y parvenir ::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:30
 msgid ""
@@ -4456,7 +4460,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:46
 msgid "To create your patch using ``edit-patch``::"
-msgstr ""
+msgstr "Pour créer votre correctif en utilisant « edit-patch » ::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:51
 msgid ""
@@ -4639,6 +4643,8 @@ msgid ""
 "to download version ``1.0-1ubuntu1`` of the package. For more information on "
 "the command, see ``man pull-lp-source``."
 msgstr ""
+"pour télécharger la version « 1.0-1ubuntu1 » du paquet. Pour plus "
+"d'informations sur la commande, voir « man pull-lp-source »."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:44
 msgid ""
@@ -4665,6 +4671,8 @@ msgid ""
 "To continue with our example, let's edit the ``debian/control`` and \"fix\" "
 "our \"bug\"::"
 msgstr ""
+"Pour continuer avec notre exemple, éditons le « debian/control » et "
+"« corrigeons » notre « bogue » ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:67
 msgid ""
@@ -4672,6 +4680,9 @@ msgid ""
 "<https://wiki.ubuntu.com/DebianMaintainerField>`_ and edit "
 "``debian/control`` to replace::"
 msgstr ""
+"Nous devons également respecter le `Champ de Spécification du Mainteneur "
+"Debian <https://wiki.ubuntu.com/DebianMaintainerField>`_ et éditer "
+"« debian/control » pour remplacer ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:73
 msgid "with::"
@@ -4682,16 +4693,22 @@ msgid ""
 "You can use the ``update-maintainer`` tool (in the ``ubuntu-dev-tools`` "
 "package) to do that."
 msgstr ""
+"Nous pouvons utiliser l'outil « update-maintainer » (dans le paquet « ubuntu-"
+"dev-tools ») pour le faire."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:81
 msgid ""
 "Remember to document your changes in ``debian/changelog`` using ``dch -i`` "
 "and then we can generate a new source package::"
 msgstr ""
+"N'oubliez pas de documenter vos modifications dans « debian/changelog » en "
+"utilisant « dch-i » et générons ensuite un nouveau paquet source ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:86
 msgid "Now we can examine our changes using ``debdiff``::"
 msgstr ""
+"Maintenant, nous pouvons examiner nos modifications à l'aide de "
+"« debdiff » ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:91
 msgid ""
@@ -4798,12 +4815,16 @@ msgid ""
 "Do this using the `bzr init-repo` command, passing it the directory name we "
 "would like to use::"
 msgstr ""
+"Faites-le en utilisant la commande « bzr init-repo », en lui passant le nom "
+"du répertoire que nous souhaitons utiliser ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:75
 msgid ""
 "You will see that a `tomboy` directory is created in your current working "
 "area.  Change to this new directory for the rest of your work::"
 msgstr ""
+"Vous verrez un répertoire « tomboy » créé dans votre espace de travail "
+"courant. Allez dans ce nouveau répertoire pour le reste de votre travail ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:82
 msgid "Getting the trunk branch"
@@ -4815,6 +4836,9 @@ msgid ""
 "We'll name the target directory `tomboy.dev` just to keep things easy to "
 "remember::"
 msgstr ""
+"Nous utilisons la commande « bzr branch » pour créer une branche locale du "
+"paquet. Nous allons nommer le répertoire cible « tomboy.dev » juste pour "
+"faciliter sa mémorisation ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:90
 msgid ""
