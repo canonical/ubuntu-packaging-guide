@@ -1,3 +1,9 @@
+ubuntu-packaging-guide (0.3.4) UNRELEASED; urgency=low
+
+  * 
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 12 Nov 2013 06:21:17 +0100
+
 ubuntu-packaging-guide (0.3.3) unstable; urgency=low
 
   [ Daniel Holbach ]
