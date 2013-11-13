@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-15 16:19+0000\n"
-"PO-Revision-Date: 2013-11-12 05:22+0000\n"
-"Last-Translator: Virginia Moenikes <virginiamoenikes@googlemail.com>\n"
+"PO-Revision-Date: 2013-11-12 20:19+0000\n"
+"Last-Translator: Carsten Gerlach <daswaldhorn@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-12 06:01+0000\n"
+"X-Launchpad-Export-Date: 2013-11-13 05:43+0000\n"
 "X-Generator: Launchpad (build 16820)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4884,7 +4884,7 @@ msgstr "Den Quelltext bekommen"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:20
 msgid "In order to get a source package, you can simply run::"
-msgstr ""
+msgstr "Um das Quellpaket zu bekommen, kannst du folgendes benutzen:"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:24
 msgid ""
@@ -4895,27 +4895,30 @@ msgid ""
 "package provides a helper script::"
 msgstr ""
 "Diese Methode hat allerdings einige Nachteile. Sie lädt die Version von der "
-"auf deinem System verfügbaren Quelle. Voraussichtlich ür weitere "
-"Informationen läuft bei dir die letzte stabile Veröffentlichung, aber du "
-"möchtest deine Änderungen, unabhängig der Entwicklerveröffentlichung , "
-"berücksichtigt haben. Für diesen Fall bietet das \"ubuntu-dev-tools\" Paket "
-"ein Helferskript::"
+"auf deinem System verfügbaren Quelle. Voraussichtlich läuft bei dir die "
+"letzte stabile Veröffentlichung, aber du möchtest deine Änderungen, "
+"unabhängig der Entwicklerveröffentlichung, berücksichtigt haben. Für diesen "
+"Fall bietet das \"ubuntu-dev-tools\" Paket ein Helferskript::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:32
 msgid ""
 "By default, the  latest version in the development release will be "
 "downloaded. You can also specify a version or Ubuntu release like::"
 msgstr ""
+"Grundsätzlich wird die letzte Entwicklerversion heruntergeladen. Du kannst "
+"ebenso eine spezifische Ubuntu Veröffentlichung wählen:"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:37
 msgid "to pull the source from the ``precise`` release, or::"
-msgstr ""
+msgstr "um die Quelle der speziellen Veröffentlichung zu bekommen"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:41
 msgid ""
 "to download version ``1.0-1ubuntu1`` of the package. For more information on "
 "the command, see ``man pull-lp-source``."
 msgstr ""
+"um die Version \"1.0-1 ubuntu1\" des Pakets herunterzuladen. Für weitere "
+"Informationen zu den Befehlen schau unter \"man pull-lp-source\" nach."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:44
 msgid ""
@@ -4924,6 +4927,9 @@ msgid ""
 "*(Note: This is just an example of something to change and not really a "
 "bug.)* To get the source, run::"
 msgstr ""
+"Nehmen wir beispielsweise an, wir hätten einen Fehlerbericht, der meldet, "
+"dass  die Schreibweise von \"colour\" in der \"xicc\"-Beschreibung \"color\" "
+"lauten sollte."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:52
 msgid "Creating a Debdiff"
@@ -6195,6 +6201,7 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Andreas Altaïr Redmer https://launchpad.net/~altair-ibn-la-ahad\n"
 "  Andreas E. https://launchpad.net/~andreas-e\n"
+"  Carsten Gerlach https://launchpad.net/~daswaldhorn\n"
 "  Christian Schürer-Waldheim https://launchpad.net/~quincunx\n"
 "  Daniel Holbach https://launchpad.net/~dholbach\n"
 "  Florian Diesch https://launchpad.net/~diesch\n"
