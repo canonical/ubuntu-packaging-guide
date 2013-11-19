@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-10-15 16:19+0000\n"
-"PO-Revision-Date: 2013-08-30 15:46+0000\n"
+"PO-Revision-Date: 2013-11-18 07:53+0000\n"
 "Last-Translator: Hannie Dumoleyn <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-10-16 04:59+0000\n"
-"X-Generator: Launchpad (build 16799)\n"
+"X-Launchpad-Export-Date: 2013-11-19 05:46+0000\n"
+"X-Generator: Launchpad (build 16831)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -707,16 +707,21 @@ msgid ""
 "Minor bullet points are indicated by a dash \"-\", while major points use an "
 "asterisk \"*\"."
 msgstr ""
+"Belangrijke punten worden aangegeven met een sterretje \"*\" en minder "
+"belangrijke punten met een streepje \"-\"."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:39
 msgid ""
 "If you are packaging from scratch, ``dch --create`` (``dch`` is in the "
 "``devscripts`` package) will create a standard ``debian/changelog`` for you."
 msgstr ""
+"Als je een pakket maakt vanuit het niets, dan maakt ``dch --create`` "
+"(``dch`` bevindt zich in het ``devscripts``pakket) een standaard "
+"``debian/changelog`` voor je aan."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:43
 msgid "Here is a sample ``changelog`` file for hello::"
-msgstr ""
+msgstr "Hier is een voorbeeldbestand van ``changelog`` voor hello::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:52
 msgid ""
@@ -724,6 +729,10 @@ msgid ""
 "distro revision, used so that the packaging can be updated (to fix bugs for "
 "example) with new uploads within the same source release version."
 msgstr ""
+"Merk op dat de versie ``-0ubuntu1`` eraan toegevoegd krijgt; dit is de "
+"revisie van de distro die wordt gebruikt zodat het maken van het pakket kan "
+"worden bijgewerkt (om bijvoorbeeld fouten te corrigeren) met nieuwe uploads "
+"binnen dezelfde bronuitgaveversie."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:56
 msgid ""
@@ -742,10 +751,13 @@ msgid ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
 "of the Debian Policy Manual."
 msgstr ""
+"Zie voor meer informatie de sectie ‘changelog’ (Sectie 4.4) "
+"<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
+"van de Debian Policy Manual."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
 msgid "The control file"
-msgstr ""
+msgstr "Het controlebestand"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:72
 msgid ""
@@ -753,6 +765,9 @@ msgid ""
 "as ``apt-get``, ``synaptic``, and ``adept``) uses, build-time dependencies, "
 "maintainer information, and much more."
 msgstr ""
+"Het ``controlebestand`` bevat de informatie die gebruikt wordt door een "
+"pakketbeheerprogramma  (zoals ``apt-get``, ``synaptic`` en ``adept``), build-"
+"time-afhankelijkheden, informatie over onderhoud, en nog veel meer."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:76
 msgid ""
