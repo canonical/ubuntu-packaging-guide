@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-15 16:19+0000\n"
-"PO-Revision-Date: 2013-11-13 09:16+0000\n"
-"Last-Translator: Carsten Gerlach <daswaldhorn@gmx.de>\n"
+"PO-Revision-Date: 2013-11-19 09:04+0000\n"
+"Last-Translator: Virginia Moenikes <virginiamoenikes@googlemail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-14 06:00+0000\n"
-"X-Generator: Launchpad (build 16820)\n"
+"X-Launchpad-Export-Date: 2013-11-20 05:33+0000\n"
+"X-Generator: Launchpad (build 16831)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -4942,12 +4942,19 @@ msgid ""
 "``devscripts`` package. See ``man debdiff`` for all the details. To compare "
 "two source packages, pass the two ``dsc`` files as arguments::"
 msgstr ""
+"Ein \"debdiff\" zeigt die Unterschiede zwischen zwei Debian-Paketen. Der "
+"dafür notwendige Befehl heißt ebenfalls \"debdiff\". Er ist Teil des "
+"\"devscripts\"-Paketes. Für alle Details schau unter \"man debdiff\" nach. "
+"Um zwei Quellpakete zu vergleichen, gib ihre \"dsc\"-Datein als Bedingungen "
+"an::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:61
 msgid ""
 "To continue with our example, let's edit the ``debian/control`` and \"fix\" "
 "our \"bug\"::"
 msgstr ""
+"Um mit unserem Beispiel fortzufahren, lasst uns die\"debian/control\" "
+"bearbeiten und unseren 'Fehler beheben'::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:67
 msgid ""
@@ -4955,6 +4962,9 @@ msgid ""
 "<https://wiki.ubuntu.com/DebianMaintainerField>`_ and edit "
 "``debian/control`` to replace::"
 msgstr ""
+"Wir müssen uns also an die 'Debian Maintainer Spec "
+"<https://wiki.ubuntu.com/DebianMaintainerField>' halten  und zum Ersetzen "
+"die \"debian/control\" verändern::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:73
 msgid "with::"
@@ -4965,22 +4975,28 @@ msgid ""
 "You can use the ``update-maintainer`` tool (in the ``ubuntu-dev-tools`` "
 "package) to do that."
 msgstr ""
+"Du kannst dafür das \"update-maintainer\"-Werkzeug aus dem \"ubuntu-dev-"
+"tools\"-Paket benutzen."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:81
 msgid ""
 "Remember to document your changes in ``debian/changelog`` using ``dch -i`` "
 "and then we can generate a new source package::"
 msgstr ""
+"Denk daran, deine Änderungen in \"debian/changelog\" mit Hilfe von \"dch -"
+"i\" zu dokumentieren. Dann können wir ein neues Quellpaket erstellen::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:86
 msgid "Now we can examine our changes using ``debdiff``::"
-msgstr ""
+msgstr "Nun können wir unsere Änderungen mit \"debdiff\" untersuchen::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:91
 msgid ""
 "To create a patch file that you can send to others or attach to a bug report "
 "for sponsorship, run::"
 msgstr ""
+"Um eine Patch-Datei zu erstellen, die du an andere verschicken, oder zur "
+"Unterstützung an einen Fehlerbericht anhängen kannst, benutze::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:98
 msgid "Applying a Debdiff"
@@ -4991,16 +5007,23 @@ msgid ""
 "In order to apply a debdiff, first make sure you have the source code of the "
 "version that it was created against::"
 msgstr ""
+"Um den \"debdiff\"-Befehl anzuwenden, stelle  zuerst sicher, dass du den "
+"Quellcode der Version hast, gegen deren Fehler du die Änderung erstellt "
+"hast::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:105
 msgid ""
 "Then in a terminal, change to the directory where the source was "
 "uncompressed::"
 msgstr ""
+"Wechsele in einer Konsole  zu dem Verzeichnis, in dem die Quelldatei "
+"unkompromiert liegt::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:110
 msgid "A debdiff is just like a normal patch file. Apply it as usual with::"
 msgstr ""
+"Ein \"debdiff\" ist wie eine normale Patch-Datei. Wende sie wie gewohnt an "
+"mit::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:6
 msgid "Source package URLs"
@@ -5011,6 +5034,8 @@ msgid ""
 "Bazaar provides some very nice shortcuts for accessing Launchpad's source "
 "branches of packages in both Ubuntu and Debian."
 msgstr ""
+"Bazaar bietet einige nette Abkürzungen, um Zugang zu Launchpads "
+"Quellverzeichnispaketen zu bekommen, sowohl in Ubuntu  als auch in Debian."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:11
 msgid "To refer to source branches use::"
