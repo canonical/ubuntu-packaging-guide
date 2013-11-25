@@ -62,6 +62,7 @@ Articles
    packaging-new-software
    security-and-stable-release-updates
    patches-to-packages
+   fixing-ftbfs
    libraries
    backports
 
