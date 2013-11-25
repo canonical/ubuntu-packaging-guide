@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-10-15 16:19+0000\n"
-"PO-Revision-Date: 2013-11-23 22:11+0000\n"
-"Last-Translator: gisele perreault <Unknown>\n"
+"PO-Revision-Date: 2013-11-24 15:44+0000\n"
+"Last-Translator: Sylvie Gallet <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-11-24 05:36+0000\n"
+"X-Launchpad-Export-Date: 2013-11-25 05:49+0000\n"
 "X-Generator: Launchpad (build 16831)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -363,8 +363,8 @@ msgstr ""
 "Parfois, vous souhaitez ajouter une nouvelle fonctionnalité qui ne concerne "
 "pas la correction de bug critique. Pour ce scénario, vous avez deux "
 "options : soit vous le `soumettez à un PPA "
-"<https://help.launchpad.net/Packaging/PPA>`_ soit vous préparez un rétro-"
-"portage."
+"<https://help.launchpad.net/Packaging/PPA>`_ soit vous préparez un "
+"rétroportage."
 
 #: ../ubuntu-packaging-guide/backports.rst:12
 msgid "Personal Package Archive (PPA)"
@@ -391,7 +391,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/backports.rst:25
 msgid "Official Ubuntu Backports"
-msgstr "Rétro-portages officiels de Ubuntu"
+msgstr "Rétroportages officiels d'Ubuntu"
 
 #: ../ubuntu-packaging-guide/backports.rst:27
 msgid ""
@@ -403,6 +403,14 @@ msgid ""
 "the :doc:`Security Update or the Stable Release Update process<./security-"
 "and-stable-release-updates>`, as appropriate."
 msgstr ""
+"Le projet Backports est un moyen d'offrir de nouvelles fonctionnalités aux "
+"utilisateurs. En raison des risques inhérents à la stabilité du rétroportage "
+"des paquets, les utilisateurs n'obtiennent pas les paquets rétroportés sans "
+"action explicite de leur part. Cela rend généralement le rétroportage "
+"inapproprié pour corriger les bogues. Si un paquet dans une mise à jour de "
+"Ubuntu comporte un bogue, il doit être réparé par la :doc:`Mise à jour de "
+"Sécurité ou le Processus de Mise à jour en Version Stable <./security-and-"
+"stable-release-updates>`, selon le cas."
 
 #: ../ubuntu-packaging-guide/backports.rst:35
 msgid ""
@@ -696,6 +704,13 @@ msgid ""
 "the same name and email address in ``changelog`` as you have in your key. "
 "The following is a template ``changelog``::"
 msgstr ""
+"Ce fichier est, comme son nom l'indique, une liste des modifications "
+"apportées à chaque version. Il possède un format spécifique donnant le nom "
+"du paquet, la version, la distribution, les modifications, et qui les a "
+"apportées à un moment donné. Si vous avez une clé GPG (voir : :doc:`Obtenir "
+"configuration<./getting-set-up/>`), assurez-vous d'utiliser les mêmes nom et "
+"adresse email dans le ``changelog`` que dans votre clé. Ce qui suit est un "
+"modèle de ``changelog`` ::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:31
 msgid ""
@@ -819,6 +834,17 @@ msgid ""
 "For further information, see the `Debian Maintainer Field spec "
 "<https://wiki.ubuntu.com/DebianMaintainerField>`_ on the Ubuntu wiki."
 msgstr ""
+"Notez que dans Ubuntu, nous avons laissé le champ ``Maintainer`` pointer "
+"vers une adresse générale, car n'importe qui peut changer n'importe quel "
+"paquet (ceci diffère de Debian où le changement des paquets est généralement "
+"limité à une personne ou une équipe). Les paquets dans Ubuntu devraient "
+"avoir le champ ``Maintainer`` indiquant ``Développeurs Ubuntu <ubuntu-devel-"
+"discuss@lists.ubuntu.com>``. Si ce champ Maintainer est modifié, l'ancienne "
+"valeur doit être enregistrée dans le champ ``XSBC-Original-Maintainer``. "
+"Cela peut être fait automatiquement avec le script ``update-maintainer`` "
+"disponible dans le paquet ``ubuntu-dev-tools``. Pour plus d'informations, "
+"reportez-vous aux `Spécifications Debian du Champ Mainteneur "
+"<https://wiki.ubuntu.com/DebianMaintainerField>`_ sur le wiki d'Ubuntu."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:120
 msgid "Each additional paragraph describes a binary package to be built."
@@ -847,6 +873,12 @@ msgid ""
 "require that each package installs a verbatim copy of its copyright and "
 "license information to ``/usr/share/doc/$(package_name)/copyright``."
 msgstr ""
+"Ce fichier donne les informations de copyright à la fois pour la source en "
+"amont et pour l'empaquetage. Les chartes Ubuntu et `Debian (Section 12.5) "
+"<http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_ "
+"exigent que chaque paquet installe une copie intégrale de son copyright et "
+"de ses informations de licence dans "
+"``/usr/share/doc/$(package_name)/copyright``."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:136
 msgid ""
@@ -869,6 +901,9 @@ msgid ""
 "<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ "
 "format. You are encouraged to use this format as well."
 msgstr ""
+"Cet exemple suit le format du `Droit d'auteur Debian lisible par la machine "
+"<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_. Vous "
+"êtes également encouragés à utiliser ce format."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:184
 msgid "The rules file"
@@ -903,6 +938,10 @@ msgid ""
 "build target that ``debian/rules`` is called with as an argument to "
 "``/usr/bin/dh``, which itself will call all the necessary ``dh_*`` commands."
 msgstr ""
+"Passons ce fichier en revue de détails. Tout ce qu'il fait est de passer "
+"chaque cible construite qu'appelle ce ``debian/rules`` comme argument à "
+"``/usr/bin/dh``, qui appelle lui-même toutes les commandes ``dh_*`` "
+"nécessaires."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:212
 msgid ""
@@ -949,6 +988,10 @@ msgid ""
 "command in the sequence. The ``--until``, ``--before``, ``--after``, and ``--"
 "remaining`` options can override this behavior."
 msgstr ""
+"A chaque exécution de ``dh``, il examine le journal, et retrouve les "
+"dernières commandes historisées dans une séquence spécifiée. Il continue "
+"ensuite avec la commande suivante de la séquence. Les options ``--until``, "
+"``--before``, ``--after``, et ``--remaining`` modifient ce comportement."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:236
 msgid ""
@@ -959,6 +1002,13 @@ msgid ""
 "options, or run entirely different commands instead. (Note that to use this "
 "feature, you should Build-Depend on debhelper 7.0.50 or above.)"
 msgstr ""
+"Si ``debian/rules`` contient une cible nommée ``override_dh_command``, alors "
+"quand il arrive à cette commande de la séquence, ``dh`` traitera cette cible "
+"à partir du fichier de règles, plutôt que de lancer la commande réelle. La "
+"cible modifiée peut ensuite exécuter la commande avec des options "
+"supplémentaires, ou exécuter des commandes complètement différentes à la "
+"place. (Notez que pour utiliser cette fonctionnalité, vous devez construire "
+"les dépendances à partir de debhelper 7.0.50 ou supérieur.)"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:245
 msgid ""
@@ -1011,6 +1061,12 @@ msgid ""
 "the source package's root directory to ``usr/bin`` and a desktop file in the "
 "``debian`` directory to ``usr/share/applications``::"
 msgstr ""
+"Dans le premier cas, le fichier ``install`` doit comporter une ligne par "
+"fichier installé, en précisant à la fois le fichier et le répertoire "
+"d'installation. Par exemple, le fichier ``install`` suivant installera le "
+"script ``foo`` dans le répertoire racine du paquet source de ``usr/bin`` et "
+"un fichier desktop dans le répertoire ``debian`` de "
+"``usr/share/applications`` ::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:273
 msgid ""
@@ -1025,6 +1081,17 @@ msgid ""
 "``foo.install`` containing only the architecture dependent files might look "
 "like::"
 msgstr ""
+"Lorsqu'un paquet source produit plusieurs paquets binaires ``dh`` va "
+"installer les fichiers dans ``debian/tmp`` plutôt que directement dans "
+"``debian/<paquet>``. Les fichiers installés dans ``debian/tmp`` peuvent "
+"alors être déplacés en paquets binaires séparés en utilisant plusieurs "
+"fichiers ``$package_name.install``. Cela est couramment utilisé pour sortir "
+"de grandes quantités de données indépendantes de l'architecture hors de "
+"paquets dépendants de l'architecture ainsi qu'à l'intérieur de paquets "
+"``Architecture : all``. Dans ce cas, seul le nom des fichiers (ou des "
+"répertoires) à installer sont nécessaires, en omettant le répertoire "
+"d'installation. Par exemple, ``foo.install`` contenant uniquement des "
+"fichiers dépendants de l'architecture pourrait ressembler à ::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:286
 msgid ""
@@ -1048,6 +1115,9 @@ msgid ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
+"Voir ``man dh_install`` et `la section du fichier install (Section 5.11) "
+"<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_ du "
+"Nouveau Guide des Mainteneurs Debian pour plus de détails."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:302
 msgid "The watch file"
@@ -1061,6 +1131,11 @@ msgid ""
 "this writing), while the following lines contain any URLs to parse. For "
 "example::"
 msgstr ""
+"Le fichier ``debian/watch`` nous permet de vérifier automatiquement les "
+"nouvelles versions amont en utilisant l'outil ``uscan`` se trouvant dans le "
+"paquet ``devscripts``. La première ligne du fichier doit être la version du "
+"format (3, au moment d'écrire ces lignes), tandis que les lignes suivantes "
+"contiennent des URL à analyser. Par exemple::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:313
 msgid ""
@@ -1069,6 +1144,10 @@ msgid ""
 "version. If a new upstream version is found, it will be automatically "
 "downloaded. For example::"
 msgstr ""
+"L'exécution de ``uscan`` dans le répertoire racine source ira comparer le "
+"numéro de version amont dans ``debian/changelog`` avec celui de la dernière "
+"version amont disponible. Si une nouvelle version amont est trouvée, elle "
+"sera automatiquement téléchargée. Par exemple ::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:326
 msgid ""
@@ -1076,6 +1155,10 @@ msgid ""
 "more complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  "
 "In that case, use something like::"
 msgstr ""
+"Si vos archives tar sont en direct sur Launchpad, le fichier "
+"``debian/watch`` sera un peu plus compliqué (la `Question 21146`_ et le "
+"`Bogue 231797`_ montrent de quoi il s'agit). Dans ce cas, utilisez quelque "
+"chose comme ::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
 msgid ""
@@ -1159,6 +1242,8 @@ msgstr "Prise en charge de plusieurs archives amont"
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
 msgstr ""
+"Il n'est pas nécessaire de rempaqueter l'archive amont pour dépouiller le "
+"répertoire debian"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:367
 msgid ""
@@ -1184,6 +1269,10 @@ msgid ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of "
 "the Debian New Maintainers' Guide for additional details."
 msgstr ""
+"Voir ``man dpkg-source`` et la `section source/format (Section 5.21) "
+"<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_ du "
+"Nouveau Guide des Mainteneurs Debian afin d'obtenir des détails "
+"supplémentaires."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:377
 msgid "Additional Resources"
@@ -1199,6 +1288,14 @@ msgid ""
 "under the debian directory\" <http://www.debian.org/doc/maint-"
 "guide/dother.en.html>`_ discusses additional files that may be used."
 msgstr ""
+"En complément des liens vers la Charte Debian de chaque section ci-dessus, "
+"le Nouveau Guide des Mainteneurs Debian décrit plus en détail chaque "
+"fichier. Notamment, `Chapitre 4, « Fichiers nécessaires dans le répertoire "
+"debian » <http://www.debian.org/doc/maint-guide/dreq.fr.html>`_ examine en "
+"profondeur les fichiers control, changelog, copyright et rules. Le `Chapitre "
+"5, « Autres fichiers dans le répertoire debian » "
+"<http://www.debian.org/doc/maint-guide/dother.fr.html>`_ examine les "
+"fichiers supplémentaires pouvant être utilisés."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:3
 msgid "Fixing a bug in Ubuntu"
@@ -1214,6 +1311,9 @@ msgid ""
 "If you followed the instructions to :doc:`get set up with Ubuntu "
 "Development<./getting-set-up>`, you should be all set and ready to go."
 msgstr ""
+"Si vous avez suivi les instructions pour :doc:`obtenir la configuration de "
+"Ubuntu Développement<./getting-set-up>`, vous devriez être configuré et prêt "
+"à commencer."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:13
 msgid ""
@@ -1223,6 +1323,12 @@ msgid ""
 "and merged. In this guide we will go through all the necessary steps one by "
 "one."
 msgstr ""
+"Comme vous pouvez le constater dans l'image ci-dessus, il n'y a pas de "
+"surprises dans le processus de correction des bogues dans Ubuntu : vous "
+"découvrez un problème, vous obtenez le code, vous travaillez sur le "
+"correctif, le testez, soumettez vos modifications dans Launchpad et demandez "
+"à ce qu'elles soient examinées puis fusionnées. Dans ce guide, nous allons "
+"passer toutes les étapes nécessaires une par une."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:20
 msgid "Finding the problem"
@@ -1246,6 +1352,11 @@ msgid ""
 "upstream or in Debian already, lists small bugs (we call them 'bitesize'), "
 "and so on. Check it out and find your first bug to work on."
 msgstr ""
+"`Harvest <http://harvest.ubuntu.com/>`_ est l'endroit où nous gardons la "
+"trace des différentes listes de choses à faire en matière de développement "
+"Ubuntu. Harvest répertorie les bogues déjà résolus en amont ou dans Debian, "
+"ainsi que les petits bogues (que nous appelons « bitesize »), etc. Regardez "
+"cela et trouvez votre premier bogue à corriger."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:35
 msgid "Figuring out what to fix"
@@ -1307,6 +1418,12 @@ msgid ""
 "branch corresponding to the source package.  Launchpad maintains source "
 "package branches for all the packages in Ubuntu."
 msgstr ""
+"Une fois que vous connaissez le paquet source à corriger, vous souhaiterez "
+"obtenir une copie du code sur votre système, de sorte que vous puissiez le "
+"déboguer. Dans le développement de la distribution Ubuntu, on y arrive par "
+":ref:`ramification du paquet source <branching>` vers une branche "
+"correspondant au paquet source. Launchpad gère les branches de paquets "
+"source pour tous les paquets dans Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:74
 msgid ""
@@ -1320,6 +1437,16 @@ msgid ""
 "a little bit of credit.  You're now on your way to becoming an Ubuntu "
 "developer!"
 msgstr ""
+"Une fois que vous avez obtenu une branche locale du paquet source, vous "
+"pouvez étudier le bogue, créer un correctif et télécharger votre proposition "
+"de correction vers Launchpad sous la forme d'une branche Bazaar. Lorsque "
+"vous êtes satisfait de votre solution, vous pouvez :ref:`soumettre une "
+"proposition de fusion <merge-proposal>`, qui demande à d'autres développeurs "
+"d'Ubuntu d'examiner et approuver la modification. S'ils sont d'accord avec "
+"vos modifications, un développeur Ubuntu téléchargera la nouvelle version du "
+"paquet vers Ubuntu afin que chacun obtienne le bénéfice de votre excellente "
+"solution - et vous gagnez un peu en crédit. Vous êtes désormais sur ​​la "
+"bonne voie pour devenir un développeur Ubuntu !"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:83
 msgid ""
@@ -1460,6 +1587,9 @@ msgid ""
 "This will add a boilerplate changelog entry for you and launch an editor "
 "where you can fill in the blanks. An example of this could be::"
 msgstr ""
+"Cela vous ajoute une entrée passe-partout du changelog et lance un éditeur "
+"dans lequel vous pourrez remplir les blancs. Un exemple de ceci pourrait "
+"être ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:159
 msgid ""
@@ -1505,6 +1635,13 @@ msgid ""
 "bugs, the bug will be automatically closed when the package is uploaded to "
 "Ubuntu."
 msgstr ""
+"Dans notre (très rare) exemple, le dernier point est couvert par ``(LP: "
+"#123456)`` se référant au bogue Launchpad 123456. Les rapports de bogues ou "
+"des fils de listes de diffusion ou les spécifications sont généralement de "
+"bonnes informations à fournir comme justification d'un changement. En prime, "
+"si vous utilisez la notation ``LP: #<numéro>`` pour les bogues sur "
+"Launchpad, le bogue sera automatiquement fermé quand le paquet correctif "
+"sera téléchargé vers Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:181
 msgid "Committing the fix"
@@ -1520,6 +1657,8 @@ msgid ""
 "and the change will be committed (locally) with your changelog entry as a "
 "commit message."
 msgstr ""
+"et la modification sera soumise (localement) avec votre entrée changelog "
+"comme message de soumission."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:190
 msgid ""
@@ -1544,12 +1683,20 @@ msgid ""
 "browser. There find the \"(+) Propose for merging\" link, click it to get "
 "the change reviewed by somebody and included in Ubuntu."
 msgstr ""
+"vous devriez être entièrement configuré. La commande push doit le soumettre "
+"à Launchpad et la seconde commande ouvre la page Launchpad de la branche "
+"distante dans votre navigateur. Trouvez alors le lien « (+) Proposer à la "
+"fusion », cliquez dessus afin que quelqu'un examine les modifications et "
+"qu'elles soient incluses dans Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:209
 msgid ""
 "Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into "
 "more detail about getting feedback for your proposed changes."
 msgstr ""
+"Notre article sur :doc:`la recherche de sponsors<./udd-sponsorship>` "
+"explique plus en détail comment obtenir des commentaires sur vos "
+"modifications proposées."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:212
 msgid ""
@@ -1557,6 +1704,10 @@ msgid ""
 "might want to have a look at our :doc:`Security and stable release "
 "updates<./security-and-stable-release-updates>` article."
 msgstr ""
+"Si votre branche résout des problèmes dans les versions stables ou s'il "
+"s'agit d'un correctif de sécurité, vous pouvez jeter un œil à notre article "
+"sur :doc:`mises à jour de sécurité et versions stables<./security-and-stable-"
+"release-updates>`."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:3
 msgid "Tutorial: Fixing a bug in Ubuntu"
@@ -1569,6 +1720,10 @@ msgid ""
 "An example of a concrete problem might help to get an idea what to consider "
 "generally."
 msgstr ""
+"Alors que les mécanismes pour :doc:`corriger un bogue<./fixing-a-bug>` sont "
+"les mêmes pour tous les bogues, chaque problème que vous examinez est "
+"susceptible d'être différent des autres. Un exemple de problème concret aide "
+"à se faire une idée de ce qu'il faut considérer en général."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:10
 msgid ""
@@ -1592,6 +1747,10 @@ msgid ""
 "already. This is easy to check, either take a look at Software Center or "
 "run::"
 msgstr ""
+"Supposons que le paquet ``bumprace`` n'a pas de page d'accueil dans sa "
+"description de paquet. Dans un premier temps, vous vérifiez si le problème "
+"n'est pas déjà résolu. C'est facile à vérifier, soit en jetant un coup d’œil "
+"à la Logithèque Ubuntu, soit en exécutant ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:23
 msgid "The output should be similar to this::"
@@ -1667,6 +1826,12 @@ msgid ""
 "unfortunately often different for every package you have a look at, but if "
 "you search the web for it, you should in most cases find it pretty easily."
 msgstr ""
+"Le problème sur lequel nous travaillons est spécifique, car il concerne "
+"uniquement les bits d'empaquetage liés à ``bumprace``. Si le problème se "
+"trouvait dans le code source, il serait utile de vérifier également le "
+"traceur de bogues en amont. Malheureusement, il arrive souvent que cela soit "
+"différent à chaque paquet examiné ; mais si vous effectuez une recherche sur "
+"internet, vous devriez le trouver facilement dans la plupart des cas."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:88
 msgid "Offering help"
@@ -1692,6 +1857,11 @@ msgid ""
 "to commit it is good enough? Did you manage to only partially fix the issue "
 "and you want to at least share your part of it?"
 msgstr ""
+"Si aucun rapport de bogue n'a été déposé, vous pouvez en déposer un. Une "
+"chose que vous devriez garder à l'esprit est : Le problème est-il si petit "
+"qu'une simple demande de réalisation serait suffisante ? Avez-vous réussi à "
+"partiellement résoudre le problème et vous voulez au moins partager votre "
+"partie de la solution ?"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:100
 msgid "It is great if you can offer help and will surely be appreciated."
@@ -1730,6 +1900,10 @@ msgid ""
 "the first part of ``debian/control``, the section which starts with "
 "``Source:``."
 msgstr ""
+"Si vous avez précédemment lu :doc:`la Présentation du répertoire "
+"Debian<./debian-dir-overview>`, vous vous rappellerez que la page d'accueil "
+"d'un paquet est spécifiée dans la première partie de ``debian/control``, la "
+"section débutant par ``Source:``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:121
 msgid "So what we do next is run::"
@@ -1751,7 +1925,7 @@ msgstr "Si désormais vous exécutez ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:133
 msgid "you should see something like this:"
-msgstr ""
+msgstr "vous devriez  voir quelque chose ressemblant à ceci :"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:149
 msgid ""
@@ -1778,6 +1952,10 @@ msgid ""
 "project's homepage.`` should do. Then save the file. To double-check this "
 "worked out, run::"
 msgstr ""
+"cela lance un éditeur avec une entrée passe-partout de changelog que vous "
+"avez juste à compléter. Dans notre cas, quelque chose comme "
+"``debian/control: Added project's homepage.`` devrait le faire. Enregistrez "
+"ensuite le fichier. Pour revérifier la prise en compte, exécutez ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:170
 msgid "and you will see something like this:"
@@ -1899,10 +2077,18 @@ msgid ""
 "possible, you will need to send the solution to multiple bug trackers. "
 "Provided the issue affects all parties in question."
 msgstr ""
+"Dans notre cas, nous avons établi que nous avions un problème avec "
+"l'empaquetage, à la fois dans Ubuntu et Debian. Comme Ubuntu est basé sur "
+"Debian, nous ferons parvenir le correctif à Debian. Une fois que celui-ci y "
+"sera inclus, il sera repris par la suite dans Ubuntu. Le problème dans notre "
+"tutoriel est clairement non critique, donc cette approche est logique. S'il "
+"est important de corriger le problème dès que possible, vous devrez envoyer "
+"la solution à plusieurs traceurs de bogues. Pourvu que le problème affecte "
+"toutes les parties en cause."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:243
 msgid "To submit the patch to Debian, simply run::"
-msgstr "Pour soumettre le patch à Debian, lancez simplement::"
+msgstr "Pour soumettre le patch à Debian, lancez simplement ::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:247
 msgid ""
@@ -1937,6 +2123,9 @@ msgid ""
 "If the problem is just in Ubuntu, you might want to consider :doc:`Seeking "
 "Review and Sponsorship<./udd-sponsorship>` to get the fix included."
 msgstr ""
+"Si le problème est uniquement dans Ubuntu, vous pourriez envisager de "
+":doc:`Rechercher des relectures et des parrainages<./udd-sponsorship>` pour "
+"obtenir l'inclusion du correctif."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:263
 msgid "Additional considerations"
@@ -2402,6 +2591,10 @@ msgid ""
 "<https://help.launchpad.net/YourAccount/NewAccount>`_ on Launchpad has more "
 "information about the process and additional settings you can change."
 msgstr ""
+"`La page d'aide nouveau compte "
+"<https://help.launchpad.net/YourAccount/NewAccount>`_ sur Launchpad contient "
+"plus d'informations sur le processus et les paramètres supplémentaires que "
+"vous pouvez modifier."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:205
 msgid "Upload your GPG key to Launchpad"
@@ -2535,6 +2728,10 @@ msgid ""
 "your commit messages. With `launchpad-login` you set your Launchpad ID. This "
 "way code that you publish in Launchpad will be associated with you."
 msgstr ""
+"`Whoami` renseigne Bazaar sur le nom et l'adresse courriel qu'il doit "
+"utiliser pour vos messages participatifs. Avec `launchpad-login` vous "
+"définissez votre identifiant Launchpad. De cette façon, le code que vous "
+"publiez dans Launchpad vous sera associé."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:277
 msgid ""
@@ -2724,6 +2921,8 @@ msgstr ""
 msgid ""
 "`How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;"
 msgstr ""
+"`Comment empaqueter pour Debian "
+"<https://wiki.debian.org/HowToPackageForDebian>`_ ;"
 
 #: ../ubuntu-packaging-guide/index.rst:98
 msgid "`Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;"
@@ -2756,6 +2955,12 @@ msgid ""
 "work on the guide, `grab the source <https://code.launchpad.net/~ubuntu-"
 "packaging-guide-team/ubuntu-packaging-guide/trunk>`_ there as well."
 msgstr ""
+"Nous cherchons toujours à améliorer ce guide. Si vous relevez le moindre "
+"problème ou avez quelques suggestions, veuillez `rapporter un bogue sur "
+"Launchpad <https://bugs.launchpad.net/ubuntu-packaging-guide>`_. Si vous "
+"souhaitez apporter votre aide au travail sur ce guide, vous pouvez tout à "
+"fait `récupérer la source <https://code.launchpad.net/~ubuntu-packaging-"
+"guide-team/ubuntu-packaging-guide/trunk>`_."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
@@ -3069,6 +3274,11 @@ msgid ""
 "``#kubuntu-devel`` Freenode IRC channel.  More information about Kubuntu "
 "development is on the `Kubuntu wiki page`_."
 msgstr ""
+"L'empaquetage de programmes KDE dans Ubuntu est géré par les équipes Kubuntu "
+"et MOTU. Vous pouvez contacter l'équipe Kubuntu sur la `liste de diffusion "
+"Kubuntu`_ et le canal IRC Freenode ``#kubuntu-devel``. Vous trouverez de "
+"plus amples informations sur le développement Kubuntu sur la `page de wiki "
+"Kubuntu`_."
 
 #: ../ubuntu-packaging-guide/kde.rst:10
 msgid ""
@@ -3124,6 +3334,10 @@ msgid ""
 "will ensure the correct build flags are used and add options such as "
 "handling kdeinit stubs and translations::"
 msgstr ""
+"Les paquets utilisant Debhelper 7 doivent ajouter l'option ``--with=kde``. "
+"Cela permettra de s'assurer que les options correctes de compilation sont "
+"utilisées et ajoutera des options telles que la gestion des souches kdeinit "
+"et traductions ::"
 
 #: ../ubuntu-packaging-guide/kde.rst:39
 msgid ""
@@ -3195,6 +3409,9 @@ msgid ""
 "If a package is moved from universe to main it will need to be re-uploaded "
 "before the translations get imported into Launchpad."
 msgstr ""
+"Si un paquet est déplacé du dépôt « universe » au dépôt « main », il devra "
+"être téléchargé de nouveau avant que les traductions soient importées vers "
+"Launchpad."
 
 #: ../ubuntu-packaging-guide/kde.rst:72
 msgid ""
@@ -3379,6 +3596,13 @@ msgid ""
 "programs compiling against the library do not care about the major version "
 "number (although the binary they compile into will)."
 msgstr ""
+"``Libnova-dev.install`` inclut tous les fichiers nécessaires pour compiler "
+"un programme utilisant cette bibliothèque. Les fichiers d'en-tête, un "
+"binaire de configuration, le fichier ``.la`` d'utilitaires bibliothèque et "
+"``libnova.so`` qui est un autre lien symbolique pointant vers la "
+"bibliothèque, les programmes compilant avec cette bibliothèque ne se "
+"souciant pas du numéro de version majeur (même si le binaire qu'ils "
+"compilent le feront)."
 
 #: ../ubuntu-packaging-guide/libraries.rst:76
 msgid ""
@@ -3387,6 +3611,11 @@ msgid ""
 "It is a current `Debian goal to remove .la files`_ and we should help with "
 "this."
 msgstr ""
+"Les fichiers ``.la`` d'utilitaires bibliothèque sont nécessaires sur "
+"certains systèmes non-Linux avec une faible prise en charge des "
+"bibliothèques, mais causent généralement plus de problèmes qu'ils n'en "
+"résolvent sur les systèmes Debian. C'est un des `objectifs actuels de Debian "
+"de supprimer les fichiers .la`_ et nous devrions aider avec ceci."
 
 #: ../ubuntu-packaging-guide/libraries.rst:82
 msgid "Static Libraries"
@@ -3465,6 +3694,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/libraries.rst:119
 msgid "This makes a diff file which you can self apply::"
 msgstr ""
+"Cela crée un fichier diff que vous pouvez rendre automatiquement "
+"applicable ::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:123
 msgid ""
@@ -3484,6 +3715,8 @@ msgstr ""
 #: ../ubuntu-packaging-guide/libraries.rst:130
 msgid "Now move the file into its location, commit and do a test build::"
 msgstr ""
+"Maintenant, déplacez le fichier à sa place, soumettez et faites un test de "
+"compilation ::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:138
 msgid ""
@@ -3667,6 +3900,10 @@ msgid ""
 " Also change ``unstable`` to the current development Ubuntu release such as "
 "``saucy``."
 msgstr ""
+"Dans ``debian/changelog`` modifiez le numéro de version pour une version "
+"Ubuntu version : ``2.9-0ubuntu1`` (version amont 2.9, version Debian 0, "
+"version Ubuntu 1).  Modifiez également ``unstable`` pour la version de "
+"développement actuelle d'Ubuntu comme ``saucy``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:87
 msgid ""
@@ -3676,6 +3913,11 @@ msgid ""
 "You will generally want to set this to the most recent version which is "
 "``9``."
 msgstr ""
+"Le gros du travail de construction de paquet est réalisée par une série de "
+"scripts appelée ``debhelper``. Le comportement exact de ``debhelper`` change "
+"avec les nouvelles versions majeures, le fichier compat indique à "
+"``debhelper`` à quelle version se conformer. Vous souhaiterez généralement "
+"régler ce paramètre à la version la plus récente qui est ``9``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:93
 msgid ""
@@ -3685,6 +3927,11 @@ msgid ""
 "compile the application to ``Build-Depends:``. For ``hello``, make sure that "
 "it includes at least::"
 msgstr ""
+"``control`` contient toutes les métadonnées du paquet. Le premier paragraphe "
+"décrit le paquet source. Les paragraphes suivants décrivent les paquets "
+"binaires à construire. Nous aurons besoin d'ajouter à ``Build-Depends:`` les "
+"paquets nécessaires pour compiler l'application. Pour ``bonjour``, assurez-"
+"vous qu'il comprend au moins ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:101
 msgid ""
@@ -3735,6 +3982,11 @@ msgid ""
 "automatically done these days by ``debhelper 7`` so the universal ``%`` "
 "Makefile target just runs the ``dh`` script which will run everything needed."
 msgstr ""
+"``rules`` est le fichier le plus complexe. Il s'agit d'un Makefile qui "
+"compile le code et le transforme en un paquet binaire. Heureusement, le gros "
+"du travail se fait de nos jours automatiquement à l'aide de  ``debhelper 7`` "
+"de telle sorte que la cible universelle ``%`` du Makefile lance uniquement "
+"le script ``dh`` qui exécute toutes les opérations nécessaires."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:121
 msgid ""
@@ -3894,6 +4146,9 @@ msgid ""
 "prospective Debian Developers. It is where you can find a sponsor to upload "
 "your package to the archive."
 msgstr ""
+"La foire aux questions `Debian Mentors FAQ`_ des tuteurs Debian existe pour "
+"le tutorat des nouveaux et futurs développeurs Debian. C'est là que vous "
+"trouverez un parrain pour télécharger votre paquet vers l'archive."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:212
 msgid ""
@@ -3901,6 +4156,10 @@ msgid ""
 "\"Intent to Package\" and \"Request for Package\" bugs as well as list of "
 "open ITPs and RFPs."
 msgstr ""
+"`Paquets en devenir ou en cours de travail`_ - Renseignements sur la façon "
+"de déposer des « intentions de Paquets » et des « Requêtes pour les bogues "
+"de Paquet » mais aussi la liste de ces Intentions et Requêtes actuellement "
+"ouvertes."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:216
 msgid ""
@@ -3908,6 +4167,10 @@ msgid ""
 "invaluable for both Ubuntu and Debian packagers. This section documents "
 "processes for submitting new packages."
 msgstr ""
+"`Référence du développeur Debian, 5.1. Les nouveaux paquets`_ - L'ensemble "
+"du document est inestimable tout autant pour les empaqueteurs Ubuntu ou "
+"Debian. Cette section documente les processus de soumission de nouveaux "
+"paquets."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:220
 msgid ""
@@ -4316,7 +4579,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:18
 msgid "Things in ``debian/control`` that are specific for a Python package:"
-msgstr ""
+msgstr "Les choses de ``debian/control`` spécifiques à un paquet Python :"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:20
 msgid ""
@@ -4324,6 +4587,9 @@ msgid ""
 "documentation package. For an application, a single binary package will be "
 "enough."
 msgstr ""
+"La section des paquets de module doit être ``python``, et ``doc`` pour les "
+"paquets de documentation. Pour une application, un simple paquet binaire "
+"suffira."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:21
 msgid ""
@@ -4331,6 +4597,9 @@ msgid ""
 "``python3-all (>= 3.1.2-7~)`` to make sure Python helpers are available (see "
 "the next section for details)."
 msgstr ""
+"Il convient d'ajouter les dépendances de construction sur ``python-all (>= "
+"2.6.6-3~)`` et ``python3-all (>= 3.1.2-7~)`` pour s'assurer que les aides "
+"Python sont disponibles (voir la section suivante pour plus de détails)."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:22
 msgid ""
@@ -4338,18 +4607,27 @@ msgid ""
 "fields — see “`Specifying Supported Versions`_” section of the Policy for "
 "details. For example::"
 msgstr ""
+"Il est recommandé d'ajouter les champs ``X-Python-Version`` et ``X-python3-"
+"version`` — voir la section “`Spécification des Versions Prises en "
+"Charge`_”de la charte pour des détails. Par exemple ::"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:27
 msgid ""
 "If your package works only with Python 2.x or 3.x, build depend only on one "
 "``-all`` package and use only one ``-Version`` field."
 msgstr ""
+"Si votre paquet fonctionne seulement avec Python 2.x ou 3.x, la compilation "
+"dépend seulement d'un paquet ``-all`` et n'utilisez qu'un seul champ ``-"
+"Version``."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:28
 msgid ""
 "Module packages should have ``{python:Depends}`` and ``{python3:Depends}`` "
 "substitution variables (respectively) in their dependency lists."
 msgstr ""
+"Les paquets de modules doivent avoir les variables de substitution "
+"``{python:Depends}`` et `` {python3:Depends}`` (respectivement) dans leurs "
+"listes de dépendances."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:33
 msgid ""
@@ -4359,6 +4637,12 @@ msgid ""
 "do that manually in override sections (skip this if your package doesn’t "
 "support Python 3.x)."
 msgstr ""
+"Les aides recommandées pour les modules python sont ``dh_python2`` et "
+"``dh_python3``. Malheureusement, ``debhelper`` ne compile pas encore "
+"automatiquement des paquets Python 3.x (voir le `bogue 597105`_ dans le "
+"Système de Traçage de Bogues Debian), de sorte que nous aurons besoin de le "
+"faire manuellement dans les sections de remplacement (les sauter si votre "
+"paquet ne prend pas en charge Python 3.x)."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:35
 msgid "Here’s our ``debian/rules`` file (with annotations):"
@@ -4370,6 +4654,9 @@ msgid ""
 "shipped by upstream. Usually tests can be invoked using ``setup.py test`` or "
 "``setup.py check``."
 msgstr ""
+"C'est également une bonne pratique d'effectuer des tests lors de la "
+"construction, si ils sont fournis par l'amont. Habituellement, les tests "
+"peuvent être appelés à l'aide de ``setup.py test`` ou ``setup.py check``."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:73
 msgid "debian/\\*.install"
@@ -4382,6 +4669,11 @@ msgid ""
 "every interpreter version, while Python 3.x ones are all installed into "
 "``/usr/lib/python3/dist-packages/``."
 msgstr ""
+"Les modules Python 2.x sont installés dans le répertoire "
+"``/usr/share/pyshared/``, et les liens symboliques sont créés dans "
+"``/usr/lib/python2.x/dist-packages/`` pour chaque version d'interpréteur, "
+"alors que ceux de Python 3.x sont tous installés dans "
+"``/usr/lib/python3/dist-packages/``."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:77
 msgid ""
@@ -4390,6 +4682,11 @@ msgid ""
 "modules are architecture-dependent (e.g. extensions) (see “`Programs "
 "Shipping Private Modules`_” section of the Policy)."
 msgstr ""
+"Si votre paquet est une application et possède des modules Python privés, "
+"ils doivent être installés dans ``/usr/share/module``, ou "
+"``/usr/lib/module``si ces modules sont dépendants de l'architecture (par "
+"exemple, des extensions) (voir le paragraphe « `Programmes fournissant des "
+"Modules Privés`_ » de la Charte)."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:79
 msgid ""
@@ -4413,22 +4710,29 @@ msgid ""
 "Sphinx documentation to your package (using ``dh_sphinxdoc`` helper), you "
 "should:"
 msgstr ""
+"L'outil le plus couramment utilisé pour la construction des documentations "
+"Python est `Sphinx`_. Pour ajouter la documentation Sphinx à votre paquet "
+"(en utilisant l'aide ``dh_sphinxdoc``), vous devez :"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:93
 msgid ""
 "Add a build-dependency on ``python-sphinx`` or ``python3-sphinx`` (depending "
 "on what Python version do you want to use);"
 msgstr ""
+"Ajouter à votre compilation une dépendance à ``python-sphinx`` ou ``python3-"
+"sphinx`` (selon la version de Python souhaitée) ;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:94
 msgid "Append ``sphinxdoc`` to the ``dh --with`` line;"
-msgstr ""
+msgstr "Annexer ``sphinxdoc`` à la ligne ``dh --with`` ;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:95
 msgid ""
 "Run ``setup.py build_sphinx`` in ``override_dh_auto_build`` (sometimes not "
 "needed);"
 msgstr ""
+"Lancer ``setup.py build_sphinx`` dans ``override_dh_auto_build`` (pas "
+"toujours nécessaire) ;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:96
 msgid ""
@@ -4442,6 +4746,8 @@ msgid ""
 "Add the path of the built docs directory (usually ``build/sphinx/html``) to "
 "your ``.docs`` file."
 msgstr ""
+"Ajouter le chemin du répertoire des documents intégrés (généralement "
+"``build/sphinx/html``) à votre fichier ``.docs``."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:99
 msgid ""
@@ -4449,12 +4755,18 @@ msgid ""
 "when we run ``setup.py build``, so we can simply put this in the ``python-"
 "markdown-doc.docs`` file::"
 msgstr ""
+"Dans notre cas, les documents sont créés automatiquement dans le répertoire "
+"``build/docs/`` lorsque nous exécutons ``setup.py build``, ainsi nous "
+"pouvons simplement les mettre dans le fichier ``python-markdown-doc.docs`` ::"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:103
 msgid ""
 "Because docs also contain source ``.txt`` files, we’ll also tell "
 "``dh_compress`` to not compress them — by adding this to ``debian/rules``:"
 msgstr ""
+"En raison de la présence de fichiers source ``.txt`` dans docs, nous allons "
+"aussi dire à ``dh_compress`` de ne pas les compresser — en ajoutant cela à "
+"``debian/rules`` :"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:111
 msgid "Checking for packaging mistakes"
@@ -4467,11 +4779,17 @@ msgid ""
 "example, these two commands invoke both versions of ``lintian`` and check "
 "source and binary packages::"
 msgstr ""
+"Avec ``lintian``, il existe un outil spécifique pour vérifier les paquets "
+"Python —  ``lintian4py``. Il est disponible dans le paquet "
+"`lintian4python`_. Par exemple, ces deux commandes invoquent les deux "
+"versions de ``lintian`` et vérifient les paquets sources et binaires ::"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:118
 msgid ""
 "Here, ``-EI`` option is used to enable experimental and informational tags."
 msgstr ""
+"Ici, l'option ``-EI`` est utilisée pour activer les balises expérimentales "
+"et informatives."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:121
 msgid "See also"
@@ -4479,25 +4797,27 @@ msgstr "Voir aussi"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:123
 msgid "The `Python policy`_;"
-msgstr ""
+msgstr "La `Charte Python`_ ;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:124
 msgid "`Python/Packaging`_ article on Debian wiki;"
-msgstr ""
+msgstr "L'article `Python/Packaging`_ sur le wiki Debian ;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:125
 msgid ""
 "`Python/LibraryStyleGuide`_ and `Python/AppStyleGuide`_ articles on Debian "
 "wiki;"
 msgstr ""
+"Les articles `Python/LibraryStyleGuide`_ et `Python/AppStyleGuide`_ sur le "
+"wiki Debian ;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:126
 msgid "Debian `python-modules`_ and `python-apps`_ teams."
-msgstr ""
+msgstr "Les équipes Debian `python-modules`_ et `python-apps`_."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:3
 msgid "Security and Stable Release Updates"
-msgstr ""
+msgstr "Mises à jour de sécurité et de version stable"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:6
 msgid "Fixing a Security Bug in Ubuntu"
@@ -4511,10 +4831,16 @@ msgid ""
 "different, we will be updating the dbus package in Ubuntu 10.04 LTS (Lucid "
 "Lynx) for a security update."
 msgstr ""
+"La correction de bogues de sécurité dans Ubuntu n'est pas vraiment "
+"différente de la :doc:`correction d'un bogue dans Ubuntu<./fixing-a-bug>`, "
+"et vous êtes supposé être familiarisé avec les correctifs de bogues "
+"classiques. Pour montrer où les choses diffèrent, nous téléchargerons le "
+"paquet dbus vers Ubuntu 10.04 LTS (Lucid Lynx) pour une mise à jour de "
+"sécurité."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:19
 msgid "Obtaining the source"
-msgstr ""
+msgstr "L'obtention de la source"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:21
 msgid ""
@@ -4533,10 +4859,14 @@ msgid ""
 "want to patch that is not in -proposed or -backports. Since we are updating "
 "Lucid's dbus, you'll download 1.2.16-2ubuntu4.2 from lucid-updates::"
 msgstr ""
+"Typiquement, vous choisirez la plus haute version de la version à corriger "
+"qui ne figure ni dans -proposed ni dans -backports. Puisque nous mettons à "
+"jour le dbus de Lucid, vous allez télécharger 1.2.16-2ubunutu4.2 depuis les "
+"mises à jour Lucid ::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:38
 msgid "Patching the source"
-msgstr ""
+msgstr "Correction de la source"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:39
 msgid ""
@@ -4547,6 +4877,13 @@ msgid ""
 "the easiest way to patch packages and it is basically a wrapper around every "
 "other patch system you can imagine."
 msgstr ""
+"Maintenant que nous avons le paquet source, nous avons besoin de le réparer "
+"pour corriger la vulnérabilité. Vous pouvez utiliser n'importe quelle "
+"méthode de réparation appropriée au paquet, y compris les :doc:`techniques "
+"UDD<./udd-intro>`, mais cet exemple va utiliser ``edit-patch`` (du paquet "
+"ubuntu-dev-tools). ``edit-patch`` est le moyen le plus aisé de corriger les "
+"paquets et il est essentiellement une surcouche de chaque système de "
+"réparation que vous pouvez imaginer."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:46
 msgid "To create your patch using ``edit-patch``::"
@@ -4558,16 +4895,22 @@ msgid ""
 "directory. Now edit the files needed to fix the vulnerability.  Often "
 "upstream will have provided a patch so you can apply that patch::"
 msgstr ""
+"Cela appliquera les correctifs existants, et placera l'empaquetage dans un "
+"répertoire temporaire. Ensuite, éditez les fichiers nécessaires pour "
+"corriger la vulnérabilité. Souvent, l'amont a fourni un correctif afin que "
+"vous puissiez l'appliquer ::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:57
 msgid ""
 "After making the necessary changes, you just hit Ctrl-D or type exit to "
 "leave the temporary shell."
 msgstr ""
+"Après avoir effectué les modifications nécessaires, vous appuyez simplement "
+"sur Ctrl-D ou tapez exit pour quitter l'environnement temporaire."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:61
 msgid "Formatting the changelog and patches"
-msgstr ""
+msgstr "Formatage du changelog et des correctifs"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:63
 msgid ""
@@ -4579,6 +4922,14 @@ msgid ""
 "distribution name uses lucid-security since this is a security update for "
 "Lucid) for security updates::"
 msgstr ""
+"Après avoir appliqué les correctifs, vous mettrez à jour le changelog. La "
+"commande ``dch`` est utilisée pour modifier le fichier ``debian/changelog`` "
+"et ``edit-patch`` va lancer ``dch`` automatiquement après la réversion de "
+"tous les correctifs. Si vous n'utilisez pas ``edit-patch``, vous pouvez "
+"lancer ``dch -i`` manuellement. Contrairement aux correctifs normaux, vous "
+"devez utiliser le format suivant pour les mises à jour de sécurité (notez le "
+"nom de la distribution utilisé par lucid-security puisqu'il s'agit d'une "
+"mise à jour de sécurité pour Lucid) ::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:80
 msgid ""
@@ -4586,38 +4937,53 @@ msgid ""
 "at a minimum the Origin, Description and Bug-Ubuntu tags. For example, edit "
 "debian/patches/99-fix-a-vulnerability.patch to have something like::"
 msgstr ""
+"Mettez à jour votre correctif pour utiliser les balises de correctifs "
+"appropriées. Votre correctif devrait avoir au minimum les balises Origine, "
+"Description et Bug-Ubuntu. Par exemple, éditer debian/patches/99-fix-a-"
+"vulnerability.patch pour obtenir quelque chose comme ::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:91
 msgid ""
 "Multiple vulnerabilities can be fixed in the same security upload; just be "
 "sure to use different patches for different vulnerabilities."
 msgstr ""
+"De multiples vulnérabilités peuvent être corrigées dans le même "
+"téléchargement de sécurité ; il suffit de s'assurer d'utiliser des "
+"correctifs différents pour les différentes vulnérabilités."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:95
 msgid "Test and Submit your work"
-msgstr ""
+msgstr "Testez et soumettez votre travail"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:97
 msgid ""
 "At this point the process is the same as for :doc:`fixing a regular bug in "
 "Ubuntu<./fixing-a-bug>`. Specifically, you will want to:"
 msgstr ""
+"À ce stade, le processus est le même que pour :doc:`corriger un bogue normal "
+"dans Ubuntu<./fixing-a-bug>`. Plus précisément, vous devrez :"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:100
 msgid ""
 "Build your package and verify that it compiles without error and without any "
 "added compiler warnings"
 msgstr ""
+"Créer votre paquet et vérifier qu'il se compile sans erreur et sans aucun "
+"avertissement additionnel du compilateur"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:102
 msgid "Upgrade to the new version of the package from the previous version"
 msgstr ""
+"Mettre à niveau vers la nouvelle version du paquet à partir de la version "
+"précédente"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:103
 msgid ""
 "Test that the new package fixes the vulnerability and does not introduce any "
 "regressions"
 msgstr ""
+"Vérifier que le nouveau paquet corrige la vulnérabilité et n'introduit pas "
+"de régression"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:105
 msgid ""
@@ -4625,12 +4991,18 @@ msgid ""
 "being sure to mark the bug as a security bug and to subscribe ``ubuntu-"
 "security-sponsors``"
 msgstr ""
+"Soumettre votre travail par le biais d'une proposition de fusion sur "
+"Launchpad et déposer un rapport de bogue Launchpad en vous assurant tout "
+"d'abord de marquer le bogue comme étant un bogue de sécurité et ensuite de "
+"vous inscrire à ``ubuntu-security-sponsors``"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:109
 msgid ""
 "If the security vulnerability is not yet public then do not file a merge "
 "proposal and ensure you mark the bug as private."
 msgstr ""
+"Si le problème de sécurité n'est pas encore public alors ne déposez pas une "
+"proposition de fusion mais assurez-vous de marquer le bogue comme privé."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:112
 msgid ""
@@ -4638,6 +5010,10 @@ msgid ""
 "how to recreate the bug by running the old version then how to ensure the "
 "bug no longer exists in the new version."
 msgstr ""
+"Le bogue déposé doit inclure un cas de test, c'est à dire un commentaire qui "
+"explique clairement comment recréer le bogue en exécutant l'ancienne "
+"version, puis comment s'assurer que le bogue n'existe plus dans la nouvelle "
+"version."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:116
 msgid ""
@@ -4646,10 +5022,15 @@ msgid ""
 "newer than Lucid).  If the issue is not fixed in newer Ubuntu versions you "
 "should prepare updates for those versions too."
 msgstr ""
+"Le rapport de bogue doit également confirmer que le problème est résolu dans "
+"les versions d'Ubuntu plus récentes que celle où le correctif est proposé "
+"(dans l'exemple ci-dessus, plus récentes que Lucid). Si le problème n'est "
+"pas résolu dans les versions plus récentes d'Ubuntu, vous devez également "
+"préparer les mises à jour pour ces versions."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:123
 msgid "Stable Release Updates"
-msgstr ""
+msgstr "Mises à jour vers Version Stable"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:125
 msgid ""
@@ -4659,12 +5040,20 @@ msgid ""
 "bugs we only allow this where the change can be easily understood and "
 "verified."
 msgstr ""
+"Nous permettons aussi les mises à jour de versions où un paquet bogué a un "
+"lourd impact, comme une régression sévère depuis une version antérieure, ou "
+"un bogue qui cause des pertes de données. En raison de la capacité de telles "
+"mises à jour à introduire elles-mêmes des bogues, nous ne les autorisons que "
+"lorsque les modifications peuvent être facilement comprises et vérifiées."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:130
 msgid ""
 "The process for Stable Release Updates is just the same as the process for "
 "security bugs except you should subscribe ``ubuntu-sru`` to the bug."
 msgstr ""
+"Le processus des Mises à jour de version stable est exactement le même que "
+"celui des bogues de sécurité, hormis que vous devez vous inscrire à ``ubuntu-"
+"sru`` pour le bogue."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:133
 msgid ""
@@ -4673,14 +5062,20 @@ msgid ""
 "does not introduce new problems.  After a week without reported problems it "
 "can be moved to ``updates``."
 msgstr ""
+"La mise à jour ira dans l'archive ``proposed`` (par exemple ``lucid-"
+"proposed``) où il y aura lieu de vérifier qu'elle corrige le problème et "
+"n'introduit pas de nouveau problème. Après une semaine sans problème "
+"signalé, elle peut être déplacée vers ``updates``."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:138
 msgid "See the `Stable Release Updates wiki page`_ for more information."
 msgstr ""
+"Voir la `page wiki Mises à jour vers Version Stable`_ pour plus "
+"d'informations."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:3
 msgid "Traditional Packaging"
-msgstr ""
+msgstr "Empaquetage traditionnel"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:5
 msgid ""
@@ -4692,6 +5087,14 @@ msgid ""
 "better word. Before Bazaar was adopted for Ubuntu development, these were "
 "the typical methods for contributing to Ubuntu."
 msgstr ""
+"La majorité de ce guide traite du :doc:`Développement Distribué d'Ubuntu "
+"<./udd-intro>` (UDD) qui utilise le système de contrôle de version "
+"distribuée (DVCS) Bazaar pour :ref:`récupérer les paquets sources "
+"<branching>` et soumettre les correctifs à l'aide de :ref:`fusions de "
+"propositions. <merge-proposal>` Cet article va présenter ce que nous allons "
+"appeler les méthodes d'empaquetage traditionnelles, en l'absence d'une "
+"meilleure définition. Avant que Bazaar ne soit adopté pour le développement "
+"d'Ubuntu, celles-ci étaient les méthodes classiques pour contribuer à Ubuntu."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:13
 msgid ""
@@ -4699,15 +5102,18 @@ msgid ""
 "to be familiar with them. Before you begin, you should already have read the "
 "article :doc:`Getting Set Up. <./getting-set-up>`"
 msgstr ""
+"Dans certains cas, vous devrez peut-être utiliser ces outils au lieu de "
+"l'UDD. Ainsi, il est bon de s'y familiariser. Avant de commencer, vous "
+"devriez déjà avoir lu l'article :doc:`Mise en place. <./getting-set-up>`"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:18
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:3
 msgid "Getting the Source"
-msgstr ""
+msgstr "Obtenir la source"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:20
 msgid "In order to get a source package, you can simply run::"
-msgstr ""
+msgstr "Afin d'obtenir un paquet source, vous pouvez simplement lancer ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:24
 msgid ""
@@ -4717,16 +5123,25 @@ msgid ""
 "package in the development release. Luckily, the ``ubuntu-dev-tools`` "
 "package provides a helper script::"
 msgstr ""
+"Cette méthode a cependant quelques inconvénients. Elle télécharge la version "
+"de la source disponible sur **votre système**. Vous exécutez très "
+"probablement la version stable actuelle, mais vous souhaitez contribuer aux "
+"modifications concernant les paquets dans la version de développement. "
+"Heureusement, le paquet ``ubuntu-dev-tools`` fournit un script "
+"d'assistance ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:32
 msgid ""
 "By default, the  latest version in the development release will be "
 "downloaded. You can also specify a version or Ubuntu release like::"
 msgstr ""
+"Par défaut, la version la plus récente de la version de développement sera "
+"téléchargée. Vous pouvez également spécifier une version ou une version "
+"d'Ubuntu comme ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:37
 msgid "to pull the source from the ``precise`` release, or::"
-msgstr ""
+msgstr "pour récupérer la source depuis la version ``precise``, ou ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:41
 msgid ""
@@ -4743,10 +5158,15 @@ msgid ""
 "*(Note: This is just an example of something to change and not really a "
 "bug.)* To get the source, run::"
 msgstr ""
+"Pour notre exemple, supposons que nous avons un rapport de bogue disant que "
+"« colour » dans la description du ``xicc`` devrait être « color », et que "
+"nous souhaitions y remédier. *(Note : Ceci est juste un exemple de quelque "
+"chose à changer et pas réellement un bogue.)* Pour obtenir le code source, "
+"exécutez ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:52
 msgid "Creating a Debdiff"
-msgstr ""
+msgstr "Création d'un Debdiff"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:54
 msgid ""
@@ -4755,6 +5175,11 @@ msgid ""
 "``devscripts`` package. See ``man debdiff`` for all the details. To compare "
 "two source packages, pass the two ``dsc`` files as arguments::"
 msgstr ""
+"Un ``debdiff`` montre la différence entre deux paquets Debian. Le nom de la "
+"commande utilisée pour en générer un est également ``debdiff``. Elle fait "
+"partie du paquet ``devscripts``. Voir ``man debdiff`` pour tous les détails. "
+"Pour comparer deux paquets sources, passez les deux fichiers ``dsc`` en "
+"arguments ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:61
 msgid ""
@@ -4776,7 +5201,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:73
 msgid "with::"
-msgstr ""
+msgstr "par ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:78
 msgid ""
@@ -4805,40 +5230,50 @@ msgid ""
 "To create a patch file that you can send to others or attach to a bug report "
 "for sponsorship, run::"
 msgstr ""
+"Pour créer un fichier de correctif que vous pourrez envoyer aux autres ou "
+"joindre à un rapport de bogue pour le parrainage, exécutez ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:98
 msgid "Applying a Debdiff"
-msgstr ""
+msgstr "Application d'un Debdiff"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:100
 msgid ""
 "In order to apply a debdiff, first make sure you have the source code of the "
 "version that it was created against::"
 msgstr ""
+"En vue d'appliquer un debdiff, assurez-vous en premier lieu d'avoir le code "
+"source de la version avec laquelle il a été créé ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:105
 msgid ""
 "Then in a terminal, change to the directory where the source was "
 "uncompressed::"
 msgstr ""
+"Puis dans un terminal, modifiez le répertoire pour celui où a été "
+"décompressée la source ::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:110
 msgid "A debdiff is just like a normal patch file. Apply it as usual with::"
 msgstr ""
+"Un debdiff est exactement comme un fichier correctif normal. Appliquez-le "
+"comme d'habitude avec|nbsp]::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:6
 msgid "Source package URLs"
-msgstr ""
+msgstr "Les URLs des paquets source"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:8
 msgid ""
 "Bazaar provides some very nice shortcuts for accessing Launchpad's source "
 "branches of packages in both Ubuntu and Debian."
 msgstr ""
+"Bazaar fournit quelques astucieux raccourcis pour accéder aux branches "
+"source Launchpad des paquets Ubuntu ou Debian."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:11
 msgid "To refer to source branches use::"
-msgstr ""
+msgstr "Pour se référer aux branches source, utilisez ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:15
 msgid ""
@@ -4846,6 +5281,10 @@ msgid ""
 "refers to the package in the current development version of Ubuntu.  To "
 "refer to the branch of Tomboy in the development version, you would use::"
 msgstr ""
+"où *paquet* désigne le nom du paquet qui vous intéresse. Cette URL se réfère "
+"au paquet dans l'actuelle version de développement d'Ubuntu. Pour faire "
+"référence à la branche de Tomboy dans la version de développement, vous "
+"devez utiliser ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:21
 msgid ""
@@ -4853,11 +5292,17 @@ msgid ""
 "just prefix the package name with the release's code name.  E.g. to refer to "
 "Tomboy's source package in Maverick_ use::"
 msgstr ""
+"Pour se référer à une version du paquet source dans une ancienne version "
+"d'Ubuntu, ajoutez simplement au nom du paquet un préfixe correspondant au "
+"nom de code de la version. Par exemple, pour faire référence au paquet "
+"source de Tomboy dans Maverick_, utilisez ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:27
 msgid ""
 "Since they are unique, you can also abbreviate the distro-series name::"
 msgstr ""
+"Puisqu'il est unique, vous pouvez aussi abréger le nom de série de la "
+"distribution ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:31
 msgid ""
@@ -4865,14 +5310,18 @@ msgid ""
 "although there are no shortcuts for the Debian distro-series names.  To "
 "access the Tomboy branch in the current development series for Debian use::"
 msgstr ""
+"Vous pouvez utiliser un schéma similaire pour accéder aux branches source "
+"dans Debian, bien qu'il n'y ait pas de raccourci pour les noms de série de "
+"distribution. Pour accéder à la branche Tomboy dans les actuelles séries en "
+"développement pour Debian, utilisez ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:37
 msgid "and to access Tomboy in Debian Lenny_ use::"
-msgstr ""
+msgstr "et pour accéder à Tomboy dans Debian Lenny_, utilisez ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:48
 msgid "Getting the source"
-msgstr ""
+msgstr "Obtenir les sources"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:50
 msgid ""
@@ -4880,6 +5329,9 @@ msgid ""
 "These source branches are updated automatically by Launchpad, although the "
 "process is not currently foolproof."
 msgstr ""
+"Chaque paquet source dans Ubuntu a une branche source associée sur "
+"Launchpad. Ces branches source sont mises à jour automatiquement par "
+"Launchpad, même si le processus n'est actuellement pas infaillible."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:54
 msgid ""
@@ -4903,6 +5355,11 @@ msgid ""
 "for Tomboy, create a shared repository to hold the branches for this "
 "package.  The shared repository will make future work much more efficient."
 msgstr ""
+"Dites que vous voulez travailler sur le paquet Tomboy, et que vous avez "
+"vérifié que le paquet source s'appelle ``tomboy``. Avant de réellement "
+"brancher le code de Tomboy, créez un dépôt partagé pour maintenir les "
+"branches de ce paquet. Le dépôt partagé rendra le travail futur beaucoup "
+"plus efficace."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:70
 msgid ""
@@ -4922,7 +5379,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:82
 msgid "Getting the trunk branch"
-msgstr ""
+msgstr "Obtenir la branche commune"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:84
 msgid ""
@@ -4940,10 +5397,14 @@ msgid ""
 "version of Ubuntu, and you can always ``cd`` into this directory and do a "
 "`bzr pull` to get any future updates."
 msgstr ""
+"Le répertoire tomboy.dev représente la version de Tomboy dans la version de "
+"développement d'Ubuntu, et vous pouvez toujours vous placer avec ``cd`` dans "
+"ce répertoire et lancer un `bzr pull` pour obtenir les éventuelles mises à "
+"jour ultérieures."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:97
 msgid "Ensuring the version is up to date"
-msgstr ""
+msgstr "S'assurer que la version est à jour"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:99
 msgid ""
@@ -6206,10 +6667,17 @@ msgid ""
 "release, but it may be older releases if you're backporting to an SRU for "
 "example."
 msgstr ""
+"Une fois que vous avez la branche du paquet source dans un dépôt partagé, "
+"vous devrez créer des branches supplémentaires pour les correctifs ou les "
+"autres travaux que vous comptez faire. Vous pouvez baser votre branche hors "
+"de la branche du paquet source de la version de distribution vers laquelle "
+"vous envisagez de télécharger. Habituellement, c'est vers la version en "
+"cours de développement, mais cela peut être vers d'anciennes versions si "
+"vous effectuez un rétroportage SRU par exemple."
 
 #: ../ubuntu-packaging-guide/udd-working.rst:13
 msgid "Branching for a change"
-msgstr ""
+msgstr "Ramifier pour une modification"
 
 #: ../ubuntu-packaging-guide/udd-working.rst:15
 msgid ""
