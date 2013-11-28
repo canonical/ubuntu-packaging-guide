@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-10-15 16:19+0000\n"
+"POT-Creation-Date: 2013-11-25 11:13+0100\n"
 "PO-Revision-Date: 2013-03-04 14:32+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-10-16 04:59+0000\n"
-"X-Generator: Launchpad (build 16799)\n"
+"X-Launchpad-Export-Date: 2013-11-28 05:53+0000\n"
+"X-Generator: Launchpad (build 16847)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -1328,6 +1328,7 @@ msgid "It is great if you can offer help and will surely be appreciated."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:104
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:71
 msgid "Fixing the issue"
 msgstr ""
 
@@ -1528,6 +1529,121 @@ msgid ""
 "If there are multiple big things you want to fix, it might be advisable to "
 "send individual patches or merge proposals instead. If there are individual "
 "bugs filed for the issues already, this makes it even easier."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:5
+msgid "Fixing FTBFS packages"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:7
+msgid ""
+"Before a package can be used in Ubuntu, it has to build from source. If it "
+"fails this, it will probably wait in -proposed and will not be available in "
+"the Ubuntu archives. You can find a complete list of packages that are "
+"failing to build from source at http://qa.ubuntuwire.org/ftbfs/. There are 5 "
+"main categories shown on the page:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:13
+msgid ""
+"Package failed to build (F): Something actually went wrong with the build "
+"process."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:15
+msgid ""
+"Cancelled build (X): The build has been cancelled for some reason. These "
+"should probably be avoided to start with."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:17
+msgid ""
+"Package is waiting on another package (M): This package is waiting on "
+"another package to either build, get updated, or (if the package is in main) "
+"one of it's dependancies is in the wrong part of the archive."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:20
+msgid ""
+"Failure in the chroot (C): Part of the chroot failed, this is most likely "
+"fixed by a rebuild. Ask a developer to rebuild the package and that should "
+"fix it."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:23
+msgid ""
+"Failed to upload (U): The package could not upload. This is usually just a "
+"case of asking for a rebuild, but check the build log first."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:27
+msgid "First steps"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:28
+msgid ""
+"The first thing you'll want to do is see if you can reproduce the FTBFS "
+"yourself. Get the code either by running ``bzr branch lp:ubuntu/PACKAGE`` "
+"and the getting the tarball or running ``dget PACKAGE_DSC`` on the .dsc file "
+"from the launchpad page. Once you have that, build it in a schroot."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:35
+msgid ""
+"You should be able to reproduce the FTBFS. If not, check if the build is "
+"downloading a missing dependency, which means you just need to make that a "
+"build-dependency in debian/control. Building the package locally can also "
+"help find if the issue is caused by a missing, unlisted, dependency (builds "
+"locally but fails on a schroot)."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:42
+msgid "Checking Debian"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:43
+msgid ""
+"Once you have reproduced the issue, it's time to try and find a solution. If "
+"the package is in Debian as well, you can check if the package builds there "
+"by going to http://packages.qa.debian.org/PACKAGE. If Debian has a newer "
+"version, you should merge it. If not, check the buildlogs and bugs linked on "
+"that page for any extra information on the ftbfs or patches. Debian also "
+"maintains a list of command FTBFSs and how to fix them which can be found at "
+"https://wiki.debian.org/qa.debian.org/FTBFS, you will want to check it for "
+"solutions too."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:53
+msgid "ARM64"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:54
+msgid ""
+"Ubuntu has added arm64 as a architecture recently, but many packages fail to "
+"build on it. A full list of the packages not building are at "
+"qa.ubuntuwire.org/ftbfs/arm64.html. Many of these are caused by packages "
+"using outdated autotools helper files. Any package with the lintian warning "
+"ancient-autotools-helper-file or outdated-autotools-helper-file will have "
+"this issue. Adding autotools-dev or dh-autoreconf to the build proccess will "
+"usually fix this."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:63
+msgid "Other causes of a package to FTBFS"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:64
+msgid ""
+"If a package is in main and missing a dependency that is nor in main, you "
+"will have to file a MIR bug. https://wiki.ubuntu.com/MainInclusionProcess "
+"explains the procedure."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:72
+msgid ""
+"Once you have found a fix to the problem, follow the same process as any "
+"other bug. Make a patch, add it to a bzr branch or bug, subscribe ubuntu-"
+"sponsors, then try to get it included upstream and/or in Debian."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
@@ -2061,51 +2177,51 @@ msgstr ""
 msgid "Articles"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:69
+#: ../ubuntu-packaging-guide/index.rst:70
 msgid "Knowledge Base"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:89
+#: ../ubuntu-packaging-guide/index.rst:90
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:91
+#: ../ubuntu-packaging-guide/index.rst:92
 msgid ""
 "You can read this guide offline in different formats, if you install one of "
 "the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-"
 "guide>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:94
+#: ../ubuntu-packaging-guide/index.rst:95
 msgid ""
 "If you want to learn more about building Debian packages, here are some "
 "Debian resources you may find useful:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:97
+#: ../ubuntu-packaging-guide/index.rst:98
 msgid ""
 "`How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:98
+#: ../ubuntu-packaging-guide/index.rst:99
 msgid "`Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:99
+#: ../ubuntu-packaging-guide/index.rst:100
 msgid ""
 "`Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-"
 "guide/>`_ — available in many languages;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:101
+#: ../ubuntu-packaging-guide/index.rst:102
 msgid ""
 "`Packaging tutorial <http://www.debian.org/doc/manuals/packaging-"
 "tutorial/>`_ (also available as a `package "
 "<https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:104
+#: ../ubuntu-packaging-guide/index.rst:105
 msgid ""
 "We are always looking to improve this guide. If you find any problems or "
 "have some suggestions, please `report a bug on Launchpad "
