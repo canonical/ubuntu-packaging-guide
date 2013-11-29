@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-25 11:13+0100\n"
+"POT-Creation-Date: 2013-11-29 16:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1041,7 +1041,7 @@ msgid "First steps"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:28
-msgid "The first thing you'll want to do is see if you can reproduce the FTBFS yourself. Get the code either by running ``bzr branch lp:ubuntu/PACKAGE`` and the getting the tarball or running ``dget PACKAGE_DSC`` on the .dsc file from the launchpad page. Once you have that, build it in a schroot."
+msgid "The first thing you'll want to do is see if you can reproduce the FTBFS yourself. Get the code either by running ``bzr branch lp:ubuntu/PACKAGE`` and then getting the tarball or running ``dget PACKAGE_DSC`` on the .dsc file from the launchpad page. Once you have that, build it in a schroot."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:35
@@ -1069,7 +1069,7 @@ msgid "Other causes of a package to FTBFS"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:64
-msgid "If a package is in main and missing a dependency that is nor in main, you will have to file a MIR bug. https://wiki.ubuntu.com/MainInclusionProcess explains the procedure."
+msgid "If a package is in main and missing a dependency that is not in main, you will have to file a MIR bug. https://wiki.ubuntu.com/MainInclusionProcess explains the procedure."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:72
