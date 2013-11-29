@@ -27,7 +27,7 @@ First steps
 ===========
 The first thing you'll want to do is see if you can reproduce the FTBFS 
 yourself. Get the code either by running ``bzr branch lp:ubuntu/PACKAGE`` and 
-the getting the tarball or running ``dget PACKAGE_DSC`` on the .dsc file from 
+then getting the tarball or running ``dget PACKAGE_DSC`` on the .dsc file from 
 the launchpad page. Once you have that, build it in a schroot. 
 
 .. XXX add a link

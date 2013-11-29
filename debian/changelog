@@ -2,6 +2,8 @@ ubuntu-packaging-guide (0.3.4) UNRELEASED; urgency=low
 
   [ Daniel Holbach ]
   * add French.
+  * fixing-ftbfs.rst: fixed a typo. Thanks Sylvie Gallet for reporting. (LP:
+    #1256322)
 
   [ Jackson Doak ]
   * add article to fix FTBFS bugs (LP: #718640)
