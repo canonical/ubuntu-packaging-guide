@@ -61,7 +61,7 @@ usually fix this.
 
 Other causes of a package to FTBFS
 ==================================
-If a package is in main and missing a dependency that is nor in main, you 
+If a package is in main and missing a dependency that is not in main, you 
 will have to file a MIR bug. https://wiki.ubuntu.com/MainInclusionProcess
 explains the procedure.
 
