@@ -24,7 +24,7 @@ platform, Launchpad. Here's what we'll cover:
   those changes will actually be applied and used. 
 
   Don't worry though, the `Ubuntu development release wiki page 
-  <https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways to 
+  <https://wiki.ubuntu.com/QATeam/Testdrive>`_ shows a variety of ways to 
   safely use the development release.
 
 

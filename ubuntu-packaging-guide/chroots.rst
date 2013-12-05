@@ -71,5 +71,5 @@ many packages at the same time or to overcome bandwidth restraints.
 
 .. _`Debootstrap Chroot wiki page`: https://wiki.ubuntu.com/DebootstrapChroot
 .. _`EC2 cloud computers`: https://help.ubuntu.com/community/EC2StartersGuide
-.. _`the TestDrive wiki page`: https://wiki.ubuntu.com/UsingDevelopmentReleases
+.. _`the TestDrive wiki page`: https://wiki.ubuntu.com/QATeam/Testdrive 
 .. _`the Security Team Build Environment wiki page`: https://wiki.ubuntu.com/SecurityTeam/BuildEnvironment
