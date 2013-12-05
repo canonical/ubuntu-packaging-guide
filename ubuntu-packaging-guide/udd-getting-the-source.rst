@@ -34,14 +34,14 @@ Tomboy branch in the current development series for Debian use::
 
     debianlp:tomboy
 
-and to access Tomboy in Debian Lenny_ use::
+and to access Tomboy in Debian Wheezy_ use::
 
-    debianlp:lenny/tomboy
+    debianlp:wheezy/tomboy
 
 
 .. _`Bazaar`: http://bazaar.canonical.com/en/
 .. _Quantal: https://wiki.ubuntu.com/QuantalQuetzal
-.. _Lenny: http://debian.org/releases/stable/
+.. _Wheezy: http://debian.org/releases/stable/
 
 
 Getting the source
