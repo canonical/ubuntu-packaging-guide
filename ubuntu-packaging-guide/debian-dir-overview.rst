@@ -43,11 +43,11 @@ package) will create a standard ``debian/changelog`` for you.
 Here is a sample ``changelog`` file for hello::
 
 
- hello (2.6-0ubuntu1) natty; urgency=low
+ hello (2.8-3ubuntu1) raring; urgency=low
 
    * New upstream release with lots of bug fixes and feature improvements.
 
- -- Jane Doe <packager@example.com>  Thu, 21 Apr 2011 11:12:00 -0400
+ -- Jane Doe <packager@example.com>  Thu, 21 Oct 2013 11:12:00 -0400
  
 Notice that the version has a ``-0ubuntu1`` appended to it, this is the distro 
 revision, used so that the packaging can be updated (to fix bugs for example) 
