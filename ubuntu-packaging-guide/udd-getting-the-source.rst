@@ -20,9 +20,9 @@ refer to the branch of Tomboy in the development version, you would use::
 
 To refer to the version of a source package in an older release of Ubuntu,
 just prefix the package name with the release's code name.  E.g. to refer to
-Tomboy's source package in Maverick_ use::
+Tomboy's source package in Quantal_ use::
 
-    ubuntu:maverick/tomboy
+    ubuntu:quantal/tomboy
 
 Since they are unique, you can also abbreviate the distro-series name::
 
@@ -40,7 +40,7 @@ and to access Tomboy in Debian Lenny_ use::
 
 
 .. _`Bazaar`: http://bazaar.canonical.com/en/
-.. _Maverick: https://wiki.ubuntu.com/MaverickMeerkat
+.. _Quantal: https://wiki.ubuntu.com/QuantalQuetzal
 .. _Lenny: http://debian.org/releases/stable/
 
 
@@ -138,9 +138,9 @@ Getting a branch for a particular release
 When you want to do something like a `stable release update`_ (SRU), or you
 just want to examine the code in an old release, you'll want to grab the
 branch corresponding to a particular Ubuntu release.  For example, to get the
-Tomboy package for Maverick do::
+Tomboy package for Quantal do::
 
-    $ bzr branch ubuntu:m/tomboy maverick
+    $ bzr branch ubuntu:m/tomboy quantal
 
 
 Importing a Debian source package
