@@ -1,16 +1,19 @@
 ubuntu-packaging-guide (0.3.4) UNRELEASED; urgency=low
 
-  [  Andrew Starr-Bochicchio ]
+  [ Andrew Starr-Bochicchio ]
   * revert version bump for hello package because of FTBFS. (LP: #1248353)
 
   [ Daniel Holbach ]
   * add French.
-  * fixing-ftbfs.rst: fixed two typo. Thanks Sylvie Gallet for reporting. (LP:
+  * fixing-ftbfs.rst: fixed two typos. Thanks Sylvie Gallet for reporting. (LP:
     #1256322, LP: #1256346)
 
   [ Jackson Doak ]
   * add article to fix FTBFS bugs (LP: #718640)
   * Add information about debian screenshots. (LP: #816427)
+
+  [ Dmitry Shachnev ]
+  * Switch developer.ubuntu.com links to packaging.ubuntu.com.
 
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 12 Nov 2013 06:21:17 +0100
 
