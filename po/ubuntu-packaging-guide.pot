@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-29 16:25+0100\n"
+"POT-Creation-Date: 2013-12-06 09:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1799,7 +1799,7 @@ msgid "You should now customise each of the files."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:82
-msgid "In ``debian/changelog`` change the version number to an Ubuntu version: ``2.9-0ubuntu1`` (upstream version 2.9, Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current development Ubuntu release such as ``saucy``."
+msgid "In ``debian/changelog`` change the version number to an Ubuntu version: ``2.7-0ubuntu1`` (upstream version 2.7, Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current development Ubuntu release such as ``saucy``."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:87
@@ -1921,6 +1921,14 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:220
 msgid "In some cases, it might make sense to go directly into Ubuntu first. For instance, Debian might be in a freeze making it unlikely that your package will make it into Ubuntu in time for the next release. This process is documented on the `\"New Packages\"`_ section of the Ubuntu wiki."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:226
+msgid "Sreenshots"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:228
+msgid "Once you have uploaded a package to debian, you should add screenshots to allow propective users to see what the program is like. These should be uploaded to http://screenshots.debian.net/upload ."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
