@@ -29,12 +29,12 @@ Install build tools::
 
 Download main package::
 
-    $ wget -O hello-2.9.tar.gz "http://ftp.gnu.org/gnu/hello/hello-2.9.tar.gz"
+    $ wget -O hello-2.7.tar.gz "http://ftp.gnu.org/gnu/hello/hello-2.7.tar.gz"
 
 Now uncompress main package::
 
-    $ tar xf hello-2.9.tar.gz
-    $ cd hello-2.9
+    $ tar xf hello-2.7.tar.gz
+    $ cd hello-2.7
 
 This application uses the autoconf build system so we want to run ``./configure``
 to prepare for compilation.
@@ -66,7 +66,7 @@ name, version number, and path to the upstream tarball::
 
     $ sudo apt-get install dh-make
     $ cd ..
-    $ bzr dh-make hello 2.9 hello-2.9.tar.gz
+    $ bzr dh-make hello 2.7 hello-2.7.tar.gz
 
 When it asks what type of package type ``s`` for single binary. This will import
 the code into a branch and add the ``debian/`` packaging directory.  Have a look
@@ -80,7 +80,7 @@ example files::
 You should now customise each of the files.  
 
 In ``debian/changelog`` change the
-version number to an Ubuntu version: ``2.9-0ubuntu1`` (upstream version 2.9,
+version number to an Ubuntu version: ``2.7-0ubuntu1`` (upstream version 2.7,
 Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current
 development Ubuntu release such as ``saucy``.
 
@@ -140,11 +140,11 @@ will be placed in ``..``.
 
 You can view the contents of the package with::
 
-    $ lesspipe hello_2.9-0ubuntu1_amd64.deb
+    $ lesspipe hello_2.7-0ubuntu1_amd64.deb
 
 Install the package and check it works::
 
-    $ sudo dpkg --install hello_2.9-0ubuntu1_amd64.deb
+    $ sudo dpkg --install hello_2.7-0ubuntu1_amd64.deb
 
 Next Steps
 ----------
@@ -154,8 +154,8 @@ bugs.  Many errors can be automatically detected by our tool
 ``lintian`` which can be run on both the source .dsc metadata file and
 the .deb binary package::
 
-    $ lintian hello_2.9-0ubuntu1.dsc
-    $ lintian hello_2.9-0ubuntu1_amd64.deb
+    $ lintian hello_2.7-0ubuntu1.dsc
+    $ lintian hello_2.7-0ubuntu1_amd64.deb
 
 A description of each of the problems it reports can be found on the
 `lintian website`_.
@@ -176,7 +176,7 @@ now<./getting-set-up>`::
 
     $ bzr builddeb -S
     $ cd ../build-area
-    $ pbuilder-dist precise build hello_2.9-0ubuntu1.dsc
+    $ pbuilder-dist precise build hello_2.7-0ubuntu1.dsc
 
 When you are happy with your package you will want others to review it.  You
 can upload the branch to Launchpad for review::
@@ -187,7 +187,7 @@ Uploading it to a PPA will ensure it builds and give an easy way for you and
 others to test the binary packages.  You will need to set up a PPA in Launchpad
 and then upload with ``dput``::
 
-    $ dput ppa:<lp-username> hello_2.9-0ubuntu1.changes
+    $ dput ppa:<lp-username> hello_2.7-0ubuntu1.changes
 
 See :doc:`uploading<./udd-uploading>` for more information.
 
