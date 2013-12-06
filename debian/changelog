@@ -1,5 +1,8 @@
 ubuntu-packaging-guide (0.3.4) UNRELEASED; urgency=low
 
+  [  Andrew Starr-Bochicchio ]
+  * revert version bump for hello package because of FTBFS. (LP: #1248353)
+
   [ Daniel Holbach ]
   * add French.
   * fixing-ftbfs.rst: fixed two typo. Thanks Sylvie Gallet for reporting. (LP:
