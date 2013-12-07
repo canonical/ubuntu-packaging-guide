@@ -53,6 +53,7 @@ Articles
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    introduction-to-ubuntu-development
    getting-set-up
@@ -71,6 +72,7 @@ Knowledge Base
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    communication
    debian-dir-overview
