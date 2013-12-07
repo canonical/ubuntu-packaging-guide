@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-11-29 16:25+0100\n"
-"PO-Revision-Date: 2013-12-05 19:50+0000\n"
-"Last-Translator: Jose Luis Tirado <Unknown>\n"
+"POT-Creation-Date: 2013-12-06 09:26+0100\n"
+"PO-Revision-Date: 2013-12-06 10:12+0000\n"
+"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: Español; Castellano <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-12-06 05:59+0000\n"
-"X-Generator: Launchpad (build 16863)\n"
+"X-Launchpad-Export-Date: 2013-12-07 06:21+0000\n"
+"X-Generator: Launchpad (build 16869)\n"
 "Language: es\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4022,14 +4022,10 @@ msgstr "Ahora debería personalizar cada uno de los archivos."
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:82
 msgid ""
 "In ``debian/changelog`` change the version number to an Ubuntu version: "
-"``2.9-0ubuntu1`` (upstream version 2.9, Debian version 0, Ubuntu version 1). "
+"``2.7-0ubuntu1`` (upstream version 2.7, Debian version 0, Ubuntu version 1). "
 " Also change ``unstable`` to the current development Ubuntu release such as "
 "``saucy``."
 msgstr ""
-"En ``debian/changelog`` cambie el número de versión a una versión de Ubuntu: "
-"``2.9-0ubuntu1`` (versión de aguas arriba 2.9, versión Debian 0, versión de "
-"Ubuntu 1). También cambie ``unstable`` a la emisión en desarrollo de Ubuntu, "
-"tal como ``saucy``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:87
 msgid ""
@@ -4302,6 +4298,17 @@ msgstr ""
 "improbable que su paquete llegue a Ubuntu a tiempo para la próxima emisión. "
 "Este proceso está documentado en la sección  `\"New Packages\"`_ de la wiki "
 "de Ubuntu."
+
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:226
+msgid "Sreenshots"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:228
+msgid ""
+"Once you have uploaded a package to debian, you should add screenshots to "
+"allow propective users to see what the program is like. These should be "
+"uploaded to http://screenshots.debian.net/upload ."
+msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
 msgid "Patches to Packages"
