@@ -18,6 +18,8 @@ ubuntu-packaging-guide (0.3.4) UNRELEASED; urgency=low
   [ Riccardo Padovani ]
   * add enumeration to table of contents and to title of sections. (LP:
     #737455)
+  * fixed link behind "Ubuntu development release wiki page", it pointed to
+    an obsolete page (LP: #1237521)
 
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 12 Nov 2013 06:21:17 +0100
 
