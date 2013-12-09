@@ -11,7 +11,7 @@ Introduction
 Fixing security bugs in Ubuntu is not really any different than :doc:`fixing a
 regular bug in Ubuntu<./fixing-a-bug>`, and it is assumed that you are familiar
 with patching normal bugs. To demonstrate where things are different, we will
-be updating the dbus package in Ubuntu 10.04 LTS (Lucid Lynx) for a security
+be updating the dbus package in Ubuntu 12.04 LTS (Precise Pangolin) for a security
 update.
 
 
@@ -19,19 +19,19 @@ Obtaining the source
 ====================
 
 In this example, we already know we want to fix the dbus package in Ubuntu
-10.04 LTS (Lucid Lynx). So first you need to determine the version of the
+12.04 LTS (Precise Pangolin). So first you need to determine the version of the
 package you want to download. We can use the ``rmadison`` to help with this::
 
-    $ rmadison dbus | grep lucid
-    dbus | 1.2.16-2ubuntu4 |         lucid | source, amd64, i386
-    dbus | 1.2.16-2ubuntu4.1 | lucid-security | source, amd64, i386
-    dbus | 1.2.16-2ubuntu4.2 | lucid-updates | source, amd64, i386
+    $ rmadison dbus | grep precise
+    dbus | 1.4.18-1ubuntu1   | precise          | source, amd64, armel, armhf, i386, powerpc
+    dbus | 1.4.18-1ubuntu1.4 | precise-security | source, amd64, armel, armhf, i386, powerpc
+    dbus | 1.4.18-1ubuntu1.4 | precise-updates  | source, amd64, armel, armhf, i386, powerpc
 
 Typically you will want to choose the highest version for the release you want
-to patch that is not in -proposed or -backports. Since we are updating Lucid's
-dbus, you'll download 1.2.16-2ubuntu4.2 from lucid-updates::
+to patch that is not in -proposed or -backports. Since we are updating Precise's
+dbus, you'll download 1.4.18-1ubuntu1.4 from precise-updates::
 
-    $ bzr branch ubuntu:lucid-updates/dbus
+    $ bzr branch ubuntu:precise-updates/dbus
 
 
 Patching the source
@@ -65,10 +65,10 @@ command is used to edit the ``debian/changelog`` file and ``edit-patch`` will
 launch ``dch`` automatically after un-applying all the patches. If you are not
 using ``edit-patch``, you can launch ``dch -i`` manually. Unlike with regular
 patches, you should use the following format (note the distribution name uses
-lucid-security since this is a security update for Lucid) for security
+precise-security since this is a security update for Precise) for security
 updates::
 
-    dbus (1.2.16-2ubuntu4.3) lucid-security; urgency=low
+    dbus (1.4.18-2ubuntu1.5) precise-security; urgency=low
 
       * SECURITY UPDATE: [DESCRIBE VULNERABILITY HERE]
         - debian/patches/99-fix-a-vulnerability.patch: [DESCRIBE CHANGES HERE]
@@ -85,7 +85,7 @@ debian/patches/99-fix-a-vulnerability.patch to have something like::
     ## Origin/Author: [COMMIT ID, URL OR EMAIL ADDRESS OF AUTHOR]
     ## Bug: [UPSTREAM BUG URL]
     ## Bug-Ubuntu: https://launchpad.net/bugs/[BUG NUMBER]
-    Index: dbus-1.2.16/dbus/dbus-marshal-validate.c
+    Index: dbus-1.4.18/dbus/dbus-marshal-validate.c
     ...
 
 Multiple vulnerabilities can be fixed in the same security upload; just be sure
@@ -115,7 +115,7 @@ longer exists in the new version.
 
 The bug report should also confirm that the issue is fixed in Ubuntu versions
 newer than the one with the proposed fix (in the above example newer than
-Lucid).  If the issue is not fixed in newer Ubuntu versions you should prepare
+Precise).  If the issue is not fixed in newer Ubuntu versions you should prepare
 updates for those versions too.
 
 
@@ -131,7 +131,7 @@ The process for Stable Release Updates is just the same as the process for
 security bugs except you should subscribe ``ubuntu-sru`` to the bug.
 
 The update will go into the ``proposed`` archive (for example
-``lucid-proposed``) where it will need to be checked that it fixes the problem
+``precise-proposed``) where it will need to be checked that it fixes the problem
 and does not introduce new problems.  After a week without reported problems it
 can be moved to ``updates``.
 

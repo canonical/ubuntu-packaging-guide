@@ -20,6 +20,7 @@ ubuntu-packaging-guide (0.3.4) UNRELEASED; urgency=low
     #737455)
   * fixed link behind "Ubuntu development release wiki page", it pointed to
     an obsolete page (LP: #1237521)
+  * updated Ubuntu release names (LP: #1257794)
 
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 12 Nov 2013 06:21:17 +0100
 

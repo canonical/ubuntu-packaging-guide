@@ -29,10 +29,10 @@ The general form of the URL you should push your branch to is::
 
     lp:~<user-id>/ubuntu/<distroseries>/<package>/<branch-name>
 
-For example, to push your fix for bug 12345 in the Tomboy package for Natty,
+For example, to push your fix for bug 12345 in the Tomboy package for Raring,
 you'd use::
 
-    $ bzr push lp:~subgenius/ubuntu/natty/tomboy/bug-12345
+    $ bzr push lp:~subgenius/ubuntu/raring/tomboy/bug-12345
 
 The last component of the path is arbitrary; it's up to you to pick
 something meaningful.
@@ -46,7 +46,7 @@ To do this open the bug page in a browser, e.g.::
 
 If that fails, then you can use::
 
-    $ xdg-open https://code.launchpad.net/~subgenius/ubuntu/natty/tomboy/bug-12345
+    $ xdg-open https://code.launchpad.net/~subgenius/ubuntu/raring/tomboy/bug-12345
 
 where most of the URL matches what you used for `bzr push`.  On this page,
 you'll see a link that says *Propose for merging into another branch*.  Type

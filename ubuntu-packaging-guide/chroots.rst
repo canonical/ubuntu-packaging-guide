@@ -15,17 +15,17 @@ Creating a Chroot
 
 Use the command ``debootstrap`` to create a new chroot::
 
-    $ sudo debootstrap oneiric oneiric/
+    $ sudo debootstrap saucy saucy/
 
-This will create a directory ``oneiric`` and install a minimal oneiric system
+This will create a directory ``saucy`` and install a minimal saucy system
 into it.
 
-If your version of ``debootstrap`` does not know about oneiric you can try
+If your version of ``debootstrap`` does not know about saucy you can try
 upgrading to the version in ``backports``.
 
 You can then work inside the chroot::
 
-    $ sudo chroot oneiric
+    $ sudo chroot saucy
 
 Where you can install or remove any package you wish without affecting your
 main system.
@@ -33,8 +33,8 @@ main system.
 You might want to copy your GPG/ssh keys and Bazaar configuration into the
 chroot so you can access and sign packages directly::
 
-    $ sudo mkdir oneiric/home/<username>
-    $ sudo cp -r ~/.gnupg ~/.ssh ~/.bazaar oneiric/home/<username>
+    $ sudo mkdir saucy/home/<username>
+    $ sudo cp -r ~/.gnupg ~/.ssh ~/.bazaar saucy/home/<username>
 
 To stop apt and other programs complaining about missing locales you
 can install your relevant language pack::
@@ -44,7 +44,7 @@ can install your relevant language pack::
 If you want to run X programs you will need to bind the /tmp directory
 into the chroot, from outside the chroot run::
 
-    $ sudo mount -t none -o bind /tmp oneiric/tmp
+    $ sudo mount -t none -o bind /tmp saucy/tmp
     $ xhost +
 
 Some programs may need you to bind /dev or /proc.
