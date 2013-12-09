@@ -15,6 +15,10 @@ ubuntu-packaging-guide (0.3.4) UNRELEASED; urgency=low
   [ Dmitry Shachnev ]
   * Switch developer.ubuntu.com links to packaging.ubuntu.com.
 
+  [ Riccardo Padovani ]
+  * add enumeration to table of contents and to title of sections. (LP:
+    #737455)
+
  -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 12 Nov 2013 06:21:17 +0100
 
 ubuntu-packaging-guide (0.3.3) unstable; urgency=low
