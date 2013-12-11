@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-12-06 09:26+0100\n"
+"POT-Creation-Date: 2013-12-09 12:22+0100\n"
 "PO-Revision-Date: 2013-12-06 10:13+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-12-07 06:21+0000\n"
+"X-Launchpad-Export-Date: 2013-12-11 05:57+0000\n"
 "X-Generator: Launchpad (build 16869)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -451,19 +451,15 @@ msgstr "Используйте команду ``debootstrap``, чтобы соз
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
-"This will create a directory ``oneiric`` and install a minimal oneiric "
-"system into it."
+"This will create a directory ``saucy`` and install a minimal saucy system "
+"into it."
 msgstr ""
-"Это позволит создать каталог ``oneiric`` и установит в него минимальную "
-"систему oneiric."
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
-"If your version of ``debootstrap`` does not know about oneiric you can try "
+"If your version of ``debootstrap`` does not know about saucy you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
-"Если ваша версия ``debootstrap`` не знает об oneiric, вы можете попробовать "
-"обновление до версии ``backports``."
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
@@ -2269,19 +2265,16 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:26
 msgid ""
-"Don't worry though, the `Ubuntu development release wiki page "
-"<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways "
+"Don't worry though, you can use `Testdrive "
+"<https://wiki.ubuntu.com/QATeam/Testdrive>`_ or :doc:`chroots <./chroots>` "
 "to safely use the development release."
 msgstr ""
-"Не беспокойтесь, на вики-странице `Использование разрабатываемых версий "
-"<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ описано множество "
-"способов безопасно использовать разрабатываемые выпуски."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:32
+#: ../ubuntu-packaging-guide/getting-set-up.rst:31
 msgid "Install basic packaging software"
 msgstr "Установка базового программного обеспечения для создания пакетов"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:34
+#: ../ubuntu-packaging-guide/getting-set-up.rst:33
 msgid ""
 "There are a number of tools that will make your life as an Ubuntu developer "
 "much easier.  You will encounter these tools later in this guide.  To "
@@ -2292,7 +2285,7 @@ msgstr ""
 "Чтобы установить большинство инструментов, нужно выполнить следующую "
 "команду::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:41
+#: ../ubuntu-packaging-guide/getting-set-up.rst:40
 msgid ""
 "Note: Since Ubuntu 11.10 \"Oneiric Ocelot\" (or if you have Backports "
 "enabled on a currently supported release), the following command will "
@@ -2304,11 +2297,11 @@ msgstr ""
 "устанавливает всё вышеупомянутое и другие инструменты, часто используемые в "
 "разработке Ubuntu::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:49
+#: ../ubuntu-packaging-guide/getting-set-up.rst:48
 msgid "This command will install the following software:"
 msgstr "Эта команда установит следующие программы:"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:51
+#: ../ubuntu-packaging-guide/getting-set-up.rst:50
 msgid ""
 "``gnupg`` -- `GNU Privacy Guard`_ contains tools you will need to create a "
 "cryptographic key with which you will sign files you want to upload to "
@@ -2318,7 +2311,7 @@ msgstr ""
 "создания криптографического ключа, которым вы будете подписывать файлы, "
 "отправляемые на Launchpad."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:54
+#: ../ubuntu-packaging-guide/getting-set-up.rst:53
 msgid ""
 "``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
 "isolated environment."
@@ -2326,7 +2319,7 @@ msgstr ""
 "``pbuilder`` -- инструмент для создания готовых к дальнейшему "
 "распространению сборок пакетов в чистой и изолированной среде."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:56
+#: ../ubuntu-packaging-guide/getting-set-up.rst:55
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
@@ -2334,7 +2327,7 @@ msgstr ""
 "``ubuntu-dev-tools`` (и его непосредственная зависимость ``devscripts``) -- "
 "набор инструментов, упрощающих многие задачи по созданию пакетов."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:58
+#: ../ubuntu-packaging-guide/getting-set-up.rst:57
 msgid ""
 "``bzr-builddeb`` (and ``bzr``, a dependency) -- distributed version control "
 "with Bazaar, a new way of working with packages for Ubuntu that will make it "
@@ -2346,7 +2339,7 @@ msgstr ""
 "для Ubuntu, упрощающий совместную работу многих людей над одним и тем же "
 "кодом и позволяющий с лёгкостью объединять результаты их труда друг с другом."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:62
+#: ../ubuntu-packaging-guide/getting-set-up.rst:61
 msgid ""
 "``apt-file`` provides an easy way to find the binary package that contains a "
 "given file."
@@ -2354,11 +2347,11 @@ msgstr ""
 "``apt-file`` предоставляет простой способ найти двоичный пакет, содержащий "
 "заданный файл."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:67
+#: ../ubuntu-packaging-guide/getting-set-up.rst:66
 msgid "Create your GPG key"
 msgstr "Создание ключа GPG"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:69
+#: ../ubuntu-packaging-guide/getting-set-up.rst:68
 msgid ""
 "GPG stands for `GNU Privacy Guard`_ and it implements the OpenPGP standard "
 "which allows you to sign and encrypt messages and files. This is useful for "
@@ -2375,11 +2368,11 @@ msgstr ""
 "он будет принят только в том случае, если можно точно определить, кто именно "
 "отправил пакет."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:76
+#: ../ubuntu-packaging-guide/getting-set-up.rst:75
 msgid "To generate a new GPG key, run::"
 msgstr "Чтобы сгенерировать новый ключ GPG, наберите::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:80
+#: ../ubuntu-packaging-guide/getting-set-up.rst:79
 msgid ""
 "GPG will first ask you which kind of key you want to generate. Choosing the "
 "default (RSA and DSA) is fine. Next it will ask you about the keysize. The "
@@ -2403,7 +2396,7 @@ msgstr ""
 "обязательно. После этого нужно указать надёжную парольную фразу (парольная "
 "фраза — это просто пароль, в котором допускается использовать пробелы)."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:90
+#: ../ubuntu-packaging-guide/getting-set-up.rst:89
 msgid ""
 "Now GPG will create a key for you, which can take a little bit of time; it "
 "needs random bytes, so if you give the system some work to do it will be "
@@ -2416,16 +2409,16 @@ msgstr ""
 "мыши, наберите несколько абзацев случайного текста, загрузите любую веб-"
 "страницу."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:95
+#: ../ubuntu-packaging-guide/getting-set-up.rst:94
 msgid "Once this is done, you will get a message similar to this one::"
 msgstr ""
 "Когда процесс будет завершён, вы получите сообщение наподобие следующего::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:102
+#: ../ubuntu-packaging-guide/getting-set-up.rst:101
 msgid "In this case ``43CDE61D`` is the *key ID*."
 msgstr "В данном случае, ``43CDE61D`` — это идентификатор ключа (*key ID*)."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:104
+#: ../ubuntu-packaging-guide/getting-set-up.rst:103
 msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
@@ -2434,7 +2427,7 @@ msgstr ""
 "чтобы все могли идентифицировать сообщения и файлы, как отправленные вами. "
 "Для этого введите::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:109
+#: ../ubuntu-packaging-guide/getting-set-up.rst:108
 msgid ""
 "This will send your key to the Ubuntu keyserver, but a network of keyservers "
 "will automatically sync the key between themselves. Once this syncing is "
@@ -2446,11 +2439,11 @@ msgstr ""
 "синхронизация завершится, ваш подписанный открытый ключ будет готов для "
 "удостоверения сделанного вами вклада во всём мире."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:116
+#: ../ubuntu-packaging-guide/getting-set-up.rst:115
 msgid "Create your SSH key"
 msgstr "Создание ключа SSH"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:118
+#: ../ubuntu-packaging-guide/getting-set-up.rst:117
 msgid ""
 "SSH_ stands for *Secure Shell*, and it is a protocol that allows you to "
 "exchange data in a secure way over a network. It is common to use SSH to "
@@ -2464,11 +2457,11 @@ msgstr ""
 "файлов. В наших целях мы в основном будем использовать SSH для безопасной "
 "отправки пакетов исходного кода на Launchpad."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:124
+#: ../ubuntu-packaging-guide/getting-set-up.rst:123
 msgid "To generate an SSH key, enter::"
 msgstr "Чтобы сгенерировать ключ SSH, введите::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:128
+#: ../ubuntu-packaging-guide/getting-set-up.rst:127
 msgid ""
 "The default file name usually makes sense, so you can just leave it as it "
 "is. For security purposes, it is highly recommended that you use a "
@@ -2478,11 +2471,11 @@ msgstr ""
 "как есть. Для целей безопасности настоятельно рекомендуется задать парольную "
 "фразу."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:133
+#: ../ubuntu-packaging-guide/getting-set-up.rst:132
 msgid "Set up pbuilder"
 msgstr "Настройка pbuilder"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:135
+#: ../ubuntu-packaging-guide/getting-set-up.rst:134
 msgid ""
 "``pbuilder`` allows you to build packages locally on your machine. It serves "
 "a couple of purposes:"
@@ -2490,7 +2483,7 @@ msgstr ""
 "``pbuilder`` позволяет локально собирать пакеты на вашем компьютере. Он "
 "служит нескольким целям:"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:138
+#: ../ubuntu-packaging-guide/getting-set-up.rst:137
 msgid ""
 "The build will be done in a minimal and clean environment. This helps you "
 "make sure your builds succeed in a reproducible way, but without modifying "
@@ -2500,38 +2493,35 @@ msgstr ""
 "убедиться, что сборку удастся успешно воспроизвести и на других компьютерах, "
 "но при этом поможет избежать изменений в вашей локальной системе"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:141
+#: ../ubuntu-packaging-guide/getting-set-up.rst:140
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
 msgstr ""
 "Отпадает необходимость в локальной установке всех *сборочных зависимостей*"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:142
+#: ../ubuntu-packaging-guide/getting-set-up.rst:141
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
 msgstr ""
 "Можно настроить несколько экземпляров для различных выпусков Ubuntu и Debian"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:144
+#: ../ubuntu-packaging-guide/getting-set-up.rst:143
 msgid "Setting ``pbuilder`` up is very easy, run::"
 msgstr "Настроить ``pbuilder`` очень просто. Наберите ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:148
+#: ../ubuntu-packaging-guide/getting-set-up.rst:147
 msgid ""
-"where <release> is for example `natty`, `maverick`, `lucid` or in the case "
+"where <release> is for example `raring`, `quantal`, `precise` or in the case "
 "of Debian maybe `sid`. This will take a while as it will download all the "
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
-"где <release> — это, например, `natty`, `maverick`, `lucid` или, в случае "
-"Debian, `sid`. Загрузка всех необходимых для «минимальной установки» пакетов "
-"займёт некоторое время. Впрочем, они будут кэшироваться."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:154
+#: ../ubuntu-packaging-guide/getting-set-up.rst:153
 msgid "Get set up to work with Launchpad"
 msgstr "Подготовка к работе с Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:156
+#: ../ubuntu-packaging-guide/getting-set-up.rst:155
 msgid ""
 "With a basic local configuration in place, your next step will be to "
 "configure your system to work with Launchpad. This section will focus on the "
@@ -2541,27 +2531,27 @@ msgstr ""
 "будет настройка системы для работы с Launchpad. В этом разделе мы "
 "сфокусируемся на следующих вопросах:"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:160
+#: ../ubuntu-packaging-guide/getting-set-up.rst:159
 msgid "What Launchpad is and creating a Launchpad account"
 msgstr "Что такое Launchpad и как создать учётную запись на Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:161
+#: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid "Uploading your GPG and SSH keys to Launchpad"
 msgstr "Загрузка ваших ключей GPG и SSH на Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:162
+#: ../ubuntu-packaging-guide/getting-set-up.rst:161
 msgid "Configuring Bazaar to work with Launchpad"
 msgstr "Настройка Bazaar для работы с Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:163
+#: ../ubuntu-packaging-guide/getting-set-up.rst:162
 msgid "Configuring Bash to work with Bazaar"
 msgstr "Настройка Bash для работы с Bazaar"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:167
+#: ../ubuntu-packaging-guide/getting-set-up.rst:166
 msgid "About Launchpad"
 msgstr "Сведения о Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:169
+#: ../ubuntu-packaging-guide/getting-set-up.rst:168
 msgid ""
 "Launchpad is the central piece of infrastructure we use in Ubuntu. It not "
 "only stores our packages and our code, but also things like translations, "
@@ -2576,7 +2566,7 @@ msgstr ""
 "использовать Launchpad, чтобы опубликовать предлагаемые вами исправления и "
 "попросить других разработчиков Ubuntu проверить и поддержать их."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:175
+#: ../ubuntu-packaging-guide/getting-set-up.rst:174
 msgid ""
 "You will need to register with Launchpad and provide a minimal amount of "
 "information. This will allow you to download and upload code, submit bug "
@@ -2586,7 +2576,7 @@ msgstr ""
 "минимальное количество информации о себе. Это позволит вам скачивать или "
 "отправлять исходный код, отправлять отчёты об ошибках и т.п."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:179
+#: ../ubuntu-packaging-guide/getting-set-up.rst:178
 msgid ""
 "Besides hosting Ubuntu, Launchpad can host any Free Software project. For "
 "more information see the `Launchpad Help wiki "
@@ -2596,11 +2586,11 @@ msgstr ""
 "свободного программного проекта. Дополнительную информацию смотрите на "
 "`Справочных вики-страницах Launchpad <https://help.launchpad.net/>`_."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:184
+#: ../ubuntu-packaging-guide/getting-set-up.rst:183
 msgid "Get a Launchpad account"
 msgstr "Создание учётной записи на Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:186
+#: ../ubuntu-packaging-guide/getting-set-up.rst:185
 msgid ""
 "If you don't already have a Launchpad account, you can easily `create one`_. "
 "If you have a Launchpad account but cannot remember your Launchpad id, you "
@@ -2612,7 +2602,7 @@ msgstr ""
 "определить, зайдя на https://launchpad.net/~ и взглянув на часть URL после "
 "символа «~»."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:191
+#: ../ubuntu-packaging-guide/getting-set-up.rst:190
 msgid ""
 "Launchpad's registration process will ask you to choose a display name. It "
 "is encouraged for you to use your real name here so that your Ubuntu "
@@ -2622,7 +2612,7 @@ msgstr ""
 "Рекомендуется указать здесь ваше настоящее имя, чтобы ваши коллеги - "
 "разработчики Ubuntu могли лучше с вами познакомиться."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:195
+#: ../ubuntu-packaging-guide/getting-set-up.rst:194
 msgid ""
 "When you register a new account, Launchpad will send you an email with a "
 "link you need to open in your browser in order to verify your email address. "
@@ -2633,7 +2623,7 @@ msgstr ""
 "вами адрес электронной почты. Если вы не получили письмо, проверьте папку "
 "нежелательной почты (спама)."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:199
+#: ../ubuntu-packaging-guide/getting-set-up.rst:198
 msgid ""
 "`The new account help page "
 "<https://help.launchpad.net/YourAccount/NewAccount>`_ on Launchpad has more "
@@ -2644,19 +2634,19 @@ msgstr ""
 "предоставит больше информации о процессе и дополнительных настройках, "
 "которые вы можете изменить."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:205
+#: ../ubuntu-packaging-guide/getting-set-up.rst:204
 msgid "Upload your GPG key to Launchpad"
 msgstr "Загрузка вашего ключа GPG на Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:207
+#: ../ubuntu-packaging-guide/getting-set-up.rst:206
 msgid "To find about your GPG fingerprint, run::"
 msgstr "Чтобы узнать свой отпечаток ключа GPG (fingerprint), наберите::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:211
+#: ../ubuntu-packaging-guide/getting-set-up.rst:210
 msgid "and it will print out something like::"
 msgstr "и вы увидите что-то наподобие::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:219
+#: ../ubuntu-packaging-guide/getting-set-up.rst:218
 msgid ""
 "Head to https://launchpad.net/~/+editpgpkeys and copy the \"Key "
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
@@ -2667,7 +2657,7 @@ msgstr ""
 "будет ``5C28 0144 FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Затем щёлкните "
 "«Import Key»."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:224
+#: ../ubuntu-packaging-guide/getting-set-up.rst:223
 msgid ""
 "Launchpad will use the fingerprint to check the Ubuntu key server for your "
 "key and, if successful, send you an encrypted email asking you to confirm "
@@ -2684,7 +2674,7 @@ msgstr ""
 "ввести пароль, который вы выбрали при создании ключа GPG. Введите пароль, "
 "затем щёлкните на ссылке, чтобы подтвердить, что этот ключ принадлежит вам.`"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:231
+#: ../ubuntu-packaging-guide/getting-set-up.rst:230
 msgid ""
 "Launchpad encrypts the email, using your public key, so that it can be sure "
 "that the key is yours. If you are using Thunderbird, the default Ubuntu "
@@ -2703,7 +2693,7 @@ msgstr ""
 "содержимое письма, наберите в терминале ``gpg`` и вставьте содержимое письма "
 "в окно терминала."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:240
+#: ../ubuntu-packaging-guide/getting-set-up.rst:239
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
@@ -2711,7 +2701,7 @@ msgstr ""
 "Вернувшись на сайт Launchpad, воспользуйтесь кнопкой «Confirm», чтобы "
 "Launchpad завершил импорт вашего ключа OpenPGP."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:243
+#: ../ubuntu-packaging-guide/getting-set-up.rst:242
 msgid ""
 "Find more information at "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
@@ -2719,11 +2709,11 @@ msgstr ""
 "Дополнительную информацию можно найти на "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:247
+#: ../ubuntu-packaging-guide/getting-set-up.rst:246
 msgid "Upload your SSH key to Launchpad"
 msgstr "Загрузка вашего ключа SSH на Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:249
+#: ../ubuntu-packaging-guide/getting-set-up.rst:248
 msgid ""
 "Open https://launchpad.net/~/+editsshkeys in a web browser, also open "
 "``~/.ssh/id_rsa.pub`` in a text editor. This is the public part of your SSH "
@@ -2737,7 +2727,7 @@ msgstr ""
 "Скопируйте содержимое файла и вставьте его в текстовое поле на веб-странице "
 "с меткой «Add an SSH key». Затем щёлкните «Import Public Key»."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:255
+#: ../ubuntu-packaging-guide/getting-set-up.rst:254
 msgid ""
 "For more information on this process, visit the `creating an SSH keypair "
 "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
@@ -2747,11 +2737,11 @@ msgstr ""
 "`создании ключевой пары SSH "
 "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ на Launchpad."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:261
+#: ../ubuntu-packaging-guide/getting-set-up.rst:260
 msgid "Configure Bazaar"
 msgstr "Настройка Bazaar"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:263
+#: ../ubuntu-packaging-guide/getting-set-up.rst:262
 msgid ""
 "Bazaar is the tool we use to store code changes in a logical way, to "
 "exchange proposed changes and merge them, even if development is done "
@@ -2764,11 +2754,11 @@ msgstr ""
 "несколькими людьми.  Он используется в новом методе работы с пакетами Ubuntu "
 "— Ubuntu Distributed Development."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:268
+#: ../ubuntu-packaging-guide/getting-set-up.rst:267
 msgid "To tell Bazaar who you are, simply run::"
 msgstr "Что сообщить Bazaar о том, кто вы, просто наберите::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:273
+#: ../ubuntu-packaging-guide/getting-set-up.rst:272
 msgid ""
 "`whoami` will tell Bazaar which name and email address it should use for "
 "your commit messages. With `launchpad-login` you set your Launchpad ID. This "
@@ -2779,7 +2769,7 @@ msgstr ""
 "свой Launchpad ID. Это код, который идентифицирует вашу учётную запись на "
 "Launchpad."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:277
+#: ../ubuntu-packaging-guide/getting-set-up.rst:276
 msgid ""
 "Note: If you can not remember the ID, go to https://launchpad.net/~ and see "
 "where it redirects you. The part after the \"~\" in the URL is your "
@@ -2789,11 +2779,11 @@ msgstr ""
 "https://launchpad.net/~ и посмотрите, куда вас перенаправляет эта страница. "
 "Часть URL после символа «~» — это и есть ваш Launchpad ID."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:283
+#: ../ubuntu-packaging-guide/getting-set-up.rst:282
 msgid "Configure your shell"
 msgstr "Настройка командной оболочки"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:284
+#: ../ubuntu-packaging-guide/getting-set-up.rst:283
 msgid ""
 "Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you "
 "as well. Simply open your `~/.bashrc` in a text editor and add something "
@@ -2803,11 +2793,11 @@ msgstr ""
 "некоторая информация о вас. Просто откройте `~/.bashrc` в текстовом "
 "редакторе и добавьте внизу что-то вроде этого::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:291
+#: ../ubuntu-packaging-guide/getting-set-up.rst:290
 msgid "Now save the file and either restart your terminal or run::"
 msgstr "Затем сохраните файл и перезапустите терминал или наберите::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:295
+#: ../ubuntu-packaging-guide/getting-set-up.rst:294
 msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
@@ -2934,16 +2924,16 @@ msgstr ""
 msgid "Articles"
 msgstr "Статьи"
 
-#: ../ubuntu-packaging-guide/index.rst:70
+#: ../ubuntu-packaging-guide/index.rst:71
 msgid "Knowledge Base"
 msgstr "База знаний"
 
-#: ../ubuntu-packaging-guide/index.rst:90
+#: ../ubuntu-packaging-guide/index.rst:92
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
 msgstr "Информация для дальнейшего чтения"
 
-#: ../ubuntu-packaging-guide/index.rst:92
+#: ../ubuntu-packaging-guide/index.rst:94
 msgid ""
 "You can read this guide offline in different formats, if you install one of "
 "the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-"
@@ -2953,7 +2943,7 @@ msgstr ""
 "установите один из `двоичных пакетов "
 "<https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide>`_."
 
-#: ../ubuntu-packaging-guide/index.rst:95
+#: ../ubuntu-packaging-guide/index.rst:97
 msgid ""
 "If you want to learn more about building Debian packages, here are some "
 "Debian resources you may find useful:"
@@ -2961,18 +2951,18 @@ msgstr ""
 "Если вы желаете узнать больше о сборке пакетов Debian, вот несколько "
 "ресурсов Debian, которые могут быть вам полезны:"
 
-#: ../ubuntu-packaging-guide/index.rst:98
+#: ../ubuntu-packaging-guide/index.rst:100
 msgid ""
 "`How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;"
 msgstr ""
 "`Как создавать пакеты для Debian "
 "<https://wiki.debian.org/HowToPackageForDebian>`_;"
 
-#: ../ubuntu-packaging-guide/index.rst:99
+#: ../ubuntu-packaging-guide/index.rst:101
 msgid "`Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:100
+#: ../ubuntu-packaging-guide/index.rst:102
 msgid ""
 "`Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-"
 "guide/>`_ — available in many languages;"
@@ -2981,7 +2971,7 @@ msgstr ""
 "<http://www.debian.org/doc/manuals/maint-guide/>`_ — доступно на многих "
 "языках;"
 
-#: ../ubuntu-packaging-guide/index.rst:102
+#: ../ubuntu-packaging-guide/index.rst:104
 msgid ""
 "`Packaging tutorial <http://www.debian.org/doc/manuals/packaging-"
 "tutorial/>`_ (also available as a `package "
@@ -2991,7 +2981,7 @@ msgstr ""
 "tutorial/>`_ (также доступен в виде `пакета "
 "<https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
 
-#: ../ubuntu-packaging-guide/index.rst:105
+#: ../ubuntu-packaging-guide/index.rst:107
 msgid ""
 "We are always looking to improve this guide. If you find any problems or "
 "have some suggestions, please `report a bug on Launchpad "
@@ -4715,14 +4705,9 @@ msgid ""
 "Fixing security bugs in Ubuntu is not really any different than :doc:`fixing "
 "a regular bug in Ubuntu<./fixing-a-bug>`, and it is assumed that you are "
 "familiar with patching normal bugs. To demonstrate where things are "
-"different, we will be updating the dbus package in Ubuntu 10.04 LTS (Lucid "
-"Lynx) for a security update."
+"different, we will be updating the dbus package in Ubuntu 12.04 LTS (Precise "
+"Pangolin) for a security update."
 msgstr ""
-"Исправление ошибок безопасности в Ubuntu в действительности не особо "
-"отличается от :doc:`исправления обычных ошибок в Ubuntu<./fixing-a-bug>`, и "
-"предполагается, что вы уже знакомы с процессом исправления обычных ошибок. "
-"Чтобы продемонстрировать отличия, мы выполним обновление безопасности пакета "
-"dbus в Ubuntu 10.04 LTS (Lucid Lynx)."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:19
 msgid "Obtaining the source"
@@ -4731,23 +4716,17 @@ msgstr "Получение исходного кода"
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:21
 msgid ""
 "In this example, we already know we want to fix the dbus package in Ubuntu "
-"10.04 LTS (Lucid Lynx). So first you need to determine the version of the "
-"package you want to download. We can use the ``rmadison`` to help with this::"
+"12.04 LTS (Precise Pangolin). So first you need to determine the version of "
+"the package you want to download. We can use the ``rmadison`` to help with "
+"this::"
 msgstr ""
-"В этом примере, как уже было сказано, мы собираемся внести исправления в "
-"пакет dbus в Ubuntu 10.04 LTS (Lucid Lynx). Сначала нам надо определить, "
-"какую версию пакета следует скачать. В этом нам может помочь ``rmadison``::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:30
 msgid ""
 "Typically you will want to choose the highest version for the release you "
 "want to patch that is not in -proposed or -backports. Since we are updating "
-"Lucid's dbus, you'll download 1.2.16-2ubuntu4.2 from lucid-updates::"
+"Precise's dbus, you'll download 1.4.18-1ubuntu1.4 from precise-updates::"
 msgstr ""
-"Обычно следует выбрать самую последнюю версию для выпуска, в который вы "
-"хотите внести изменения, находящуюся не в -proposed или -backports. "
-"Поскольку мы обновляем dbus в Lucid, вам нужно скачать 1.2.16-2ubuntu4.2 из "
-"lucid-updates::"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:38
 msgid "Patching the source"
@@ -4799,8 +4778,8 @@ msgid ""
 "patch`` will launch ``dch`` automatically after un-applying all the patches. "
 "If you are not using ``edit-patch``, you can launch ``dch -i`` manually. "
 "Unlike with regular patches, you should use the following format (note the "
-"distribution name uses lucid-security since this is a security update for "
-"Lucid) for security updates::"
+"distribution name uses precise-security since this is a security update for "
+"Precise) for security updates::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:80
@@ -4878,7 +4857,7 @@ msgstr ""
 msgid ""
 "The bug report should also confirm that the issue is fixed in Ubuntu "
 "versions newer than the one with the proposed fix (in the above example "
-"newer than Lucid).  If the issue is not fixed in newer Ubuntu versions you "
+"newer than Precise).  If the issue is not fixed in newer Ubuntu versions you "
 "should prepare updates for those versions too."
 msgstr ""
 
@@ -4912,15 +4891,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:133
 msgid ""
-"The update will go into the ``proposed`` archive (for example ``lucid-"
+"The update will go into the ``proposed`` archive (for example ``precise-"
 "proposed``) where it will need to be checked that it fixes the problem and "
 "does not introduce new problems.  After a week without reported problems it "
 "can be moved to ``updates``."
 msgstr ""
-"Обновление попадёт в архив ``proposed`` (например, ``lucid-proposed``), где "
-"нужно будет проверить, что он устраняет проблему и не создаёт никаких новых "
-"проблем.  Через неделю, если сообщений о проблемах не поступало, оно может "
-"быть перемещено в ``updates``."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:138
 msgid "See the `Stable Release Updates wiki page`_ for more information."
@@ -5131,11 +5106,8 @@ msgstr ""
 msgid ""
 "To refer to the version of a source package in an older release of Ubuntu, "
 "just prefix the package name with the release's code name.  E.g. to refer to "
-"Tomboy's source package in Maverick_ use::"
+"Tomboy's source package in Quantal_ use::"
 msgstr ""
-"Для ссылки на версию пакета исходного кода в более старом выпуске Ubuntu, "
-"просто укажите перед именем пакета кодовое имя выпуска.  Например, чтобы "
-"сослаться на пакет исходного кода Tomboy в Maverick_ используйте::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:27
 msgid ""
@@ -5155,8 +5127,8 @@ msgstr ""
 "доступ к ветке Tomboy в текущем разрабатываемом выпуске Debian, используйте::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:37
-msgid "and to access Tomboy in Debian Lenny_ use::"
-msgstr "а для доступа к Tomboy в Debian Lenny_ используйте::"
+msgid "and to access Tomboy in Debian Wheezy_ use::"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:48
 msgid "Getting the source"
@@ -5287,7 +5259,7 @@ msgid ""
 "When you want to do something like a `stable release update`_ (SRU), or you "
 "just want to examine the code in an old release, you'll want to grab the "
 "branch corresponding to a particular Ubuntu release.  For example, to get "
-"the Tomboy package for Maverick do::"
+"the Tomboy package for Quantal do::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:147
@@ -5563,7 +5535,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-latest.rst:18
 msgid ""
 "This works wherever you have a checkout of a branch, so it will work for "
-"things like branches of `maverick`, `hardy-proposed`, etc."
+"things like branches of `quantal`, `precise-proposed`, etc."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:23
@@ -5893,11 +5865,9 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:32
 msgid ""
-"For example, to push your fix for bug 12345 in the Tomboy package for Natty, "
-"you'd use::"
+"For example, to push your fix for bug 12345 in the Tomboy package for "
+"Raring, you'd use::"
 msgstr ""
-"Например, чтобы отправить исправление для ошибки 12345 в пакете Tomboy для "
-"Natty, используйте::"
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:37
 msgid ""
@@ -6397,6 +6367,20 @@ msgstr ""
 "  Vladimir Doroshenko https://launchpad.net/~vovktt"
 
 #~ msgid ""
+#~ "This will create a directory ``oneiric`` and install a minimal oneiric "
+#~ "system into it."
+#~ msgstr ""
+#~ "Это позволит создать каталог ``oneiric`` и установит в него минимальную "
+#~ "систему oneiric."
+
+#~ msgid ""
+#~ "If your version of ``debootstrap`` does not know about oneiric you can try "
+#~ "upgrading to the version in ``backports``."
+#~ msgstr ""
+#~ "Если ваша версия ``debootstrap`` не знает об oneiric, вы можете попробовать "
+#~ "обновление до версии ``backports``."
+
+#~ msgid ""
 #~ "In ``debian/changelog`` change the version number to an Ubuntu version: "
 #~ "``2.7-0ubuntu1`` (upstream version 2.7, Debian version 0, Ubuntu version 1). "
 #~ " Also change ``unstable`` to the current development Ubuntu release such as "
@@ -6425,10 +6409,65 @@ msgstr ""
 #~ "проблемы::"
 
 #~ msgid ""
+#~ "Fixing security bugs in Ubuntu is not really any different than :doc:`fixing "
+#~ "a regular bug in Ubuntu<./fixing-a-bug>`, and it is assumed that you are "
+#~ "familiar with patching normal bugs. To demonstrate where things are "
+#~ "different, we will be updating the dbus package in Ubuntu 10.04 LTS (Lucid "
+#~ "Lynx) for a security update."
+#~ msgstr ""
+#~ "Исправление ошибок безопасности в Ubuntu в действительности не особо "
+#~ "отличается от :doc:`исправления обычных ошибок в Ubuntu<./fixing-a-bug>`, и "
+#~ "предполагается, что вы уже знакомы с процессом исправления обычных ошибок. "
+#~ "Чтобы продемонстрировать отличия, мы выполним обновление безопасности пакета "
+#~ "dbus в Ubuntu 10.04 LTS (Lucid Lynx)."
+
+#~ msgid ""
+#~ "In this example, we already know we want to fix the dbus package in Ubuntu "
+#~ "10.04 LTS (Lucid Lynx). So first you need to determine the version of the "
+#~ "package you want to download. We can use the ``rmadison`` to help with this::"
+#~ msgstr ""
+#~ "В этом примере, как уже было сказано, мы собираемся внести исправления в "
+#~ "пакет dbus в Ubuntu 10.04 LTS (Lucid Lynx). Сначала нам надо определить, "
+#~ "какую версию пакета следует скачать. В этом нам может помочь ``rmadison``::"
+
+#~ msgid ""
+#~ "Typically you will want to choose the highest version for the release you "
+#~ "want to patch that is not in -proposed or -backports. Since we are updating "
+#~ "Lucid's dbus, you'll download 1.2.16-2ubuntu4.2 from lucid-updates::"
+#~ msgstr ""
+#~ "Обычно следует выбрать самую последнюю версию для выпуска, в который вы "
+#~ "хотите внести изменения, находящуюся не в -proposed или -backports. "
+#~ "Поскольку мы обновляем dbus в Lucid, вам нужно скачать 1.2.16-2ubuntu4.2 из "
+#~ "lucid-updates::"
+
+#~ msgid ""
+#~ "The update will go into the ``proposed`` archive (for example ``lucid-"
+#~ "proposed``) where it will need to be checked that it fixes the problem and "
+#~ "does not introduce new problems.  After a week without reported problems it "
+#~ "can be moved to ``updates``."
+#~ msgstr ""
+#~ "Обновление попадёт в архив ``proposed`` (например, ``lucid-proposed``), где "
+#~ "нужно будет проверить, что он устраняет проблему и не создаёт никаких новых "
+#~ "проблем.  Через неделю, если сообщений о проблемах не поступало, оно может "
+#~ "быть перемещено в ``updates``."
+
+#~ msgid ""
 #~ "Then in a terminal, change the to the directory where the source was "
 #~ "uncompressed::"
 #~ msgstr ""
 #~ "Затем в терминале перейдите в каталог, куда распакован исходный код::"
+
+#~ msgid ""
+#~ "To refer to the version of a source package in an older release of Ubuntu, "
+#~ "just prefix the package name with the release's code name.  E.g. to refer to "
+#~ "Tomboy's source package in Maverick_ use::"
+#~ msgstr ""
+#~ "Для ссылки на версию пакета исходного кода в более старом выпуске Ubuntu, "
+#~ "просто укажите перед именем пакета кодовое имя выпуска.  Например, чтобы "
+#~ "сослаться на пакет исходного кода Tomboy в Maverick_ используйте::"
+
+#~ msgid "and to access Tomboy in Debian Lenny_ use::"
+#~ msgstr "а для доступа к Tomboy в Debian Lenny_ используйте::"
 
 #~ msgid ""
 #~ "This will send your key to one keyserver, but a network of keyservers will "
@@ -6469,6 +6508,16 @@ msgstr ""
 #~ "всегда быть в курсе происходящего."
 
 #~ msgid ""
+#~ "where <release> is for example `natty`, `maverick`, `lucid` or in the case "
+#~ "of Debian maybe `sid`. This will take a while as it will download all the "
+#~ "necessary packages for a \"minimal installation\". These will be cached "
+#~ "though."
+#~ msgstr ""
+#~ "где <release> — это, например, `natty`, `maverick`, `lucid` или, в случае "
+#~ "Debian, `sid`. Загрузка всех необходимых для «минимальной установки» пакетов "
+#~ "займёт некоторое время. Впрочем, они будут кэшироваться."
+
+#~ msgid ""
 #~ "Packages which have ``autopkgtest`` enabled will have their tests run "
 #~ "whenever they get uploaded or any of their reverse-dependencies change. The "
 #~ "output of `automatically run autopkgtest tests`_ can be viewed on the web "
@@ -6478,6 +6527,15 @@ msgstr ""
 #~ "при загрузке новой версии или изменениях обратных зависимостей. Выход "
 #~ "`automatically run autopkgtest tests`_ доступен через web-интерфейс и "
 #~ "регулярно обновляется."
+
+#~ msgid ""
+#~ "Don't worry though, the `Ubuntu development release wiki page "
+#~ "<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways "
+#~ "to safely use the development release."
+#~ msgstr ""
+#~ "Не беспокойтесь, на вики-странице `Использование разрабатываемых версий "
+#~ "<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ описано множество "
+#~ "способов безопасно использовать разрабатываемые выпуски."
 
 #~ msgid ""
 #~ "Every time a new version of an application is released, or when someone "
@@ -6509,6 +6567,13 @@ msgstr ""
 #~ "Теперь выполните ``bzr merge``, указав команде URL ветки, из которой нужно "
 #~ "слить изменения.  Например, чтобы выполнить слияние из версии пакета в "
 #~ "Debian Squeeze_, выполните::"
+
+#~ msgid ""
+#~ "For example, to push your fix for bug 12345 in the Tomboy package for Natty, "
+#~ "you'd use::"
+#~ msgstr ""
+#~ "Например, чтобы отправить исправление для ошибки 12345 в пакете Tomboy для "
+#~ "Natty, используйте::"
 
 #~ msgid ""
 #~ "This command will create a pristine Raring AMD64 VM from a cloud image. To "

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-12-06 09:26+0100\n"
+"POT-Creation-Date: 2013-12-09 12:22+0100\n"
 "PO-Revision-Date: 2013-04-21 19:06+0000\n"
 "Last-Translator: Z.X.Lyn <Unknown>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-12-07 06:22+0000\n"
+"X-Launchpad-Export-Date: 2013-12-11 05:57+0000\n"
 "X-Generator: Launchpad (build 16869)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -382,15 +382,15 @@ msgstr "使用``debootstrap``命令去建立一個新chroot:"
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
-"This will create a directory ``oneiric`` and install a minimal oneiric "
-"system into it."
-msgstr "這會建立一個資料夹``oneiric``及在裏面安装一個最小oneiric系統。"
+"This will create a directory ``saucy`` and install a minimal saucy system "
+"into it."
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
-"If your version of ``debootstrap`` does not know about oneiric you can try "
+"If your version of ``debootstrap`` does not know about saucy you can try "
 "upgrading to the version in ``backports``."
-msgstr "如果您的``debootstrap``版本不知道oneiric您可以試更新到``backports``裏的版本。"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
@@ -1812,25 +1812,23 @@ msgstr "建議最好是使用當前開發版本的 Ubuntu 做打包工作。這�
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:26
 msgid ""
-"Don't worry though, the `Ubuntu development release wiki page "
-"<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways "
+"Don't worry though, you can use `Testdrive "
+"<https://wiki.ubuntu.com/QATeam/Testdrive>`_ or :doc:`chroots <./chroots>` "
 "to safely use the development release."
 msgstr ""
-"別擔心，Ubuntu 開發版本的 wiki <https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ "
-"顯示各種各樣的方式安全地使用開發版本。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:32
+#: ../ubuntu-packaging-guide/getting-set-up.rst:31
 msgid "Install basic packaging software"
 msgstr "安裝基本的打包軟件"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:34
+#: ../ubuntu-packaging-guide/getting-set-up.rst:33
 msgid ""
 "There are a number of tools that will make your life as an Ubuntu developer "
 "much easier.  You will encounter these tools later in this guide.  To "
 "install most of the tools you will need run this command::"
 msgstr "有許多開發工具可以使你的 Ubuntu 開發者生活更輕鬆。本指南中，你會遇到這些工具。要安裝的大部分工具，你需要運行這個命令："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:41
+#: ../ubuntu-packaging-guide/getting-set-up.rst:40
 msgid ""
 "Note: Since Ubuntu 11.10 \"Oneiric Ocelot\" (or if you have Backports "
 "enabled on a currently supported release), the following command will "
@@ -1840,11 +1838,11 @@ msgstr ""
 "注意：自從 Ubuntu 11.10 \"Oneiric Ocelot\" （或者如果您在 backports "
 "中啟用當前支持的版本），下面的命令將安裝上述和其他工具，這些工具在在 Ubuntu 開發中很常見。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:49
+#: ../ubuntu-packaging-guide/getting-set-up.rst:48
 msgid "This command will install the following software:"
 msgstr "這個命令會安裝以下軟件："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:51
+#: ../ubuntu-packaging-guide/getting-set-up.rst:50
 msgid ""
 "``gnupg`` -- `GNU Privacy Guard`_ contains tools you will need to create a "
 "cryptographic key with which you will sign files you want to upload to "
@@ -1853,19 +1851,19 @@ msgstr ""
 "``gnupg`` -- `GNU Privacy Guard`_ 包含工具，你需要創建一個加密用的密鑰，你將用它簽署要上傳到 Launchpad "
 "的文件。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:54
+#: ../ubuntu-packaging-guide/getting-set-up.rst:53
 msgid ""
 "``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
 "isolated environment."
 msgstr "``pbuilder`` —— 一個工具，用來在乾淨的和孤立的環境中重現構建一個包。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:56
+#: ../ubuntu-packaging-guide/getting-set-up.rst:55
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
 msgstr "``ubuntu-dev-tools`` （和 ``devscripts`` ，一个直接依賴）——一個工具集，使許多打包任務更容易。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:58
+#: ../ubuntu-packaging-guide/getting-set-up.rst:57
 msgid ""
 "``bzr-builddeb`` (and ``bzr``, a dependency) -- distributed version control "
 "with Bazaar, a new way of working with packages for Ubuntu that will make it "
@@ -1875,17 +1873,17 @@ msgstr ""
 "``bzr-builddeb`` （和 ``bzr`` ，一个依赖）—— Bazaar 分佈式版本控制 ，一種新的 Ubuntu "
 "的軟件包开发方式，這將使很多開發人員在相同的代碼上協作和工作，同時保持它的细微差别，很容易地合併彼此的成果。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:62
+#: ../ubuntu-packaging-guide/getting-set-up.rst:61
 msgid ""
 "``apt-file`` provides an easy way to find the binary package that contains a "
 "given file."
 msgstr "``apt-file`` 提供了一個簡單的方法來查找包含一個給定文件的是哪个二進制包。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:67
+#: ../ubuntu-packaging-guide/getting-set-up.rst:66
 msgid "Create your GPG key"
 msgstr "創建你的GPG密鑰"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:69
+#: ../ubuntu-packaging-guide/getting-set-up.rst:68
 msgid ""
 "GPG stands for `GNU Privacy Guard`_ and it implements the OpenPGP standard "
 "which allows you to sign and encrypt messages and files. This is useful for "
@@ -1898,11 +1896,11 @@ msgstr ""
 "標準的實現，它允許您進行簽名和加密消息和文件。這对很多事情都有用。在我們的情況下，重要的是你可以用你的鑰匙簽署文件。这样文件就可以被确认是您的工作。如果您"
 "要上傳一個源碼包到 Launchpad，它將只接受那些可以确定是誰上传的包。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:76
+#: ../ubuntu-packaging-guide/getting-set-up.rst:75
 msgid "To generate a new GPG key, run::"
 msgstr "要生成一個新的GPG密鑰，運行："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:80
+#: ../ubuntu-packaging-guide/getting-set-up.rst:79
 msgid ""
 "GPG will first ask you which kind of key you want to generate. Choosing the "
 "default (RSA and DSA) is fine. Next it will ask you about the keysize. The "
@@ -1921,7 +1919,7 @@ msgstr ""
 "Ubuntu "
 "開發使用的邮件地址就可以，你也可以之後添加電子郵件地址後。添加評論不是必要的。然後，您必須設置一個密碼，選擇一個安全的密碼（密碼允許包括空格）。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:90
+#: ../ubuntu-packaging-guide/getting-set-up.rst:89
 msgid ""
 "Now GPG will create a key for you, which can take a little bit of time; it "
 "needs random bytes, so if you give the system some work to do it will be "
@@ -1931,21 +1929,21 @@ msgstr ""
 "GPG為您將創建一個密鑰，這可能需要一點點的時間，它需要隨機字節，所以如果你給系統一些工作要做，它會就好了。左右移動光標，​​鍵入一些隨機文本段落，加載一"
 "些網頁。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:95
+#: ../ubuntu-packaging-guide/getting-set-up.rst:94
 msgid "Once this is done, you will get a message similar to this one::"
 msgstr "一旦做到這一點，你會得到一個類似這個消息："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:102
+#: ../ubuntu-packaging-guide/getting-set-up.rst:101
 msgid "In this case ``43CDE61D`` is the *key ID*."
 msgstr "在這裏的情況下  ``43CDE61D`` 就是 *密鑰 ID*."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:104
+#: ../ubuntu-packaging-guide/getting-set-up.rst:103
 msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
 msgstr "接下來，您需要上傳你的密鑰的公共部分，所以世界密鑰服務器可以識別您的消息和文件。要做到這一點，請輸入："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:109
+#: ../ubuntu-packaging-guide/getting-set-up.rst:108
 msgid ""
 "This will send your key to the Ubuntu keyserver, but a network of keyservers "
 "will automatically sync the key between themselves. Once this syncing is "
@@ -1953,11 +1951,11 @@ msgid ""
 "around the world."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:116
+#: ../ubuntu-packaging-guide/getting-set-up.rst:115
 msgid "Create your SSH key"
 msgstr "創建您的 SSH 密鑰"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:118
+#: ../ubuntu-packaging-guide/getting-set-up.rst:117
 msgid ""
 "SSH_ stands for *Secure Shell*, and it is a protocol that allows you to "
 "exchange data in a secure way over a network. It is common to use SSH to "
@@ -1968,90 +1966,88 @@ msgstr ""
 "SSH_ 表示 *Secure Shell* ， 它是一個協議，允許您以安全的方式通過網絡進行數據交換。通常，我們使用 SSH 訪問另一台電腦 "
 "，打開一個 shell，並用它來安全地傳輸文件。對於我們這裏目的，我們將主要使用 SSH 安全地把源碼包上傳到 Launchpad。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:124
+#: ../ubuntu-packaging-guide/getting-set-up.rst:123
 msgid "To generate an SSH key, enter::"
 msgstr "要生成SSH密鑰，輸入："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:128
+#: ../ubuntu-packaging-guide/getting-set-up.rst:127
 msgid ""
 "The default file name usually makes sense, so you can just leave it as it "
 "is. For security purposes, it is highly recommended that you use a "
 "passphrase."
 msgstr "默認的文件名通常是有道理的，所以你可以不用理會它。為了安全起見，我們強烈建議您使用一個口令。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:133
+#: ../ubuntu-packaging-guide/getting-set-up.rst:132
 msgid "Set up pbuilder"
 msgstr "設置 pbuilder"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:135
+#: ../ubuntu-packaging-guide/getting-set-up.rst:134
 msgid ""
 "``pbuilder`` allows you to build packages locally on your machine. It serves "
 "a couple of purposes:"
 msgstr "``pbuilder`` 允許您建立您機器上的本地包。它提供許多的用途："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:138
+#: ../ubuntu-packaging-guide/getting-set-up.rst:137
 msgid ""
 "The build will be done in a minimal and clean environment. This helps you "
 "make sure your builds succeed in a reproducible way, but without modifying "
 "your local system"
 msgstr "構建工作將在最小和清潔的環境。這將幫助您確保您以一個可重複的方式成功構建，卻沒有修改您的本地系統"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:141
+#: ../ubuntu-packaging-guide/getting-set-up.rst:140
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
 msgstr "沒有必要本地安裝所有必需的 *構建依賴*"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:142
+#: ../ubuntu-packaging-guide/getting-set-up.rst:141
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
 msgstr "您可以設置 Ubuntu 和 Debian 發行版的多個不同的實例"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:144
+#: ../ubuntu-packaging-guide/getting-set-up.rst:143
 msgid "Setting ``pbuilder`` up is very easy, run::"
 msgstr "設置 ``pbuilder`` 很簡單，直接運行："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:148
+#: ../ubuntu-packaging-guide/getting-set-up.rst:147
 msgid ""
-"where <release> is for example `natty`, `maverick`, `lucid` or in the case "
+"where <release> is for example `raring`, `quantal`, `precise` or in the case "
 "of Debian maybe `sid`. This will take a while as it will download all the "
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
-"其中 <release> 如 `natty`, `maverick`, `lucid` 或其他情況如 Debian "
-"`sid`。這將需要一段時間，因為它會下載一個“最小化安裝”的所有必要的軟件包。這些（安裝）會有緩存。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:154
+#: ../ubuntu-packaging-guide/getting-set-up.rst:153
 msgid "Get set up to work with Launchpad"
 msgstr "設置 LaunchPad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:156
+#: ../ubuntu-packaging-guide/getting-set-up.rst:155
 msgid ""
 "With a basic local configuration in place, your next step will be to "
 "configure your system to work with Launchpad. This section will focus on the "
 "following topics:"
 msgstr "隨著本地的基本配置到位，下一步將是配置您的系統與 Launchpad 工作。本節重點在以下主題："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:160
+#: ../ubuntu-packaging-guide/getting-set-up.rst:159
 msgid "What Launchpad is and creating a Launchpad account"
 msgstr "LaunchPad 介紹和創建一個 Launchpad 帳戶"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:161
+#: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid "Uploading your GPG and SSH keys to Launchpad"
 msgstr "上傳您的 GPG 和 SSH 密鑰到 Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:162
+#: ../ubuntu-packaging-guide/getting-set-up.rst:161
 msgid "Configuring Bazaar to work with Launchpad"
 msgstr "配置 bazaar 於 LaunchPad 工作"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:163
+#: ../ubuntu-packaging-guide/getting-set-up.rst:162
 msgid "Configuring Bash to work with Bazaar"
 msgstr "配置 Bash 與 bazaar 工作"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:167
+#: ../ubuntu-packaging-guide/getting-set-up.rst:166
 msgid "About Launchpad"
 msgstr "關於 Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:169
+#: ../ubuntu-packaging-guide/getting-set-up.rst:168
 msgid ""
 "Launchpad is the central piece of infrastructure we use in Ubuntu. It not "
 "only stores our packages and our code, but also things like translations, "
@@ -2062,14 +2058,14 @@ msgstr ""
 "LaunchPad 是我們使用 Ubuntu 中的 Ubuntu 基礎設施的中心部分。它不僅存儲了我們的包和我們的代碼，還有還翻譯，bug報告，以及在 "
 "Ubuntu 工作的人和他們的團隊成員的信息等等。您還將使用 Launchpad 的發布您的建議修復，並得到其他 Ubuntu 的開發者的審查和贊助。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:175
+#: ../ubuntu-packaging-guide/getting-set-up.rst:174
 msgid ""
 "You will need to register with Launchpad and provide a minimal amount of "
 "information. This will allow you to download and upload code, submit bug "
 "reports, and more."
 msgstr "您需要註冊 Launchpad 和提供少量的信息。這將允許您下載和上傳代碼，提交 bug 報告，以及更多。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:179
+#: ../ubuntu-packaging-guide/getting-set-up.rst:178
 msgid ""
 "Besides hosting Ubuntu, Launchpad can host any Free Software project. For "
 "more information see the `Launchpad Help wiki "
@@ -2078,11 +2074,11 @@ msgstr ""
 "除了託管 Ubuntu 的項目，Launchpad 可以舉辦任何自由軟件項目。欲了解更多信息，請參閱 `Launchpad Help wiki "
 "<https://help.launchpad.net/>`_ 。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:184
+#: ../ubuntu-packaging-guide/getting-set-up.rst:183
 msgid "Get a Launchpad account"
 msgstr "獲取 Launchpad 帳戶"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:186
+#: ../ubuntu-packaging-guide/getting-set-up.rst:185
 msgid ""
 "If you don't already have a Launchpad account, you can easily `create one`_. "
 "If you have a Launchpad account but cannot remember your Launchpad id, you "
@@ -2092,14 +2088,14 @@ msgstr ""
 "如果您還沒有一個啟動帳戶，您可以很容易 `create one`_ 。如果您有一個 Launchpad 但是忘記了您的 ID ，您可以看一下 "
 "https://launchpad.net/~ ，您的 ID 就在 URL 連接的～後邊。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:191
+#: ../ubuntu-packaging-guide/getting-set-up.rst:190
 msgid ""
 "Launchpad's registration process will ask you to choose a display name. It "
 "is encouraged for you to use your real name here so that your Ubuntu "
 "developer colleagues will be able to get to know you better."
 msgstr "Launchpad 的註冊過程中會問您選擇的顯示名稱。鼓勵您使用您的真實姓名，讓您的 Ubuntu 開發的同事將能夠得到更好地了解您。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:195
+#: ../ubuntu-packaging-guide/getting-set-up.rst:194
 msgid ""
 "When you register a new account, Launchpad will send you an email with a "
 "link you need to open in your browser in order to verify your email address. "
@@ -2108,7 +2104,7 @@ msgstr ""
 "當您註冊一個新帳戶，LaunchPad將發送給您一封電子郵件，其中有個一個鏈接。您需要在您的瀏覽器中打開它，以驗證您的電子郵件地址。如果您未收到郵件，請檢"
 "查您的垃圾郵件文件夾中。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:199
+#: ../ubuntu-packaging-guide/getting-set-up.rst:198
 msgid ""
 "`The new account help page "
 "<https://help.launchpad.net/YourAccount/NewAccount>`_ on Launchpad has more "
@@ -2117,19 +2113,19 @@ msgstr ""
 "Launchpad 上的 `新帳戶幫助頁面 <https://help.launchpad.net/YourAccount/NewAccount>`_  "
 "有更多信息關於此過程和您可以改變的額外設置。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:205
+#: ../ubuntu-packaging-guide/getting-set-up.rst:204
 msgid "Upload your GPG key to Launchpad"
 msgstr "上傳您的 GPG 公鑰到 Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:207
+#: ../ubuntu-packaging-guide/getting-set-up.rst:206
 msgid "To find about your GPG fingerprint, run::"
 msgstr "要找到你的 GPG 指紋，運行："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:211
+#: ../ubuntu-packaging-guide/getting-set-up.rst:210
 msgid "and it will print out something like::"
 msgstr "它會打印出類似："
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:219
+#: ../ubuntu-packaging-guide/getting-set-up.rst:218
 msgid ""
 "Head to https://launchpad.net/~/+editpgpkeys and copy the \"Key "
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
@@ -2138,7 +2134,7 @@ msgstr ""
 "打開連接 https://launchpad.net/~/+editpgpkeys 然後複製 “密鑰指紋”到文本框中。在這裏例子中是 ``5C28 "
 "0144 FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D`` 。現在點擊“導入公鑰”。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:224
+#: ../ubuntu-packaging-guide/getting-set-up.rst:223
 msgid ""
 "Launchpad will use the fingerprint to check the Ubuntu key server for your "
 "key and, if successful, send you an encrypted email asking you to confirm "
@@ -2152,7 +2148,7 @@ msgstr ""
 "發送您的電子郵件 。` 如果您的電子郵件客戶端支持 OpenPGP 加密，它會提示您選擇 "
 "GPG生成的密鑰。輸入對應的密碼，然後點擊鏈接以確認公鑰是您的。`"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:231
+#: ../ubuntu-packaging-guide/getting-set-up.rst:230
 msgid ""
 "Launchpad encrypts the email, using your public key, so that it can be sure "
 "that the key is yours. If you are using Thunderbird, the default Ubuntu "
@@ -2166,23 +2162,23 @@ msgstr ""
 "默認的電子郵件客戶端，你可以安裝 `Enigmail plugin "
 "<https://apps.ubuntu.com/cat/applications/enigmail/>`_ 來方便的（用您的密鑰）解密信息。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:240
+#: ../ubuntu-packaging-guide/getting-set-up.rst:239
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
 msgstr "返回到 Launchpad 網站上，點擊“確認”按鈕，Launchpad 將完成您的 OpenPGP 公鑰導入。"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:243
+#: ../ubuntu-packaging-guide/getting-set-up.rst:242
 msgid ""
 "Find more information at "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:247
+#: ../ubuntu-packaging-guide/getting-set-up.rst:246
 msgid "Upload your SSH key to Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:249
+#: ../ubuntu-packaging-guide/getting-set-up.rst:248
 msgid ""
 "Open https://launchpad.net/~/+editsshkeys in a web browser, also open "
 "``~/.ssh/id_rsa.pub`` in a text editor. This is the public part of your SSH "
@@ -2191,18 +2187,18 @@ msgid ""
 "key\". Now click \"Import Public Key\"."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:255
+#: ../ubuntu-packaging-guide/getting-set-up.rst:254
 msgid ""
 "For more information on this process, visit the `creating an SSH keypair "
 "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
 "Launchpad."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:261
+#: ../ubuntu-packaging-guide/getting-set-up.rst:260
 msgid "Configure Bazaar"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:263
+#: ../ubuntu-packaging-guide/getting-set-up.rst:262
 msgid ""
 "Bazaar is the tool we use to store code changes in a logical way, to "
 "exchange proposed changes and merge them, even if development is done "
@@ -2210,40 +2206,40 @@ msgid ""
 "of working with Ubuntu packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:268
+#: ../ubuntu-packaging-guide/getting-set-up.rst:267
 msgid "To tell Bazaar who you are, simply run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:273
+#: ../ubuntu-packaging-guide/getting-set-up.rst:272
 msgid ""
 "`whoami` will tell Bazaar which name and email address it should use for "
 "your commit messages. With `launchpad-login` you set your Launchpad ID. This "
 "way code that you publish in Launchpad will be associated with you."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:277
+#: ../ubuntu-packaging-guide/getting-set-up.rst:276
 msgid ""
 "Note: If you can not remember the ID, go to https://launchpad.net/~ and see "
 "where it redirects you. The part after the \"~\" in the URL is your "
 "Launchpad ID.)"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:283
+#: ../ubuntu-packaging-guide/getting-set-up.rst:282
 msgid "Configure your shell"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:284
+#: ../ubuntu-packaging-guide/getting-set-up.rst:283
 msgid ""
 "Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you "
 "as well. Simply open your `~/.bashrc` in a text editor and add something "
 "like this to the bottom of it::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:291
+#: ../ubuntu-packaging-guide/getting-set-up.rst:290
 msgid "Now save the file and either restart your terminal or run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:295
+#: ../ubuntu-packaging-guide/getting-set-up.rst:294
 msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
@@ -2336,51 +2332,51 @@ msgstr ""
 msgid "Articles"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:70
+#: ../ubuntu-packaging-guide/index.rst:71
 msgid "Knowledge Base"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:90
+#: ../ubuntu-packaging-guide/index.rst:92
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:92
+#: ../ubuntu-packaging-guide/index.rst:94
 msgid ""
 "You can read this guide offline in different formats, if you install one of "
 "the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-"
 "guide>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:95
+#: ../ubuntu-packaging-guide/index.rst:97
 msgid ""
 "If you want to learn more about building Debian packages, here are some "
 "Debian resources you may find useful:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:98
+#: ../ubuntu-packaging-guide/index.rst:100
 msgid ""
 "`How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:99
+#: ../ubuntu-packaging-guide/index.rst:101
 msgid "`Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:100
+#: ../ubuntu-packaging-guide/index.rst:102
 msgid ""
 "`Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-"
 "guide/>`_ — available in many languages;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:102
+#: ../ubuntu-packaging-guide/index.rst:104
 msgid ""
 "`Packaging tutorial <http://www.debian.org/doc/manuals/packaging-"
 "tutorial/>`_ (also available as a `package "
 "<https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:105
+#: ../ubuntu-packaging-guide/index.rst:107
 msgid ""
 "We are always looking to improve this guide. If you find any problems or "
 "have some suggestions, please `report a bug on Launchpad "
@@ -3677,8 +3673,8 @@ msgid ""
 "Fixing security bugs in Ubuntu is not really any different than :doc:`fixing "
 "a regular bug in Ubuntu<./fixing-a-bug>`, and it is assumed that you are "
 "familiar with patching normal bugs. To demonstrate where things are "
-"different, we will be updating the dbus package in Ubuntu 10.04 LTS (Lucid "
-"Lynx) for a security update."
+"different, we will be updating the dbus package in Ubuntu 12.04 LTS (Precise "
+"Pangolin) for a security update."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:19
@@ -3688,15 +3684,16 @@ msgstr ""
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:21
 msgid ""
 "In this example, we already know we want to fix the dbus package in Ubuntu "
-"10.04 LTS (Lucid Lynx). So first you need to determine the version of the "
-"package you want to download. We can use the ``rmadison`` to help with this::"
+"12.04 LTS (Precise Pangolin). So first you need to determine the version of "
+"the package you want to download. We can use the ``rmadison`` to help with "
+"this::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:30
 msgid ""
 "Typically you will want to choose the highest version for the release you "
 "want to patch that is not in -proposed or -backports. Since we are updating "
-"Lucid's dbus, you'll download 1.2.16-2ubuntu4.2 from lucid-updates::"
+"Precise's dbus, you'll download 1.4.18-1ubuntu1.4 from precise-updates::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:38
@@ -3741,8 +3738,8 @@ msgid ""
 "patch`` will launch ``dch`` automatically after un-applying all the patches. "
 "If you are not using ``edit-patch``, you can launch ``dch -i`` manually. "
 "Unlike with regular patches, you should use the following format (note the "
-"distribution name uses lucid-security since this is a security update for "
-"Lucid) for security updates::"
+"distribution name uses precise-security since this is a security update for "
+"Precise) for security updates::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:80
@@ -3808,7 +3805,7 @@ msgstr ""
 msgid ""
 "The bug report should also confirm that the issue is fixed in Ubuntu "
 "versions newer than the one with the proposed fix (in the above example "
-"newer than Lucid).  If the issue is not fixed in newer Ubuntu versions you "
+"newer than Precise).  If the issue is not fixed in newer Ubuntu versions you "
 "should prepare updates for those versions too."
 msgstr ""
 
@@ -3833,7 +3830,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:133
 msgid ""
-"The update will go into the ``proposed`` archive (for example ``lucid-"
+"The update will go into the ``proposed`` archive (for example ``precise-"
 "proposed``) where it will need to be checked that it fixes the problem and "
 "does not introduce new problems.  After a week without reported problems it "
 "can be moved to ``updates``."
@@ -4003,7 +4000,7 @@ msgstr ""
 msgid ""
 "To refer to the version of a source package in an older release of Ubuntu, "
 "just prefix the package name with the release's code name.  E.g. to refer to "
-"Tomboy's source package in Maverick_ use::"
+"Tomboy's source package in Quantal_ use::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:27
@@ -4019,7 +4016,7 @@ msgid ""
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:37
-msgid "and to access Tomboy in Debian Lenny_ use::"
+msgid "and to access Tomboy in Debian Wheezy_ use::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:48
@@ -4135,7 +4132,7 @@ msgid ""
 "When you want to do something like a `stable release update`_ (SRU), or you "
 "just want to examine the code in an old release, you'll want to grab the "
 "branch corresponding to a particular Ubuntu release.  For example, to get "
-"the Tomboy package for Maverick do::"
+"the Tomboy package for Quantal do::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:147
@@ -4371,7 +4368,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-latest.rst:18
 msgid ""
 "This works wherever you have a checkout of a branch, so it will work for "
-"things like branches of `maverick`, `hardy-proposed`, etc."
+"things like branches of `quantal`, `precise-proposed`, etc."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:23
@@ -4649,8 +4646,8 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:32
 msgid ""
-"For example, to push your fix for bug 12345 in the Tomboy package for Natty, "
-"you'd use::"
+"For example, to push your fix for bug 12345 in the Tomboy package for "
+"Raring, you'd use::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:37
@@ -5076,6 +5073,16 @@ msgstr ""
 "  Howard Chan https://launchpad.net/~smartboyhw\n"
 "  Z.X.Lyn https://launchpad.net/~newzxl"
 
+#~ msgid ""
+#~ "This will create a directory ``oneiric`` and install a minimal oneiric "
+#~ "system into it."
+#~ msgstr "這會建立一個資料夹``oneiric``及在裏面安装一個最小oneiric系統。"
+
+#~ msgid ""
+#~ "If your version of ``debootstrap`` does not know about oneiric you can try "
+#~ "upgrading to the version in ``backports``."
+#~ msgstr "如果您的``debootstrap``版本不知道oneiric您可以試更新到``backports``裏的版本。"
+
 #~ msgid "And provision a Raring AMD64 system::"
 #~ msgstr "和建立一個 Raring64 位元系統："
 
@@ -5085,12 +5092,29 @@ msgstr ""
 #~ msgstr "這命令會從雲端映像檔創立一個原始 Raring64 位元虚擬機器。要運行測試，简單地運行："
 
 #~ msgid ""
+#~ "Don't worry though, the `Ubuntu development release wiki page "
+#~ "<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways "
+#~ "to safely use the development release."
+#~ msgstr ""
+#~ "別擔心，Ubuntu 開發版本的 wiki <https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ "
+#~ "顯示各種各樣的方式安全地使用開發版本。"
+
+#~ msgid ""
 #~ "This will send your key to one keyserver, but a network of keyservers will "
 #~ "automatically sync the key between themselves. Once this syncing is "
 #~ "complete, your signed public key will be ready to verify your contributions "
 #~ "around the world."
 #~ msgstr ""
 #~ "這將發送您的密鑰到一個密鑰服務器，但它們之間的網絡密鑰服務器會自動同步密鑰。一旦此同步完成後，您簽名的公鑰已準備好在世界範圍上驗證您的貢獻。"
+
+#~ msgid ""
+#~ "where <release> is for example `natty`, `maverick`, `lucid` or in the case "
+#~ "of Debian maybe `sid`. This will take a while as it will download all the "
+#~ "necessary packages for a \"minimal installation\". These will be cached "
+#~ "though."
+#~ msgstr ""
+#~ "其中 <release> 如 `natty`, `maverick`, `lucid` 或其他情況如 Debian "
+#~ "`sid`。這將需要一段時間，因為它會下載一個“最小化安裝”的所有必要的軟件包。這些（安裝）會有緩存。"
 
 #~ msgid ""
 #~ "Packages which have ``autopkgtest`` enabled will have their tests run "
