@@ -1,7 +1,8 @@
 ubuntu-packaging-guide (0.3.4) UNRELEASED; urgency=low
 
   [ Andrew Starr-Bochicchio ]
-  * revert version bump for hello package because of FTBFS. (LP: #1248353)
+  * Revert version bump for hello package because of FTBFS. (LP: #1248353)
+  * Bump Standards-Version to 3.9.5, no changes needed.
 
   [ Daniel Holbach ]
   * add French.
