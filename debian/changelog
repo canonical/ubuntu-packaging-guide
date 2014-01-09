@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (0.3.4) UNRELEASED; urgency=low
+ubuntu-packaging-guide (0.3.4) unstable; urgency=low
 
   [ Andrew Starr-Bochicchio ]
   * Revert version bump for hello package because of FTBFS. (LP: #1248353)
@@ -23,7 +23,7 @@ ubuntu-packaging-guide (0.3.4) UNRELEASED; urgency=low
     an obsolete page (LP: #1237521)
   * updated Ubuntu release names (LP: #1257794)
 
- -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 12 Nov 2013 06:21:17 +0100
+ -- Andrew Starr-Bochicchio <asb@debian.org>  Thu, 09 Jan 2014 14:01:21 -0500
 
 ubuntu-packaging-guide (0.3.3) unstable; urgency=low
 
