@@ -108,6 +108,9 @@ We recommend that you tag every patch with DEP-3_ headers by putting them at the
 of patch file. Here are some headers that you can use:
 
 :Description: Description of what the patch does.
+              It is formatted like ``Description`` field in ``debian/control``:
+              first line is short description, starting with lowercase letter,
+              the next lines are long description, indented with a space.
 :Author:      Who wrote the patch (i.e. "Jane Doe <packager@example.com>").
 :Origin:      Where this patch comes from (i.e. "upstream"), when *Author* is
               not present.
