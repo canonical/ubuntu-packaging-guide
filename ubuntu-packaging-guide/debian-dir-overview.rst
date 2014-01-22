@@ -82,9 +82,9 @@ For the Ubuntu ``hello`` package, the ``control`` file looks something like this
  Priority: optional
  Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
  XSBC-Original-Maintainer: Jane Doe <packager@example.com>
- Standards-Version: 3.9.1
+ Standards-Version: 3.9.5
  Build-Depends: debhelper (>= 7)
- Bzr-Vcs: lp:ubuntu/hello
+ Vcs-Bzr: lp:ubuntu/hello
  Homepage: http://www.gnu.org/software/hello/
  
  Package: hello
