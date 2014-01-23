@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-12-09 12:22+0100\n"
+"POT-Creation-Date: 2014-01-22 14:52+0400\n"
 "PO-Revision-Date: 2014-01-06 13:21+0000\n"
 "Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Español; Castellano <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-07 04:59+0000\n"
-"X-Generator: Launchpad (build 16877)\n"
+"X-Launchpad-Export-Date: 2014-01-23 05:44+0000\n"
+"X-Generator: Launchpad (build 16901)\n"
 "Language: es\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4472,16 +4472,19 @@ msgstr ""
 "que puede usar:"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
-msgid "Description of what the patch does."
-msgstr "Descripción de lo que hace el parche."
+msgid ""
+"Description of what the patch does. It is formatted like ``Description`` "
+"field in ``debian/control``: first line is short description, starting with "
+"lowercase letter, the next lines are long description, indented with a space."
+msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:111
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:114
 msgid "Who wrote the patch (i.e. \"Jane Doe <packager@example.com>\")."
 msgstr ""
 "Quién escribió el parque (por ejemplo, «Juana Nadie "
 "<empaquetador@ejemplo.com>\")."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:112
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:115
 msgid ""
 "Where this patch comes from (i.e. \"upstream\"), when *Author* is not "
 "present."
@@ -4489,7 +4492,7 @@ msgstr ""
 "De dónde proviene el parche (por ejemplo, «upstream», aguas arriba), cuando "
 "no se indica el autor (*Author*)."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:114
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:117
 msgid ""
 "A link to Launchpad bug, a short form is preferred (like "
 "*https://bugs.launchpad.net/bugs/XXXXXXX*). If there are also bugs in "
@@ -4499,7 +4502,7 @@ msgstr ""
 "*https://bugs.launchpad.net/bugs/XXXXXXX*). Si existen tambien errores aguas "
 "arriba o , añadir cabeceras *Bug* o *Bug-Debian*."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:118
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:121
 msgid ""
 "Whether the patch was forwarded upstream. Either \"yes\", \"no\" or \"not-"
 "needed\"."
@@ -4507,22 +4510,22 @@ msgstr ""
 "Si el parche se reenvió aguas arriba. Uno de «yes» (sí), «no» (no) o «not-"
 "needed» (no necedsario)."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:120
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:123
 msgid "Date of the last revision (in form \"YYYY-MM-DD\")."
 msgstr "Fecha de la última revisión (en formato «YYYY-MM-DD»)."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:124
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:127
 msgid "Upgrading to New Upstream Versions"
 msgstr "Actualizar a nuevas versiones de aguas arriba"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:126
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:129
 msgid ""
 "To upgrade to the new version, you can use ``bzr merge-upstream`` command::"
 msgstr ""
 "Para actualizar a la nueva versión, puede usar la orden ``bzr merge-"
 "upstream``::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:130
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:133
 msgid ""
 "When you run this command, all patches will be unapplied, because they can "
 "become out of date. They might need to be refreshed to match the new "
@@ -4534,7 +4537,7 @@ msgstr ""
 "nuevo código fuentes aguas arriba o deban ser eliminados completamente. Para "
 "comprobar posibles problemas, aplique los parches uno a uno::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:142
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:145
 msgid ""
 "If it can be reverse-applied this means the patch has been applied already "
 "by upstream, so we can delete the patch::"
@@ -4542,11 +4545,11 @@ msgstr ""
 "Si puede ser aplicado a la inversa significa que el parche ya ha sido "
 "aplicado aguas arriba, de forma que ya se puede borrar::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:148
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:151
 msgid "Then carry on::"
 msgstr "Luego continúe::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:153
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:156
 msgid ""
 "It is a good idea to run refresh, this will update the patch relative to the "
 "changed upstream source::"
@@ -4554,15 +4557,15 @@ msgstr ""
 "Es una buena idea hacer un refresco, lo que actualizará el parche relativo a "
 "los fuentes cambiados aguas arriba::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:159
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:162
 msgid "Then commit as usual::"
 msgstr "Luego confirme como siempre::"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:165
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:168
 msgid "Making A Package Use Quilt"
 msgstr "Hacer que un paquete use Quilt"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:167
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:170
 msgid ""
 "Modern packages use Quilt by default, it is built into the packaging format. "
 " Check in ``debian/source/format`` to ensure it says ``3.0 (quilt)``."
@@ -4571,7 +4574,7 @@ msgstr ""
 "el formato de empaquetado. Compruebe ``debian/source/format`` para "
 "asegurarse que pone ``3.0 (quilt)``."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:171
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:174
 msgid ""
 "Older packages using source format 1.0 will need to explicitly use Quilt, "
 "usually by including a makefile into ``debian/rules``."
@@ -4580,11 +4583,11 @@ msgstr ""
 "Quilt explícitamente, normalmente incluyendo un archivo makefile en "
 "``debian/rules``."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:176
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:179
 msgid "Configuring Quilt"
 msgstr "Configurando Quilt"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:178
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:181
 msgid ""
 "You can use ``~/.quiltrc`` file to configure quilt. Here are some options "
 "that can be useful for using quilt with debian/packages:"
@@ -4593,11 +4596,11 @@ msgstr ""
 "algunas opciones que pueden resultar útiles para usar quilt con paquetes "
 "debian:"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:192
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:195
 msgid "Other Patch Systems"
 msgstr "Otros sistemas de parches"
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:194
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:197
 msgid ""
 "Other patch systems used by packages include ``dpatch`` and ``cdbs simple-"
 "patchsys``, these work similarly to Quilt by keeping patches in "
@@ -4616,7 +4619,7 @@ msgstr ""
 "mostrado en :ref:`capítulos previos <working-on-a-fix>`, como una manera "
 "fiable de trabajar con todos los sistemas."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:202
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:205
 msgid ""
 "In even older packages changes will be included directly to sources and kept "
 "in the ``diff.gz`` source file.  This makes it hard to upgrade to new "
@@ -4627,7 +4630,7 @@ msgstr ""
 "actualización a nuevas versiones de aguas arribas o distinguir entre parches "
 "por lo que lo mejor es evitarlo."
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:206
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:209
 msgid ""
 "Do not change a package's patch system without discussing it with the Debian "
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "

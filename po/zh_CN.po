@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-12-09 12:22+0100\n"
+"POT-Creation-Date: 2014-01-22 14:52+0400\n"
 "PO-Revision-Date: 2013-04-09 10:53+0000\n"
 "Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-12-11 05:58+0000\n"
-"X-Generator: Launchpad (build 16869)\n"
+"X-Launchpad-Export-Date: 2014-01-23 05:44+0000\n"
+"X-Generator: Launchpad (build 16901)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -3162,46 +3162,49 @@ msgid ""
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
-msgid "Description of what the patch does."
+msgid ""
+"Description of what the patch does. It is formatted like ``Description`` "
+"field in ``debian/control``: first line is short description, starting with "
+"lowercase letter, the next lines are long description, indented with a space."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:111
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:114
 msgid "Who wrote the patch (i.e. \"Jane Doe <packager@example.com>\")."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:112
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:115
 msgid ""
 "Where this patch comes from (i.e. \"upstream\"), when *Author* is not "
 "present."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:114
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:117
 msgid ""
 "A link to Launchpad bug, a short form is preferred (like "
 "*https://bugs.launchpad.net/bugs/XXXXXXX*). If there are also bugs in "
 "upstream or Debian bugtrackers, add *Bug* or *Bug-Debian* headers."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:118
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:121
 msgid ""
 "Whether the patch was forwarded upstream. Either \"yes\", \"no\" or \"not-"
 "needed\"."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:120
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:123
 msgid "Date of the last revision (in form \"YYYY-MM-DD\")."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:124
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:127
 msgid "Upgrading to New Upstream Versions"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:126
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:129
 msgid ""
 "To upgrade to the new version, you can use ``bzr merge-upstream`` command::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:130
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:133
 msgid ""
 "When you run this command, all patches will be unapplied, because they can "
 "become out of date. They might need to be refreshed to match the new "
@@ -3209,57 +3212,57 @@ msgid ""
 "problems, apply the patches one at a time::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:142
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:145
 msgid ""
 "If it can be reverse-applied this means the patch has been applied already "
 "by upstream, so we can delete the patch::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:148
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:151
 msgid "Then carry on::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:153
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:156
 msgid ""
 "It is a good idea to run refresh, this will update the patch relative to the "
 "changed upstream source::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:159
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:162
 msgid "Then commit as usual::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:165
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:168
 msgid "Making A Package Use Quilt"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:167
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:170
 msgid ""
 "Modern packages use Quilt by default, it is built into the packaging format. "
 " Check in ``debian/source/format`` to ensure it says ``3.0 (quilt)``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:171
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:174
 msgid ""
 "Older packages using source format 1.0 will need to explicitly use Quilt, "
 "usually by including a makefile into ``debian/rules``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:176
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:179
 msgid "Configuring Quilt"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:178
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:181
 msgid ""
 "You can use ``~/.quiltrc`` file to configure quilt. Here are some options "
 "that can be useful for using quilt with debian/packages:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:192
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:195
 msgid "Other Patch Systems"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:194
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:197
 msgid ""
 "Other patch systems used by packages include ``dpatch`` and ``cdbs simple-"
 "patchsys``, these work similarly to Quilt by keeping patches in "
@@ -3270,14 +3273,14 @@ msgid ""
 "a reliable way to work with all systems."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:202
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:205
 msgid ""
 "In even older packages changes will be included directly to sources and kept "
 "in the ``diff.gz`` source file.  This makes it hard to upgrade to new "
 "upstream versions or differentiate between patches and is best avoided."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/patches-to-packages.rst:206
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:209
 msgid ""
 "Do not change a package's patch system without discussing it with the Debian "
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "
