@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-22 14:52+0400\n"
-"PO-Revision-Date: 2014-01-22 11:46+0000\n"
-"Last-Translator: M Oberhauser <limurx@streber24.de>\n"
+"PO-Revision-Date: 2014-01-23 16:40+0000\n"
+"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-23 05:43+0000\n"
-"X-Generator: Launchpad (build 16901)\n"
+"X-Launchpad-Export-Date: 2014-01-24 06:10+0000\n"
+"X-Generator: Launchpad (build 16914)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -492,6 +492,8 @@ msgid ""
 "If your version of ``debootstrap`` does not know about saucy you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
+"Falls deine Version von ``debootstrap`` saucy nicht erkennt, kannst du "
+"versuchen auf die Version in ``backports`` to aktualisieren."
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
@@ -2185,6 +2187,8 @@ msgid ""
 "Cancelled build (X): The build has been cancelled for some reason. These "
 "should probably be avoided to start with."
 msgstr ""
+"Erstellung abgebrochen (X): Die Erstellung wurde aus einem Grund "
+"abgebrochen. Davon sollten folgende von Anfang vermieden werden."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:17
 msgid ""
@@ -2202,12 +2206,18 @@ msgid ""
 "fixed by a rebuild. Ask a developer to rebuild the package and that should "
 "fix it."
 msgstr ""
+"Fehler im chroot (C): Ein Teil des chroot is fehlgeschlagen, das kann meist "
+"durch eine Neuerstellung des Pakets behoben werden. Bitte einen Entwickler "
+"eine Neuerstellung vorzunehmen."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:23
 msgid ""
 "Failed to upload (U): The package could not upload. This is usually just a "
 "case of asking for a rebuild, but check the build log first."
 msgstr ""
+"Fehler beim Hochladen (U): Das Paket konnte nicht hochgeladen werden. Das "
+"ist normalerweise ein Fall um eine Neuerstellung zu bitten, aber überprüfe "
+"zuerst das Erstellungsprotokoll."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:27
 msgid "First steps"
@@ -2220,6 +2230,10 @@ msgid ""
 "and then getting the tarball or running ``dget PACKAGE_DSC`` on the .dsc "
 "file from the launchpad page. Once you have that, build it in a schroot."
 msgstr ""
+"Als erstes solltest du versuchen das FTBFS selbst zu reproduzieren. Hol dir "
+"den Code entweder per ``bzr branch lp:ubuntu/PACKAGE`` und dann den Tarball "
+"oder per ``dget PACKAGE_DSC`` auf der \".dsc\"-Datei von der Launchpad-"
+"Seite. Ist das einmal erledigt, erstelle es in einer schroot."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:35
 msgid ""
@@ -2229,6 +2243,12 @@ msgid ""
 "help find if the issue is caused by a missing, unlisted, dependency (builds "
 "locally but fails on a schroot)."
 msgstr ""
+"Du solltest in der Lage sein das FTBFS zu reproduzieren. Wenn nicht, "
+"überprüfe ob gerade eine fehlende Abhängigkeit heruntergeladen wird, was "
+"bedeutet das du sie zu einer Erstellungsabhängigkeit in debain/control "
+"machen musst. Ein Paket lokal zu erstellen hilft auch ein Problem ausfindig "
+"zu machen, was durch eine eine fehlende, nicht aufgeführte Abhängigkeit "
+"verursacht wird (funktioniert lokal aber nicht in einer schroot)."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:42
 msgid "Checking Debian"
@@ -2271,6 +2291,9 @@ msgid ""
 "will have to file a MIR bug. https://wiki.ubuntu.com/MainInclusionProcess "
 "explains the procedure."
 msgstr ""
+"Wenn ein Paket in main enthalten ist, aber eine dessen Abhängigkeiten ist "
+"nicht in main vorhanden, sollte ein MIR-Fehlerbericht eingereicht werden. "
+"https://wiki.ubuntu.com/MainInclusionProcess erklärt den Ablauf."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:72
 msgid ""
@@ -2345,6 +2368,9 @@ msgid ""
 "<https://wiki.ubuntu.com/QATeam/Testdrive>`_ or :doc:`chroots <./chroots>` "
 "to safely use the development release."
 msgstr ""
+"Mach dir deswegen aber keine Sorgen, du kannst `Testdrive "
+"<https://wiki.ubuntu.com/QATeam/Testdrive>`_ or :doc:`chroots <./chroots>` "
+"verwenden um sicher eine Entwicklerversion zu benutzen."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:31
 msgid "Install basic packaging software"
@@ -2594,6 +2620,10 @@ msgid ""
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
+"wobei <Veröffentlichung> beispielsweise `raring`, `quantal`, `precise` oder "
+"im Falle von Debian auch `sid` sein kann. Das kann ein bisschen dauern bis "
+"alle benötigen Pakete für eine \"Minimalinstallation\" heruntergeladen "
+"wurden. Diese werden zumindest vorrätig gespeichert."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:153
 msgid "Get set up to work with Launchpad"
@@ -4240,7 +4270,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:226
 msgid "Sreenshots"
-msgstr ""
+msgstr "Bildschirmfotos"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:228
 msgid ""
@@ -4248,6 +4278,10 @@ msgid ""
 "allow propective users to see what the program is like. These should be "
 "uploaded to http://screenshots.debian.net/upload ."
 msgstr ""
+"Hast du einmal ein Paket zu Debian hochgeladen, solltest du Bildschirmfotos "
+"bereitstellen um zukünftigen Benutzern einen Einblick in das Programm zu "
+"geben. Diese sollen auf http://screenshots.debian.net/upload hochgeladen "
+"werden."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
 msgid "Patches to Packages"
@@ -4468,6 +4502,8 @@ msgid ""
 "If it can be reverse-applied this means the patch has been applied already "
 "by upstream, so we can delete the patch::"
 msgstr ""
+"Wenn er umgekehrt angewendet werden kann, bedeutet das, dass der Patch "
+"bereits von Upstream angewendet wurde, damit kann er gelöscht werden::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:151
 msgid "Then carry on::"
@@ -4548,6 +4584,9 @@ msgid ""
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "
 "then feel free to add Quilt."
 msgstr ""
+"Ändere nicht das Patch-System eines Pakets ohne das mit dem Debian-"
+"Maintainer oder dem zuständigen Ubuntu-Team  zu besprechen. Wenn derzeit "
+"keines existiert, ist es dir freigestellt Quilt hinzuzufügen."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:3
 msgid "Packaging Python modules and applications"
