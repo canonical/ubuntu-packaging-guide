@@ -1,6 +1,7 @@
 ubuntu-packaging-guide (0.3.5) UNRELEASED; urgency=medium
 
-  * 
+  [ Dmitry Shachnev ]
+  * Fix argument of gpg --fingerprint (LP: #1281908, thanks John Kim).
 
  -- Andrew Starr-Bochicchio <a.starr.b@gmail.com>  Thu, 09 Jan 2014 14:18:43 -0500
 

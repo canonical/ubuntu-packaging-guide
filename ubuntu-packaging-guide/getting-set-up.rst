@@ -205,7 +205,7 @@ Upload your GPG key to Launchpad
 
 To find about your GPG fingerprint, run::
 
-    $ gpg --fingerprint <email@address.com>
+    $ gpg --fingerprint email@address.com
 
 and it will print out something like::
 
