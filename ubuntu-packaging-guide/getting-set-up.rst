@@ -203,6 +203,8 @@ can change.
 Upload your GPG key to Launchpad
 ----------------------------------
 
+First, you will need to get your fingerprint and key ID.
+
 To find about your GPG fingerprint, run::
 
     $ gpg --fingerprint email@address.com
@@ -214,6 +216,13 @@ and it will print out something like::
     uid                  Daniel Holbach <dh@mailempfang.de>
     sub   4096R/51FBE68C 2010-12-06
 
+Then run this command to submit your key to Ubuntu keyserver::
+
+    $ gpg --keyserver keyserver.ubuntu.com --send-keys 43CDE61D
+
+where ``43CDE61D`` should be replaced by your key ID (which is in the
+first line of output of the previous command). Now you can import your
+key to Launchpad.
 
 Head to https://launchpad.net/~/+editpgpkeys and copy the "Key
 fingerprint" into the text box. In the case above this would be
