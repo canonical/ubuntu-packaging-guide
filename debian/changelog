@@ -4,6 +4,9 @@ ubuntu-packaging-guide (0.3.5) UNRELEASED; urgency=medium
   * Fix argument of gpg --fingerprint (LP: #1281908, thanks John Kim).
   * Add information about sending OpenPGP keys to keyserver (LP: #1281910).
 
+  [ Andrew Starr-Bochicchio ]
+  * Add favicon (LP: #1281919).
+
  -- Andrew Starr-Bochicchio <a.starr.b@gmail.com>  Thu, 09 Jan 2014 14:18:43 -0500
 
 ubuntu-packaging-guide (0.3.4) unstable; urgency=low

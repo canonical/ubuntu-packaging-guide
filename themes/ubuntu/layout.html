@@ -63,6 +63,7 @@
     {%- block htmltitle %}
     <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
     {%- endblock %}
+    <link rel="shortcut icon" href="{{ pathto('_static/images/favicon.ico', 1) }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ pathto('_static/reset.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/960.css', 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/base.css', 1) }}" type="text/css" />
