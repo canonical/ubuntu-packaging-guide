@@ -43,7 +43,7 @@ package) will create a standard ``debian/changelog`` for you.
 Here is a sample ``changelog`` file for hello::
 
 
- hello (2.8-0ubuntu1) raring; urgency=low
+ hello (2.8-0ubuntu1) trusty; urgency=low
 
    * New upstream release with lots of bug fixes and feature improvements.
 

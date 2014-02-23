@@ -87,7 +87,7 @@ Sponsoring someone else's change is just like the above procedure, but instead
 of merging from a branch you created, you merge from the branch in the merge
 proposal::
 
-    $ bzr merge lp:~subgenius/ubuntu/raring/tomboy/bug-12345
+    $ bzr merge lp:~subgenius/ubuntu/trusty/tomboy/bug-12345
 
 If there are lots of merge conflicts you would probably want to ask the 
 contributor to fix them up.  See the next section to learn how to cancel
@@ -128,7 +128,7 @@ If you don't have an existing branch, but you know you would like to make
 changes based on what the contributor provides then you should start by
 grabbing their branch::
 
-    $ bzr branch lp:~subgenius/ubuntu/raring/tomboy/bug-12345
+    $ bzr branch lp:~subgenius/ubuntu/trusty/tomboy/bug-12345
 
 then work in this new branch, and then merge it in to the main one and upload
 as if it was your own work.  The contributor will still be mentioned in the

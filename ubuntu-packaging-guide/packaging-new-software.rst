@@ -82,7 +82,7 @@ You should now customise each of the files.
 In ``debian/changelog`` change the
 version number to an Ubuntu version: ``2.7-0ubuntu1`` (upstream version 2.7,
 Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current
-development Ubuntu release such as ``saucy``.
+development Ubuntu release such as ``trusty``.
 
 Much of the package building work is done by a series of scripts
 called ``debhelper``.  The exact behaviour of ``debhelper`` changes
@@ -176,7 +176,7 @@ now<./getting-set-up>`::
 
     $ bzr builddeb -S
     $ cd ../build-area
-    $ pbuilder-dist precise build hello_2.7-0ubuntu1.dsc
+    $ pbuilder-dist trusty build hello_2.7-0ubuntu1.dsc
 
 When you are happy with your package you will want others to review it.  You
 can upload the branch to Launchpad for review::

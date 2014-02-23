@@ -150,7 +150,7 @@ The easiest way to update this is to run::
 This will add a boilerplate changelog entry for you and launch an editor 
 where you can fill in the blanks. An example of this could be::
 
-  specialpackage (1.2-3ubuntu4) raring; urgency=low
+  specialpackage (1.2-3ubuntu4) trusty; urgency=low
 
     * debian/control: updated description to include frobnicator (LP: #123456)
 
@@ -194,11 +194,11 @@ following nomenclature::
 
 This could for example be::
 
-  lp:~emmaadams/ubuntu/raring/specialpackage/fix-for-123456
+  lp:~emmaadams/ubuntu/trusty/specialpackage/fix-for-123456
 
 So if you just run::
 
-  bzr push lp:~emmaadams/ubuntu/raring/specialpackage/fix-for-123456
+  bzr push lp:~emmaadams/ubuntu/trusty/specialpackage/fix-for-123456
   bzr lp-propose
 
 you should be all set. The push command should push it to Launchpad and the 

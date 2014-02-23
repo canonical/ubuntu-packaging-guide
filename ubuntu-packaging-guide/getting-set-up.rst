@@ -144,7 +144,7 @@ Setting ``pbuilder`` up is very easy, run::
 
     $ pbuilder-dist <release> create
 
-where <release> is for example `raring`, `quantal`, `precise` or in the case of
+where <release> is for example `raring`, `saucy`, `trusty` or in the case of
 Debian maybe `sid`. This will take a while as it will download all the
 necessary packages for a "minimal installation". These will be cached though.
 

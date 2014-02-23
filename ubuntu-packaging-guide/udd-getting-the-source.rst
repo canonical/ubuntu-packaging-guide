@@ -20,13 +20,13 @@ refer to the branch of Tomboy in the development version, you would use::
 
 To refer to the version of a source package in an older release of Ubuntu,
 just prefix the package name with the release's code name.  E.g. to refer to
-Tomboy's source package in Quantal_ use::
+Tomboy's source package in Saucy_ use::
 
-    ubuntu:quantal/tomboy
+    ubuntu:saucy/tomboy
 
 Since they are unique, you can also abbreviate the distro-series name::
 
-    ubuntu:m/tomboy
+    ubuntu:s/tomboy
 
 You can use a similar scheme to access the source branches in Debian, although
 there are no shortcuts for the Debian distro-series names.  To access the
@@ -40,7 +40,7 @@ and to access Tomboy in Debian Wheezy_ use::
 
 
 .. _`Bazaar`: http://bazaar.canonical.com/en/
-.. _Quantal: https://wiki.ubuntu.com/QuantalQuetzal
+.. _Saucy: https://wiki.ubuntu.com/SaucySalamander
 .. _Wheezy: http://debian.org/releases/stable/
 
 
