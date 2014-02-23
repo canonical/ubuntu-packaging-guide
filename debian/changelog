@@ -5,6 +5,7 @@ ubuntu-packaging-guide (0.3.5) UNRELEASED; urgency=medium
   * Add information about sending OpenPGP keys to keyserver (LP: #1281910).
   * Update release codenames to current versions (LP: #1283305).
   * More information about (un)installing .deb packages (LP: #1283323).
+  * Update dput command to work for all PPAs (LP: #1283318).
 
   [ Andrew Starr-Bochicchio ]
   * Add favicon (LP: #1281919).
