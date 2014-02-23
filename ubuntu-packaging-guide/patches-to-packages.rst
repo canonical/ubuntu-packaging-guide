@@ -15,9 +15,9 @@ There are a number of different ways of handling patches in Debian packages,
 fortunately we are standardizing on one system, `Quilt`_, which is now used by
 most packages.
 
-Let's look at an example package, ``kamoso`` in Natty::
+Let's look at an example package, ``kamoso`` in Trusty::
 
-    $ bzr branch ubuntu:natty/kamoso
+    $ bzr branch ubuntu:trusty/kamoso
 
 The patches are kept in ``debian/patches``.  This package has one patch
 ``kubuntu_01_fix_qmax_on_armel.diff`` to fix a compile failure on ARM.  The

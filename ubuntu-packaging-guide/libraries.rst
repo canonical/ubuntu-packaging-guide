@@ -35,7 +35,7 @@ An Example
 
 We will use libnova as an example::
 
-    $ bzr branch ubuntu:natty/libnova
+    $ bzr branch ubuntu:trusty/libnova
     $ sudo apt-get install libnova-dev
 
 To find the SONAME of the library run::

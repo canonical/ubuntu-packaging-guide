@@ -48,9 +48,9 @@ this textual tag is pretty strict: ``LP: #12345``.  The space between the
 number that you're fixing.  Your ``debian/changelog`` entry might look something
 like::
 
-    tomboy (1.12.0-1ubuntu3) raring urgency=low
+    tomboy (1.12.0-1ubuntu3) trusty; urgency=low
 
-        * Don't fubar the frobnicator. (LP: #12345)
+      * Don't fubar the frobnicator. (LP: #12345)
 
      -- Bob Dobbs <subgenius@example.com>  Mon, 10 Sep 2013 16:10:01 -0500
 

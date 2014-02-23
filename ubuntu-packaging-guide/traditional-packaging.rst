@@ -32,9 +32,9 @@ script::
 By default, the  latest version in the development release will be downloaded.
 You can also specify a version or Ubuntu release like::
 
-    $ pull-lp-source <package_name> precise
+    $ pull-lp-source <package_name> trusty
 
-to pull the source from the ``precise`` release, or::
+to pull the source from the ``trusty`` release, or::
 
     $ pull-lp-source <package_name> 1.0-1ubuntu1
 

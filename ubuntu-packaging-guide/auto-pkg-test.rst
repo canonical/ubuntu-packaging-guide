@@ -104,14 +104,14 @@ Then, get the source code from Launchpad::
         bzr branch lp:auto-package-testing
         cd auto-package-testing
 
-And provision a Saucy AMD64 system::
+And provision a Trusty AMD64 system::
 
-    ./bin/prepare-testbed -r saucy amd64
+    ./bin/prepare-testbed -r trusty amd64
 
-This command will create a pristine Saucy AMD64 VM from a cloud image. To
+This command will create a pristine Trusty AMD64 VM from a cloud image. To
 run the tests, simply run::
 
-        ./bin/run-adt-test -r saucy -a amd64 \
+        ./bin/run-adt-test -r trusty -a amd64 \
             -S file:///tmp/glib2.0-2.35.7/ glib2.0
 
 This would use the source package in ``/tmp/glib2.0-2.35.7/`` and run the
@@ -190,7 +190,7 @@ channel`_ to get in touch with developers who can help you.
 .. _`gvfs tests`: https://bazaar.launchpad.net/+branch/ubuntu/gvfs/files/head:/debian/tests/
 .. _`gtk+3.0 tests`: https://bazaar.launchpad.net/+branch/ubuntu/gtk+3.0/files/head:/debian/tests/
 .. _`ubiquity tests`: https://bazaar.launchpad.net/+branch/ubiquity/files/head:/debian/tests/
-.. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Saucy/view/AutoPkgTest/
+.. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Trusty/view/AutoPkgTest/
 .. _`lp:auto-package-testing`: https://code.launchpad.net/auto-package-testing
 .. _`auto-package-testing documentation`: http://bazaar.launchpad.net/~auto-package-testing-dev/auto-package-testing/trunk/view/head:/doc/USAGE.md
 .. _`list of required test-cases`: https://wiki.ubuntu.com/QATeam/RequiredTests

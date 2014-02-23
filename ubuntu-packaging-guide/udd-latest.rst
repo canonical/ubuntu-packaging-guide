@@ -16,7 +16,7 @@ release is very simple, simply use `bzr pull` from the appropriate directory::
     $ bzr pull
 
 This works wherever you have a checkout of a branch, so it will work for
-things like branches of `quantal`, `precise-proposed`, etc.
+things like branches of `saucy`, `trusty-proposed`, etc.
 
 
 Getting the latest in to your working branches
