@@ -142,9 +142,14 @@ You can view the contents of the package with::
 
     $ lesspipe hello_2.7-0ubuntu1_amd64.deb
 
-Install the package and check it works::
+Install the package and check it works (later you will be able to uninstall it
+using ``sudo apt-get remove hello`` if you want)::
 
     $ sudo dpkg --install hello_2.7-0ubuntu1_amd64.deb
+
+You can also install all packages at once using::
+
+    $ sudo debi
 
 Next Steps
 ----------
