@@ -4287,7 +4287,7 @@ msgid ""
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:226
-msgid "Sreenshots"
+msgid "Screenshots"
 msgstr "Bildschirmfotos"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:228
