@@ -227,7 +227,7 @@ instance, Debian might be in a freeze making it unlikely that your
 package will make it into Ubuntu in time for the next release. This
 process is documented on the `"New Packages"`_ section of the Ubuntu wiki.
 
-Sreenshots
+Screenshots
 ----------
 
 Once you have uploaded a package to debian, you should add screenshots

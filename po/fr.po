@@ -4361,7 +4361,7 @@ msgstr ""
 "paquets »`_ du wiki d'Ubuntu."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:226
-msgid "Sreenshots"
+msgid "Screenshots"
 msgstr "Captures d'écran"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:228
