@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-01-22 14:52+0400\n"
+"POT-Creation-Date: 2014-04-19 11:15+0400\n"
 "PO-Revision-Date: 2012-12-07 09:05+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: English (Australia) <en_AU@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-09 06:48+0000\n"
-"X-Generator: Launchpad (build 16976)\n"
+"X-Launchpad-Export-Date: 2014-04-20 05:48+0000\n"
+"X-Generator: Launchpad (build 16985)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -121,12 +121,12 @@ msgid "Then, get the source code from Launchpad::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
-msgid "And provision a Saucy AMD64 system::"
+msgid "And provision a Trusty AMD64 system::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
-"This command will create a pristine Saucy AMD64 VM from a cloud image. To "
+"This command will create a pristine Trusty AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
 
@@ -351,13 +351,13 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:20
 msgid ""
-"This will create a directory ``saucy`` and install a minimal saucy system "
+"This will create a directory ``trusty`` and install a minimal trusty system "
 "into it."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
-"If your version of ``debootstrap`` does not know about saucy you can try "
+"If your version of ``debootstrap`` does not know about Trusty you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
 
@@ -1872,8 +1872,8 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:147
 msgid ""
-"where <release> is for example `raring`, `quantal`, `precise` or in the case "
-"of Debian maybe `sid`. This will take a while as it will download all the "
+"where <release> is for example `raring`, `saucy`, `trusty` or in the case of "
+"Debian maybe `sid`. This will take a while as it will download all the "
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
@@ -1970,21 +1970,36 @@ msgid "Upload your GPG key to Launchpad"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:206
+msgid "First, you will need to get your fingerprint and key ID."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/getting-set-up.rst:208
 msgid "To find about your GPG fingerprint, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:210
+#: ../ubuntu-packaging-guide/getting-set-up.rst:212
 msgid "and it will print out something like::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:218
+#: ../ubuntu-packaging-guide/getting-set-up.rst:219
+msgid "Then run this command to submit your key to Ubuntu keyserver::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/getting-set-up.rst:223
+msgid ""
+"where ``43CDE61D`` should be replaced by your key ID (which is in the first "
+"line of output of the previous command). Now you can import your key to "
+"Launchpad."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/getting-set-up.rst:227
 msgid ""
 "Head to https://launchpad.net/~/+editpgpkeys and copy the \"Key "
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
 "FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on \"Import Key\"."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:223
+#: ../ubuntu-packaging-guide/getting-set-up.rst:232
 msgid ""
 "Launchpad will use the fingerprint to check the Ubuntu key server for your "
 "key and, if successful, send you an encrypted email asking you to confirm "
@@ -1994,7 +2009,7 @@ msgid ""
 "password, then click the link to confirm that the key is yours.`"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:230
+#: ../ubuntu-packaging-guide/getting-set-up.rst:239
 msgid ""
 "Launchpad encrypts the email, using your public key, so that it can be sure "
 "that the key is yours. If you are using Thunderbird, the default Ubuntu "
@@ -2005,23 +2020,23 @@ msgid ""
 "the email contents into your terminal window."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:239
+#: ../ubuntu-packaging-guide/getting-set-up.rst:248
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:242
+#: ../ubuntu-packaging-guide/getting-set-up.rst:251
 msgid ""
 "Find more information at "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:246
+#: ../ubuntu-packaging-guide/getting-set-up.rst:255
 msgid "Upload your SSH key to Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:248
+#: ../ubuntu-packaging-guide/getting-set-up.rst:257
 msgid ""
 "Open https://launchpad.net/~/+editsshkeys in a web browser, also open "
 "``~/.ssh/id_rsa.pub`` in a text editor. This is the public part of your SSH "
@@ -2030,18 +2045,18 @@ msgid ""
 "key\". Now click \"Import Public Key\"."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:254
+#: ../ubuntu-packaging-guide/getting-set-up.rst:263
 msgid ""
 "For more information on this process, visit the `creating an SSH keypair "
 "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
 "Launchpad."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:260
+#: ../ubuntu-packaging-guide/getting-set-up.rst:269
 msgid "Configure Bazaar"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:262
+#: ../ubuntu-packaging-guide/getting-set-up.rst:271
 msgid ""
 "Bazaar is the tool we use to store code changes in a logical way, to "
 "exchange proposed changes and merge them, even if development is done "
@@ -2049,40 +2064,40 @@ msgid ""
 "of working with Ubuntu packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:267
+#: ../ubuntu-packaging-guide/getting-set-up.rst:276
 msgid "To tell Bazaar who you are, simply run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:272
+#: ../ubuntu-packaging-guide/getting-set-up.rst:281
 msgid ""
 "`whoami` will tell Bazaar which name and email address it should use for "
 "your commit messages. With `launchpad-login` you set your Launchpad ID. This "
 "way code that you publish in Launchpad will be associated with you."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:276
+#: ../ubuntu-packaging-guide/getting-set-up.rst:285
 msgid ""
 "Note: If you can not remember the ID, go to https://launchpad.net/~ and see "
 "where it redirects you. The part after the \"~\" in the URL is your "
 "Launchpad ID.)"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:282
+#: ../ubuntu-packaging-guide/getting-set-up.rst:291
 msgid "Configure your shell"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:283
+#: ../ubuntu-packaging-guide/getting-set-up.rst:292
 msgid ""
 "Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you "
 "as well. Simply open your `~/.bashrc` in a text editor and add something "
 "like this to the bottom of it::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:290
+#: ../ubuntu-packaging-guide/getting-set-up.rst:299
 msgid "Now save the file and either restart your terminal or run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:294
+#: ../ubuntu-packaging-guide/getting-set-up.rst:303
 msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
@@ -2836,7 +2851,7 @@ msgid ""
 "In ``debian/changelog`` change the version number to an Ubuntu version: "
 "``2.7-0ubuntu1`` (upstream version 2.7, Debian version 0, Ubuntu version 1). "
 " Also change ``unstable`` to the current development Ubuntu release such as "
-"``saucy``."
+"``trusty``."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:87
@@ -2928,33 +2943,39 @@ msgid "You can view the contents of the package with::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:145
-msgid "Install the package and check it works::"
+msgid ""
+"Install the package and check it works (later you will be able to uninstall "
+"it using ``sudo apt-get remove hello`` if you want)::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:150
+msgid "You can also install all packages at once using::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:155
 msgid "Next Steps"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:152
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:157
 msgid ""
 "Even if it builds the .deb binary package, your packaging may have bugs.  "
 "Many errors can be automatically detected by our tool ``lintian`` which can "
 "be run on both the source .dsc metadata file and the .deb binary package::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:160
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:165
 msgid ""
 "A description of each of the problems it reports can be found on the "
 "`lintian website`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:163
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:168
 msgid ""
 "After making a fix to the packaging you can rebuild using ``-nc`` \"no "
 "clean\" without having to build from scratch::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:168
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:173
 msgid ""
 "Having checked that the package builds locally you should ensure it builds "
 "on a clean system using ``pbuilder``. Since we are going to upload to a PPA "
@@ -2966,35 +2987,35 @@ msgid ""
 ":doc:`do so now<./getting-set-up>`::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:181
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:186
 msgid ""
 "When you are happy with your package you will want others to review it.  You "
 "can upload the branch to Launchpad for review::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:186
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:191
 msgid ""
 "Uploading it to a PPA will ensure it builds and give an easy way for you and "
 "others to test the binary packages.  You will need to set up a PPA in "
 "Launchpad and then upload with ``dput``::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:192
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:197
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:194
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:199
 msgid ""
 "You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the `MOTU "
 "mailing list`_.  There might also be a more specific team you could ask such "
 "as the GNU team for more specific questions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:199
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:204
 msgid "Submitting for inclusion"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:201
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:206
 msgid ""
 "There are a number of paths that a package can take to enter Ubuntu. In most "
 "cases, going through Debian first can be the best path. This way ensures "
@@ -3003,28 +3024,28 @@ msgid ""
 "well. Here are some useful links for submitting new packages to Debian:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:208
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:213
 msgid ""
 "`Debian Mentors FAQ`_ - debian-mentors is for the mentoring of new and "
 "prospective Debian Developers. It is where you can find a sponsor to upload "
 "your package to the archive."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:212
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:217
 msgid ""
 "`Work-Needing and Prospective Packages`_ - Information on how to file "
 "\"Intent to Package\" and \"Request for Package\" bugs as well as list of "
 "open ITPs and RFPs."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:216
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:221
 msgid ""
 "`Debian Developer's Reference, 5.1. New packages`_ - The entire document is "
 "invaluable for both Ubuntu and Debian packagers. This section documents "
 "processes for submitting new packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:220
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:225
 msgid ""
 "In some cases, it might make sense to go directly into Ubuntu first. For "
 "instance, Debian might be in a freeze making it unlikely that your package "
@@ -3032,11 +3053,11 @@ msgid ""
 "documented on the `\"New Packages\"`_ section of the Ubuntu wiki."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:226
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:231
 msgid "Screenshots"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:228
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:233
 msgid ""
 "Once you have uploaded a package to debian, you should add screenshots to "
 "allow propective users to see what the program is like. These should be "
@@ -3067,7 +3088,7 @@ msgid ""
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:18
-msgid "Let's look at an example package, ``kamoso`` in Natty::"
+msgid "Let's look at an example package, ``kamoso`` in Trusty::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:22
@@ -3733,7 +3754,7 @@ msgid ""
 msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:37
-msgid "to pull the source from the ``precise`` release, or::"
+msgid "to pull the source from the ``trusty`` release, or::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:41
@@ -3846,7 +3867,7 @@ msgstr ""
 msgid ""
 "To refer to the version of a source package in an older release of Ubuntu, "
 "just prefix the package name with the release's code name.  E.g. to refer to "
-"Tomboy's source package in Quantal_ use::"
+"Tomboy's source package in Saucy_ use::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:27
@@ -4214,7 +4235,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-latest.rst:18
 msgid ""
 "This works wherever you have a checkout of a branch, so it will work for "
-"things like branches of `quantal`, `precise-proposed`, etc."
+"things like branches of `saucy`, `trusty-proposed`, etc."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-latest.rst:23
@@ -4493,7 +4514,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:32
 msgid ""
 "For example, to push your fix for bug 12345 in the Tomboy package for "
-"Raring, you'd use::"
+"Trusty, you'd use::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-sponsorship.rst:37
