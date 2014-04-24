@@ -19,7 +19,7 @@ countries. The URLs in ``/etc/apt/sources.list`` point to an archive or mirror.
 Every day images are built for a selection of different Ubuntu flavours. They
 can be used in various circumstances. There are images you can put on a USB
 key, you can burn them on DVDs, you can use netboot images and there are 
-images suitable for your phone and table. Ubuntu Desktop, Ubuntu Server, 
+images suitable for your phone and tablet. Ubuntu Desktop, Ubuntu Server, 
 Kubuntu and others specify a list of required packages that get on the image. 
 These images are then used for installation tests and provide the feedback 
 for further release planning.
