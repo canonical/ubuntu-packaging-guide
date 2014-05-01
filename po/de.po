@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-24 17:31+0200\n"
-"PO-Revision-Date: 2014-04-19 22:02+0000\n"
-"Last-Translator: M Oberhauser <zomtir@gmx-topmail.de>\n"
+"PO-Revision-Date: 2014-04-30 11:03+0000\n"
+"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-25 06:34+0000\n"
+"X-Launchpad-Export-Date: 2014-05-01 06:01+0000\n"
 "X-Generator: Launchpad (build 16985)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -160,13 +160,15 @@ msgstr "Dann besorge dir den Quellcode von Launchpad::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "And provision a Trusty AMD64 system::"
-msgstr ""
+msgstr "Und stelle ein Trusty AMD64 System bereit::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "This command will create a pristine Trusty AMD64 VM from a cloud image. To "
 "run the tests, simply run::"
 msgstr ""
+"Dieser Befehl wird eine unberührtes Trusty AMD64 Image aus einem Cloud Image "
+"erzeugen. Um die Tests auszuführen, starte einfach::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
 msgid ""
@@ -482,12 +484,16 @@ msgid ""
 "This will create a directory ``trusty`` and install a minimal trusty system "
 "into it."
 msgstr ""
+"Dies erstellt ein Verzeichnis ``trusty`` und installiert darin ein minimales "
+"Trusty-System."
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
 "If your version of ``debootstrap`` does not know about Trusty you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
+"Wenn Deine Version von ``debootstrap`` Trusty nicht kennt, kannst Du "
+"versuchen die Version in ``backports`` zu upgraden."
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
@@ -2628,6 +2634,10 @@ msgid ""
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
+"wobei <release> zum Beispiel `raring`, `saucy`, `trusty` oder im Fall von "
+"Debian vielleicht `sid` ist. Dies wird eine Weile dauern da es die nötigen "
+"Pakete für eine Minimalinstallation herunterlädt. Diese werden jedoch "
+"zwischengespeichert werden."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:153
 msgid "Get set up to work with Launchpad"
@@ -3637,6 +3647,11 @@ msgid ""
 "bundling) if you do not expect any other programs to use the library, more "
 "often they should be split out into separate binary packages."
 msgstr ""
+"Bibliotheken werden normalerweise von Upstream als Einzelreleases verteilt. "
+"Manchmal werden sie auch als Teil einen Programms herausgegeben. In diesem "
+"Fall können sie einfach mit in das Programm-Paket integriert werden (wenn zu "
+"erwarten ist, dass kein anderes Programm diese Bibliothek benutzt). Meistens "
+"sollten sie jedoch getrennt werden und in gesonderte Pakete gepackt werden."
 
 #: ../ubuntu-packaging-guide/libraries.rst:27
 msgid ""
@@ -4321,7 +4336,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:18
 msgid "Let's look at an example package, ``kamoso`` in Trusty::"
-msgstr ""
+msgstr "Schauen wir uns ein Beispiel an: ``kamoso`` in Trusty::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:22
 msgid ""
@@ -4792,6 +4807,8 @@ msgid ""
 "Add the path of the built docs directory (usually ``build/sphinx/html``) to "
 "your ``.docs`` file."
 msgstr ""
+"Füge den Pfad des docs Verzeichnisses (normalerweise ``build/sphinx/html``) "
+"zu Deiner ``.docs`` Datei hinzu."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:99
 msgid ""
@@ -4822,6 +4839,8 @@ msgstr ""
 msgid ""
 "Here, ``-EI`` option is used to enable experimental and informational tags."
 msgstr ""
+"Hier wird de ``-EI`` Option benutzt um experimentelle und informelle Tags zu "
+"aktivieren."
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:121
 msgid "See also"
@@ -4833,13 +4852,15 @@ msgstr "Die `Python policy`_;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:124
 msgid "`Python/Packaging`_ article on Debian wiki;"
-msgstr ""
+msgstr "`Python/Packaging`_ Artikel im Debian Wiki;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:125
 msgid ""
 "`Python/LibraryStyleGuide`_ and `Python/AppStyleGuide`_ articles on Debian "
 "wiki;"
 msgstr ""
+"`Python/LibraryStyleGuide`_ und `Python/AppStyleGuide`_ Artikel im Debian "
+"Wiki;"
 
 #: ../ubuntu-packaging-guide/python-packaging.rst:126
 msgid "Debian `python-modules`_ and `python-apps`_ teams."
@@ -5028,7 +5049,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:3
 msgid "Traditional Packaging"
-msgstr ""
+msgstr "Traditionelle Paketierung"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:5
 msgid ""
@@ -5092,7 +5113,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:37
 msgid "to pull the source from the ``trusty`` release, or::"
-msgstr ""
+msgstr "um den Code vom ``trusty`` Release herunterzuladen (pull), oder::"
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:41
 msgid ""
@@ -5256,7 +5277,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:37
 msgid "and to access Tomboy in Debian Wheezy_ use::"
-msgstr ""
+msgstr "und um auf Tomboy in Debian Wheezy_ zuzugreifen benutze::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:48
 msgid "Getting the source"
@@ -5369,7 +5390,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:132
 msgid "The `builddeb` plugin has several `configuration options`_."
-msgstr ""
+msgstr "Das `builddeb` Plugin hat mehrere `Einstellungen`_."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:136
 msgid "Getting a branch for a particular release"
@@ -5477,6 +5498,8 @@ msgstr ""
 msgid ""
 "UDD branches are all in a standard location, so doing a checkout is easy::"
 msgstr ""
+"UDD Branches sind alle an einem Standard-Ort, was den Checkout recht einfach "
+"macht::"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:53
 msgid ""
@@ -5529,6 +5552,8 @@ msgid ""
 "From this we can clearly see what has changed in Ubuntu compared to Debian, "
 "very handy."
 msgstr ""
+"Daran können wir klar erkennen was sich in Ubuntu geändert hat (verglichen "
+"mit Debian). Das ist sehr hilfreich."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:91
 msgid "Bazaar"
@@ -6433,7 +6458,6 @@ msgstr ""
 "  Richard Stromer https://launchpad.net/~noxan\n"
 "  Robin Gloster https://launchpad.net/~robin-gloster\n"
 "  Sven Seelbach https://launchpad.net/~gurke255\n"
-"  Torsten Franz https://launchpad.net/~torsten.franz\n"
 "  Ulf Rompe https://launchpad.net/~rompe\n"
 "  Victor Nelliessen https://launchpad.net/~dergatt+launchpad\n"
 "  Virginia Moenikes https://launchpad.net/~virginiamoenikes\n"
