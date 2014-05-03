@@ -2,7 +2,7 @@
 autopkgtest: Automatic testing for packages
 ===========================================
 
-The `DEP 8 specification`_ defines how automatic testing can very easily be 
+The `DEP 8 specification <DEP8_>`_ defines how automatic testing can very easily be 
 integrated into packages. To integrate a test into a package, all you need to 
 do is:
 
@@ -21,7 +21,7 @@ Testbed requirements
 In ``debian/tests/control`` you specify what to expect from the testbed. So 
 for example you list all the required packages for the tests, if the testbed
 gets broken during the build or if ``root`` permissions are required. The 
-`DEP 8 specification`_ lists all available options.
+`DEP 8 specification <DEP8_>`_ lists all available options.
 
 Below we are having a look at the ``glib2.0`` source package. In a very 
 simple case the file would look like this::
@@ -93,7 +93,7 @@ this is to run this command in the source tree::
 The downside of this approach is that you test it locally, but can't ensure
 that this will work in a minimal environment. For example will it be hard to
 ensure that all the required packages are installed for the tests. With 
-`lp:auto-package-testing`_ we have a more comprehensive testing tool. It 
+`lp:auto-package-testing <autotesting_>`_ we have a more comprehensive testing tool. It 
 uses a pristine virtual machine to run the tests. To set it up, firstly
 install the needed dependencies::
 
@@ -124,7 +124,7 @@ Ubuntu, or the package is not in Ubuntu at all. If use the ``-k`` flag you can
 log into the virtual machine after the tests were run. This makes it very easy
 to debug issues.
 
-The `auto-package-testing documentation`_ has a lot more valuable information
+The `auto-package-testing documentation <autotesting-doc_>`_ has a lot more valuable information
 on other testing options.
 
 
@@ -135,13 +135,13 @@ Further examples
 This list is not comprehensive, but might help you get a better idea of how
 automated tests are implemented and used in Ubuntu.
 
-* The `libxml2 tests`_ are very similar. They also run a test-build of a 
+* The `libxml2 tests <libxml2_>`_ are very similar. They also run a test-build of a 
   simple piece of C code and execute it.
-* The `gtk+3.0 tests`_ also do a compile/link/run check in the "build" test. 
+* The `gtk+3.0 tests <gtk3_>`_ also do a compile/link/run check in the "build" test. 
   There is an additional "python3-gi" test which verifies that the GTK 
   library can also be used through introspection.
-* In the `ubiquity tests`_ the upstream test-suite is executed.
-* The `gvfs tests`_ have comprehensive testing of their functionality and
+* In the `ubiquity tests <ubiquity_>`_ the upstream test-suite is executed.
+* The `gvfs tests <gvfs_>`_ have comprehensive testing of their functionality and
   are very interesting because they emulate usage of CDs, Samba, DAV and
   other bits.
 
@@ -150,7 +150,7 @@ Ubuntu infrastructure
 
 Packages which have ``autopkgtest`` enabled will have their tests run whenever
 they get uploaded or any of their dependencies change. The output of
-`automatically run autopkgtest tests`_ can be viewed on the web and is 
+`automatically run autopkgtest tests <jenkins_>`_ can be viewed on the web and is 
 regularly updated.
 
 While Debian does not have an automatic testing infrastructure set up yet, 
@@ -169,7 +169,7 @@ The process of submitting an autopkgtest for a package is largely similar to
 * run ``bzr branch ubuntu:<packagename>``,
 * edit ``debian/control`` to enable the tests,
 * add the ``debian/tests`` directory,
-* write the ``debian/tests/control`` based on the `DEP 8 Specification`_,
+* write the ``debian/tests/control`` based on the `DEP 8 Specification <dep8_>`_,
 * add your test case(s) to ``debian/tests``,
 * commit your changes, push them to Launchpad, propose a merge and get it 
   reviewed just like any other improvement in a source package.
@@ -178,20 +178,20 @@ The process of submitting an autopkgtest for a package is largely similar to
 What you can do
 ===============
 
-The Ubuntu Engineering team put together a `list of required test-cases`_,
+The Ubuntu Engineering team put together a `list of required test-cases <requiredtests_>`_,
 where packages which need tests are put into different categories. Here you
 can find examples of these tests and easily assign them to yourself.
 
 If you should run into any problems, you can join the `#ubuntu-quality IRC
-channel`_ to get in touch with developers who can help you.
+channel <qualityirc_>`_ to get in touch with developers who can help you.
 
-.. _`DEP 8 Specification`: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob_plain;f=doc/README.package-tests;hb=HEAD
-.. _`libxml2 tests`: https://bazaar.launchpad.net/+branch/ubuntu/libxml2/files/head:/debian/tests/
-.. _`gvfs tests`: https://bazaar.launchpad.net/+branch/ubuntu/gvfs/files/head:/debian/tests/
-.. _`gtk+3.0 tests`: https://bazaar.launchpad.net/+branch/ubuntu/gtk+3.0/files/head:/debian/tests/
-.. _`ubiquity tests`: https://bazaar.launchpad.net/+branch/ubiquity/files/head:/debian/tests/
-.. _`automatically run autopkgtest tests`: https://jenkins.qa.ubuntu.com/view/Trusty/view/AutoPkgTest/
-.. _`lp:auto-package-testing`: https://code.launchpad.net/auto-package-testing
-.. _`auto-package-testing documentation`: http://bazaar.launchpad.net/~auto-package-testing-dev/auto-package-testing/trunk/view/head:/doc/USAGE.md
-.. _`list of required test-cases`: https://wiki.ubuntu.com/QATeam/RequiredTests
-.. _`#ubuntu-quality IRC channel`: http://webchat.freenode.net/?channels=ubuntu-quality
+.. _DEP8: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob_plain;f=doc/README.package-tests;hb=HEAD
+.. _libxml2: https://bazaar.launchpad.net/+branch/ubuntu/libxml2/files/head:/debian/tests/
+.. _gvfs: https://bazaar.launchpad.net/+branch/ubuntu/gvfs/files/head:/debian/tests/
+.. _gtk3: https://bazaar.launchpad.net/+branch/ubuntu/gtk+3.0/files/head:/debian/tests/
+.. _ubiquity: https://bazaar.launchpad.net/+branch/ubiquity/files/head:/debian/tests/
+.. _jenkins: https://jenkins.qa.ubuntu.com/view/Saucy/view/AutoPkgTest/
+.. _autotesting: https://code.launchpad.net/auto-package-testing
+.. _autotestingdoc: http://bazaar.launchpad.net/~auto-package-testing-dev/auto-package-testing/trunk/view/head:/doc/USAGE.md
+.. _requiredtests: https://wiki.ubuntu.com/QATeam/RequiredTests
+.. _qualityirc: http://webchat.freenode.net/?channels=ubuntu-quality

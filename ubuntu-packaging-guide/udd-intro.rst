@@ -96,10 +96,10 @@ offering the power of Git.
 
 To do packaging with UDD you will need to know the basics of how to use
 Bazaar to manage files.  For an introduction to Bazaar see the `Bazaar Five
-Minute Tutorial
-<http://doc.bazaar.canonical.com/bzr.dev/en/mini-tutorial/index.html>`_ and the
-`Bazaar Users Guide
-<http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_.
+Minute Tutorial <5MinTutorial_>`_ and the `Bazaar Users Guide <UsersGuide_>`_.
+
+.. _5MinTutorial: http://doc.bazaar.canonical.com/bzr.dev/en/mini-tutorial/index.html
+.. _UsersGuide: http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html
 
 Limitations of UDD
 ------------------
@@ -120,8 +120,8 @@ packages.  It currently has some notable limitations:
 
 * Some packages have not been successfully imported into UDD branches.  Recent
   versions of Bazaar will automatically notify you when this is the case.
-  You can also check the `status of the package importer`_ manually before working 
-  on a branch.
+  You can also check the `status of the package importer <ImportStatus_>`_
+  manually before working on a branch.
 
 All of the above are being worked on and UDD is expected to become the main way
 to work on Ubuntu packages soon.  However currently most teams within Ubuntu do
@@ -129,4 +129,4 @@ not yet work with UDD branches for their  development.  However because UDD
 branches are the same as the packages in the  archive any team should be able to
 accept merges against them.
 
-.. _`status of the package importer`: http://package-import.ubuntu.com/status
+.. _ImportStatus: http://package-import.ubuntu.com/status

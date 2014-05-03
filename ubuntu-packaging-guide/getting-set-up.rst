@@ -23,9 +23,10 @@ platform, Launchpad. Here's what we'll cover:
   Ubuntu. Doing so will allow you to test changes in the same environment where 
   those changes will actually be applied and used. 
 
-  Don't worry though, you can use `Testdrive <https://wiki.ubuntu.com/QATeam/Testdrive>`_
+  Don't worry though, you can use `Testdrive`_
   or :doc:`chroots <./chroots>` to safely use the development release.
 
+  .. _Testdrive: https://wiki.ubuntu.com/QATeam/Testdrive
 
 Install basic packaging software
 ================================
@@ -47,7 +48,7 @@ are quite common in Ubuntu development::
 
 This command will install the following software:
 
-* ``gnupg`` -- `GNU Privacy Guard`_ contains tools you will need to create a
+* ``gnupg`` -- `GNU Privacy Guard <GPG_>`_ contains tools you will need to create a
   cryptographic key with which you will sign files you want to upload to
   Launchpad.
 * ``pbuilder`` -- a tool to do reproducible builds of a package in a
@@ -65,7 +66,7 @@ This command will install the following software:
 Create your GPG key
 -------------------
 
-GPG stands for `GNU Privacy Guard`_ and it implements the OpenPGP standard
+GPG stands for `GNU Privacy Guard <GPG_>`_ and it implements the OpenPGP standard
 which allows you to sign and encrypt messages and files. This is useful for a
 number of purposes. In our case it is important that you can sign files with
 your key so they can be identified as something that you worked on. If you
@@ -182,7 +183,7 @@ information see the `Launchpad Help wiki <https://help.launchpad.net/>`_.
 Get a Launchpad account
 --------------------------
 
-If you don't already have a Launchpad account, you can easily `create one`_.
+If you don't already have a Launchpad account, you can easily `create one <LP-AccountCreate_>`_.
 If you have a Launchpad account but cannot remember your Launchpad id, you can
 find this out by going to https://launchpad.net/~ and looking for the
 part after the `~` in the URL.
@@ -195,10 +196,11 @@ When you register a new account, Launchpad will send you an email with a link
 you need to open in your browser in order to verify your email address. If
 you don't receive it, check in your spam folder.
 
-`The new account help page <https://help.launchpad.net/YourAccount/NewAccount>`_ 
-on Launchpad has more information about the process and additional settings you 
-can change.
- 
+`The new account help page <LP-AccountHelp_>`_ on Launchpad has more information
+about the process and additional settings you can change.
+
+.. _LP-AccountHelp: https://help.launchpad.net/YourAccount/NewAccount
+
 
 Upload your GPG key to Launchpad
 ----------------------------------
@@ -238,12 +240,13 @@ password, then click the link to confirm that the key is yours.`
 
 Launchpad encrypts the email, using your public key, so that it can be sure
 that the key is yours. If you are using Thunderbird, the default Ubuntu email
-client, you can install the
-`Enigmail plugin <https://apps.ubuntu.com/cat/applications/enigmail/>`_
+client, you can install the `Enigmail plugin <Enigmail_>`_
 to easily decrypt the message.
 If your email software does not support OpenPGP
 encryption, copy the encrypted email's contents, type ``gpg`` in your
 terminal, then paste the email contents into your terminal window.
+
+.. _Enigmail: https://apps.ubuntu.com/cat/applications/enigmail/
 
 Back on the Launchpad website, use the Confirm button and Launchpad will
 complete the import of your OpenPGP key.
@@ -260,10 +263,10 @@ so it is safe to share it with Launchpad. Copy the contents of the file and
 paste them into the text box on the web page that says "Add an SSH key". Now
 click "Import Public Key".
 
-For more information on this process, visit the `creating an SSH keypair 
-<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on 
-Launchpad.
+For more information on this process, visit the `creating an SSH keypair <genssh_>`_
+page on Launchpad.
 
+.. _genssh: https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair
 
 Configure Bazaar
 ----------------
@@ -304,7 +307,7 @@ Now save the file and either restart your terminal or run::
 the configuration file for that shell accordingly.)
 
 
-.. _`GNU Privacy Guard`: http://gnupg.org/
+.. _GPG: https://www.gnupg.org/
 .. _SSH: http://www.openssh.com/
 .. _Launchpad: https://launchpad.net/
-.. _`create one`: https://launchpad.net/+login
+.. _LP-AccountCreate: https://launchpad.net/+login

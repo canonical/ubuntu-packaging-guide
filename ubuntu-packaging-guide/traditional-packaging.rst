@@ -64,11 +64,12 @@ To continue with our example, let's edit the ``debian/control`` and "fix" our
     $ cd xicc-0.2
     $ sed -i 's/colour/color/g' debian/control
 
-We also must adhere to the `Debian Maintainer Field Spec
-<https://wiki.ubuntu.com/DebianMaintainerField>`_ and edit ``debian/control``
-to replace::
+We also must adhere to the `Debian Maintainer Field Spec <MaintFieldSpec_>`_
+and edit ``debian/control`` to replace::
 
     Maintainer: Ross Burton <ross@debian.org>
+
+.. _MaintFieldSpec: https://wiki.ubuntu.com/DebianMaintainerField
 
 with::
 
