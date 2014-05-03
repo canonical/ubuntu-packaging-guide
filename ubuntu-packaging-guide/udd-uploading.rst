@@ -4,7 +4,7 @@ Uploading a package
 
 Once your merge proposal is reviewed and approved, you will want to upload
 your package, either to the archive (if you have permission) or to your
-`Personal Package Archive`_ (PPA).  You might also want to do an upload if
+`Personal Package Archive <PPA_>`_ (PPA).  You might also want to do an upload if
 you are sponsoring someone else's changes.
 
 
@@ -134,4 +134,4 @@ then work in this new branch, and then merge it in to the main one and upload
 as if it was your own work.  The contributor will still be mentioned in the
 changelog, and Bazaar will correctly attribute the changes they made to them.
 
-.. _`Personal Package Archive`: https://help.launchpad.net/Packaging/PPA
+.. _PPA: https://help.launchpad.net/Packaging/PPA

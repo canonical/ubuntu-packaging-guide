@@ -135,6 +135,6 @@ The update will go into the ``proposed`` archive (for example
 and does not introduce new problems.  After a week without reported problems it
 can be moved to ``updates``.
 
-See the `Stable Release Updates wiki page`_ for more information.
+See the `Stable Release Updates wiki page <SRUWiki_>`_ for more information.
 
-.. _`Stable Release Updates wiki page`: https://wiki.ubuntu.com/StableReleaseUpdates
+.. _SRUWiki: https://wiki.ubuntu.com/StableReleaseUpdates
