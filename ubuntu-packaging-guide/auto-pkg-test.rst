@@ -77,56 +77,52 @@ this is compiled with system libraries (using flags and library paths as
 provided by `pkg-config`). Then the compiled binary, which just exercises some
 parts of core glib functionality, is run.
 
-While this test is very small and basic, it tests quite a number of core
-components on a system. This may help to uncover critical issues early on.
+While this test is very small and simple, it covers quite a lot: that your -dev
+package has all necessary dependencies, that your package installs working
+pkg-config files, headers and libraries are put into the right place, or that
+the compiler and linker work. This helps to uncover critical issues early on.
 
 Executing the test
 ==================
 
-The test script can be easily executed on its own, but if you want to make 
-sure that the testbed is properly set up, you might want to use ``adt-run`` 
-from the ``autopkgtest`` package to execute the test. The easiest way to do
-this is to run this command in the source tree::
+While the test script can be easily executed on its own, it is strongly
+recommended to actually use ``adt-run`` from the ``autopkgtest`` package for
+verifying that your test works; otherwise, if it fails in the Ubuntu Continuous
+Integration (CI) system, it will not land in Ubuntu.  This also avoids cluttering
+your workstation with test packages or test configuration if the test does
+something more intrusive than the simple example above.
 
-        sudo adt-run --no-built-binaries --built-tree=. --- adt-virt-null
+The `README.running-tests <running_tests_local_>`_
+(`online version <running_tests_online_>`_) documentation explains all
+available testbeds (schroot, LXC, QEMU, etc.) and the most common scenarios how
+to run your tests with ``adt-run``, e. g. with locally built binaries, locally
+modified tests, etc.
 
-The downside of this approach is that you test it locally, but can't ensure
-that this will work in a minimal environment. For example will it be hard to
-ensure that all the required packages are installed for the tests. With 
-`lp:auto-package-testing <autotesting_>`_ we have a more comprehensive testing tool. It 
-uses a pristine virtual machine to run the tests. To set it up, firstly
-install the needed dependencies::
+The Ubuntu CI system uses the QEMU runner and runs the tests from the packages
+in the archive, with ``-proposed`` enabled. To reproduce the exact same
+environment, first install the necessary packages::
 
-        sudo apt-get install qemu-utils kvm eatmydata
+        sudo apt-get install autopkgtest qemu-system qemu-utils
 
-Then, get the source code from Launchpad::
+Now build a testbed with::
 
-        bzr branch lp:auto-package-testing
-        cd auto-package-testing
+        adt-buildvm-ubuntu-cloud -v
 
-And provision a Trusty AMD64 system::
+(Please see its manpage and ``--help`` output for selecting different releases,
+architectures, output directory, or using proxies). This will build e. g.
+``adt-trusty-amd64-cloud.img``.
 
-    ./bin/prepare-testbed -r trusty amd64
+Then run the tests of a source package like ``libpng`` in that QEMU image::
 
-This command will create a pristine Trusty AMD64 VM from a cloud image. To
-run the tests, simply run::
+        adt-run libpng --- qemu adt-trusty-amd64-cloud.img
 
-        ./bin/run-adt-test -r trusty -a amd64 \
-            -S file:///tmp/glib2.0-2.35.7/ glib2.0
+The Ubuntu CI system runs packages with ``-proposed`` enabled; to enable that,
+run::
 
-This would use the source package in ``/tmp/glib2.0-2.35.7/`` and run the
-tests from this tree against the package ``glib2.0`` from the archive. The
-option ``-S`` also supports schemes for bzr, git, and apt sources. If you
-only specify a source with ``-S`` but do not specify a package name, this will
-instead build the branch and install the binaries from that build; this is
-useful if you want to run tests on a newer version than the one packaged in
-Ubuntu, or the package is not in Ubuntu at all. If use the ``-k`` flag you can
-log into the virtual machine after the tests were run. This makes it very easy
-to debug issues.
+        adt-run libpng -U --apt-pocket=proposed --- qemu adt-trusty-amd64-cloud.img
 
-The `auto-package-testing documentation <autotesting-doc_>`_ has a lot more valuable information
-on other testing options.
-
+The ``adt-run`` manpage has a lot more valuable information on other testing
+options.
 
 
 Further examples
@@ -153,12 +149,10 @@ they get uploaded or any of their dependencies change. The output of
 `automatically run autopkgtest tests <jenkins_>`_ can be viewed on the web and is 
 regularly updated.
 
-While Debian does not have an automatic testing infrastructure set up yet, 
-they should still be submitted to Debian, as DEP-8 is a Debian specification 
-and Debian developers or users can still manually run the tests.
-
-Packages in Debian with a testsuite header will also be automatically added 
-when they are synced to Ubuntu.
+Debian also uses ``adt-run`` to run package tests, although currently only in
+schroots, so results may vary a bit. Results and logs can be seen on
+`ci.debian.net <http://ci.debian.net>`_. So please submit any test fixes or new
+tests to Debian as well.
 
 Getting the test into Ubuntu
 ============================
@@ -190,8 +184,8 @@ channel <qualityirc_>`_ to get in touch with developers who can help you.
 .. _gvfs: https://bazaar.launchpad.net/+branch/ubuntu/gvfs/files/head:/debian/tests/
 .. _gtk3: https://bazaar.launchpad.net/+branch/ubuntu/gtk+3.0/files/head:/debian/tests/
 .. _ubiquity: https://bazaar.launchpad.net/+branch/ubiquity/files/head:/debian/tests/
-.. _jenkins: https://jenkins.qa.ubuntu.com/view/Saucy/view/AutoPkgTest/
-.. _autotesting: https://code.launchpad.net/auto-package-testing
-.. _autotestingdoc: http://bazaar.launchpad.net/~auto-package-testing-dev/auto-package-testing/trunk/view/head:/doc/USAGE.md
+.. _jenkins: https://jenkins.qa.ubuntu.com/view/Utopic/view/AutoPkgTest/
+.. _running_tests_local: file:///usr/share/doc/autopkgtest/README.running-tests.gz
+.. _running_tests_online: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob;f=doc/README.running-tests
 .. _requiredtests: https://wiki.ubuntu.com/QATeam/RequiredTests
 .. _qualityirc: http://webchat.freenode.net/?channels=ubuntu-quality
