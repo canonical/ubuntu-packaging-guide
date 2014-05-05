@@ -156,14 +156,20 @@ Next Steps
 
 Even if it builds the .deb binary package, your packaging may have
 bugs.  Many errors can be automatically detected by our tool
-``lintian`` which can be run on both the source .dsc metadata file and
-the .deb binary package::
+``lintian`` which can be run on the source .dsc metadata file, .deb
+binary packages or .changes file::
 
     $ lintian hello_2.7-0ubuntu1.dsc
     $ lintian hello_2.7-0ubuntu1_amd64.deb
 
-A description of each of the problems it reports can be found on the
-`lintian website <Lintian_>`_.
+To see verbose description of the problems use ``--info`` lintian flag
+or ``lintian-info`` command.
+
+Results of Ubuntu archive checks can be found online on
+http://lintian.ubuntuwire.org.
+
+For Python packages, there is also a ``lintian4python`` tool that provides
+some additional lintian checks.
 
 After making a fix to the packaging you can rebuild using ``-nc`` "no clean"
 without having to build from scratch::
@@ -237,7 +243,6 @@ be uploaded to http://screenshots.debian.net/upload .
 .. _PPA: https://help.launchpad.net/Packaging/PPA
 .. _GNU.org: http://www.gnu.org/software/hello/
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
-.. _Lintian: http://lintian.debian.org/tags.html
 .. _ubuntu-motu: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
 .. _MentorsFAQ: https://wiki.debian.org/DebianMentorsFaq
 .. _WNPP: http://www.debian.org/devel/wnpp/

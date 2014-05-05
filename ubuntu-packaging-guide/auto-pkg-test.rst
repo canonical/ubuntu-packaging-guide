@@ -93,7 +93,7 @@ your workstation with test packages or test configuration if the test does
 something more intrusive than the simple example above.
 
 The `README.running-tests <running_tests_local_>`_
-(`online version <running_tests_online_>`_) documentation explains all
+(`online version <DEP8_>`_) documentation explains all
 available testbeds (schroot, LXC, QEMU, etc.) and the most common scenarios how
 to run your tests with ``adt-run``, e. g. with locally built binaries, locally
 modified tests, etc.
@@ -151,7 +151,7 @@ regularly updated.
 
 Debian also uses ``adt-run`` to run package tests, although currently only in
 schroots, so results may vary a bit. Results and logs can be seen on
-`ci.debian.net <http://ci.debian.net>`_. So please submit any test fixes or new
+http://ci.debian.net. So please submit any test fixes or new
 tests to Debian as well.
 
 Getting the test into Ubuntu
@@ -179,13 +179,12 @@ can find examples of these tests and easily assign them to yourself.
 If you should run into any problems, you can join the `#ubuntu-quality IRC
 channel <qualityirc_>`_ to get in touch with developers who can help you.
 
-.. _DEP8: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob_plain;f=doc/README.package-tests;hb=HEAD
+.. _DEP8: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob;f=doc/README.package-tests
 .. _libxml2: https://bazaar.launchpad.net/+branch/ubuntu/libxml2/files/head:/debian/tests/
 .. _gvfs: https://bazaar.launchpad.net/+branch/ubuntu/gvfs/files/head:/debian/tests/
 .. _gtk3: https://bazaar.launchpad.net/+branch/ubuntu/gtk+3.0/files/head:/debian/tests/
 .. _ubiquity: https://bazaar.launchpad.net/+branch/ubiquity/files/head:/debian/tests/
 .. _jenkins: https://jenkins.qa.ubuntu.com/view/Utopic/view/AutoPkgTest/
 .. _running_tests_local: file:///usr/share/doc/autopkgtest/README.running-tests.gz
-.. _running_tests_online: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob;f=doc/README.running-tests
 .. _requiredtests: https://wiki.ubuntu.com/QATeam/RequiredTests
 .. _qualityirc: http://webchat.freenode.net/?channels=ubuntu-quality
