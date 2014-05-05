@@ -4,8 +4,8 @@ Backporting software updates
 
 Sometimes you might want to make new functionality available in a stable
 release which is not connected to a critical bug fix. For these scenarios
-you have two options: either you `upload to a PPA 
-<https://help.launchpad.net/Packaging/PPA>`_ or prepare a backport.
+you have two options: either you `upload to a PPA <ppadoc_>`_
+or prepare a backport.
 
 
 Personal Package Archive (PPA)
@@ -15,10 +15,10 @@ Using a PPA has a number of benefits. It is fairly straight-forward, you
 don't need approval of anyone, but the downside of it is that your users will
 have to manually enable it. It is a non-standard software source.
 
-The `PPA documentation on Launchpad`_ is fairly comprehensive and should get
+The `PPA documentation on Launchpad <ppadoc_>`_ is fairly comprehensive and should get
 you up and running in no time.
 
-.. _PPA documentation on Launchpad: https://help.launchpad.net/Packaging/PPA
+.. _ppadoc: https://help.launchpad.net/Packaging/PPA
 
 
 Official Ubuntu Backports
