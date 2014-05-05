@@ -60,11 +60,18 @@ translated ``.po`` files are automatically imported to the bzr branch.
 
 Some notes about translating the guide:
 
-- Only inline links can be translated currently. Do not translate named
-  links.
 - Some formatting is part of reStructuredText and should not be changed,
   including emphasis (which uses asterisks or underscores), paragraph ending
-  before a code block (``::``) and double backtick quotes (``\`\```).
+  before a code block (``::``) and double backtick quotes (``````).
+
+- This guide uses email-style reStructuredText links. If you see a link in
+  the text like::
+
+    `Translatable link text <LinkReference_>`_
+
+  Then replace the link text with your translations, but keep the
+  LinkReference unchanged (even if it is in English). The same applies
+  if URL is used instead of LinkReference.
 
 To test your translation, use ``make BUILDER-LANGUAGE`` command (for example,
 ``make html-it`` will build HTML docs in Italian language).
