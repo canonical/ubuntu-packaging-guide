@@ -149,12 +149,10 @@ they get uploaded or any of their dependencies change. The output of
 `automatically run autopkgtest tests <jenkins_>`_ can be viewed on the web and is 
 regularly updated.
 
-While Debian does not have an automatic testing infrastructure set up yet, 
-they should still be submitted to Debian, as DEP-8 is a Debian specification 
-and Debian developers or users can still manually run the tests.
-
-Packages in Debian with a testsuite header will also be automatically added 
-when they are synced to Ubuntu.
+Debian also uses ``adt-run`` to run package tests, although currently only in
+schroots, so results may vary a bit. Results and logs can be seen on
+`ci.debian.net <http://ci.debian.net>`_. So please submit any test fixes or new
+tests to Debian as well.
 
 Getting the test into Ubuntu
 ============================
