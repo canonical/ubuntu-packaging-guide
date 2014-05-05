@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.3.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-05 12:32+0200\n"
+"POT-Creation-Date: 2014-05-05 16:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,7 +81,7 @@ msgid "While the test script can be easily executed on its own, it is strongly r
 msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:95
-msgid "The `README.running-tests <running_tests_local_>`_ (`online version <running_tests_online_>`_) documentation explains all available testbeds (schroot, LXC, QEMU, etc.) and the most common scenarios how to run your tests with ``adt-run``, e. g. with locally built binaries, locally modified tests, etc."
+msgid "The `README.running-tests <running_tests_local_>`_ (`online version <DEP8_>`_) documentation explains all available testbeds (schroot, LXC, QEMU, etc.) and the most common scenarios how to run your tests with ``adt-run``, e. g. with locally built binaries, locally modified tests, etc."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:101
@@ -141,7 +141,7 @@ msgid "Packages which have ``autopkgtest`` enabled will have their tests run whe
 msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:152
-msgid "Debian also uses ``adt-run`` to run package tests, although currently only in schroots, so results may vary a bit. Results and logs can be seen on `ci.debian.net <http://ci.debian.net>`_. So please submit any test fixes or new tests to Debian as well."
+msgid "Debian also uses ``adt-run`` to run package tests, although currently only in schroots, so results may vary a bit. Results and logs can be seen on http://ci.debian.net. So please submit any test fixes or new tests to Debian as well."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:158
@@ -1448,33 +1448,37 @@ msgstr ""
 msgid "Knowledge Base"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:92
+#: ../ubuntu-packaging-guide/index.rst:91
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:94
+#: ../ubuntu-packaging-guide/index.rst:93
 msgid "You can read this guide offline in different formats, if you install one of the `binary packages <BinPkgs_>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:97
+#: ../ubuntu-packaging-guide/index.rst:96
 msgid "If you want to learn more about building Debian packages, here are some Debian resources you may find useful:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:100
+#: ../ubuntu-packaging-guide/index.rst:99
 msgid "`How to package for Debian <HowToPackage_>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:101
+#: ../ubuntu-packaging-guide/index.rst:100
 msgid "`Debian Policy Manual <Policy_>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:102
+#: ../ubuntu-packaging-guide/index.rst:101
 msgid "`Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many languages;"
 msgstr ""
 
+#: ../ubuntu-packaging-guide/index.rst:102
+msgid "`Packaging tutorial <PkgTutorial_>`_ (also available as a `package <PkgTutorialPkg_>`_);"
+msgstr ""
+
 #: ../ubuntu-packaging-guide/index.rst:103
-msgid "`Packaging tutorial <PkgTutorial_>`_ (also available as a `package <PkgTutorialPkg_>`_)."
+msgid "`Guide for Packaging Python Modules <PythonModules_>`_."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:105
@@ -1554,7 +1558,7 @@ msgid "KDE Packaging"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:5
-msgid "Packaging of KDE programs in Ubuntu is managed by the Kubuntu and MOTU teams.  You can contact the Kubuntu team on the `Kubuntu mailing list <ML_>`_ and ``#kubuntu-devel`` Freenode IRC channel.  More information about Kubuntu development is on the `Kubuntu wiki page <Wiki_>`_."
+msgid "Packaging of KDE programs in Ubuntu is managed by the Kubuntu and MOTU teams.  You can contact the Kubuntu team on the `Kubuntu mailing list <KubuntuML_>`_ and ``#kubuntu-devel`` Freenode IRC channel.  More information about Kubuntu development is on the `Kubuntu wiki page <Wiki_>`_."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:10
@@ -1574,7 +1578,6 @@ msgid "Kubuntu does not change the branding of packages except where upstream ex
 msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:27
-#: ../ubuntu-packaging-guide/python-packaging.rst:31
 msgid "debian/rules"
 msgstr ""
 
@@ -1884,66 +1887,74 @@ msgid "Next Steps"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:157
-msgid "Even if it builds the .deb binary package, your packaging may have bugs.  Many errors can be automatically detected by our tool ``lintian`` which can be run on both the source .dsc metadata file and the .deb binary package::"
+msgid "Even if it builds the .deb binary package, your packaging may have bugs.  Many errors can be automatically detected by our tool ``lintian`` which can be run on the source .dsc metadata file, .deb binary packages or .changes file::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:165
-msgid "A description of each of the problems it reports can be found on the `lintian website <Lintian_>`_."
+msgid "To see verbose description of the problems use ``--info`` lintian flag or ``lintian-info`` command."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:168
+msgid "Results of Ubuntu archive checks can be found online on http://lintian.ubuntuwire.org."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:171
+msgid "For Python packages, there is also a ``lintian4python`` tool that provides some additional lintian checks."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:174
 msgid "After making a fix to the packaging you can rebuild using ``-nc`` \"no clean\" without having to build from scratch::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:173
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:179
 msgid "Having checked that the package builds locally you should ensure it builds on a clean system using ``pbuilder``. Since we are going to upload to a PPA (Personal Package Archive) shortly, this upload will need to be *signed* to allow Launchpad to verify that the upload comes from you (you can tell the upload will be signed because the ``-us`` and ``-uc`` flags are not passed to ``bzr builddeb`` like they were before). For signing to work you need to have set up GPG. If you haven't set up ``pbuilder-dist`` or GPG yet, :doc:`do so now<./getting-set-up>`::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:186
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:192
 msgid "When you are happy with your package you will want others to review it.  You can upload the branch to Launchpad for review::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:191
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:197
 msgid "Uploading it to a PPA will ensure it builds and give an easy way for you and others to test the binary packages.  You will need to set up a PPA in Launchpad and then upload with ``dput``::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:197
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:203
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:199
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:205
 msgid "You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the `MOTU mailing list <ubuntu-motu_>`_.  There might also be a more specific team you could ask such as the GNU team for more specific questions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:204
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:210
 msgid "Submitting for inclusion"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:206
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:212
 msgid "There are a number of paths that a package can take to enter Ubuntu. In most cases, going through Debian first can be the best path. This way ensures that your package will reach the largest number of users as it will be available in not just Debian and Ubuntu but all of their derivatives as well. Here are some useful links for submitting new packages to Debian:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:213
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:219
 msgid "`Debian Mentors FAQ <MentorsFAQ_>`_ - debian-mentors is for the mentoring of new and prospective Debian Developers. It is where you can find a sponsor to upload your package to the archive."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:217
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:223
 msgid "`Work-Needing and Prospective Packages <WNPP_>`_ - Information on how to file \"Intent to Package\" and \"Request for Package\" bugs as well as list of open ITPs and RFPs."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:221
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:227
 msgid "`Debian Developer's Reference, 5.1. New packages <DevRef_>`_ - The entire document is invaluable for both Ubuntu and Debian packagers. This section documents processes for submitting new packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:225
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:231
 msgid "In some cases, it might make sense to go directly into Ubuntu first. For instance, Debian might be in a freeze making it unlikely that your package will make it into Ubuntu in time for the next release. This process is documented on the `\"New Packages\" <NewPackages_>`_ section of the Ubuntu wiki."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:231
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:237
 msgid "Screenshots"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:233
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:239
 msgid "Once you have uploaded a package to debian, you should add screenshots to allow propective users to see what the program is like. These should be uploaded to http://screenshots.debian.net/upload ."
 msgstr ""
 
@@ -2113,158 +2124,6 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:209
 msgid "Do not change a package's patch system without discussing it with the Debian maintainer or relevant Ubuntu team.  If there is no existing patch system then feel free to add Quilt."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:3
-msgid "Packaging Python modules and applications"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:5
-msgid "Our packaging follows Debian’s `Python policy`_. We will use the `python-markdown`_ package as an example, which can be downloaded from `PyPI`_. You can look at its packaging at its `Subversion repository`_."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:7
-msgid "There are two types of Python packages — *modules* and *apps*."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:9
-msgid "At the time of writing, Ubuntu has two incompatible versions of Python — *2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python 2.x version, and ``/usr/bin/python3`` — to a default Python 3.x version. Python modules should be built against all supported Python versions."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:11
-msgid "If you are going to package a new Python module, you might find the ``py2dsc`` tool useful (available in `python-stdeb`_ package)."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:14
-msgid "debian/control"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:16
-msgid "Python 2.x and 3.x versions of the package should be in separate binary packages. Names should have ``python{,3}-modulename`` format (like: ``python3-dbus.mainloop.qt``). Here, we will use ``python-markdown`` and ``python3-markdown`` for module packages and ``python-markdown-doc`` for the documentation package."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:18
-msgid "Things in ``debian/control`` that are specific for a Python package:"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:20
-msgid "The section of module packages should be ``python``, and ``doc`` for the documentation package. For an application, a single binary package will be enough."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:21
-msgid "We should add build dependencies on ``python-all (>= 2.6.6-3~)`` and ``python3-all (>= 3.1.2-7~)`` to make sure Python helpers are available (see the next section for details)."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:22
-msgid "It’s recommended to add ``X-Python-Version`` and ``X-Python3-Version`` fields — see “`Specifying Supported Versions`_” section of the Policy for details. For example::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:27
-msgid "If your package works only with Python 2.x or 3.x, build depend only on one ``-all`` package and use only one ``-Version`` field."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:28
-msgid "Module packages should have ``{python:Depends}`` and ``{python3:Depends}`` substitution variables (respectively) in their dependency lists."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:33
-msgid "The recommended helpers for python modules are ``dh_python2`` and ``dh_python3``. Unfortunately, ``debhelper`` doesn’t yet build Python 3.x packages automatically (see `bug 597105`_ in Debian BTS), so we’ll need to do that manually in override sections (skip this if your package doesn’t support Python 3.x)."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:35
-msgid "Here’s our ``debian/rules`` file (with annotations):"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:70
-msgid "It is also a good practice to run tests during the build, if they are shipped by upstream. Usually tests can be invoked using ``setup.py test`` or ``setup.py check``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:73
-msgid "debian/\\*.install"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:75
-msgid "Python 2.x modules are installed into ``/usr/share/pyshared/`` directory, and symbolic links are created in ``/usr/lib/python2.x/dist-packages/`` for every interpreter version, while Python 3.x ones are all installed into ``/usr/lib/python3/dist-packages/``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:77
-msgid "If your package is an application and has private Python modules, they should be installed in ``/usr/share/module``, or ``/usr/lib/module`` if the modules are architecture-dependent (e.g. extensions) (see “`Programs Shipping Private Modules`_” section of the Policy)."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:79
-msgid "So, our ``python-markdown.install`` file will look like this (we’ll also want to install a ``markdown_py`` executable)::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:84
-msgid "and ``python3-markdown.install`` will only have one line::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:89
-msgid "The ``-doc`` package"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:91
-msgid "The tool most commonly used for building Python docs is `Sphinx`_. To add Sphinx documentation to your package (using ``dh_sphinxdoc`` helper), you should:"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:93
-msgid "Add a build-dependency on ``python-sphinx`` or ``python3-sphinx`` (depending on what Python version do you want to use);"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:94
-msgid "Append ``sphinxdoc`` to the ``dh --with`` line;"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:95
-msgid "Run ``setup.py build_sphinx`` in ``override_dh_auto_build`` (sometimes not needed);"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:96
-msgid "Add ``{sphinxdoc:Depends}`` to the dependency list of your ``-doc`` package;"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:97
-msgid "Add the path of the built docs directory (usually ``build/sphinx/html``) to your ``.docs`` file."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:99
-msgid "In our case, the docs are automatically built in ``build/docs/`` directory when we run ``setup.py build``, so we can simply put this in the ``python-markdown-doc.docs`` file::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:103
-msgid "Because docs also contain source ``.txt`` files, we’ll also tell ``dh_compress`` to not compress them — by adding this to ``debian/rules``:"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:111
-msgid "Checking for packaging mistakes"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:113
-msgid "Along with ``lintian``, there is a special tool for checking Python packages — ``lintian4py``. It is available in the `lintian4python`_ package. For example, these two commands invoke both versions of ``lintian`` and check source and binary packages::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:118
-msgid "Here, ``-EI`` option is used to enable experimental and informational tags."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:121
-msgid "See also"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:123
-msgid "The `Python policy`_;"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:124
-msgid "`Python/Packaging`_ article on Debian wiki;"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:125
-msgid "`Python/LibraryStyleGuide`_ and `Python/AppStyleGuide`_ articles on Debian wiki;"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:126
-msgid "Debian `python-modules`_ and `python-apps`_ teams."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:3
