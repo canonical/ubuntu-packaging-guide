@@ -4,6 +4,9 @@ ubuntu-packaging-guide (0.3.6) UNRELEASED; urgency=medium
   * Fix a typo and regenerate the .pot file (LP: #1309861).
   * Use anonymous links where possible to make translation easier.
   * Add more information about Lintian.
+  * Remove Python Packaging page in favour of a link from index page
+    to Debian wiki. Our guide is terribly outdated, while Debian’s one
+    is kept up-to-date.
 
   [ Daniel Holbach ]
   * Changed "phone and table" to "phone and tablet".
