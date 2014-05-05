@@ -85,7 +85,6 @@ Knowledge Base
    udd-merging
    chroots
    traditional-packaging
-   python-packaging
    kde
 
 Further Reading
@@ -100,7 +99,8 @@ resources you may find useful:
 * `How to package for Debian <HowToPackage_>`_;
 * `Debian Policy Manual <Policy_>`_;
 * `Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many languages;
-* `Packaging tutorial <PkgTutorial_>`_ (also available as a `package <PkgTutorialPkg_>`_).
+* `Packaging tutorial <PkgTutorial_>`_ (also available as a `package <PkgTutorialPkg_>`_);
+* `Guide for Packaging Python Modules <PythonModules_>`_.
 
 We are always looking to improve this guide. If you find any problems or have
 some suggestions, please `report a bug on Launchpad <Bugs_>`_.
@@ -114,3 +114,4 @@ If you'd like to help work on the guide, `grab the source <Source_>`_ there as w
 .. _PkgTutorialPkg: https://launchpad.net/ubuntu/+source/packaging-tutorial
 .. _Bugs: https://bugs.launchpad.net/ubuntu-packaging-guide
 .. _Source: https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk
+.. _PythonModules: https://wiki.debian.org/Python/LibraryStyleGuide
