@@ -210,5 +210,5 @@ Do not change a package's patch system without discussing it with the Debian
 maintainer or relevant Ubuntu team.  If there is no existing patch system then
 feel free to add Quilt.
 
-.. _`Quilt`: http://wiki.debian.org/UsingQuilt
+.. _Quilt: https://wiki.debian.org/UsingQuilt
 .. _DEP-3: http://dep.debian.net/deps/dep3/

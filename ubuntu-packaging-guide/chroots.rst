@@ -49,27 +49,30 @@ into the chroot, from outside the chroot run::
 
 Some programs may need you to bind /dev or /proc.
 
-For more information on chroots see our `Debootstrap Chroot wiki page`_.
+For more information on chroots see our `Debootstrap Chroot wiki page <DebootstrapChroot_>`_.
 
 Alternatives
 ------------
 
-SBuild is a system similar to PBuilder for creating an environment to run test package builds in.  It closer matches that used by Launchpad for building packages but takes some more setup compared to PBuilder.  See `the Security Team Build Environment wiki page`_ for a full explanation.
+SBuild is a system similar to PBuilder for creating an environment to run
+test package builds in.  It closer matches that used by Launchpad for building
+packages but takes some more setup compared to PBuilder.  See
+`the Security Team Build Environment wiki page <SecurityEnv_>`_ for a full explanation.
 
 Full virtual machines can be useful for packaging and testing
 programs.  TestDrive is a program to automate syncing and running
-daily ISO images, see `the TestDrive wiki page`_ for more information.
+daily ISO images, see `the TestDrive wiki page <TestDrive_>`_ for more information.
 
 You can also set up pbuilder to pause when it comes across a build
 failure.  Copy C10shell from /usr/share/doc/pbuilder/examples into a
 directory and use the ``--hookdir=`` argument to point to it.
 
-Amazon's `EC2 cloud computers`_ allow you to hire a computer paying a
+Amazon's `EC2 cloud computers <EC2_>`_ allow you to hire a computer paying a
 few US cents per hour, you can set up Ubuntu machines of any supported
 version and package on those.  This is useful when you want to compile
 many packages at the same time or to overcome bandwidth restraints.
 
-.. _`Debootstrap Chroot wiki page`: https://wiki.ubuntu.com/DebootstrapChroot
-.. _`EC2 cloud computers`: https://help.ubuntu.com/community/EC2StartersGuide
-.. _`the TestDrive wiki page`: https://wiki.ubuntu.com/QATeam/Testdrive 
-.. _`the Security Team Build Environment wiki page`: https://wiki.ubuntu.com/SecurityTeam/BuildEnvironment
+.. _DebootstrapChroot: https://wiki.ubuntu.com/DebootstrapChroot
+.. _EC2: https://help.ubuntu.com/community/EC2StartersGuide
+.. _TestDrive: https://wiki.ubuntu.com/QATeam/Testdrive 
+.. _SecurityEnv: https://wiki.ubuntu.com/SecurityTeam/BuildEnvironment

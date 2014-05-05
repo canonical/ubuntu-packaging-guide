@@ -41,7 +41,7 @@ and to access Tomboy in Debian Wheezy_ use::
 
 .. _`Bazaar`: http://bazaar.canonical.com/en/
 .. _Saucy: https://wiki.ubuntu.com/SaucySalamander
-.. _Wheezy: http://debian.org/releases/stable/
+.. _Wheezy: http://www.debian.org/releases/stable/
 
 
 Getting the source
@@ -111,7 +111,7 @@ the archive.  A message saying::
 
 means the importer has failed.  You can find out why on
 http://package-import.ubuntu.com/status/ and `file a bug on the UDD
-project`_ to get the issue resolved.
+project <UDD_>`_ to get the issue resolved.
 
 
 Upstream Tar
@@ -129,13 +129,13 @@ build the package::
 
     bzr builddeb
 
-The `builddeb` plugin has several `configuration options`_.
+The `builddeb` plugin has several `configuration options <ConfOptions_>`_.
 
 
 Getting a branch for a particular release
 -----------------------------------------
 
-When you want to do something like a `stable release update`_ (SRU), or you
+When you want to do something like a `stable release update <SRU_>`_ (SRU), or you
 just want to examine the code in an old release, you'll want to grab the
 branch corresponding to a particular Ubuntu release.  For example, to get the
 Tomboy package for Quantal do::
@@ -163,8 +163,7 @@ As you can see, we just need to provide the remote location of the dsc file,
 and Bazaar will do the rest.  You've now got a Bazaar source branch.
 
 
-.. _`status of the package importer`: http://package-import.ubuntu.com/status
-.. _`file a bug on the UDD project`: https://bugs.launchpad.net/udd
-.. _`stable release update`: https://wiki.ubuntu.com/StableReleaseUpdates
-.. _`configuration options`: http://bazaar.launchpad.net/~bzr-builddeb-hackers/bzr-builddeb/trunk/view/head:/doc/user_manual/configuration.rst
+.. _UDD: https://bugs.launchpad.net/udd
+.. _SRU: https://wiki.ubuntu.com/StableReleaseUpdates
+.. _ConfOptions: http://bazaar.launchpad.net/~bzr-builddeb-hackers/bzr-builddeb/trunk/view/head:/doc/user_manual/configuration.rst
 

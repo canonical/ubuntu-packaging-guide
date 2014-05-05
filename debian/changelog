@@ -1,7 +1,8 @@
-ubuntu-packaging-guide (0.3.6) trusty; urgency=medium
+ubuntu-packaging-guide (0.3.6) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
   * Fix a typo and regenerate the .pot file (LP: #1309861).
+  * Use anonymous links where possible to make translation easier.
 
   [ Daniel Holbach ]
   * Changed "phone and table" to "phone and tablet".

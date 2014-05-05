@@ -92,21 +92,25 @@ Further Reading
 ---------------
 
 You can read this guide offline in different formats, if you install one of
-the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide>`_.
+the `binary packages <BinPkgs_>`_.
 
 If you want to learn more about building Debian packages, here are some Debian
 resources you may find useful:
 
-* `How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;
-* `Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;
-* `Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-guide/>`_
-  — available in many languages;
-* `Packaging tutorial <http://www.debian.org/doc/manuals/packaging-tutorial/>`_ (also
-  available as a `package <https://launchpad.net/ubuntu/+source/packaging-tutorial>`_).
+* `How to package for Debian <HowToPackage_>`_;
+* `Debian Policy Manual <Policy_>`_;
+* `Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many languages;
+* `Packaging tutorial <PkgTutorial_>`_ (also available as a `package <PkgTutorialPkg_>`_).
 
 We are always looking to improve this guide. If you find any problems or have
-some suggestions, please `report a bug on Launchpad 
-<https://bugs.launchpad.net/ubuntu-packaging-guide>`_. If you'd like to help
-work on the guide, `grab the source
-<https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk>`_
-there as well.
+some suggestions, please `report a bug on Launchpad <Bugs_>`_.
+If you'd like to help work on the guide, `grab the source <Source_>`_ there as well.
+
+.. _BinPkgs: https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide
+.. _HowToPackage: https://wiki.debian.org/HowToPackageForDebian
+.. _Policy: http://www.debian.org/doc/debian-policy/
+.. _NewMaintGuide: http://www.debian.org/doc/manuals/maint-guide/
+.. _PkgTutorial: http://www.debian.org/doc/manuals/packaging-tutorial/
+.. _PkgTutorialPkg: https://launchpad.net/ubuntu/+source/packaging-tutorial
+.. _Bugs: https://bugs.launchpad.net/ubuntu-packaging-guide
+.. _Source: https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk

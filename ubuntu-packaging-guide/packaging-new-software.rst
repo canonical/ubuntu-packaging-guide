@@ -163,7 +163,7 @@ the .deb binary package::
     $ lintian hello_2.7-0ubuntu1_amd64.deb
 
 A description of each of the problems it reports can be found on the
-`lintian website`_.
+`lintian website <Lintian_>`_.
 
 After making a fix to the packaging you can rebuild using ``-nc`` "no clean"
 without having to build from scratch::
@@ -197,8 +197,8 @@ and then upload with ``dput``::
 See :doc:`uploading<./udd-uploading>` for more information.
 
 You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the
-`MOTU mailing list`_.  There might also be a more specific team you
-could ask such as the GNU team for more specific questions.
+`MOTU mailing list <ubuntu-motu_>`_.  There might also be a more specific
+team you could ask such as the GNU team for more specific questions.
 
 Submitting for inclusion
 ------------------------
@@ -210,22 +210,22 @@ as it will be available in not just Debian and Ubuntu but all of their
 derivatives as well. Here are some useful links for submitting new
 packages to Debian:
 
-  - `Debian Mentors FAQ`_ - debian-mentors is for the mentoring of new and
+  - `Debian Mentors FAQ <MentorsFAQ_>`_ - debian-mentors is for the mentoring of new and
     prospective Debian Developers. It is where you can find a sponsor
     to upload your package to the archive.
 
-  - `Work-Needing and Prospective Packages`_ - Information on how to file
+  - `Work-Needing and Prospective Packages <WNPP_>`_ - Information on how to file
     "Intent to Package" and "Request for Package" bugs as well as list
     of open ITPs and RFPs.
 
-  - `Debian Developer's Reference, 5.1. New packages`_ - The entire 
+  - `Debian Developer's Reference, 5.1. New packages <DevRef_>`_ - The entire 
     document is invaluable for both Ubuntu and Debian packagers. This
     section documents processes for submitting new packages.
 
 In some cases, it might make sense to go directly into Ubuntu first. For
 instance, Debian might be in a freeze making it unlikely that your
 package will make it into Ubuntu in time for the next release. This
-process is documented on the `"New Packages"`_ section of the Ubuntu wiki.
+process is documented on the `"New Packages" <NewPackages_>`_ section of the Ubuntu wiki.
 
 Screenshots
 -----------
@@ -237,9 +237,9 @@ be uploaded to http://screenshots.debian.net/upload .
 .. _PPA: https://help.launchpad.net/Packaging/PPA
 .. _GNU.org: http://www.gnu.org/software/hello/
 .. _`packages.ubuntu.com`:  http://packages.ubuntu.com/
-.. _`lintian website`: http://lintian.debian.org/tags.html
-.. _`MOTU mailing list`: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
-.. _`Debian Mentors FAQ`: http://wiki.debian.org/DebianMentorsFaq
-.. _`Work-Needing and Prospective Packages`: http://www.debian.org/devel/wnpp/
-.. _`Debian Developer's Reference, 5.1. New packages`: http://www.debian.org/doc/developers-reference/pkgs.html#newpackage
-.. _`"New Packages"`: https://wiki.ubuntu.com/UbuntuDevelopment/NewPackages
+.. _Lintian: http://lintian.debian.org/tags.html
+.. _ubuntu-motu: https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
+.. _MentorsFAQ: https://wiki.debian.org/DebianMentorsFaq
+.. _WNPP: http://www.debian.org/devel/wnpp/
+.. _DevRef: http://www.debian.org/doc/manuals/developers-reference/pkgs.html#newpackage
+.. _NewPackages: https://wiki.ubuntu.com/UbuntuDevelopment/NewPackages

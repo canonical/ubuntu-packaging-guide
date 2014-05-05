@@ -75,7 +75,7 @@ compiling against the library do not care about the major version number
 
 ``.la`` libtool files are needed on some non-Linux systems with poor library
 support but usually cause more problems than they solve on Debian systems.  It
-is a current `Debian goal to remove .la files`_ and we should help with this.
+is a current `Debian goal to remove .la files <LAFileRemoval_>`_ and we should help with this.
 
 
 Static Libraries
@@ -144,14 +144,14 @@ C++ Library Symbols Files
 
 C++ has even more exacting standards of binary compatibility than C.  The
 Debian Qt/KDE Team maintain some scripts to handle this, see their `Working with
-symbols files`_ page for how to use them.
+symbols files <SymbolsFiles_>`_ page for how to use them.
 
 Further Reading
 ---------------
 
-Junichi Uekawa's `Debian Library Packaging Guide`_ goes into this topic in more
+Junichi Uekawa's `Debian Library Packaging Guide <LibraryGuide_>`_ goes into this topic in more
 detail.
 
-.. _`Working with symbols files`: http://pkg-kde.alioth.debian.org/symbolfiles.html
-.. _`Debian goal to remove .la files`: http://wiki.debian.org/ReleaseGoals/LAFileRemoval
-.. _`Debian Library Packaging Guide`: http://www.netfort.gr.jp/~dancer/column/libpkg-guide/libpkg-guide.html
+.. _SymbolsFiles: http://pkg-kde.alioth.debian.org/symbolfiles.html
+.. _LAFileRemoval: https://wiki.debian.org/ReleaseGoals/LAFileRemoval
+.. _LibraryGuide: http://www.netfort.gr.jp/~dancer/column/libpkg-guide/libpkg-guide.html

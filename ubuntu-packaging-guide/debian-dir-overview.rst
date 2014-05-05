@@ -61,9 +61,8 @@ number) appended to the end of the Debian version. So if the Debian hello
 ``2.6-1ubuntu1``. If a package for the application does not exist in Debian, 
 then the Debian revision is ``0`` (e.g. ``2.6-0ubuntu1``).
 
-For further information, see the `changelog section (Section 4.4) 
-<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ of 
-the Debian Policy Manual.
+For further information, see the `changelog section (Section 4.4) <policy-changelog_>`_
+of the Debian Policy Manual.
 
 
 The control file
@@ -114,22 +113,19 @@ generally have the ``Maintainer`` field set to ``Ubuntu Developers
 the old value should be saved in the ``XSBC-Original-Maintainer`` field. This 
 can be done automatically with the  ``update-maintainer`` script available in 
 the ``ubuntu-dev-tools`` package. For further information, see the `Debian 
-Maintainer Field spec <https://wiki.ubuntu.com/DebianMaintainerField>`_ on the 
-Ubuntu wiki.
+Maintainer Field spec <MaintField_>`_ on the Ubuntu wiki.
 
 Each additional paragraph describes a binary package to be built.
 
-For further information, see the `control file section (Chapter 5) 
-<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the Debian 
-Policy Manual.
+For further information, see the `control file section (Chapter 5) <policy-control_>`_
+of the Debian Policy Manual.
 
 
 The copyright file
 -------------------------------
 
 This file gives the copyright information for both the upstream source and the 
-packaging. Ubuntu and `Debian Policy (Section 12.5) 
-<http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_ 
+packaging. Ubuntu and `Debian Policy (Section 12.5) <policy-copyright_>`_ 
 require that each package installs a verbatim copy of its copyright and license 
 information to ``/usr/share/doc/$(package_name)/copyright``.
 
@@ -175,8 +171,7 @@ example template would be::
   License version 2 can be found in the file
   `/usr/share/common-licenses/GPL-2'.
  
-This example follows the `Machine-readable debian/copyright 
-<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ format.
+This example follows the `Machine-readable debian/copyright <DEP5_>`_ format.
 You are encouraged to use this format as well.
 
 
@@ -324,8 +319,8 @@ example::
      and symlinked hello_2.7.orig.tar.gz to it
 
 If your tarballs live on Launchpad, the ``debian/watch`` file is a little more
-complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  In
-that case, use something like::
+complicated (see `Question 21146 <Q21146_>`_ and `Bug 231797 <Bug231797_>`_
+for why this is).  In that case, use something like::
 
     version=3
     https://launchpad.net/flufl.enum/+download http://launchpad.net/flufl.enum/.*/flufl.enum-(.+).tar.gz
@@ -364,25 +359,32 @@ a number of new features:
 
 * Not necessary to repack the upstream tarball to strip the debian directory
 
-* Debian-specific changes are no longer stored in a single .diff.gz but in multiple patches compatible with quilt under ``debian/patches/``
+* Debian-specific changes are no longer stored in a single .diff.gz but in
+  multiple patches compatible with quilt under ``debian/patches/``
 
-http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information 
+https://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information 
 concerning the switch to the 3.0 source package formats.
 
 See ``man dpkg-source`` and the `source/format section (Section 5.21) 
-<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of 
-the Debian New Maintainers' Guide for additional details.
+<policy-format_>`_  of  the Debian New Maintainers' Guide for additional details.
 
 Additional Resources
 -------------------------------
 
 In addition to the links to the Debian Policy Manual in each section above, the 
 Debian New Maintainers' Guide has more detailed descriptions of each file. 
-`Chapter 4, "Required files under the debian directory" 
-<http://www.debian.org/doc/maint-guide/dreq.en.html>`_ further discusses the 
-control, changelog, copyright and rules files. `Chapter 5, "Other files under 
-the debian directory" <http://www.debian.org/doc/maint-guide/dother.en.html>`_ 
+`Chapter 4, "Required files under the debian directory" <RequiredFiles_>`_
+further discusses the  control, changelog, copyright and rules files.
+`Chapter 5, "Other files under the debian directory" <OtherFiles_>`_
 discusses additional files that may be used.
 
-.. _`Question 21146`: https://answers.launchpad.net/launchpad/+question/21146
-.. _`Bug 231797`: https://launchpad.net/bugs/231797
+.. _policy-control: http://www.debian.org/doc/debian-policy/ch-controlfields.html
+.. _policy-changelog: http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog
+.. _policy-copyright: http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile
+.. _policy-format: http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef
+.. _DEP5: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+.. _MaintField: https://wiki.ubuntu.com/DebianMaintainerField
+.. _Q21146: https://answers.launchpad.net/launchpad/+question/21146
+.. _Bug231797: https://launchpad.net/launchpad/+bug/231797
+.. _RequiredFiles: http://www.debian.org/doc/manuals/maint-guide/dreq.en.html
+.. _OtherFiles: http://www.debian.org/doc/manuals/maint-guide/dother.en.html

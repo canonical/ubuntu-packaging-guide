@@ -4,11 +4,11 @@ KDE Packaging
 
 Packaging of KDE programs in Ubuntu is managed by the Kubuntu and
 MOTU teams.  You can contact the Kubuntu team on the `Kubuntu mailing
-list`_ and ``#kubuntu-devel`` Freenode IRC channel.  More information
-about Kubuntu development is on the `Kubuntu wiki page`_.
+list <ML_>`_ and ``#kubuntu-devel`` Freenode IRC channel.  More information
+about Kubuntu development is on the `Kubuntu wiki page <Wiki_>`_.
 
-Our packaging follows the practices of the `Debian Qt/KDE Team`_ and
-Debian KDE Extras Team.  Most of our packages are derived from the
+Our packaging follows the practices of the `Debian Qt/KDE Team <QtKDETeam_>`_
+and Debian KDE Extras Team.  Most of our packages are derived from the
 packaging of these Debian teams.
 
 Patching Policy
@@ -64,7 +64,7 @@ Upstream will usually have also put the translation ``.po`` files into
 the ``po/`` directory.  If they do not, check if they are in separate
 upstream language packs such as the KDE SC language packs.  If they
 are in separate language packs Launchpad will need to associate
-these together manually, contact `dpm`_ to do this.
+these together manually, contact `David Planella <dpm_>`_ to do this.
 
 If a package is moved from universe to main it will need to be
 re-uploaded before the translations get imported into Launchpad.
@@ -84,11 +84,11 @@ Library Symbols
 Library symbols are tracked in ``.symbols`` files to ensure none go
 missing for new releases.  KDE uses C++ libraries which act a little
 differently compared to C libraries.  Debian's Qt/KDE Team have
-scripts to handle this. See `Working with symbols files`_ for how to
+scripts to handle this. See `Working with symbols files <SymbolsFiles_>`_ for how to
 create and keep these files up to date.
 
-.. _`Kubuntu mailing list`: https://lists.ubuntu.com/mailman/listinfo/kubuntu-devel
-.. _`Debian Qt/KDE Team`: http://pkg-kde.alioth.debian.org/
-.. _`dpm`: https://launchpad.net/~dpm
-.. _`Working with symbols files`: http://pkg-kde.alioth.debian.org/symbolfiles.html
-.. _`Kubuntu wiki page`: https://wiki.kubuntu.org/Kubuntu
+.. _KubuntuML: https://lists.ubuntu.com/mailman/listinfo/kubuntu-devel
+.. _QtKDETeam: http://pkg-kde.alioth.debian.org/
+.. _dpm: https://launchpad.net/~dpm
+.. _SymbolsFiles: http://pkg-kde.alioth.debian.org/symbolfiles.html
+.. _Wiki: https://wiki.kubuntu.org/Kubuntu
