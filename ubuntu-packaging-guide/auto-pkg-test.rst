@@ -77,8 +77,10 @@ this is compiled with system libraries (using flags and library paths as
 provided by `pkg-config`). Then the compiled binary, which just exercises some
 parts of core glib functionality, is run.
 
-While this test is very small and basic, it tests quite a number of core
-components on a system. This may help to uncover critical issues early on.
+While this test is very small and simple, it covers quite a lot: that your -dev
+package has all necessary dependencies, that your package installs working
+pkg-config files, headers and libraries are put into the right place, or that
+the compiler and linker work. This helps to uncover critical issues early on.
 
 Executing the test
 ==================
