@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-24 17:31+0200\n"
+"POT-Creation-Date: 2014-05-05 16:10+0200\n"
 "PO-Revision-Date: 2014-04-19 22:01+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-04-25 06:34+0000\n"
-"X-Generator: Launchpad (build 16985)\n"
+"X-Launchpad-Export-Date: 2014-05-06 06:42+0000\n"
+"X-Generator: Launchpad (build 16996)\n"
 "Language: fr\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -24,13 +24,10 @@ msgstr "autopkgtest : tests automatiques pour les paquets"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
-"The `DEP 8 specification`_ defines how automatic testing can very easily be "
-"integrated into packages. To integrate a test into a package, all you need "
-"to do is:"
+"The `DEP 8 specification <DEP8_>`_ defines how automatic testing can very "
+"easily be integrated into packages. To integrate a test into a package, all "
+"you need to do is:"
 msgstr ""
-"La `spécification DEP 8`_ définit la façon dont les tests automatiques "
-"peuvent être très facilement intégrés dans les paquets. Pour intégrer un "
-"test dans un paquet, tout ce que vous devez faire est de :"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
 msgid "add the following to the Source section in ``debian/control``::"
@@ -57,13 +54,8 @@ msgid ""
 "In ``debian/tests/control`` you specify what to expect from the testbed. So "
 "for example you list all the required packages for the tests, if the testbed "
 "gets broken during the build or if ``root`` permissions are required. The "
-"`DEP 8 specification`_ lists all available options."
+"`DEP 8 specification <DEP8_>`_ lists all available options."
 msgstr ""
-"Dans ``debian/tests/control`` vous spécifiez ce que vous attendez du banc "
-"d'essai. Ainsi, par exemple, vous listez tous les paquets nécessaires pour "
-"les tests, si le banc d'essai se casse lors de la construction ou si les "
-"autorisations ``root`` sont nécessaires. La `spécification DEP 8`_ "
-"répertorie toutes les options disponibles."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
 msgid ""
@@ -113,97 +105,75 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:80
 msgid ""
-"While this test is very small and basic, it tests quite a number of core "
-"components on a system. This may help to uncover critical issues early on."
+"While this test is very small and simple, it covers quite a lot: that your -"
+"dev package has all necessary dependencies, that your package installs "
+"working pkg-config files, headers and libraries are put into the right "
+"place, or that the compiler and linker work. This helps to uncover critical "
+"issues early on."
 msgstr ""
-"Bien que ce test soit très petit et basique, il teste un grand nombre de "
-"composantes du noyau d'un système. Cela peut aider à découvrir plus tôt des "
-"problèmes critiques."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
 msgid "Executing the test"
 msgstr "Exécution du test"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:88
 msgid ""
-"The test script can be easily executed on its own, but if you want to make "
-"sure that the testbed is properly set up, you might want to use ``adt-run`` "
-"from the ``autopkgtest`` package to execute the test. The easiest way to do "
-"this is to run this command in the source tree::"
+"While the test script can be easily executed on its own, it is strongly "
+"recommended to actually use ``adt-run`` from the ``autopkgtest`` package for "
+"verifying that your test works; otherwise, if it fails in the Ubuntu "
+"Continuous Integration (CI) system, it will not land in Ubuntu.  This also "
+"avoids cluttering your workstation with test packages or test configuration "
+"if the test does something more intrusive than the simple example above."
 msgstr ""
-"Le script de test peut être facilement exécuté tout seul, mais si vous "
-"voulez être sûr que le banc d'essai est correctement configuré, il est "
-"préférable d'utiliser ``adt-run`` depuis le paquet ``autopkgtest`` pour "
-"exécuter le test. La plus simple façon de le faire est de lancer cette "
-"commande dans l'arbre source::"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:93
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:95
 msgid ""
-"The downside of this approach is that you test it locally, but can't ensure "
-"that this will work in a minimal environment. For example will it be hard to "
-"ensure that all the required packages are installed for the tests. With "
-"`lp:auto-package-testing`_ we have a more comprehensive testing tool. It "
-"uses a pristine virtual machine to run the tests. To set it up, firstly "
-"install the needed dependencies::"
+"The `README.running-tests <running_tests_local_>`_ (`online version "
+"<DEP8_>`_) documentation explains all available testbeds (schroot, LXC, "
+"QEMU, etc.) and the most common scenarios how to run your tests with ``adt-"
+"run``, e. g. with locally built binaries, locally modified tests, etc."
 msgstr ""
-"L'inconvénient de cette approche est que vous le testez en local, mais vous "
-"ne pouvez pas être sûr que cela fonctionnera dans un environnement minimal. "
-"Il sera par exemple difficile de s'assurer que tous les paquets requis sont "
-"installés pour les tests. Avec `lp:auto-package-testing`_ nous avons un "
-"outil de test bien plus complet. Il utilise une machine virtuelle toute "
-"fraîche pour exécuter les tests. Pour le paramétrer, commencez par installer "
-"les dépendances nécessaires::"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:102
-msgid "Then, get the source code from Launchpad::"
-msgstr "Ensuite, récupérez le code source sur Launchpad::"
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:101
+msgid ""
+"The Ubuntu CI system uses the QEMU runner and runs the tests from the "
+"packages in the archive, with ``-proposed`` enabled. To reproduce the exact "
+"same environment, first install the necessary packages::"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
-msgid "And provision a Trusty AMD64 system::"
+msgid "Now build a testbed with::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
-"This command will create a pristine Trusty AMD64 VM from a cloud image. To "
-"run the tests, simply run::"
+"(Please see its manpage and ``--help`` output for selecting different "
+"releases, architectures, output directory, or using proxies). This will "
+"build e. g. ``adt-trusty-amd64-cloud.img``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:117
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:115
 msgid ""
-"This would use the source package in ``/tmp/glib2.0-2.35.7/`` and run the "
-"tests from this tree against the package ``glib2.0`` from the archive. The "
-"option ``-S`` also supports schemes for bzr, git, and apt sources. If you "
-"only specify a source with ``-S`` but do not specify a package name, this "
-"will instead build the branch and install the binaries from that build; this "
-"is useful if you want to run tests on a newer version than the one packaged "
-"in Ubuntu, or the package is not in Ubuntu at all. If use the ``-k`` flag "
-"you can log into the virtual machine after the tests were run. This makes it "
-"very easy to debug issues."
+"Then run the tests of a source package like ``libpng`` in that QEMU image::"
 msgstr ""
-"Cela utilisera le paquet source dans ``/tmp/glib2.0-2.35.7/`` et lancera les "
-"tests de cet arbre sur le paquet ``glib2.0`` de l'archive. L' option ``-S``  "
-"gère aussi les schémas pour les sources bzr, git et apt. Si vous spécifiez "
-"seulement une source avec ``-S`` sans spécifier le nom du paquet, à la "
-"place, cela construira la branche et installera les binaires construits ; "
-"C'est plus pratique si vous voulez lancer les tests sur une version plus "
-"récente que celle empaquetée dans Ubuntu, ou si le paquet n'est pas du tout "
-"dans Ubuntu. Si vous utilisez le drapeau ``-k`` vous pouvez vous connecter "
-"dans une machine virtuelle après l'exécution des tests. Cela rend le "
-"débogage des problèmes très facile."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:127
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:119
 msgid ""
-"The `auto-package-testing documentation`_ has a lot more valuable "
-"information on other testing options."
+"The Ubuntu CI system runs packages with ``-proposed`` enabled; to enable "
+"that, run::"
 msgstr ""
-"La `documentation auto-package-testing`_  a beaucoup plus d'informations "
-"utiles sur les autres options de tests."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:133
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:124
+msgid ""
+"The ``adt-run`` manpage has a lot more valuable information on other testing "
+"options."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:129
 msgid "Further examples"
 msgstr "Exemples complémentaires"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:135
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:131
 msgid ""
 "This list is not comprehensive, but might help you get a better idea of how "
 "automated tests are implemented and used in Ubuntu."
@@ -212,79 +182,56 @@ msgstr ""
 "comprendre comment les tests automatiques sont implémentés et utilisés dans "
 "Ubuntu."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:138
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:134
 msgid ""
-"The `libxml2 tests`_ are very similar. They also run a test-build of a "
-"simple piece of C code and execute it."
+"The `libxml2 tests <libxml2_>`_ are very similar. They also run a test-build "
+"of a simple piece of C code and execute it."
 msgstr ""
-"Les `tests libxml2`_ sont très similaires. Ils effectuent aussi un test de "
-"compilation d'un simple morceau de code C et l'exécutent."
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:136
+msgid ""
+"The `gtk+3.0 tests <gtk3_>`_ also do a compile/link/run check in the "
+"\"build\" test. There is an additional \"python3-gi\" test which verifies "
+"that the GTK library can also be used through introspection."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:139
+msgid ""
+"In the `ubiquity tests <ubiquity_>`_ the upstream test-suite is executed."
+msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
 msgid ""
-"The `gtk+3.0 tests`_ also do a compile/link/run check in the \"build\" test. "
-"There is an additional \"python3-gi\" test which verifies that the GTK "
-"library can also be used through introspection."
+"The `gvfs tests <gvfs_>`_ have comprehensive testing of their functionality "
+"and are very interesting because they emulate usage of CDs, Samba, DAV and "
+"other bits."
 msgstr ""
-"Les `tests gtk +3.0`_ font également une compilation/link/run vérifier dans "
-"le dossier \"build\" test. Il y a un test supplémentaire \"python3-gi\" qui "
-"vérifie que la bibliothèque GTK peut également être utilisé par "
-"l'introspection."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:143
-msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
-msgstr "Dans les `tests ubiquity`_ la suite de test en amont est exécutée."
-
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:144
-msgid ""
-"The `gvfs tests`_ have comprehensive testing of their functionality and are "
-"very interesting because they emulate usage of CDs, Samba, DAV and other "
-"bits."
-msgstr ""
-"Les `tests gvfs`_ ont un test complet de leur fonctionnalité et sont très "
-"intéressants car ils émulent l'utilisation de CD, Samba, DAV et autres "
-"bricoles."
-
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:149
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:145
 msgid "Ubuntu infrastructure"
 msgstr "infrastructure Ubuntu"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:151
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:147
 msgid ""
 "Packages which have ``autopkgtest`` enabled will have their tests run "
 "whenever they get uploaded or any of their dependencies change. The output "
-"of `automatically run autopkgtest tests`_ can be viewed on the web and is "
-"regularly updated."
+"of `automatically run autopkgtest tests <jenkins_>`_ can be viewed on the "
+"web and is regularly updated."
 msgstr ""
-"Les paquets autorisés en ``autopkgtest`` seront testés à chaque "
-"téléchargement ou modification de leurs dépendances. Les produits des `tests "
-"autopkgtest à exécution automatique`_ peuvent être consultés sur internet et "
-"sont régulièrement mis à jour."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:156
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:152
 msgid ""
-"While Debian does not have an automatic testing infrastructure set up yet, "
-"they should still be submitted to Debian, as DEP-8 is a Debian specification "
-"and Debian developers or users can still manually run the tests."
+"Debian also uses ``adt-run`` to run package tests, although currently only "
+"in schroots, so results may vary a bit. Results and logs can be seen on "
+"http://ci.debian.net. So please submit any test fixes or new tests to Debian "
+"as well."
 msgstr ""
-"Bien que Debian n'a pas encore mis en place une infrastructure de test "
-"automatique, ils doivent encore être soumis à Debian, car DEP-8 est une "
-"spécification Debian et les développeurs ou les utilisateurs Debian peuvent "
-"toujours exécuter manuellement les tests."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:160
-msgid ""
-"Packages in Debian with a testsuite header will also be automatically added "
-"when they are synced to Ubuntu."
-msgstr ""
-"Les paquets dans Debian avec un en-tête testsuite seront également ajoutés "
-"automatiquement quand ils sont synchronisés avec Ubuntu."
-
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:158
 msgid "Getting the test into Ubuntu"
 msgstr "Faire passer le test dans Ubuntu"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:160
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
@@ -293,29 +240,29 @@ msgstr ""
 "similaire à :doc:`corriger un bogue dans Ubuntu<./fixing-a-bug>`. "
 "Essentiellement, il vous suffit de :"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:163
 msgid "run ``bzr branch ubuntu:<packagename>``,"
 msgstr "exécuter ``bzr branch ubuntu:<nomdupaquet>``,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:170
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
 msgid "edit ``debian/control`` to enable the tests,"
 msgstr "modifier ``debian/control`` pour activer les tests,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:171
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:165
 msgid "add the ``debian/tests`` directory,"
 msgstr "ajouter le répertoire ``debian/tests``,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:172
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
 msgid ""
-"write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
+"write the ``debian/tests/control`` based on the `DEP 8 Specification "
+"<dep8_>`_,"
 msgstr ""
-"écrire le ``debian/tests/control`` basé sur la  `spécification DEP 8`_,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:167
 msgid "add your test case(s) to ``debian/tests``,"
 msgstr "ajouter votre cas de test(s) à ``debian/tests``,"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:174
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:168
 msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
@@ -324,29 +271,23 @@ msgstr ""
 "fusion et obtenir son examen, exactement comme pour  toute autre "
 "amélioration dans un paquet source."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid "What you can do"
 msgstr "Ce que vous pouvez faire"
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:181
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:175
 msgid ""
-"The Ubuntu Engineering team put together a `list of required test-cases`_, "
-"where packages which need tests are put into different categories. Here you "
-"can find examples of these tests and easily assign them to yourself."
+"The Ubuntu Engineering team put together a `list of required test-cases "
+"<requiredtests_>`_, where packages which need tests are put into different "
+"categories. Here you can find examples of these tests and easily assign them "
+"to yourself."
 msgstr ""
-"L'équipe d'ingénierie Ubuntu a dressé une `liste des cas nécessaires de "
-"test`_, où les paquets nécessitant d'être testés sont placés dans "
-"différentes catégories. Ici vous pouvez trouver des exemples de ces tests et "
-"vous les attribuer aisément."
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:185
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
 msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
-"channel`_ to get in touch with developers who can help you."
+"channel <qualityirc_>`_ to get in touch with developers who can help you."
 msgstr ""
-"Si vous rencontrez des problèmes, vous pouvez rejoindre le `canal IRC "
-"#ubuntu-quality`_ pour entrer en contact avec les développeurs qui peuvent "
-"vous aider."
 
 #: ../ubuntu-packaging-guide/backports.rst:3
 msgid "Backporting software updates"
@@ -356,14 +297,9 @@ msgstr "Rétroportage de mises à jour logicielles"
 msgid ""
 "Sometimes you might want to make new functionality available in a stable "
 "release which is not connected to a critical bug fix. For these scenarios "
-"you have two options: either you `upload to a PPA "
-"<https://help.launchpad.net/Packaging/PPA>`_ or prepare a backport."
+"you have two options: either you `upload to a PPA <ppadoc_>`_ or prepare a "
+"backport."
 msgstr ""
-"Parfois, vous souhaitez ajouter une nouvelle fonctionnalité qui ne concerne "
-"pas la correction de bug critique. Pour ce scénario, vous avez deux "
-"options : soit vous le `soumettez à un PPA "
-"<https://help.launchpad.net/Packaging/PPA>`_ soit vous préparez un "
-"rétroportage."
 
 #: ../ubuntu-packaging-guide/backports.rst:12
 msgid "Personal Package Archive (PPA)"
@@ -382,11 +318,9 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/backports.rst:18
 msgid ""
-"The `PPA documentation on Launchpad`_ is fairly comprehensive and should get "
-"you up and running in no time."
+"The `PPA documentation on Launchpad <ppadoc_>`_ is fairly comprehensive and "
+"should get you up and running in no time."
 msgstr ""
-"La `documentation sur les PPA sur Launchpad`_ est assez complète et devrait "
-"vous permettre d'être opérationnel en un rien de temps."
 
 #: ../ubuntu-packaging-guide/backports.rst:25
 msgid "Official Ubuntu Backports"
@@ -529,10 +463,9 @@ msgstr "Certains programmes peuvent nécessiter que vous liez /dev ou /proc."
 
 #: ../ubuntu-packaging-guide/chroots.rst:52
 msgid ""
-"For more information on chroots see our `Debootstrap Chroot wiki page`_."
+"For more information on chroots see our `Debootstrap Chroot wiki page "
+"<DebootstrapChroot_>`_."
 msgstr ""
-"Pour plus d'informations sur chroot consultez notre `page wiki debootstrap "
-"chroot`_."
 
 #: ../ubuntu-packaging-guide/chroots.rst:55
 msgid "Alternatives"
@@ -543,26 +476,18 @@ msgid ""
 "SBuild is a system similar to PBuilder for creating an environment to run "
 "test package builds in.  It closer matches that used by Launchpad for "
 "building packages but takes some more setup compared to PBuilder.  See `the "
-"Security Team Build Environment wiki page`_ for a full explanation."
+"Security Team Build Environment wiki page <SecurityEnv_>`_ for a full "
+"explanation."
 msgstr ""
-"SBuild est un système similaire à PBuilder pour la création d'un "
-"environnement d'exécution de tests de construction de paquets. Il correspond "
-"plus à celui utilisé par Launchpad pour créer des paquets, mais nécessite un "
-"peu plus de paramètres que PBuilder. Voir la `page wiki de l'équipe de "
-"sécurité de construction d' environnement`_ pour une explication complète."
 
-#: ../ubuntu-packaging-guide/chroots.rst:59
+#: ../ubuntu-packaging-guide/chroots.rst:62
 msgid ""
 "Full virtual machines can be useful for packaging and testing programs.  "
 "TestDrive is a program to automate syncing and running daily ISO images, see "
-"`the TestDrive wiki page`_ for more information."
+"`the TestDrive wiki page <TestDrive_>`_ for more information."
 msgstr ""
-"Les machines virtuelles complètes sont utiles pour tester et empaqueter les "
-"programmes. TestDrive est un programme automatisant la synchronisation et "
-"l'exécution quotidienne d'images ISO, reportez-vous à `la page wiki "
-"TestDrive`_ pour de plus amples informations."
 
-#: ../ubuntu-packaging-guide/chroots.rst:63
+#: ../ubuntu-packaging-guide/chroots.rst:66
 msgid ""
 "You can also set up pbuilder to pause when it comes across a build failure.  "
 "Copy C10shell from /usr/share/doc/pbuilder/examples into a directory and use "
@@ -573,18 +498,13 @@ msgstr ""
 "/usr/share/doc/pbuilder/examples dans un répertoire et utilisez l'argument "
 "``--hookdir=`` pour désigner ce dernier."
 
-#: ../ubuntu-packaging-guide/chroots.rst:67
+#: ../ubuntu-packaging-guide/chroots.rst:70
 msgid ""
-"Amazon's `EC2 cloud computers`_ allow you to hire a computer paying a few US "
-"cents per hour, you can set up Ubuntu machines of any supported version and "
-"package on those.  This is useful when you want to compile many packages at "
-"the same time or to overcome bandwidth restraints."
+"Amazon's `EC2 cloud computers <EC2_>`_ allow you to hire a computer paying a "
+"few US cents per hour, you can set up Ubuntu machines of any supported "
+"version and package on those.  This is useful when you want to compile many "
+"packages at the same time or to overcome bandwidth restraints."
 msgstr ""
-"Les `ordinateurs EC2 cloud`_ d'Amazon vous permettent de louer un ordinateur "
-"contre quelques cents américains de l'heure, vous pourrez régler les "
-"machines Ubuntu pour toute version prise en charge ou tout paquet sur ces "
-"ordinateurs. Ceci est utile lorsque vous voulez compiler de nombreux paquets "
-"en même temps ou surmonter les contraintes de bande passante."
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
@@ -771,19 +691,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:64
 msgid ""
-"For further information, see the `changelog section (Section 4.4) "
-"<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
-"of the Debian Policy Manual."
+"For further information, see the `changelog section (Section 4.4) <policy-"
+"changelog_>`_ of the Debian Policy Manual."
 msgstr ""
-"Pour plus d'informations, consultez la `section changelog (Section 4.4) "
-"<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
-"de la Charte Debian."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:70
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:69
 msgid "The control file"
 msgstr "Le fichier de contrôle."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:72
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:71
 msgid ""
 "The ``control`` file contains the information that the package manager (such "
 "as ``apt-get``, ``synaptic``, and ``adept``) uses, build-time dependencies, "
@@ -794,14 +710,14 @@ msgstr ""
 "moments de construction des dépendances, les informations concernant les "
 "mainteneurs et plus encore."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:76
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:75
 msgid ""
 "For the Ubuntu ``hello`` package, the ``control`` file looks something like "
 "this:"
 msgstr ""
 "Pour le paquet ``hello`` de Ubuntu, le fichier ``control`` ressemble à ceci :"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:101
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:100
 msgid ""
 "The first paragraph describes the source package including the list of "
 "packages required to build the package from source in the ``Build-Depends`` "
@@ -816,7 +732,7 @@ msgstr ""
 "conforme, l'emplacement du dépôt du contrôle de version de l'empaquetage et "
 "la page d'accueil en amont."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:108
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:107
 msgid ""
 "Note that in Ubuntu, we set the ``Maintainer`` field to a general address "
 "because anyone can change any package (this differs from Debian where "
@@ -827,55 +743,34 @@ msgid ""
 "Original-Maintainer`` field. This can be done automatically with the  "
 "``update-maintainer`` script available in the ``ubuntu-dev-tools`` package. "
 "For further information, see the `Debian Maintainer Field spec "
-"<https://wiki.ubuntu.com/DebianMaintainerField>`_ on the Ubuntu wiki."
+"<MaintField_>`_ on the Ubuntu wiki."
 msgstr ""
-"Notez que dans Ubuntu, nous avons laissé le champ ``Maintainer`` pointer "
-"vers une adresse générale, car n'importe qui peut changer n'importe quel "
-"paquet (ceci diffère de Debian où le changement des paquets est généralement "
-"limité à une personne ou une équipe). Les paquets dans Ubuntu devraient "
-"avoir le champ ``Maintainer`` indiquant ``Développeurs Ubuntu <ubuntu-devel-"
-"discuss@lists.ubuntu.com>``. Si ce champ Maintainer est modifié, l'ancienne "
-"valeur doit être enregistrée dans le champ ``XSBC-Original-Maintainer``. "
-"Cela peut être fait automatiquement avec le script ``update-maintainer`` "
-"disponible dans le paquet ``ubuntu-dev-tools``. Pour plus d'informations, "
-"reportez-vous aux `Spécifications Debian du Champ Mainteneur "
-"<https://wiki.ubuntu.com/DebianMaintainerField>`_ sur le wiki d'Ubuntu."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:120
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:118
 msgid "Each additional paragraph describes a binary package to be built."
 msgstr ""
 "Chaque paragraphe supplémentaire décrit un paquet binaire à compiler."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:122
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:120
 msgid ""
-"For further information, see the `control file section (Chapter 5) "
-"<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the "
-"Debian Policy Manual."
+"For further information, see the `control file section (Chapter 5) <policy-"
+"control_>`_ of the Debian Policy Manual."
 msgstr ""
-"Pour plus d'informations, consultez la `section fichier control (Chapitre 5) "
-"<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ de la "
-"Charte Debian."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:128
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:125
 msgid "The copyright file"
 msgstr "Le fichier de copyright"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:130
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:127
 msgid ""
 "This file gives the copyright information for both the upstream source and "
-"the packaging. Ubuntu and `Debian Policy (Section 12.5) "
-"<http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_ "
-"require that each package installs a verbatim copy of its copyright and "
-"license information to ``/usr/share/doc/$(package_name)/copyright``."
-msgstr ""
-"Ce fichier donne les informations de copyright à la fois pour la source en "
-"amont et pour l'empaquetage. Les chartes Ubuntu et `Debian (Section 12.5) "
-"<http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_ "
-"exigent que chaque paquet installe une copie intégrale de son copyright et "
-"de ses informations de licence dans "
+"the packaging. Ubuntu and `Debian Policy (Section 12.5) <policy-"
+"copyright_>`_ require that each package installs a verbatim copy of its "
+"copyright and license information to "
 "``/usr/share/doc/$(package_name)/copyright``."
+msgstr ""
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:136
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:132
 msgid ""
 "Generally, copyright information is found in the ``COPYING`` file in the "
 "program's source directory. This file should include such information as the "
@@ -890,21 +785,17 @@ msgstr ""
 "titulaire du copyright, et le texte du copyright lui-même. Un exemple "
 "pouvant servir de modèle serait ::"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:178
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:174
 msgid ""
-"This example follows the `Machine-readable debian/copyright "
-"<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ "
+"This example follows the `Machine-readable debian/copyright <DEP5_>`_ "
 "format. You are encouraged to use this format as well."
 msgstr ""
-"Cet exemple suit le format du `Droit d'auteur Debian lisible par la machine "
-"<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_. Vous "
-"êtes également encouragés à utiliser ce format."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:184
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:179
 msgid "The rules file"
 msgstr "Le fichier des règles"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:186
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:181
 msgid ""
 "The last file we need to look at is ``rules``. This does all the work for "
 "creating our package. It is a Makefile with targets to compile and install "
@@ -919,7 +810,7 @@ msgstr ""
 "nettoyer tous les fichiers de construction de telle sorte que vous vous "
 "retrouvez au final uniquement avec un paquet source."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:194
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:189
 msgid ""
 "Here is a simplified version of the rules file created by ``dh_make`` (which "
 "can be found in the ``dh-make`` package):"
@@ -927,7 +818,7 @@ msgstr ""
 "Voici une version simplifiée du fichier de règles créé par ``dh_make`` (qui "
 "peut être trouvé dans le paquet ``dh-make``):"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:208
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:203
 msgid ""
 "Let us go through this file in some detail. What this does is pass every "
 "build target that ``debian/rules`` is called with as an argument to "
@@ -938,7 +829,7 @@ msgstr ""
 "``/usr/bin/dh``, qui appelle lui-même toutes les commandes ``dh_*`` "
 "nécessaires."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:212
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:207
 msgid ""
 "``dh`` runs a sequence of debhelper commands. The supported sequences "
 "correspond to the targets of a ``debian/rules`` file: \"build\", \"clean\", "
@@ -951,7 +842,7 @@ msgstr ""
 "« binary ». Afin de voir quelles commandes sont lancées dans chaque cible, "
 "exécutez ::"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:221
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:216
 msgid ""
 "Commands in the binary-indep sequence are passed the \"-i\" option to ensure "
 "they only work on binary independent packages, and commands in the binary-"
@@ -964,7 +855,7 @@ msgstr ""
 "l'option « -a » pour s'assurer qu'elles ne fonctionnent que sur les paquets "
 "dépendants de l'architecture."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:226
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:221
 msgid ""
 "Each debhelper command will record when it's successfully run in "
 "``debian/package.debhelper.log``. (Which dh_clean deletes.) So dh can tell "
@@ -976,7 +867,7 @@ msgstr ""
 "révéler quelles commandes ont déjà été exécutées, pour quels paquets, et "
 "ignorera une nouvelle instance d'exécution de ces commandes."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:231
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:226
 msgid ""
 "Each time ``dh`` is run, it examines the log, and finds the last logged "
 "command that is in the specified sequence. It then continues with the next "
@@ -988,7 +879,7 @@ msgstr ""
 "ensuite avec la commande suivante de la séquence. Les options ``--until``, "
 "``--before``, ``--after``, et ``--remaining`` modifient ce comportement."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:236
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:231
 msgid ""
 "If ``debian/rules`` contains a target with a name like "
 "``override_dh_command``, then when it gets to that command in the sequence, "
@@ -1005,7 +896,7 @@ msgstr ""
 "place. (Notez que pour utiliser cette fonctionnalité, vous devez construire "
 "les dépendances à partir de debhelper 7.0.50 ou supérieur.)"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:245
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:240
 msgid ""
 "Have a look at ``/usr/share/doc/debhelper/examples/`` and ``man dh`` for "
 "more examples. Also see `the rules section (Section 4.9) "
@@ -1017,15 +908,15 @@ msgstr ""
 "<http://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules>`_ de "
 "la Charte Debian."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:251
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:246
 msgid "Additional Files"
 msgstr "Les fichiers additionnels"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:254
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:249
 msgid "The install file"
 msgstr "Le fichier d'installation"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:256
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:251
 msgid ""
 "The ``install`` file is used by ``dh_install`` to install files into the "
 "binary package. It has two standard use cases:"
@@ -1033,7 +924,7 @@ msgstr ""
 "Le fichier ``install`` est utilisé par ``dh_install`` pour installer les "
 "fichiers dans le paquet binaire. Il s'utilise classiquement dans deux cas :"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:259
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:254
 msgid ""
 "To install files into your package that are not handled by the upstream "
 "build system."
@@ -1041,14 +932,14 @@ msgstr ""
 "Pour installer des fichiers dans votre paquet lorsqu'ils ne sont pas gérés "
 "par le système de construction en amont."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:260
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:255
 msgid ""
 "Splitting a single large source package into multiple binary packages."
 msgstr ""
 "Fractionner un important et unique paquet source en plusieurs paquets "
 "binaires."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:262
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:257
 msgid ""
 "In the first case, the ``install`` file should have one line per file "
 "installed, specifying both the file and the installation directory. For "
@@ -1063,7 +954,7 @@ msgstr ""
 "un fichier desktop dans le répertoire ``debian`` de "
 "``usr/share/applications`` ::"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:273
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:268
 msgid ""
 "When a source package is producing multiple binary packages ``dh`` will "
 "install the files into ``debian/tmp`` rather than directly into "
@@ -1088,7 +979,7 @@ msgstr ""
 "d'installation. Par exemple, ``foo.install`` contenant uniquement des "
 "fichiers dépendants de l'architecture pourrait ressembler à ::"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:286
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:281
 msgid ""
 "While ``foo-common.install`` containing only the architecture independent "
 "file might look like::"
@@ -1096,7 +987,7 @@ msgstr ""
 "Alors que le ``foo-common.install`` contenant uniquement des fichiers "
 "indépendants de l'architecture pourrait ressembler à ::"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:294
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:289
 msgid ""
 "This would create two binary packages, ``foo`` and ``foo-common``. Both "
 "would require their own paragraph in ``debian/control``."
@@ -1104,7 +995,7 @@ msgstr ""
 "Cela créera deux paquets binaires, `` foo`` et ``foo-common``. Les deux "
 "exigeraient leur propre paragraphe dans ``debian/control``."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:297
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:292
 msgid ""
 "See ``man dh_install`` and the `install file section (Section 5.11) "
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_  of "
@@ -1114,11 +1005,11 @@ msgstr ""
 "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_ du "
 "Nouveau Guide des Mainteneurs Debian pour plus de détails."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:302
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:297
 msgid "The watch file"
 msgstr "Le fichier watch"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:304
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:299
 msgid ""
 "The ``debian/watch`` file allows us to check automatically for new upstream "
 "versions using the tool ``uscan`` found in the ``devscripts`` package. The "
@@ -1132,7 +1023,7 @@ msgstr ""
 "format (3, au moment d'écrire ces lignes), tandis que les lignes suivantes "
 "contiennent des URL à analyser. Par exemple::"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:313
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:308
 msgid ""
 "Running ``uscan`` in the root source directory will now compare the upstream "
 "version number in ``debian/changelog`` with the latest available upstream "
@@ -1144,18 +1035,14 @@ msgstr ""
 "version amont disponible. Si une nouvelle version amont est trouvée, elle "
 "sera automatiquement téléchargée. Par exemple ::"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:326
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:321
 msgid ""
 "If your tarballs live on Launchpad, the ``debian/watch`` file is a little "
-"more complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  "
-"In that case, use something like::"
+"more complicated (see `Question 21146 <Q21146_>`_ and `Bug 231797 "
+"<Bug231797_>`_ for why this is).  In that case, use something like::"
 msgstr ""
-"Si vos archives tar sont en direct sur Launchpad, le fichier "
-"``debian/watch`` sera un peu plus compliqué (la `Question 21146`_ et le "
-"`Bogue 231797`_ montrent de quoi il s'agit). Dans ce cas, utilisez quelque "
-"chose comme ::"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:333
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:328
 msgid ""
 "For further information, see ``man uscan`` and the `watch file section "
 "(Section 4.11) <http://www.debian.org/doc/debian-policy/ch-source.html#s-"
@@ -1165,7 +1052,7 @@ msgstr ""
 "watch (Section 4.11) <http://www.debian.org/doc/debian-policy/ch-"
 "source.html#s-debianwatch>`_ de la Charte Debian."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:337
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:332
 msgid ""
 "For a list of packages where the ``watch`` file reports they are not in sync "
 "with upstream see `Ubuntu External Health Status "
@@ -1175,11 +1062,11 @@ msgstr ""
 "synchronisés avec l'amont, voir `Etat de santé externe Ubuntu "
 "<http://qa.ubuntuwire.org/uehs/no_updated.html>`_."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:337
 msgid "The source/format file"
 msgstr "Le fichier source/format"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:344
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:339
 msgid ""
 "This file indicates the format of the source package. It should contain a "
 "single line indicating the desired format:"
@@ -1187,22 +1074,22 @@ msgstr ""
 "Ce fichier indique le format du paquet source. Il doit contenir une seule "
 "ligne indiquant le format désiré :"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:347
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:342
 msgid "``3.0 (native)`` for Debian native packages (no upstream version)"
 msgstr ""
 "``3.0 (native)`` pour les paquets Debian natifs (pas de version amont)"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:349
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:344
 msgid "``3.0 (quilt)`` for packages with a separate upstream tarball"
 msgstr "``3.0 (quilt)`` pour les paquets avec une archive séparée en amont"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:351
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:346
 msgid "``1.0`` for packages wishing to explicitly declare the default format"
 msgstr ""
 "``1.0`` pour les paquets souhaitant déclarer explicitement le format par "
 "défaut"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:353
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:348
 msgid ""
 "Currently, the package source format will default to 1.0 if this file does "
 "not exist. You can make this explicit in the source/format file. If you "
@@ -1216,7 +1103,7 @@ msgstr ""
 "le format de la source, Lintian vous avertira de ce fichier manquant. Cet "
 "avertissement est purement informatif et peut être ignoré en toute sécurité."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:358
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:353
 msgid ""
 "You are encouraged to use the newer 3.0 source format. It provides a number "
 "of new features:"
@@ -1224,23 +1111,23 @@ msgstr ""
 "Nous vous encourageons à utiliser le nouveau format de source 3.0. Il "
 "fournit un certain nombre de nouvelles fonctionnalités :"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:361
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:356
 msgid "Support for additional compression formats: bzip2, lzma and xz"
 msgstr ""
 "Prise en charge de formats de compression supplémentaires : bzip2, lzma et xz"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:363
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:358
 msgid "Support for multiple upstream tarballs"
 msgstr "Prise en charge de plusieurs archives amont"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:365
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:360
 msgid ""
 "Not necessary to repack the upstream tarball to strip the debian directory"
 msgstr ""
 "Il n'est pas nécessaire de rempaqueter l'archive amont pour dépouiller le "
 "répertoire debian"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:367
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:362
 msgid ""
 "Debian-specific changes are no longer stored in a single .diff.gz but in "
 "multiple patches compatible with quilt under ``debian/patches/``"
@@ -1249,48 +1136,32 @@ msgstr ""
 "fichier .diff.gz, mais dans plusieurs correctifs compatibles avec quilt dans "
 "``debian/patches/``"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:369
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:365
 msgid ""
-"http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
+"https://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
 "concerning the switch to the 3.0 source package formats."
 msgstr ""
-"http://wiki.debian.org/Projects/DebSrc3.0 résume l'information "
-"supplémentaire concernant le passage à la version 3.0 des formats de paquets "
-"source."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:372
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:368
 msgid ""
 "See ``man dpkg-source`` and the `source/format section (Section 5.21) "
-"<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of "
-"the Debian New Maintainers' Guide for additional details."
+"<policy-format_>`_  of  the Debian New Maintainers' Guide for additional "
+"details."
 msgstr ""
-"Voir ``man dpkg-source`` et la `section source/format (Section 5.21) "
-"<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_ du "
-"Nouveau Guide des Mainteneurs Debian afin d'obtenir des détails "
-"supplémentaires."
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:377
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:372
 msgid "Additional Resources"
 msgstr "Ressources supplémentaires"
 
-#: ../ubuntu-packaging-guide/debian-dir-overview.rst:379
+#: ../ubuntu-packaging-guide/debian-dir-overview.rst:374
 msgid ""
 "In addition to the links to the Debian Policy Manual in each section above, "
 "the Debian New Maintainers' Guide has more detailed descriptions of each "
 "file. `Chapter 4, \"Required files under the debian directory\" "
-"<http://www.debian.org/doc/maint-guide/dreq.en.html>`_ further discusses the "
-"control, changelog, copyright and rules files. `Chapter 5, \"Other files "
-"under the debian directory\" <http://www.debian.org/doc/maint-"
-"guide/dother.en.html>`_ discusses additional files that may be used."
+"<RequiredFiles_>`_ further discusses the  control, changelog, copyright and "
+"rules files. `Chapter 5, \"Other files under the debian directory\" "
+"<OtherFiles_>`_ discusses additional files that may be used."
 msgstr ""
-"En complément des liens vers la Charte Debian de chaque section ci-dessus, "
-"le Nouveau Guide des Mainteneurs Debian décrit plus en détail chaque "
-"fichier. Notamment, `Chapitre 4, « Fichiers nécessaires dans le répertoire "
-"debian » <http://www.debian.org/doc/maint-guide/dreq.fr.html>`_ examine en "
-"profondeur les fichiers control, changelog, copyright et rules. Le `Chapitre "
-"5, « Autres fichiers dans le répertoire debian » "
-"<http://www.debian.org/doc/maint-guide/dother.fr.html>`_ examine les "
-"fichiers supplémentaires pouvant être utilisés."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:3
 msgid "Fixing a bug in Ubuntu"
@@ -2384,19 +2255,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:26
 msgid ""
-"Don't worry though, you can use `Testdrive "
-"<https://wiki.ubuntu.com/QATeam/Testdrive>`_ or :doc:`chroots <./chroots>` "
+"Don't worry though, you can use `Testdrive`_ or :doc:`chroots <./chroots>` "
 "to safely use the development release."
 msgstr ""
-"Ne vous inquiétez pas outre mesure, vous pouvez utiliser `Testdrive "
-"<https://wiki.ubuntu.com/QATeam/Testdrive>`_ ou :doc:`chroots <./chroots>` "
-"pour utiliser la version de développement en toute sécurité."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:31
+#: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
 msgstr "Installer les logiciels d'empaquetage de base"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:33
+#: ../ubuntu-packaging-guide/getting-set-up.rst:34
 msgid ""
 "There are a number of tools that will make your life as an Ubuntu developer "
 "much easier.  You will encounter these tools later in this guide.  To "
@@ -2406,7 +2273,7 @@ msgstr ""
 "d'Ubuntu. Vous croiserez ces outils plus loin dans ce guide. Pour installer "
 "la plupart des outils dont vous aurez besoin, exécutez cette commande ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:40
+#: ../ubuntu-packaging-guide/getting-set-up.rst:41
 msgid ""
 "Note: Since Ubuntu 11.10 \"Oneiric Ocelot\" (or if you have Backports "
 "enabled on a currently supported release), the following command will "
@@ -2418,21 +2285,18 @@ msgstr ""
 "commande suivante installe les outils ci-dessus et quelques autres, assez "
 "communs dans le développement d'Ubuntu ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:48
+#: ../ubuntu-packaging-guide/getting-set-up.rst:49
 msgid "This command will install the following software:"
 msgstr "Cette commande va installer les logiciels suivants :"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:50
+#: ../ubuntu-packaging-guide/getting-set-up.rst:51
 msgid ""
-"``gnupg`` -- `GNU Privacy Guard`_ contains tools you will need to create a "
-"cryptographic key with which you will sign files you want to upload to "
-"Launchpad."
+"``gnupg`` -- `GNU Privacy Guard <GPG_>`_ contains tools you will need to "
+"create a cryptographic key with which you will sign files you want to upload "
+"to Launchpad."
 msgstr ""
-"``gnupg`` -- `GNU Privacy Guard`_ contient les outils dont vous aurez besoin "
-"pour créer une clé de chiffrement avec laquelle vous signerez les fichiers "
-"que vous souhaiterez télécharger vers Launchpad."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:53
+#: ../ubuntu-packaging-guide/getting-set-up.rst:54
 msgid ""
 "``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
 "isolated environment."
@@ -2440,7 +2304,7 @@ msgstr ""
 "``pbuilder`` -- un outil pour réaliser des constructions reproductibles d'un "
 "paquet dans un environnement propre et isolé."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:55
+#: ../ubuntu-packaging-guide/getting-set-up.rst:56
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
@@ -2448,7 +2312,7 @@ msgstr ""
 "``ubuntu-dev-tools`` (et ``devscripts``, sa dépendance directe) -- une "
 "collection d'outils simplifiant les nombreuses tâches d'empaquetage."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:57
+#: ../ubuntu-packaging-guide/getting-set-up.rst:58
 msgid ""
 "``bzr-builddeb`` (and ``bzr``, a dependency) -- distributed version control "
 "with Bazaar, a new way of working with packages for Ubuntu that will make it "
@@ -2460,7 +2324,7 @@ msgstr ""
 "pour Ubuntu facilitant la collaboration de nombreux développeurs sur le même "
 "code, tout en gardant la simplicité de fusionner le travail de chacun."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:61
+#: ../ubuntu-packaging-guide/getting-set-up.rst:62
 msgid ""
 "``apt-file`` provides an easy way to find the binary package that contains a "
 "given file."
@@ -2468,32 +2332,25 @@ msgstr ""
 "``apt-file`` donne un moyen facile de trouver le paquet binaire contenant un "
 "fichier donné."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:66
+#: ../ubuntu-packaging-guide/getting-set-up.rst:67
 msgid "Create your GPG key"
 msgstr "Créez votre clé GPG"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:68
+#: ../ubuntu-packaging-guide/getting-set-up.rst:69
 msgid ""
-"GPG stands for `GNU Privacy Guard`_ and it implements the OpenPGP standard "
-"which allows you to sign and encrypt messages and files. This is useful for "
-"a number of purposes. In our case it is important that you can sign files "
-"with your key so they can be identified as something that you worked on. If "
-"you upload a source package to Launchpad, it will only accept the package if "
-"it can absolutely determine who uploaded the package."
+"GPG stands for `GNU Privacy Guard <GPG_>`_ and it implements the OpenPGP "
+"standard which allows you to sign and encrypt messages and files. This is "
+"useful for a number of purposes. In our case it is important that you can "
+"sign files with your key so they can be identified as something that you "
+"worked on. If you upload a source package to Launchpad, it will only accept "
+"the package if it can absolutely determine who uploaded the package."
 msgstr ""
-"GPG signifie `GNU Privacy Guard`_ et implémente le standard OpenPGP vous "
-"permettant de signer et de crypter des messages et des fichiers. Ceci est "
-"utile pour plusieurs raisons. Dans notre cas, il est important que vous "
-"puissiez signer des fichiers avec votre clé afin qu'ils puissent être "
-"identifiés comme quelque chose sur laquelle vous avez travaillé. Si vous "
-"téléchargez un paquet source vers Launchpad, ce dernier n'acceptera le "
-"paquet que s'il peut formellement déterminer qui l'a envoyé."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:75
+#: ../ubuntu-packaging-guide/getting-set-up.rst:76
 msgid "To generate a new GPG key, run::"
 msgstr "Pour générer une nouvelle clé GPG, exécutez ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:79
+#: ../ubuntu-packaging-guide/getting-set-up.rst:80
 msgid ""
 "GPG will first ask you which kind of key you want to generate. Choosing the "
 "default (RSA and DSA) is fine. Next it will ask you about the keysize. The "
@@ -2519,7 +2376,7 @@ msgstr ""
 "secrète, choisissez-en une sûre (une phrase secrète est juste un mot de "
 "passe qui autorise les espaces)."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:89
+#: ../ubuntu-packaging-guide/getting-set-up.rst:90
 msgid ""
 "Now GPG will create a key for you, which can take a little bit of time; it "
 "needs random bytes, so if you give the system some work to do it will be "
@@ -2532,16 +2389,16 @@ msgstr ""
 "quelques paragraphes de texte aléatoire, chargez quelques pages dans votre "
 "navigateur internet, etc."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:94
+#: ../ubuntu-packaging-guide/getting-set-up.rst:95
 msgid "Once this is done, you will get a message similar to this one::"
 msgstr ""
 "Une fois cela fait, vous obtiendrez un message similaire à celui-ci ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:101
+#: ../ubuntu-packaging-guide/getting-set-up.rst:102
 msgid "In this case ``43CDE61D`` is the *key ID*."
 msgstr "Dans ce cas ``43CDE61D`` est l'*identifiant clé*."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:103
+#: ../ubuntu-packaging-guide/getting-set-up.rst:104
 msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
@@ -2550,7 +2407,7 @@ msgstr ""
 "sorte que tout le monde puisse identifier vos messages et fichiers. Pour ce "
 "faire, entrez ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:108
+#: ../ubuntu-packaging-guide/getting-set-up.rst:109
 msgid ""
 "This will send your key to the Ubuntu keyserver, but a network of keyservers "
 "will automatically sync the key between themselves. Once this syncing is "
@@ -2562,11 +2419,11 @@ msgstr ""
 "fois cette synchronisation terminée, votre clé publique signée sera prête à "
 "vérifier vos contributions partout dans le monde."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:115
+#: ../ubuntu-packaging-guide/getting-set-up.rst:116
 msgid "Create your SSH key"
 msgstr "Créez votre clé SSH"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:117
+#: ../ubuntu-packaging-guide/getting-set-up.rst:118
 msgid ""
 "SSH_ stands for *Secure Shell*, and it is a protocol that allows you to "
 "exchange data in a secure way over a network. It is common to use SSH to "
@@ -2581,11 +2438,11 @@ msgstr ""
 "principalement utiliser SSH pour télécharger en toute sécurité nos paquets "
 "source vers Launchpad."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:123
+#: ../ubuntu-packaging-guide/getting-set-up.rst:124
 msgid "To generate an SSH key, enter::"
 msgstr "Pour générer une clé SSH, saisissez ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:127
+#: ../ubuntu-packaging-guide/getting-set-up.rst:128
 msgid ""
 "The default file name usually makes sense, so you can just leave it as it "
 "is. For security purposes, it is highly recommended that you use a "
@@ -2595,11 +2452,11 @@ msgstr ""
 "simplement le laisser tel quel. Pour des raisons de sécurité, il est "
 "fortement recommandé d'utiliser une phrase secrète."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:132
+#: ../ubuntu-packaging-guide/getting-set-up.rst:133
 msgid "Set up pbuilder"
 msgstr "Configurer pbuilder"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:134
+#: ../ubuntu-packaging-guide/getting-set-up.rst:135
 msgid ""
 "``pbuilder`` allows you to build packages locally on your machine. It serves "
 "a couple of purposes:"
@@ -2607,7 +2464,7 @@ msgstr ""
 "``pbuilder`` vous permet de construire des paquets en local sur votre "
 "machine. Il dispose de différentes fonctions :"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:137
+#: ../ubuntu-packaging-guide/getting-set-up.rst:138
 msgid ""
 "The build will be done in a minimal and clean environment. This helps you "
 "make sure your builds succeed in a reproducible way, but without modifying "
@@ -2617,25 +2474,25 @@ msgstr ""
 "aide à vous assurer que vos constructions réussiront de façon reproductible, "
 "mais sans modifier votre système local"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:140
+#: ../ubuntu-packaging-guide/getting-set-up.rst:141
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
 msgstr ""
 "Il est inutile d'installer toutes les *dépendances de construction* "
 "nécessaires en local"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:141
+#: ../ubuntu-packaging-guide/getting-set-up.rst:142
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
 msgstr ""
 "Vous pouvez configurer plusieurs instances pour différentes versions "
 "d'Ubuntu et de Debian"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:143
+#: ../ubuntu-packaging-guide/getting-set-up.rst:144
 msgid "Setting ``pbuilder`` up is very easy, run::"
 msgstr "Configurer ``pbuilder`` est très simple, lancez ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:147
+#: ../ubuntu-packaging-guide/getting-set-up.rst:148
 msgid ""
 "where <release> is for example `raring`, `saucy`, `trusty` or in the case of "
 "Debian maybe `sid`. This will take a while as it will download all the "
@@ -2643,11 +2500,11 @@ msgid ""
 "though."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:153
+#: ../ubuntu-packaging-guide/getting-set-up.rst:154
 msgid "Get set up to work with Launchpad"
 msgstr "Mettez vous en place pour travailler avec Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:155
+#: ../ubuntu-packaging-guide/getting-set-up.rst:156
 msgid ""
 "With a basic local configuration in place, your next step will be to "
 "configure your system to work with Launchpad. This section will focus on the "
@@ -2657,27 +2514,27 @@ msgstr ""
 "sera de configurer votre système pour travailler avec Launchpad. Cette "
 "section portera sur les sujets suivants :"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:159
+#: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid "What Launchpad is and creating a Launchpad account"
 msgstr "Description de Launchpad et création d'un compte Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:160
+#: ../ubuntu-packaging-guide/getting-set-up.rst:161
 msgid "Uploading your GPG and SSH keys to Launchpad"
 msgstr "Téléversement de vos clés GPG et SSH vers Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:161
+#: ../ubuntu-packaging-guide/getting-set-up.rst:162
 msgid "Configuring Bazaar to work with Launchpad"
 msgstr "Configurer Bazaar pour travailler avec Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:162
+#: ../ubuntu-packaging-guide/getting-set-up.rst:163
 msgid "Configuring Bash to work with Bazaar"
 msgstr "Configurer Bash pour travailler avec Bazaar"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:166
+#: ../ubuntu-packaging-guide/getting-set-up.rst:167
 msgid "About Launchpad"
 msgstr "À propos de Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:168
+#: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid ""
 "Launchpad is the central piece of infrastructure we use in Ubuntu. It not "
 "only stores our packages and our code, but also things like translations, "
@@ -2693,7 +2550,7 @@ msgstr ""
 "propositions de corrections et obtenir leur examen et leur parrainage par "
 "d'autres développeurs d'Ubuntu."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:174
+#: ../ubuntu-packaging-guide/getting-set-up.rst:175
 msgid ""
 "You will need to register with Launchpad and provide a minimal amount of "
 "information. This will allow you to download and upload code, submit bug "
@@ -2703,7 +2560,7 @@ msgstr ""
 "Cela vous permettra de télécharger du code depuis et vers Launchpad, de "
 "soumettre des rapports de bogues et plus encore."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:178
+#: ../ubuntu-packaging-guide/getting-set-up.rst:179
 msgid ""
 "Besides hosting Ubuntu, Launchpad can host any Free Software project. For "
 "more information see the `Launchpad Help wiki "
@@ -2713,23 +2570,19 @@ msgstr ""
 "logiciel libre. Pour plus d'informations, voir le `wiki Aide de Launchpad "
 "<https://help.launchpad.net/>`_."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:183
+#: ../ubuntu-packaging-guide/getting-set-up.rst:184
 msgid "Get a Launchpad account"
 msgstr "Créer un compte Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:185
+#: ../ubuntu-packaging-guide/getting-set-up.rst:186
 msgid ""
-"If you don't already have a Launchpad account, you can easily `create one`_. "
-"If you have a Launchpad account but cannot remember your Launchpad id, you "
-"can find this out by going to https://launchpad.net/~ and looking for the "
-"part after the `~` in the URL."
+"If you don't already have a Launchpad account, you can easily `create one "
+"<LP-AccountCreate_>`_. If you have a Launchpad account but cannot remember "
+"your Launchpad id, you can find this out by going to https://launchpad.net/~ "
+"and looking for the part after the `~` in the URL."
 msgstr ""
-"Si vous ne possédez pas encore de compte Launchpad, vous pouvez facilement "
-"`en créer un`_. Si vous avez un compte Launchpad, dont vous ne vous rappelez "
-"plus l'identifiant, vous pouvez le retrouver en allant sur "
-"https://launchpad.net/~ et rechercher la partie après le `~` de l'URL."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:190
+#: ../ubuntu-packaging-guide/getting-set-up.rst:191
 msgid ""
 "Launchpad's registration process will ask you to choose a display name. It "
 "is encouraged for you to use your real name here so that your Ubuntu "
@@ -2739,7 +2592,7 @@ msgstr ""
 "afficher. Il vous est recommandé d'utiliser votre vrai nom, afin que vos "
 "collègues développeurs sur Ubuntu soient en mesure de mieux vous connaître."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:194
+#: ../ubuntu-packaging-guide/getting-set-up.rst:195
 msgid ""
 "When you register a new account, Launchpad will send you an email with a "
 "link you need to open in your browser in order to verify your email address. "
@@ -2750,45 +2603,40 @@ msgstr ""
 "vérifier votre adresse de courriel. Si vous ne le recevez pas, vérifiez dans "
 "votre dossier de pourriel."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:198
+#: ../ubuntu-packaging-guide/getting-set-up.rst:199
 msgid ""
-"`The new account help page "
-"<https://help.launchpad.net/YourAccount/NewAccount>`_ on Launchpad has more "
+"`The new account help page <LP-AccountHelp_>`_ on Launchpad has more "
 "information about the process and additional settings you can change."
 msgstr ""
-"`La page d'aide nouveau compte "
-"<https://help.launchpad.net/YourAccount/NewAccount>`_ sur Launchpad contient "
-"plus d'informations sur le processus et les paramètres supplémentaires que "
-"vous pouvez modifier."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:204
+#: ../ubuntu-packaging-guide/getting-set-up.rst:206
 msgid "Upload your GPG key to Launchpad"
 msgstr "Téléversez votre clé GPG sur Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:206
+#: ../ubuntu-packaging-guide/getting-set-up.rst:208
 msgid "First, you will need to get your fingerprint and key ID."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:208
+#: ../ubuntu-packaging-guide/getting-set-up.rst:210
 msgid "To find about your GPG fingerprint, run::"
 msgstr "Pour connaître votre empreinte GPG, exécutez ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:212
+#: ../ubuntu-packaging-guide/getting-set-up.rst:214
 msgid "and it will print out something like::"
 msgstr "et cela affichera quelque chose comme ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:219
+#: ../ubuntu-packaging-guide/getting-set-up.rst:221
 msgid "Then run this command to submit your key to Ubuntu keyserver::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:223
+#: ../ubuntu-packaging-guide/getting-set-up.rst:225
 msgid ""
 "where ``43CDE61D`` should be replaced by your key ID (which is in the first "
 "line of output of the previous command). Now you can import your key to "
 "Launchpad."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:227
+#: ../ubuntu-packaging-guide/getting-set-up.rst:229
 msgid ""
 "Head to https://launchpad.net/~/+editpgpkeys and copy the \"Key "
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
@@ -2799,7 +2647,7 @@ msgstr ""
 "``5C28 0144 FB08 91C0 2CF3 37AC 6F0B F90F 43CD E61D``. Ensuite, cliquez sur "
 "\"Importer la clé\"."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:232
+#: ../ubuntu-packaging-guide/getting-set-up.rst:234
 msgid ""
 "Launchpad will use the fingerprint to check the Ubuntu key server for your "
 "key and, if successful, send you an encrypted email asking you to confirm "
@@ -2817,25 +2665,17 @@ msgstr ""
 "Entrez le mot de passe, puis cliquez sur le lien pour confirmer que la clé "
 "est la vôtre.`"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:239
+#: ../ubuntu-packaging-guide/getting-set-up.rst:241
 msgid ""
 "Launchpad encrypts the email, using your public key, so that it can be sure "
 "that the key is yours. If you are using Thunderbird, the default Ubuntu "
-"email client, you can install the `Enigmail plugin "
-"<https://apps.ubuntu.com/cat/applications/enigmail/>`_ to easily decrypt the "
-"message. If your email software does not support OpenPGP encryption, copy "
-"the encrypted email's contents, type ``gpg`` in your terminal, then paste "
-"the email contents into your terminal window."
+"email client, you can install the `Enigmail plugin <Enigmail_>`_ to easily "
+"decrypt the message. If your email software does not support OpenPGP "
+"encryption, copy the encrypted email's contents, type ``gpg`` in your "
+"terminal, then paste the email contents into your terminal window."
 msgstr ""
-"Launchpad chiffre le courriel en utilisant votre clé publique, ce qui assure "
-"que votre clé vous est propre. Si vous utilisez Thunderbird, le client de "
-"messagerie par défaut d'Ubuntu, vous pouvez installer le  `greffon Enigmail "
-"<https://apps.ubuntu.com/cat/applications/enigmail/>`_ pour déchiffrer "
-"aisément le message. Si votre logiciel de messagerie ne prend pas OpenPGP en "
-"charge, copiez le contenu du courriel chiffré, tapez ``gpg`` dans une "
-"fenêtre de terminal, puis collez-y le contenu du courriel."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:248
+#: ../ubuntu-packaging-guide/getting-set-up.rst:251
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
@@ -2843,7 +2683,7 @@ msgstr ""
 "De retour sur le site Launchpad, utilisez le bouton \"Confirmer\" et "
 "Launchpad terminera l'import de votre clé OpenPGP."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:251
+#: ../ubuntu-packaging-guide/getting-set-up.rst:254
 msgid ""
 "Find more information at "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
@@ -2851,11 +2691,11 @@ msgstr ""
 "Vous trouverez plus d'informations sur "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:255
+#: ../ubuntu-packaging-guide/getting-set-up.rst:258
 msgid "Upload your SSH key to Launchpad"
 msgstr "Téléchargez votre clé SSH vers Launchpad"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:257
+#: ../ubuntu-packaging-guide/getting-set-up.rst:260
 msgid ""
 "Open https://launchpad.net/~/+editsshkeys in a web browser, also open "
 "``~/.ssh/id_rsa.pub`` in a text editor. This is the public part of your SSH "
@@ -2870,22 +2710,17 @@ msgstr ""
 "sur la page Web affichant \"Ajouter une clé SSH\". Ensuite, cliquez sur "
 "\"Importer la clé publique\"."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:263
+#: ../ubuntu-packaging-guide/getting-set-up.rst:266
 msgid ""
 "For more information on this process, visit the `creating an SSH keypair "
-"<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
-"Launchpad."
+"<genssh_>`_ page on Launchpad."
 msgstr ""
-"Pour plus d'informations sur ce processus, veuillez consulter la page `créer "
-"une paire de clés SSH "
-"<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ sur "
-"Launchpad."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:269
+#: ../ubuntu-packaging-guide/getting-set-up.rst:272
 msgid "Configure Bazaar"
 msgstr "Configurer Bazaar"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:271
+#: ../ubuntu-packaging-guide/getting-set-up.rst:274
 msgid ""
 "Bazaar is the tool we use to store code changes in a logical way, to "
 "exchange proposed changes and merge them, even if development is done "
@@ -2898,11 +2733,11 @@ msgstr ""
 "nouvelle méthode de Développement des Distributions Ubuntu pour travailler "
 "avec les paquets Ubuntu."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:276
+#: ../ubuntu-packaging-guide/getting-set-up.rst:279
 msgid "To tell Bazaar who you are, simply run::"
 msgstr "Pour dire à Bazaar qui vous êtes, il suffit de lancer ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:281
+#: ../ubuntu-packaging-guide/getting-set-up.rst:284
 msgid ""
 "`whoami` will tell Bazaar which name and email address it should use for "
 "your commit messages. With `launchpad-login` you set your Launchpad ID. This "
@@ -2913,7 +2748,7 @@ msgstr ""
 "définissez votre identifiant Launchpad. De cette façon, le code que vous "
 "publiez dans Launchpad vous sera associé."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:285
+#: ../ubuntu-packaging-guide/getting-set-up.rst:288
 msgid ""
 "Note: If you can not remember the ID, go to https://launchpad.net/~ and see "
 "where it redirects you. The part after the \"~\" in the URL is your "
@@ -2923,11 +2758,11 @@ msgstr ""
 "https://launchpad.net/~ et regardez où cela vous redirige. La partie après "
 "le \"~\" de l'URL est votre identifiant Launchpad."
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:291
+#: ../ubuntu-packaging-guide/getting-set-up.rst:294
 msgid "Configure your shell"
 msgstr "Configurez votre shell"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:292
+#: ../ubuntu-packaging-guide/getting-set-up.rst:295
 msgid ""
 "Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you "
 "as well. Simply open your `~/.bashrc` in a text editor and add something "
@@ -2938,13 +2773,13 @@ msgstr ""
 "votre fichier `~/.bashrc` dans un éditeur de texte et d'y rajouter à la fin "
 "quelques lignes comme ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:299
+#: ../ubuntu-packaging-guide/getting-set-up.rst:302
 msgid "Now save the file and either restart your terminal or run::"
 msgstr ""
 "Maintenant, sauvegardez le fichier et redémarrez votre terminal ou "
 "exécutez ::"
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:303
+#: ../ubuntu-packaging-guide/getting-set-up.rst:306
 msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
@@ -3074,22 +2909,18 @@ msgstr "Articles"
 msgid "Knowledge Base"
 msgstr "Base de connaissances"
 
-#: ../ubuntu-packaging-guide/index.rst:92
+#: ../ubuntu-packaging-guide/index.rst:91
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
 msgstr "Lectures complémentaires"
 
-#: ../ubuntu-packaging-guide/index.rst:94
+#: ../ubuntu-packaging-guide/index.rst:93
 msgid ""
 "You can read this guide offline in different formats, if you install one of "
-"the `binary packages <https://launchpad.net/ubuntu/+source/ubuntu-packaging-"
-"guide>`_."
+"the `binary packages <BinPkgs_>`_."
 msgstr ""
-"Vous pouvez consulter ce guide hors-ligne dans différents formats, si vous "
-"installez un des `paquets binaires "
-"<https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide>`_."
 
-#: ../ubuntu-packaging-guide/index.rst:97
+#: ../ubuntu-packaging-guide/index.rst:96
 msgid ""
 "If you want to learn more about building Debian packages, here are some "
 "Debian resources you may find useful:"
@@ -3097,50 +2928,36 @@ msgstr ""
 "Si vous souhaitez en savoir plus à propos de la construction de paquets "
 "Debian, voici quelques ressources Debian que vous trouverez utiles :"
 
-#: ../ubuntu-packaging-guide/index.rst:100
-msgid ""
-"`How to package for Debian <https://wiki.debian.org/HowToPackageForDebian>`_;"
+#: ../ubuntu-packaging-guide/index.rst:99
+msgid "`How to package for Debian <HowToPackage_>`_;"
 msgstr ""
-"`Comment empaqueter pour Debian "
-"<https://wiki.debian.org/HowToPackageForDebian>`_ ;"
+
+#: ../ubuntu-packaging-guide/index.rst:100
+msgid "`Debian Policy Manual <Policy_>`_;"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:101
-msgid "`Debian Policy Manual <http://www.debian.org/doc/debian-policy/>`_;"
-msgstr "`Charte Debian <http://www.debian.org/doc/debian-policy/>`_;"
+msgid ""
+"`Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many "
+"languages;"
+msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:102
 msgid ""
-"`Debian New Maintainers' Guide <http://www.debian.org/doc/manuals/maint-"
-"guide/>`_ — available in many languages;"
+"`Packaging tutorial <PkgTutorial_>`_ (also available as a `package "
+"<PkgTutorialPkg_>`_);"
 msgstr ""
-"`Le Guide des Nouveaux Mainteneurs Debian "
-"<http://www.debian.org/doc/manuals/maint-guide/>`_ — disponible en plusieurs "
-"langues ;"
 
-#: ../ubuntu-packaging-guide/index.rst:104
-msgid ""
-"`Packaging tutorial <http://www.debian.org/doc/manuals/packaging-"
-"tutorial/>`_ (also available as a `package "
-"<https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
+#: ../ubuntu-packaging-guide/index.rst:103
+msgid "`Guide for Packaging Python Modules <PythonModules_>`_."
 msgstr ""
-"`Tutoriel d'empaquetage <http://www.debian.org/doc/manuals/packaging-"
-"tutorial/>`_ (également disponible comme `paquet "
-"<https://launchpad.net/ubuntu/+source/packaging-tutorial>`_)."
 
-#: ../ubuntu-packaging-guide/index.rst:107
+#: ../ubuntu-packaging-guide/index.rst:105
 msgid ""
 "We are always looking to improve this guide. If you find any problems or "
-"have some suggestions, please `report a bug on Launchpad "
-"<https://bugs.launchpad.net/ubuntu-packaging-guide>`_. If you'd like to help "
-"work on the guide, `grab the source <https://code.launchpad.net/~ubuntu-"
-"packaging-guide-team/ubuntu-packaging-guide/trunk>`_ there as well."
+"have some suggestions, please `report a bug on Launchpad <Bugs_>`_. If you'd "
+"like to help work on the guide, `grab the source <Source_>`_ there as well."
 msgstr ""
-"Nous cherchons toujours à améliorer ce guide. Si vous relevez le moindre "
-"problème ou avez quelques suggestions, veuillez `rapporter un bogue sur "
-"Launchpad <https://bugs.launchpad.net/ubuntu-packaging-guide>`_. Si vous "
-"souhaitez apporter votre aide au travail sur ce guide, vous pouvez tout à "
-"fait `récupérer la source <https://code.launchpad.net/~ubuntu-packaging-"
-"guide-team/ubuntu-packaging-guide/trunk>`_."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
@@ -3435,25 +3252,17 @@ msgstr "Empaquetage pour KDE"
 #: ../ubuntu-packaging-guide/kde.rst:5
 msgid ""
 "Packaging of KDE programs in Ubuntu is managed by the Kubuntu and MOTU "
-"teams.  You can contact the Kubuntu team on the `Kubuntu mailing list`_ and "
-"``#kubuntu-devel`` Freenode IRC channel.  More information about Kubuntu "
-"development is on the `Kubuntu wiki page`_."
+"teams.  You can contact the Kubuntu team on the `Kubuntu mailing list "
+"<KubuntuML_>`_ and ``#kubuntu-devel`` Freenode IRC channel.  More "
+"information about Kubuntu development is on the `Kubuntu wiki page <Wiki_>`_."
 msgstr ""
-"L'empaquetage de programmes KDE dans Ubuntu est géré par les équipes Kubuntu "
-"et MOTU. Vous pouvez contacter l'équipe Kubuntu sur la `liste de diffusion "
-"Kubuntu`_ et le canal IRC Freenode ``#kubuntu-devel``. Vous trouverez de "
-"plus amples informations sur le développement Kubuntu sur la `page de wiki "
-"Kubuntu`_."
 
 #: ../ubuntu-packaging-guide/kde.rst:10
 msgid ""
-"Our packaging follows the practices of the `Debian Qt/KDE Team`_ and Debian "
-"KDE Extras Team.  Most of our packages are derived from the packaging of "
-"these Debian teams."
+"Our packaging follows the practices of the `Debian Qt/KDE Team "
+"<QtKDETeam_>`_ and Debian KDE Extras Team.  Most of our packages are derived "
+"from the packaging of these Debian teams."
 msgstr ""
-"Notre empaquetage est conforme aux pratiques de l'`Équipe Debian Qt/KDE`_ et "
-"de l'équipe Debian KDE Extras. La plupart de nos paquets sont dérivés de "
-"l'empaquetage de ces équipes Debian."
 
 #: ../ubuntu-packaging-guide/kde.rst:15
 msgid "Patching Policy"
@@ -3481,7 +3290,6 @@ msgstr ""
 "(comme la suppression des écrans de démarrage)."
 
 #: ../ubuntu-packaging-guide/kde.rst:27
-#: ../ubuntu-packaging-guide/python-packaging.rst:31
 msgid "debian/rules"
 msgstr "debian/rules"
 
@@ -3561,13 +3369,8 @@ msgid ""
 "``po/`` directory.  If they do not, check if they are in separate upstream "
 "language packs such as the KDE SC language packs.  If they are in separate "
 "language packs Launchpad will need to associate these together manually, "
-"contact `dpm`_ to do this."
+"contact `David Planella <dpm_>`_ to do this."
 msgstr ""
-"L'amont met généralement les fichiers ``.po`` de traduction dans le "
-"répertoire ``po/``. S'ils n'y sont pas, vérifiez s'ils sont dans des paquets "
-"de langue séparés de l'amont tels que les paquets de langue KDE SC. S'ils "
-"sont dans des paquets de langue séparés, Launchpad devra les associer "
-"manuellement, contactez `dpm`_ pour cela."
 
 #: ../ubuntu-packaging-guide/kde.rst:69
 msgid ""
@@ -3606,15 +3409,9 @@ msgid ""
 "Library symbols are tracked in ``.symbols`` files to ensure none go missing "
 "for new releases.  KDE uses C++ libraries which act a little differently "
 "compared to C libraries.  Debian's Qt/KDE Team have scripts to handle this. "
-"See `Working with symbols files`_ for how to create and keep these files up "
-"to date."
+"See `Working with symbols files <SymbolsFiles_>`_ for how to create and keep "
+"these files up to date."
 msgstr ""
-"La bibliothèque de symboles est suivie par les fichiers ``.symbols`` pour "
-"vous assurer qu'aucun ne sera porté disparu pour les nouvelles versions. KDE "
-"utilise des bibliothèques C++ qui agissent un peu différemment des "
-"bibliothèques C. L'équipe Debian Qt/KDE possède des scripts pour gérer cela. "
-"Voir `Travailler avec les fichiers de symboles`_ pour savoir comment créer "
-"et maintenir ces fichiers à jour."
 
 #: ../ubuntu-packaging-guide/libraries.rst:3
 msgid "Shared Libraries"
@@ -3773,14 +3570,9 @@ msgstr ""
 msgid ""
 "``.la`` libtool files are needed on some non-Linux systems with poor library "
 "support but usually cause more problems than they solve on Debian systems.  "
-"It is a current `Debian goal to remove .la files`_ and we should help with "
-"this."
+"It is a current `Debian goal to remove .la files <LAFileRemoval_>`_ and we "
+"should help with this."
 msgstr ""
-"Les fichiers ``.la`` d'utilitaires bibliothèque sont nécessaires sur "
-"certains systèmes non-Linux avec une faible prise en charge des "
-"bibliothèques, mais causent généralement plus de problèmes qu'ils n'en "
-"résolvent sur les systèmes Debian. C'est un des `objectifs actuels de Debian "
-"de supprimer les fichiers .la`_ et nous devrions aider avec ceci."
 
 #: ../ubuntu-packaging-guide/libraries.rst:82
 msgid "Static Libraries"
@@ -3902,20 +3694,14 @@ msgstr "Les fichiers C++ de la bibliothèque de symboles"
 msgid ""
 "C++ has even more exacting standards of binary compatibility than C.  The "
 "Debian Qt/KDE Team maintain some scripts to handle this, see their `Working "
-"with symbols files`_ page for how to use them."
+"with symbols files <SymbolsFiles_>`_ page for how to use them."
 msgstr ""
-"C++ a des normes encore plus strictes pour la compatibilité binaire que C. "
-"L'équipe Debian Qt/KDE maintient des scripts pour gérer cela, se référer à "
-"leur page `Travailler avec les fichiers de symboles`_ pour savoir comment "
-"les utiliser."
 
 #: ../ubuntu-packaging-guide/libraries.rst:152
 msgid ""
-"Junichi Uekawa's `Debian Library Packaging Guide`_ goes into this topic in "
-"more detail."
+"Junichi Uekawa's `Debian Library Packaging Guide <LibraryGuide_>`_ goes into "
+"this topic in more detail."
 msgstr ""
-"Le `Guide d'Empaquetage de Bibliothèque Debian`_ de Junichi Uekawa explore "
-"ce sujet plus en détail."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:3
 msgid "Packaging New Software"
@@ -4206,22 +3992,29 @@ msgstr "Étapes suivantes"
 msgid ""
 "Even if it builds the .deb binary package, your packaging may have bugs.  "
 "Many errors can be automatically detected by our tool ``lintian`` which can "
-"be run on both the source .dsc metadata file and the .deb binary package::"
+"be run on the source .dsc metadata file, .deb binary packages or .changes "
+"file::"
 msgstr ""
-"Même si votre paquet binaire .deb est construit, l'empaquetage peut contenir "
-"des bogues. De nombreuses erreurs peuvent être détectées automatiquement par "
-"notre outil ``lintian`` pouvant être exécuté soit sur le fichier source de "
-"métadonnées .dsc, soit sur le paquet binaire .deb ::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:165
 msgid ""
-"A description of each of the problems it reports can be found on the "
-"`lintian website`_."
+"To see verbose description of the problems use ``--info`` lintian flag or "
+"``lintian-info`` command."
 msgstr ""
-"Une description de chacun des problèmes rapportés est disponible sur le "
-"`site Internet lintian`_."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:168
+msgid ""
+"Results of Ubuntu archive checks can be found online on "
+"http://lintian.ubuntuwire.org."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:171
+msgid ""
+"For Python packages, there is also a ``lintian4python`` tool that provides "
+"some additional lintian checks."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:174
 msgid ""
 "After making a fix to the packaging you can rebuild using ``-nc`` \"no "
 "clean\" without having to build from scratch::"
@@ -4230,7 +4023,7 @@ msgstr ""
 "reconstruire en utilisant ``-nc`` pour « no clean » afin d'éviter d'avoir à "
 "le reconstruire à partir de zéro ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:173
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:179
 msgid ""
 "Having checked that the package builds locally you should ensure it builds "
 "on a clean system using ``pbuilder``. Since we are going to upload to a PPA "
@@ -4252,7 +4045,7 @@ msgstr ""
 "configuré ``pbuilder-dist`` ou GPG, :doc:`faites le maintenant<./getting-set-"
 "up>` ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:186
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:192
 msgid ""
 "When you are happy with your package you will want others to review it.  You "
 "can upload the branch to Launchpad for review::"
@@ -4261,7 +4054,7 @@ msgstr ""
 "relecture par d'autres. Vous pouvez télécharger la branche vers Launchpad "
 "pour la relecture ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:191
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:197
 msgid ""
 "Uploading it to a PPA will ensure it builds and give an easy way for you and "
 "others to test the binary packages.  You will need to set up a PPA in "
@@ -4272,27 +4065,23 @@ msgstr ""
 "besoin de configurer un PPA dans Launchpad puis de télécharger avec "
 "``dput`` ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:197
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:203
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
 msgstr ""
 "Voir :doc:`téléchargement<./udd-uploading>` pour plus d'informations."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:199
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:205
 msgid ""
 "You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the `MOTU "
-"mailing list`_.  There might also be a more specific team you could ask such "
-"as the GNU team for more specific questions."
+"mailing list <ubuntu-motu_>`_.  There might also be a more specific team you "
+"could ask such as the GNU team for more specific questions."
 msgstr ""
-"Vous pouvez demander des relectures sur le canal IRC ``#ubuntu-motu``, ou "
-"sur la `liste de diffusion MOTU`_. Vous pourriez également interroger une "
-"équipe plus spécifique, comme l'équipe de GNU pour des questions plus "
-"pointues."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:204
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:210
 msgid "Submitting for inclusion"
 msgstr "Soumettez pour inclusion"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:206
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:212
 msgid ""
 "There are a number of paths that a package can take to enter Ubuntu. In most "
 "cases, going through Debian first can be the best path. This way ensures "
@@ -4307,56 +4096,41 @@ msgstr ""
 "Debian et Ubuntu, mais également dans l'ensemble de leurs dérivés. Voici "
 "quelques liens utiles pour soumettre de nouveaux paquets à Debian :"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:213
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:219
 msgid ""
-"`Debian Mentors FAQ`_ - debian-mentors is for the mentoring of new and "
-"prospective Debian Developers. It is where you can find a sponsor to upload "
-"your package to the archive."
+"`Debian Mentors FAQ <MentorsFAQ_>`_ - debian-mentors is for the mentoring of "
+"new and prospective Debian Developers. It is where you can find a sponsor to "
+"upload your package to the archive."
 msgstr ""
-"La foire aux questions `Debian Mentors FAQ`_ des tuteurs Debian existe pour "
-"le tutorat des nouveaux et futurs développeurs Debian. C'est là que vous "
-"trouverez un parrain pour télécharger votre paquet vers l'archive."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:217
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:223
 msgid ""
-"`Work-Needing and Prospective Packages`_ - Information on how to file "
-"\"Intent to Package\" and \"Request for Package\" bugs as well as list of "
-"open ITPs and RFPs."
+"`Work-Needing and Prospective Packages <WNPP_>`_ - Information on how to "
+"file \"Intent to Package\" and \"Request for Package\" bugs as well as list "
+"of open ITPs and RFPs."
 msgstr ""
-"`Paquets en devenir ou en cours de travail`_ - Renseignements sur la façon "
-"de déposer des « intentions de Paquets » et des « Requêtes pour les bogues "
-"de Paquet » mais aussi la liste de ces Intentions et Requêtes actuellement "
-"ouvertes."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:221
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:227
 msgid ""
-"`Debian Developer's Reference, 5.1. New packages`_ - The entire document is "
-"invaluable for both Ubuntu and Debian packagers. This section documents "
-"processes for submitting new packages."
+"`Debian Developer's Reference, 5.1. New packages <DevRef_>`_ - The entire "
+"document is invaluable for both Ubuntu and Debian packagers. This section "
+"documents processes for submitting new packages."
 msgstr ""
-"`Référence du développeur Debian, 5.1. Les nouveaux paquets`_ - L'ensemble "
-"du document est inestimable tout autant pour les empaqueteurs Ubuntu ou "
-"Debian. Cette section documente les processus de soumission de nouveaux "
-"paquets."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:225
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:231
 msgid ""
 "In some cases, it might make sense to go directly into Ubuntu first. For "
 "instance, Debian might be in a freeze making it unlikely that your package "
 "will make it into Ubuntu in time for the next release. This process is "
-"documented on the `\"New Packages\"`_ section of the Ubuntu wiki."
+"documented on the `\"New Packages\" <NewPackages_>`_ section of the Ubuntu "
+"wiki."
 msgstr ""
-"Dans certains cas, il peut être judicieux d'aller directement dans Ubuntu en "
-"premier. Par exemple, Debian peut se trouver en phase de gel rendant peu "
-"probable le fait que votre paquet fasse partie d'Ubuntu à temps pour la "
-"prochaine version. Ce processus est documenté dans la section `« Nouveaux "
-"paquets »`_ du wiki d'Ubuntu."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:231
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:237
 msgid "Screenshots"
 msgstr "Captures d'écran"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:233
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:239
 msgid ""
 "Once you have uploaded a package to debian, you should add screenshots to "
 "allow propective users to see what the program is like. These should be "
@@ -4703,303 +4477,6 @@ msgstr ""
 "responsable Debian ou l'équipe Ubuntu adéquate. S'il n'existe pas de système "
 "de correctif existant, alors n'hésitez pas à ajouter Quilt."
 
-#: ../ubuntu-packaging-guide/python-packaging.rst:3
-msgid "Packaging Python modules and applications"
-msgstr "Empaquetage de modules et d'applications Python"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:5
-msgid ""
-"Our packaging follows Debian’s `Python policy`_. We will use the `python-"
-"markdown`_ package as an example, which can be downloaded from `PyPI`_. You "
-"can look at its packaging at its `Subversion repository`_."
-msgstr ""
-"Nos empaquetages suivent la `Charte Python`_ de Debian. Nous allons utiliser "
-"le paquet `python-markdown`_ comme un exemple, qui peut être téléchargé à "
-"partir de `PyPI`_. Vous pouvez examiner son empaquetage dans son `dépôt "
-"Subversion`_."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:7
-msgid "There are two types of Python packages — *modules* and *apps*."
-msgstr "Il existe deux types de paquets Python — *modules* et *apps*."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:9
-msgid ""
-"At the time of writing, Ubuntu has two incompatible versions of Python — "
-"*2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python "
-"2.x version, and ``/usr/bin/python3`` — to a default Python 3.x version. "
-"Python modules should be built against all supported Python versions."
-msgstr ""
-"Au moment d'écrire ces lignes, Ubuntu dispose de deux versions incompatibles "
-"de Python  *2.x* et *3.x*. ``/usr/bin/python`` est un lien symbolique vers "
-"une version par défaut de Python 2.x, et ``/usr/bin/python3`` vers une "
-"version par défaut de Python 3.x. Les modules Python devraient être "
-"construits pour toutes les versions de Python prises en charge."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:11
-msgid ""
-"If you are going to package a new Python module, you might find the "
-"``py2dsc`` tool useful (available in `python-stdeb`_ package)."
-msgstr ""
-"Si vous vous apprêtez à empaqueter un nouveau module Python, vous pourriez "
-"trouver l'outil ``py2dsc`` très utile (disponible dans le paquet `python-"
-"stdeb`_)."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:14
-msgid "debian/control"
-msgstr "debian/control"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:16
-msgid ""
-"Python 2.x and 3.x versions of the package should be in separate binary "
-"packages. Names should have ``python{,3}-modulename`` format (like: "
-"``python3-dbus.mainloop.qt``). Here, we will use ``python-markdown`` and "
-"``python3-markdown`` for module packages and ``python-markdown-doc`` for the "
-"documentation package."
-msgstr ""
-"Les versions Python 2.x et 3.x du paquet doivent se trouver en paquets "
-"binaires séparés. Les noms doivent être formatés en ``python{,3}-"
-"nomdemodule`` (comme : ``python3-dbus.mainloop.qt``). Ici, nous allons "
-"utiliser ``python-markdown`` et ``python3-markdown`` pour les paquets de "
-"module et ``python-markdown-doc`` pour la documentation du paquet."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:18
-msgid "Things in ``debian/control`` that are specific for a Python package:"
-msgstr "Les choses de ``debian/control`` spécifiques à un paquet Python :"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:20
-msgid ""
-"The section of module packages should be ``python``, and ``doc`` for the "
-"documentation package. For an application, a single binary package will be "
-"enough."
-msgstr ""
-"La section des paquets de module doit être ``python``, et ``doc`` pour les "
-"paquets de documentation. Pour une application, un simple paquet binaire "
-"suffira."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:21
-msgid ""
-"We should add build dependencies on ``python-all (>= 2.6.6-3~)`` and "
-"``python3-all (>= 3.1.2-7~)`` to make sure Python helpers are available (see "
-"the next section for details)."
-msgstr ""
-"Il convient d'ajouter les dépendances de construction sur ``python-all (>= "
-"2.6.6-3~)`` et ``python3-all (>= 3.1.2-7~)`` pour s'assurer que les aides "
-"Python sont disponibles (voir la section suivante pour plus de détails)."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:22
-msgid ""
-"It’s recommended to add ``X-Python-Version`` and ``X-Python3-Version`` "
-"fields — see “`Specifying Supported Versions`_” section of the Policy for "
-"details. For example::"
-msgstr ""
-"Il est recommandé d'ajouter les champs ``X-Python-Version`` et ``X-python3-"
-"version`` — voir la section “`Spécification des Versions Prises en "
-"Charge`_”de la charte pour des détails. Par exemple ::"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:27
-msgid ""
-"If your package works only with Python 2.x or 3.x, build depend only on one "
-"``-all`` package and use only one ``-Version`` field."
-msgstr ""
-"Si votre paquet fonctionne seulement avec Python 2.x ou 3.x, la compilation "
-"dépend seulement d'un paquet ``-all`` et n'utilisez qu'un seul champ ``-"
-"Version``."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:28
-msgid ""
-"Module packages should have ``{python:Depends}`` and ``{python3:Depends}`` "
-"substitution variables (respectively) in their dependency lists."
-msgstr ""
-"Les paquets de modules doivent avoir les variables de substitution "
-"``{python:Depends}`` et `` {python3:Depends}`` (respectivement) dans leurs "
-"listes de dépendances."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:33
-msgid ""
-"The recommended helpers for python modules are ``dh_python2`` and "
-"``dh_python3``. Unfortunately, ``debhelper`` doesn’t yet build Python 3.x "
-"packages automatically (see `bug 597105`_ in Debian BTS), so we’ll need to "
-"do that manually in override sections (skip this if your package doesn’t "
-"support Python 3.x)."
-msgstr ""
-"Les aides recommandées pour les modules python sont ``dh_python2`` et "
-"``dh_python3``. Malheureusement, ``debhelper`` ne compile pas encore "
-"automatiquement des paquets Python 3.x (voir le `bogue 597105`_ dans le "
-"Système de Traçage de Bogues Debian), de sorte que nous aurons besoin de le "
-"faire manuellement dans les sections de remplacement (les sauter si votre "
-"paquet ne prend pas en charge Python 3.x)."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:35
-msgid "Here’s our ``debian/rules`` file (with annotations):"
-msgstr "Voici notre fichier ``debian/rules`` (avec annotations) :"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:70
-msgid ""
-"It is also a good practice to run tests during the build, if they are "
-"shipped by upstream. Usually tests can be invoked using ``setup.py test`` or "
-"``setup.py check``."
-msgstr ""
-"C'est également une bonne pratique d'effectuer des tests lors de la "
-"construction, si ils sont fournis par l'amont. Habituellement, les tests "
-"peuvent être appelés à l'aide de ``setup.py test`` ou ``setup.py check``."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:73
-msgid "debian/\\*.install"
-msgstr "debian/\\*.install"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:75
-msgid ""
-"Python 2.x modules are installed into ``/usr/share/pyshared/`` directory, "
-"and symbolic links are created in ``/usr/lib/python2.x/dist-packages/`` for "
-"every interpreter version, while Python 3.x ones are all installed into "
-"``/usr/lib/python3/dist-packages/``."
-msgstr ""
-"Les modules Python 2.x sont installés dans le répertoire "
-"``/usr/share/pyshared/``, et les liens symboliques sont créés dans "
-"``/usr/lib/python2.x/dist-packages/`` pour chaque version d'interpréteur, "
-"alors que ceux de Python 3.x sont tous installés dans "
-"``/usr/lib/python3/dist-packages/``."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:77
-msgid ""
-"If your package is an application and has private Python modules, they "
-"should be installed in ``/usr/share/module``, or ``/usr/lib/module`` if the "
-"modules are architecture-dependent (e.g. extensions) (see “`Programs "
-"Shipping Private Modules`_” section of the Policy)."
-msgstr ""
-"Si votre paquet est une application et possède des modules Python privés, "
-"ils doivent être installés dans ``/usr/share/module``, ou "
-"``/usr/lib/module``si ces modules sont dépendants de l'architecture (par "
-"exemple, des extensions) (voir le paragraphe « `Programmes fournissant des "
-"Modules Privés`_ » de la Charte)."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:79
-msgid ""
-"So, our ``python-markdown.install`` file will look like this (we’ll also "
-"want to install a ``markdown_py`` executable)::"
-msgstr ""
-"Ainsi, notre fichier ``python-markdown.install`` devrait ressembler à ceci "
-"(nous voulons aussi installer un ``markdown_py`` exécutable) ::"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:84
-msgid "and ``python3-markdown.install`` will only have one line::"
-msgstr "et ``python3-markdown.install`` comportera une seule ligne ::"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:89
-msgid "The ``-doc`` package"
-msgstr "Le paquet ``-doc``"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:91
-msgid ""
-"The tool most commonly used for building Python docs is `Sphinx`_. To add "
-"Sphinx documentation to your package (using ``dh_sphinxdoc`` helper), you "
-"should:"
-msgstr ""
-"L'outil le plus couramment utilisé pour la construction des documentations "
-"Python est `Sphinx`_. Pour ajouter la documentation Sphinx à votre paquet "
-"(en utilisant l'aide ``dh_sphinxdoc``), vous devez :"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:93
-msgid ""
-"Add a build-dependency on ``python-sphinx`` or ``python3-sphinx`` (depending "
-"on what Python version do you want to use);"
-msgstr ""
-"Ajouter à votre compilation une dépendance à ``python-sphinx`` ou ``python3-"
-"sphinx`` (selon la version de Python souhaitée) ;"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:94
-msgid "Append ``sphinxdoc`` to the ``dh --with`` line;"
-msgstr "Annexer ``sphinxdoc`` à la ligne ``dh --with`` ;"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:95
-msgid ""
-"Run ``setup.py build_sphinx`` in ``override_dh_auto_build`` (sometimes not "
-"needed);"
-msgstr ""
-"Lancer ``setup.py build_sphinx`` dans ``override_dh_auto_build`` (pas "
-"toujours nécessaire) ;"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:96
-msgid ""
-"Add ``{sphinxdoc:Depends}`` to the dependency list of your ``-doc`` package;"
-msgstr ""
-"Ajouter ``{sphinxdoc:Depends}`` à la liste des dépendances de votre paquet "
-"``-doc``;"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:97
-msgid ""
-"Add the path of the built docs directory (usually ``build/sphinx/html``) to "
-"your ``.docs`` file."
-msgstr ""
-"Ajouter le chemin du répertoire des documents intégrés (généralement "
-"``build/sphinx/html``) à votre fichier ``.docs``."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:99
-msgid ""
-"In our case, the docs are automatically built in ``build/docs/`` directory "
-"when we run ``setup.py build``, so we can simply put this in the ``python-"
-"markdown-doc.docs`` file::"
-msgstr ""
-"Dans notre cas, les documents sont créés automatiquement dans le répertoire "
-"``build/docs/`` lorsque nous exécutons ``setup.py build``, ainsi nous "
-"pouvons simplement les mettre dans le fichier ``python-markdown-doc.docs`` ::"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:103
-msgid ""
-"Because docs also contain source ``.txt`` files, we’ll also tell "
-"``dh_compress`` to not compress them — by adding this to ``debian/rules``:"
-msgstr ""
-"En raison de la présence de fichiers source ``.txt`` dans docs, nous allons "
-"aussi dire à ``dh_compress`` de ne pas les compresser — en ajoutant cela à "
-"``debian/rules`` :"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:111
-msgid "Checking for packaging mistakes"
-msgstr "Vérification des erreurs d'empaquetage"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:113
-msgid ""
-"Along with ``lintian``, there is a special tool for checking Python packages "
-"— ``lintian4py``. It is available in the `lintian4python`_ package. For "
-"example, these two commands invoke both versions of ``lintian`` and check "
-"source and binary packages::"
-msgstr ""
-"Avec ``lintian``, il existe un outil spécifique pour vérifier les paquets "
-"Python —  ``lintian4py``. Il est disponible dans le paquet "
-"`lintian4python`_. Par exemple, ces deux commandes invoquent les deux "
-"versions de ``lintian`` et vérifient les paquets sources et binaires ::"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:118
-msgid ""
-"Here, ``-EI`` option is used to enable experimental and informational tags."
-msgstr ""
-"Ici, l'option ``-EI`` est utilisée pour activer les balises expérimentales "
-"et informatives."
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:121
-msgid "See also"
-msgstr "Voir aussi"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:123
-msgid "The `Python policy`_;"
-msgstr "La `Charte Python`_ ;"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:124
-msgid "`Python/Packaging`_ article on Debian wiki;"
-msgstr "L'article `Python/Packaging`_ sur le wiki Debian ;"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:125
-msgid ""
-"`Python/LibraryStyleGuide`_ and `Python/AppStyleGuide`_ articles on Debian "
-"wiki;"
-msgstr ""
-"Les articles `Python/LibraryStyleGuide`_ et `Python/AppStyleGuide`_ sur le "
-"wiki Debian ;"
-
-#: ../ubuntu-packaging-guide/python-packaging.rst:126
-msgid "Debian `python-modules`_ and `python-apps`_ teams."
-msgstr "Les équipes Debian `python-modules`_ et `python-apps`_."
-
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:3
 msgid "Security and Stable Release Updates"
 msgstr "Mises à jour de sécurité et de version stable"
@@ -5254,10 +4731,9 @@ msgstr ""
 "peut être déplacée vers ``updates``."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:138
-msgid "See the `Stable Release Updates wiki page`_ for more information."
+msgid ""
+"See the `Stable Release Updates wiki page <SRUWiki_>`_ for more information."
 msgstr ""
-"Voir la `page wiki Mises à jour vers Version Stable`_ pour plus "
-"d'informations."
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:3
 msgid "Traditional Packaging"
@@ -5377,19 +4853,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/traditional-packaging.rst:67
 msgid ""
-"We also must adhere to the `Debian Maintainer Field Spec "
-"<https://wiki.ubuntu.com/DebianMaintainerField>`_ and edit "
-"``debian/control`` to replace::"
+"We also must adhere to the `Debian Maintainer Field Spec <MaintFieldSpec_>`_ "
+"and edit ``debian/control`` to replace::"
 msgstr ""
-"Nous devons également respecter le `Champ de Spécification du Mainteneur "
-"Debian <https://wiki.ubuntu.com/DebianMaintainerField>`_ et éditer "
-"``debian/control`` pour remplacer ::"
 
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:73
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:74
 msgid "with::"
 msgstr "par ::"
 
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:78
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:79
 msgid ""
 "You can use the ``update-maintainer`` tool (in the ``ubuntu-dev-tools`` "
 "package) to do that."
@@ -5397,7 +4869,7 @@ msgstr ""
 "Nous pouvons utiliser l'outil ``update-maintainer`` (dans le paquet ``ubuntu-"
 "dev-tools``) pour le faire."
 
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:81
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:82
 msgid ""
 "Remember to document your changes in ``debian/changelog`` using ``dch -i`` "
 "and then we can generate a new source package::"
@@ -5405,13 +4877,13 @@ msgstr ""
 "N'oubliez pas de documenter vos modifications dans ``debian/changelog`` en "
 "utilisant ``dch-i`` et générons ensuite un nouveau paquet source ::"
 
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:86
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:87
 msgid "Now we can examine our changes using ``debdiff``::"
 msgstr ""
 "Maintenant, nous pouvons examiner nos modifications à l'aide de "
 "``debdiff`` ::"
 
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:91
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:92
 msgid ""
 "To create a patch file that you can send to others or attach to a bug report "
 "for sponsorship, run::"
@@ -5419,11 +4891,11 @@ msgstr ""
 "Pour créer un fichier de correctif que vous pourrez envoyer aux autres ou "
 "joindre à un rapport de bogue pour le parrainage, exécutez ::"
 
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:98
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:99
 msgid "Applying a Debdiff"
 msgstr "Application d'un Debdiff"
 
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:100
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:101
 msgid ""
 "In order to apply a debdiff, first make sure you have the source code of the "
 "version that it was created against::"
@@ -5431,7 +4903,7 @@ msgstr ""
 "En vue d'appliquer un debdiff, assurez-vous en premier lieu d'avoir le code "
 "source de la version avec laquelle il a été créé ::"
 
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:105
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:106
 msgid ""
 "Then in a terminal, change to the directory where the source was "
 "uncompressed::"
@@ -5439,7 +4911,7 @@ msgstr ""
 "Puis dans un terminal, modifiez le répertoire pour celui où a été "
 "décompressée la source ::"
 
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:110
+#: ../ubuntu-packaging-guide/traditional-packaging.rst:111
 msgid "A debdiff is just like a normal patch file. Apply it as usual with::"
 msgstr ""
 "Un debdiff est exactement comme un fichier correctif normal. Appliquez-le "
@@ -5607,12 +5079,9 @@ msgstr ""
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:112
 msgid ""
 "means the importer has failed.  You can find out why on http://package-"
-"import.ubuntu.com/status/ and `file a bug on the UDD project`_ to get the "
-"issue resolved."
+"import.ubuntu.com/status/ and `file a bug on the UDD project <UDD_>`_ to get "
+"the issue resolved."
 msgstr ""
-"signifie que l'importation a échoué. Vous pouvez trouver pourquoi sur "
-"http://package-import.ubuntu.com/status/ et `déposer un bogue sur le projet "
-"UDD`_ pour faire résoudre ce problème."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:118
 msgid "Upstream Tar"
@@ -5637,8 +5106,9 @@ msgstr ""
 "alors recréée en utilisant bzr pour construire le paquet ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:132
-msgid "The `builddeb` plugin has several `configuration options`_."
-msgstr "Le greffon `builddeb` a plusieurs `options de configuration`_."
+msgid ""
+"The `builddeb` plugin has several `configuration options <ConfOptions_>`_."
+msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:136
 msgid "Getting a branch for a particular release"
@@ -5646,16 +5116,11 @@ msgstr "Obtenir une branche pour une version particulière"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:138
 msgid ""
-"When you want to do something like a `stable release update`_ (SRU), or you "
-"just want to examine the code in an old release, you'll want to grab the "
-"branch corresponding to a particular Ubuntu release.  For example, to get "
-"the Tomboy package for Quantal do::"
+"When you want to do something like a `stable release update <SRU_>`_ (SRU), "
+"or you just want to examine the code in an old release, you'll want to grab "
+"the branch corresponding to a particular Ubuntu release.  For example, to "
+"get the Tomboy package for Quantal do::"
 msgstr ""
-"Lorsque vous voulez réaliser quelque chose comme une `mise à jour de version "
-"stable`_ (SRU), ou simplement si vous voulez examiner le code d'une version "
-"plus ancienne, vous devrez récupérer la branche correspondant à une version "
-"particulière d'Ubuntu. Par exemple, pour obtenir le paquet Tomboy pour "
-"Quantal, faites ::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:147
 msgid "Importing a Debian source package"
@@ -5891,16 +5356,9 @@ msgstr ""
 msgid ""
 "To do packaging with UDD you will need to know the basics of how to use "
 "Bazaar to manage files.  For an introduction to Bazaar see the `Bazaar Five "
-"Minute Tutorial <http://doc.bazaar.canonical.com/bzr.dev/en/mini-"
-"tutorial/index.html>`_ and the `Bazaar Users Guide "
-"<http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_."
+"Minute Tutorial <5MinTutorial_>`_ and the `Bazaar Users Guide "
+"<UsersGuide_>`_."
 msgstr ""
-"Pour réaliser des empaquetages avec UDD, vous devrez connaître les bases de "
-"l'utilisation de Bazaar pour gérer les fichiers. En guise d'introduction à "
-"Bazaar, regardez le `Tutoriel Bazaar en Cinq Minutes "
-"<http://doc.bazaar.canonical.com/bzr.dev/en/mini-tutorial/index.html>`_ et "
-"le `Guide de l'utilisateur Bazaar "
-"<http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:105
 msgid "Limitations of UDD"
@@ -5948,13 +5406,9 @@ msgstr ""
 msgid ""
 "Some packages have not been successfully imported into UDD branches.  Recent "
 "versions of Bazaar will automatically notify you when this is the case. You "
-"can also check the `status of the package importer`_ manually before working "
-"on a branch."
+"can also check the `status of the package importer <ImportStatus_>`_ "
+"manually before working on a branch."
 msgstr ""
-"Certains paquets n'ont pas été importés correctement dans les branches UDD. "
-"Les versions récentes de Bazaar vous l'indiqueront automatiquement le cas "
-"échéant. Vous pouvez également vérifier manuellement le `statut de "
-"l'importateur de paquet`_ avant de travailler sur une branche."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:126
 msgid ""
@@ -6580,13 +6034,9 @@ msgstr "Envoi d'un paquet"
 msgid ""
 "Once your merge proposal is reviewed and approved, you will want to upload "
 "your package, either to the archive (if you have permission) or to your "
-"`Personal Package Archive`_ (PPA).  You might also want to do an upload if "
-"you are sponsoring someone else's changes."
+"`Personal Package Archive <PPA_>`_ (PPA).  You might also want to do an "
+"upload if you are sponsoring someone else's changes."
 msgstr ""
-"Une fois votre proposition de fusion relue et approuvée, vous devez envoyer "
-"le paquet, que ce soit à l'archive (si vous avez l'autorisation) ou à votre "
-"`Archive Personnelle de Paquet`_ (PPA). Vous devrez également faire un "
-"téléchargement si vous parrainez les modifications de quelqu'un d'autre."
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:12
 msgid "Uploading a change made by you"
@@ -7026,11 +6476,57 @@ msgstr ""
 "  jean-bernard marcon https://launchpad.net/~jean-bernard-marcon"
 
 #~ msgid ""
+#~ "The test script can be easily executed on its own, but if you want to make "
+#~ "sure that the testbed is properly set up, you might want to use ``adt-run`` "
+#~ "from the ``autopkgtest`` package to execute the test. The easiest way to do "
+#~ "this is to run this command in the source tree::"
+#~ msgstr ""
+#~ "Le script de test peut être facilement exécuté tout seul, mais si vous "
+#~ "voulez être sûr que le banc d'essai est correctement configuré, il est "
+#~ "préférable d'utiliser ``adt-run`` depuis le paquet ``autopkgtest`` pour "
+#~ "exécuter le test. La plus simple façon de le faire est de lancer cette "
+#~ "commande dans l'arbre source::"
+
+#~ msgid ""
+#~ "The downside of this approach is that you test it locally, but can't ensure "
+#~ "that this will work in a minimal environment. For example will it be hard to "
+#~ "ensure that all the required packages are installed for the tests. With "
+#~ "`lp:auto-package-testing`_ we have a more comprehensive testing tool. It "
+#~ "uses a pristine virtual machine to run the tests. To set it up, firstly "
+#~ "install the needed dependencies::"
+#~ msgstr ""
+#~ "L'inconvénient de cette approche est que vous le testez en local, mais vous "
+#~ "ne pouvez pas être sûr que cela fonctionnera dans un environnement minimal. "
+#~ "Il sera par exemple difficile de s'assurer que tous les paquets requis sont "
+#~ "installés pour les tests. Avec `lp:auto-package-testing`_ nous avons un "
+#~ "outil de test bien plus complet. Il utilise une machine virtuelle toute "
+#~ "fraîche pour exécuter les tests. Pour le paramétrer, commencez par installer "
+#~ "les dépendances nécessaires::"
+
+#~ msgid ""
+#~ "While this test is very small and basic, it tests quite a number of core "
+#~ "components on a system. This may help to uncover critical issues early on."
+#~ msgstr ""
+#~ "Bien que ce test soit très petit et basique, il teste un grand nombre de "
+#~ "composantes du noyau d'un système. Cela peut aider à découvrir plus tôt des "
+#~ "problèmes critiques."
+
+#~ msgid "Then, get the source code from Launchpad::"
+#~ msgstr "Ensuite, récupérez le code source sur Launchpad::"
+
+#~ msgid ""
 #~ "This will create a directory ``oneiric`` and install a minimal oneiric "
 #~ "system into it."
 #~ msgstr ""
 #~ "Cela va créer un répertoire ``oneiric`` et y installer un système oneiric "
 #~ "minimal."
+
+#~ msgid ""
+#~ "The `auto-package-testing documentation`_ has a lot more valuable "
+#~ "information on other testing options."
+#~ msgstr ""
+#~ "La `documentation auto-package-testing`_  a beaucoup plus d'informations "
+#~ "utiles sur les autres options de tests."
 
 #~ msgid ""
 #~ "If your version of ``debootstrap`` does not know about oneiric you can try "
@@ -7040,11 +6536,198 @@ msgstr ""
 #~ "essayer la mise à niveau avec la version des ``backports``."
 
 #~ msgid ""
+#~ "Packages in Debian with a testsuite header will also be automatically added "
+#~ "when they are synced to Ubuntu."
+#~ msgstr ""
+#~ "Les paquets dans Debian avec un en-tête testsuite seront également ajoutés "
+#~ "automatiquement quand ils sont synchronisés avec Ubuntu."
+
+#~ msgid ""
+#~ "If you should run into any problems, you can join the `#ubuntu-quality IRC "
+#~ "channel`_ to get in touch with developers who can help you."
+#~ msgstr ""
+#~ "Si vous rencontrez des problèmes, vous pouvez rejoindre le `canal IRC "
+#~ "#ubuntu-quality`_ pour entrer en contact avec les développeurs qui peuvent "
+#~ "vous aider."
+
+#~ msgid ""
 #~ "This command will create a pristine Raring AMD64 VM from a cloud image. To "
 #~ "run the tests, simply run::"
 #~ msgstr ""
 #~ "Cette commande créera une machine virtuelle Raring AMD64 toute neuve à "
 #~ "partir d'une image cloud. Pour lancer les tests, lancer simplement::"
+
+#~ msgid ""
+#~ "In ``debian/tests/control`` you specify what to expect from the testbed. So "
+#~ "for example you list all the required packages for the tests, if the testbed "
+#~ "gets broken during the build or if ``root`` permissions are required. The "
+#~ "`DEP 8 specification`_ lists all available options."
+#~ msgstr ""
+#~ "Dans ``debian/tests/control`` vous spécifiez ce que vous attendez du banc "
+#~ "d'essai. Ainsi, par exemple, vous listez tous les paquets nécessaires pour "
+#~ "les tests, si le banc d'essai se casse lors de la construction ou si les "
+#~ "autorisations ``root`` sont nécessaires. La `spécification DEP 8`_ "
+#~ "répertorie toutes les options disponibles."
+
+#~ msgid ""
+#~ "The `DEP 8 specification`_ defines how automatic testing can very easily be "
+#~ "integrated into packages. To integrate a test into a package, all you need "
+#~ "to do is:"
+#~ msgstr ""
+#~ "La `spécification DEP 8`_ définit la façon dont les tests automatiques "
+#~ "peuvent être très facilement intégrés dans les paquets. Pour intégrer un "
+#~ "test dans un paquet, tout ce que vous devez faire est de :"
+
+#~ msgid "In the `ubiquity tests`_ the upstream test-suite is executed."
+#~ msgstr "Dans les `tests ubiquity`_ la suite de test en amont est exécutée."
+
+#~ msgid ""
+#~ "The `gvfs tests`_ have comprehensive testing of their functionality and are "
+#~ "very interesting because they emulate usage of CDs, Samba, DAV and other "
+#~ "bits."
+#~ msgstr ""
+#~ "Les `tests gvfs`_ ont un test complet de leur fonctionnalité et sont très "
+#~ "intéressants car ils émulent l'utilisation de CD, Samba, DAV et autres "
+#~ "bricoles."
+
+#~ msgid ""
+#~ "The `libxml2 tests`_ are very similar. They also run a test-build of a "
+#~ "simple piece of C code and execute it."
+#~ msgstr ""
+#~ "Les `tests libxml2`_ sont très similaires. Ils effectuent aussi un test de "
+#~ "compilation d'un simple morceau de code C et l'exécutent."
+
+#~ msgid ""
+#~ "The `PPA documentation on Launchpad`_ is fairly comprehensive and should get "
+#~ "you up and running in no time."
+#~ msgstr ""
+#~ "La `documentation sur les PPA sur Launchpad`_ est assez complète et devrait "
+#~ "vous permettre d'être opérationnel en un rien de temps."
+
+#~ msgid ""
+#~ "While Debian does not have an automatic testing infrastructure set up yet, "
+#~ "they should still be submitted to Debian, as DEP-8 is a Debian specification "
+#~ "and Debian developers or users can still manually run the tests."
+#~ msgstr ""
+#~ "Bien que Debian n'a pas encore mis en place une infrastructure de test "
+#~ "automatique, ils doivent encore être soumis à Debian, car DEP-8 est une "
+#~ "spécification Debian et les développeurs ou les utilisateurs Debian peuvent "
+#~ "toujours exécuter manuellement les tests."
+
+#~ msgid ""
+#~ "write the ``debian/tests/control`` based on the `DEP 8 Specification`_,"
+#~ msgstr ""
+#~ "écrire le ``debian/tests/control`` basé sur la  `spécification DEP 8`_,"
+
+#~ msgid ""
+#~ "http://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
+#~ "concerning the switch to the 3.0 source package formats."
+#~ msgstr ""
+#~ "http://wiki.debian.org/Projects/DebSrc3.0 résume l'information "
+#~ "supplémentaire concernant le passage à la version 3.0 des formats de paquets "
+#~ "source."
+
+#~ msgid ""
+#~ "This would use the source package in ``/tmp/glib2.0-2.35.7/`` and run the "
+#~ "tests from this tree against the package ``glib2.0`` from the archive. The "
+#~ "option ``-S`` also supports schemes for bzr, git, and apt sources. If you "
+#~ "only specify a source with ``-S`` but do not specify a package name, this "
+#~ "will instead build the branch and install the binaries from that build; this "
+#~ "is useful if you want to run tests on a newer version than the one packaged "
+#~ "in Ubuntu, or the package is not in Ubuntu at all. If use the ``-k`` flag "
+#~ "you can log into the virtual machine after the tests were run. This makes it "
+#~ "very easy to debug issues."
+#~ msgstr ""
+#~ "Cela utilisera le paquet source dans ``/tmp/glib2.0-2.35.7/`` et lancera les "
+#~ "tests de cet arbre sur le paquet ``glib2.0`` de l'archive. L' option ``-S``  "
+#~ "gère aussi les schémas pour les sources bzr, git et apt. Si vous spécifiez "
+#~ "seulement une source avec ``-S`` sans spécifier le nom du paquet, à la "
+#~ "place, cela construira la branche et installera les binaires construits ; "
+#~ "C'est plus pratique si vous voulez lancer les tests sur une version plus "
+#~ "récente que celle empaquetée dans Ubuntu, ou si le paquet n'est pas du tout "
+#~ "dans Ubuntu. Si vous utilisez le drapeau ``-k`` vous pouvez vous connecter "
+#~ "dans une machine virtuelle après l'exécution des tests. Cela rend le "
+#~ "débogage des problèmes très facile."
+
+#~ msgid ""
+#~ "This example follows the `Machine-readable debian/copyright "
+#~ "<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_ "
+#~ "format. You are encouraged to use this format as well."
+#~ msgstr ""
+#~ "Cet exemple suit le format du `Droit d'auteur Debian lisible par la machine "
+#~ "<http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/>`_. Vous "
+#~ "êtes également encouragés à utiliser ce format."
+
+#~ msgid ""
+#~ "If your tarballs live on Launchpad, the ``debian/watch`` file is a little "
+#~ "more complicated (see `Question 21146`_ and `Bug 231797`_ for why this is).  "
+#~ "In that case, use something like::"
+#~ msgstr ""
+#~ "Si vos archives tar sont en direct sur Launchpad, le fichier "
+#~ "``debian/watch`` sera un peu plus compliqué (la `Question 21146`_ et le "
+#~ "`Bogue 231797`_ montrent de quoi il s'agit). Dans ce cas, utilisez quelque "
+#~ "chose comme ::"
+
+#~ msgid ""
+#~ "``gnupg`` -- `GNU Privacy Guard`_ contains tools you will need to create a "
+#~ "cryptographic key with which you will sign files you want to upload to "
+#~ "Launchpad."
+#~ msgstr ""
+#~ "``gnupg`` -- `GNU Privacy Guard`_ contient les outils dont vous aurez besoin "
+#~ "pour créer une clé de chiffrement avec laquelle vous signerez les fichiers "
+#~ "que vous souhaiterez télécharger vers Launchpad."
+
+#~ msgid ""
+#~ "Launchpad encrypts the email, using your public key, so that it can be sure "
+#~ "that the key is yours. If you are using Thunderbird, the default Ubuntu "
+#~ "email client, you can install the `Enigmail plugin "
+#~ "<https://apps.ubuntu.com/cat/applications/enigmail/>`_ to easily decrypt the "
+#~ "message. If your email software does not support OpenPGP encryption, copy "
+#~ "the encrypted email's contents, type ``gpg`` in your terminal, then paste "
+#~ "the email contents into your terminal window."
+#~ msgstr ""
+#~ "Launchpad chiffre le courriel en utilisant votre clé publique, ce qui assure "
+#~ "que votre clé vous est propre. Si vous utilisez Thunderbird, le client de "
+#~ "messagerie par défaut d'Ubuntu, vous pouvez installer le  `greffon Enigmail "
+#~ "<https://apps.ubuntu.com/cat/applications/enigmail/>`_ pour déchiffrer "
+#~ "aisément le message. Si votre logiciel de messagerie ne prend pas OpenPGP en "
+#~ "charge, copiez le contenu du courriel chiffré, tapez ``gpg`` dans une "
+#~ "fenêtre de terminal, puis collez-y le contenu du courriel."
+
+#~ msgid ""
+#~ "Our packaging follows the practices of the `Debian Qt/KDE Team`_ and Debian "
+#~ "KDE Extras Team.  Most of our packages are derived from the packaging of "
+#~ "these Debian teams."
+#~ msgstr ""
+#~ "Notre empaquetage est conforme aux pratiques de l'`Équipe Debian Qt/KDE`_ et "
+#~ "de l'équipe Debian KDE Extras. La plupart de nos paquets sont dérivés de "
+#~ "l'empaquetage de ces équipes Debian."
+
+#~ msgid ""
+#~ "Library symbols are tracked in ``.symbols`` files to ensure none go missing "
+#~ "for new releases.  KDE uses C++ libraries which act a little differently "
+#~ "compared to C libraries.  Debian's Qt/KDE Team have scripts to handle this. "
+#~ "See `Working with symbols files`_ for how to create and keep these files up "
+#~ "to date."
+#~ msgstr ""
+#~ "La bibliothèque de symboles est suivie par les fichiers ``.symbols`` pour "
+#~ "vous assurer qu'aucun ne sera porté disparu pour les nouvelles versions. KDE "
+#~ "utilise des bibliothèques C++ qui agissent un peu différemment des "
+#~ "bibliothèques C. L'équipe Debian Qt/KDE possède des scripts pour gérer cela. "
+#~ "Voir `Travailler avec les fichiers de symboles`_ pour savoir comment créer "
+#~ "et maintenir ces fichiers à jour."
+
+#~ msgid ""
+#~ "``.la`` libtool files are needed on some non-Linux systems with poor library "
+#~ "support but usually cause more problems than they solve on Debian systems.  "
+#~ "It is a current `Debian goal to remove .la files`_ and we should help with "
+#~ "this."
+#~ msgstr ""
+#~ "Les fichiers ``.la`` d'utilitaires bibliothèque sont nécessaires sur "
+#~ "certains systèmes non-Linux avec une faible prise en charge des "
+#~ "bibliothèques, mais causent généralement plus de problèmes qu'ils n'en "
+#~ "résolvent sur les systèmes Debian. C'est un des `objectifs actuels de Debian "
+#~ "de supprimer les fichiers .la`_ et nous devrions aider avec ceci."
 
 #~ msgid ""
 #~ "Much of the package building work is done by a series of scripts called "
@@ -7064,6 +6747,146 @@ msgstr ""
 
 #~ msgid "Let's look at an example package, ``kamoso`` in Natty::"
 #~ msgstr "Regardons un exemple de paquet, ``kamoso`` dans Natty ::"
+
+#~ msgid "There are two types of Python packages — *modules* and *apps*."
+#~ msgstr "Il existe deux types de paquets Python — *modules* et *apps*."
+
+#~ msgid ""
+#~ "It’s recommended to add ``X-Python-Version`` and ``X-Python3-Version`` "
+#~ "fields — see “`Specifying Supported Versions`_” section of the Policy for "
+#~ "details. For example::"
+#~ msgstr ""
+#~ "Il est recommandé d'ajouter les champs ``X-Python-Version`` et ``X-python3-"
+#~ "version`` — voir la section “`Spécification des Versions Prises en "
+#~ "Charge`_”de la charte pour des détails. Par exemple ::"
+
+#~ msgid ""
+#~ "If your package works only with Python 2.x or 3.x, build depend only on one "
+#~ "``-all`` package and use only one ``-Version`` field."
+#~ msgstr ""
+#~ "Si votre paquet fonctionne seulement avec Python 2.x ou 3.x, la compilation "
+#~ "dépend seulement d'un paquet ``-all`` et n'utilisez qu'un seul champ ``-"
+#~ "Version``."
+
+#~ msgid ""
+#~ "The section of module packages should be ``python``, and ``doc`` for the "
+#~ "documentation package. For an application, a single binary package will be "
+#~ "enough."
+#~ msgstr ""
+#~ "La section des paquets de module doit être ``python``, et ``doc`` pour les "
+#~ "paquets de documentation. Pour une application, un simple paquet binaire "
+#~ "suffira."
+
+#~ msgid ""
+#~ "We should add build dependencies on ``python-all (>= 2.6.6-3~)`` and "
+#~ "``python3-all (>= 3.1.2-7~)`` to make sure Python helpers are available (see "
+#~ "the next section for details)."
+#~ msgstr ""
+#~ "Il convient d'ajouter les dépendances de construction sur ``python-all (>= "
+#~ "2.6.6-3~)`` et ``python3-all (>= 3.1.2-7~)`` pour s'assurer que les aides "
+#~ "Python sont disponibles (voir la section suivante pour plus de détails)."
+
+#~ msgid "Things in ``debian/control`` that are specific for a Python package:"
+#~ msgstr "Les choses de ``debian/control`` spécifiques à un paquet Python :"
+
+#~ msgid "debian/control"
+#~ msgstr "debian/control"
+
+#~ msgid ""
+#~ "If you are going to package a new Python module, you might find the "
+#~ "``py2dsc`` tool useful (available in `python-stdeb`_ package)."
+#~ msgstr ""
+#~ "Si vous vous apprêtez à empaqueter un nouveau module Python, vous pourriez "
+#~ "trouver l'outil ``py2dsc`` très utile (disponible dans le paquet `python-"
+#~ "stdeb`_)."
+
+#~ msgid ""
+#~ "It is also a good practice to run tests during the build, if they are "
+#~ "shipped by upstream. Usually tests can be invoked using ``setup.py test`` or "
+#~ "``setup.py check``."
+#~ msgstr ""
+#~ "C'est également une bonne pratique d'effectuer des tests lors de la "
+#~ "construction, si ils sont fournis par l'amont. Habituellement, les tests "
+#~ "peuvent être appelés à l'aide de ``setup.py test`` ou ``setup.py check``."
+
+#~ msgid "Here’s our ``debian/rules`` file (with annotations):"
+#~ msgstr "Voici notre fichier ``debian/rules`` (avec annotations) :"
+
+#~ msgid "and ``python3-markdown.install`` will only have one line::"
+#~ msgstr "et ``python3-markdown.install`` comportera une seule ligne ::"
+
+#~ msgid ""
+#~ "Python 2.x modules are installed into ``/usr/share/pyshared/`` directory, "
+#~ "and symbolic links are created in ``/usr/lib/python2.x/dist-packages/`` for "
+#~ "every interpreter version, while Python 3.x ones are all installed into "
+#~ "``/usr/lib/python3/dist-packages/``."
+#~ msgstr ""
+#~ "Les modules Python 2.x sont installés dans le répertoire "
+#~ "``/usr/share/pyshared/``, et les liens symboliques sont créés dans "
+#~ "``/usr/lib/python2.x/dist-packages/`` pour chaque version d'interpréteur, "
+#~ "alors que ceux de Python 3.x sont tous installés dans "
+#~ "``/usr/lib/python3/dist-packages/``."
+
+#~ msgid ""
+#~ "So, our ``python-markdown.install`` file will look like this (we’ll also "
+#~ "want to install a ``markdown_py`` executable)::"
+#~ msgstr ""
+#~ "Ainsi, notre fichier ``python-markdown.install`` devrait ressembler à ceci "
+#~ "(nous voulons aussi installer un ``markdown_py`` exécutable) ::"
+
+#~ msgid "The ``-doc`` package"
+#~ msgstr "Le paquet ``-doc``"
+
+#~ msgid ""
+#~ "The tool most commonly used for building Python docs is `Sphinx`_. To add "
+#~ "Sphinx documentation to your package (using ``dh_sphinxdoc`` helper), you "
+#~ "should:"
+#~ msgstr ""
+#~ "L'outil le plus couramment utilisé pour la construction des documentations "
+#~ "Python est `Sphinx`_. Pour ajouter la documentation Sphinx à votre paquet "
+#~ "(en utilisant l'aide ``dh_sphinxdoc``), vous devez :"
+
+#~ msgid ""
+#~ "Add ``{sphinxdoc:Depends}`` to the dependency list of your ``-doc`` package;"
+#~ msgstr ""
+#~ "Ajouter ``{sphinxdoc:Depends}`` à la liste des dépendances de votre paquet "
+#~ "``-doc``;"
+
+#~ msgid ""
+#~ "Add the path of the built docs directory (usually ``build/sphinx/html``) to "
+#~ "your ``.docs`` file."
+#~ msgstr ""
+#~ "Ajouter le chemin du répertoire des documents intégrés (généralement "
+#~ "``build/sphinx/html``) à votre fichier ``.docs``."
+
+#~ msgid ""
+#~ "In our case, the docs are automatically built in ``build/docs/`` directory "
+#~ "when we run ``setup.py build``, so we can simply put this in the ``python-"
+#~ "markdown-doc.docs`` file::"
+#~ msgstr ""
+#~ "Dans notre cas, les documents sont créés automatiquement dans le répertoire "
+#~ "``build/docs/`` lorsque nous exécutons ``setup.py build``, ainsi nous "
+#~ "pouvons simplement les mettre dans le fichier ``python-markdown-doc.docs`` ::"
+
+#~ msgid ""
+#~ "Because docs also contain source ``.txt`` files, we’ll also tell "
+#~ "``dh_compress`` to not compress them — by adding this to ``debian/rules``:"
+#~ msgstr ""
+#~ "En raison de la présence de fichiers source ``.txt`` dans docs, nous allons "
+#~ "aussi dire à ``dh_compress`` de ne pas les compresser — en ajoutant cela à "
+#~ "``debian/rules`` :"
+
+#~ msgid ""
+#~ "Here, ``-EI`` option is used to enable experimental and informational tags."
+#~ msgstr ""
+#~ "Ici, l'option ``-EI`` est utilisée pour activer les balises expérimentales "
+#~ "et informatives."
+
+#~ msgid "See also"
+#~ msgstr "Voir aussi"
+
+#~ msgid "Checking for packaging mistakes"
+#~ msgstr "Vérification des erreurs d'empaquetage"
 
 #~ msgid ""
 #~ "Typically you will want to choose the highest version for the release you "
@@ -7140,6 +6963,20 @@ msgstr ""
 #~ "n'introduit pas de nouveau problème. Après une semaine sans problème "
 #~ "signalé, elle peut être déplacée vers ``updates``."
 
+#~ msgid "See the `Stable Release Updates wiki page`_ for more information."
+#~ msgstr ""
+#~ "Voir la `page wiki Mises à jour vers Version Stable`_ pour plus "
+#~ "d'informations."
+
+#~ msgid ""
+#~ "We also must adhere to the `Debian Maintainer Field Spec "
+#~ "<https://wiki.ubuntu.com/DebianMaintainerField>`_ and edit "
+#~ "``debian/control`` to replace::"
+#~ msgstr ""
+#~ "Nous devons également respecter le `Champ de Spécification du Mainteneur "
+#~ "Debian <https://wiki.ubuntu.com/DebianMaintainerField>`_ et éditer "
+#~ "``debian/control`` pour remplacer ::"
+
 #~ msgid ""
 #~ "To refer to the version of a source package in an older release of Ubuntu, "
 #~ "just prefix the package name with the release's code name.  E.g. to refer to "
@@ -7152,6 +6989,34 @@ msgstr ""
 
 #~ msgid "and to access Tomboy in Debian Lenny_ use::"
 #~ msgstr "et pour accéder à Tomboy dans Debian Lenny_, utilisez ::"
+
+#~ msgid "The `builddeb` plugin has several `configuration options`_."
+#~ msgstr "Le greffon `builddeb` a plusieurs `options de configuration`_."
+
+#~ msgid ""
+#~ "To do packaging with UDD you will need to know the basics of how to use "
+#~ "Bazaar to manage files.  For an introduction to Bazaar see the `Bazaar Five "
+#~ "Minute Tutorial <http://doc.bazaar.canonical.com/bzr.dev/en/mini-"
+#~ "tutorial/index.html>`_ and the `Bazaar Users Guide "
+#~ "<http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_."
+#~ msgstr ""
+#~ "Pour réaliser des empaquetages avec UDD, vous devrez connaître les bases de "
+#~ "l'utilisation de Bazaar pour gérer les fichiers. En guise d'introduction à "
+#~ "Bazaar, regardez le `Tutoriel Bazaar en Cinq Minutes "
+#~ "<http://doc.bazaar.canonical.com/bzr.dev/en/mini-tutorial/index.html>`_ et "
+#~ "le `Guide de l'utilisateur Bazaar "
+#~ "<http://doc.bazaar.canonical.com/bzr.dev/en/user-guide/index.html>`_."
+
+#~ msgid ""
+#~ "Some packages have not been successfully imported into UDD branches.  Recent "
+#~ "versions of Bazaar will automatically notify you when this is the case. You "
+#~ "can also check the `status of the package importer`_ manually before working "
+#~ "on a branch."
+#~ msgstr ""
+#~ "Certains paquets n'ont pas été importés correctement dans les branches UDD. "
+#~ "Les versions récentes de Bazaar vous l'indiqueront automatiquement le cas "
+#~ "échéant. Vous pouvez également vérifier manuellement le `statut de "
+#~ "l'importateur de paquet`_ avant de travailler sur une branche."
 
 #~ msgid ""
 #~ "This works wherever you have a checkout of a branch, so it will work for "
@@ -7168,6 +7033,12 @@ msgstr ""
 #~ "Par exemple, pour publier votre correctif au bogue 12345 dans le paquet "
 #~ "Tomboy pour Natty, vous devriez utiliser ::"
 
+#~ msgid "Packaging Python modules and applications"
+#~ msgstr "Empaquetage de modules et d'applications Python"
+
+#~ msgid "debian/\\*.install"
+#~ msgstr "debian/\\*.install"
+
 #~ msgid ""
 #~ "Don't worry though, the `Ubuntu development release wiki page "
 #~ "<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ shows a variety of ways "
@@ -7176,6 +7047,22 @@ msgstr ""
 #~ "Ne vous inquiétez pas, la `page wiki de la version de développement d'Ubuntu "
 #~ "<https://wiki.ubuntu.com/UsingDevelopmentReleases>`_ indique de multiples "
 #~ "façons d'utiliser la version de développement en toute sécurité."
+
+#~ msgid ""
+#~ "GPG stands for `GNU Privacy Guard`_ and it implements the OpenPGP standard "
+#~ "which allows you to sign and encrypt messages and files. This is useful for "
+#~ "a number of purposes. In our case it is important that you can sign files "
+#~ "with your key so they can be identified as something that you worked on. If "
+#~ "you upload a source package to Launchpad, it will only accept the package if "
+#~ "it can absolutely determine who uploaded the package."
+#~ msgstr ""
+#~ "GPG signifie `GNU Privacy Guard`_ et implémente le standard OpenPGP vous "
+#~ "permettant de signer et de crypter des messages et des fichiers. Ceci est "
+#~ "utile pour plusieurs raisons. Dans notre cas, il est important que vous "
+#~ "puissiez signer des fichiers avec votre clé afin qu'ils puissent être "
+#~ "identifiés comme quelque chose sur laquelle vous avez travaillé. Si vous "
+#~ "téléchargez un paquet source vers Launchpad, ce dernier n'acceptera le "
+#~ "paquet que s'il peut formellement déterminer qui l'a envoyé."
 
 #~ msgid ""
 #~ "where <release> is for example `natty`, `maverick`, `lucid` or in the case "
@@ -7189,6 +7076,40 @@ msgstr ""
 #~ "Cependant, ceux-ci seront mis en cache."
 
 #~ msgid ""
+#~ "If you don't already have a Launchpad account, you can easily `create one`_. "
+#~ "If you have a Launchpad account but cannot remember your Launchpad id, you "
+#~ "can find this out by going to https://launchpad.net/~ and looking for the "
+#~ "part after the `~` in the URL."
+#~ msgstr ""
+#~ "Si vous ne possédez pas encore de compte Launchpad, vous pouvez facilement "
+#~ "`en créer un`_. Si vous avez un compte Launchpad, dont vous ne vous rappelez "
+#~ "plus l'identifiant, vous pouvez le retrouver en allant sur "
+#~ "https://launchpad.net/~ et rechercher la partie après le `~` de l'URL."
+
+#~ msgid ""
+#~ "Upstream will usually have also put the translation ``.po`` files into the "
+#~ "``po/`` directory.  If they do not, check if they are in separate upstream "
+#~ "language packs such as the KDE SC language packs.  If they are in separate "
+#~ "language packs Launchpad will need to associate these together manually, "
+#~ "contact `dpm`_ to do this."
+#~ msgstr ""
+#~ "L'amont met généralement les fichiers ``.po`` de traduction dans le "
+#~ "répertoire ``po/``. S'ils n'y sont pas, vérifiez s'ils sont dans des paquets "
+#~ "de langue séparés de l'amont tels que les paquets de langue KDE SC. S'ils "
+#~ "sont dans des paquets de langue séparés, Launchpad devra les associer "
+#~ "manuellement, contactez `dpm`_ pour cela."
+
+#~ msgid ""
+#~ "C++ has even more exacting standards of binary compatibility than C.  The "
+#~ "Debian Qt/KDE Team maintain some scripts to handle this, see their `Working "
+#~ "with symbols files`_ page for how to use them."
+#~ msgstr ""
+#~ "C++ a des normes encore plus strictes pour la compatibilité binaire que C. "
+#~ "L'équipe Debian Qt/KDE maintient des scripts pour gérer cela, se référer à "
+#~ "leur page `Travailler avec les fichiers de symboles`_ pour savoir comment "
+#~ "les utiliser."
+
+#~ msgid ""
 #~ "In ``debian/changelog`` change the version number to an Ubuntu version: "
 #~ "``2.7-0ubuntu1`` (upstream version 2.7, Debian version 0, Ubuntu version 1). "
 #~ " Also change ``unstable`` to the current development Ubuntu release such as "
@@ -7198,6 +7119,89 @@ msgstr ""
 #~ "Ubuntu : ``2.7-0ubuntu1`` (version 2.7 de l'amont, version 0 de Debian, "
 #~ "version 1 d'Ubuntu). Modifiez également ``unstable`` en la version d'Ubuntu "
 #~ "en cours de développement, comme ``precise``."
+
+#~ msgid ""
+#~ "Even if it builds the .deb binary package, your packaging may have bugs.  "
+#~ "Many errors can be automatically detected by our tool ``lintian`` which can "
+#~ "be run on both the source .dsc metadata file and the .deb binary package::"
+#~ msgstr ""
+#~ "Même si votre paquet binaire .deb est construit, l'empaquetage peut contenir "
+#~ "des bogues. De nombreuses erreurs peuvent être détectées automatiquement par "
+#~ "notre outil ``lintian`` pouvant être exécuté soit sur le fichier source de "
+#~ "métadonnées .dsc, soit sur le paquet binaire .deb ::"
+
+#~ msgid ""
+#~ "A description of each of the problems it reports can be found on the "
+#~ "`lintian website`_."
+#~ msgstr ""
+#~ "Une description de chacun des problèmes rapportés est disponible sur le "
+#~ "`site Internet lintian`_."
+
+#~ msgid ""
+#~ "In some cases, it might make sense to go directly into Ubuntu first. For "
+#~ "instance, Debian might be in a freeze making it unlikely that your package "
+#~ "will make it into Ubuntu in time for the next release. This process is "
+#~ "documented on the `\"New Packages\"`_ section of the Ubuntu wiki."
+#~ msgstr ""
+#~ "Dans certains cas, il peut être judicieux d'aller directement dans Ubuntu en "
+#~ "premier. Par exemple, Debian peut se trouver en phase de gel rendant peu "
+#~ "probable le fait que votre paquet fasse partie d'Ubuntu à temps pour la "
+#~ "prochaine version. Ce processus est documenté dans la section `« Nouveaux "
+#~ "paquets »`_ du wiki d'Ubuntu."
+
+#~ msgid ""
+#~ "Python 2.x and 3.x versions of the package should be in separate binary "
+#~ "packages. Names should have ``python{,3}-modulename`` format (like: "
+#~ "``python3-dbus.mainloop.qt``). Here, we will use ``python-markdown`` and "
+#~ "``python3-markdown`` for module packages and ``python-markdown-doc`` for the "
+#~ "documentation package."
+#~ msgstr ""
+#~ "Les versions Python 2.x et 3.x du paquet doivent se trouver en paquets "
+#~ "binaires séparés. Les noms doivent être formatés en ``python{,3}-"
+#~ "nomdemodule`` (comme : ``python3-dbus.mainloop.qt``). Ici, nous allons "
+#~ "utiliser ``python-markdown`` et ``python3-markdown`` pour les paquets de "
+#~ "module et ``python-markdown-doc`` pour la documentation du paquet."
+
+#~ msgid ""
+#~ "At the time of writing, Ubuntu has two incompatible versions of Python — "
+#~ "*2.x* and *3.x*. ``/usr/bin/python`` is a symbolic link to a default Python "
+#~ "2.x version, and ``/usr/bin/python3`` — to a default Python 3.x version. "
+#~ "Python modules should be built against all supported Python versions."
+#~ msgstr ""
+#~ "Au moment d'écrire ces lignes, Ubuntu dispose de deux versions incompatibles "
+#~ "de Python  *2.x* et *3.x*. ``/usr/bin/python`` est un lien symbolique vers "
+#~ "une version par défaut de Python 2.x, et ``/usr/bin/python3`` vers une "
+#~ "version par défaut de Python 3.x. Les modules Python devraient être "
+#~ "construits pour toutes les versions de Python prises en charge."
+
+#~ msgid ""
+#~ "Our packaging follows Debian’s `Python policy`_. We will use the `python-"
+#~ "markdown`_ package as an example, which can be downloaded from `PyPI`_. You "
+#~ "can look at its packaging at its `Subversion repository`_."
+#~ msgstr ""
+#~ "Nos empaquetages suivent la `Charte Python`_ de Debian. Nous allons utiliser "
+#~ "le paquet `python-markdown`_ comme un exemple, qui peut être téléchargé à "
+#~ "partir de `PyPI`_. Vous pouvez examiner son empaquetage dans son `dépôt "
+#~ "Subversion`_."
+
+#~ msgid ""
+#~ "`Work-Needing and Prospective Packages`_ - Information on how to file "
+#~ "\"Intent to Package\" and \"Request for Package\" bugs as well as list of "
+#~ "open ITPs and RFPs."
+#~ msgstr ""
+#~ "`Paquets en devenir ou en cours de travail`_ - Renseignements sur la façon "
+#~ "de déposer des « intentions de Paquets » et des « Requêtes pour les bogues "
+#~ "de Paquet » mais aussi la liste de ces Intentions et Requêtes actuellement "
+#~ "ouvertes."
+
+#~ msgid ""
+#~ "means the importer has failed.  You can find out why on http://package-"
+#~ "import.ubuntu.com/status/ and `file a bug on the UDD project`_ to get the "
+#~ "issue resolved."
+#~ msgstr ""
+#~ "signifie que l'importation a échoué. Vous pouvez trouver pourquoi sur "
+#~ "http://package-import.ubuntu.com/status/ et `déposer un bogue sur le projet "
+#~ "UDD`_ pour faire résoudre ce problème."
 
 #~ msgid ""
 #~ "When you want to do something like a `stable release update`_ (SRU), or you "
@@ -7210,5 +7214,318 @@ msgstr ""
 #~ "devrez prendre la branche correspondant à une version particulière d'Ubuntu. "
 #~ "Par exemple, pour obtenir le paquet Tomboy pour Maverick, faites ::"
 
+#~ msgid ""
+#~ "Once your merge proposal is reviewed and approved, you will want to upload "
+#~ "your package, either to the archive (if you have permission) or to your "
+#~ "`Personal Package Archive`_ (PPA).  You might also want to do an upload if "
+#~ "you are sponsoring someone else's changes."
+#~ msgstr ""
+#~ "Une fois votre proposition de fusion relue et approuvée, vous devez envoyer "
+#~ "le paquet, que ce soit à l'archive (si vous avez l'autorisation) ou à votre "
+#~ "`Archive Personnelle de Paquet`_ (PPA). Vous devrez également faire un "
+#~ "téléchargement si vous parrainez les modifications de quelqu'un d'autre."
+
+#~ msgid ""
+#~ "In addition to the links to the Debian Policy Manual in each section above, "
+#~ "the Debian New Maintainers' Guide has more detailed descriptions of each "
+#~ "file. `Chapter 4, \"Required files under the debian directory\" "
+#~ "<http://www.debian.org/doc/maint-guide/dreq.en.html>`_ further discusses the "
+#~ "control, changelog, copyright and rules files. `Chapter 5, \"Other files "
+#~ "under the debian directory\" <http://www.debian.org/doc/maint-"
+#~ "guide/dother.en.html>`_ discusses additional files that may be used."
+#~ msgstr ""
+#~ "En complément des liens vers la Charte Debian de chaque section ci-dessus, "
+#~ "le Nouveau Guide des Mainteneurs Debian décrit plus en détail chaque "
+#~ "fichier. Notamment, `Chapitre 4, « Fichiers nécessaires dans le répertoire "
+#~ "debian » <http://www.debian.org/doc/maint-guide/dreq.fr.html>`_ examine en "
+#~ "profondeur les fichiers control, changelog, copyright et rules. Le `Chapitre "
+#~ "5, « Autres fichiers dans le répertoire debian » "
+#~ "<http://www.debian.org/doc/maint-guide/dother.fr.html>`_ examine les "
+#~ "fichiers supplémentaires pouvant être utilisés."
+
+#~ msgid ""
+#~ "`Debian Mentors FAQ`_ - debian-mentors is for the mentoring of new and "
+#~ "prospective Debian Developers. It is where you can find a sponsor to upload "
+#~ "your package to the archive."
+#~ msgstr ""
+#~ "La foire aux questions `Debian Mentors FAQ`_ des tuteurs Debian existe pour "
+#~ "le tutorat des nouveaux et futurs développeurs Debian. C'est là que vous "
+#~ "trouverez un parrain pour télécharger votre paquet vers l'archive."
+
+#~ msgid ""
+#~ "The `gtk+3.0 tests`_ also do a compile/link/run check in the \"build\" test. "
+#~ "There is an additional \"python3-gi\" test which verifies that the GTK "
+#~ "library can also be used through introspection."
+#~ msgstr ""
+#~ "Les `tests gtk +3.0`_ font également une compilation/link/run vérifier dans "
+#~ "le dossier \"build\" test. Il y a un test supplémentaire \"python3-gi\" qui "
+#~ "vérifie que la bibliothèque GTK peut également être utilisé par "
+#~ "l'introspection."
+
+#~ msgid ""
+#~ "For more information on chroots see our `Debootstrap Chroot wiki page`_."
+#~ msgstr ""
+#~ "Pour plus d'informations sur chroot consultez notre `page wiki debootstrap "
+#~ "chroot`_."
+
+#~ msgid ""
+#~ "Full virtual machines can be useful for packaging and testing programs.  "
+#~ "TestDrive is a program to automate syncing and running daily ISO images, see "
+#~ "`the TestDrive wiki page`_ for more information."
+#~ msgstr ""
+#~ "Les machines virtuelles complètes sont utiles pour tester et empaqueter les "
+#~ "programmes. TestDrive est un programme automatisant la synchronisation et "
+#~ "l'exécution quotidienne d'images ISO, reportez-vous à `la page wiki "
+#~ "TestDrive`_ pour de plus amples informations."
+
+#~ msgid ""
+#~ "The Ubuntu Engineering team put together a `list of required test-cases`_, "
+#~ "where packages which need tests are put into different categories. Here you "
+#~ "can find examples of these tests and easily assign them to yourself."
+#~ msgstr ""
+#~ "L'équipe d'ingénierie Ubuntu a dressé une `liste des cas nécessaires de "
+#~ "test`_, où les paquets nécessitant d'être testés sont placés dans "
+#~ "différentes catégories. Ici vous pouvez trouver des exemples de ces tests et "
+#~ "vous les attribuer aisément."
+
+#~ msgid ""
+#~ "For further information, see the `changelog section (Section 4.4) "
+#~ "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
+#~ "of the Debian Policy Manual."
+#~ msgstr ""
+#~ "Pour plus d'informations, consultez la `section changelog (Section 4.4) "
+#~ "<http://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog>`_ "
+#~ "de la Charte Debian."
+
+#~ msgid ""
+#~ "Amazon's `EC2 cloud computers`_ allow you to hire a computer paying a few US "
+#~ "cents per hour, you can set up Ubuntu machines of any supported version and "
+#~ "package on those.  This is useful when you want to compile many packages at "
+#~ "the same time or to overcome bandwidth restraints."
+#~ msgstr ""
+#~ "Les `ordinateurs EC2 cloud`_ d'Amazon vous permettent de louer un ordinateur "
+#~ "contre quelques cents américains de l'heure, vous pourrez régler les "
+#~ "machines Ubuntu pour toute version prise en charge ou tout paquet sur ces "
+#~ "ordinateurs. Ceci est utile lorsque vous voulez compiler de nombreux paquets "
+#~ "en même temps ou surmonter les contraintes de bande passante."
+
+#~ msgid ""
+#~ "For further information, see the `control file section (Chapter 5) "
+#~ "<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ of the "
+#~ "Debian Policy Manual."
+#~ msgstr ""
+#~ "Pour plus d'informations, consultez la `section fichier control (Chapitre 5) "
+#~ "<http://www.debian.org/doc/debian-policy/ch-controlfields.html>`_ de la "
+#~ "Charte Debian."
+
+#~ msgid ""
+#~ "For more information on this process, visit the `creating an SSH keypair "
+#~ "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ page on "
+#~ "Launchpad."
+#~ msgstr ""
+#~ "Pour plus d'informations sur ce processus, veuillez consulter la page `créer "
+#~ "une paire de clés SSH "
+#~ "<https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair>`_ sur "
+#~ "Launchpad."
+
+#~ msgid ""
+#~ "Junichi Uekawa's `Debian Library Packaging Guide`_ goes into this topic in "
+#~ "more detail."
+#~ msgstr ""
+#~ "Le `Guide d'Empaquetage de Bibliothèque Debian`_ de Junichi Uekawa explore "
+#~ "ce sujet plus en détail."
+
+#~ msgid ""
+#~ "You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the `MOTU "
+#~ "mailing list`_.  There might also be a more specific team you could ask such "
+#~ "as the GNU team for more specific questions."
+#~ msgstr ""
+#~ "Vous pouvez demander des relectures sur le canal IRC ``#ubuntu-motu``, ou "
+#~ "sur la `liste de diffusion MOTU`_. Vous pourriez également interroger une "
+#~ "équipe plus spécifique, comme l'équipe de GNU pour des questions plus "
+#~ "pointues."
+
+#~ msgid ""
+#~ "SBuild is a system similar to PBuilder for creating an environment to run "
+#~ "test package builds in.  It closer matches that used by Launchpad for "
+#~ "building packages but takes some more setup compared to PBuilder.  See `the "
+#~ "Security Team Build Environment wiki page`_ for a full explanation."
+#~ msgstr ""
+#~ "SBuild est un système similaire à PBuilder pour la création d'un "
+#~ "environnement d'exécution de tests de construction de paquets. Il correspond "
+#~ "plus à celui utilisé par Launchpad pour créer des paquets, mais nécessite un "
+#~ "peu plus de paramètres que PBuilder. Voir la `page wiki de l'équipe de "
+#~ "sécurité de construction d' environnement`_ pour une explication complète."
+
+#~ msgid ""
+#~ "Sometimes you might want to make new functionality available in a stable "
+#~ "release which is not connected to a critical bug fix. For these scenarios "
+#~ "you have two options: either you `upload to a PPA "
+#~ "<https://help.launchpad.net/Packaging/PPA>`_ or prepare a backport."
+#~ msgstr ""
+#~ "Parfois, vous souhaitez ajouter une nouvelle fonctionnalité qui ne concerne "
+#~ "pas la correction de bug critique. Pour ce scénario, vous avez deux "
+#~ "options : soit vous le `soumettez à un PPA "
+#~ "<https://help.launchpad.net/Packaging/PPA>`_ soit vous préparez un "
+#~ "rétroportage."
+
+#~ msgid ""
+#~ "Note that in Ubuntu, we set the ``Maintainer`` field to a general address "
+#~ "because anyone can change any package (this differs from Debian where "
+#~ "changing packages is usually restricted to an individual or a team). "
+#~ "Packages in Ubuntu should generally have the ``Maintainer`` field set to "
+#~ "``Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>``. If the "
+#~ "Maintainer field is modified, the old value should be saved in the ``XSBC-"
+#~ "Original-Maintainer`` field. This can be done automatically with the  "
+#~ "``update-maintainer`` script available in the ``ubuntu-dev-tools`` package. "
+#~ "For further information, see the `Debian Maintainer Field spec "
+#~ "<https://wiki.ubuntu.com/DebianMaintainerField>`_ on the Ubuntu wiki."
+#~ msgstr ""
+#~ "Notez que dans Ubuntu, nous avons laissé le champ ``Maintainer`` pointer "
+#~ "vers une adresse générale, car n'importe qui peut changer n'importe quel "
+#~ "paquet (ceci diffère de Debian où le changement des paquets est généralement "
+#~ "limité à une personne ou une équipe). Les paquets dans Ubuntu devraient "
+#~ "avoir le champ ``Maintainer`` indiquant ``Développeurs Ubuntu <ubuntu-devel-"
+#~ "discuss@lists.ubuntu.com>``. Si ce champ Maintainer est modifié, l'ancienne "
+#~ "valeur doit être enregistrée dans le champ ``XSBC-Original-Maintainer``. "
+#~ "Cela peut être fait automatiquement avec le script ``update-maintainer`` "
+#~ "disponible dans le paquet ``ubuntu-dev-tools``. Pour plus d'informations, "
+#~ "reportez-vous aux `Spécifications Debian du Champ Mainteneur "
+#~ "<https://wiki.ubuntu.com/DebianMaintainerField>`_ sur le wiki d'Ubuntu."
+
+#~ msgid ""
+#~ "This file gives the copyright information for both the upstream source and "
+#~ "the packaging. Ubuntu and `Debian Policy (Section 12.5) "
+#~ "<http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_ "
+#~ "require that each package installs a verbatim copy of its copyright and "
+#~ "license information to ``/usr/share/doc/$(package_name)/copyright``."
+#~ msgstr ""
+#~ "Ce fichier donne les informations de copyright à la fois pour la source en "
+#~ "amont et pour l'empaquetage. Les chartes Ubuntu et `Debian (Section 12.5) "
+#~ "<http://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_ "
+#~ "exigent que chaque paquet installe une copie intégrale de son copyright et "
+#~ "de ses informations de licence dans "
+#~ "``/usr/share/doc/$(package_name)/copyright``."
+
+#~ msgid ""
+#~ "See ``man dpkg-source`` and the `source/format section (Section 5.21) "
+#~ "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_  of "
+#~ "the Debian New Maintainers' Guide for additional details."
+#~ msgstr ""
+#~ "Voir ``man dpkg-source`` et la `section source/format (Section 5.21) "
+#~ "<http://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef>`_ du "
+#~ "Nouveau Guide des Mainteneurs Debian afin d'obtenir des détails "
+#~ "supplémentaires."
+
+#~ msgid ""
+#~ "Packaging of KDE programs in Ubuntu is managed by the Kubuntu and MOTU "
+#~ "teams.  You can contact the Kubuntu team on the `Kubuntu mailing list`_ and "
+#~ "``#kubuntu-devel`` Freenode IRC channel.  More information about Kubuntu "
+#~ "development is on the `Kubuntu wiki page`_."
+#~ msgstr ""
+#~ "L'empaquetage de programmes KDE dans Ubuntu est géré par les équipes Kubuntu "
+#~ "et MOTU. Vous pouvez contacter l'équipe Kubuntu sur la `liste de diffusion "
+#~ "Kubuntu`_ et le canal IRC Freenode ``#kubuntu-devel``. Vous trouverez de "
+#~ "plus amples informations sur le développement Kubuntu sur la `page de wiki "
+#~ "Kubuntu`_."
+
+#~ msgid ""
+#~ "`Debian Developer's Reference, 5.1. New packages`_ - The entire document is "
+#~ "invaluable for both Ubuntu and Debian packagers. This section documents "
+#~ "processes for submitting new packages."
+#~ msgstr ""
+#~ "`Référence du développeur Debian, 5.1. Les nouveaux paquets`_ - L'ensemble "
+#~ "du document est inestimable tout autant pour les empaqueteurs Ubuntu ou "
+#~ "Debian. Cette section documente les processus de soumission de nouveaux "
+#~ "paquets."
+
+#~ msgid ""
+#~ "Module packages should have ``{python:Depends}`` and ``{python3:Depends}`` "
+#~ "substitution variables (respectively) in their dependency lists."
+#~ msgstr ""
+#~ "Les paquets de modules doivent avoir les variables de substitution "
+#~ "``{python:Depends}`` et `` {python3:Depends}`` (respectivement) dans leurs "
+#~ "listes de dépendances."
+
+#~ msgid ""
+#~ "The recommended helpers for python modules are ``dh_python2`` and "
+#~ "``dh_python3``. Unfortunately, ``debhelper`` doesn’t yet build Python 3.x "
+#~ "packages automatically (see `bug 597105`_ in Debian BTS), so we’ll need to "
+#~ "do that manually in override sections (skip this if your package doesn’t "
+#~ "support Python 3.x)."
+#~ msgstr ""
+#~ "Les aides recommandées pour les modules python sont ``dh_python2`` et "
+#~ "``dh_python3``. Malheureusement, ``debhelper`` ne compile pas encore "
+#~ "automatiquement des paquets Python 3.x (voir le `bogue 597105`_ dans le "
+#~ "Système de Traçage de Bogues Debian), de sorte que nous aurons besoin de le "
+#~ "faire manuellement dans les sections de remplacement (les sauter si votre "
+#~ "paquet ne prend pas en charge Python 3.x)."
+
+#~ msgid ""
+#~ "Run ``setup.py build_sphinx`` in ``override_dh_auto_build`` (sometimes not "
+#~ "needed);"
+#~ msgstr ""
+#~ "Lancer ``setup.py build_sphinx`` dans ``override_dh_auto_build`` (pas "
+#~ "toujours nécessaire) ;"
+
+#~ msgid "Append ``sphinxdoc`` to the ``dh --with`` line;"
+#~ msgstr "Annexer ``sphinxdoc`` à la ligne ``dh --with`` ;"
+
+#~ msgid ""
+#~ "If your package is an application and has private Python modules, they "
+#~ "should be installed in ``/usr/share/module``, or ``/usr/lib/module`` if the "
+#~ "modules are architecture-dependent (e.g. extensions) (see “`Programs "
+#~ "Shipping Private Modules`_” section of the Policy)."
+#~ msgstr ""
+#~ "Si votre paquet est une application et possède des modules Python privés, "
+#~ "ils doivent être installés dans ``/usr/share/module``, ou "
+#~ "``/usr/lib/module``si ces modules sont dépendants de l'architecture (par "
+#~ "exemple, des extensions) (voir le paragraphe « `Programmes fournissant des "
+#~ "Modules Privés`_ » de la Charte)."
+
+#~ msgid ""
+#~ "Add a build-dependency on ``python-sphinx`` or ``python3-sphinx`` (depending "
+#~ "on what Python version do you want to use);"
+#~ msgstr ""
+#~ "Ajouter à votre compilation une dépendance à ``python-sphinx`` ou ``python3-"
+#~ "sphinx`` (selon la version de Python souhaitée) ;"
+
+#~ msgid ""
+#~ "Along with ``lintian``, there is a special tool for checking Python packages "
+#~ "— ``lintian4py``. It is available in the `lintian4python`_ package. For "
+#~ "example, these two commands invoke both versions of ``lintian`` and check "
+#~ "source and binary packages::"
+#~ msgstr ""
+#~ "Avec ``lintian``, il existe un outil spécifique pour vérifier les paquets "
+#~ "Python —  ``lintian4py``. Il est disponible dans le paquet "
+#~ "`lintian4python`_. Par exemple, ces deux commandes invoquent les deux "
+#~ "versions de ``lintian`` et vérifient les paquets sources et binaires ::"
+
+#~ msgid "The `Python policy`_;"
+#~ msgstr "La `Charte Python`_ ;"
+
+#~ msgid "`Python/Packaging`_ article on Debian wiki;"
+#~ msgstr "L'article `Python/Packaging`_ sur le wiki Debian ;"
+
+#~ msgid "Debian `python-modules`_ and `python-apps`_ teams."
+#~ msgstr "Les équipes Debian `python-modules`_ et `python-apps`_."
+
+#~ msgid ""
+#~ "`Python/LibraryStyleGuide`_ and `Python/AppStyleGuide`_ articles on Debian "
+#~ "wiki;"
+#~ msgstr ""
+#~ "Les articles `Python/LibraryStyleGuide`_ et `Python/AppStyleGuide`_ sur le "
+#~ "wiki Debian ;"
+
 #~ msgid "to pull the source from the ``precise`` release, or::"
 #~ msgstr "pour récupérer la source depuis la version ``precise``, ou ::"
+
+#~ msgid ""
+#~ "`The new account help page "
+#~ "<https://help.launchpad.net/YourAccount/NewAccount>`_ on Launchpad has more "
+#~ "information about the process and additional settings you can change."
+#~ msgstr ""
+#~ "`La page d'aide nouveau compte "
+#~ "<https://help.launchpad.net/YourAccount/NewAccount>`_ sur Launchpad contient "
+#~ "plus d'informations sur le processus et les paramètres supplémentaires que "
+#~ "vous pouvez modifier."
