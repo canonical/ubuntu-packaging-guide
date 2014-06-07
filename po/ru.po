@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-05 16:10+0200\n"
-"PO-Revision-Date: 2014-05-06 20:35+0000\n"
-"Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
+"PO-Revision-Date: 2014-06-06 11:27+0000\n"
+"Last-Translator: Patsev Anton <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-07 06:51+0000\n"
-"X-Generator: Launchpad (build 16996)\n"
+"X-Launchpad-Export-Date: 2014-06-07 05:49+0000\n"
+"X-Generator: Launchpad (build 17031)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -167,6 +167,8 @@ msgid ""
 "The ``adt-run`` manpage has a lot more valuable information on other testing "
 "options."
 msgstr ""
+"Man-страница ``adt-run`` содержит много ценной информации по другим "
+"параметрам тестирования."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:129
 msgid "Further examples"
@@ -476,6 +478,10 @@ msgid ""
 "TestDrive is a program to automate syncing and running daily ISO images, see "
 "`the TestDrive wiki page <TestDrive_>`_ for more information."
 msgstr ""
+"Полные виртуальные машины могут быть полезны для создания пакетов и "
+"тестирования программ.  TestDrive — это программа, позволяющая "
+"автоматизировать синхронизацию и запуск ежедневных ISO-образов. Подробнее "
+"смотрите `wiki-страницу TestDrive <TestDrive_>`_."
 
 #: ../ubuntu-packaging-guide/chroots.rst:66
 msgid ""
@@ -2159,6 +2165,8 @@ msgid ""
 "Don't worry though, you can use `Testdrive`_ or :doc:`chroots <./chroots>` "
 "to safely use the development release."
 msgstr ""
+"Не беспокойтесь, вы можете воспользоваться `Testdrive`_ или :doc:`chroots "
+"<./chroots>` для безопасного использования разрабатываемой версии (релиза)"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
@@ -2197,6 +2205,9 @@ msgid ""
 "create a cryptographic key with which you will sign files you want to upload "
 "to Launchpad."
 msgstr ""
+"``gnupg`` -- `GNU Privacy Guard <GPG_>`_ содержит инструменты, которые "
+"понадобятся для создания криптографического ключа, с помощью которого вы "
+"будете подписывать файлы, которые хотите загрузить на Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:54
 msgid ""
@@ -2222,8 +2233,8 @@ msgid ""
 "keeping it trivial to merge each other's work."
 msgstr ""
 "``bzr-builddeb`` (и его зависимость -- ``bzr``) -- управление "
-"распределёнными версиями с помощью Bazaar, новый способ работы с пакетами "
-"для Ubuntu, упрощающий совместную работу многих людей над одним и тем же "
+"распределёнными версиями с помощью Bazaar (новый способ работы с пакетами "
+"для Ubuntu), упрощающий совместную работу многих людей над одним и тем же "
 "кодом и позволяющий с лёгкостью объединять результаты их труда друг с другом."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:62
@@ -2247,6 +2258,13 @@ msgid ""
 "worked on. If you upload a source package to Launchpad, it will only accept "
 "the package if it can absolutely determine who uploaded the package."
 msgstr ""
+"GPG — аббревиатура для `GNU Privacy Guard <GPG_>`_, реализующего стандарт "
+"OpenPGP, который позволяет подписывать и шифровать сообщения и файлы. Это "
+"полезно в ряде ситуаций. В нашем случае важно, что вы можете использовать "
+"свой ключ для подписывания файлов, чтобы можно было удостовериться, что "
+"именно вы с ними работали. Если вы загрузите пакет исходного кода на "
+"Launchpad, он будет принят только в том случае, если можно точно определить, "
+"кто именно отправил пакет."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:76
 msgid "To generate a new GPG key, run::"
@@ -2477,6 +2495,10 @@ msgid ""
 "your Launchpad id, you can find this out by going to https://launchpad.net/~ "
 "and looking for the part after the `~` in the URL."
 msgstr ""
+"Если у вас ещё нет учётной записи на Launchpad, вы легко можете `создать её "
+"<LP-AccountCreate_>`_. Если учётная запись есть, но вы не помните свой "
+"Launchpad ID, его можно узнать, зайдя на https://launchpad.net/~ и взглянув "
+"на часть после `~` в URL."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:191
 msgid ""
@@ -2504,6 +2526,9 @@ msgid ""
 "`The new account help page <LP-AccountHelp_>`_ on Launchpad has more "
 "information about the process and additional settings you can change."
 msgstr ""
+"`Справочная страница новой учётной записи <LP-AccountHelp_>`_ на Launchpad "
+"содержит дополнительную информацию о процессе и дополнительных настройках, "
+"которые можно сделать."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:206
 msgid "Upload your GPG key to Launchpad"
@@ -2511,7 +2536,7 @@ msgstr "Загрузка вашего ключа GPG на Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:208
 msgid "First, you will need to get your fingerprint and key ID."
-msgstr ""
+msgstr "Сначала нужно получить отпечаток и идентификатор ключа."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:210
 msgid "To find about your GPG fingerprint, run::"
@@ -2524,6 +2549,8 @@ msgstr "и вы увидите что-то наподобие::"
 #: ../ubuntu-packaging-guide/getting-set-up.rst:221
 msgid "Then run this command to submit your key to Ubuntu keyserver::"
 msgstr ""
+"Затем выполните эту команду для отправки вашего ключа на сервер ключей "
+"Ubuntu::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:225
 msgid ""
@@ -2531,6 +2558,9 @@ msgid ""
 "line of output of the previous command). Now you can import your key to "
 "Launchpad."
 msgstr ""
+"где ``43CDE61D`` следует заменить на ваш идентификатор ключа (он в первой "
+"строке вывода предыдущей команды). Теперь можно импортировать свой ключ на "
+"Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:229
 msgid ""
@@ -2569,6 +2599,13 @@ msgid ""
 "encryption, copy the encrypted email's contents, type ``gpg`` in your "
 "terminal, then paste the email contents into your terminal window."
 msgstr ""
+"Launchpad шифрует почту, используя ваш публичный ключ, так что вы сможете "
+"убедиться, что ключ ваш. Если вы пользуетесь почтовым клиентом Thunderbird, "
+"использующимся в Ubuntu по умолчанию, для дешифровки сообщения можете "
+"установить `дополнение Enigmail <Enigmail_>`_. Если ваша почтовая программа "
+"не поддерживает шифрование OpenPGP, скопируйте зашифрованное содержимое "
+"письма в буфер обмена, наберите в терминале ``gpg`` и вставьте содержимое "
+"письма в окно терминала."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:251
 msgid ""
@@ -2609,6 +2646,8 @@ msgid ""
 "For more information on this process, visit the `creating an SSH keypair "
 "<genssh_>`_ page on Launchpad."
 msgstr ""
+"Для дополнительной информации об этом процессе посетите страницу о `создании "
+"ключевой пары SSH <genssh_>`_ на Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:272
 msgid "Configure Bazaar"
@@ -2811,6 +2850,8 @@ msgid ""
 "You can read this guide offline in different formats, if you install one of "
 "the `binary packages <BinPkgs_>`_."
 msgstr ""
+"Вы можете прочитать оффлайн-версию этого руководства в различных форматах, "
+"если установите один из `двоичных пакетов <BinPkgs_>`_."
 
 #: ../ubuntu-packaging-guide/index.rst:96
 msgid ""
@@ -2822,27 +2863,32 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:99
 msgid "`How to package for Debian <HowToPackage_>`_;"
-msgstr ""
+msgstr "`Как создавать пакеты для Debian <HowToPackage_>`_;"
 
 #: ../ubuntu-packaging-guide/index.rst:100
 msgid "`Debian Policy Manual <Policy_>`_;"
-msgstr ""
+msgstr "`Руководство по политике Debian <Policy_>`_;"
 
 #: ../ubuntu-packaging-guide/index.rst:101
 msgid ""
 "`Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many "
 "languages;"
 msgstr ""
+"`Руководство начинающего разработчика Debian <NewMaintGuide_>`_ — доступно "
+"на различных языках;"
 
 #: ../ubuntu-packaging-guide/index.rst:102
 msgid ""
 "`Packaging tutorial <PkgTutorial_>`_ (also available as a `package "
 "<PkgTutorialPkg_>`_);"
 msgstr ""
+"`Руководство по созданию пакетов <PkgTutorial_>`_ (также доступно в виде "
+"`пакета <PkgTutorialPkg_>`_);"
 
 #: ../ubuntu-packaging-guide/index.rst:103
 msgid "`Guide for Packaging Python Modules <PythonModules_>`_."
 msgstr ""
+"`Руководство по созданию пакетов для модулей Python <PythonModules_>`_."
 
 #: ../ubuntu-packaging-guide/index.rst:105
 msgid ""
@@ -2850,6 +2896,10 @@ msgid ""
 "have some suggestions, please `report a bug on Launchpad <Bugs_>`_. If you'd "
 "like to help work on the guide, `grab the source <Source_>`_ there as well."
 msgstr ""
+"Мы всегда стремимся улучшить это руководство. Если вы найдёте какую-либо "
+"ошибку, или хотите что-либо предложить, пожалуйста, `создайте отчёт об "
+"ошибке на Launchpad <Bugs_>`_. Если вы хотели бы помочь в работе над "
+"руководством, его `исходный код <Source_>`_ также доступен на Launchpad."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
@@ -2891,6 +2941,19 @@ msgid ""
 "packages that get on the image. These images are then used for installation "
 "tests and provide the feedback for further release planning."
 msgstr ""
+"Каждый раз, когда выходит новая версия приложения, или когда кто-то вносит "
+"изменения в исходный код пакета, входящего в состав Ubuntu, пакет с исходным "
+"кодом должен быть загружен на сборочные компьютеры Launchpad для компиляции. "
+"Готовые бинарные пакеты затем попадают в репозиторий и его зеркала в разных "
+"странах. URL в ``/etc/apt/sources.list`` являются ссылками на репозиторий "
+"или его зеркал. Каждый день собираются образы для различных версий Ubuntu. "
+"Они могут быть использованы в различных условиях. Есть образы, которые можно "
+"записать на USB-носители или на DVD-диски, образы, которые можно "
+"использовать для сетевой загрузки и есть образы, предназначенные для "
+"установки на телефон или планшет. Ubuntu, серверная версия Ubuntu, Kubuntu и "
+"другие ветки имеют специфичный список необходимых пакетов, которые попадают "
+"в образ. Эти образы, которые затем используются для проверки установки и "
+"обеспечивают обратную связь для дальнейшего планирования выпуска."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:27
 msgid ""
@@ -2936,6 +2999,17 @@ msgid ""
 "a videocast, chat with attendants and subscribe to changes of "
 "specifications, so you are always up to date."
 msgstr ""
+"Тысячи пакетов исходного кода, миллиарды строк кода, сотни разработчиков "
+"требуют больше общения и планирования для поддержания высоких стандартов "
+"качества. В начале и в середине каждого цикла выпуска организуется Ubuntu "
+"Developer Summit, где разработчики и участники собираются вместе, чтобы "
+"планировать новые функции в следующих выпусках. Каждая функция обсуждается "
+"заинтересованными сторонами, и составляется спецификация, содержащая "
+"подробную информацию об исходных предположениях, реализации, внесении "
+"необходимых изменений в другие пакеты, о тестировании и так далее. Всё это "
+"делается прозрачным и открытым образом, так что вы можете поучаствовать "
+"удалённо, посмотреть видеотрансляцию, пообщаться с участниками и подписаться "
+"на спецификации, чтобы всегда быть в курсе происходящего."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:54
 msgid ""
@@ -2987,8 +3061,8 @@ msgstr ""
 "принято называть «апстримом» (от англ. upstream — вверх по течению), так как "
 "их исходный код вливается в Ubuntu, где мы «просто» интегрируем его в "
 "систему. Связь с апстримом очень важна для Ubuntu. Не только Ubuntu получает "
-"программный код из апстрима, но и апстрим получает пользователей, отчёты об "
-"ошибках и патчи от Ubuntu (и других дистрибутивов)."
+"программный код из апстрима, но и апстрим получает от пользователей отчёты "
+"об ошибках и патчи от Ubuntu (и других дистрибутивов)."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:77
 msgid ""
@@ -3130,6 +3204,10 @@ msgid ""
 "<KubuntuML_>`_ and ``#kubuntu-devel`` Freenode IRC channel.  More "
 "information about Kubuntu development is on the `Kubuntu wiki page <Wiki_>`_."
 msgstr ""
+"Созданием пакетов программ KDE в Ubuntu занимаются команды Kubuntu и MOTU.  "
+"Связаться с командой Kubuntu можно через `почтовую рассылку Kubuntu "
+"<KubuntuML_>`_ и канал Freenode IRC ``#kubuntu-devel``.  Дополнительная "
+"информация о разработке Kubuntu доступна на `wiki-странице Kubuntu <Wiki_>`_."
 
 #: ../ubuntu-packaging-guide/kde.rst:10
 msgid ""
@@ -3137,6 +3215,9 @@ msgid ""
 "<QtKDETeam_>`_ and Debian KDE Extras Team.  Most of our packages are derived "
 "from the packaging of these Debian teams."
 msgstr ""
+"При создании пакетов мы учитываем практику команд `Debian Qt/KDE "
+"<QtKDETeam_>`_ и Debian KDE Extras.  Большинство наших пакетов являются "
+"производными от пакетов, созданных этими командами Debian."
 
 #: ../ubuntu-packaging-guide/kde.rst:15
 msgid "Patching Policy"
@@ -3244,6 +3325,12 @@ msgid ""
 "language packs Launchpad will need to associate these together manually, "
 "contact `David Planella <dpm_>`_ to do this."
 msgstr ""
+"Апстрим обычно также помещает файлы переводов ``.po`` в каталог ``po/``.  "
+"Если их там нет, проверьте, не выделены ли они в один из отдельных языковых "
+"пакетов апстрима, например, в языковые пакеты KDE SC.  Если они в отдельном "
+"языковом пакете, на Launchpad необходимо собирать их вместе вручную. "
+"Проконсультируйтесь по этому поводу с `Дэвидом Планеллой (David Planella) "
+"<dpm_>`_."
 
 #: ../ubuntu-packaging-guide/kde.rst:69
 msgid ""
@@ -3667,6 +3754,10 @@ msgid ""
 " Also change ``unstable`` to the current development Ubuntu release such as "
 "``trusty``."
 msgstr ""
+"В ``debian/changelog`` измените номер версии на версию Ubuntu: ``2.7-"
+"0ubuntu1`` (апстрим-версия 2.7, версия в Debian 0, версия в Ubuntu 1).  "
+"Также смените ``unstable`` на текущий разрабатываемый выпуск Ubuntu, "
+"например, ``trusty``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:87
 msgid ""
@@ -3787,10 +3878,12 @@ msgid ""
 "Install the package and check it works (later you will be able to uninstall "
 "it using ``sudo apt-get remove hello`` if you want)::"
 msgstr ""
+"Установите пакет и проверьте, что он работает (позднее при желании вы "
+"сможете удалить его командой ``sudo apt-get remove hello``)::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:150
 msgid "You can also install all packages at once using::"
-msgstr ""
+msgstr "Можете также установить все пакеты сразу с помощью::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:155
 msgid "Next Steps"
@@ -3803,30 +3896,42 @@ msgid ""
 "be run on the source .dsc metadata file, .deb binary packages or .changes "
 "file::"
 msgstr ""
+"Даже если двоичный .deb-пакет успешно собирается, ваши исходные файлы для "
+"пакета могут содержать ошибки. Многие ошибки могут автоматически "
+"обнаруживаться нашим инструментом ``lintian``, который можно применить к "
+"файлу метаданных .dsc, двоичным пакетам .deb или файлу .changes::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:165
 msgid ""
 "To see verbose description of the problems use ``--info`` lintian flag or "
 "``lintian-info`` command."
 msgstr ""
+"Чтобы увидеть подробное описание ошибок, используйте флаг lintian ``--info`` "
+" или команду ``lintian-info``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:168
 msgid ""
 "Results of Ubuntu archive checks can be found online on "
 "http://lintian.ubuntuwire.org."
 msgstr ""
+"Результаты проверок архива Ubuntu можно найти в Интернете на "
+"http://lintian.ubuntuwire.org."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:171
 msgid ""
 "For Python packages, there is also a ``lintian4python`` tool that provides "
 "some additional lintian checks."
 msgstr ""
+"Для пакетов Python имеется также инструмент ``lintian4python``, "
+"осуществляющий некоторые дополнительные проверки lintian."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:174
 msgid ""
 "After making a fix to the packaging you can rebuild using ``-nc`` \"no "
 "clean\" without having to build from scratch::"
 msgstr ""
+"После создания исправления для файлов пакета можно пересобрать его с "
+"параметром ``-nc`` (\"no clean\"), чтобы не начинать сборку с самого начала::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:179
 msgid ""
@@ -3929,7 +4034,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:237
 msgid "Screenshots"
-msgstr ""
+msgstr "Снимки экрана"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:239
 msgid ""
@@ -3937,6 +4042,9 @@ msgid ""
 "allow propective users to see what the program is like. These should be "
 "uploaded to http://screenshots.debian.net/upload ."
 msgstr ""
+"Загрузив пакет в Debian, вам следует добавить снимки экрана, чтобы будущие "
+"пользователи смогли получить представление о том, как выглядит интерфейс "
+"программы. Снимки нужно отправлять на http://screenshots.debian.net/upload ."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
 msgid "Patches to Packages"
@@ -3966,7 +4074,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:18
 msgid "Let's look at an example package, ``kamoso`` in Trusty::"
-msgstr ""
+msgstr "Давайте возьмём в качестве примера пакет ``kamoso`` в Trusty::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:22
 msgid ""
@@ -4076,7 +4184,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:105
 msgid "Patch Headers"
-msgstr ""
+msgstr "Заголовки патчей"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:107
 msgid ""
