@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-05 16:10+0200\n"
-"PO-Revision-Date: 2014-06-06 11:27+0000\n"
+"PO-Revision-Date: 2014-06-17 06:04+0000\n"
 "Last-Translator: Patsev Anton <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-07 05:49+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
+"X-Launchpad-Export-Date: 2014-06-17 06:19+0000\n"
+"X-Generator: Launchpad (build 17045)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -4926,7 +4926,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:3
 msgid "Ubuntu Distributed Development — Introduction"
-msgstr "Ubuntu Distributed Development — введение"
+msgstr "Распределенная разработка Ubuntu — введение"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:5
 msgid ""
@@ -4995,7 +4995,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:40
 msgid "Ubuntu Distributed Development"
-msgstr "Ubuntu Distributed Development"
+msgstr "Распределенная разработка Ubuntu"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:42
 msgid ""
@@ -5995,7 +5995,8 @@ msgstr ""
 "  Dmitry Shachnev https://launchpad.net/~mitya57\n"
 "  Galyautdinov Timur https://launchpad.net/~tim203160\n"
 "  Patsev Anton https://launchpad.net/~patsev-anton\n"
-"  Vladimir Doroshenko https://launchpad.net/~vovktt"
+"  Vladimir Doroshenko https://launchpad.net/~vovktt\n"
+"  zotkindm https://launchpad.net/~zotkin-d-m"
 
 #~ msgid ""
 #~ "For more information on chroots see our `Debootstrap Chroot wiki page`_."
