@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-05 16:10+0200\n"
-"PO-Revision-Date: 2014-06-17 17:22+0000\n"
+"PO-Revision-Date: 2014-06-18 18:58+0000\n"
 "Last-Translator: Daniel Holbach <daniel.holbach@ubuntu.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-06-18 06:18+0000\n"
-"X-Generator: Launchpad (build 17045)\n"
+"X-Launchpad-Export-Date: 2014-06-19 06:22+0000\n"
+"X-Generator: Launchpad (build 17048)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -27,6 +27,8 @@ msgid ""
 "easily be integrated into packages. To integrate a test into a package, all "
 "you need to do is:"
 msgstr ""
+"`Спецификация DEP 8 <DEP8_>`_ определяет, как можно легко интегрировать "
+"автоматическое тестирование в ваши пакеты. Для этого, необходимо:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
 msgid "add the following to the Source section in ``debian/control``::"
@@ -61,8 +63,8 @@ msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
 msgstr ""
-"Сейчас мы рассмотрим пакет исходного кода ``glib2.0``. В очень простом "
-"случае он будет выглядеть так::"
+"Ниже мы рассмотрим пакет исходного кода ``glib2.0``. В очень простом случае "
+"он будет выглядеть так::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
 msgid ""
@@ -124,6 +126,13 @@ msgid ""
 "avoids cluttering your workstation with test packages or test configuration "
 "if the test does something more intrusive than the simple example above."
 msgstr ""
+"Несмотря на то, что скрипт тестирования может быть запущен напрямую, всё же "
+"рекомендуется использовать ``adt-run`` из пакета ``autopkgtest`` для "
+"проверки прохождения тестов; в противном случае, если тест покажет ошибку в "
+"системе Ubuntu Continuous Integration (CI) -- пакет не пройдёт в Ubuntu. "
+"Заодно можно избежать \"замусоривания\" Вашей рабочей станции тестовыми "
+"пакетами и конфигурациями в случае, если тест совершает нечто более "
+"серьёзное в отношении системы, чем в примере выше."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:95
 msgid ""
@@ -132,6 +141,11 @@ msgid ""
 "QEMU, etc.) and the most common scenarios how to run your tests with ``adt-"
 "run``, e. g. with locally built binaries, locally modified tests, etc."
 msgstr ""
+"В документации `README.running-tests <running_tests_local_>`_ (`онлайн-"
+"версия: <DEP8_>`_) объясняются все доступные тестовые окружения (schroot, "
+"LXC, QEMU, etc) и приводятся наиболее популярные способы запуска тестов "
+"через ``adt-run``. Например, с локальной сборкой бинарников, локально "
+"модифицируемыми тестами, и т.д."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:101
 msgid ""
@@ -139,10 +153,14 @@ msgid ""
 "packages in the archive, with ``-proposed`` enabled. To reproduce the exact "
 "same environment, first install the necessary packages::"
 msgstr ""
+"Система непрерывной интеграции Ubuntu CI использует эмулятор QEMU и "
+"запускает тесты из пакетов в архиве, с включённом флагом ``-proposed``. "
+"Чтобы вручную получить то же окружение, сначала необходимо установить "
+"следующие пакеты:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid "Now build a testbed with::"
-msgstr ""
+msgstr "Теперь выполните сборку тестового окружения, выполнив следующее:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
@@ -150,17 +168,23 @@ msgid ""
 "releases, architectures, output directory, or using proxies). This will "
 "build e. g. ``adt-trusty-amd64-cloud.img``."
 msgstr ""
+"(Более подробно о выборе других релизов, архитектур, целевых директорий, и "
+"об использовании прокси -- в manpage и в выводе опции ``--help``). Эта "
+"команда выполнит сборку, например ``adt-trusty-amd64-cloud.img``."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:115
 msgid ""
 "Then run the tests of a source package like ``libpng`` in that QEMU image::"
 msgstr ""
+"Теперь запустите тесты исходного пакета, например ``libpng``, в образе QEMU::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:119
 msgid ""
 "The Ubuntu CI system runs packages with ``-proposed`` enabled; to enable "
 "that, run::"
 msgstr ""
+"Система Ubuntu CI запускает пакеты с включённым флагом ``-proposed``; чтобы "
+"включить это, запустите::"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:124
 msgid ""
@@ -187,6 +211,8 @@ msgid ""
 "The `libxml2 tests <libxml2_>`_ are very similar. They also run a test-build "
 "of a simple piece of C code and execute it."
 msgstr ""
+"Для библиотеки `libxml2 <libxml2_>`_ , тесты очень похожи. Они так же "
+"запускают тестовую сборку простого кода на C и выполняют его."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:136
 msgid ""
@@ -194,11 +220,16 @@ msgid ""
 "\"build\" test. There is an additional \"python3-gi\" test which verifies "
 "that the GTK library can also be used through introspection."
 msgstr ""
+"Пакет `gtk+3.0 tests <gtk3_>` также компилирует/линкует/запускает проверку в "
+"тесте \"build\". Также есть дополнительный тест \"python3-gi\", проверяющий "
+"что библиотека GTK может быть использована во время теста."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:139
 msgid ""
 "In the `ubiquity tests <ubiquity_>`_ the upstream test-suite is executed."
 msgstr ""
+"В пакете `ubiquity tests <ubiquity_>`_ используется набор тестов "
+"родительского пакета"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
 msgid ""
@@ -206,6 +237,9 @@ msgid ""
 "and are very interesting because they emulate usage of CDs, Samba, DAV and "
 "other bits."
 msgstr ""
+"Пакет  `gvfs tests <gvfs_>`_ -- очень интересный пример: он тестирует свой "
+"функционал \"по полной\", включая эмуляцию CD, Samba, DAV и прочих "
+"компонентов."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:145
 msgid "Ubuntu infrastructure"
@@ -218,6 +252,10 @@ msgid ""
 "of `automatically run autopkgtest tests <jenkins_>`_ can be viewed on the "
 "web and is regularly updated."
 msgstr ""
+"Пакеты с включённым ``autopkgtest`` будут тестироваться при выгрузке, или "
+"если обновятся какие-либо зависимости. Результат работы `автоматический "
+"запуск тестов autopkgtest  <jenkins_>`_ может быть просмотрет на сайте, и он "
+"регулярно обновляется."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:152
 msgid ""
@@ -226,6 +264,11 @@ msgid ""
 "http://ci.debian.net. So please submit any test fixes or new tests to Debian "
 "as well."
 msgstr ""
+"Debian также использует ``adt-run`` для запуска тестов пакета, но на данный "
+"момент -- только в окружении schroot, так что результаты могут отличаться. "
+"Результаты и логи можно посмотреть по ссылке http://ci.debian.net. "
+"Пожалуйста, также отправляйте исправления для тестов или новые тесты в "
+"Debian."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:158
 msgid "Getting the test into Ubuntu"
@@ -236,9 +279,8 @@ msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
-"Процесс добавления и отправки autopkgtest-теста для пакета похож на "
-":doc:`процесс исправления ошибки в Ubuntu<./fixing-a-bug>`. Необходимо "
-"просто:"
+"Процесс добавления и отправки autopkgtest-теста для пакетов очень похож на "
+":doc:`процесс исправления ошибок в Ubuntu<./fixing-a-bug>`. Достаточно лишь:"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:163
 msgid "run ``bzr branch ubuntu:<packagename>``,"
@@ -257,6 +299,8 @@ msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification "
 "<dep8_>`_,"
 msgstr ""
+"создайте ``debian/tests/control``, основываясь на `Спецификации DEP 8 "
+"<dep8_>`_,"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:167
 msgid "add your test case(s) to ``debian/tests``,"
@@ -267,9 +311,9 @@ msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
 msgstr ""
-"закрепить ваши изменения, отправить их на Launchpad, создать заявку на "
-"слияние (merge proposal) и дождаться, пока она будет рассмотрена (как и "
-"любое другое изменение пакета)."
+"закоммитьте ваши изменения, отправьте их на Launchpad, предложите merge и "
+"дождитесь его рассмотрения  и дождаться, -- в точности как с любыми другими "
+"улучшениями в исходных пакетах."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
 msgid "What you can do"
@@ -282,12 +326,18 @@ msgid ""
 "categories. Here you can find examples of these tests and easily assign them "
 "to yourself."
 msgstr ""
+"Команда Ubuntu Engineering собрала `список необходимых тестов "
+"<requiredtests_>`_, в котором пакеты, нуждающиеся в тестировании, "
+"распределены по категориям. Там можно найти примеры таких тестов и взять их "
+"на себя."
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
 msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel <qualityirc_>`_ to get in touch with developers who can help you."
 msgstr ""
+"Если вы столкнётесь с проблемами, присоединяйтесь к IRC на канал  `#ubuntu-"
+"quality IRC channel <qualityirc_>`_: разработчики наверняка вам помогут."
 
 #: ../ubuntu-packaging-guide/backports.rst:3
 msgid "Backporting software updates"
@@ -300,6 +350,10 @@ msgid ""
 "you have two options: either you `upload to a PPA <ppadoc_>`_ or prepare a "
 "backport."
 msgstr ""
+"Порой может потребоваться добавить функционал в стабильный релиз, который не "
+"связан с исправлением критических проблем. В подобных случаях, есть два "
+"варианта: либо вы `загрузите его в PPA <ppadoc_>`_, или подготовите бэкпорт "
+"(backport)."
 
 #: ../ubuntu-packaging-guide/backports.rst:12
 msgid "Personal Package Archive (PPA)"
@@ -321,6 +375,8 @@ msgid ""
 "The `PPA documentation on Launchpad <ppadoc_>`_ is fairly comprehensive and "
 "should get you up and running in no time."
 msgstr ""
+"`Документация к PPA на Launchpad <ppadoc_>`_ достаточно исчерпывающая и "
+"поможет вам быстро начать работу с ним."
 
 #: ../ubuntu-packaging-guide/backports.rst:25
 msgid "Official Ubuntu Backports"
@@ -405,12 +461,15 @@ msgid ""
 "This will create a directory ``trusty`` and install a minimal trusty system "
 "into it."
 msgstr ""
+"Это создаст папку ``trusty`` и установит минимальный образ trusty в неё."
 
 #: ../ubuntu-packaging-guide/chroots.rst:23
 msgid ""
 "If your version of ``debootstrap`` does not know about Trusty you can try "
 "upgrading to the version in ``backports``."
 msgstr ""
+"Если ваша версия ``debootstrap`` не определит Trusty, попробуйте обновиться "
+"до версии в ``backports``."
 
 #: ../ubuntu-packaging-guide/chroots.rst:26
 msgid "You can then work inside the chroot::"
@@ -458,6 +517,8 @@ msgid ""
 "For more information on chroots see our `Debootstrap Chroot wiki page "
 "<DebootstrapChroot_>`_."
 msgstr ""
+"На странице `Debootstrap Chroot вики <DebootstrapChroot_>`_ вы найдёте более "
+"подробную информацию о chroot-окружении."
 
 #: ../ubuntu-packaging-guide/chroots.rst:55
 msgid "Alternatives"
@@ -471,6 +532,11 @@ msgid ""
 "Security Team Build Environment wiki page <SecurityEnv_>`_ for a full "
 "explanation."
 msgstr ""
+"SBuild -- система, похожая на PBuilder, используемая для создания окружения, "
+"в котором выполняются тестовые сборки пакета. Она близка к той, которую "
+"использует Launchpad для сборки пакетов, но её установка несколько сложнее, "
+"чем PBuilder. Более полную информацию можно найти на викистранице `Система "
+"Сборки Security Team <SecurityEnv_>`_."
 
 #: ../ubuntu-packaging-guide/chroots.rst:62
 msgid ""
@@ -501,6 +567,12 @@ msgid ""
 "version and package on those.  This is useful when you want to compile many "
 "packages at the same time or to overcome bandwidth restraints."
 msgstr ""
+"Облачный сервис `Amazon EC2 <EC2_>`_ позволит вам приобрести компьютер в "
+"облаке, цена за который -- всего несколько центов в час. Там вы можете "
+"установить Ubuntu любой поддерживаемой версии и работать с пакетами "
+"удалённо, что очень удобно, если требуется сборка множества пакетов "
+"одновременно, или если нужно преодолеть медленную скорость Интернет-"
+"подключения."
 
 #: ../ubuntu-packaging-guide/communication.rst:3
 msgid "Communication in Ubuntu Development"
@@ -684,6 +756,8 @@ msgid ""
 "For further information, see the `changelog section (Section 4.4) <policy-"
 "changelog_>`_ of the Debian Policy Manual."
 msgstr ""
+"Более подробную информацию можно найти на странице  `changelog (Глава 4.4) "
+"<policy-changelog_>`_ документа Debian Policy Manual."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:69
 msgid "The control file"
@@ -733,6 +807,15 @@ msgid ""
 "For further information, see the `Debian Maintainer Field spec "
 "<MaintField_>`_ on the Ubuntu wiki."
 msgstr ""
+"Заметьте, что в Ubuntu мы указываем в поле ``Maintainer`` общий адрес, так "
+"как любой человек может изменить любой пакет (в отличие от Debian, где "
+"правом изменения пакетов обладают лишь отдельные люди или команда). Пакеты в "
+"Ubuntu, как правило, должны в поле ``Maintainer`` содержать  ``Ubuntu "
+"Developers <ubuntu-devel-discuss@lists.ubuntu.com>``. Если поле Maintainer "
+"изменено, старое значение должно быть сохранено в поле ``XSBC-Original-"
+"Maintainer``. Это можно сделать автоматически сценарием ``update-"
+"maintainer`` из пакета ``ubuntu-dev-tools``. Для дальнейшей информации "
+"смотрите `Debian Maintainer Field spec <MaintField_>`_ в Ubuntu wiki."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:118
 msgid "Each additional paragraph describes a binary package to be built."
@@ -744,6 +827,8 @@ msgid ""
 "For further information, see the `control file section (Chapter 5) <policy-"
 "control_>`_ of the Debian Policy Manual."
 msgstr ""
+"Более подробную информацию можно найти на странице  `секции control-файла "
+"(Глава 5) <policy-control_>`_ документа Debian Policy Manual."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:125
 msgid "The copyright file"
@@ -757,6 +842,10 @@ msgid ""
 "copyright and license information to "
 "``/usr/share/doc/$(package_name)/copyright``."
 msgstr ""
+"Файл содержит информацию о копирайтах исходных кодов и самого пакета. Ubuntu "
+"и `Debian Policy (Глава 12.5) <policy-copyright_>`_ требуют, чтобы каждый "
+"пакет устанавливал неизменную копию копирайта и информации по лицензированию "
+"в папку ``/usr/share/doc/$(имя_пакета)/copyright``"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:132
 msgid ""
@@ -777,6 +866,8 @@ msgid ""
 "This example follows the `Machine-readable debian/copyright <DEP5_>`_ "
 "format. You are encouraged to use this format as well."
 msgstr ""
+"Пример испольует `машино-понятный формат debian/copyright <DEP5_>`_, и "
+"авторам пакетов также рекомендуется следовать этому формату."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:179
 msgid "The rules file"
@@ -1020,6 +1111,10 @@ msgid ""
 "more complicated (see `Question 21146 <Q21146_>`_ and `Bug 231797 "
 "<Bug231797_>`_ for why this is).  In that case, use something like::"
 msgstr ""
+"Если ваши tarball-файлы обитают на Launchpad, файл ``debian/watch`` имеет "
+"немного более сложный вид (о том, почему это так, смотрите `Question 21146 "
+"<Q21146_>`_ и `Bug 231797 <Bug231797_>`_).  В этому случае используйте нечто "
+"вроде::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:328
 msgid ""
@@ -1117,6 +1212,8 @@ msgid ""
 "https://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
 "concerning the switch to the 3.0 source package formats."
 msgstr ""
+"https://wiki.debian.org/Projects/DebSrc3.0 содержит дополнительную "
+"информацию касательно перехода на версию 3.0 формата исходных пакетов."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:368
 msgid ""
@@ -1124,6 +1221,9 @@ msgid ""
 "<policy-format_>`_  of  the Debian New Maintainers' Guide for additional "
 "details."
 msgstr ""
+"Дополнительную информацию можно найти в ``man dpkg-source`` и в `Главе "
+"source/format (Глава 5.21) <policy-format_>`_ руководства Debian New "
+"Maintainers."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:372
 msgid "Additional Resources"
@@ -1138,6 +1238,12 @@ msgid ""
 "rules files. `Chapter 5, \"Other files under the debian directory\" "
 "<OtherFiles_>`_ discusses additional files that may be used."
 msgstr ""
+"Кроме Debian Policy Manual, на который ссылается статья, руководство Debian "
+"New Maintainers' Guide содержит более детальное описание для каждого файла. "
+"`Глава 4, \"Необходимые файлы в папке debian\" <RequiredFiles_>`_ описывает "
+"файлы control, changelog, copyright и rules. `Глава 5, \"Прочие файлы в "
+"папке debian\" <OtherFiles_>`_ описывает дополнительные файлы, которые можно "
+"использовать."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:3
 msgid "Fixing a bug in Ubuntu"
@@ -1976,7 +2082,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:5
 msgid "Fixing FTBFS packages"
-msgstr ""
+msgstr "Исправление пакетов FTBFS (Fails To Build From Source)"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:7
 msgid ""
@@ -2006,6 +2112,8 @@ msgid ""
 "Cancelled build (X): The build has been cancelled for some reason. These "
 "should probably be avoided to start with."
 msgstr ""
+"Отменённая сборка (X): сборка была отменена по некоторой причине. Для "
+"начала, с ними лучше не связываться."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:17
 msgid ""
@@ -2023,12 +2131,17 @@ msgid ""
 "fixed by a rebuild. Ask a developer to rebuild the package and that should "
 "fix it."
 msgstr ""
+"Проблема в chroot (C): Некоторая операция над chroot-окружением столкнулась "
+"с ошибкой. Чаще всего исправляется повторной сборкой. Попросите разработчика "
+"запустить пересборку."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:23
 msgid ""
 "Failed to upload (U): The package could not upload. This is usually just a "
 "case of asking for a rebuild, but check the build log first."
 msgstr ""
+"Ошибка при загрузке (U): Пакет не может быть загружен на сервер. Обычно в "
+"этом случае нужно сделать пересборку, но перед этим -- проверьте логи сборки."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:27
 msgid "First steps"
@@ -2041,6 +2154,10 @@ msgid ""
 "and then getting the tarball or running ``dget PACKAGE_DSC`` on the .dsc "
 "file from the launchpad page. Once you have that, build it in a schroot."
 msgstr ""
+"Первым делом необходимо повторить FTBFS самостоятельно. Скачайте код с "
+"помощью ``bzr branch lp:ubuntu/PACKAGE`` и получите tar-архив, или запустите "
+"``dget PACKAGE_DSC`` над .dsc-файлом со страницы проекта на Launchpad. После "
+"этого, создайте chroot-окружение."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:35
 msgid ""
@@ -2050,10 +2167,16 @@ msgid ""
 "help find if the issue is caused by a missing, unlisted, dependency (builds "
 "locally but fails on a schroot)."
 msgstr ""
+"У вас должно получиться воспроизвести ошибку FTBFS. Если же нет -- "
+"проверьте, не качает ли сборка отсутствующую зависимость: в таком случае "
+"необходимо в файле debian/control объявить её как build-depends. Другой "
+"вариант -- попробовать собрать пакет локально, что позволит проверить "
+"отсутствующие или не указанные зависимости (в таком случае локальная сборка "
+"должна быть успешна, а в schroot -- нет)"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:42
 msgid "Checking Debian"
-msgstr ""
+msgstr "Проверка Debian"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:43
 msgid ""
@@ -2066,10 +2189,18 @@ msgid ""
 "https://wiki.debian.org/qa.debian.org/FTBFS, you will want to check it for "
 "solutions too."
 msgstr ""
+"В случае, если проблему удалось воспроизвести -- необходимо приступить к "
+"поиску решения. Если пакет также находится в Debian, -- проверьте, возможно "
+"у них пакет собирается нормально: http://packages.qa.debian.org/PACKAGE. "
+"Если в Debian есть более новая версия пакета, его нужно объединить (merge). "
+"Если же нет -- проверьте логи сборки и ссылки на известные проблемы: там "
+"можеет быть дополнительная информация о FTBFS или патчи. Debian также "
+"поддерживает список команд разных FTBFS, в котором также есть варианты "
+"решения разнообразных проблем:  https://wiki.debian.org/qa.debian.org/FTBFS."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:53
 msgid "ARM64"
-msgstr ""
+msgstr "ARM64"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:54
 msgid ""
@@ -2081,10 +2212,18 @@ msgid ""
 "this issue. Adding autotools-dev or dh-autoreconf to the build proccess will "
 "usually fix this."
 msgstr ""
+"Недавно Ubuntu добавили поддержку архитектуры arm64, но множество пакетов "
+"сбоят при сборке. Полный список таких пакетов можно найти на странице "
+"qa.ubuntuwire.org/ftbfs/arm64.html. Множество проблем вызвано использованием "
+"устаревших вспомогательных файлов autotools. Эта проблема обязательно "
+"возникает с пакетами, для которых утилита lintian выдаёт предупреждение "
+"ancient-autotools-helper-file или outdated-autotools-helper-file. Обычно "
+"исправление заключается в добавлении autotools-dev или dh-autoreconf к "
+"процессу сборки."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:63
 msgid "Other causes of a package to FTBFS"
-msgstr ""
+msgstr "Другие причины возникновения FTBFS"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:64
 msgid ""
@@ -2414,6 +2553,10 @@ msgid ""
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
+"где <release> — это, например `raring`, `saucy`, `trusty` или, в случае "
+"Debian, `sid`. Выполнение команды займёт некоторое время, поскольку будут "
+"загружены все пакеты, необходимые для \"минимальной установки\". Впрочем, "
+"при этом используется кэширование."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:154
 msgid "Get set up to work with Launchpad"
