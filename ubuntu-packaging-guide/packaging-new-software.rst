@@ -123,6 +123,7 @@ debian directory<./debian-dir-overview>` article.
 
 Finally commit the code to your packaging branch::
 
+    $ bzr add debian/source/format
     $ bzr commit -m "Initial commit of Debian packaging."
 
 Building the package
