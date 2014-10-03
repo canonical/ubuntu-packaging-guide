@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-05 16:10+0200\n"
+"POT-Creation-Date: 2014-10-02 09:01+0200\n"
 "PO-Revision-Date: 2013-02-12 11:57+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Kannada <kn@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-06 06:43+0000\n"
-"X-Generator: Launchpad (build 16996)\n"
+"X-Launchpad-Export-Date: 2014-10-03 05:57+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -2915,43 +2915,43 @@ msgstr ""
 msgid "Finally commit the code to your packaging branch::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:129
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:130
 #: ../ubuntu-packaging-guide/udd-working.rst:69
 msgid "Building the package"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:131
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:132
 msgid ""
 "Now we need to check that our packaging successfully compiles the package "
 "and builds the .deb binary package::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:137
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:138
 msgid ""
 "``bzr builddeb`` is a command to build the package in its current location. "
 "The ``-us -uc`` tell it there is no need to GPG sign the package.  The "
 "result will be placed in ``..``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:141
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:142
 msgid "You can view the contents of the package with::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:145
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:146
 msgid ""
 "Install the package and check it works (later you will be able to uninstall "
 "it using ``sudo apt-get remove hello`` if you want)::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:150
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:151
 msgid "You can also install all packages at once using::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:155
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:156
 msgid "Next Steps"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:157
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:158
 msgid ""
 "Even if it builds the .deb binary package, your packaging may have bugs.  "
 "Many errors can be automatically detected by our tool ``lintian`` which can "
@@ -2959,31 +2959,31 @@ msgid ""
 "file::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:165
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:166
 msgid ""
 "To see verbose description of the problems use ``--info`` lintian flag or "
 "``lintian-info`` command."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:168
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:169
 msgid ""
 "Results of Ubuntu archive checks can be found online on "
 "http://lintian.ubuntuwire.org."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:171
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:172
 msgid ""
 "For Python packages, there is also a ``lintian4python`` tool that provides "
 "some additional lintian checks."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:174
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:175
 msgid ""
 "After making a fix to the packaging you can rebuild using ``-nc`` \"no "
 "clean\" without having to build from scratch::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:179
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:180
 msgid ""
 "Having checked that the package builds locally you should ensure it builds "
 "on a clean system using ``pbuilder``. Since we are going to upload to a PPA "
@@ -2995,35 +2995,35 @@ msgid ""
 ":doc:`do so now<./getting-set-up>`::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:192
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:193
 msgid ""
 "When you are happy with your package you will want others to review it.  You "
 "can upload the branch to Launchpad for review::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:197
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:198
 msgid ""
 "Uploading it to a PPA will ensure it builds and give an easy way for you and "
 "others to test the binary packages.  You will need to set up a PPA in "
 "Launchpad and then upload with ``dput``::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:203
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:204
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:205
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:206
 msgid ""
 "You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the `MOTU "
 "mailing list <ubuntu-motu_>`_.  There might also be a more specific team you "
 "could ask such as the GNU team for more specific questions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:210
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:211
 msgid "Submitting for inclusion"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:212
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:213
 msgid ""
 "There are a number of paths that a package can take to enter Ubuntu. In most "
 "cases, going through Debian first can be the best path. This way ensures "
@@ -3032,28 +3032,28 @@ msgid ""
 "well. Here are some useful links for submitting new packages to Debian:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:219
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:220
 msgid ""
 "`Debian Mentors FAQ <MentorsFAQ_>`_ - debian-mentors is for the mentoring of "
 "new and prospective Debian Developers. It is where you can find a sponsor to "
 "upload your package to the archive."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:223
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:224
 msgid ""
 "`Work-Needing and Prospective Packages <WNPP_>`_ - Information on how to "
 "file \"Intent to Package\" and \"Request for Package\" bugs as well as list "
 "of open ITPs and RFPs."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:227
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:228
 msgid ""
 "`Debian Developer's Reference, 5.1. New packages <DevRef_>`_ - The entire "
 "document is invaluable for both Ubuntu and Debian packagers. This section "
 "documents processes for submitting new packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:231
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:232
 msgid ""
 "In some cases, it might make sense to go directly into Ubuntu first. For "
 "instance, Debian might be in a freeze making it unlikely that your package "
@@ -3062,11 +3062,11 @@ msgid ""
 "wiki."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:237
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:238
 msgid "Screenshots"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:239
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:240
 msgid ""
 "Once you have uploaded a package to debian, you should add screenshots to "
 "allow propective users to see what the program is like. These should be "
