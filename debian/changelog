@@ -1,4 +1,7 @@
-ubuntu-packaging-guide (0.3.6) UNRELEASED; urgency=medium
+ubuntu-packaging-guide (0.3.6) unstable; urgency=medium
+
+  [ Andrew Starr-Bochicchio ]
+  * Upload to unstable.
 
   [ Dmitry Shachnev ]
   * Fix a typo and regenerate the .pot file (LP: #1309861).
@@ -22,7 +25,7 @@ ubuntu-packaging-guide (0.3.6) UNRELEASED; urgency=medium
   * Add missing step to tutorial. "bzr dh-make" forgets to "bzr add
     debian/source/format" (LP: #1313053)
 
- -- Daniel Holbach <daniel.holbach@ubuntu.com>  Thu, 24 Apr 2014 17:22:12 +0200
+ -- Andrew Starr-Bochicchio <asb@debian.org>  Sun, 05 Oct 2014 10:38:34 -0400
 
 ubuntu-packaging-guide (0.3.5) unstable; urgency=medium
 
