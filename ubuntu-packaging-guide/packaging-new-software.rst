@@ -64,7 +64,7 @@ plugin is a wrapper around the ``dh_make`` command. You should already have
 these if you installed ``packaging-dev``. Run the command providing the package
 name, version number, and path to the upstream tarball::
 
-    $ sudo apt-get install dh-make
+    $ sudo apt-get install dh-make bzr-builddeb
     $ cd ..
     $ bzr dh-make hello 2.7 hello-2.7.tar.gz
 
