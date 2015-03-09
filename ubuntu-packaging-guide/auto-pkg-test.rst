@@ -179,12 +179,12 @@ can find examples of these tests and easily assign them to yourself.
 If you should run into any problems, you can join the `#ubuntu-quality IRC
 channel <qualityirc_>`_ to get in touch with developers who can help you.
 
-.. _DEP8: http://anonscm.debian.org/gitweb/?p=autopkgtest/autopkgtest.git;a=blob;f=doc/README.package-tests
+.. _DEP8: http://anonscm.debian.org/cgit/autopkgtest/autopkgtest.git/tree/doc/README.package-tests.rst
 .. _libxml2: https://bazaar.launchpad.net/+branch/ubuntu/libxml2/files/head:/debian/tests/
 .. _gvfs: https://bazaar.launchpad.net/+branch/ubuntu/gvfs/files/head:/debian/tests/
 .. _gtk3: https://bazaar.launchpad.net/+branch/ubuntu/gtk+3.0/files/head:/debian/tests/
 .. _ubiquity: https://bazaar.launchpad.net/+branch/ubiquity/files/head:/debian/tests/
 .. _jenkins: https://jenkins.qa.ubuntu.com/view/Utopic/view/AutoPkgTest/
-.. _running_tests_local: file:///usr/share/doc/autopkgtest/README.running-tests.gz
+.. _running_tests_local: file:///usr/share/doc/autopkgtest/RREADME.running-tests.html
 .. _requiredtests: https://wiki.ubuntu.com/QATeam/RequiredTests
 .. _qualityirc: http://webchat.freenode.net/?channels=ubuntu-quality
