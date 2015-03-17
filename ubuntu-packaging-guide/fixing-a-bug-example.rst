@@ -228,9 +228,9 @@ solution with the world.
 Getting the fix included
 ========================
 
-It makes to get fix included as Upstream as possible. Doing that you can 
-guarantee that everybody can take the Upstream source as-is and don't need to 
-have local modifications to fix it.
+It makes sense to get the fix included as Upstream as possible. Doing that you 
+can guarantee that everybody can take the Upstream source as-is and don't need 
+to have local modifications to fix it.
 
 In our case we established that we have a problem with the packaging, both in
 Ubuntu and Debian. As Ubuntu is based on Debian, we will send the fix to 
