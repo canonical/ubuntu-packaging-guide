@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-02 09:01+0200\n"
-"PO-Revision-Date: 2015-06-06 05:16+0000\n"
+"PO-Revision-Date: 2015-06-06 18:35+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-06 05:19+0000\n"
+"X-Launchpad-Export-Date: 2015-06-07 05:19+0000\n"
 "X-Generator: Launchpad (build 17540)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -1366,6 +1366,11 @@ msgid ""
 "branch corresponding to the source package.  Launchpad maintains source "
 "package branches for all the packages in Ubuntu."
 msgstr ""
+"Коли Ви знаєте, над яким пакунком джерельного коду працювати, Ви можете "
+"завантажити копію цього пакунку, й зайнятися налагодженням. При розподіленій "
+"розробці Ubuntu це робиться за допомогою :ref:`клонування bzr-репозиторію "
+"<branching>` цього пакунку. Launchpad підтримує Bazaar-гілки для усіх "
+"пакунків в Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:74
 msgid ""
@@ -1379,16 +1384,26 @@ msgid ""
 "a little bit of credit.  You're now on your way to becoming an Ubuntu "
 "developer!"
 msgstr ""
+"Як тільки Ви отримали локальну копію джерельного коду, Ви можете дослідити "
+"помилку, виправити її, та відправити своє виправлення на Launchpad, у "
+"вигляді Bazaar-гілки. Щойно Ви станете достатньо впевнені у своєму "
+"виправленні, Ви можете відправити :ref:`заявку на злиття <merge-proposal>`, "
+"тобто попрохати інших розробників продивитися й схвалити Вашу зміну. У "
+"випадку згоди з Вашими змінами вони завантажать Ваші зміни у сховище ПЗ. Від "
+"Вашої зміни отримають користь усі — навіть Ви, чиє ім’я буде стояти у "
+"переліку змін. Ви тепер відбуваєтеся як розробник Ubuntu!"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:83
 msgid ""
 "We'll describe specifics on how to branch the code, push your fix, and "
 "request a review in the following sections."
 msgstr ""
+"Ми дамо опис специфіки завантаження коду, відправки змін, та створення "
+"заявки на перегляд у наступних розділах."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:89
 msgid "Work on a fix"
-msgstr ""
+msgstr "Виправлення помилки"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:91
 msgid ""
@@ -1397,6 +1412,10 @@ msgid ""
 "such as obvious typos first. Try to keep changes as minimal as possible and "
 "document your change and assumptions clearly."
 msgstr ""
+"Є цілі книги про знаходження помилок, їх виправлення, тестування й так далі. "
+"Якщо Ви початківець у проґрамуванні, спробуйте виправляти нескладні помилки, "
+"такі як очевидні друкарські помилки. Намагайтеся робити Ваші зміни "
+"мінімальними й чітко документувати Ваші зміни та припущення."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
 msgid ""
@@ -1404,46 +1423,63 @@ msgid ""
 "has fixed it already or is currently working on a fix. Good sources to check "
 "are:"
 msgstr ""
+"Перед тим, як працювати над помилкою, переконайтеся, що вона не виправлена "
+"вже кимось іншим, й ніхто не займається на дану мить її виправленням. Не "
+"завадить перевірити наступні джерела:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
+"Система відстеження помилок апстріму (й Debian) — відкриті та закриті "
+"помилки,"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
 msgid ""
 "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
+"Історія версій в апстрімі (або у новій версії) може містити відомості про "
+"виправлення помилки,"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:101
 msgid "bugs or package uploads of Debian or other distributions."
 msgstr ""
+"звіти про вади й нові версії пакунків в Debian та інших дистрибутивах."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:106
 msgid ""
 "You now want to create a patch which includes the fix.  The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
+"Тепер можна створити латку, яка містить виправлення помилки. Команда ``edit-"
+"patch`` — найпростіший спосіб додати латку до пакунку. Виконайте::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:111
 msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
 msgstr ""
+"Ця команда скопіює файли, необхідні для збірки пакунку, у тимчасову "
+"директорію. Ви можете змінювати ці файли у текстовому редакторі або "
+"застосовувати латки з upstream, наприклад::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:116
 msgid ""
 "After editing the file type ``exit`` or press ``control-d`` to quit the "
 "temporary shell.  The new patch will have been added into ``debian/patches``."
 msgstr ""
+"Після редагування файлу наберіть ``exit`` або натисніть ``control-d``, щоб "
+"вийти з тимчасової командної оболонки. Нова латка буде додана в "
+"``debian/patches``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:121
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:204
 msgid "Testing the fix"
-msgstr ""
+msgstr "Тестування виправлення"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:123
 msgid "To build a test package with your changes, run these commands::"
 msgstr ""
+"Щоб зібрати тестовий пакунок з Вашими змінами, виконайте такі команди::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:128
 msgid ""
@@ -1451,6 +1487,10 @@ msgid ""
 "just omit the step to sign the source package) and ``pbuilder-dist`` will "
 "build the package from source for whatever ``release`` you choose."
 msgstr ""
+"Це створить пакунок джерельного коду з вмісту гілки (``-us -uc`` просто "
+"дозволяє пропустити етап підписування пакунку джерельного коду), а "
+"``pbuilder-dist`` збере пакунок із джерельного коду для будь-якого вибраного "
+"Вами ``релізу``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:132
 msgid ""
@@ -1458,11 +1498,14 @@ msgid ""
 "``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i "
 "<package>_<version>.deb``).  Then test to see if the bug is fixed."
 msgstr ""
+"Після успішного завершення збірки встановіть пакунок з "
+"``~/pbuilder/<release>_result/`` (за допомогою ``sudo dpkg -i "
+"<пакунок>_<версія>.deb``). Потім перевірте, чи вдалося усунути помилку."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:139
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:155
 msgid "Documenting the fix"
-msgstr ""
+msgstr "Документування виправлення"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:141
 msgid ""
@@ -1472,16 +1515,22 @@ msgid ""
 "includes ``debian/changelog``, where changes of each uploaded package are "
 "tracked."
 msgstr ""
+"Дуже важливо документувати свої зміни у достатній мірі, щоб розробникам  "
+"потім не довелося здогадуватися, якими були причини й передумови зроблених "
+"Вами змін. Кожен пакунок джерельного коду Debian та Ubuntu включає у себе "
+"файл ``debian/changelog``, у якому відстежуються вносювані у пакунок зміни."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:146
 msgid "The easiest way to update this is to run::"
-msgstr ""
+msgstr "Найпростіший спосіб оновити його — це виконати::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:150
 msgid ""
 "This will add a boilerplate changelog entry for you and launch an editor "
 "where you can fill in the blanks. An example of this could be::"
 msgstr ""
+"Ця команда додасть у файл шаблон запису й запустить редактор, у якому Ви "
+"зможете додати інформацію якої бракує. Ось приклад цього запису::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:159
 msgid ""
@@ -1491,24 +1540,31 @@ msgid ""
 "always is 'low'). The last line always contains the name, email address and "
 "timestamp (in :rfc:`5322` format) of the change."
 msgstr ""
+"Команда ``dch`` повинна заповнити перший і останній рядок цього запису у "
+"файлі changelog. Перший рядок містить ім’я пакунку джерельного коду, номер "
+"його версії, у який реліз Ubuntu він завантажений, терміновість (майже "
+"завжди низька — 'low'). Останній рядок завжди містить ім’я, адресу "
+"електронної пошти та мітку часу змінювання (у форматі :rfc:`5322`)."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
 msgid ""
 "With that out of the way, let's focus on the actual changelog entry itself: "
 "it is very important to document:"
 msgstr ""
+"Тепер давайте сфокусуємося на тому що має міститися у самому запису файлу "
+"changelog. Дуже важливо задокументувати:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 msgid "where the change was done"
-msgstr ""
+msgstr "де зроблено зміну"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
 msgid "what was changed"
-msgstr ""
+msgstr "що було змінено"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:170
 msgid "where the discussion of the change happened"
-msgstr ""
+msgstr "де відбувалося обговорення цієї зміни"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:172
 msgid ""
@@ -1519,34 +1575,45 @@ msgid ""
 "bugs, the bug will be automatically closed when the package is uploaded to "
 "Ubuntu."
 msgstr ""
+"У нашому (досить поодинокому) прикладі останньому пункту відповідає ``(LP: "
+"#123456)``, тобто посилання на помилку на Launchpad з номером 123456. Звіти "
+"про вади, теми переліків розсилки або специфікації зазвичай є добрими "
+"джерелами інформації для обґрунтування змін. У якості додаткового "
+"заохочення, якщо Ви використовуєте нотацію ``LP: #<номер>`` для помилок на "
+"Launchpad, то помилка автоматично отримає статус закритої при відправці "
+"пакунку в Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:181
 msgid "Committing the fix"
-msgstr ""
+msgstr "Закріплення зміни"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:183
 msgid "With the changelog entry written and saved, you can just run::"
-msgstr ""
+msgstr "Написавши і зберігши запис в changelog, ми можемо просто запустити::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:187
 msgid ""
 "and the change will be committed (locally) with your changelog entry as a "
 "commit message."
 msgstr ""
+"й зміну буде залито (локально) з Вашим записом changelog у якості "
+"повідомлення комміту."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:190
 msgid ""
 "To push it to Launchpad, as the remote branch name, you need to stick to the "
 "following nomenclature::"
 msgstr ""
+"Для Launchpad-сховища, у який відправляти Ваші зміни, використовуйте таке "
+"ім’я::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
 msgid "This could for example be::"
-msgstr ""
+msgstr "Це може бути, наприклад::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:199
 msgid "So if you just run::"
-msgstr ""
+msgstr "Тож, якщо Ви просто виконаєте::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:204
 msgid ""
@@ -1555,12 +1622,19 @@ msgid ""
 "browser. There find the \"(+) Propose for merging\" link, click it to get "
 "the change reviewed by somebody and included in Ubuntu."
 msgstr ""
+"усе повинно бути готово. Команда push виконає відправку на Launchpad, а "
+"друга команда відкриє сторінку віддаленої гілки на Launchpad у Вашому "
+"оглядачі. Найдіть там посилання «(+) Propose for merging» й клацніть на "
+"ньому, щоб хтось перевірив зміну і включив її в Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:209
 msgid ""
 "Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into "
 "more detail about getting feedback for your proposed changes."
 msgstr ""
+"Наша стаття про :doc:`пошук поручительства<./udd-sponsorship>` надає "
+"додаткові подробиці про отримання зворотнього зв’язку для запропонованих "
+"Вами змін."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:212
 msgid ""
@@ -1568,10 +1642,13 @@ msgid ""
 "might want to have a look at our :doc:`Security and stable release "
 "updates<./security-and-stable-release-updates>` article."
 msgstr ""
+"Якщо Ваша гілка виправляє помилку у стабільному випуску або це виправлення "
+"безпеки, прочитайте нашу статтю :doc:`Оновлення безпеки й стабільних "
+"випусків<./security-and-stable-release-updates>`."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:3
 msgid "Tutorial: Fixing a bug in Ubuntu"
-msgstr ""
+msgstr "Демонстрація: виправлення помилки в Ubuntu"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:5
 msgid ""
@@ -1580,6 +1657,10 @@ msgid ""
 "An example of a concrete problem might help to get an idea what to consider "
 "generally."
 msgstr ""
+"Хоч техніка :doc:`виправлення помилки<./fixing-a-bug>` однакова для будь-"
+"яких помилок, кожна помилка все ж у чомусь відрізняється від інших. Даний "
+"приклад виправлення конкретної помилки може допомогти Вам зрозуміти, що "
+"зазвичай потрібно прийняти до уваги."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:10
 msgid ""
@@ -1587,10 +1668,14 @@ msgid ""
 "reading the article this might actually be fixed. Take this as an example "
 "and try to adapt it to the specific problem you are facing."
 msgstr ""
+"Під час написання даної статті ця помилка ще не була виправлена. Можливо, до "
+"того часу, коли Ви будете читати статтю, помилку вже виправлять. Вважайте це "
+"просто прикладом й постарайтеся адаптувати його до конкретної проблеми, з "
+"якою Ви зіштовхнетеся."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:15
 msgid "Confirming the problem"
-msgstr ""
+msgstr "Підтвердження проблеми"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:17
 msgid ""
@@ -1599,14 +1684,20 @@ msgid ""
 "already. This is easy to check, either take a look at Software Center or "
 "run::"
 msgstr ""
+"Припустимо, у описі пакунку ``bumprace`` відсутня інформація про його "
+"домашню сторінку. У якості першого кроку, слід перевірити, чи не виправлена "
+"вже ця помилка. Зробити це просто: подивіться у Центрі додатків або "
+"запустіть::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:23
 msgid "The output should be similar to this::"
-msgstr ""
+msgstr "Вивід команди повинен бути приблизно таким::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:49
 msgid "A counter-example would be ``gedit``, which has a homepage set::"
 msgstr ""
+"У якості контрприкладу можна привести ``gedit``, де домашня сторінка "
+"вказана::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:55
 msgid ""
@@ -1614,10 +1705,13 @@ msgid ""
 "already fixed. To avoid wasting efforts and duplicating work it makes sense "
 "to first do some detective work."
 msgstr ""
+"У деяких випадках Ви можете зіштовхнутися з тим, що проблема, вирішення якої "
+"Ви шукаєте, вже кимось усунена. Щоб уникнути даремного витрачення часу й "
+"праці, має сенс проробити деяку детективну роботу."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:61
 msgid "Research bug situation"
-msgstr ""
+msgstr "Вивчення ситуації з помилкою"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:63
 msgid ""
@@ -1627,12 +1721,19 @@ msgid ""
 "https://bugs.launchpad.net/ubuntu/+source/bumprace and there is no open bug "
 "with our problem there."
 msgstr ""
+"Спочатку потрібно перевірити, чи не існує вже повідомлення про цю помилку в "
+"Ubuntu. Можливо, хтось вже працює над її виправленням, або ми можемо якось "
+"внести свій внесок у вирішення цієї проблеми. Для Ubuntu ми поглянемо на "
+"https://bugs.launchpad.net/ubuntu/+source/bumprace й побачимо, що відкритого "
+"звіту про нашу ваду там немає."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:69
 msgid ""
 "For Ubuntu the URL ``https://bugs.launchpad.net/ubuntu/+source/<package>`` "
 "should always take to the bug page of the source package in question."
 msgstr ""
+"Для Ubuntu URL ``https://bugs.launchpad.net/ubuntu/+source/<пакунок>`` "
+"завжди приводить на сторінку помилок у вказаномум пакунку джерельного коду."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:73
 msgid ""
@@ -1640,12 +1741,17 @@ msgid ""
 "at http://bugs.debian.org/src:bumprace and can't find a bug report for our "
 "problem either."
 msgstr ""
+"У Debian, який є основним джерелом пакунків Ubuntu ми поглянемо на "
+"http://bugs.debian.org/src:bumprace й також не знайдемо там повідомлення про "
+"нашу ваду."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:77
 msgid ""
 "For Debian the URL ``http://bugs.debian.org/src:<package>`` should always "
 "take to the bug page of the source package in question."
 msgstr ""
+"Для Debian URL ``http://bugs.debian.org/src:<пакет>`` завжди приводить на "
+"сторінку помилок у вказаному пакунку джерельного коду."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:80
 msgid ""
@@ -1655,10 +1761,16 @@ msgid ""
 "unfortunately often different for every package you have a look at, but if "
 "you search the web for it, you should in most cases find it pretty easily."
 msgstr ""
+"Помилка, над якою ми працюємо, незвичайна у тому сенсі, що вона стосується "
+"лише пакункування ``bumprace``. Якби це була вада у джерельному коді, "
+"корисно було б також перевірити систему відстеження помилок апстріму. "
+"Нажаль, ця процедура часто різниться для кожного окремого пакунку, але "
+"завжди можна скористатися пошуком в інтернеті, й у більшості випадків Ви "
+"з’ясуєте, що вона виявиться не такою вже й складною."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:88
 msgid "Offering help"
-msgstr ""
+msgstr "Пропозиція допомоги"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:90
 msgid ""
@@ -1667,6 +1779,10 @@ msgid ""
 "include as much information as you can: Under which circumstances does the "
 "bug occur? How did you fix the problem? Did you test your solution?"
 msgstr ""
+"Якщо Ви виявили відкриту ваду, яка ще нікому не призначена, й Ви готові "
+"взятися за її усунення, слід написати коментар з Вашим вирішенням. Включіть "
+"у нього щонайбільше інформації: При яких обставинах з’являється помилка? Як "
+"Ви її виправили? Чи тестували Ви свій спосіб усунення помилки?"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:95
 msgid ""
@@ -1675,15 +1791,21 @@ msgid ""
 "to commit it is good enough? Did you manage to only partially fix the issue "
 "and you want to at least share your part of it?"
 msgstr ""
+"Якщо повідомлення про помилку не було зареєстроване, Ви можете його "
+"створити. Подумайте над двома речами: Може бути, зміна настільки мала, що "
+"достатньо просто попрохати когось застосувати її? Може бути, в Вас вийшло "
+"лише частково виправити ваду, й Ви бажаєте поділитися Вашою часткою?"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:100
 msgid "It is great if you can offer help and will surely be appreciated."
 msgstr ""
+"Буде чудово, якщо Ви можете запропонувати свою допомогу, й вона, без "
+"сумніву, буде з готовністю прийнята."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:104
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:71
 msgid "Fixing the issue"
-msgstr ""
+msgstr "Виправлення помилки"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:106
 msgid ""
@@ -1692,12 +1814,18 @@ msgid ""
 "software catalogue. http://www.linux-games.com/bumprace/ looks like it is "
 "the proper place."
 msgstr ""
+"У даному конкретному прикладі недостатньо просто знайти веб-сайт "
+"``bumprace`` й визначити адресу його домашньої сторінки. Потрібно "
+"переконатися, що сайт працює, й він не є просто каталогом різних проґрам. "
+"http://www.linux-games.com/bumprace/ виглядає відповідним місцем."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:111
 msgid ""
 "To address the issue in the source package, we first need the source and we "
 "can easily get it by running::"
 msgstr ""
+"Щоб взятися за ваду у пакунку джерельного коду, нам знадобиться цей "
+"джерельний код, й ми легко можемо отримати його, набравши::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:117
 msgid ""
@@ -1706,10 +1834,13 @@ msgid ""
 "the first part of ``debian/control``, the section which starts with "
 "``Source:``."
 msgstr ""
+"Якщо Ви прочитали :doc:`огляд каталогу Debian<./debian-dir-overview>`, то "
+"пам’ятайте, ймовірно, що домашня сторінка вказується у першій частині "
+"``debian/control``, у секції, що починається з ``Source:``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:121
 msgid "So what we do next is run::"
-msgstr ""
+msgstr "Тож тепер ми маємо виконати команду::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:125
 msgid ""
@@ -1717,14 +1848,17 @@ msgid ""
 "games.com/bumprace/``. At the end of the first section should be a good "
 "place for it. Once you have done this, save the file."
 msgstr ""
+"й відредагувати ``debian/control``, додавши ``Homepage: http://www.linux-"
+"games.com/bumprace/``. У кінці першої секції має бути відповідне місце для "
+"цього. Після внесення змін збережіть файл."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:129
 msgid "If you now run::"
-msgstr ""
+msgstr "Якщо тепер Ви виконаєте::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:133
 msgid "you should see something like this:"
-msgstr ""
+msgstr "Ви повинні побачити щось типу цього:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:149
 msgid ""
@@ -1732,12 +1866,18 @@ msgid ""
 "was added. In our cases it was added just before the second section, "
 "starting with ``Package``, which indicates a resulting binary package."
 msgstr ""
+"Синтаксис diff дуже простий для розуміння. ``+`` вказує рядок, який був "
+"доданий. У нашому випадку його було додано безпосередньо перед другою "
+"секцією, що починається з ``Package``, яка вказує на готовий двійковий "
+"пакунок."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:157
 msgid ""
 "It is important to explain to your fellow developers what exactly you did. "
 "If you run::"
 msgstr ""
+"Важливо пояснити своїм колегам - розробникам, що саме Ви зробили. Якщо Ви "
+"наберете::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:163
 msgid ""
@@ -1746,46 +1886,61 @@ msgid ""
 "project's homepage.`` should do. Then save the file. To double-check this "
 "worked out, run::"
 msgstr ""
+"це запустить редактор, з шаблоном запису у changelog, який Вам залишається "
+"лише дозаповнити. У нашому випадку повинне підійти щось типу "
+"``debian/control: Added project's homepage.`` Потім збережіть файл. Щоб ще "
+"раз перевірити, що усе працює, наберіть::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:170
 msgid "and you will see something like this:"
-msgstr ""
+msgstr "й Ви побачите щось типу цього:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:189
 msgid "A few additional considerations:"
-msgstr ""
+msgstr "Декілька додаткових міркувань:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:191
 msgid ""
 "If you have a reference to a Launchpad bug which is fixed by the issue, add "
 "(``LP: #<bug number>``) to the changelog entry line, ie: ``(LP: #123456)``."
 msgstr ""
+"Якщо в Вас є посилання на ваду на Launchpad, яку виправляє Ваша зміна, "
+"додайте (``LP: #<номер помилки>``) у запис changelog, наприклад: ``(LP: "
+"#123456)``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:193
 msgid ""
 "If you want to get your fix included in Debian, for a Debian bug the syntax "
 "is ``(Closes: #<bug number>)``, ie: ``(Closes: #123456)``."
 msgstr ""
+"Якщо Ви бажаєте, щоб Ваше виправлення було включено у Debian, синтаксис для "
+"вади в Debian буде ``(Closes: #<номер помилки>)``, наприклад: ``(Closes: "
+"#123456)``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:195
 msgid ""
 "If it is a reference to an upstream or Debian bug or a mailing list "
 "discussion, mention it as well."
 msgstr ""
+"Якщо це посилання на повідомлення про помилку в апстрімі або у Debian, або "
+"на обговорення у поштовій розсилці, також вкажіть її."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:197
 msgid "Try to wrap your lines at 80 characters."
-msgstr ""
+msgstr "Намагайтеся робити перенесення рядків після 80 символів."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:198
 msgid ""
 "Try to be specific, not an essay, but enough for somebody (who did not "
 "deeply look into the issue) to understand."
 msgstr ""
+"Намагайтеся викладати детально: не варто писати цілий твір, але вкажіть "
+"достатньо інформації, щоб зрозуміти могла будь-яка людина (навіть якщо вона "
+"не занурювався глибоко у цю проблему)."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:200
 msgid "Mention how you fixed the issue and where."
-msgstr ""
+msgstr "Вкажіть, як і де Ви виправили помилку."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:206
 msgid ""
@@ -1793,6 +1948,10 @@ msgid ""
 "up<./getting-set-up>`, then to build the package, install it and verify the "
 "problem is solved. In our case this would be::"
 msgstr ""
+"Щоб перевірити виправлення, Вам знадобиться :doc:`налаштувати своє "
+"середовище розробки<./getting-set-up>`, потім зібрати пакунок, встановити "
+"його й перевірити, що проблему усунено. У нашому випадку це будуть наступні "
+"дії::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:214
 msgid ""
@@ -1800,6 +1959,9 @@ msgid ""
 "using ``pbuilder``, then inspect the resulting package to check if the "
 "Homepage field was added properly."
 msgstr ""
+"Першою командою ми створюємо пакунок джерельного коду з гілки, потім "
+"збираємо його за допомогою ``pbuilder``, після чого перевіряємо, чи "
+"правильно додано поле домашньої сторінки у пакунку що отримали."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:218
 msgid ""
@@ -1809,16 +1971,23 @@ msgid ""
 "them via ``sudo dpkg -i <package>.deb`` or by double-clicking on them in "
 "your file manager."
 msgstr ""
+"У більшості випадків Вам доведеться дійсно встановити пакунок, щоб "
+"перевірити правильність його роботи. Наш випадок на багато простіший. Якщо "
+"збірка завершилася з успіхом, готові двійкові пакунки можна буде знайти в "
+"``~/pbuilder/<випуск>_result``. Встановіть їх за допомогою ``sudo dpkg -i "
+"<пакунок>.deb`` або подвійного клацу на них у файловому менеджері."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:225
 msgid ""
 "As we verified, the problem is now solved, so the next step is sharing our "
 "solution with the world."
 msgstr ""
+"Після того, як ми переконалися, що проблема вирішена, наступним кроком буде "
+"поділитися своїм рішенням з усім світом."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:229
 msgid "Getting the fix included"
-msgstr ""
+msgstr "Застосування виправлення"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:231
 msgid ""
@@ -1826,6 +1995,9 @@ msgid ""
 "guarantee that everybody can take the Upstream source as-is and don't need "
 "to have local modifications to fix it."
 msgstr ""
+"Важливо спробувати просунути Ваше виправлення як найдалі в upstream. Це "
+"дозволить будь-кому взяти джерельний код у тому вигляді, у якому він наданий "
+"в upstream, й не застосовувати до нього ніяких додаткових модифікацій."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:235
 msgid ""
@@ -1837,10 +2009,17 @@ msgid ""
 "possible, you will need to send the solution to multiple bug trackers. "
 "Provided the issue affects all parties in question."
 msgstr ""
+"У нашому випадку ми встановили, що помилка відноситься лише до пакунків "
+"Ubuntu і Debian. Оскільки Ubuntu заснована на Debian, ми повинні відправити "
+"випралення в Debian. Після того, як в Debian з’явиться виправлений пакунок, "
+"він потрапляє також і в Ubuntu. Наша помилка не критична, тому можна так "
+"зробити. Якщо ж важливо застосувати виправлення як найшвидше, то необхідно "
+"відправити виправлення у декілька баг-трекерів (якщо воно зачепає відповідні "
+"проєкти)."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:243
 msgid "To submit the patch to Debian, simply run::"
-msgstr ""
+msgstr "Щоб відправити латку в Debian, просто наберіть::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:247
 msgid ""
@@ -1848,34 +2027,47 @@ msgid ""
 "the correct place. Be sure to review the diff again to make sure it does not "
 "include random changes you made earlier."
 msgstr ""
+"Ця команда проведе Вас через декілька кроків, необхідних для оформлення "
+"звіту про ваду й відправки його у правильне місце. Обов’язково продивіться "
+"Ваші зміни, щоб переконатися, що там немає нічого зайвого."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:251
 msgid ""
 "Communication is important, so when you add some more description to it to "
 "the inclusion request, be friendly, explain it well."
 msgstr ""
+"Комунікація має дуже велике значення, тому при додаванні опису надайте добре "
+"та дружнє пояснення."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:254
 msgid ""
 "If everything went well you should get a mail from Debian's bug tracking "
 "system with more information. This might sometimes take a few minutes."
 msgstr ""
+"Якщо усе пройшло добре, то Ви повинні отримати поштове повідомлення від "
+"системи відстежування помилок Debian з додатковою інформацією. Інколи це "
+"може зайняти декілька хвилин."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:257
 msgid ""
 "If the problem is just in Ubuntu, you might want to consider :doc:`Seeking "
 "Review and Sponsorship<./udd-sponsorship>` to get the fix included."
 msgstr ""
+"Якщо проблема спостерігається лише в Ubuntu, Ви можете скористатися "
+":doc:`інструкцією з пошуку спонсора<./udd-sponsorship>`."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:263
 msgid "Additional considerations"
-msgstr ""
+msgstr "Додаткові зауваження"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:265
 msgid ""
 "If you find a package and find that there are a couple of trivial things you "
 "can fix at the same time, do it. This will speed up review and inclusion."
 msgstr ""
+"Якщо Ви можете внести у пакунок декілька тривіальних виправлень одразу, "
+"зробіть це. Це дозволить розробникам швидше розглянути й застосувати ці "
+"зміни."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:268
 msgid ""
@@ -1883,10 +2075,13 @@ msgid ""
 "send individual patches or merge proposals instead. If there are individual "
 "bugs filed for the issues already, this makes it even easier."
 msgstr ""
+"Якщо Ви бажаєте внести декілька великих змін, краще посилати латки або "
+"запити на злиття окремо для кожної зміни. Це простіше, якщо вже створені "
+"індивідуяльні повідомлення про вади."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:5
 msgid "Fixing FTBFS packages"
-msgstr ""
+msgstr "Виправлення пакунків FTBFS (Fails To Build From Source)"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:7
 msgid ""
@@ -1896,18 +2091,27 @@ msgid ""
 "failing to build from source at http://qa.ubuntuwire.org/ftbfs/. There are 5 "
 "main categories shown on the page:"
 msgstr ""
+"Перед тим, як пакунок можна буде використовувати в Ubuntu, він повинен бути "
+"зібраний з джерельного коду. Якщо це не вдається, пакунок, ймовірно, буде "
+"очікувати в -proposed й не буде доступний у архівах Ubuntu. Повний перелік "
+"пакунків, які не вдалося зібрати з джерельного коду, можна знайти на "
+"http://qa.ubuntuwire.org/ftbfs/. На цій сторінці показано 5 основних "
+"категорій:"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:13
 msgid ""
 "Package failed to build (F): Something actually went wrong with the build "
 "process."
 msgstr ""
+"Package failed to build (F): Щось справді пішло не так у процесі збірки."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:15
 msgid ""
 "Cancelled build (X): The build has been cancelled for some reason. These "
 "should probably be avoided to start with."
 msgstr ""
+"Скасована збірка (X): збірка була скасована з певної причини. Для початку, з "
+"ними ліпше не зв’язуватися."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:17
 msgid ""
@@ -1915,6 +2119,9 @@ msgid ""
 "another package to either build, get updated, or (if the package is in main) "
 "one of it's dependancies is in the wrong part of the archive."
 msgstr ""
+"Package is waiting on another package (M): Цей пакунок очікує збірки або "
+"оновлення іншого пакунку, або (якщо це пакунок в main) одна з його "
+"залежностей знаходиться не у тій частині архіву."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:20
 msgid ""
@@ -1922,16 +2129,22 @@ msgid ""
 "fixed by a rebuild. Ask a developer to rebuild the package and that should "
 "fix it."
 msgstr ""
+"Проблема в chroot (C): Певна операція над chroot-оточенням зіштовхнулася з "
+"помилкою. Частіше за усе виправляється повторним збиранням. Попрохайте "
+"розробника запустити перезбірку."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:23
 msgid ""
 "Failed to upload (U): The package could not upload. This is usually just a "
 "case of asking for a rebuild, but check the build log first."
 msgstr ""
+"Помилка при завантаженні (U): Пакунок не може бути завантажений на сервер. "
+"Зазвичай у цьому випадку потрібно зробити перезбирання, але перед цим -- "
+"перевірте логи збірки."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:27
 msgid "First steps"
-msgstr ""
+msgstr "Перші кроки"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:28
 msgid ""
@@ -1940,6 +2153,10 @@ msgid ""
 "and then getting the tarball or running ``dget PACKAGE_DSC`` on the .dsc "
 "file from the launchpad page. Once you have that, build it in a schroot."
 msgstr ""
+"Найперше необхідно повторити FTBFS самостійно. Стягніть код за допомогою "
+"``bzr branch lp:ubuntu/PACKAGE`` й отримайте tar-архів, або запустіть ``dget "
+"PACKAGE_DSC`` над .dsc-файлом зі сторінки проєкту на Launchpad. Після цього, "
+"створіть chroot-оточення."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:35
 msgid ""
@@ -1949,10 +2166,16 @@ msgid ""
 "help find if the issue is caused by a missing, unlisted, dependency (builds "
 "locally but fails on a schroot)."
 msgstr ""
+"В Вас має вийти відтворити помилку FTBFS. Якщо ж ні -- перевірте, чи не "
+"стягує збірка відсутню залежність: у такому випадку необхідно у файлі "
+"debian/control оголосити її як build-depends. Інший варіянт -- спробувати "
+"зібрати пакунок локально, що дозволить перевірити відсутні або не вказані "
+"залежності (у такому випадку локальна збірка повинна бути успішна, а в "
+"schroot -- ні)"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:42
 msgid "Checking Debian"
-msgstr ""
+msgstr "Перевірка Debian"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:43
 msgid ""
@@ -1965,10 +2188,18 @@ msgid ""
 "https://wiki.debian.org/qa.debian.org/FTBFS, you will want to check it for "
 "solutions too."
 msgstr ""
+"У випадку, якщо проблему вдалося відтворити -- необхідно почати пошук "
+"вирішення. Якщо пакунок також знаходиться в Debian, -- перевірте, можливо в "
+"них пакунок збирається нормально: http://packages.qa.debian.org/PACKAGE. "
+"Якщо в Debian є новіша версія пакунку, його потрібно об’єднати (merge). Якщо "
+"ж ні -- перевірте логи збірки й посилання на відомі проблеми: там може бути "
+"додаткова інформація про FTBFS або латки. Debian також підтримує перелік "
+"команд різних FTBFS, у якому також є варіянти вирішення різноманітних "
+"проблем: https://wiki.debian.org/qa.debian.org/FTBFS."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:53
 msgid "ARM64"
-msgstr ""
+msgstr "ARM64"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:54
 msgid ""
@@ -1980,10 +2211,17 @@ msgid ""
 "this issue. Adding autotools-dev or dh-autoreconf to the build proccess will "
 "usually fix this."
 msgstr ""
+"Нещодавно в Ubuntu додали підтримку архітектури arm64, але багато пакунків "
+"вилітають при збірці. Повний перелік таких пакунків можна знайти на сторінці "
+"qa.ubuntuwire.org/ftbfs/arm64.html. Багато проблем викликано використанням "
+"застарілих допоміжних файлів autotools. Ця проблема обов’язково виникає з "
+"пакунками, для яких засіб lintian видає попередження ancient-autotools-"
+"helper-file або outdated-autotools-helper-file. Зазвичай виправлення полягає "
+"у додаванні autotools-dev або dh-autoreconf до процесу збірки."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:63
 msgid "Other causes of a package to FTBFS"
-msgstr ""
+msgstr "Інші причини виникнення FTBFS"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:64
 msgid ""
@@ -1991,6 +2229,9 @@ msgid ""
 "will have to file a MIR bug. https://wiki.ubuntu.com/MainInclusionProcess "
 "explains the procedure."
 msgstr ""
+"Якщо пакунок знаходиться в main, але для нього відсутня залежність не з "
+"main, то необхідно відправити MIR-баг: сторінка "
+"https://wiki.ubuntu.com/MainInclusionProcess дає опис цієї процедури."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:72
 msgid ""
@@ -1998,10 +2239,14 @@ msgid ""
 "other bug. Make a patch, add it to a bzr branch or bug, subscribe ubuntu-"
 "sponsors, then try to get it included upstream and/or in Debian."
 msgstr ""
+"Якщо вдалося виправити проблему, дотримуйтеся такої ж процедури як й при "
+"будь-яких інших проблемах: створіть латку, додайте її у гілку або баг bzr, "
+"підпишіть ubuntu-sponsors, а потім спробуйте домогтися її додавання у "
+"джерельний пакунок і/або в Debian."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
 msgid "Getting Set Up"
-msgstr ""
+msgstr "Підготовка"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:5
 msgid ""
@@ -2010,26 +2255,33 @@ msgid ""
 "start working with packages, and upload your packages to Ubuntu's hosting "
 "platform, Launchpad. Here's what we'll cover:"
 msgstr ""
+"Існує декілька речей, які потрібно зробити перед початком розробки в Ubuntu. "
+"Ця стаття допоможе Вам підготувати комп’ютер до роботи з пакунками й "
+"відправці Ваших пакунків на платформу хостингу Ubuntu — Launchpad. Ось що ми "
+"розглянемо:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:10
 msgid "Installing packaging-related software. This includes:"
-msgstr ""
+msgstr "Встановлення проґрам для роботи з пакунками. Вони включають у себе:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:12
 msgid "Ubuntu-specific packaging utilities"
-msgstr ""
+msgstr "специфічні для Ubuntu засоби створення пакунків"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:13
 msgid "Encryption software so your work can be verified as being done by you"
 msgstr ""
+"криптографічну проґраму, яка дозволить іншим переконатися, що робота "
+"виконана саме Вами"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:14
 msgid "Additional encryption software so you can securely transfer files"
 msgstr ""
+"додаткові проґрами шифрування, що забезпечують безпечне передавання файлів"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
 msgid "Creating and configuring your account on Launchpad"
-msgstr ""
+msgstr "Створення й налаштування облікового запису на Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:17
 msgid ""
@@ -2037,6 +2289,9 @@ msgid ""
 "packages, interact with other developers, and propose your changes on "
 "Launchpad."
 msgstr ""
+"Налаштування Вашого середовища розробки для полегшення локальної збірки "
+"пакунків, взаємодії з іншими розробниками й відправки Ваших змін на "
+"Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:22
 msgid ""
@@ -2044,16 +2299,22 @@ msgid ""
 "of Ubuntu. Doing so will allow you to test changes in the same environment "
 "where those changes will actually be applied and used."
 msgstr ""
+"Рекомендується виконувати роботу зі створення пакунків у поточній "
+"розроблюваній версії Ubuntu. Це дозволить Вам тестувати зміни у тому ж "
+"середовищі, у яке вони у дійсності потім будуть внесені."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:26
 msgid ""
 "Don't worry though, you can use `Testdrive`_ or :doc:`chroots <./chroots>` "
 "to safely use the development release."
 msgstr ""
+"Не бентежтеся, Ви можете скористатися `Testdrive`_ або :doc:`chroots "
+"<./chroots>` для безпечного використання розроблюваної версії (релізу)"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
 msgstr ""
+"Встановлення базового проґрамного забезпечення для створення пакунків"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:34
 msgid ""
@@ -2061,6 +2322,9 @@ msgid ""
 "much easier.  You will encounter these tools later in this guide.  To "
 "install most of the tools you will need run this command::"
 msgstr ""
+"Існує багато інструментів, які можуть значно спростити життя розробнику "
+"Ubuntu. Ви познайомитеся з ними далі у цьому посібнику. Щоб встановити "
+"більшість інструментів, потрібно виконати таку команду::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:41
 msgid ""
@@ -2069,10 +2333,14 @@ msgid ""
 "install the above and other tools which are quite common in Ubuntu "
 "development::"
 msgstr ""
+"Нотатка: Починаючи з Ubuntu 11.10 «Oneiric Ocelot» (або якщо увімкнений "
+"репозиторій Backports у поточному підтримуваному випуску), наступна команда "
+"встановлює усе вищезгадане й інші інструменти, що часто використовуються у "
+"розробці Ubuntu::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:49
 msgid "This command will install the following software:"
-msgstr ""
+msgstr "Ця команда встановить такі проґрами:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:51
 msgid ""
@@ -2080,18 +2348,25 @@ msgid ""
 "create a cryptographic key with which you will sign files you want to upload "
 "to Launchpad."
 msgstr ""
+"``gnupg`` -- `GNU Privacy Guard <GPG_>`_ містить інструменти, які "
+"знадобляться для створення криптографічного ключа, за допомогою якого Ви "
+"будете підписувати файли, які бажаєте завантажити на Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:54
 msgid ""
 "``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
 "isolated environment."
 msgstr ""
+"``pbuilder`` -- інструмент для створення готових до подальшого "
+"розповсюдження збірок пакунків у чистому та ізольованому середовищі."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:56
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
 msgstr ""
+"``ubuntu-dev-tools`` (і його безпосередня залежність ``devscripts``) -- "
+"набір інструментів, що спрощують багато завдань зі створення пакунків."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:58
 msgid ""
@@ -2100,16 +2375,22 @@ msgid ""
 "easy for many developers to collaborate and work on the same code while "
 "keeping it trivial to merge each other's work."
 msgstr ""
+"``bzr-builddeb`` (і його залежність -- ``bzr``) -- керування розподіленими "
+"версіями за допомогою Bazaar (новий спосіб роботи з пакунками для Ubuntu), "
+"що спрощує спільну роботу багатьох людей над одним й тим самим кодом й що "
+"дозволяє з легкістю об’єднувати результати їх праці один з одним."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:62
 msgid ""
 "``apt-file`` provides an easy way to find the binary package that contains a "
 "given file."
 msgstr ""
+"``apt-file`` надає простий спосіб знайти двійковий пакунок, що містить "
+"заданий файл."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:67
 msgid "Create your GPG key"
-msgstr ""
+msgstr "Створення ключа GPG"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:69
 msgid ""
@@ -2120,10 +2401,17 @@ msgid ""
 "worked on. If you upload a source package to Launchpad, it will only accept "
 "the package if it can absolutely determine who uploaded the package."
 msgstr ""
+"GPG — абревіятура для `GNU Privacy Guard <GPG_>`_, реалізуючого стандарт "
+"OpenPGP, який дозволяє підписувати та шифрувати повідомлення й файли. Це "
+"корисно у ряді ситуацій. У нашому випадку важливо, що Ви можете "
+"використовувати свій ключ для підписування файлів, щоб можна було "
+"переконатися, що саме Ви з ними працювали. Якщо Ви завантажите пакунок "
+"джерельного коду на Launchpad, він буде прийнятий лише у тому випадку, якщо "
+"можна точно визначити, хто саме відправив пакунок."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:76
 msgid "To generate a new GPG key, run::"
-msgstr ""
+msgstr "Щоб згенерувати новий ключ GPG, наберіть::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:80
 msgid ""
@@ -2138,6 +2426,16 @@ msgid ""
 "passphrase, choose a safe one (a passphrase is just a password which is "
 "allowed to include spaces)."
 msgstr ""
+"GPG спочатку спитає, який тип ключа Ви бажаєте створити. Типовий вибір (RSA "
+"и DSA) цілком влаштує. Далі він спитає вказати розмір ключа. Типовий розмір "
+"(на цей час 2048) влаштує, але 4096 надійніше. Далі, проґрама спитає, чи "
+"бажаєте Ви, щоб термін дії ключа вийшов через якийся час. Безпечніше "
+"відповісти \"0\", що означає, що термін дії не сплине ніколи. Останнє "
+"питання буде про Ваше ім’я та адресу електронної пошти. Просто виберіть "
+"адресу, якою Ви користуєтеся при розробці Ubuntu, додаткові адреси можна "
+"буде додати потім. Додавати коментар не обов’язково. Після цього потрібно "
+"вказати надійне парольне гасло (парольне гасло — це просто пароль, у якому "
+"дозволяється використовувати пробіли)."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:90
 msgid ""
@@ -2146,20 +2444,27 @@ msgid ""
 "just fine.  Move the cursor around, type some paragraphs of random text, "
 "load some web page."
 msgstr ""
+"Тепер GPG створить для Вас ключ, що може зайняти певний час. Для його "
+"створення знадобляться випадкові байти, тому буде просто чудово, якщо Ви "
+"задасте своїй системі якусь роботу. Порухайте вказівник миші, наберіть "
+"декілька абзаців будь-якого тексту, завантажте будь-яку веб-сторінку."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:95
 msgid "Once this is done, you will get a message similar to this one::"
-msgstr ""
+msgstr "Коли процес буде завершено, Ви отримаєте повідомлення типу такого::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:102
 msgid "In this case ``43CDE61D`` is the *key ID*."
-msgstr ""
+msgstr "У даному випадку, ``43CDE61D`` — це ідентифікатор ключа (*key ID*)."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:104
 msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
 msgstr ""
+"Потім потрібно завантажити відкриту (public) частину Вашого ключа на сервер "
+"ключів, щоб усі могли ідентифікувати повідомлення і файли, як відправлені "
+"Вами. Для цього уведіть::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:109
 msgid ""
@@ -2168,10 +2473,14 @@ msgid ""
 "complete, your signed public key will be ready to verify your contributions "
 "around the world."
 msgstr ""
+"Ця команда відправить Ваш ключ на сервер ключів Ubuntu, а мережа серверів "
+"ключів автоматично синхронізує ключ між собою. Після того, як ця "
+"синхронізація завершиться, Ваш підписаний відкритий ключ буде готовий для "
+"засвідчення зробленого Вами вкладу в усьому світі."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:116
 msgid "Create your SSH key"
-msgstr ""
+msgstr "Створення ключа SSH"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:118
 msgid ""
@@ -2181,10 +2490,15 @@ msgid ""
 "transfer files. For our purposes, we will mainly be using SSH to securely "
 "upload source packages to Launchpad."
 msgstr ""
+"SSH_ або *Secure Shell* — це протокол, який дозволяє безпечно обмінюватися "
+"даними мережею. Звичайною практикою є використання SSH для доступу й "
+"відкриття командної оболонки на іншому комп’ютері й для безпечної пересилки "
+"файлів. З нашою метою ми переважно будемо використовувати SSH для безпечної "
+"відправки пакунків джерельного коду на Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:124
 msgid "To generate an SSH key, enter::"
-msgstr ""
+msgstr "Щоб згенерувати ключ SSH, уведіть::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:128
 msgid ""
@@ -2192,16 +2506,20 @@ msgid ""
 "is. For security purposes, it is highly recommended that you use a "
 "passphrase."
 msgstr ""
+"Типове ім’я файлу цілком влаштує, тож можете залишити його як є. З метою "
+"безпеки настійно рекомендується вказати парольне гасло."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:133
 msgid "Set up pbuilder"
-msgstr ""
+msgstr "Налаштування pbuilder"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:135
 msgid ""
 "``pbuilder`` allows you to build packages locally on your machine. It serves "
 "a couple of purposes:"
 msgstr ""
+"``pbuilder`` дозволяє локально збирати пакунки на Вашому комп’ютері. Він "
+"слугує декільком цілям:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:138
 msgid ""
@@ -2209,20 +2527,25 @@ msgid ""
 "make sure your builds succeed in a reproducible way, but without modifying "
 "your local system"
 msgstr ""
+"Збірка буде виконана у мінімальному й чистому середовищі. Це дасть "
+"можливість переконатися, що збірку вдастся успішно відтворити й на інших "
+"комп’ютерах, але при цьому допоможе уникнути змін у Вашій локальній системі"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:141
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
 msgstr ""
+"Зникає необхідність у локальному встановленні усіх *збірочних залежностей*"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:142
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
 msgstr ""
+"Можна налаштувати декілька екземплярів для різних випусків Ubuntu і Debian"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:144
 msgid "Setting ``pbuilder`` up is very easy, run::"
-msgstr ""
+msgstr "Налаштувати ``pbuilder`` дуже просто. Наберіть ::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:148
 msgid ""
@@ -2231,10 +2554,14 @@ msgid ""
 "necessary packages for a \"minimal installation\". These will be cached "
 "though."
 msgstr ""
+"де <release> — це, наприклад `raring`, `saucy`, `trusty` або, у випадку "
+"Debian, `sid`. Виконання команди займе певний час, оскільки будуть "
+"завантажені усі пакунки, необхідні для \"мінімального встановлення\". Втім, "
+"при цьому використовується кешування."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:154
 msgid "Get set up to work with Launchpad"
-msgstr ""
+msgstr "Підготовка до роботи з Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:156
 msgid ""
@@ -2242,26 +2569,29 @@ msgid ""
 "configure your system to work with Launchpad. This section will focus on the "
 "following topics:"
 msgstr ""
+"Після того, як базова локальна конфігурація створена, наступним кроком буде "
+"налаштування системи для роботи з Launchpad. У цьому розділі ми сфокусуємося "
+"на таких питаннях:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid "What Launchpad is and creating a Launchpad account"
-msgstr ""
+msgstr "Що таке Launchpad й як створити обліковий запис на Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:161
 msgid "Uploading your GPG and SSH keys to Launchpad"
-msgstr ""
+msgstr "Завантаження Ваших ключів GPG та SSH на Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:162
 msgid "Configuring Bazaar to work with Launchpad"
-msgstr ""
+msgstr "Налаштування Bazaar для роботи з Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:163
 msgid "Configuring Bash to work with Bazaar"
-msgstr ""
+msgstr "Налаштування Bash для роботи з Bazaar"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:167
 msgid "About Launchpad"
-msgstr ""
+msgstr "Відомості про Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid ""
@@ -2271,6 +2601,12 @@ msgid ""
 "team memberships.  You will also use Launchpad to publish your proposed "
 "fixes, and get other Ubuntu developers to review and sponsor them."
 msgstr ""
+"Launchpad є центральним елементом інфраструктури, що використовується нами в "
+"Ubuntu. Він зберігає не лише наші пакунки й наш код, але й такі речі, як "
+"переклади, звіти про вади, а також інформацію про людей, що працюють над "
+"Ubuntu і їх приналежність до різних команд. Ви можете також використовувати "
+"Launchpad, щоб оголосити пропоновані Вами виправлення й попрохати інших "
+"розробників Ubuntu перевірити та підтримати їх."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:175
 msgid ""
@@ -2278,6 +2614,9 @@ msgid ""
 "information. This will allow you to download and upload code, submit bug "
 "reports, and more."
 msgstr ""
+"Вам потрібно буде зареєструватися на Launchpad та надати певну мінімальну "
+"кількість інформації про себе. Це дозволить Вам стягувати або відправляти "
+"джерельний код, відправляти звіти про вади тощо."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:179
 msgid ""
@@ -2285,10 +2624,13 @@ msgid ""
 "more information see the `Launchpad Help wiki "
 "<https://help.launchpad.net/>`_."
 msgstr ""
+"Крім хостингу Ubuntu, Launchpad може надавати місце для будь-якого вільного "
+"проґрамного проєкту. Додаткову інформацію дивіться на `Довідкових вікі-"
+"сторінках Launchpad <https://help.launchpad.net/>`_"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:184
 msgid "Get a Launchpad account"
-msgstr ""
+msgstr "Створення облікового запису на Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:186
 msgid ""
@@ -2297,6 +2639,10 @@ msgid ""
 "your Launchpad id, you can find this out by going to https://launchpad.net/~ "
 "and looking for the part after the `~` in the URL."
 msgstr ""
+"Якщо в Вас ще немає облікового запису на Launchpad, Ви легко можете "
+"`створити його <LP-AccountCreate_>`_. Якщо обліковий запис є, але Ви не "
+"пам’ятаєте свій Launchpad ID, його можна дізнатися, зайшовши на "
+"https://launchpad.net/~ і поглянувши на частину після `~` в URL."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:191
 msgid ""
@@ -2304,6 +2650,9 @@ msgid ""
 "is encouraged for you to use your real name here so that your Ubuntu "
 "developer colleagues will be able to get to know you better."
 msgstr ""
+"При реєстрації на Launchpad Вас попрохають вибрати відображуване ім’я. "
+"Рекомендується вказати тут Ваше справжнє ім’я, щоб Ваші колеги - розробники "
+"Ubuntu могли краще з Вами познайомитися."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:195
 msgid ""
@@ -2311,20 +2660,27 @@ msgid ""
 "link you need to open in your browser in order to verify your email address. "
 "If you don't receive it, check in your spam folder."
 msgstr ""
+"При реєстрації нового облікового запису Launchpad відправить Вам листа з "
+"посиланням, яке потрібно відкрити у оглядачі тенет, щоб підтвердити вказану "
+"Вами адресу електронної пошти. Якщо Ви не отримали листа, перевірте теку "
+"небажаної пошти (спаму)."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:199
 msgid ""
 "`The new account help page <LP-AccountHelp_>`_ on Launchpad has more "
 "information about the process and additional settings you can change."
 msgstr ""
+"`Довідкова сторінка нового облікового запису <LP-AccountHelp_>`_ на "
+"Launchpad містить додаткову інформацію про процес та додаткові налаштування, "
+"які можна зробити."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:206
 msgid "Upload your GPG key to Launchpad"
-msgstr ""
+msgstr "Завантаження Вашого ключа GPG на Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:208
 msgid "First, you will need to get your fingerprint and key ID."
-msgstr ""
+msgstr "Спочатку потрібно отримати відбиток та ідентифікатор ключа."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:210
 msgid "To find about your GPG fingerprint, run::"
