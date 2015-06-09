@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-02 09:01+0200\n"
-"PO-Revision-Date: 2015-06-07 16:42+0000\n"
+"PO-Revision-Date: 2015-06-08 17:40+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-08 05:16+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-09 05:25+0000\n"
+"X-Generator: Launchpad (build 17549)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -3601,6 +3601,12 @@ msgid ""
 "binary package is called ``libnova-0.12-2`` where ``libnova-0.12`` is the "
 "name of the library and ``2`` is our ABI number."
 msgstr ""
+"SONAME у даному випадку ``libnova-0.12.so.2``, що відповідає імені файлу (як "
+"правило, але не завжди). Тут апстрім помістив номер версії з апстріму, як "
+"частину SONAME, й задав ABI-версію ``2``. Імена бібліотекових пакунків "
+"повинні слідувати SONAME бібліотеки, яку вони містять. Двійковий "
+"бібліотековий пакунок зветься ``libnova-0.12-2``, де ``libnova-0.12`` — ім’я "
+"бібліотеки, а ``2`` — наш ABI-номер."
 
 #: ../ubuntu-packaging-guide/libraries.rst:52
 msgid ""
@@ -3612,11 +3618,20 @@ msgid ""
 "introduce incompatibilities without changing their version number and we "
 "will need to change ours."
 msgstr ""
+"Якщо автори з апстріму внесли несумісні зміни у свою бібліотеку, вони "
+"повинні змінити номер версії SONAME, а ми повинні перейменувати нашу "
+"бібліотеку. Будь-які інші пакунки, що використовують наш бібліотековий "
+"пакунок, потрібно буде перекомпілювати з новою версією, це зветься переходом "
+"(transition) й потребує певних зусиль. Потрібно сподіватися, наш ABI-номер "
+"продовжить відповідати SONAME апстріму, але інколи вони вносять несумісності "
+"без зміни їх номеру версії, а нам потрібно змінити наш."
 
 #: ../ubuntu-packaging-guide/libraries.rst:60
 msgid ""
 "Looking in debian/libnova-0.12-2.install we see it includes two files::"
 msgstr ""
+"Поглянувши на debian/libnova-0.12-2.instal, ми побачимо, що він включає у "
+"себе два файли::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:65
 msgid ""
@@ -3625,6 +3640,10 @@ msgid ""
 "symlink is what programs using the library will look for, the running "
 "programs do not care about the minor version number."
 msgstr ""
+"Другий рядок — справжня бібліотека, з повним номером версії. Перше — "
+"символьне посилання, що вказує на справжню бібліотеку. Проґрами, що "
+"використовують бібліотеку, как правило, будуть користуватися символічним "
+"посиланням."
 
 #: ../ubuntu-packaging-guide/libraries.rst:70
 msgid ""
@@ -3634,6 +3653,12 @@ msgid ""
 "programs compiling against the library do not care about the major version "
 "number (although the binary they compile into will)."
 msgstr ""
+"``libnova-dev.install`` містить усі файли, необхідні для компілювання "
+"проґрами з даною бібліотекою. Заголовкові файли, бінарник конфігурації, файл "
+"libtool'a ``.la``, а також ``libnova.so`` -- ще один симлінк на бібліотеку, "
+"створюваний з тим, щоб проґрами могли компілюватися поза залежністю від "
+"старшого номеру версії (при цьому, скомпільваний застосунок все одно буде "
+"залежати від версії)."
 
 #: ../ubuntu-packaging-guide/libraries.rst:76
 msgid ""
@@ -3642,10 +3667,14 @@ msgid ""
 "It is a current `Debian goal to remove .la files <LAFileRemoval_>`_ and we "
 "should help with this."
 msgstr ""
+"``.la``-файли libtool'у потрібні на деяких не-Linux системах з обмеженою "
+"підтримкою бібліотек, але на системах Debian часто створюють більше проблем, "
+"ніж вирішують. `Мета Debian відмовитися від .la-файлів <LAFileRemoval_>`_ "
+"сьогодні вельми актуальна, й Ви можете допомогти з вирішенням цього завдання."
 
 #: ../ubuntu-packaging-guide/libraries.rst:82
 msgid "Static Libraries"
-msgstr ""
+msgstr "Статичні бібліотеки"
 
 #: ../ubuntu-packaging-guide/libraries.rst:84
 msgid ""
@@ -3657,10 +3686,17 @@ msgid ""
 "with the library until the program is recompiled.  For this reason programs "
 "using static libraries are discouraged."
 msgstr ""
+"Пакунок -dev також містить ``usr/lib/libnova.a``. Це статична бібліотека, "
+"альтернатива спільній бібліотеці. Будь-яка проґрама, скомпільована зі "
+"статичною бібліотекою, містить її код безпосередньо у собі. Це дозволяє не "
+"бентежитися про двійкову сумісність бібліотеки. Втім це також значить, що "
+"будь-які помилки, у тому числі вразливості у безпеці, не будуть виправлені "
+"за рахунок оновлення бібліотеки, поки проґрама не буде перекомпільована. З "
+"цієї причини використовувати проґрами з статичними бібліотеками не радимо."
 
 #: ../ubuntu-packaging-guide/libraries.rst:94
 msgid "Symbol Files"
-msgstr ""
+msgstr "Символьні файли"
 
 #: ../ubuntu-packaging-guide/libraries.rst:96
 msgid ""
@@ -3672,18 +3708,31 @@ msgid ""
 "if new symbols get added in libnova 2.1 a program using these symbols could "
 "still be installed against libnova ABI 2.0 which would then crash."
 msgstr ""
+"Коли додаток компілюється з бібліотекою, механізм ``shlibs`` додасть до "
+"пакунку залежність від цієї бібліотеки. Саме тому більшість проґрам містять "
+"``Depends: ${shlibs:Depends}`` у файлі ``debian/control``. Це замінюється "
+"переліком залежних бібліотек при білді. Втім shlibs може лише вказувати "
+"залежність від старшої ABI-версії , ``2`` у нашому прикладі з libnova, тож "
+"якщо нові символи будуть додані у майбутній libnova 2.1 -- застосунок буде "
+"запускатися й зі старішою версією libnova ABI 2.0, що призведе до аварійного "
+"завершення."
 
 #: ../ubuntu-packaging-guide/libraries.rst:104
 msgid ""
 "To make the library dependencies more precise we keep ``.symbols`` files "
 "that list all the symbols in a library and the version they appeared in."
 msgstr ""
+"Щоб точніше вказувати залежності від бібліотек, ми створили файл "
+"``.symbols``, який перераховує усі символи бібліотеки й версії, у яких вони "
+"з’явилися."
 
 #: ../ubuntu-packaging-guide/libraries.rst:107
 msgid ""
 "libnova has no symbols file so we can create one.  Start by compiling the "
 "package::"
 msgstr ""
+"libnova не має символьного файлу, тож ми можемо створити його. Почніть з "
+"компілювання пакунку::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:112
 msgid ""
@@ -3691,10 +3740,13 @@ msgid ""
 "removing the built files.  Change to the build and run ``dpkg-gensymbols`` "
 "for the library package::"
 msgstr ""
+"Опція ``-nc`` вказує не вилучати збірочні файли після завершення "
+"компілювання. Перейдіть у каталог збірки й виконайте ``dpkg-gensymbols`` для "
+"пакунку бібліотеки::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:119
 msgid "This makes a diff file which you can self apply::"
-msgstr ""
+msgstr "Це створить diff-файл, який Ви зможете застосувати самостійно::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:123
 msgid ""
@@ -3704,10 +3756,16 @@ msgid ""
 "new symbols are not generally added by new packaging versions, but by the "
 "upstream developers::"
 msgstr ""
+"Це створить файл з іменем вигляду ``dpkg-gensymbolsnY_WWI``, у якому будуть "
+"перераховані усі символи. Він також вказує поточну версію пакунку. Версію "
+"пакунку можна прибрати з файлу, оскільки нові символи зазвичай додаються не "
+"з новою версією пакунку, а розробниками початкової бібліотеки."
 
 #: ../ubuntu-packaging-guide/libraries.rst:130
 msgid "Now move the file into its location, commit and do a test build::"
 msgstr ""
+"Тепер перемістіть файл туди, де він має знаходитися, зафіксуйте зміни та "
+"виконайте тестову збірку::"
 
 #: ../ubuntu-packaging-guide/libraries.rst:138
 msgid ""
@@ -3715,10 +3773,13 @@ msgid ""
 "upstream version of libnova you would run dpkg-gensymbols again and it will "
 "give a diff to update the symbols file."
 msgstr ""
+"Якщо компілювання виконується успішно, значить символьний файл не містить "
+"вад. З виходом наступної апстрім-версії libnova Вам доведеться знову "
+"запустити dpkg-gensymbols, щоб створити diff для оновлення символьного файлу."
 
 #: ../ubuntu-packaging-guide/libraries.rst:143
 msgid "C++ Library Symbols Files"
-msgstr ""
+msgstr "Символьні файли бібліотек C++"
 
 #: ../ubuntu-packaging-guide/libraries.rst:145
 msgid ""
@@ -3726,16 +3787,22 @@ msgid ""
 "Debian Qt/KDE Team maintain some scripts to handle this, see their `Working "
 "with symbols files <SymbolsFiles_>`_ page for how to use them."
 msgstr ""
+"В мови C++ більш суворі стандарти на двійкову сумісність, ніж у C. Команда "
+"Debian Qt/KDE підтримує деякі скрипти, які допоможуть подолати це: сторінка "
+"`Робота з файлами symbols <SymbolsFiles_>`_ дає опис принципів їх "
+"використання."
 
 #: ../ubuntu-packaging-guide/libraries.rst:152
 msgid ""
 "Junichi Uekawa's `Debian Library Packaging Guide <LibraryGuide_>`_ goes into "
 "this topic in more detail."
 msgstr ""
+"Стаття Junichi Uekawa `Пакункування бібліотек для Debian <LibraryGuide_>`_ "
+"розглядає це питання детальніше."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:3
 msgid "Packaging New Software"
-msgstr ""
+msgstr "Створення пакунків для нових проґрам"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:5
 msgid ""
@@ -3745,16 +3812,23 @@ msgid ""
 "at creating a package for Ubuntu or a PPA_. This guide will take you through "
 "the steps of packaging new software."
 msgstr ""
+"Хоч у архіві Ubuntu є тисячі пакунків, вистачає проґрам, якими ніхто не "
+"займається. Якщо Ви знаєте про якусь чудову проґраму, про яку, на Вашу "
+"думку, варто взнати ширшому колу користувачів, Ви можете спробувати докласти "
+"свою руку до створення пакунку для Ubuntu або PPA_. Цей посібник проведе Вас "
+"через етапи створення пакунку для нової проґрами."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:11
 msgid ""
 "You will want to read the :doc:`Getting Set Up<./getting-set-up>` article "
 "first in order to prepare your development environment."
 msgstr ""
+"Спочатку Вам слід прочитати статтю :doc:`Підготовка<./getting-set-up>`, щоб "
+"підготувати своє середовище розробки."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:15
 msgid "Checking the Program"
-msgstr ""
+msgstr "Перевірка проґрами"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:17
 msgid ""
@@ -3762,36 +3836,45 @@ msgid ""
 "call the authors of applications \"upstream\") and check that it compiles "
 "and runs."
 msgstr ""
+"Першим етапом створення пакунку є отримання tar-файлу з апстріму "
+"(«апстрімом» ми звемо авторів застосунків) й перевірка того, що він "
+"нормально компілюється та запускається."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:20
 msgid ""
 "This guide will take you through packaging a simple application called GNU "
 "Hello which has been posted on GNU.org_."
 msgstr ""
+"Цей посібник проведе Вас через процес створення пакунку для невеликого "
+"застосунку GNU Hello, доступного на GNU.org_."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:23
 msgid ""
 "If you don't have the build tools lets make sure we have them first.  Also "
 "if you don't have the required dependencies lets install those as well."
 msgstr ""
+"Якщо в Вас ще немає інструментів збірки, встановіть їх. Також встановіть усі "
+"необхідні залежності."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:26
 msgid "Install build tools::"
-msgstr ""
+msgstr "Встановимо інструменти збірки::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:30
 msgid "Download main package::"
-msgstr ""
+msgstr "Стягнемо основний пакунок::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:34
 msgid "Now uncompress main package::"
-msgstr ""
+msgstr "Тепер розпакуємо основний пакунок::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:39
 msgid ""
 "This application uses the autoconf build system so we want to run "
 "``./configure`` to prepare for compilation."
 msgstr ""
+"Цей застосунок використовує систему збірки autoconf, тож нам потібно "
+"запустити ``./configure`` для підготовки до компілювання."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:42
 msgid ""
@@ -3801,19 +3884,26 @@ msgid ""
 "libraries and development files. Install the needed packages and repeat "
 "until the command runs successfully.::"
 msgstr ""
+"При цьому буде перевірено наявність необхідних для збірки залежностей. "
+"Оскільки ``hello`` — простий приклад, ``build-essential`` забезпечить нас "
+"усім, що потрібно. Для складніших проґрам, команда завершиться помилкою, "
+"якщо в нас немає необхідних бібліотек і файлів для розробки. Встановіть "
+"потрібні пакунки й повторіть процес, поки команда не завершиться з успіхом.::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:50
 msgid "Now you can compile the source::"
-msgstr ""
+msgstr "Тепер потрібно скомпілювати джерельний код::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:54
 msgid ""
 "If compilation completes successfully you can install and run the program::"
 msgstr ""
+"Якщо компілювання завершилося успішно, можна встановити та запустити "
+"проґраму::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:60
 msgid "Starting a Package"
-msgstr ""
+msgstr "Створення пакунку"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:62
 msgid ""
@@ -3822,6 +3912,10 @@ msgid ""
 "have these if you installed ``packaging-dev``. Run the command providing the "
 "package name, version number, and path to the upstream tarball::"
 msgstr ""
+"``bzr-builddeb`` містить модуль для створення нового пакунку з шаблону. Цей "
+"модуль є обгорткою навколо команди ``dh_make`` . Він вже повинен бути в Вас, "
+"якщо Ви встановили ``packaging-dev``. Запустіть команду, вказавши ім’я "
+"пакунку, номер версії та шлях до tar-архіву з апстріму::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:71
 msgid ""
@@ -3831,10 +3925,14 @@ msgid ""
 "specialist packages (such as Emacs modules) so you can start by removing the "
 "optional example files::"
 msgstr ""
+"Коли він спитає тип пакунку, оберіть ``s``: одинарний бінарник. Це імпортує "
+"код у гілку й створить теку ``debian/``. Погляньте на її вміст: більшість "
+"автоматично створених файлів потрібні лише для спеціялізованих пакунків "
+"(наприклад модулі Emacs), тож можна почати з вилучення зайвих файлів::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:80
 msgid "You should now customise each of the files."
-msgstr ""
+msgstr "Тепер потрібно внести зміни у кожен з файлів."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:82
 msgid ""
@@ -3843,6 +3941,10 @@ msgid ""
 " Also change ``unstable`` to the current development Ubuntu release such as "
 "``trusty``."
 msgstr ""
+"В ``debian/changelog`` змініть номер версії на версію Ubuntu: ``2.7-"
+"0ubuntu1`` (апстрім-версія 2.7, версія в Debian 0, версія в Ubuntu 1). Також "
+"змініть ``unstable`` на поточний розроблюваний випуск Ubuntu, наприклад, "
+"``trusty``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:87
 msgid ""
@@ -3852,6 +3954,10 @@ msgid ""
 "You will generally want to set this to the most recent version which is "
 "``9``."
 msgstr ""
+"Велика частина процесу компілювання пакунку здійснюється скриптами з "
+"``debhelper``. Оскільки поведінка ``debhelper`` змінюється при виході "
+"старшої версії, файл compat повідомляє ``debhelper`` яку саме версію "
+"використовувати. Має сенс використовувати найсвіжішу версію: ``9``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:93
 msgid ""
@@ -3861,36 +3967,50 @@ msgid ""
 "compile the application to ``Build-Depends:``. For ``hello``, make sure that "
 "it includes at least::"
 msgstr ""
+"Файл ``control`` містить усі метадані пакунку. Перший абзац дає опис пакунку "
+"джерельних кодів. Другий та наступні абзаци дають опис двійкових пакунків, "
+"які повинні бути зібрані. Нам знадобиться додати пакунки, необхідні для "
+"компілювання додатку в ``Build-Depends:``. Для ``hello`` він має включати, "
+"як мінімум::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:101
 msgid ""
 "You will also need to fill in a description of the program in the "
 "``Description:`` field."
-msgstr ""
+msgstr "Також потрібно заповнити опис проґрами у полі ``Description:``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:104
 msgid ""
 "``copyright`` needs to be filled in to follow the licence of the upstream "
 "source.  According to the hello/COPYING file this is GNU GPL 3 or later."
 msgstr ""
+"``copyright`` потрібно заповнити у відповідності з ліцензією на джерело з "
+"апстріму. Згідно файлу hello/COPYING, це ліцензія GNU GPL 3 або пізніша її "
+"версія."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:107
 msgid ""
 "``docs`` contains any upstream documentation files you think should be "
 "included in the final package."
 msgstr ""
+"``docs`` повинен містити будь-які файли документації з апстріму, які, на "
+"Вашу думку, мають бути включені у готовий пакунок."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:110
 msgid ""
 "``README.source`` and ``README.Debian`` are only needed if your package has "
 "any non-standard features, we don't so you can delete them."
 msgstr ""
+"``README.source`` і ``README.Debian`` необхідні, лише якщо Ваш пакунок має "
+"якісь нестандартні функції. В нас таких немає, тож можна вилучити ці файли."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:113
 msgid ""
 "``source/format`` can be left as is, this describes the version format of "
 "the source package and should be ``3.0 (quilt)``."
 msgstr ""
+"``source/format`` можна залишити як є, він дає опис формату версії пакунку "
+"джерельного коду, який повинен бути ``3.0 (quilt)``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:116
 msgid ""
@@ -3899,27 +4019,35 @@ msgid ""
 "automatically done these days by ``debhelper 7`` so the universal ``%`` "
 "Makefile target just runs the ``dh`` script which will run everything needed."
 msgstr ""
+"``rules`` — найскладніший файл. Це Makefile, який компілює код й перетворює "
+"його у двійковий пакунок. На щастя, основну частину роботи на сьогодні "
+"автоматично виконує ``debhelper 7``, тож універсальна мета ``%`` просто "
+"запускає сценарій ``dh``, який робить усе, що потрібно."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:121
 msgid ""
 "All of these file are explained in more detail in the :doc:`overview of the "
 "debian directory<./debian-dir-overview>` article."
 msgstr ""
+"Детальніший опис усіх цих фалів у статті :doc:`огляд каталогу debian "
+"<./debian-dir-overview>`."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:124
 msgid "Finally commit the code to your packaging branch::"
-msgstr ""
+msgstr "Нарешті, закоммте код у гілку для пакунків::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:130
 #: ../ubuntu-packaging-guide/udd-working.rst:69
 msgid "Building the package"
-msgstr ""
+msgstr "Збірка пакунку"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:132
 msgid ""
 "Now we need to check that our packaging successfully compiles the package "
 "and builds the .deb binary package::"
 msgstr ""
+"Тепер нам потрібно перевірити, що наші джерельні файли для пакунку успішно "
+"компілюються й збираються у двійковий .deb-пакунок::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:138
 msgid ""
@@ -3927,24 +4055,29 @@ msgid ""
 "The ``-us -uc`` tell it there is no need to GPG sign the package.  The "
 "result will be placed in ``..``."
 msgstr ""
+"``bzr builddeb`` — це команда для збірки пакунку у його поточному "
+"місцезнаходженні. ``-us -uc`` повідомляє що підписувати пакунок за допомогою "
+"GPG не потрібно. Результат буде поміщений у каталог «..»."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:142
 msgid "You can view the contents of the package with::"
-msgstr ""
+msgstr "Продивитися вміст пакунку можна за допомогою::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:146
 msgid ""
 "Install the package and check it works (later you will be able to uninstall "
 "it using ``sudo apt-get remove hello`` if you want)::"
 msgstr ""
+"Встановіть пакунок й перевірте, що він працює (пізніше за бажання Ви зможете "
+"вилучити його командою ``sudo apt-get remove hello``)::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:151
 msgid "You can also install all packages at once using::"
-msgstr ""
+msgstr "Можете також встановити усі пакунки одразу за допомогою::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:156
 msgid "Next Steps"
-msgstr ""
+msgstr "Наступні кроки"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:158
 msgid ""
@@ -3953,30 +4086,42 @@ msgid ""
 "be run on the source .dsc metadata file, .deb binary packages or .changes "
 "file::"
 msgstr ""
+"Навіть якщо двійковий .deb-пакунок успішно збирається, Ваші джерельні файли "
+"для пакунку можуть містити помилки. Багато помилок можуть автоматично "
+"виявлятися нашим інструментом ``lintian``, який можна застосувати до файлу "
+"метаданих .dsc, двійкових пакунків .deb або файлу .changes::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:166
 msgid ""
 "To see verbose description of the problems use ``--info`` lintian flag or "
 "``lintian-info`` command."
 msgstr ""
+"Щоб побачити детальний опис вад, використовуйте прапорець lintian ``--info`` "
+"або команду ``lintian-info``."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:169
 msgid ""
 "Results of Ubuntu archive checks can be found online on "
 "http://lintian.ubuntuwire.org."
 msgstr ""
+"Результати перевірок архіву Ubuntu можна знайти у Інтернеті на "
+"http://lintian.ubuntuwire.org."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:172
 msgid ""
 "For Python packages, there is also a ``lintian4python`` tool that provides "
 "some additional lintian checks."
 msgstr ""
+"Для пакунків Python є також інструмент ``lintian4python``, здійснюючий деякі "
+"додаткові перевірки lintian."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:175
 msgid ""
 "After making a fix to the packaging you can rebuild using ``-nc`` \"no "
 "clean\" without having to build from scratch::"
 msgstr ""
+"Після створення виправлення для файлів пакунку можна перезібрати його з "
+"параметром ``-nc`` (\"no clean\"), щоб не починати збірку з самого початку::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:180
 msgid ""
@@ -3989,12 +4134,25 @@ msgid ""
 "have set up GPG. If you haven't set up ``pbuilder-dist`` or GPG yet, "
 ":doc:`do so now<./getting-set-up>`::"
 msgstr ""
+"Переконавшись, що пакунок успішно збирається локально, Ви повинні "
+"перевірити, чи правильно його збирання буде відбуватися у чистій системі, за "
+"допомогою ``pbuilder``. Оскільки незабаром ми збираємося завантажити його в "
+"PPA (персональний архів пакунків), це завантаження потрібно забезпечити "
+"*цифровим підписом*, щоб Launchpad міг переконатися, що завантаження зробили "
+"Ви (дізнатися про те, що завантаження буде підписане, можна за відсутністю "
+"передаваних ``bzr builddeb`` прапорців ``-us`` і ``-uc``, які ми "
+"використовували раніше). Для підписування своєї роботи Вам знадобиться "
+"налаштувати GPG. Якщо Ви ще не налаштували ``pbuilder-dist`` або GPG, "
+":doc:`зробіть це зараз<./getting-set-up>`::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:193
 msgid ""
 "When you are happy with your package you will want others to review it.  You "
 "can upload the branch to Launchpad for review::"
 msgstr ""
+"Після того як Ви залишитеся задоволені отриманим пакунком, потрібно, щоб "
+"його перевірили інші люди. Ви можете вивантажити гілку на Launchpad для "
+"перевірки::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:198
 msgid ""
@@ -4002,10 +4160,16 @@ msgid ""
 "others to test the binary packages.  You will need to set up a PPA in "
 "Launchpad and then upload with ``dput``::"
 msgstr ""
+"Вивантаження в PPA дозволить переконатися, що пакунок збирається нормально, "
+"а також дозволить Вам і решті тестувати бінарні пакунки. Вам знадобиться "
+"створити PPA на Launchpad, після чого вивантажити пакунок за допомогою "
+"``dput``::"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:204
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
 msgstr ""
+"Дивіться розділ «:doc:`Завантаження<./udd-uploading>`» для додаткової "
+"інформації."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:206
 msgid ""
@@ -4013,10 +4177,14 @@ msgid ""
 "mailing list <ubuntu-motu_>`_.  There might also be a more specific team you "
 "could ask such as the GNU team for more specific questions."
 msgstr ""
+"Попрохати провести review можна на каналі IRC ``#ubuntu-motu``, або у "
+"`переліку розсилки MOTU <ubuntu-motu_>`_. У деяких випадках може знадобитися "
+"участь конкретної команди: у подібних випадках команда GNU допоможе "
+"розібратися."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:211
 msgid "Submitting for inclusion"
-msgstr ""
+msgstr "Відправка на включення"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:213
 msgid ""
@@ -4026,6 +4194,12 @@ msgid ""
 "available in not just Debian and Ubuntu but all of their derivatives as "
 "well. Here are some useful links for submitting new packages to Debian:"
 msgstr ""
+"Існує декілька шляхів, якими пакунок може потрапити в Ubuntu. У більшості "
+"випадків кращим шляхом може бути проходження спочатку через Debian. Це "
+"дозволить Вашому пакунку стати доступним для щонайбільшої кількості "
+"користувачів, оскільки він буде доступний не лише в Debian та Ubuntu, але й "
+"в усіх дистрибутивах, створених на їх основі. Ось декілька корисних посилань "
+"з відправки нових пакунків в Debian:"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:220
 msgid ""
@@ -4033,6 +4207,9 @@ msgid ""
 "new and prospective Debian Developers. It is where you can find a sponsor to "
 "upload your package to the archive."
 msgstr ""
+"`Debian Mentors FAQ <MentorsFAQ_>`_ - debian-mentors створений для "
+"менторства нових і перспективних розробників Debian. Це те місце, де можна "
+"знайти спонсора для завантаження Вашого пакунку в архів."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:224
 msgid ""
@@ -4040,6 +4217,9 @@ msgid ""
 "file \"Intent to Package\" and \"Request for Package\" bugs as well as list "
 "of open ITPs and RFPs."
 msgstr ""
+"`Work-Needing and Prospective Packages <WNPP_>`_ - інформація про те як "
+"відправляти баги \"Intent to Package\" (Призначення пакунку) і \"Request for "
+"Package\" (Запит пакунку), а також переліки відкритих ITP та RFP."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:228
 msgid ""
@@ -4047,6 +4227,9 @@ msgid ""
 "document is invaluable for both Ubuntu and Debian packagers. This section "
 "documents processes for submitting new packages."
 msgstr ""
+"`Посібник Розробника Debian, 5.1. Створення пакунків <DevRef_>`_ - безцінний "
+"документ для творців пакунків як під Ubuntu, так й під Debian. Даний розділ "
+"дає опис процесу відправки нових пакунків."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:232
 msgid ""
@@ -4056,10 +4239,14 @@ msgid ""
 "documented on the `\"New Packages\" <NewPackages_>`_ section of the Ubuntu "
 "wiki."
 msgstr ""
+"У деяких випадках має сенс відправлятися прямо в Ubuntu. Наприклад, якщо "
+"Debian знаходиться у стані \"freeze\": тоді Ваш пакунок навряд встигне "
+"увійти в Ubuntu до найближчого релізу. Опис цього процесу на сторінці "
+"`\"Нові Пакунки\" <NewPackages_>`_ Ubuntu Wiki."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:238
 msgid "Screenshots"
-msgstr ""
+msgstr "Знятки екрану"
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:240
 msgid ""
@@ -4067,10 +4254,13 @@ msgid ""
 "allow propective users to see what the program is like. These should be "
 "uploaded to http://screenshots.debian.net/upload ."
 msgstr ""
+"Завантаживши пакунок в Debian, Вам слід додати знятки екрану, аби майбутні "
+"користувачі змогли отримати уяву про те, як виглядає інтерфейс проґрами. "
+"Знятки потрібно відправляти на http://screenshots.debian.net/upload ."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:3
 msgid "Patches to Packages"
-msgstr ""
+msgstr "Латки для пакунків"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:5
 msgid ""
@@ -4083,6 +4273,14 @@ msgid ""
 "or extract the change to submit to the upstream project.  Instead, we keep "
 "these changes as separate patches, in the form of diff files."
 msgstr ""
+"Інколи розробникам пакунку Ubuntu потрібно змінити джерельний код апстріму, "
+"щоб примусити його працювати в Ubuntu належним чином. Приклади включають "
+"латки для апстрімів, які ще не потрапили у версію релізу, або зміни до "
+"систем білдів апстріму, необхідні лише для їх збірки на Ubuntu. Ми будемо "
+"міняти джерельний код апстріму напряму, але такий метод робить складнішим "
+"подальше вилучення латок, коли апстрім вже застосував їх, також ускладнюючи "
+"витягнення змін для їх відправки у проєкт апстріму. Замість цього, ми будемо "
+"зберігати ці зміни як окремі латки у формі diff файлів."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:14
 msgid ""
@@ -4090,10 +4288,13 @@ msgid ""
 "fortunately we are standardizing on one system, `Quilt`_, which is now used "
 "by most packages."
 msgstr ""
+"Існують різні способи роботи з латками для пакунків Debian. На щастя, ми "
+"зупинимося на одній системі, `Quilt`_, яка наразі використовується більшістю "
+"пакунків."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:18
 msgid "Let's look at an example package, ``kamoso`` in Trusty::"
-msgstr ""
+msgstr "Давайте візьмемо у якості прикладу пакунок ``kamoso`` в Trusty::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:22
 msgid ""
@@ -4104,54 +4305,69 @@ msgid ""
 "in this case the Kubuntu team adds their own prefix to show the patch comes "
 "from them rather than from Debian."
 msgstr ""
+"Латки зберігаються в ``debian/patches``. Для цього пакунку є одна латка "
+"``kubuntu_01_fix_qmax_on_armel.diff`` для виправлення вади компілювання на "
+"платформі ARM. Цій латці привласнено ім’я, що дає опис, того що вона робить, "
+"номер патчу за порядком (щоб уникнути плутанини, якщо дві латки мають "
+"однакове ім’я) й, у даному випадку, команда Kubuntu додала свій власний "
+"префікс, щоб показати, що латка походить від них, а не від Debian."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:29
 msgid "The order of patches to apply is kept in ``debian/patches/series``."
-msgstr ""
+msgstr "Порядок застосування латок зберігається в ``debian/patches/series``."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:32
 msgid "Patches with Quilt"
-msgstr ""
+msgstr "Латки за допомогою Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:34
 msgid ""
 "Before working with Quilt you need to tell it where to find the patches.  "
 "Add this to your ``~/.bashrc``::"
 msgstr ""
+"Перед роботою з Quilt потрібно вказати цій системі, де шукати латки. Додайте "
+"в ``~/.bashrc`` таке::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:39
 msgid "And source the file to apply the new export::"
-msgstr ""
+msgstr "Й джерело файлу для застосування нового експорту::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:43
 msgid ""
 "By default all patches are applied already to UDD checkouts or downloaded "
 "packages.  You can check this with::"
 msgstr ""
+"Типово усі латки застосовуються вже з UDD витягнень або завантажуваних "
+"пакунків. Ви можете перевірити це за допомогою::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:49
 msgid "If you wanted to remove the patch you would run ``pop``::"
-msgstr ""
+msgstr "Якщо Ви бажаєте вилучити латку, потрібно виконати ``pop``::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:57
 msgid "And to apply a patch you use ``push``::"
-msgstr ""
+msgstr "А щоб застосувати латку, використовуйте ``push``::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:67
 msgid "Adding a New Patch"
-msgstr ""
+msgstr "Додавання нової латки"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:69
 msgid ""
 "To add a new patch you need to tell Quilt to create a new patch, tell it "
 "which files that patch should change, edit the files then refresh the patch::"
 msgstr ""
+"Для додавання нової латки потрібно вказати Quilt створити нову латку, "
+"повідомити йому, які файли ця латка повинна змінити, відредагувати файли, а "
+"потім оновити латку::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:81
 msgid ""
 "The ``quilt add`` step is important, if you forget it the files will not end "
 "up in the patch."
 msgstr ""
+"Крок ``quilt add`` важливий: якщо Ви забудете його зробити, файли не "
+"потраплять у латку."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:84
 msgid ""
@@ -4160,12 +4376,17 @@ msgid ""
 "file will have had the new patch added to it.  You should add the new file "
 "to the packaging::"
 msgstr ""
+"Тепер зміни будуть в ``debian/patches/kubuntu_02_program_description.diff``, "
+"а у файл ``series`` буде додана інформація про нову латку. Ви повинні додати "
+"новий файл у джерельні файли для пакунку::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:94
 msgid ""
 "Quilt keeps its metadata in the ``.pc/`` directory, so currently you need to "
 "add that to the packaging too.  This should be improved in future."
 msgstr ""
+"Quilt містить свої мета-дані у директорії ``.pc/`', тому зараз Вам потрібно "
+"додати у пакунок і її. Це має бути покращено у майбутньому."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:97
 msgid ""
@@ -4175,16 +4396,23 @@ msgid ""
 "for example, so it would break all translations.  If in doubt, do ask the "
 "upstream author before adding a patch."
 msgstr ""
+"Як правило, слід проявляти обережність при додаванні латок до проґрам, якщо "
+"вони походять не з апстріму. Часто є вагома причина, з якої зміни ще не були "
+"зроблені. У розглянутому вище прикладі змінюється рядок у користувацькому "
+"інтерфейсі, тож це може зламати усі переклади. Якщо маєте сумнів, спитайте "
+"автора з апстріму перед тим, як додати латку."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:105
 msgid "Patch Headers"
-msgstr ""
+msgstr "Заголовки латок"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:107
 msgid ""
 "We recommend that you tag every patch with DEP-3_ headers by putting them at "
 "the top of patch file. Here are some headers that you can use:"
 msgstr ""
+"Ми рекомендуємо додавати до кожної латки заголовки DEP-3_, поміщаючи їх у "
+"самому верху файлу латки. Ось деякі заголовки, які можна використовувати:"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
 msgid ""
@@ -4192,16 +4420,22 @@ msgid ""
 "field in ``debian/control``: first line is short description, starting with "
 "lowercase letter, the next lines are long description, indented with a space."
 msgstr ""
+"Опис того, що робить латка. Має формат, аналогічний полю ``Description`` в "
+"``debian/control``: перший рядок містить короткий опис, що починається з "
+"рядкової літери, решта рядків містять довший опис з пробілом у якості "
+"відступу."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:114
 msgid "Who wrote the patch (i.e. \"Jane Doe <packager@example.com>\")."
-msgstr ""
+msgstr "Хто написав латку (наприклад, \"Jane Doe <packager@example.com>\")."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:115
 msgid ""
 "Where this patch comes from (i.e. \"upstream\"), when *Author* is not "
 "present."
 msgstr ""
+"Звідки прийшла ця латка (наприклад, \"upstream\"), якщо заголовок *Author* "
+"відсутній."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:117
 msgid ""
@@ -4209,25 +4443,33 @@ msgid ""
 "*https://bugs.launchpad.net/bugs/XXXXXXX*). If there are also bugs in "
 "upstream or Debian bugtrackers, add *Bug* or *Bug-Debian* headers."
 msgstr ""
+"Посилання на інформацію про помилку на Launchpad, бажано, у короткій формі "
+"(типу *https://bugs.launchpad.net/bugs/XXXXXXX*). Якщо також є звіти про "
+"вади в апстрімі або системах відстежування помилок Debian, додайте заголовки "
+"*Bug* або *Bug-Debian*."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:121
 msgid ""
 "Whether the patch was forwarded upstream. Either \"yes\", \"no\" or \"not-"
 "needed\"."
 msgstr ""
+"Чи була латка передана в апстрим. Значення: \"yes\", \"no\" або \"not-"
+"needed\"."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:123
 msgid "Date of the last revision (in form \"YYYY-MM-DD\")."
-msgstr ""
+msgstr "Дата останньої ревізії (у формі \"ГГГГ-ММ-ДД\")."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:127
 msgid "Upgrading to New Upstream Versions"
-msgstr ""
+msgstr "Оновлення до нових версій з апстріму"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:129
 msgid ""
 "To upgrade to the new version, you can use ``bzr merge-upstream`` command::"
 msgstr ""
+"Щоб виконати оновлення до останньої версії, Ви можете використовувати "
+"команду ``bzr merge-upstream``::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:133
 msgid ""
@@ -4236,56 +4478,73 @@ msgid ""
 "upstream source or they might need to be removed altogether. To check for "
 "problems, apply the patches one at a time::"
 msgstr ""
+"При запуску цієї команди відбудеться відткат усіх латок, оскільки вони "
+"можуть стати застарілими. Можливо знадобиться їх оновити для відповідності "
+"новому джерелу апстріму, або знадобиться вилучити їх усі разом. Для "
+"полегшення перевірки проблем застосовуйте латки по одній."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:145
 msgid ""
 "If it can be reverse-applied this means the patch has been applied already "
 "by upstream, so we can delete the patch::"
 msgstr ""
+"Якщо для латки вказано ``it can be reverse-applied``, значить латку вже було "
+"застосовано апстрімом, тож ми можемо вилучити цю латку::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:151
 msgid "Then carry on::"
-msgstr ""
+msgstr "Потім продовжуйте::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:156
 msgid ""
 "It is a good idea to run refresh, this will update the patch relative to the "
 "changed upstream source::"
 msgstr ""
+"Непоганою думкою буде виконати refresh, це оновить латку відносно змін "
+"джерельного коду в апстрімі::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:162
 msgid "Then commit as usual::"
-msgstr ""
+msgstr "Потім виконайте фіксацію, як звичайно::"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:168
 msgid "Making A Package Use Quilt"
-msgstr ""
+msgstr "Створення пакунку з використанням Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:170
 msgid ""
 "Modern packages use Quilt by default, it is built into the packaging format. "
 " Check in ``debian/source/format`` to ensure it says ``3.0 (quilt)``."
 msgstr ""
+"Сучасні пакунки використовують Quilt типово, це вбудовано у формат "
+"джерельних файлів пакунку. Перевірте, що в ``debian/source/format`` вказано "
+"``3.0 (quilt)``."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:174
 msgid ""
 "Older packages using source format 1.0 will need to explicitly use Quilt, "
 "usually by including a makefile into ``debian/rules``."
 msgstr ""
+"Для старіших пакунків, що використовують формат 1.0, необхідно "
+"використовувати Quilt явно, зазвичай за допомогою включення make-файлу у "
+"``debian/rules``."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:179
 msgid "Configuring Quilt"
-msgstr ""
+msgstr "Конфігурування Quilt"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:181
 msgid ""
 "You can use ``~/.quiltrc`` file to configure quilt. Here are some options "
 "that can be useful for using quilt with debian/packages:"
 msgstr ""
+"Ви можете скористатися файлом ``~/.quiltrc`` для конфігурування quilt. Ось "
+"декілька опцій, які можуть бути корисні при використанні quilt з пакунками "
+"Debian:"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:195
 msgid "Other Patch Systems"
-msgstr ""
+msgstr "Інші системи керування латками"
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:197
 msgid ""
@@ -4297,6 +4556,14 @@ msgid ""
 "use ``edit-patch``, shown in :ref:`previous chapters <working-on-a-fix>`, as "
 "a reliable way to work with all systems."
 msgstr ""
+"Інші системи латання, що використовуються у пакунках, включають ``dpatch`` і "
+"``cdbs simple-patchsys``, принцип роботи яких схожий на Quilt - латки "
+"зберігаються в ``debian/patches``, але для їх застосування, скасування або "
+"створення потрібні інші команди. Ви можете дізнатися яка система латання "
+"використовується у пакунку за допомогою команди ``what-patch``(у пакунку "
+"``ubuntu-dev-tools``). Ви можете використовувати ``edit-patch``, показаний в "
+":ref:`попередніх розділах <working-on-a-fix>`, у якості надійного способу "
+"для роботи з усіма системами."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:205
 msgid ""
@@ -4304,6 +4571,9 @@ msgid ""
 "in the ``diff.gz`` source file.  This makes it hard to upgrade to new "
 "upstream versions or differentiate between patches and is best avoided."
 msgstr ""
+"У старіших пакунках зміни будуть включені напряму у джерела і зберігатися у "
+"джерельному файлі ``diff.gz``. Це робить складнішим процес оновлення до "
+"нових версій апстріму або відмінності між латками - ліпше уникати."
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:209
 msgid ""
@@ -4311,14 +4581,17 @@ msgid ""
 "maintainer or relevant Ubuntu team.  If there is no existing patch system "
 "then feel free to add Quilt."
 msgstr ""
+"Не змінюйте систему латання, не обміркувавши це з супроводжуючим Debian або "
+"командою Ubuntu яка має відношення до справи. Якщо існуючої системи латання "
+"немає, можете додати Quilt."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:3
 msgid "Security and Stable Release Updates"
-msgstr ""
+msgstr "Оновлення безпеки й оновлення стабільних релізів"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:6
 msgid "Fixing a Security Bug in Ubuntu"
-msgstr ""
+msgstr "Виправлення помилок безпеки в Ubuntu"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:11
 msgid ""
@@ -4328,10 +4601,15 @@ msgid ""
 "different, we will be updating the dbus package in Ubuntu 12.04 LTS (Precise "
 "Pangolin) for a security update."
 msgstr ""
+"Виправлення дірок у безпеці в Ubuntu фактично не відрізняється від "
+":doc:`виправлення звичайного багу<./fixing-a-bug>`, і припускається, що Ви "
+"знайомі з виправленням звичайних багів. Для демонстрації відмінностей ми "
+"будемо додавати у пакунок dbus в Ubuntu 12.04 LTS (Precise Pangolin) "
+"оновлення для системи безпеки."
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:19
 msgid "Obtaining the source"
-msgstr ""
+msgstr "Отримання джерельного коду"
 
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:21
 msgid ""
