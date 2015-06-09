@@ -7,6 +7,10 @@ ubuntu-packaging-guide (0.3.7) UNRELEASED; urgency=medium
   [ Walter Lapchynski ]
   * fixing-a-bug-example: Fix bad grammar in section 5.7 (LP: #1432970).
 
+  [ Daniel Holbach ]
+  * add Ukrainian language.
+  * Update Standards-Version to 3.9.6, no changes required.
+
  -- Walter Lapchynski <wxl@ubuntu.com>  Tue, 17 Mar 2015 00:10:27 -0700
 
 ubuntu-packaging-guide (0.3.6) unstable; urgency=medium

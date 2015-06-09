@@ -21,7 +21,7 @@ Build-Depends: cm-super-minimal,
 #              texlive-lang-cjk,
 #              latex-cjk-japanese
 Homepage: https://launchpad.net/ubuntu-packaging-guide
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 
 Package: ubuntu-packaging-guide
 Depends: ubuntu-packaging-guide-html, ${misc:Depends}
@@ -295,3 +295,45 @@ Description: Ubuntu Packaging Guide - EPUB guide - French version
  This package contains the EPUB version of the guide.
  .
  This is the French version.
+
+Package: ubuntu-packaging-guide-html-uk
+Depends: ubuntu-packaging-guide-common, ${misc:Depends}
+Architecture: all
+Description: Ubuntu Packaging Guide - HTML guide - Ukrainian version
+ The Ubuntu Packaging Guide is a set of articles that should help you to get
+ involved with packaging and development of Ubuntu. It's not meant to replace
+ other great documentation like the Debian New Maintainer's Guide or the
+ Debian policy, but serve as a starting point with easy and simple to
+ understand articles.
+ .
+ This package contains the HTML version of the guide.
+ .
+ This is the Ukrainian version.
+
+Package: ubuntu-packaging-guide-pdf-uk
+Depends: ${misc:Depends}
+Architecture: all
+Description: Ubuntu Packaging Guide - PDF guide - Ukrainian version
+ The Ubuntu Packaging Guide is a set of articles that should help you to get
+ involved with packaging and development of Ubuntu. It's not meant to replace
+ other great documentation like the Debian New Maintainer's Guide or the
+ Debian policy, but serve as a starting point with easy and simple to
+ understand articles.
+ .
+ This package contains the PDF version of the guide.
+ .
+ This is the Ukrainian version.
+
+Package: ubuntu-packaging-guide-epub-uk
+Depends: libjs-sphinxdoc, ${misc:Depends}
+Architecture: all
+Description: Ubuntu Packaging Guide - EPUB guide - Ukrainian version
+ The Ubuntu Packaging Guide is a set of articles that should help you to get
+ involved with packaging and development of Ubuntu. It's not meant to replace
+ other great documentation like the Debian New Maintainer's Guide or the
+ Debian policy, but serve as a starting point with easy and simple to
+ understand articles.
+ .
+ This package contains the EPUB version of the guide.
+ .
+ This is the Ukrainian version.
