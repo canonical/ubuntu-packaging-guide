@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-02 09:01+0200\n"
-"PO-Revision-Date: 2015-06-09 17:42+0000\n"
+"PO-Revision-Date: 2015-06-11 05:25+0000\n"
 "Last-Translator: Микола Ткач <Stuartlittle1970@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-10 04:56+0000\n"
+"X-Launchpad-Export-Date: 2015-06-11 05:25+0000\n"
 "X-Generator: Launchpad (build 17549)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -5182,11 +5182,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:118
 msgid "Upstream Tar"
-msgstr ""
+msgstr "Tar-файл з апстріму"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:120
 msgid "You can get the upstream tar by running::"
-msgstr ""
+msgstr "Отримати tar з апстріму можна за допомогою::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:124
 msgid ""
@@ -5196,15 +5196,20 @@ msgid ""
 "orig-source``. The upstream tar will also be recreated when using bzr to "
 "build the package::"
 msgstr ""
+"Таким чином пробуються декілька методів для потрапляння в tar апстріму, "
+"спочатку відтворюючи його з тегу ``upstream-x.y`` у архіві bzr, потім "
+"стягуючи з архіву Ubuntu, а потім запускаючи ``debian/rules get-orig-"
+"source``. Tar апстріму також буде відтворений при використанні bzr для "
+"побудови пакунку::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:132
 msgid ""
 "The `builddeb` plugin has several `configuration options <ConfOptions_>`_."
-msgstr ""
+msgstr "У втулки `builddeb` є декілька `опцій конфігурації <ConfOptions_>`_."
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:136
 msgid "Getting a branch for a particular release"
-msgstr ""
+msgstr "Отримання гілки для певного випуску"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:138
 msgid ""
@@ -5213,10 +5218,14 @@ msgid ""
 "the branch corresponding to a particular Ubuntu release.  For example, to "
 "get the Tomboy package for Quantal do::"
 msgstr ""
+"Якщо Ви бажаєте зробити щось типу `оновлення стабільного релізу <SRU_>`_ "
+"(SRU), або просто бажаєте вивчити код у старому релізі, Вам потрібно вибрати "
+"гілку, що відповідає певному релізу Ubuntu. Наприклад, щоб отримати пакунок "
+"Tomboy для Quantal::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:147
 msgid "Importing a Debian source package"
-msgstr ""
+msgstr "Імпорт пакунку джерельного коду Debian"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:149
 msgid ""
@@ -5227,22 +5236,32 @@ msgid ""
 "working tree to which the source package will be imported (remember to cd "
 "out of the `tomboy` directory created above)::"
 msgstr ""
+"Якщо пакунок, над яким Ви бажаєте працювати, доступний в Debian, але не в "
+"Ubuntu - код легко імпортувати у локальну гілку bzr для розробки. Наприклад, "
+"Ви бажаєте імпортувати джерельний пакунок `newpackage`. Ми почнемо із "
+"створення загальнодоступного сховища у якості звичайного, але нам також "
+"потрібно створити робоче дерево, у яке буде імпортовано джерельний пакунок "
+"(не забудьте виконати cd out директорії `tomboy`, створеній вище)::"
 
 #: ../ubuntu-packaging-guide/udd-getting-the-source.rst:162
 msgid ""
 "As you can see, we just need to provide the remote location of the dsc file, "
 "and Bazaar will do the rest.  You've now got a Bazaar source branch."
 msgstr ""
+"Як Ви бачите - потрібно просто вказати віддалене розташування файлу dsc, а "
+"Bazaar зробить решту. Тепер в Вас є джерельна гілка Bazaar."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:3
 msgid "Ubuntu Distributed Development — Introduction"
-msgstr ""
+msgstr "Розподілена розробка Ubuntu — вступ"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:5
 msgid ""
 "This guide focuses on packaging using the *Ubuntu Distributed Development* "
 "(UDD) method."
 msgstr ""
+"Цей посібник фокусується на роботі з пакунками з використанням методу "
+"*Ubuntu Distributed Development* (UDD)."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:8
 msgid ""
@@ -5251,10 +5270,15 @@ msgid ""
 "distributed version control system (DVCS) based software development.  The "
 "DVCS used for UDD is Bazaar_."
 msgstr ""
+"*Ubuntu Distributed Development* (UDD) — це нова технологія розробки "
+"пакунків Ubuntu, що використовує інструменти, процеси й послідовності дій, "
+"характерні для типової схеми розробки проґрам, заснованій на розподіленій "
+"системі керування версіями (DVCS). DVCS, що використовується в UDD — це "
+"Bazaar_."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:14
 msgid "Traditional Packaging Limitations"
-msgstr ""
+msgstr "Обмеження традиційних методів створення пакунків"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:16
 msgid ""
@@ -5263,6 +5287,11 @@ msgid ""
 "\"debian\" tar (or compressed diff file for older packages) containing the "
 "packaging and a .dsc meta-data file.  To see a traditional package run::"
 msgstr ""
+"Традиційно пакунки Ubuntu зберігаються у архівних tar-файлах. Традиційний "
+"пакунок джерельного коду складається з tar-файлу з джерельним кодом із "
+"апстріму, \"debian\" tar-файлу (або стисненого diff-файлу для старіших "
+"пакунків), що містить набір вхідних файлів для ствроення пакунку, і файлу "
+".dsc з метаданими. Щоб подивится на традиційний пакунок, виконайте команду::"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:23
 msgid ""
@@ -5271,6 +5300,10 @@ msgid ""
 "``kdetoys_4.6.5-0ubuntu1~ppa1.dsc``.  Assuming you have dpkg-dev installed "
 "it will extract these and give you the source package."
 msgstr ""
+"Вона завантажить джерельні коди з апстріму ``kdetoys_4.6.5.orig.tar.bz2``, "
+"набір вхідних файлів ``kdetoys_4.6.5-0ubuntu1.debian.tar.gz`` й метадані "
+"``kdetoys_4.6.5-0ubuntu1~ppa1.dsc``. Якщо в Вас встановлено dpkg-dev, вона "
+"витягне їх вміст і надасть Вам пакунок джерельного коду."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:28
 msgid ""
@@ -5286,10 +5319,21 @@ msgid ""
 "where that is and how to get the packaging before they can work on the "
 "package."
 msgstr ""
+"Традиційні методи створення пакунків відредагують та завантажать ці файли. "
+"Втім це дає обмежені можливості для співробітництва з іншими розробниками, "
+"зміни повинні передаватися через файли diff без центрального способу "
+"відстеження їх, на додаток два розробника не можуть вносити зміни одночасно. "
+"Тому більшість команд розробників перейшли від традиційного методу створення "
+"пакунків до системи контролю версій. Це дозволяє декільком розробникам "
+"працювати над пакунком разом. Втім немає прямого зв’язку між системою "
+"контролю версій й архівом пакунків, тому їх необхідно буде вручну "
+"синхронізувати. Оскільки кожна команда працює у власній системі контролю "
+"версій перспективний розробник повинен спочатку розібратися де, що й як "
+"отримати пакунок, перед тим як вони зможуть працювати з цим пакунком."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:40
 msgid "Ubuntu Distributed Development"
-msgstr ""
+msgstr "Розподілена розробка Ubuntu"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:42
 msgid ""
@@ -5301,17 +5345,28 @@ msgid ""
 "are large enough to need review or if they are by someone without direct "
 "commit access."
 msgstr ""
+"З Ubuntu Distributed Development усі пакунки у архіві Ubuntu (і Debian) "
+"автоматично імпортуються у гілки Bazaar на нашому сайті хостингу коду "
+"Launchpad. Зміни можна вносити напряму у ці гілки кроками збільшення будь-"
+"яким користувачем, в якого є доступ. Зміни також можна вносити у роздвоєні "
+"гілки й з’єднувати їх назад за допомогою Пропозицій та Злиттів (Merge "
+"Proposals), коли вони стануть достатньо великими для розгляду, або якщо "
+"створені кимось без прямого доступу."
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:49
 msgid ""
 "UDD branches are all in a standard location, so doing a checkout is easy::"
 msgstr ""
+"UDD гілки усі знаходяться у стандартному місцезнаходженні, тому налагодження "
+"буде легким::"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:53
 msgid ""
 "The merge history includes two separate branches, one for the upstream "
 "source and one which adds the ``debian/`` packaging directory::"
 msgstr ""
+"Історія об’єднань включає дві окремі гілки, одну для джерела апстріму й "
+"іншу, яка додасть директорію пакунку ``debian/``::"
 
 #: ../ubuntu-packaging-guide/udd-intro.rst:59
 msgid ""
