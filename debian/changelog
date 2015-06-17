@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (0.3.7) UNRELEASED; urgency=medium
+ubuntu-packaging-guide (0.3.7) unstable; urgency=medium
 
   [ Dmitry Shachnev ]
   * packaging-new-software: Add bzr-builddeb to the list of required
@@ -13,7 +13,7 @@ ubuntu-packaging-guide (0.3.7) UNRELEASED; urgency=medium
   * add Ukrainian language.
   * Update Standards-Version to 3.9.6, no changes required.
 
- -- Walter Lapchynski <wxl@ubuntu.com>  Tue, 17 Mar 2015 00:10:27 -0700
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 17 Jun 2015 10:35:34 +0300
 
 ubuntu-packaging-guide (0.3.6) unstable; urgency=medium
 
