@@ -4,6 +4,7 @@ ubuntu-packaging-guide (0.3.7) UNRELEASED; urgency=medium
   * packaging-new-software: Add bzr-builddeb to the list of required
     packages (LP: #1385567).
   * Add myself to Uploaders.
+  * Fix BSD license in debian/copyright.
 
   [ Walter Lapchynski ]
   * fixing-a-bug-example: Fix bad grammar in section 5.7 (LP: #1432970).
