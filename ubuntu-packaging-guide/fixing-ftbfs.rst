@@ -49,16 +49,6 @@ maintains a list of command FTBFSs and how to fix them which can be found at
 https://wiki.debian.org/qa.debian.org/FTBFS, you will want to check it for 
 solutions too.
 
-ARM64
-=====
-Ubuntu has added arm64 as a architecture recently, but many packages fail to 
-build on it. A full list of the packages not building are at 
-qa.ubuntuwire.org/ftbfs/arm64.html. Many of these are caused by packages 
-using outdated autotools helper files. Any package with the lintian warning 
-ancient-autotools-helper-file or outdated-autotools-helper-file will have 
-this issue. Adding autotools-dev or dh-autoreconf to the build proccess will 
-usually fix this. 
-
 Other causes of a package to FTBFS
 ==================================
 If a package is in main and missing a dependency that is not in main, you 
