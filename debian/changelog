@@ -1,6 +1,7 @@
 ubuntu-packaging-guide (0.3.8) UNRELEASED; urgency=medium
 
   * fixing-ftbfs: Remove outdated section about arm64 (LP: #1485311).
+  * auto-pkg-test: Update link to autopkgtest results (LP: #1489782).
 
  -- Dmitry Shachnev <mitya57@debian.org>  Sun, 16 Aug 2015 16:54:49 +0300
 
