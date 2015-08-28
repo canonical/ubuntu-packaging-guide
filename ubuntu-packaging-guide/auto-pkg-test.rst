@@ -6,10 +6,6 @@ The `DEP 8 specification <DEP8_>`_ defines how automatic testing can very easily
 integrated into packages. To integrate a test into a package, all you need to 
 do is:
 
-* add the following to the Source section in ``debian/control``:: 
-
-        XS-Testsuite: autopkgtest
-
 * add a file called ``debian/tests/control`` which specifies the requirements 
   for the testbed,
 * add the tests in ``debian/tests/``.
