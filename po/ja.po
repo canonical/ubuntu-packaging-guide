@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-02 09:01+0200\n"
-"PO-Revision-Date: 2013-06-06 16:30+0000\n"
+"PO-Revision-Date: 2016-01-17 19:54+0000\n"
 "Last-Translator: Kentaro Kazuhama <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-24 05:03+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2016-01-18 05:35+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
-msgstr ""
+msgstr "autopkgtest: パッケージの自動テスト"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:5
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
 msgid "The actual tests"
-msgstr ""
+msgstr "実際のテスト"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
 msgid "The accompanying test for the example above might be:"
@@ -1263,15 +1263,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 msgid "where the change was done"
-msgstr ""
+msgstr "どこを変更したか"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
 msgid "what was changed"
-msgstr ""
+msgstr "何を変更したか"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:170
 msgid "where the discussion of the change happened"
-msgstr ""
+msgstr "この変更についてどこで議論しているか"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:172
 msgid ""
@@ -1301,15 +1301,15 @@ msgstr ""
 msgid ""
 "To push it to Launchpad, as the remote branch name, you need to stick to the "
 "following nomenclature::"
-msgstr ""
+msgstr "Launchpadへpushするためには、リモートのブランチ名として、次のような記法を使う必要があります::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
 msgid "This could for example be::"
-msgstr ""
+msgstr "例えば次のようになります::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:199
 msgid "So if you just run::"
-msgstr ""
+msgstr "次のように実行します::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:204
 msgid ""
@@ -1780,7 +1780,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:12
 msgid "Ubuntu-specific packaging utilities"
-msgstr ""
+msgstr "Ubuntu特有のパッケージングユーティリティ"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:13
 msgid "Encryption software so your work can be verified as being done by you"
@@ -1792,7 +1792,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
 msgid "Creating and configuring your account on Launchpad"
-msgstr ""
+msgstr "Launchpadのアカウントの作成と設定"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:17
 msgid ""
@@ -1816,7 +1816,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
-msgstr ""
+msgstr "基本的なパッケージングソフトウェアのインストール"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:34
 msgid ""
@@ -1835,7 +1835,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:49
 msgid "This command will install the following software:"
-msgstr ""
+msgstr "このコマンドは以下のソフトウェアをインストールします:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:51
 msgid ""
@@ -1872,7 +1872,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:67
 msgid "Create your GPG key"
-msgstr ""
+msgstr "GPG鍵の作成"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:69
 msgid ""
@@ -1886,7 +1886,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:76
 msgid "To generate a new GPG key, run::"
-msgstr ""
+msgstr "新しいGPG鍵を生成するには、以下を実行します::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:80
 msgid ""
@@ -1934,7 +1934,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:116
 msgid "Create your SSH key"
-msgstr ""
+msgstr "SSH鍵の作成"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:118
 msgid ""
@@ -1947,7 +1947,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:124
 msgid "To generate an SSH key, enter::"
-msgstr ""
+msgstr "SSH鍵を生成するには以下を入力します::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:128
 msgid ""
@@ -1958,7 +1958,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:133
 msgid "Set up pbuilder"
-msgstr ""
+msgstr "pbuilderのセットアップ"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:135
 msgid ""
@@ -1976,7 +1976,7 @@ msgstr ""
 #: ../ubuntu-packaging-guide/getting-set-up.rst:141
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
-msgstr ""
+msgstr "*ビルド依存物*をローカルにインストールする必要はありません"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:142
 msgid ""
@@ -2024,7 +2024,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:167
 msgid "About Launchpad"
-msgstr ""
+msgstr "Launchpadとは"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid ""
@@ -2051,7 +2051,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:184
 msgid "Get a Launchpad account"
-msgstr ""
+msgstr "Launchpadアカウントの取得"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:186
 msgid ""
@@ -2083,7 +2083,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:206
 msgid "Upload your GPG key to Launchpad"
-msgstr ""
+msgstr "GPG鍵のLaunchpadへのアップロード"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:208
 msgid "First, you will need to get your fingerprint and key ID."
@@ -2095,7 +2095,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:214
 msgid "and it will print out something like::"
-msgstr ""
+msgstr "そしてこのようなものが出力されるでしょう::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:221
 msgid "Then run this command to submit your key to Ubuntu keyserver::"
@@ -2149,7 +2149,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:258
 msgid "Upload your SSH key to Launchpad"
-msgstr ""
+msgstr "SSH鍵のLaunchpadへのアップロード"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:260
 msgid ""
@@ -2168,7 +2168,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:272
 msgid "Configure Bazaar"
-msgstr ""
+msgstr "Bazzarの設定"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:274
 msgid ""
@@ -2198,7 +2198,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:294
 msgid "Configure your shell"
-msgstr ""
+msgstr "シェルの設定"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:295
 msgid ""
@@ -2219,7 +2219,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:9
 msgid "Ubuntu Packaging Guide"
-msgstr ""
+msgstr "Ubuntuパッケージングガイド"
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
@@ -2236,11 +2236,11 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:17
 msgid "your development environment set up correctly,"
-msgstr ""
+msgstr "開発環境を正しく設定でき、"
 
 #: ../ubuntu-packaging-guide/index.rst:18
 msgid "a better idea of how to join our community,"
-msgstr ""
+msgstr "コミュニティーへの参加方法をより良く理解でき、"
 
 #: ../ubuntu-packaging-guide/index.rst:19
 msgid "fixed an actual Ubuntu bug as part of the tutorials."
@@ -2278,7 +2278,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:39
 msgid "The guide is split up into two sections:"
-msgstr ""
+msgstr "このガイドは2つのセクションに分割されています:"
 
 #: ../ubuntu-packaging-guide/index.rst:41
 msgid "A list of articles based on tasks, things you want to get done."
@@ -4542,7 +4542,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:3
 msgid "Uploading a package"
-msgstr ""
+msgstr "パッケージのアップロード"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:5
 msgid ""
@@ -4554,7 +4554,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:12
 msgid "Uploading a change made by you"
-msgstr ""
+msgstr "あなたが行った変更をアップロードする"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:14
 msgid ""
@@ -4627,7 +4627,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:63
 msgid "Now you can push the changes back to Launchpad::"
-msgstr ""
+msgstr "これでLaunchpadへ変更をpushできるようになりました::"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:67
 msgid "(Change the destination if you are uploading an SRU or similar.)"
@@ -4652,7 +4652,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:84
 msgid "Sponsoring a change"
-msgstr ""
+msgstr "変更をスポンサーする"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:86
 msgid ""
@@ -4676,7 +4676,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:103
 msgid "Canceling an upload"
-msgstr ""
+msgstr "アップロードをキャンセルする"
 
 #: ../ubuntu-packaging-guide/udd-uploading.rst:105
 msgid ""
@@ -4843,10 +4843,12 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Kenichi Ito https://launchpad.net/~ken-i54k\n"
 "  Kentaro Kazuhama https://launchpad.net/~kazken3\n"
 "  Mitsuya Shibata https://launchpad.net/~cosmos-door\n"
 "  OKANO Takayoshi https://launchpad.net/~kano\n"
-"  Shushi Kurose https://launchpad.net/~kuromabo"
+"  Shushi Kurose https://launchpad.net/~kuromabo\n"
+"  Yoshikazu Nojima https://launchpad.net/~ynojima"
 
 #~ msgid ""
 #~ "This will create a directory ``oneiric`` and install a minimal oneiric "
