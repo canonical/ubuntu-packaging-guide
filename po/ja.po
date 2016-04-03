@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-02 09:01+0200\n"
-"PO-Revision-Date: 2016-03-10 19:49+0000\n"
+"PO-Revision-Date: 2016-04-03 03:56+0000\n"
 "Last-Translator: Kentaro Kazuhama <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-11 05:38+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
+"X-Launchpad-Export-Date: 2016-04-03 05:28+0000\n"
+"X-Generator: Launchpad (build 17972)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -857,6 +857,13 @@ msgid ""
 "``foo.install`` containing only the architecture dependent files might look "
 "like::"
 msgstr ""
+"一つのソースパッケージから複数のバイナリパッケージを生成するとき、 ``dh`` はファイルを ``debian/<package>`` ではなく "
+"``debian/tmp`` にインストールします。 ``debian/tmp`` にインストールされたファイルたちは、複数の "
+"``$package_name.install`` "
+"ファイルを使うことで別々のバイナリパッケージへと分割できます。この方法はしばしば、アーキテクチャに依存しない大量のデータを、アーキテクチャに依存するパッケ"
+"ージから ``Architecture: all`` "
+"なパッケージへと分離する際に使われます。この場合、インストールされるファイル（とディレクトリ）の名前だけを列挙すれば良く、インストール先のディレクトリを指"
+"定する必要はありません。例えば、アーキテクチャに依存したファイルのみを含む ``foo.install`` は次のように記述します::"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:281
 msgid ""
@@ -955,7 +962,7 @@ msgstr "``3.0 (quilt)`` 別途、アップストリームの tarボールが存�
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:346
 msgid "``1.0`` for packages wishing to explicitly declare the default format"
-msgstr ""
+msgstr "``1.0`` 既定の書式であることが明示されたパッケージ"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:348
 msgid ""
@@ -1037,6 +1044,8 @@ msgid ""
 "If you followed the instructions to :doc:`get set up with Ubuntu "
 "Development<./getting-set-up>`, you should be all set and ready to go."
 msgstr ""
+":doc:`get set up with Ubuntu Development<./getting-set-up>` "
+"をまだ読んでいないなら、まずはそちらで設定を行ってから先に読み進めてください。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:13
 msgid ""
@@ -1046,6 +1055,8 @@ msgid ""
 "and merged. In this guide we will go through all the necessary steps one by "
 "one."
 msgstr ""
+"上図からもわかる通り、Ubuntuにおけるバグ修正の手順に特別な意外性はありません：問題を見つけたら、ソースコードを取得し、問題を修正し、テストし、変更点"
+"をLaunchpadに報告し、レビューとマージ（取り込み）のための依頼をするだけです。このガイドでは、必要なすべての手順について、一つずつ説明します。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:20
 msgid "Finding the problem"
@@ -1057,6 +1068,8 @@ msgid ""
 "bug report you are encountering yourself (which gives you a good opportunity "
 "to test the fix), or a problem you noted elsewhere, maybe in a bug report."
 msgstr ""
+"問題を見つける方法はいくつか存在します。それはあなた自身が遭遇した不具合かもしれませんし（その場合、修正点に対してテストを行う良い機械でしょう）、どこか別"
+"の場所で発生した問題をバグレポートの中から見つけるということもあります。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:26
 msgid ""
@@ -1065,6 +1078,9 @@ msgid ""
 "upstream or in Debian already, lists small bugs (we call them 'bitesize'), "
 "and so on. Check it out and find your first bug to work on."
 msgstr ""
+"`Harvest <http://harvest.ubuntu.com/>`_ "
+"では、Ubuntu開発のTODOリストを記録しています。アップストリームやDebianで既に修正されたバグのリスト、ささいなバグ（「bitsize」と読ん"
+"でいます）のリストなどがあります。最初に取り組むバグはここを確認すると良いでしょう。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:35
 msgid "Figuring out what to fix"
@@ -1102,6 +1118,8 @@ msgid ""
 "build multiple different binary packages.  To find the source package for a "
 "particular binary package, type::"
 msgstr ""
+"コロンより前の部分がバイナリパッケージの名前です。ソースパッケージとバイナリパッケージは名前が異なることがしばしばあります。一つのソースパッケージから、複"
+"数のバイナリパッケージを作成することはよくあるからです。個々のバイナリパッケージからソースパッケージを見つけるために、次のように入力します::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:63
 msgid "``apt-cache`` is part of the standard installation of Ubuntu."
@@ -1137,7 +1155,7 @@ msgstr ""
 msgid ""
 "We'll describe specifics on how to branch the code, push your fix, and "
 "request a review in the following sections."
-msgstr ""
+msgstr "コードのブランチ方法、修正内容をプッシュする方法、レビューを依頼する方法については、後のセクションで説明します。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:89
 msgid "Work on a fix"
@@ -1150,6 +1168,8 @@ msgid ""
 "such as obvious typos first. Try to keep changes as minimal as possible and "
 "document your change and assumptions clearly."
 msgstr ""
+"不具合の見つけ方や修正やテストの方法などを記述すると何冊もの本になってしまいます。プログラミングの初心者であれば、最初は明らかなタイプミスなど簡単な修正か"
+"らはじめましょう。変更点はできるだけ小さくし、その変更点と前提条件ははっきりとドキュメントに残すようにしてください。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
 msgid ""
@@ -1157,6 +1177,7 @@ msgid ""
 "has fixed it already or is currently working on a fix. Good sources to check "
 "are:"
 msgstr ""
+"修正作業を始める前に、他の誰かが既に修正した、もしくは現在修正中であるかどうかを調べておきましょう。調べるに際して以下の情報源をあたると良いでしょう:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
@@ -1235,6 +1256,9 @@ msgid ""
 "includes ``debian/changelog``, where changes of each uploaded package are "
 "tracked."
 msgstr ""
+"将来あなたが変更を加えたコードを見た人が、あなたが行った変更の理由や前提条件を推測しなくてもすむように、変更について十分なドキュメントを残すことは大変重要"
+"です。すべてのDebianとUbuntuのパッケージは、アップロードされたパッケージの変更点を追跡するための ``debian/changelog`` "
+"を持っています。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:146
 msgid "The easiest way to update this is to run::"
@@ -1245,6 +1269,7 @@ msgid ""
 "This will add a boilerplate changelog entry for you and launch an editor "
 "where you can fill in the blanks. An example of this could be::"
 msgstr ""
+"これによりchangelogエントリーの定型文が挿入され、内容を追記するためのエディターが起動します。例えば以下のように入力すると良いでしょう::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:159
 msgid ""
@@ -1254,6 +1279,10 @@ msgid ""
 "always is 'low'). The last line always contains the name, email address and "
 "timestamp (in :rfc:`5322` format) of the change."
 msgstr ""
+"``dch`` "
+"は、changelogエントリーの先頭行と最終行を書き込みます。先頭行はソースパッケージの名前、バージョン番号、アップロード対象のUbuntuリリース、緊"
+"急度（ほとんどの場合は「low」になります）からなります。最終行は常に、名前とメールアドレスと、変更の日時（ :rfc:`5322` "
+"の書式で）からなります。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
 msgid ""
@@ -1282,6 +1311,10 @@ msgid ""
 "bugs, the bug will be automatically closed when the package is uploaded to "
 "Ubuntu."
 msgstr ""
+"今回の（とても簡単な）例において、最後の部分は ``(LP: #123456)`` "
+"で実現しています。これは、Launchpadのバグ123456を参照しています。バグレポートやメーリングリストのスレッド、仕様書は変更の根拠として提供する"
+"良い情報源でしょう。おまけに、Launchpadのバグについては ``LP: #<番号>`` "
+"記法を使うと、そのパッケージがUbuntuにアップロードされたら自動的にチケットが閉じられます。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:181
 msgid "Committing the fix"
@@ -1289,13 +1322,13 @@ msgstr "修正をコミットする"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:183
 msgid "With the changelog entry written and saved, you can just run::"
-msgstr ""
+msgstr "chengelogのエントリーを記述、保存したら、次のコマンドを実行しましょう::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:187
 msgid ""
 "and the change will be committed (locally) with your changelog entry as a "
 "commit message."
-msgstr ""
+msgstr "これにより変更点が（ローカルに）コミットされ、changelogのエントリーがコミットメッセージとして使われます。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:190
 msgid ""
@@ -1318,6 +1351,9 @@ msgid ""
 "browser. There find the \"(+) Propose for merging\" link, click it to get "
 "the change reviewed by somebody and included in Ubuntu."
 msgstr ""
+"必要なことはすべて終わりました。pushコマンドはLaunchpadへのpushを行い、二つ目のコマンドはリモートブランチのLaunchpadページをブラ"
+"ウザーで開きます。\"(+) Propose for "
+"merging\"リンクを探してください。誰かに変更点をレビューしてもらい、Ubuntuに取り込んでもらうために、それをクリックしてください。"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:209
 msgid ""
@@ -1764,7 +1800,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
 msgid "Getting Set Up"
-msgstr ""
+msgstr "セットアップ"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:5
 msgid ""
@@ -1773,10 +1809,12 @@ msgid ""
 "start working with packages, and upload your packages to Ubuntu's hosting "
 "platform, Launchpad. Here's what we'll cover:"
 msgstr ""
+"Ubuntu開発を開始するにあたり、沢山のことをする必要があります。パッケージに取り組み、パッケージをUbuntuのホスティングプラットフォームであるLa"
+"unchpadにアップロード出来るようになるよう、コンピューターをセットアップするために、この記事は書かれています。以下にカバーする内容を示します："
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:10
 msgid "Installing packaging-related software. This includes:"
-msgstr ""
+msgstr "パッケージング関係のソフトウェアのインストール。以下を含みます。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:12
 msgid "Ubuntu-specific packaging utilities"
@@ -1784,11 +1822,11 @@ msgstr "Ubuntu特有のパッケージングユーティリティ"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:13
 msgid "Encryption software so your work can be verified as being done by you"
-msgstr ""
+msgstr "あなたの仕事があなたによって行われたことを検証するための暗号化ソフトウェア"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:14
 msgid "Additional encryption software so you can securely transfer files"
-msgstr ""
+msgstr "ファイルを安全に転送するための暗号化ソフトウェアの追加"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
 msgid "Creating and configuring your account on Launchpad"
@@ -1813,6 +1851,8 @@ msgid ""
 "Don't worry though, you can use `Testdrive`_ or :doc:`chroots <./chroots>` "
 "to safely use the development release."
 msgstr ""
+"心配することはありません。開発リリースを安全に使用するために、`Testdrive`_や:doc:`chroots`<./chroots>`を利用すること"
+"が出来ます。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid "Install basic packaging software"
@@ -1824,6 +1864,8 @@ msgid ""
 "much easier.  You will encounter these tools later in this guide.  To "
 "install most of the tools you will need run this command::"
 msgstr ""
+"Ubuntu開発者としての生活をもっと楽にしてくれるたくさんのツールが存在します。このガイドの後ろの部分で、これらのツールに出会うでしょう。ツールの大半を"
+"インストールするために、以下のコマンドを実行する必要があります::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:41
 msgid ""
@@ -1832,6 +1874,9 @@ msgid ""
 "install the above and other tools which are quite common in Ubuntu "
 "development::"
 msgstr ""
+"注意：Ubuntu 11.10 \"Oneiric "
+"Ocelot\"（あるいは現在サポートされているリリースでBackportsを有効化している場合）、以下のコマンドで、上記のツールと、Ubuntu開発で非"
+"常に一般的な他のツールをインストールすることが出来ます::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:49
 msgid "This command will install the following software:"
@@ -1843,18 +1888,22 @@ msgid ""
 "create a cryptographic key with which you will sign files you want to upload "
 "to Launchpad."
 msgstr ""
+"``gnupg`` -- `GNU Privacy Guard <GPG_>`_ "
+"はLaunchpadにアップロードしたいファイルを署名する暗号鍵を作成するにに必要なツールを含みます。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:54
 msgid ""
 "``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
 "isolated environment."
-msgstr ""
+msgstr "``pbuilder`` -- クリーンで隔離された環境でパッケージの再現性のあるビルドを行うためのツール。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:56
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
 msgstr ""
+"``ubuntu-dev-tools`` （と直接依存した``devscripts``） -- "
+"たくさんのパッケージングタスクを簡単にするためのツールコレクション。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:58
 msgid ""
@@ -1868,7 +1917,7 @@ msgstr ""
 msgid ""
 "``apt-file`` provides an easy way to find the binary package that contains a "
 "given file."
-msgstr ""
+msgstr "``apt-file`` は指定されたファイルを提供するバイナリパッケージを探す簡単な方法を提供します。"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:67
 msgid "Create your GPG key"
