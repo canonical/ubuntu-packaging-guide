@@ -82,7 +82,7 @@ Executing the test
 ==================
 
 While the test script can be easily executed on its own, it is strongly
-recommended to actually use ``adt-run`` from the ``autopkgtest`` package for
+recommended to actually use ``autopkgtest`` from the ``autopkgtest`` package for
 verifying that your test works; otherwise, if it fails in the Ubuntu Continuous
 Integration (CI) system, it will not land in Ubuntu.  This also avoids cluttering
 your workstation with test packages or test configuration if the test does
@@ -90,8 +90,8 @@ something more intrusive than the simple example above.
 
 The `README.running-tests <running_tests_local_>`_
 (`online version <DEP8_>`_) documentation explains all
-available testbeds (schroot, LXC, QEMU, etc.) and the most common scenarios how
-to run your tests with ``adt-run``, e. g. with locally built binaries, locally
+available testbeds (schroot, LXD, QEMU, etc.) and the most common scenarios how
+to run your tests with ``autopkgtest``, e. g. with locally built binaries, locally
 modified tests, etc.
 
 The Ubuntu CI system uses the QEMU runner and runs the tests from the packages
@@ -110,15 +110,20 @@ architectures, output directory, or using proxies). This will build e. g.
 
 Then run the tests of a source package like ``libpng`` in that QEMU image::
 
-        adt-run libpng --- qemu adt-trusty-amd64-cloud.img
+        autopkgtest libpng --- qemu adt-trusty-amd64-cloud.img
 
-The Ubuntu CI system runs packages with ``-proposed`` enabled; to enable that,
-run::
+The Ubuntu CI system runs packages with only selected packages from
+``-proposed`` available (the package which caused the test to be run); to
+enable that, run::
 
-        adt-run libpng -U --apt-pocket=proposed --- qemu adt-trusty-amd64-cloud.img
+        autopkgtest libpng -U --apt-pocket=proposed=src:foo --- qemu adt-release-amd64-cloud.img
 
-The ``adt-run`` manpage has a lot more valuable information on other testing
-options.
+or to run with all packages from ``-proposed``::
+
+        autopkgtest libpng -U --apt-pocket=proposed --- qemu adt-release-amd64-cloud.img
+
+The ``autopkgtest`` manpage has a lot more valuable information on other
+testing options.
 
 
 Further examples
@@ -145,10 +150,10 @@ they get uploaded or any of their dependencies change. The output of
 `automatically run autopkgtest tests <jenkins_>`_ can be viewed on the web and is 
 regularly updated.
 
-Debian also uses ``adt-run`` to run package tests, although currently only in
-schroots, so results may vary a bit. Results and logs can be seen on
-http://ci.debian.net. So please submit any test fixes or new
-tests to Debian as well.
+Debian also uses ``autopkgtest`` to run package tests, although currently only
+in schroots, so results may vary a bit. Results and logs can be seen on
+http://ci.debian.net. So please submit any test fixes or new tests to Debian as
+well.
 
 Getting the test into Ubuntu
 ============================
