@@ -102,7 +102,7 @@ environment, first install the necessary packages::
 
 Now build a testbed with::
 
-        adt-buildvm-ubuntu-cloud -v
+        autopkgtest-buildvm-ubuntu-cloud -v
 
 (Please see its manpage and ``--help`` output for selecting different releases,
 architectures, output directory, or using proxies). This will build e. g.
