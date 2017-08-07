@@ -8,6 +8,7 @@ Vcs-Browser: https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-pack
 Build-Depends: cm-super-minimal,
                debhelper (>= 7.0.50~),
                doc-base,
+               latexmk,
                python3-polib,
                python3-sphinx (>= 1.1.3+dfsg-6~) | python-sphinx (>= 1.1.3+dfsg-6~),
                texlive-fonts-recommended,
