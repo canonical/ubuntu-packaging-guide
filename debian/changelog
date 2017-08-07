@@ -1,3 +1,9 @@
+ubuntu-packaging-guide (0.3.9) UNRELEASED; urgency=medium
+
+  * Build-depend on latexmk to fix build with Sphinx 1.6.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 07 Aug 2017 16:47:47 +0300
+
 ubuntu-packaging-guide (0.3.8) unstable; urgency=medium
 
   * fixing-ftbfs: Remove outdated section about arm64 (LP: #1485311).
