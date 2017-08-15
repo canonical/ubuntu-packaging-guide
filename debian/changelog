@@ -1,10 +1,10 @@
-ubuntu-packaging-guide (0.3.9) UNRELEASED; urgency=medium
+ubuntu-packaging-guide (0.3.9) unstable; urgency=medium
 
   * Build-depend on latexmk to fix build with Sphinx 1.6.
   * Bump Standards-Version to 4.0.0, no changes needed.
   * Bump debhelper compatibility level to 10.
 
- -- Dmitry Shachnev <mitya57@debian.org>  Mon, 07 Aug 2017 16:47:47 +0300
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 15 Aug 2017 20:03:36 +0300
 
 ubuntu-packaging-guide (0.3.8) unstable; urgency=medium
 
