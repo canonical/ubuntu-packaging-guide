@@ -6,6 +6,7 @@ ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
     - Replace Harvest with Launchpad-native links (LP: #1697400).
     - Advertise and mention development release (LP: #1006747).
     - Make cycle-branching.{svg,png} clearer.
+    - lintian.ubuntuwire.org is down, remove that part (LP: #1686096).
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
 
