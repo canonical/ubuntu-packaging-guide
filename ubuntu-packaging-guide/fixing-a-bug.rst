@@ -121,7 +121,7 @@ this::
     $ quilt header --dep3 -e
 
 This will open the template in a text editor. Follow the template and make
-sure to be thorough do you get all the details necessary to describe the
+sure to be thorough so you get all the details necessary to describe the
 patch.
 
 
@@ -130,12 +130,21 @@ Testing the fix
 
 To build a test package with your changes, run these commands::
 
-  $ bzr builddeb -- -S -us -uc
+  $ debuild -S -d -us -uc
   $ pbuilder-dist <release> build ../<package>_<version>.dsc
 
 This will create a source package from the branch contents (``-us -uc`` will
-just omit the step to sign the source package) and ``pbuilder-dist`` will
-build the package from source for whatever ``release`` you choose.
+just omit the step to sign the source package and ``-d`` will skip the step
+where it checks for build dependencies, pbuilder will take care of that) and
+``pbuilder-dist`` will build the package from source for whatever ``release``
+you choose.
+
+.. note::
+ If ``debuild`` errors out with "Version number suggests Ubuntu changes, but
+ Maintainer: does not have Ubuntu address" then run the ``update-maintainer``
+ command (from ubuntu-dev-tools) and it will automatically fix this for you.
+ This happens because in Ubuntu, all Ubuntu Developers are responsible for all
+ Ubuntu packages, while in Debian, packages have maintainers.
 
 Once the build succeeds, install the package from
 ``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i
@@ -173,9 +182,9 @@ which Ubuntu release it is uploaded to, the urgency (which almost always is
 With that out of the way, let's focus on the actual changelog entry itself:
 it is very important to document:
 
-    #. where the change was done
-    #. what was changed
-    #. where the discussion of the change happened
+    #. Where the change was done.
+    #. What was changed.
+    #. Where the discussion of the change happened.
 
 In our (very sparse) example the last point is covered by ``(LP: #123456)``
 which refers to Launchpad bug 123456. Bug reports or mailing list threads or
@@ -184,37 +193,77 @@ change. As a bonus, if you use the ``LP: #<number>`` notation for Launchpad
 bugs, the bug will be automatically closed when the package is uploaded to
 Ubuntu.
 
+In order to get it sponsored in the next section, you need to file a bug
+report in Launchpad (if there isn't one already, if there is, use that) and
+explain why your fix should be included in Ubuntu. For example, for tomboy,
+you would file a bug `here`_ (edit the URL to reflect the package you have a
+fix for). Once a bug is filed explaining your changes, put that bug number in
+the changelog.
 
-Committing the fix
-------------------
+.. _here: https://bugs.launchpad.net/ubuntu/+source/tomboy/+filebug
 
-With the changelog entry written and saved, you can just run::
+Submitting the fix and getting a review
+---------------------------------------
 
-  debcommit
+With the changelog entry written and saved, run ``debuild`` one more time::
 
-and the change will be committed (locally) with your changelog entry as a
-commit message.
+  $ debuild -S -d
 
-To push it to Launchpad, as the remote branch name, you need to stick to the
-following nomenclature::
+and this time it will be signed and you are now ready to get your diff to
+submit to get sponsored. Now it's time to generate a "debdiff", which shows
+the difference between two Debian packages. The name of the command used to
+generate one is also ``debdiff``. It is part of the ``devscripts`` package.
+See ``man debdiff`` for all the details. To compare two source packages,
+pass the two dsc files as arguments::
 
-  lp:~<yourlpid>/ubuntu/<release>/<package>/<branchname>
+  $ debdiff <package_name>_1.0-1.dsc <package_name>_1.0-1ubuntu1.dsc
 
-This could for example be::
+In this case, ``debdiff`` the dsc you downloaded with ``pull-lp-source`` and
+the new dsc file you generated. This will generate a patch that your sponsor
+can then apply locally (by using ``patch -p1 < /path/to/debdiff``). In this
+case, pipe the output of the debdiff command to a file that you can then
+attach to the bug report::
 
-  lp:~emmaadams/ubuntu/trusty/specialpackage/fix-for-123456
+  $ debdiff <package_name>_1.0-1.dsc <package_name>_1.0-1ubuntu1.dsc > 1-1.0-1ubuntu1.debdiff
 
-So if you just run::
+The format shown in ``1-1.0-1ubuntu1.debdiff`` shows:
 
-  bzr push lp:~emmaadams/ubuntu/trusty/specialpackage/fix-for-123456
-  bzr lp-propose
+    #. ``1-`` tells the sponsor that this is the first revision of your patch.
+       Nobody is perfect, and sometimes follow-up patches need to be provided.
+       This makes sure that if your patch needs work, that you can keep a
+       consistent naming scheme.
+    #. ``1.0-1ubuntu1`` shows the new version being used. This makes it easy
+       to see what the new version is.
+    #. ``.debdiff`` is an extension that makes it clear that it is a debdiff.
 
-you should be all set. The push command should push it to Launchpad and the
-second command will open the Launchpad page of the remote branch in your
-browser. There find the "(+) Propose for merging" link, click it to get the
-change reviewed by somebody and included in Ubuntu.
+While this format is optional, it works well and you can use this.
 
-If your branch fixes issues in stable releases or it is a security fix, you
-might want to have a look at our
+Before you continue, if this patch is a security update or an update for a
+stable release, make sure you take a look at our
 :doc:`Security and stable release updates<./security-and-stable-release-updates>`
-article.
+article if this is your first time doing this to save you and your sponsor
+time.
+
+Next, go to the bug report, make sure you are logged into Launchpad, and click
+"Add attachment or patch" under where you would add a new comment. Attach the
+debdiff, and leave a comment telling your sponsor how this patch can be
+applied and the testing you have done. An example comment can be::
+
+  This is a debdiff for Artful applicable to 1.0-1. I built this in pbuilder
+  and it builds successfully, and I installed it, the patch works as intended.
+
+Make sure you mark it as a patch (the Ubuntu Sponsors team will automatically
+be subscribed) and that you are subscribed to the bug report. You will then
+receive a review anywhere between an hour from submitting the patch to two
+weeks. If it takes longer than that, please join ``#ubuntu-motu`` on freenode
+and mention it there. Stick around until you get an answer from someone, and
+they can guide you as to what to do next.
+
+Once you have received a review, your patch was either uploaded or needs work.
+If your patch needs work, follow the same steps and submit a follow-up patch
+on the bug report.
+
+Remember: good places to ask your questions are ``ubuntu-motu@lists.ubuntu.com``
+and ``#ubuntu-motu`` on freenode. You will easily find a lot of new friends
+and people with the same passion that you have: making the world a better
+place by making better Open Source software.
