@@ -5,6 +5,7 @@ ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
     (LP: #1686100):
     - Replace Harvest with Launchpad-native links (LP: #1697400).
     - Advertise and mention development release (LP: #1006747).
+    - Make cycle-branching.{svg,png} clearer.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
 
