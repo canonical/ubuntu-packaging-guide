@@ -301,7 +301,7 @@ As expected, there should now be a ``Homepage:`` field.
    manager.
 
 Submitting the fix and getting it included
-------------------------------------------
+==========================================
 
 With the changelog entry written and saved, run ``debuild`` one more time::
 
