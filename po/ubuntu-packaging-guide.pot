@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ubuntu-packaging-guide 0.3.9\n"
+"Project-Id-Version: ubuntu-packaging-guide 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-03 11:10-0500\n"
+"POT-Creation-Date: 2017-09-03 14:51-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -638,381 +638,306 @@ msgid "If you don't know the source package containing the code that has the pro
 msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:41
-msgid "Let's say you've found a bug in Tomboy, a note taking desktop application. The Tomboy application can be started by running ``/usr/bin/tomboy`` on the command line.  To find the binary package containing this application, use this command::"
+msgid "Let's say you've found a bug in Bumprace, a racing game. The Bumprace application can be started by running ``/usr/bin/bumprace`` on the command line. To find the binary package containing this application, use this command::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:48
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:47
 msgid "This would print out::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:52
-msgid "Note that the part preceding the colon is the binary package name.  It's often the case that the source package and binary package will have different names. This is most common when a single source package is used to build multiple different binary packages.  To find the source package for a particular binary package, type::"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:51
+msgid "Note that the part preceding the colon is the binary package name. It's often the case that the source package and binary package will have different names. This is most common when a single source package is used to build multiple different binary packages. To find the source package for a particular binary package, type::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:63
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:62
 msgid "``apt-cache`` is part of the standard installation of Ubuntu."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:66
-msgid "Getting the code"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:68
-msgid "Once you know the source package to work on, you will want to get a copy of the code on your system, so that you can debug it. The ubuntu-dev-tools package has a tool called ``pull-lp-source`` that a developer can use to grab the source code for any package. For example, to grab the source code for the tomboy package in ``xenial``, you can type this::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:76
-msgid "If you do not specify a release such as ``xenial``, it will automatically get the package from the development version."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:79
-msgid "Once you've got a local clone of the source package, you can investigate the bug, create a fix, generate a debdiff, and attach your debdiff to a bug report for other developers to review. We'll describe specifics in the next sections."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:86
-msgid "Work on a fix"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:88
-msgid "There are entire books written about finding bugs, fixing them, testing them, etc. If you are completely new to programming, try to fix easy bugs such as obvious typos first. Try to keep changes as minimal as possible and document your change and assumptions clearly."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:93
-msgid "Before working on a fix yourself, make sure to investigate if nobody else has fixed it already or is currently working on a fix. Good sources to check are:"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
-msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:97
-msgid "Upstream revision history (or newer release) might have fixed the problem,"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:98
-msgid "bugs or package uploads of Debian or other distributions."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:103
-msgid "You now want to create a patch which includes the fix.  The command ``edit-patch`` is a simple way to add a patch to a package. Run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:108
-msgid "This will copy the packaging to a temporary directory.  You can now edit files with a text editor or apply patches from upstream, for example::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:113
-msgid "After editing the file type ``exit`` or press ``control-d`` to quit the temporary shell.  The new patch will have been added into ``debian/patches``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:116
-msgid "You must then add a header to your patch containing meta information so that other developers can know the purpose of the patch and where it came from. To get the template header that you can edit to reflect what the patch does, type this::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:123
-msgid "This will open the template in a text editor. Follow the template and make sure to be thorough do you get all the details necessary to describe the patch."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:129
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:204
-msgid "Testing the fix"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:131
-msgid "To build a test package with your changes, run these commands::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:136
-msgid "This will create a source package from the branch contents (``-us -uc`` will just omit the step to sign the source package) and ``pbuilder-dist`` will build the package from source for whatever ``release`` you choose."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:140
-msgid "Once the build succeeds, install the package from ``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i <package>_<version>.deb``).  Then test to see if the bug is fixed."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:147
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:155
-msgid "Documenting the fix"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:149
-msgid "It is very important to document your change sufficiently so developers who look at the code in the future won't have to guess what your reasoning was and what your assumptions were. Every Debian and Ubuntu package source includes ``debian/changelog``, where changes of each uploaded package are tracked."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:154
-msgid "The easiest way to update this is to run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:158
-msgid "This will add a boilerplate changelog entry for you and launch an editor where you can fill in the blanks. An example of this could be::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:167
-msgid "``dch`` should fill out the first and last line of such a changelog entry for you already. Line 1 consists of the source package name, the version number, which Ubuntu release it is uploaded to, the urgency (which almost always is 'low'). The last line always contains the name, email address and timestamp (in :rfc:`5322` format) of the change."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:173
-msgid "With that out of the way, let's focus on the actual changelog entry itself: it is very important to document:"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:176
-msgid "where the change was done"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:177
-msgid "what was changed"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:178
-msgid "where the discussion of the change happened"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:180
-msgid "In our (very sparse) example the last point is covered by ``(LP: #123456)`` which refers to Launchpad bug 123456. Bug reports or mailing list threads or specifications are usually good information to provide as a rationale for a change. As a bonus, if you use the ``LP: #<number>`` notation for Launchpad bugs, the bug will be automatically closed when the package is uploaded to Ubuntu."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:189
-msgid "Committing the fix"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:191
-msgid "With the changelog entry written and saved, you can just run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
-msgid "and the change will be committed (locally) with your changelog entry as a commit message."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:198
-msgid "To push it to Launchpad, as the remote branch name, you need to stick to the following nomenclature::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:203
-msgid "This could for example be::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:207
-msgid "So if you just run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:212
-msgid "you should be all set. The push command should push it to Launchpad and the second command will open the Launchpad page of the remote branch in your browser. There find the \"(+) Propose for merging\" link, click it to get the change reviewed by somebody and included in Ubuntu."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:217
-msgid "Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into more detail about getting feedback for your proposed changes."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:220
-msgid "If your branch fixes issues in stable releases or it is a security fix, you might want to have a look at our :doc:`Security and stable release updates<./security-and-stable-release-updates>` article."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:3
-msgid "Tutorial: Fixing a bug in Ubuntu"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:5
-msgid "While the mechanics for :doc:`fixing a bug<./fixing-a-bug>` are the same for every bug, every problem you look at is likely to be different from another. An example of a concrete problem might help to get an idea what to consider generally."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:10
-msgid "At the time of writing this article this was not fixed yet. When you are reading the article this might actually be fixed. Take this as an example and try to adapt it to the specific problem you are facing."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:15
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:65
 msgid "Confirming the problem"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:17
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:67
+msgid "Once you have figured out which package the problem is in, it's time to confirm that the problem exists."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:70
 msgid "Let's say the package ``bumprace`` does not have a homepage in its package description. As a first step you would check if the problem is not solved already. This is easy to check, either take a look at Software Center or run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:23
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:76
 msgid "The output should be similar to this::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:49
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:102
 msgid "A counter-example would be ``gedit``, which has a homepage set::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:55
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:107
 msgid "Sometimes you will find that a particular problem you are looking into is already fixed. To avoid wasting efforts and duplicating work it makes sense to first do some detective work."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:61
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:112
 msgid "Research bug situation"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:63
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:114
 msgid "First we should check if a bug for the problem exists in Ubuntu already. Maybe somebody is working on a fix already, or we can contribute to the solution somehow. For Ubuntu we have a quick look at https://bugs.launchpad.net/ubuntu/+source/bumprace and there is no open bug with our problem there."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:69
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:120
 msgid "For Ubuntu the URL ``https://bugs.launchpad.net/ubuntu/+source/<package>`` should always take to the bug page of the source package in question."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:73
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:124
 msgid "For Debian, which is the major source for Ubuntu's packages, we have a look at http://bugs.debian.org/src:bumprace and can't find a bug report for our problem either."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:77
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:128
 msgid "For Debian the URL ``http://bugs.debian.org/src:<package>`` should always take to the bug page of the source package in question."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:80
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:131
 msgid "The problem we are working on is special as it only concerns the packaging-related bits of ``bumprace``. If it was a problem in the source code it would be helpful to also check the Upstream bug tracker. This is unfortunately often different for every package you have a look at, but if you search the web for it, you should in most cases find it pretty easily."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:88
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:138
 msgid "Offering help"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:90
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:140
 msgid "If you found an open bug and it is not assigned to somebody and you are in a position to fix it, you should comment on it with your solution. Be sure to include as much information as you can: Under which circumstances does the bug occur? How did you fix the problem? Did you test your solution?"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:95
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:145
 msgid "If no bug report has been filed, you can file a bug for it. What you might want to bear in mind is: Is the issue so small that just asking for somebody to commit it is good enough? Did you manage to only partially fix the issue and you want to at least share your part of it?"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:100
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:150
 msgid "It is great if you can offer help and will surely be appreciated."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:104
-#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:61
-msgid "Fixing the issue"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:155
+msgid "Getting the code"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:106
-msgid "For this specific example it is enough to search the web for ``bumprace`` and find the homepage of it. Be sure it is a live site and not just a software catalogue. http://www.linux-games.com/bumprace/ looks like it is the proper place."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:157
+msgid "Once you know the source package to work on, you will want to get a copy of the code on your system, so that you can debug it. The ubuntu-dev-tools package has a tool called ``pull-lp-source`` that a developer can use to grab the source code for any package. For example, to grab the source code for the tomboy package in ``xenial``, you can type this::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:111
-msgid "To address the issue in the source package, we first need the source and we can easily get it by running::"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
+msgid "If you do not specify a release such as ``xenial``, it will automatically get the package from the development version."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:117
-msgid "If you read :doc:`the Debian Directory Overview<./debian-dir-overview>` before, you might remember, that the homepage for a package is specified in the first part of ``debian/control``, the section which starts with ``Source:``."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
+msgid "Once you've got a local clone of the source package, you can investigate the bug, create a fix, generate a debdiff, and attach your debdiff to a bug report for other developers to review. We'll describe specifics in the next sections."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:121
-msgid "So what we do next is run::"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:173
+msgid "Work on a fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:125
-msgid "and edit ``debian/control`` to add ``Homepage: http://www.linux-games.com/bumprace/``. At the end of the first section should be a good place for it. Once you have done this, save the file."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:175
+msgid "There are entire books written about finding bugs, fixing them, testing them, etc. If you are completely new to programming, try to fix easy bugs such as obvious typos first. Try to keep changes as minimal as possible and document your change and assumptions clearly."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:129
-msgid "If you now run::"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:180
+msgid "Before working on a fix yourself, make sure to investigate if nobody else has fixed it already or is currently working on a fix. Good sources to check are:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:133
-msgid "you should see something like this:"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:183
+msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:149
-msgid "The diff is pretty simple to understand. The ``+`` indicates a line which was added. In our cases it was added just before the second section, starting with ``Package``, which indicates a resulting binary package."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:184
+msgid "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:157
-msgid "It is important to explain to your fellow developers what exactly you did. If you run::"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:185
+msgid "bugs or package uploads of Debian or other distributions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:163
-msgid "this will start an editor with a boilerplate changelog entry which you just have to fill out. In our case something like ``debian/control: Added project's homepage.`` should do. Then save the file. To double-check this worked out, run::"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:190
+msgid "You may want to create a patch which includes the fix. The command ``edit-patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:170
-msgid "and you will see something like this:"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
+msgid "This will copy the packaging to a temporary directory.  You can now edit files with a text editor or apply patches from upstream, for example::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:189
-msgid "A few additional considerations:"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:200
+msgid "After editing the file type ``exit`` or press ``control-d`` to quit the temporary shell.  The new patch will have been added into ``debian/patches``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:191
-msgid "If you have a reference to a Launchpad bug which is fixed by the issue, add (``LP: #<bug number>``) to the changelog entry line, ie: ``(LP: #123456)``."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:203
+msgid "You must then add a header to your patch containing meta information so that other developers can know the purpose of the patch and where it came from. To get the template header that you can edit to reflect what the patch does, type this::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:193
-msgid "If you want to get your fix included in Debian, for a Debian bug the syntax is ``(Closes: #<bug number>)``, ie: ``(Closes: #123456)``."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:210
+msgid "This will open the template in a text editor. Follow the template and make sure to be thorough so you get all the details necessary to describe the patch."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:195
-msgid "If it is a reference to an upstream or Debian bug or a mailing list discussion, mention it as well."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:214
+msgid "In this specific case, if you just want to edit ``debian/control``, you do not need a patch. Put ``Homepage: http://www.linux-games.com/bumprace/`` at the end of the first section and the bug should be fixed."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:197
-msgid "Try to wrap your lines at 80 characters."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:219
+msgid "Documenting the fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:198
-msgid "Try to be specific, not an essay, but enough for somebody (who did not deeply look into the issue) to understand."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:221
+msgid "It is very important to document your change sufficiently so developers who look at the code in the future won't have to guess what your reasoning was and what your assumptions were. Every Debian and Ubuntu package source includes ``debian/changelog``, where changes of each uploaded package are tracked."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:200
-msgid "Mention how you fixed the issue and where."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:226
+msgid "The easiest way to update this is to run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:206
-msgid "To test the fix, you need to :doc:`have your development environment set up<./getting-set-up>`, then to build the package, install it and verify the problem is solved. In our case this would be::"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:230
+msgid "This will add a boilerplate changelog entry for you and launch an editor where you can fill in the blanks. An example of this could be::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:214
-msgid "In step one we build the source package from the branch, then build it by using ``pbuilder``, then inspect the resulting package to check if the Homepage field was added properly."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:239
+msgid "``dch`` should fill out the first and last line of such a changelog entry for you already. Line 1 consists of the source package name, the version number, which Ubuntu release it is uploaded to, the urgency (which almost always is 'low'). The last line always contains the name, email address and timestamp (in :rfc:`5322` format) of the change."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:218
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:245
+msgid "With that out of the way, let's focus on the actual changelog entry itself: it is very important to document:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:248
+msgid "Where the change was done."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:249
+msgid "What was changed."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:250
+msgid "Where the discussion of the change happened."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:252
+msgid "In our (very sparse) example the last point is covered by ``(LP: #123456)`` which refers to Launchpad bug 123456. Bug reports or mailing list threads or specifications are usually good information to provide as a rationale for a change. As a bonus, if you use the ``LP: #<number>`` notation for Launchpad bugs, the bug will be automatically closed when the package is uploaded to Ubuntu."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:259
+msgid "In order to get it sponsored in the next section, you need to file a bug report in Launchpad (if there isn't one already, if there is, use that) and explain why your fix should be included in Ubuntu. For example, for tomboy, you would file a bug `here`_ (edit the URL to reflect the package you have a fix for). Once a bug is filed explaining your changes, put that bug number in the changelog."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:269
+msgid "Testing the fix"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:271
+msgid "To build a test package with your changes, run these commands::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:276
+msgid "This will create a source package from the branch contents (``-us -uc`` will just omit the step to sign the source package and ``-d`` will skip the step where it checks for build dependencies, pbuilder will take care of that) and ``pbuilder-dist`` will build the package from source for whatever ``release`` you choose."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:283
+msgid "If ``debuild`` errors out with \"Version number suggests Ubuntu changes, but Maintainer: does not have Ubuntu address\" then run the ``update-maintainer`` command (from ubuntu-dev-tools) and it will automatically fix this for you. This happens because in Ubuntu, all Ubuntu Developers are responsible for all Ubuntu packages, while in Debian, packages have maintainers."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:289
+msgid "In this case with bumprace, run this to view the package information::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:293
+msgid "As expected, there should now be a ``Homepage:`` field."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:296
 msgid "In a lot of cases you will have to actually install the package to make sure it works as expected. Our case is a lot easier. If the build succeeded, you will find the binary packages in ``~/pbuilder/<release>_result``. Install them via ``sudo dpkg -i <package>.deb`` or by double-clicking on them in your file manager."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:225
-msgid "As we verified, the problem is now solved, so the next step is sharing our solution with the world."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:304
+msgid "Submitting the fix and getting it included"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:229
-msgid "Getting the fix included"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:306
+msgid "With the changelog entry written and saved, run ``debuild`` one more time::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:231
-msgid "It makes sense to get the fix included as Upstream as possible. Doing that you can guarantee that everybody can take the Upstream source as-is and don't need to have local modifications to fix it."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:310
+msgid "and this time it will be signed and you are now ready to get your diff to submit to get sponsored."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:235
-msgid "In our case we established that we have a problem with the packaging, both in Ubuntu and Debian. As Ubuntu is based on Debian, we will send the fix to Debian. Once it is included there, it will be picked up by Ubuntu eventually. The issue in our tutorial is clearly non-critical, so this approach makes sense. If it is important to fix the issue as soon as possible, you will need to send the solution to multiple bug trackers. Provided the issue affects all parties in question."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:313
+msgid "In a lot of cases, Debian would probably like to have the patch as well (doing this is best practice to make sure a wider audience gets the fix). So, you should submit the patch to Debian, and you can do that by simply running this::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:243
-msgid "To submit the patch to Debian, simply run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:247
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:320
 msgid "This will take you through a series of steps to make sure the bug ends up in the correct place. Be sure to review the diff again to make sure it does not include random changes you made earlier."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:251
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:324
 msgid "Communication is important, so when you add some more description to it to the inclusion request, be friendly, explain it well."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:254
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:327
 msgid "If everything went well you should get a mail from Debian's bug tracking system with more information. This might sometimes take a few minutes."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:257
-msgid "If the problem is just in Ubuntu, you might want to consider :doc:`Seeking Review and Sponsorship<./udd-sponsorship>` to get the fix included."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:330
+msgid "It might be beneficial to just get it included in Debian and have it flow down to Ubuntu, in which case you would not follow the below process. But, sometimes in the case of security updates and updates for stable releases, the fix is already in Debian (or ignored for some reason) and you would follow the below process. If you are doing such updates, please read our :doc:`Security and stable release updates<./security-and-stable-release-updates>` article. Other cases where it is acceptable to wait to submit patches to Debian are Ubuntu-only packages not building correctly, or Ubuntu-specific problems in general."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:263
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:340
+msgid "But if you're going to submit your fix to Ubuntu, now it's time to generate a \"debdiff\", which shows the difference between two Debian packages. The name of the command used to generate one is also ``debdiff``. It is part of the ``devscripts`` package. See ``man debdiff`` for all the details. To compare two source packages, pass the two dsc files as arguments::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:348
+msgid "In this case, ``debdiff`` the dsc you downloaded with ``pull-lp-source`` and the new dsc file you generated. This will generate a patch that your sponsor can then apply locally (by using ``patch -p1 < /path/to/debdiff``). In this case, pipe the output of the debdiff command to a file that you can then attach to the bug report::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:356
+msgid "The format shown in ``1-1.0-1ubuntu1.debdiff`` shows:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:358
+msgid "``1-`` tells the sponsor that this is the first revision of your patch. Nobody is perfect, and sometimes follow-up patches need to be provided. This makes sure that if your patch needs work, that you can keep a consistent naming scheme."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:362
+msgid "``1.0-1ubuntu1`` shows the new version being used. This makes it easy to see what the new version is."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:364
+msgid "``.debdiff`` is an extension that makes it clear that it is a debdiff."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:366
+msgid "While this format is optional, it works well and you can use this."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:368
+msgid "Next, go to the bug report, make sure you are logged into Launchpad, and click \"Add attachment or patch\" under where you would add a new comment. Attach the debdiff, and leave a comment telling your sponsor how this patch can be applied and the testing you have done. An example comment can be::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:376
+msgid "Make sure you mark it as a patch (the Ubuntu Sponsors team will automatically be subscribed) and that you are subscribed to the bug report. You will then receive a review anywhere between several housr from submitting the patch to several weeks. If it takes longer than that, please join ``#ubuntu-motu`` on ``freenode`` and mention it there. Stick around until you get an answer from someone, and they can guide you as to what to do next."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:383
+msgid "Once you have received a review, your patch was either uploaded, your patch needs work, or is rejected for some other reason (possibly the fix is not fit for Ubuntu or should go to Debian instead). If your patch needs work, follow the same steps and submit a follow-up patch on the bug report, otherwise submit to Debian as shown above."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:389
+msgid "Remember: good places to ask your questions are ``ubuntu-motu@lists.ubuntu.com`` and ``#ubuntu-motu`` on freenode. You will easily find a lot of new friends and people with the same passion that you have: making the world a better place by making better Open Source software."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:395
 msgid "Additional considerations"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:265
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:397
 msgid "If you find a package and find that there are a couple of trivial things you can fix at the same time, do it. This will speed up review and inclusion."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:268
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:400
 msgid "If there are multiple big things you want to fix, it might be advisable to send individual patches or merge proposals instead. If there are individual bugs filed for the issues already, this makes it even easier."
 msgstr ""
 
@@ -1070,6 +995,10 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:54
 msgid "If a package is in main and missing a dependency that is not in main, you will have to file a MIR bug. https://wiki.ubuntu.com/MainInclusionProcess explains the procedure."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:61
+msgid "Fixing the issue"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:62
@@ -1357,95 +1286,99 @@ msgid "Ubuntu Packaging Guide"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:11
-msgid "Welcome to the Ubuntu Packaging and Development Guide! This is the official place for learning all about Ubuntu Development and packaging. After reading this guide you will have:"
+msgid "Welcome to the Ubuntu Packaging and Development Guide! We are currently developing codename Artful Aardvark, which is to be released in October 2017 as Ubuntu 17.10."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:15
-msgid "heard about the most important players, processes and tools in Ubuntu development,"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/index.rst:17
-msgid "your development environment set up correctly,"
+msgid "This is the official place for learning all about Ubuntu Development and packaging. After reading this guide you will have:"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:18
-msgid "a better idea of how to join our community,"
+msgid "Heard about the most important players, processes and tools in Ubuntu development,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:19
-msgid "fixed an actual Ubuntu bug as part of the tutorials."
+#: ../ubuntu-packaging-guide/index.rst:20
+msgid "Your development environment set up correctly,"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:21
+msgid "A better idea of how to join our community,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:22
+msgid "Fixed an actual Ubuntu bug as part of the tutorials."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:24
 msgid "Ubuntu is not only a free and open source operating system, its platform is also open and developed in a transparent fashion. The source code for every single component can be obtained easily and every single change to the Ubuntu platform can be reviewed."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:26
+#: ../ubuntu-packaging-guide/index.rst:29
 msgid "This means you can actively get involved in improving it and the community of Ubuntu platform developers is always interested in helping peers getting started."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:30
+#: ../ubuntu-packaging-guide/index.rst:33
 msgid "Ubuntu is also a community of great people who believe in free software and that it should be accessible for everyone. Its members are welcoming and want you to be involved as well. We want you to get involved, to ask questions, to make Ubuntu better together with us."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:35
+#: ../ubuntu-packaging-guide/index.rst:38
 msgid "If you run into problems: don't panic! Check out the :doc:`communication article<./communication>` and you will find out how to most easily get in touch with other developers."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:39
+#: ../ubuntu-packaging-guide/index.rst:42
 msgid "The guide is split up into two sections:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:41
+#: ../ubuntu-packaging-guide/index.rst:44
 msgid "A list of articles based on tasks, things you want to get done."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:42
+#: ../ubuntu-packaging-guide/index.rst:45
 msgid "A set of knowledge-base articles that dig deeper into specific bits of our tools and workflows."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:46
+#: ../ubuntu-packaging-guide/index.rst:49
 msgid "Articles"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:64
+#: ../ubuntu-packaging-guide/index.rst:66
 msgid "Knowledge Base"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:77
+#: ../ubuntu-packaging-guide/index.rst:79
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:79
+#: ../ubuntu-packaging-guide/index.rst:81
 msgid "You can read this guide offline in different formats, if you install one of the `binary packages <BinPkgs_>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:82
+#: ../ubuntu-packaging-guide/index.rst:84
 msgid "If you want to learn more about building Debian packages, here are some Debian resources you may find useful:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:85
+#: ../ubuntu-packaging-guide/index.rst:87
 msgid "`How to package for Debian <HowToPackage_>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:86
+#: ../ubuntu-packaging-guide/index.rst:88
 msgid "`Debian Policy Manual <Policy_>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:87
+#: ../ubuntu-packaging-guide/index.rst:89
 msgid "`Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many languages;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:88
+#: ../ubuntu-packaging-guide/index.rst:90
 msgid "`Packaging tutorial <PkgTutorial_>`_ (also available as a `package <PkgTutorialPkg_>`_);"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:89
+#: ../ubuntu-packaging-guide/index.rst:91
 msgid "`Guide for Packaging Python Modules <PythonModules_>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:91
+#: ../ubuntu-packaging-guide/index.rst:93
 msgid "We are always looking to improve this guide. If you find any problems or have some suggestions, please `report a bug on Launchpad <Bugs_>`_. If you'd like to help work on the guide, `grab the source <Source_>`_ there as well."
 msgstr ""
 
@@ -1514,7 +1447,7 @@ msgid "The most important requirements for success in Ubuntu development are: ha
 msgstr ""
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:126
-msgid "Good places to ask your questions are ``ubuntu-motu@lists.ubuntu.com`` and ``#ubuntu-motu`` on ``irc.freenode.net``. You will easily find a lot of new friends and people with the same passion that you have: making the world a better place by making better Open Source software."
+msgid "Good places to ask your questions are ``ubuntu-motu@lists.ubuntu.com`` and ``#ubuntu-motu`` on ``freenode.``. You will easily find a lot of new friends and people with the same passion that you have: making the world a better place by making better Open Source software."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:3
@@ -1858,66 +1791,62 @@ msgid "To see verbose description of the problems use ``--info`` lintian flag or
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:169
-msgid "Results of Ubuntu archive checks can be found online on http://lintian.ubuntuwire.org."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:172
 msgid "For Python packages, there is also a ``lintian4python`` tool that provides some additional lintian checks."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:175
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:172
 msgid "After making a fix to the packaging you can rebuild using ``-nc`` \"no clean\" without having to build from scratch::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:180
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:177
 msgid "Having checked that the package builds locally you should ensure it builds on a clean system using ``pbuilder``. Since we are going to upload to a PPA (Personal Package Archive) shortly, this upload will need to be *signed* to allow Launchpad to verify that the upload comes from you (you can tell the upload will be signed because the ``-us`` and ``-uc`` flags are not passed to ``bzr builddeb`` like they were before). For signing to work you need to have set up GPG. If you haven't set up ``pbuilder-dist`` or GPG yet, :doc:`do so now<./getting-set-up>`::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:193
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:190
 msgid "When you are happy with your package you will want others to review it.  You can upload the branch to Launchpad for review::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:198
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:195
 msgid "Uploading it to a PPA will ensure it builds and give an easy way for you and others to test the binary packages.  You will need to set up a PPA in Launchpad and then upload with ``dput``::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:204
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:201
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:206
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:203
 msgid "You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the `MOTU mailing list <ubuntu-motu_>`_.  There might also be a more specific team you could ask such as the GNU team for more specific questions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:211
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:208
 msgid "Submitting for inclusion"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:213
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:210
 msgid "There are a number of paths that a package can take to enter Ubuntu. In most cases, going through Debian first can be the best path. This way ensures that your package will reach the largest number of users as it will be available in not just Debian and Ubuntu but all of their derivatives as well. Here are some useful links for submitting new packages to Debian:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:220
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:217
 msgid "`Debian Mentors FAQ <MentorsFAQ_>`_ - debian-mentors is for the mentoring of new and prospective Debian Developers. It is where you can find a sponsor to upload your package to the archive."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:224
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:221
 msgid "`Work-Needing and Prospective Packages <WNPP_>`_ - Information on how to file \"Intent to Package\" and \"Request for Package\" bugs as well as list of open ITPs and RFPs."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:228
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:225
 msgid "`Debian Developer's Reference, 5.1. New packages <DevRef_>`_ - The entire document is invaluable for both Ubuntu and Debian packagers. This section documents processes for submitting new packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:232
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:229
 msgid "In some cases, it might make sense to go directly into Ubuntu first. For instance, Debian might be in a freeze making it unlikely that your package will make it into Ubuntu in time for the next release. This process is documented on the `\"New Packages\" <NewPackages_>`_ section of the Ubuntu wiki."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:238
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:235
 msgid "Screenshots"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:240
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:237
 msgid "Once you have uploaded a package to debian, you should add screenshots to allow propective users to see what the program is like. These should be uploaded to http://screenshots.debian.net/upload ."
 msgstr ""
 
