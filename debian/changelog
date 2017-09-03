@@ -4,6 +4,7 @@ ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
     the packaging guide to meet modern packaging standards (LP: #1569561)
     (LP: #1686100):
     - Replace Harvest with Launchpad-native links (LP: #1697400).
+    - Advertise and mention development release (LP: #1006747).
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
 

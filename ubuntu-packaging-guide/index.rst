@@ -8,15 +8,18 @@
 Ubuntu Packaging Guide
 ==================================================
 
-Welcome to the Ubuntu Packaging and Development Guide! This is the official
-place for learning all about Ubuntu Development and packaging. After reading
-this guide you will have:
+Welcome to the Ubuntu Packaging and Development Guide! We are currently
+developing codename Artful Aardvark, which is to be released in October 2017
+as Ubuntu 17.10.
 
-* heard about the most important players, processes and tools in
+This is the official place for learning all about Ubuntu Development and
+packaging. After reading this guide you will have:
+
+* Heard about the most important players, processes and tools in
   Ubuntu development,
-* your development environment set up correctly,
-* a better idea of how to join our community,
-* fixed an actual Ubuntu bug as part of the tutorials.
+* Your development environment set up correctly,
+* A better idea of how to join our community,
+* Fixed an actual Ubuntu bug as part of the tutorials.
 
 Ubuntu is not only a free and open source operating system, its platform is
 also open and developed in a transparent fashion. The source code for every
