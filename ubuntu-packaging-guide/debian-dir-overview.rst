@@ -1,4 +1,4 @@
-Basic Overview of the debian/ Directory
+Basic Overview of the ``debian/`` Directory
 ==================================================
 
 This article will briefly explain the different files important to the
