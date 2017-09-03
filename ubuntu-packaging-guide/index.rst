@@ -55,7 +55,6 @@ Articles
    introduction-to-ubuntu-development
    getting-set-up
    fixing-a-bug
-   fixing-a-bug-example
    packaging-new-software
    security-and-stable-release-updates
    patches-to-packages
