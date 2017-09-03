@@ -9,40 +9,40 @@ Ubuntu Packaging Guide
 ==================================================
 
 Welcome to the Ubuntu Packaging and Development Guide! This is the official
-place for learning all about Ubuntu Development and packaging. After reading 
+place for learning all about Ubuntu Development and packaging. After reading
 this guide you will have:
 
 * heard about the most important players, processes and tools in
   Ubuntu development,
-* your development environment set up correctly, 
+* your development environment set up correctly,
 * a better idea of how to join our community,
 * fixed an actual Ubuntu bug as part of the tutorials.
 
-Ubuntu is not only a free and open source operating system, its platform is 
-also open and developed in a transparent fashion. The source code for every 
-single component can be obtained easily and every single change to the Ubuntu 
-platform can be reviewed. 
+Ubuntu is not only a free and open source operating system, its platform is
+also open and developed in a transparent fashion. The source code for every
+single component can be obtained easily and every single change to the Ubuntu
+platform can be reviewed.
 
-This means you can actively get involved in improving it and the community of 
-Ubuntu platform developers is always interested in helping peers getting 
+This means you can actively get involved in improving it and the community of
+Ubuntu platform developers is always interested in helping peers getting
 started.
 
-Ubuntu is also a community of great people who believe in free software and 
+Ubuntu is also a community of great people who believe in free software and
 that it should be accessible for everyone. Its members are welcoming and want
 you to be involved as well. We want you to get involved, to ask questions, to
 make Ubuntu better together with us.
 
 If you run into problems: don't panic! Check out the :doc:`communication
-article<./communication>` and you will find out how to most easily get in 
+article<./communication>` and you will find out how to most easily get in
 touch with other developers.
 
 The guide is split up into two sections:
 
 * A list of articles based on tasks, things you want to get done.
-* A set of knowledge-base articles that dig deeper 
+* A set of knowledge-base articles that dig deeper
   into specific bits of our tools and workflows.
 
-This guide focuses on the Ubuntu Distributed Development packaging method. 
+This guide focuses on the Ubuntu Distributed Development packaging method.
 This is a new way of packaging which uses Distributed Revision Control
 branches.  It currently has some limitations which mean many teams in Ubuntu
 use :doc:`traditional packaging<./traditional-packaging>` methods.  See the
@@ -57,7 +57,6 @@ Articles
 
    introduction-to-ubuntu-development
    getting-set-up
-   udd-intro
    fixing-a-bug
    fixing-a-bug-example
    packaging-new-software

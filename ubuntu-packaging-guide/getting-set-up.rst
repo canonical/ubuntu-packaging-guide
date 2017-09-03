@@ -3,7 +3,7 @@ Getting Set Up
 ==============
 
 There are a number of things you need to do to get started developing for Ubuntu.
-This article is designed to get your computer set up so that you can start 
+This article is designed to get your computer set up so that you can start
 working with packages, and upload your packages to Ubuntu's hosting
 platform, Launchpad. Here's what we'll cover:
 
@@ -16,34 +16,24 @@ platform, Launchpad. Here's what we'll cover:
 * Creating and configuring your account on Launchpad
 * Setting up your development environment to help you do local builds of packages,
   interact with other developers, and propose your changes on Launchpad.
- 
 
-.. note:: 
-  It is advisable to do packaging work using the current development version of 
-  Ubuntu. Doing so will allow you to test changes in the same environment where 
-  those changes will actually be applied and used. 
 
-  Don't worry though, you can use `Testdrive`_
-  or :doc:`chroots <./chroots>` to safely use the development release.
+.. note::
+  It is advisable to do packaging work using the current development version of
+  Ubuntu. Doing so will allow you to test changes in the same environment where
+  those changes will actually be applied and used.
 
-  .. _Testdrive: https://wiki.ubuntu.com/QATeam/Testdrive
+  Don't want to install the latest Ubuntu development version of Ubuntu? Spin
+  up an `LXD container <https://help.ubuntu.com/lts/serverguide/lxd.html>`_.
 
 Install basic packaging software
 ================================
 
 There are a number of tools that will make your life as an Ubuntu developer
-much easier.  You will encounter these tools later in this guide.  To install
+much easier. You will encounter these tools later in this guide. To install
 most of the tools you will need run this command::
 
-    $ sudo apt-get install gnupg pbuilder ubuntu-dev-tools bzr-builddeb apt-file
-
-
-Note: Since Ubuntu 11.10 "Oneiric Ocelot"
-(or if you have Backports enabled on a currently supported release),
-the following command will install the above and other tools which
-are quite common in Ubuntu development::
-
-    $ sudo apt-get install packaging-dev
+    $ sudo apt install gnupg pbuilder ubuntu-dev-tools apt-file
 
 
 This command will install the following software:
@@ -52,13 +42,10 @@ This command will install the following software:
   cryptographic key with which you will sign files you want to upload to
   Launchpad.
 * ``pbuilder`` -- a tool to do reproducible builds of a package in a
-  clean and isolated environment.
+  clean and isolated environment. This is what the official Ubuntu
+  infrastructure uses.
 * ``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a
   collection of tools that make many packaging tasks easier.
-* ``bzr-builddeb`` (and ``bzr``, a dependency) -- distributed version control
-  with Bazaar, a new way of working with packages for Ubuntu that will make it
-  easy for many developers to collaborate and work on the same code while
-  keeping it trivial to merge each other's work.
 * ``apt-file`` provides an easy way to find the binary package that contains a
   given file.
 
@@ -85,10 +72,10 @@ which means the key will never expire. The last questions will be about your
 name and email address. Just pick the ones you are going to use for Ubuntu
 development here, you can add additional email addresses later on. Adding a
 comment is not necessary. Then you will have to set a passphrase, choose a
-safe one (a passphrase is just a password which is allowed to include spaces). 
+safe one (a passphrase is just a password which is allowed to include spaces).
 
-Now GPG will create a key for you, which can take a little bit of time; it 
-needs random bytes, so if you give the system some work to do it will be 
+Now GPG will create a key for you, which can take a little bit of time; it
+needs random bytes, so if you give the system some work to do it will be
 just fine.  Move the cursor around, type some paragraphs of random text, load
 some web page.
 
@@ -101,25 +88,25 @@ Once this is done, you will get a message similar to this one::
 
 In this case ``43CDE61D`` is the *key ID*.
 
-Next, you need to upload the public part of your key to a keyserver so the 
+Next, you need to upload the public part of your key to a keyserver so the
 world can identify messages and files as yours. To do so, enter::
 
     $ gpg --send-keys --keyserver keyserver.ubuntu.com <KEY ID>
 
-This will send your key to the Ubuntu keyserver, but a network of keyservers 
-will automatically sync the key between themselves. Once this syncing is 
-complete, your signed public key will be ready to verify your contributions 
+This will send your key to the Ubuntu keyserver, but a network of keyservers
+will automatically sync the key between themselves. Once this syncing is
+complete, your signed public key will be ready to verify your contributions
 around the world.
 
 
 Create your SSH key
 -------------------
 
-SSH_ stands for *Secure Shell*, and it is a protocol that allows you to 
-exchange data in a secure way over a network. It is common to use SSH to access 
-and open a shell on another computer, and to use it to securely transfer files. 
+SSH_ stands for *Secure Shell*, and it is a protocol that allows you to
+exchange data in a secure way over a network. It is common to use SSH to access
+and open a shell on another computer, and to use it to securely transfer files.
 For our purposes, we will mainly be using SSH to securely upload source packages
-to Launchpad. 
+to Launchpad.
 
 To generate an SSH key, enter::
 
@@ -136,7 +123,7 @@ Set up pbuilder
 a couple of purposes:
 
 * The build will be done in a minimal and clean environment. This helps you
-  make sure your builds succeed in a reproducible way, but without modifying 
+  make sure your builds succeed in a reproducible way, but without modifying
   your local system
 * There is no need to install all necessary *build dependencies* locally
 * You can set up multiple instances for various Ubuntu and Debian releases
@@ -145,35 +132,34 @@ Setting ``pbuilder`` up is very easy, run::
 
     $ pbuilder-dist <release> create
 
-where <release> is for example `raring`, `saucy`, `trusty` or in the case of
-Debian maybe `sid`. This will take a while as it will download all the
-necessary packages for a "minimal installation". These will be cached though.
+where <release> is for example `xenial`, `zesty`, `artful` or in the case of
+Debian maybe `sid` or `buster`. This will take a while as it will download all
+the necessary packages for a "minimal installation". These will be cached though.
 
 
 Get set up to work with Launchpad
 =================================
 
-With a basic local configuration in place, your next step will be to 
+With a basic local configuration in place, your next step will be to
 configure your system to work with Launchpad. This section will focus
 on the following topics:
 
  * What Launchpad is and creating a Launchpad account
  * Uploading your GPG and SSH keys to Launchpad
- * Configuring Bazaar to work with Launchpad
- * Configuring Bash to work with Bazaar
+ * Configure your shell to recognize you (for putting your name in changelogs)
 
 
 About Launchpad
 ---------------
 
-Launchpad is the central piece of infrastructure we use in Ubuntu. It not only 
+Launchpad is the central piece of infrastructure we use in Ubuntu. It not only
 stores our packages and our code, but also things like translations, bug
-reports, and information about the people who work on Ubuntu and their team 
+reports, and information about the people who work on Ubuntu and their team
 memberships.  You will also use Launchpad to publish your proposed fixes, and
 get other Ubuntu developers to review and sponsor them.
 
 You will need to register with Launchpad and provide a minimal amount of
-information. This will allow you to download and upload code, submit bug 
+information. This will allow you to download and upload code, submit bug
 reports, and more.
 
 Besides hosting Ubuntu, Launchpad can host any Free Software project. For more
@@ -268,33 +254,12 @@ page on Launchpad.
 
 .. _genssh: https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair
 
-Configure Bazaar
-----------------
-
-Bazaar is the tool we use to store code changes in a logical way, to exchange
-proposed changes and merge them, even if development is done concurrently.  It
-is used for the new Ubuntu Distributed Development method of working with
-Ubuntu packages.
-
-To tell Bazaar who you are, simply run::
-
-    $ bzr whoami "Bob Dobbs <subgenius@example.com>"
-    $ bzr launchpad-login subgenius
-
-`whoami` will tell Bazaar which name and email address it should use for your
-commit messages. With `launchpad-login` you set your Launchpad ID. This way
-code that you publish in Launchpad will be associated with you.
-
-Note: If you can not remember the ID, go to https://launchpad.net/~
-and see where it redirects you. The part after the "~" in the URL is your
-Launchpad ID.)
-
 
 Configure your shell
 --------------------
-Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you
-as well. Simply open your `~/.bashrc` in a text editor and add something like
-this to the bottom of it::
+The Debian/Ubuntu packaging tools need to learn about you as well in order to
+properly credit you in the changelog. Simply open your `~/.bashrc` in a text
+editor and add something like this to the bottom of it::
 
     export DEBFULLNAME="Bob Dobbs"
     export DEBEMAIL="subgenius@example.com"
