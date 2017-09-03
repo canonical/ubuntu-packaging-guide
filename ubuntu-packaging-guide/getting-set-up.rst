@@ -42,8 +42,7 @@ This command will install the following software:
   cryptographic key with which you will sign files you want to upload to
   Launchpad.
 * ``pbuilder`` -- a tool to do reproducible builds of a package in a
-  clean and isolated environment. This is what the official Ubuntu
-  infrastructure uses.
+  clean and isolated environment.
 * ``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a
   collection of tools that make many packaging tasks easier.
 * ``apt-file`` provides an easy way to find the binary package that contains a
