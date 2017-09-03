@@ -20,18 +20,11 @@ the authors of applications "upstream") and check that it compiles and runs.
 This guide will take you through packaging a simple application called GNU Hello
 which has been posted on GNU.org_.
 
-If you don't have the build tools lets make sure we have them first.  Also if you
-don't have the required dependencies lets install those as well.
+Download GNU Hello::
 
-Install build tools::
+    $ wget -O hello-2.10.tar.gz "http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz"
 
-    $ sudo apt-get install build-essential
-
-Download main package::
-
-    $ wget -O hello-2.7.tar.gz "http://ftp.gnu.org/gnu/hello/hello-2.7.tar.gz"
-
-Now uncompress main package::
+Now uncompress it::
 
     $ tar xf hello-2.7.tar.gz
     $ cd hello-2.7
