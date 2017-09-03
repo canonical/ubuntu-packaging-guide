@@ -1,3 +1,10 @@
+ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
+
+  * Remove outdated Bazaar Ubuntu Distributed Development content and update
+    the packaging guide to meet modern packaging standards.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
+
 ubuntu-packaging-guide (0.3.9) unstable; urgency=medium
 
   * Build-depend on latexmk to fix build with Sphinx 1.6.
