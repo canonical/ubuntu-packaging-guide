@@ -214,9 +214,6 @@ second command will open the Launchpad page of the remote branch in your
 browser. There find the "(+) Propose for merging" link, click it to get the
 change reviewed by somebody and included in Ubuntu.
 
-Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into
-more detail about getting feedback for your proposed changes.
-
 If your branch fixes issues in stable releases or it is a security fix, you
 might want to have a look at our
 :doc:`Security and stable release updates<./security-and-stable-release-updates>`
