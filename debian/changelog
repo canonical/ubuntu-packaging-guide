@@ -1,7 +1,8 @@
 ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
 
   * Remove outdated Bazaar Ubuntu Distributed Development content and update
-    the packaging guide to meet modern packaging standards (LP: #1569561):
+    the packaging guide to meet modern packaging standards (LP: #1569561)
+    (LP: #1686100):
     - Replace Harvest with Launchpad-native links (LP: #1697400).
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
