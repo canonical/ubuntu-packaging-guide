@@ -14,9 +14,9 @@
    height="214.84375"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="cycle-branching.svg"
-   inkscape:export-filename="cycle-branching.png"
+   inkscape:export-filename="/home/simon/Code/generic-packaging-work/ubuntu-packaging-guide/images/cycle-branching.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="289.69062"
-     inkscape:cy="105.66947"
+     inkscape:zoom="2"
+     inkscape:cx="148.46292"
+     inkscape:cy="55.603167"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -38,12 +38,12 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1215"
-     inkscape:window-height="776"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
+     inkscape:window-width="1920"
+     inkscape:window-height="1005"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
-     showguides="true"
+     showguides="false"
      inkscape:guide-bbox="true" />
   <metadata
      id="metadata7">
@@ -81,14 +81,13 @@
        sodipodi:nodetypes="ccccccc" />
     <text
        xml:space="preserve"
-       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#eeeeee;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#eeeeee;fill-opacity:1;stroke:none"
        id="text3056"
-       sodipodi:linespacing="125%"
        transform="translate(0,-18)"><textPath
          xlink:href="#path3087"
          startOffset="50%"
          id="textPath3857"
-         style="font-size:18px;fill:#eeeeee;stroke:none">Mainline, work on new features              </textPath></text>
+         style="font-size:18px;fill:#eeeeee;stroke:none">Mainline, work on new features upstream             </textPath></text>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -102,14 +101,13 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <text
-       sodipodi:linespacing="125%"
        id="text3878"
-       style="font-size:12.83209133px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.83209133px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><textPath
          xlink:href="#path3882"
          startOffset="100%"
          id="textPath3884"><tspan
-   id="tspan3880">Ubuntu Release</tspan></textPath></text>
+   id="tspan3880">Initial Packaging of Release</tspan></textPath></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.04166667"
        d="m 346.4292,204.50164 c 32.7627,-0.85228 79.78019,0.34265 113.73611,2.57919"
@@ -117,7 +115,6 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <text
-       sodipodi:linespacing="125%"
        id="text3954"
        y="210.14052"
        x="479.42151"
@@ -129,7 +126,6 @@
          id="tspan3956"
          sodipodi:role="line">-2</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text3878-2"
        style="font-size:12.83209133px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
        xml:space="preserve"><textPath
@@ -142,7 +138,6 @@
        x="321.01059"
        y="205.65683"
        id="text3950"
-       sodipodi:linespacing="125%"
        transform="scale(0.99985299,1.000147)"><tspan
          sodipodi:role="line"
          id="tspan3952"
@@ -160,7 +155,6 @@
        id="path3876-9"
        inkscape:connector-curvature="0" />
     <text
-       sodipodi:linespacing="125%"
        id="text3878-7"
        style="font-size:13.27117443px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
        xml:space="preserve"
@@ -173,7 +167,7 @@
        transform="matrix(1.2477876,0,0,1.2477876,-31.337389,-66.460177)">
       <path
          transform="translate(66.46875,51.40625)"
-         d="m 87,107.84375 c 0,14.91169 -12.088312,27 -27,27 -14.911688,0 -27,-12.08831 -27,-27 0,-14.911688 12.088312,-27 27,-27 14.911688,0 27,12.088312 27,27 z"
+         d="m 87,107.84375 a 27,27 0 0 1 -27,27 27,27 0 0 1 -27,-27 27,27 0 0 1 27,-27 27,27 0 0 1 27,27 z"
          sodipodi:ry="27"
          sodipodi:rx="27"
          sodipodi:cy="107.84375"
@@ -182,7 +176,6 @@
          style="color:#000000;fill:#f44800;fill-opacity:1;fill-rule:nonzero;stroke:#980101;stroke-width:2.003546;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          sodipodi:type="arc" />
       <text
-         sodipodi:linespacing="125%"
          id="text3870"
          y="166.2"
          x="112.28422"
@@ -204,15 +197,14 @@
          sodipodi:cy="107.84375"
          sodipodi:rx="27"
          sodipodi:ry="27"
-         d="m 87,107.84375 c 0,14.91169 -12.088312,27 -27,27 -14.911688,0 -27,-12.08831 -27,-27 0,-14.911688 12.088312,-27 27,-27 14.911688,0 27,12.088312 27,27 z"
+         d="m 87,107.84375 a 27,27 0 0 1 -27,27 27,27 0 0 1 -27,-27 27,27 0 0 1 27,-27 27,27 0 0 1 27,27 z"
          transform="translate(66.46875,51.40625)" />
       <text
          xml:space="preserve"
          style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
          x="112.28422"
          y="166.2"
-         id="text4018"
-         sodipodi:linespacing="125%"><tspan
+         id="text4018"><tspan
            sodipodi:role="line"
            id="tspan4020"
            x="112.28422"
@@ -223,8 +215,7 @@
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
        x="126.42905"
        y="74.25"
-       id="text4024"
-       sodipodi:linespacing="125%"><tspan
+       id="text4024"><tspan
          sodipodi:role="line"
          id="tspan4026"
          x="126.42905"
@@ -233,5 +224,27 @@
          x="126.42905"
          y="91.75"
          id="tspan4072">Release</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="300.92276"
+       y="230.85019"
+       id="text3730"><tspan
+         sodipodi:role="line"
+         id="tspan3728"
+         x="300.92276"
+         y="230.85019"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">(1.0-1)</tspan></text>
+    <text
+       id="text3734"
+       y="234.65033"
+       x="461.42874"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         y="234.65033"
+         x="461.42874"
+         id="tspan3732"
+         sodipodi:role="line">(1.0-2)</tspan></text>
   </g>
 </svg>
