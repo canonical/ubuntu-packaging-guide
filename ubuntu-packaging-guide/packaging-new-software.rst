@@ -2,10 +2,10 @@
 Packaging New Software
 ======================
 
-While there are thousands of packages in the Ubuntu archive, there are still 
-a lot nobody has gotten to yet. If there is an exciting new piece of software 
-that you feel needs wider exposure, maybe you want to try your hand at 
-creating a package for Ubuntu or a PPA_. This guide will take you through the 
+While there are thousands of packages in the Ubuntu archive, there are still
+a lot nobody has gotten to yet. If there is an exciting new piece of software
+that you feel needs wider exposure, maybe you want to try your hand at
+creating a package for Ubuntu or a PPA_. This guide will take you through the
 steps of packaging new software.
 
 You will want to read the :doc:`Getting Set Up<./getting-set-up>` article first
@@ -77,7 +77,7 @@ example files::
     $ cd hello/debian
     $ rm *ex *EX
 
-You should now customise each of the files.  
+You should now customise each of the files.
 
 In ``debian/changelog`` change the
 version number to an Ubuntu version: ``2.7-0ubuntu1`` (upstream version 2.7,
@@ -137,7 +137,7 @@ builds the .deb binary package::
 
 ``bzr builddeb`` is a command to build the package in its current location.
 The ``-us -uc`` tell it there is no need to GPG sign the package.  The result
-will be placed in ``..``.  
+will be placed in ``..``.
 
 You can view the contents of the package with::
 
@@ -165,9 +165,6 @@ binary packages or .changes file::
 
 To see verbose description of the problems use ``--info`` lintian flag
 or ``lintian-info`` command.
-
-Results of Ubuntu archive checks can be found online on
-http://lintian.ubuntuwire.org.
 
 For Python packages, there is also a ``lintian4python`` tool that provides
 some additional lintian checks.
@@ -225,7 +222,7 @@ packages to Debian:
     "Intent to Package" and "Request for Package" bugs as well as list
     of open ITPs and RFPs.
 
-  - `Debian Developer's Reference, 5.1. New packages <DevRef_>`_ - The entire 
+  - `Debian Developer's Reference, 5.1. New packages <DevRef_>`_ - The entire
     document is invaluable for both Ubuntu and Debian packagers. This
     section documents processes for submitting new packages.
 
