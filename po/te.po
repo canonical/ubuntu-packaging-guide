@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-10-02 09:01+0200\n"
+"POT-Creation-Date: 2017-09-03 14:51-0500\n"
 "PO-Revision-Date: 2012-12-06 04:49+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Telugu <te@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-08-15 05:22+0000\n"
+"X-Launchpad-Export-Date: 2017-09-04 05:42+0000\n"
 "X-Generator: Launchpad (build 18446)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -29,24 +29,20 @@ msgid ""
 msgstr ""
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:9
-msgid "add the following to the Source section in ``debian/control``::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:13
 msgid ""
 "add a file called ``debian/tests/control`` which specifies the requirements "
 "for the testbed,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:11
 msgid "add the tests in ``debian/tests/``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:19
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:15
 msgid "Testbed requirements"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:21
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:17
 msgid ""
 "In ``debian/tests/control`` you specify what to expect from the testbed. So "
 "for example you list all the required packages for the tests, if the testbed "
@@ -54,33 +50,33 @@ msgid ""
 "`DEP 8 specification <DEP8_>`_ lists all available options."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:26
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:22
 msgid ""
 "Below we are having a look at the ``glib2.0`` source package. In a very "
 "simple case the file would look like this::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:32
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:28
 msgid ""
 "For the test in ``debian/tests/build`` this would ensure that the packages "
 "``libglib2.0-dev`` and ``build-essential`` are installed."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:35
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:31
 msgid ""
 "You can use ``@`` in the ``Depends`` line to indicate that you want all the "
 "packages installed which are built by the source package in question."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:41
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:37
 msgid "The actual tests"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:43
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:39
 msgid "The accompanying test for the example above might be:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:75
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:71
 msgid ""
 "Here a very simple piece of C code is written to a temporary directory. Then "
 "this is compiled with system libraries (using flags and library paths as "
@@ -88,7 +84,7 @@ msgid ""
 "some parts of core glib functionality, is run."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:80
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:76
 msgid ""
 "While this test is very small and simple, it covers quite a lot: that your -"
 "dev package has all necessary dependencies, that your package installs "
@@ -97,103 +93,109 @@ msgid ""
 "issues early on."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:86
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:82
 msgid "Executing the test"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:88
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:84
 msgid ""
 "While the test script can be easily executed on its own, it is strongly "
-"recommended to actually use ``adt-run`` from the ``autopkgtest`` package for "
-"verifying that your test works; otherwise, if it fails in the Ubuntu "
+"recommended to actually use ``autopkgtest`` from the ``autopkgtest`` package "
+"for verifying that your test works; otherwise, if it fails in the Ubuntu "
 "Continuous Integration (CI) system, it will not land in Ubuntu.  This also "
 "avoids cluttering your workstation with test packages or test configuration "
 "if the test does something more intrusive than the simple example above."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:95
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:91
 msgid ""
 "The `README.running-tests <running_tests_local_>`_ (`online version "
-"<DEP8_>`_) documentation explains all available testbeds (schroot, LXC, "
-"QEMU, etc.) and the most common scenarios how to run your tests with ``adt-"
-"run``, e. g. with locally built binaries, locally modified tests, etc."
+"<DEP8_>`_) documentation explains all available testbeds (schroot, LXD, "
+"QEMU, etc.) and the most common scenarios how to run your tests with "
+"``autopkgtest``, e. g. with locally built binaries, locally modified tests, "
+"etc."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:101
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:97
 msgid ""
 "The Ubuntu CI system uses the QEMU runner and runs the tests from the "
 "packages in the archive, with ``-proposed`` enabled. To reproduce the exact "
 "same environment, first install the necessary packages::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:103
 msgid "Now build a testbed with::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:107
 msgid ""
 "(Please see its manpage and ``--help`` output for selecting different "
 "releases, architectures, output directory, or using proxies). This will "
 "build e. g. ``adt-trusty-amd64-cloud.img``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:115
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:111
 msgid ""
 "Then run the tests of a source package like ``libpng`` in that QEMU image::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:119
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:115
 msgid ""
-"The Ubuntu CI system runs packages with ``-proposed`` enabled; to enable "
-"that, run::"
+"The Ubuntu CI system runs packages with only selected packages from ``-"
+"proposed`` available (the package which caused the test to be run); to "
+"enable that, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:124
-msgid ""
-"The ``adt-run`` manpage has a lot more valuable information on other testing "
-"options."
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:121
+msgid "or to run with all packages from ``-proposed``::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:129
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:125
+msgid ""
+"The ``autopkgtest`` manpage has a lot more valuable information on other "
+"testing options."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:130
 msgid "Further examples"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:131
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:132
 msgid ""
 "This list is not comprehensive, but might help you get a better idea of how "
 "automated tests are implemented and used in Ubuntu."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:134
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:135
 msgid ""
 "The `libxml2 tests <libxml2_>`_ are very similar. They also run a test-build "
 "of a simple piece of C code and execute it."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:136
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:137
 msgid ""
 "The `gtk+3.0 tests <gtk3_>`_ also do a compile/link/run check in the "
 "\"build\" test. There is an additional \"python3-gi\" test which verifies "
 "that the GTK library can also be used through introspection."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:139
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
 msgid ""
 "In the `ubiquity tests <ubiquity_>`_ the upstream test-suite is executed."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:140
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:141
 msgid ""
 "The `gvfs tests <gvfs_>`_ have comprehensive testing of their functionality "
 "and are very interesting because they emulate usage of CDs, Samba, DAV and "
 "other bits."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:145
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:146
 msgid "Ubuntu infrastructure"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:147
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:148
 msgid ""
 "Packages which have ``autopkgtest`` enabled will have their tests run "
 "whenever they get uploaded or any of their dependencies change. The output "
@@ -201,57 +203,57 @@ msgid ""
 "web and is regularly updated."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:152
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:153
 msgid ""
-"Debian also uses ``adt-run`` to run package tests, although currently only "
-"in schroots, so results may vary a bit. Results and logs can be seen on "
+"Debian also uses ``autopkgtest`` to run package tests, although currently "
+"only in schroots, so results may vary a bit. Results and logs can be seen on "
 "http://ci.debian.net. So please submit any test fixes or new tests to Debian "
 "as well."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:158
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:159
 msgid "Getting the test into Ubuntu"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:160
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:161
 msgid ""
 "The process of submitting an autopkgtest for a package is largely similar to "
 ":doc:`fixing a bug in Ubuntu<./fixing-a-bug>`. Essentially you simply:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:163
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
 msgid "run ``bzr branch ubuntu:<packagename>``,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:164
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:165
 msgid "edit ``debian/control`` to enable the tests,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:165
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
 msgid "add the ``debian/tests`` directory,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:166
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:167
 msgid ""
 "write the ``debian/tests/control`` based on the `DEP 8 Specification "
 "<dep8_>`_,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:167
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:168
 msgid "add your test case(s) to ``debian/tests``,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:168
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:169
 msgid ""
 "commit your changes, push them to Launchpad, propose a merge and get it "
 "reviewed just like any other improvement in a source package."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:173
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:174
 msgid "What you can do"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:175
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:176
 msgid ""
 "The Ubuntu Engineering team put together a `list of required test-cases "
 "<requiredtests_>`_, where packages which need tests are put into different "
@@ -259,7 +261,7 @@ msgid ""
 "to yourself."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/auto-pkg-test.rst:179
+#: ../ubuntu-packaging-guide/auto-pkg-test.rst:180
 msgid ""
 "If you should run into any problems, you can join the `#ubuntu-quality IRC "
 "channel <qualityirc_>`_ to get in touch with developers who can help you."
@@ -958,10 +960,9 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:26
 msgid ""
-"`Harvest <http://harvest.ubuntu.com/>`_ is where we keep track of various "
-"TODO lists regarding Ubuntu development. It lists bugs that were fixed "
-"upstream or in Debian already, lists small bugs (we call them 'bitesize'), "
-"and so on. Check it out and find your first bug to work on."
+"Take a look at `the bitesize bugs`_ in Launchpad, and that might give you an "
+"idea of something to work on. It might also interest you to look at the bugs "
+"`triaged`_ by the Ubuntu One Hundred Papercuts team."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:35
@@ -977,66 +978,159 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:41
 msgid ""
-"Let's say you've found a bug in Tomboy, a note taking desktop application. "
-"The Tomboy application can be started by running ``/usr/bin/tomboy`` on the "
-"command line.  To find the binary package containing this application, use "
-"this command::"
+"Let's say you've found a bug in Bumprace, a racing game. The Bumprace "
+"application can be started by running ``/usr/bin/bumprace`` on the command "
+"line. To find the binary package containing this application, use this "
+"command::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:48
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:47
 msgid "This would print out::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:52
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:51
 msgid ""
-"Note that the part preceding the colon is the binary package name.  It's "
+"Note that the part preceding the colon is the binary package name. It's "
 "often the case that the source package and binary package will have "
 "different names. This is most common when a single source package is used to "
-"build multiple different binary packages.  To find the source package for a "
+"build multiple different binary packages. To find the source package for a "
 "particular binary package, type::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:63
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:62
 msgid "``apt-cache`` is part of the standard installation of Ubuntu."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:66
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:65
+msgid "Confirming the problem"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:67
+msgid ""
+"Once you have figured out which package the problem is in, it's time to "
+"confirm that the problem exists."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:70
+msgid ""
+"Let's say the package ``bumprace`` does not have a homepage in its package "
+"description. As a first step you would check if the problem is not solved "
+"already. This is easy to check, either take a look at Software Center or "
+"run::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:76
+msgid "The output should be similar to this::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:102
+msgid "A counter-example would be ``gedit``, which has a homepage set::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:107
+msgid ""
+"Sometimes you will find that a particular problem you are looking into is "
+"already fixed. To avoid wasting efforts and duplicating work it makes sense "
+"to first do some detective work."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:112
+msgid "Research bug situation"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:114
+msgid ""
+"First we should check if a bug for the problem exists in Ubuntu already. "
+"Maybe somebody is working on a fix already, or we can contribute to the "
+"solution somehow. For Ubuntu we have a quick look at "
+"https://bugs.launchpad.net/ubuntu/+source/bumprace and there is no open bug "
+"with our problem there."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:120
+msgid ""
+"For Ubuntu the URL ``https://bugs.launchpad.net/ubuntu/+source/<package>`` "
+"should always take to the bug page of the source package in question."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:124
+msgid ""
+"For Debian, which is the major source for Ubuntu's packages, we have a look "
+"at http://bugs.debian.org/src:bumprace and can't find a bug report for our "
+"problem either."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:128
+msgid ""
+"For Debian the URL ``http://bugs.debian.org/src:<package>`` should always "
+"take to the bug page of the source package in question."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:131
+msgid ""
+"The problem we are working on is special as it only concerns the packaging-"
+"related bits of ``bumprace``. If it was a problem in the source code it "
+"would be helpful to also check the Upstream bug tracker. This is "
+"unfortunately often different for every package you have a look at, but if "
+"you search the web for it, you should in most cases find it pretty easily."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:138
+msgid "Offering help"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:140
+msgid ""
+"If you found an open bug and it is not assigned to somebody and you are in a "
+"position to fix it, you should comment on it with your solution. Be sure to "
+"include as much information as you can: Under which circumstances does the "
+"bug occur? How did you fix the problem? Did you test your solution?"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:145
+msgid ""
+"If no bug report has been filed, you can file a bug for it. What you might "
+"want to bear in mind is: Is the issue so small that just asking for somebody "
+"to commit it is good enough? Did you manage to only partially fix the issue "
+"and you want to at least share your part of it?"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:150
+msgid "It is great if you can offer help and will surely be appreciated."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:155
 msgid "Getting the code"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:68
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:157
 msgid ""
 "Once you know the source package to work on, you will want to get a copy of "
-"the code on your system, so that you can debug it.  In Ubuntu Distributed "
-"Development this is done by :ref:`branching the source package <branching>` "
-"branch corresponding to the source package.  Launchpad maintains source "
-"package branches for all the packages in Ubuntu."
+"the code on your system, so that you can debug it. The ubuntu-dev-tools "
+"package has a tool called ``pull-lp-source`` that a developer can use to "
+"grab the source code for any package. For example, to grab the source code "
+"for the tomboy package in ``xenial``, you can type this::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:74
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
 msgid ""
-"Once you've got a local branch of the source package, you can investigate "
-"the bug, create a fix, and upload your proposed fix to Launchpad, in the "
-"form of a Bazaar branch.  When you are happy with your fix, you can "
-":ref:`submit a merge proposal <merge-proposal>`, which asks other Ubuntu "
-"developers to review and approve your change.  If they agree with your "
-"changes, an Ubuntu developer will upload the new version of the package to "
-"Ubuntu so that everyone gets the benefit of your excellent fix - and you get "
-"a little bit of credit.  You're now on your way to becoming an Ubuntu "
-"developer!"
+"If you do not specify a release such as ``xenial``, it will automatically "
+"get the package from the development version."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:83
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 msgid ""
-"We'll describe specifics on how to branch the code, push your fix, and "
-"request a review in the following sections."
+"Once you've got a local clone of the source package, you can investigate the "
+"bug, create a fix, generate a debdiff, and attach your debdiff to a bug "
+"report for other developers to review. We'll describe specifics in the next "
+"sections."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:89
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:173
 msgid "Work on a fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:91
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:175
 msgid ""
 "There are entire books written about finding bugs, fixing them, testing "
 "them, etc. If you are completely new to programming, try to fix easy bugs "
@@ -1044,73 +1138,71 @@ msgid ""
 "document your change and assumptions clearly."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:96
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:180
 msgid ""
 "Before working on a fix yourself, make sure to investigate if nobody else "
 "has fixed it already or is currently working on a fix. Good sources to check "
 "are:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:99
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:183
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:100
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:184
 msgid ""
 "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:101
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:185
 msgid "bugs or package uploads of Debian or other distributions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:106
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:190
 msgid ""
-"You now want to create a patch which includes the fix.  The command ``edit-"
+"You may want to create a patch which includes the fix. The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:111
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
 msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:116
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:200
 msgid ""
 "After editing the file type ``exit`` or press ``control-d`` to quit the "
 "temporary shell.  The new patch will have been added into ``debian/patches``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:121
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:204
-msgid "Testing the fix"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:123
-msgid "To build a test package with your changes, run these commands::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:128
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:203
 msgid ""
-"This will create a source package from the branch contents (``-us -uc`` will "
-"just omit the step to sign the source package) and ``pbuilder-dist`` will "
-"build the package from source for whatever ``release`` you choose."
+"You must then add a header to your patch containing meta information so that "
+"other developers can know the purpose of the patch and where it came from. "
+"To get the template header that you can edit to reflect what the patch does, "
+"type this::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:132
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:210
 msgid ""
-"Once the build succeeds, install the package from "
-"``~/pbuilder/<release>_result/`` (using ``sudo dpkg -i "
-"<package>_<version>.deb``).  Then test to see if the bug is fixed."
+"This will open the template in a text editor. Follow the template and make "
+"sure to be thorough so you get all the details necessary to describe the "
+"patch."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:139
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:155
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:214
+msgid ""
+"In this specific case, if you just want to edit ``debian/control``, you do "
+"not need a patch. Put ``Homepage: http://www.linux-games.com/bumprace/`` at "
+"the end of the first section and the bug should be fixed."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:219
 msgid "Documenting the fix"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:141
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:221
 msgid ""
 "It is very important to document your change sufficiently so developers who "
 "look at the code in the future won't have to guess what your reasoning was "
@@ -1119,17 +1211,17 @@ msgid ""
 "tracked."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:146
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:226
 msgid "The easiest way to update this is to run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:150
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:230
 msgid ""
 "This will add a boilerplate changelog entry for you and launch an editor "
 "where you can fill in the blanks. An example of this could be::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:159
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:239
 msgid ""
 "``dch`` should fill out the first and last line of such a changelog entry "
 "for you already. Line 1 consists of the source package name, the version "
@@ -1138,25 +1230,25 @@ msgid ""
 "timestamp (in :rfc:`5322` format) of the change."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:245
 msgid ""
 "With that out of the way, let's focus on the actual changelog entry itself: "
 "it is very important to document:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
-msgid "where the change was done"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:248
+msgid "Where the change was done."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:169
-msgid "what was changed"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:249
+msgid "What was changed."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:170
-msgid "where the discussion of the change happened"
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:250
+msgid "Where the discussion of the change happened."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:172
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:252
 msgid ""
 "In our (very sparse) example the last point is covered by ``(LP: #123456)`` "
 "which refers to Launchpad bug 123456. Bug reports or mailing list threads or "
@@ -1166,288 +1258,53 @@ msgid ""
 "Ubuntu."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:181
-msgid "Committing the fix"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:183
-msgid "With the changelog entry written and saved, you can just run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:187
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:259
 msgid ""
-"and the change will be committed (locally) with your changelog entry as a "
-"commit message."
+"In order to get it sponsored in the next section, you need to file a bug "
+"report in Launchpad (if there isn't one already, if there is, use that) and "
+"explain why your fix should be included in Ubuntu. For example, for tomboy, "
+"you would file a bug `here`_ (edit the URL to reflect the package you have a "
+"fix for). Once a bug is filed explaining your changes, put that bug number "
+"in the changelog."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:190
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:269
+msgid "Testing the fix"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:271
+msgid "To build a test package with your changes, run these commands::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:276
 msgid ""
-"To push it to Launchpad, as the remote branch name, you need to stick to the "
-"following nomenclature::"
+"This will create a source package from the branch contents (``-us -uc`` will "
+"just omit the step to sign the source package and ``-d`` will skip the step "
+"where it checks for build dependencies, pbuilder will take care of that) and "
+"``pbuilder-dist`` will build the package from source for whatever "
+"``release`` you choose."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
-msgid "This could for example be::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:199
-msgid "So if you just run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:204
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:283
 msgid ""
-"you should be all set. The push command should push it to Launchpad and the "
-"second command will open the Launchpad page of the remote branch in your "
-"browser. There find the \"(+) Propose for merging\" link, click it to get "
-"the change reviewed by somebody and included in Ubuntu."
+"If ``debuild`` errors out with \"Version number suggests Ubuntu changes, but "
+"Maintainer: does not have Ubuntu address\" then run the ``update-"
+"maintainer`` command (from ubuntu-dev-tools) and it will automatically fix "
+"this for you. This happens because in Ubuntu, all Ubuntu Developers are "
+"responsible for all Ubuntu packages, while in Debian, packages have "
+"maintainers."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:209
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:289
 msgid ""
-"Our article about :doc:`seeking sponsorship<./udd-sponsorship>` goes into "
-"more detail about getting feedback for your proposed changes."
+"In this case with bumprace, run this to view the package information::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug.rst:212
-msgid ""
-"If your branch fixes issues in stable releases or it is a security fix, you "
-"might want to have a look at our :doc:`Security and stable release "
-"updates<./security-and-stable-release-updates>` article."
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:293
+msgid "As expected, there should now be a ``Homepage:`` field."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:3
-msgid "Tutorial: Fixing a bug in Ubuntu"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:5
-msgid ""
-"While the mechanics for :doc:`fixing a bug<./fixing-a-bug>` are the same for "
-"every bug, every problem you look at is likely to be different from another. "
-"An example of a concrete problem might help to get an idea what to consider "
-"generally."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:10
-msgid ""
-"At the time of writing this article this was not fixed yet. When you are "
-"reading the article this might actually be fixed. Take this as an example "
-"and try to adapt it to the specific problem you are facing."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:15
-msgid "Confirming the problem"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:17
-msgid ""
-"Let's say the package ``bumprace`` does not have a homepage in its package "
-"description. As a first step you would check if the problem is not solved "
-"already. This is easy to check, either take a look at Software Center or "
-"run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:23
-msgid "The output should be similar to this::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:49
-msgid "A counter-example would be ``gedit``, which has a homepage set::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:55
-msgid ""
-"Sometimes you will find that a particular problem you are looking into is "
-"already fixed. To avoid wasting efforts and duplicating work it makes sense "
-"to first do some detective work."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:61
-msgid "Research bug situation"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:63
-msgid ""
-"First we should check if a bug for the problem exists in Ubuntu already. "
-"Maybe somebody is working on a fix already, or we can contribute to the "
-"solution somehow. For Ubuntu we have a quick look at "
-"https://bugs.launchpad.net/ubuntu/+source/bumprace and there is no open bug "
-"with our problem there."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:69
-msgid ""
-"For Ubuntu the URL ``https://bugs.launchpad.net/ubuntu/+source/<package>`` "
-"should always take to the bug page of the source package in question."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:73
-msgid ""
-"For Debian, which is the major source for Ubuntu's packages, we have a look "
-"at http://bugs.debian.org/src:bumprace and can't find a bug report for our "
-"problem either."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:77
-msgid ""
-"For Debian the URL ``http://bugs.debian.org/src:<package>`` should always "
-"take to the bug page of the source package in question."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:80
-msgid ""
-"The problem we are working on is special as it only concerns the packaging-"
-"related bits of ``bumprace``. If it was a problem in the source code it "
-"would be helpful to also check the Upstream bug tracker. This is "
-"unfortunately often different for every package you have a look at, but if "
-"you search the web for it, you should in most cases find it pretty easily."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:88
-msgid "Offering help"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:90
-msgid ""
-"If you found an open bug and it is not assigned to somebody and you are in a "
-"position to fix it, you should comment on it with your solution. Be sure to "
-"include as much information as you can: Under which circumstances does the "
-"bug occur? How did you fix the problem? Did you test your solution?"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:95
-msgid ""
-"If no bug report has been filed, you can file a bug for it. What you might "
-"want to bear in mind is: Is the issue so small that just asking for somebody "
-"to commit it is good enough? Did you manage to only partially fix the issue "
-"and you want to at least share your part of it?"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:100
-msgid "It is great if you can offer help and will surely be appreciated."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:104
-#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:71
-msgid "Fixing the issue"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:106
-msgid ""
-"For this specific example it is enough to search the web for ``bumprace`` "
-"and find the homepage of it. Be sure it is a live site and not just a "
-"software catalogue. http://www.linux-games.com/bumprace/ looks like it is "
-"the proper place."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:111
-msgid ""
-"To address the issue in the source package, we first need the source and we "
-"can easily get it by running::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:117
-msgid ""
-"If you read :doc:`the Debian Directory Overview<./debian-dir-overview>` "
-"before, you might remember, that the homepage for a package is specified in "
-"the first part of ``debian/control``, the section which starts with "
-"``Source:``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:121
-msgid "So what we do next is run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:125
-msgid ""
-"and edit ``debian/control`` to add ``Homepage: http://www.linux-"
-"games.com/bumprace/``. At the end of the first section should be a good "
-"place for it. Once you have done this, save the file."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:129
-msgid "If you now run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:133
-msgid "you should see something like this:"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:149
-msgid ""
-"The diff is pretty simple to understand. The ``+`` indicates a line which "
-"was added. In our cases it was added just before the second section, "
-"starting with ``Package``, which indicates a resulting binary package."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:157
-msgid ""
-"It is important to explain to your fellow developers what exactly you did. "
-"If you run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:163
-msgid ""
-"this will start an editor with a boilerplate changelog entry which you just "
-"have to fill out. In our case something like ``debian/control: Added "
-"project's homepage.`` should do. Then save the file. To double-check this "
-"worked out, run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:170
-msgid "and you will see something like this:"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:189
-msgid "A few additional considerations:"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:191
-msgid ""
-"If you have a reference to a Launchpad bug which is fixed by the issue, add "
-"(``LP: #<bug number>``) to the changelog entry line, ie: ``(LP: #123456)``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:193
-msgid ""
-"If you want to get your fix included in Debian, for a Debian bug the syntax "
-"is ``(Closes: #<bug number>)``, ie: ``(Closes: #123456)``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:195
-msgid ""
-"If it is a reference to an upstream or Debian bug or a mailing list "
-"discussion, mention it as well."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:197
-msgid "Try to wrap your lines at 80 characters."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:198
-msgid ""
-"Try to be specific, not an essay, but enough for somebody (who did not "
-"deeply look into the issue) to understand."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:200
-msgid "Mention how you fixed the issue and where."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:206
-msgid ""
-"To test the fix, you need to :doc:`have your development environment set "
-"up<./getting-set-up>`, then to build the package, install it and verify the "
-"problem is solved. In our case this would be::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:214
-msgid ""
-"In step one we build the source package from the branch, then build it by "
-"using ``pbuilder``, then inspect the resulting package to check if the "
-"Homepage field was added properly."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:218
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:296
 msgid ""
 "In a lot of cases you will have to actually install the package to make sure "
 "it works as expected. Our case is a lot easier. If the build succeeded, you "
@@ -1456,74 +1313,153 @@ msgid ""
 "your file manager."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:225
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:304
+msgid "Submitting the fix and getting it included"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:306
 msgid ""
-"As we verified, the problem is now solved, so the next step is sharing our "
-"solution with the world."
+"With the changelog entry written and saved, run ``debuild`` one more time::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:229
-msgid "Getting the fix included"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:231
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:310
 msgid ""
-"It makes to get fix included as Upstream as possible. Doing that you can "
-"guarantee that everybody can take the Upstream source as-is and don't need "
-"to have local modifications to fix it."
+"and this time it will be signed and you are now ready to get your diff to "
+"submit to get sponsored."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:235
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:313
 msgid ""
-"In our case we established that we have a problem with the packaging, both "
-"in Ubuntu and Debian. As Ubuntu is based on Debian, we will send the fix to "
-"Debian. Once it is included there, it will be picked up by Ubuntu "
-"eventually. The issue in our tutorial is clearly non-critical, so this "
-"approach makes sense. If it is important to fix the issue as soon as "
-"possible, you will need to send the solution to multiple bug trackers. "
-"Provided the issue affects all parties in question."
+"In a lot of cases, Debian would probably like to have the patch as well "
+"(doing this is best practice to make sure a wider audience gets the fix). "
+"So, you should submit the patch to Debian, and you can do that by simply "
+"running this::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:243
-msgid "To submit the patch to Debian, simply run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:247
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:320
 msgid ""
 "This will take you through a series of steps to make sure the bug ends up in "
 "the correct place. Be sure to review the diff again to make sure it does not "
 "include random changes you made earlier."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:251
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:324
 msgid ""
 "Communication is important, so when you add some more description to it to "
 "the inclusion request, be friendly, explain it well."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:254
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:327
 msgid ""
 "If everything went well you should get a mail from Debian's bug tracking "
 "system with more information. This might sometimes take a few minutes."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:257
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:330
 msgid ""
-"If the problem is just in Ubuntu, you might want to consider :doc:`Seeking "
-"Review and Sponsorship<./udd-sponsorship>` to get the fix included."
+"It might be beneficial to just get it included in Debian and have it flow "
+"down to Ubuntu, in which case you would not follow the below process. But, "
+"sometimes in the case of security updates and updates for stable releases, "
+"the fix is already in Debian (or ignored for some reason) and you would "
+"follow the below process. If you are doing such updates, please read our "
+":doc:`Security and stable release updates<./security-and-stable-release-"
+"updates>` article. Other cases where it is acceptable to wait to submit "
+"patches to Debian are Ubuntu-only packages not building correctly, or Ubuntu-"
+"specific problems in general."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:263
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:340
+msgid ""
+"But if you're going to submit your fix to Ubuntu, now it's time to generate "
+"a \"debdiff\", which shows the difference between two Debian packages. The "
+"name of the command used to generate one is also ``debdiff``. It is part of "
+"the ``devscripts`` package. See ``man debdiff`` for all the details. To "
+"compare two source packages, pass the two dsc files as arguments::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:348
+msgid ""
+"In this case, ``debdiff`` the dsc you downloaded with ``pull-lp-source`` and "
+"the new dsc file you generated. This will generate a patch that your sponsor "
+"can then apply locally (by using ``patch -p1 < /path/to/debdiff``). In this "
+"case, pipe the output of the debdiff command to a file that you can then "
+"attach to the bug report::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:356
+msgid "The format shown in ``1-1.0-1ubuntu1.debdiff`` shows:"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:358
+msgid ""
+"``1-`` tells the sponsor that this is the first revision of your patch. "
+"Nobody is perfect, and sometimes follow-up patches need to be provided. This "
+"makes sure that if your patch needs work, that you can keep a consistent "
+"naming scheme."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:362
+msgid ""
+"``1.0-1ubuntu1`` shows the new version being used. This makes it easy to see "
+"what the new version is."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:364
+msgid ""
+"``.debdiff`` is an extension that makes it clear that it is a debdiff."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:366
+msgid "While this format is optional, it works well and you can use this."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:368
+msgid ""
+"Next, go to the bug report, make sure you are logged into Launchpad, and "
+"click \"Add attachment or patch\" under where you would add a new comment. "
+"Attach the debdiff, and leave a comment telling your sponsor how this patch "
+"can be applied and the testing you have done. An example comment can be::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:376
+msgid ""
+"Make sure you mark it as a patch (the Ubuntu Sponsors team will "
+"automatically be subscribed) and that you are subscribed to the bug report. "
+"You will then receive a review anywhere between several housr from "
+"submitting the patch to several weeks. If it takes longer than that, please "
+"join ``#ubuntu-motu`` on ``freenode`` and mention it there. Stick around "
+"until you get an answer from someone, and they can guide you as to what to "
+"do next."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:383
+msgid ""
+"Once you have received a review, your patch was either uploaded, your patch "
+"needs work, or is rejected for some other reason (possibly the fix is not "
+"fit for Ubuntu or should go to Debian instead). If your patch needs work, "
+"follow the same steps and submit a follow-up patch on the bug report, "
+"otherwise submit to Debian as shown above."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:389
+msgid ""
+"Remember: good places to ask your questions are ``ubuntu-"
+"motu@lists.ubuntu.com`` and ``#ubuntu-motu`` on freenode. You will easily "
+"find a lot of new friends and people with the same passion that you have: "
+"making the world a better place by making better Open Source software."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:395
 msgid "Additional considerations"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:265
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:397
 msgid ""
 "If you find a package and find that there are a couple of trivial things you "
 "can fix at the same time, do it. This will speed up review and inclusion."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-a-bug-example.rst:268
+#: ../ubuntu-packaging-guide/fixing-a-bug.rst:400
 msgid ""
 "If there are multiple big things you want to fix, it might be advisable to "
 "send individual patches or merge proposals instead. If there are individual "
@@ -1613,32 +1549,21 @@ msgid ""
 msgstr ""
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:53
-msgid "ARM64"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:54
-msgid ""
-"Ubuntu has added arm64 as a architecture recently, but many packages fail to "
-"build on it. A full list of the packages not building are at "
-"qa.ubuntuwire.org/ftbfs/arm64.html. Many of these are caused by packages "
-"using outdated autotools helper files. Any package with the lintian warning "
-"ancient-autotools-helper-file or outdated-autotools-helper-file will have "
-"this issue. Adding autotools-dev or dh-autoreconf to the build proccess will "
-"usually fix this."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:63
 msgid "Other causes of a package to FTBFS"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:64
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:54
 msgid ""
 "If a package is in main and missing a dependency that is not in main, you "
 "will have to file a MIR bug. https://wiki.ubuntu.com/MainInclusionProcess "
 "explains the procedure."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:72
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:61
+msgid "Fixing the issue"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/fixing-ftbfs.rst:62
 msgid ""
 "Once you have found a fix to the problem, follow the same process as any "
 "other bug. Make a patch, add it to a bzr branch or bug, subscribe ubuntu-"
@@ -1693,71 +1618,55 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:26
 msgid ""
-"Don't worry though, you can use `Testdrive`_ or :doc:`chroots <./chroots>` "
-"to safely use the development release."
+"Don't want to install the latest Ubuntu development version of Ubuntu? Spin "
+"up an `LXD container <https://help.ubuntu.com/lts/serverguide/lxd.html>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:32
+#: ../ubuntu-packaging-guide/getting-set-up.rst:30
 msgid "Install basic packaging software"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:34
+#: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid ""
 "There are a number of tools that will make your life as an Ubuntu developer "
-"much easier.  You will encounter these tools later in this guide.  To "
-"install most of the tools you will need run this command::"
+"much easier. You will encounter these tools later in this guide. To install "
+"most of the tools you will need run this command::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:41
-msgid ""
-"Note: Since Ubuntu 11.10 \"Oneiric Ocelot\" (or if you have Backports "
-"enabled on a currently supported release), the following command will "
-"install the above and other tools which are quite common in Ubuntu "
-"development::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/getting-set-up.rst:49
+#: ../ubuntu-packaging-guide/getting-set-up.rst:39
 msgid "This command will install the following software:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:51
+#: ../ubuntu-packaging-guide/getting-set-up.rst:41
 msgid ""
 "``gnupg`` -- `GNU Privacy Guard <GPG_>`_ contains tools you will need to "
 "create a cryptographic key with which you will sign files you want to upload "
 "to Launchpad."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:54
+#: ../ubuntu-packaging-guide/getting-set-up.rst:44
 msgid ""
 "``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
 "isolated environment."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:56
+#: ../ubuntu-packaging-guide/getting-set-up.rst:46
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:58
-msgid ""
-"``bzr-builddeb`` (and ``bzr``, a dependency) -- distributed version control "
-"with Bazaar, a new way of working with packages for Ubuntu that will make it "
-"easy for many developers to collaborate and work on the same code while "
-"keeping it trivial to merge each other's work."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/getting-set-up.rst:62
+#: ../ubuntu-packaging-guide/getting-set-up.rst:48
 msgid ""
 "``apt-file`` provides an easy way to find the binary package that contains a "
 "given file."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:67
+#: ../ubuntu-packaging-guide/getting-set-up.rst:53
 msgid "Create your GPG key"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:69
+#: ../ubuntu-packaging-guide/getting-set-up.rst:55
 msgid ""
 "GPG stands for `GNU Privacy Guard <GPG_>`_ and it implements the OpenPGP "
 "standard which allows you to sign and encrypt messages and files. This is "
@@ -1767,11 +1676,11 @@ msgid ""
 "the package if it can absolutely determine who uploaded the package."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:76
+#: ../ubuntu-packaging-guide/getting-set-up.rst:62
 msgid "To generate a new GPG key, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:80
+#: ../ubuntu-packaging-guide/getting-set-up.rst:66
 msgid ""
 "GPG will first ask you which kind of key you want to generate. Choosing the "
 "default (RSA and DSA) is fine. Next it will ask you about the keysize. The "
@@ -1785,7 +1694,7 @@ msgid ""
 "allowed to include spaces)."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:90
+#: ../ubuntu-packaging-guide/getting-set-up.rst:76
 msgid ""
 "Now GPG will create a key for you, which can take a little bit of time; it "
 "needs random bytes, so if you give the system some work to do it will be "
@@ -1793,21 +1702,21 @@ msgid ""
 "load some web page."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:95
+#: ../ubuntu-packaging-guide/getting-set-up.rst:81
 msgid "Once this is done, you will get a message similar to this one::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:102
+#: ../ubuntu-packaging-guide/getting-set-up.rst:88
 msgid "In this case ``43CDE61D`` is the *key ID*."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:104
+#: ../ubuntu-packaging-guide/getting-set-up.rst:90
 msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:109
+#: ../ubuntu-packaging-guide/getting-set-up.rst:95
 msgid ""
 "This will send your key to the Ubuntu keyserver, but a network of keyservers "
 "will automatically sync the key between themselves. Once this syncing is "
@@ -1815,11 +1724,11 @@ msgid ""
 "around the world."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:116
+#: ../ubuntu-packaging-guide/getting-set-up.rst:102
 msgid "Create your SSH key"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:118
+#: ../ubuntu-packaging-guide/getting-set-up.rst:104
 msgid ""
 "SSH_ stands for *Secure Shell*, and it is a protocol that allows you to "
 "exchange data in a secure way over a network. It is common to use SSH to "
@@ -1828,88 +1737,85 @@ msgid ""
 "upload source packages to Launchpad."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:124
+#: ../ubuntu-packaging-guide/getting-set-up.rst:110
 msgid "To generate an SSH key, enter::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:128
+#: ../ubuntu-packaging-guide/getting-set-up.rst:114
 msgid ""
 "The default file name usually makes sense, so you can just leave it as it "
 "is. For security purposes, it is highly recommended that you use a "
 "passphrase."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:133
+#: ../ubuntu-packaging-guide/getting-set-up.rst:119
 msgid "Set up pbuilder"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:135
+#: ../ubuntu-packaging-guide/getting-set-up.rst:121
 msgid ""
 "``pbuilder`` allows you to build packages locally on your machine. It serves "
 "a couple of purposes:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:138
+#: ../ubuntu-packaging-guide/getting-set-up.rst:124
 msgid ""
 "The build will be done in a minimal and clean environment. This helps you "
 "make sure your builds succeed in a reproducible way, but without modifying "
 "your local system"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:141
+#: ../ubuntu-packaging-guide/getting-set-up.rst:127
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:142
+#: ../ubuntu-packaging-guide/getting-set-up.rst:128
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:144
+#: ../ubuntu-packaging-guide/getting-set-up.rst:130
 msgid "Setting ``pbuilder`` up is very easy, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:148
+#: ../ubuntu-packaging-guide/getting-set-up.rst:134
 msgid ""
-"where <release> is for example `raring`, `saucy`, `trusty` or in the case of "
-"Debian maybe `sid`. This will take a while as it will download all the "
-"necessary packages for a \"minimal installation\". These will be cached "
-"though."
+"where <release> is for example `xenial`, `zesty`, `artful` or in the case of "
+"Debian maybe `sid` or `buster`. This will take a while as it will download "
+"all the necessary packages for a \"minimal installation\". These will be "
+"cached though."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:154
+#: ../ubuntu-packaging-guide/getting-set-up.rst:140
 msgid "Get set up to work with Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:156
+#: ../ubuntu-packaging-guide/getting-set-up.rst:142
 msgid ""
 "With a basic local configuration in place, your next step will be to "
 "configure your system to work with Launchpad. This section will focus on the "
 "following topics:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:160
+#: ../ubuntu-packaging-guide/getting-set-up.rst:146
 msgid "What Launchpad is and creating a Launchpad account"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:161
+#: ../ubuntu-packaging-guide/getting-set-up.rst:147
 msgid "Uploading your GPG and SSH keys to Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:162
-msgid "Configuring Bazaar to work with Launchpad"
+#: ../ubuntu-packaging-guide/getting-set-up.rst:148
+msgid ""
+"Configure your shell to recognize you (for putting your name in changelogs)"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:163
-msgid "Configuring Bash to work with Bazaar"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/getting-set-up.rst:167
+#: ../ubuntu-packaging-guide/getting-set-up.rst:152
 msgid "About Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:169
+#: ../ubuntu-packaging-guide/getting-set-up.rst:154
 msgid ""
 "Launchpad is the central piece of infrastructure we use in Ubuntu. It not "
 "only stores our packages and our code, but also things like translations, "
@@ -1918,25 +1824,25 @@ msgid ""
 "fixes, and get other Ubuntu developers to review and sponsor them."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:175
+#: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid ""
 "You will need to register with Launchpad and provide a minimal amount of "
 "information. This will allow you to download and upload code, submit bug "
 "reports, and more."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:179
+#: ../ubuntu-packaging-guide/getting-set-up.rst:164
 msgid ""
 "Besides hosting Ubuntu, Launchpad can host any Free Software project. For "
 "more information see the `Launchpad Help wiki "
 "<https://help.launchpad.net/>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:184
+#: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid "Get a Launchpad account"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:186
+#: ../ubuntu-packaging-guide/getting-set-up.rst:171
 msgid ""
 "If you don't already have a Launchpad account, you can easily `create one "
 "<LP-AccountCreate_>`_. If you have a Launchpad account but cannot remember "
@@ -1944,61 +1850,61 @@ msgid ""
 "and looking for the part after the `~` in the URL."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:191
+#: ../ubuntu-packaging-guide/getting-set-up.rst:176
 msgid ""
 "Launchpad's registration process will ask you to choose a display name. It "
 "is encouraged for you to use your real name here so that your Ubuntu "
 "developer colleagues will be able to get to know you better."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:195
+#: ../ubuntu-packaging-guide/getting-set-up.rst:180
 msgid ""
 "When you register a new account, Launchpad will send you an email with a "
 "link you need to open in your browser in order to verify your email address. "
 "If you don't receive it, check in your spam folder."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:199
+#: ../ubuntu-packaging-guide/getting-set-up.rst:184
 msgid ""
 "`The new account help page <LP-AccountHelp_>`_ on Launchpad has more "
 "information about the process and additional settings you can change."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:206
+#: ../ubuntu-packaging-guide/getting-set-up.rst:191
 msgid "Upload your GPG key to Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:208
+#: ../ubuntu-packaging-guide/getting-set-up.rst:193
 msgid "First, you will need to get your fingerprint and key ID."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:210
+#: ../ubuntu-packaging-guide/getting-set-up.rst:195
 msgid "To find about your GPG fingerprint, run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:214
+#: ../ubuntu-packaging-guide/getting-set-up.rst:199
 msgid "and it will print out something like::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:221
+#: ../ubuntu-packaging-guide/getting-set-up.rst:206
 msgid "Then run this command to submit your key to Ubuntu keyserver::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:225
+#: ../ubuntu-packaging-guide/getting-set-up.rst:210
 msgid ""
 "where ``43CDE61D`` should be replaced by your key ID (which is in the first "
 "line of output of the previous command). Now you can import your key to "
 "Launchpad."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:229
+#: ../ubuntu-packaging-guide/getting-set-up.rst:214
 msgid ""
 "Head to https://launchpad.net/~/+editpgpkeys and copy the \"Key "
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
 "FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on \"Import Key\"."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:234
+#: ../ubuntu-packaging-guide/getting-set-up.rst:219
 msgid ""
 "Launchpad will use the fingerprint to check the Ubuntu key server for your "
 "key and, if successful, send you an encrypted email asking you to confirm "
@@ -2008,7 +1914,7 @@ msgid ""
 "password, then click the link to confirm that the key is yours.`"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:241
+#: ../ubuntu-packaging-guide/getting-set-up.rst:226
 msgid ""
 "Launchpad encrypts the email, using your public key, so that it can be sure "
 "that the key is yours. If you are using Thunderbird, the default Ubuntu "
@@ -2018,23 +1924,23 @@ msgid ""
 "terminal, then paste the email contents into your terminal window."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:251
+#: ../ubuntu-packaging-guide/getting-set-up.rst:236
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:254
+#: ../ubuntu-packaging-guide/getting-set-up.rst:239
 msgid ""
 "Find more information at "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:258
+#: ../ubuntu-packaging-guide/getting-set-up.rst:243
 msgid "Upload your SSH key to Launchpad"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:260
+#: ../ubuntu-packaging-guide/getting-set-up.rst:245
 msgid ""
 "Open https://launchpad.net/~/+editsshkeys in a web browser, also open "
 "``~/.ssh/id_rsa.pub`` in a text editor. This is the public part of your SSH "
@@ -2043,58 +1949,28 @@ msgid ""
 "key\". Now click \"Import Public Key\"."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:266
+#: ../ubuntu-packaging-guide/getting-set-up.rst:251
 msgid ""
 "For more information on this process, visit the `creating an SSH keypair "
 "<genssh_>`_ page on Launchpad."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:272
-msgid "Configure Bazaar"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/getting-set-up.rst:274
-msgid ""
-"Bazaar is the tool we use to store code changes in a logical way, to "
-"exchange proposed changes and merge them, even if development is done "
-"concurrently.  It is used for the new Ubuntu Distributed Development method "
-"of working with Ubuntu packages."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/getting-set-up.rst:279
-msgid "To tell Bazaar who you are, simply run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/getting-set-up.rst:284
-msgid ""
-"`whoami` will tell Bazaar which name and email address it should use for "
-"your commit messages. With `launchpad-login` you set your Launchpad ID. This "
-"way code that you publish in Launchpad will be associated with you."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/getting-set-up.rst:288
-msgid ""
-"Note: If you can not remember the ID, go to https://launchpad.net/~ and see "
-"where it redirects you. The part after the \"~\" in the URL is your "
-"Launchpad ID.)"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/getting-set-up.rst:294
+#: ../ubuntu-packaging-guide/getting-set-up.rst:258
 msgid "Configure your shell"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:295
+#: ../ubuntu-packaging-guide/getting-set-up.rst:259
 msgid ""
-"Similar to Bazaar, the Debian/Ubuntu packaging tools need to learn about you "
-"as well. Simply open your `~/.bashrc` in a text editor and add something "
-"like this to the bottom of it::"
+"The Debian/Ubuntu packaging tools need to learn about you as well in order "
+"to properly credit you in the changelog. Simply open your `~/.bashrc` in a "
+"text editor and add something like this to the bottom of it::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:302
+#: ../ubuntu-packaging-guide/getting-set-up.rst:266
 msgid "Now save the file and either restart your terminal or run::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/getting-set-up.rst:306
+#: ../ubuntu-packaging-guide/getting-set-up.rst:270
 msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
@@ -2106,30 +1982,36 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
-"Welcome to the Ubuntu Packaging and Development Guide! This is the official "
-"place for learning all about Ubuntu Development and packaging. After reading "
-"this guide you will have:"
+"Welcome to the Ubuntu Packaging and Development Guide! We are currently "
+"developing codename Artful Aardvark, which is to be released in October 2017 "
+"as Ubuntu 17.10."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:15
 msgid ""
-"heard about the most important players, processes and tools in Ubuntu "
-"development,"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/index.rst:17
-msgid "your development environment set up correctly,"
+"This is the official place for learning all about Ubuntu Development and "
+"packaging. After reading this guide you will have:"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:18
-msgid "a better idea of how to join our community,"
+msgid ""
+"Heard about the most important players, processes and tools in Ubuntu "
+"development,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:19
-msgid "fixed an actual Ubuntu bug as part of the tutorials."
+#: ../ubuntu-packaging-guide/index.rst:20
+msgid "Your development environment set up correctly,"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/index.rst:21
+msgid "A better idea of how to join our community,"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:22
+msgid "Fixed an actual Ubuntu bug as part of the tutorials."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/index.rst:24
 msgid ""
 "Ubuntu is not only a free and open source operating system, its platform is "
 "also open and developed in a transparent fashion. The source code for every "
@@ -2137,14 +2019,14 @@ msgid ""
 "Ubuntu platform can be reviewed."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:26
+#: ../ubuntu-packaging-guide/index.rst:29
 msgid ""
 "This means you can actively get involved in improving it and the community "
 "of Ubuntu platform developers is always interested in helping peers getting "
 "started."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:30
+#: ../ubuntu-packaging-guide/index.rst:33
 msgid ""
 "Ubuntu is also a community of great people who believe in free software and "
 "that it should be accessible for everyone. Its members are welcoming and "
@@ -2152,87 +2034,77 @@ msgid ""
 "questions, to make Ubuntu better together with us."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:35
+#: ../ubuntu-packaging-guide/index.rst:38
 msgid ""
 "If you run into problems: don't panic! Check out the :doc:`communication "
 "article<./communication>` and you will find out how to most easily get in "
 "touch with other developers."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:39
+#: ../ubuntu-packaging-guide/index.rst:42
 msgid "The guide is split up into two sections:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:41
+#: ../ubuntu-packaging-guide/index.rst:44
 msgid "A list of articles based on tasks, things you want to get done."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:42
+#: ../ubuntu-packaging-guide/index.rst:45
 msgid ""
 "A set of knowledge-base articles that dig deeper into specific bits of our "
 "tools and workflows."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:45
-msgid ""
-"This guide focuses on the Ubuntu Distributed Development packaging method. "
-"This is a new way of packaging which uses Distributed Revision Control "
-"branches.  It currently has some limitations which mean many teams in Ubuntu "
-"use :doc:`traditional packaging<./traditional-packaging>` methods.  See the "
-":doc:`UDD Introduction<./udd-intro>` page for an introduction to the "
-"differences."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/index.rst:52
+#: ../ubuntu-packaging-guide/index.rst:49
 msgid "Articles"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:71
+#: ../ubuntu-packaging-guide/index.rst:66
 msgid "Knowledge Base"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:91
+#: ../ubuntu-packaging-guide/index.rst:79
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:93
+#: ../ubuntu-packaging-guide/index.rst:81
 msgid ""
 "You can read this guide offline in different formats, if you install one of "
 "the `binary packages <BinPkgs_>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:96
+#: ../ubuntu-packaging-guide/index.rst:84
 msgid ""
 "If you want to learn more about building Debian packages, here are some "
 "Debian resources you may find useful:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:99
+#: ../ubuntu-packaging-guide/index.rst:87
 msgid "`How to package for Debian <HowToPackage_>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:100
+#: ../ubuntu-packaging-guide/index.rst:88
 msgid "`Debian Policy Manual <Policy_>`_;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:101
+#: ../ubuntu-packaging-guide/index.rst:89
 msgid ""
 "`Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many "
 "languages;"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:102
+#: ../ubuntu-packaging-guide/index.rst:90
 msgid ""
 "`Packaging tutorial <PkgTutorial_>`_ (also available as a `package "
 "<PkgTutorialPkg_>`_);"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:103
+#: ../ubuntu-packaging-guide/index.rst:91
 msgid "`Guide for Packaging Python Modules <PythonModules_>`_."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:105
+#: ../ubuntu-packaging-guide/index.rst:93
 msgid ""
 "We are always looking to improve this guide. If you find any problems or "
 "have some suggestions, please `report a bug on Launchpad <Bugs_>`_. If you'd "
@@ -2409,9 +2281,9 @@ msgstr ""
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:126
 msgid ""
 "Good places to ask your questions are ``ubuntu-motu@lists.ubuntu.com`` and "
-"``#ubuntu-motu`` on ``irc.freenode.net``. You will easily find a lot of new "
-"friends and people with the same passion that you have: making the world a "
-"better place by making better Open Source software."
+"``#ubuntu-motu`` on ``freenode.``. You will easily find a lot of new friends "
+"and people with the same passion that you have: making the world a better "
+"place by making better Open Source software."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:3
@@ -2916,7 +2788,6 @@ msgid "Finally commit the code to your packaging branch::"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:130
-#: ../ubuntu-packaging-guide/udd-working.rst:69
 msgid "Building the package"
 msgstr ""
 
@@ -2967,23 +2838,17 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:169
 msgid ""
-"Results of Ubuntu archive checks can be found online on "
-"http://lintian.ubuntuwire.org."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:172
-msgid ""
 "For Python packages, there is also a ``lintian4python`` tool that provides "
 "some additional lintian checks."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:175
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:172
 msgid ""
 "After making a fix to the packaging you can rebuild using ``-nc`` \"no "
 "clean\" without having to build from scratch::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:180
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:177
 msgid ""
 "Having checked that the package builds locally you should ensure it builds "
 "on a clean system using ``pbuilder``. Since we are going to upload to a PPA "
@@ -2995,35 +2860,35 @@ msgid ""
 ":doc:`do so now<./getting-set-up>`::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:193
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:190
 msgid ""
 "When you are happy with your package you will want others to review it.  You "
 "can upload the branch to Launchpad for review::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:198
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:195
 msgid ""
 "Uploading it to a PPA will ensure it builds and give an easy way for you and "
 "others to test the binary packages.  You will need to set up a PPA in "
 "Launchpad and then upload with ``dput``::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:204
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:201
 msgid "See :doc:`uploading<./udd-uploading>` for more information."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:206
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:203
 msgid ""
 "You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the `MOTU "
 "mailing list <ubuntu-motu_>`_.  There might also be a more specific team you "
 "could ask such as the GNU team for more specific questions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:211
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:208
 msgid "Submitting for inclusion"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:213
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:210
 msgid ""
 "There are a number of paths that a package can take to enter Ubuntu. In most "
 "cases, going through Debian first can be the best path. This way ensures "
@@ -3032,28 +2897,28 @@ msgid ""
 "well. Here are some useful links for submitting new packages to Debian:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:220
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:217
 msgid ""
 "`Debian Mentors FAQ <MentorsFAQ_>`_ - debian-mentors is for the mentoring of "
 "new and prospective Debian Developers. It is where you can find a sponsor to "
 "upload your package to the archive."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:224
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:221
 msgid ""
 "`Work-Needing and Prospective Packages <WNPP_>`_ - Information on how to "
 "file \"Intent to Package\" and \"Request for Package\" bugs as well as list "
 "of open ITPs and RFPs."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:228
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:225
 msgid ""
 "`Debian Developer's Reference, 5.1. New packages <DevRef_>`_ - The entire "
 "document is invaluable for both Ubuntu and Debian packagers. This section "
 "documents processes for submitting new packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:232
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:229
 msgid ""
 "In some cases, it might make sense to go directly into Ubuntu first. For "
 "instance, Debian might be in a freeze making it unlikely that your package "
@@ -3062,11 +2927,11 @@ msgid ""
 "wiki."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:238
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:235
 msgid "Screenshots"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:240
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:237
 msgid ""
 "Once you have uploaded a package to debian, you should add screenshots to "
 "allow propective users to see what the program is like. These should be "
@@ -3191,6 +3056,10 @@ msgid ""
 "the top of patch file. Here are some headers that you can use:"
 msgstr ""
 
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:0
+msgid "Description"
+msgstr ""
+
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:110
 msgid ""
 "Description of what the patch does. It is formatted like ``Description`` "
@@ -3198,14 +3067,26 @@ msgid ""
 "lowercase letter, the next lines are long description, indented with a space."
 msgstr ""
 
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:0
+msgid "Author"
+msgstr ""
+
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:114
 msgid "Who wrote the patch (i.e. \"Jane Doe <packager@example.com>\")."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:0
+msgid "Origin"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:115
 msgid ""
 "Where this patch comes from (i.e. \"upstream\"), when *Author* is not "
 "present."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:0
+msgid "Bug-Ubuntu"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:117
@@ -3215,10 +3096,18 @@ msgid ""
 "upstream or Debian bugtrackers, add *Bug* or *Bug-Debian* headers."
 msgstr ""
 
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:0
+msgid "Forwarded"
+msgstr ""
+
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:121
 msgid ""
 "Whether the patch was forwarded upstream. Either \"yes\", \"no\" or \"not-"
 "needed\"."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/patches-to-packages.rst:0
+msgid "Last-Update"
 msgstr ""
 
 #: ../ubuntu-packaging-guide/patches-to-packages.rst:123
@@ -3496,1231 +3385,6 @@ msgstr ""
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:138
 msgid ""
 "See the `Stable Release Updates wiki page <SRUWiki_>`_ for more information."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:3
-msgid "Traditional Packaging"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:5
-msgid ""
-"The majority of this guide deals with :doc:`Ubuntu Distributed Development "
-"<./udd-intro>` (UDD) which utilizes the distributed version control system "
-"(DVCS) Bazaar for :ref:`retrieving package sources <branching>` and "
-"submitting fixes with :ref:`merge proposals. <merge-proposal>` This article "
-"will discuss what we will call traditional packaging methods for lack of a "
-"better word. Before Bazaar was adopted for Ubuntu development, these were "
-"the typical methods for contributing to Ubuntu."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:13
-msgid ""
-"In some cases, you may need to use these tools instead of UDD. So it is good "
-"to be familiar with them. Before you begin, you should already have read the "
-"article :doc:`Getting Set Up. <./getting-set-up>`"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:18
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:3
-msgid "Getting the Source"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:20
-msgid "In order to get a source package, you can simply run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:24
-msgid ""
-"This method has some draw backs though. It downloads the version of the "
-"source that is available on **your system.** You are likely running the "
-"current stable release, but you want to contribute your change against the "
-"package in the development release. Luckily, the ``ubuntu-dev-tools`` "
-"package provides a helper script::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:32
-msgid ""
-"By default, the  latest version in the development release will be "
-"downloaded. You can also specify a version or Ubuntu release like::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:37
-msgid "to pull the source from the ``trusty`` release, or::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:41
-msgid ""
-"to download version ``1.0-1ubuntu1`` of the package. For more information on "
-"the command, see ``man pull-lp-source``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:44
-msgid ""
-"For our example, let's pretend we got a bug report saying that \"colour\" in "
-"the description of ``xicc`` should be \"color,\" and we want to fix it. "
-"*(Note: This is just an example of something to change and not really a "
-"bug.)* To get the source, run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:52
-msgid "Creating a Debdiff"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:54
-msgid ""
-"A ``debdiff`` shows the difference between two Debian packages. The name of "
-"the command used to generate one is also ``debdiff``. It is part of the "
-"``devscripts`` package. See ``man debdiff`` for all the details. To compare "
-"two source packages, pass the two ``dsc`` files as arguments::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:61
-msgid ""
-"To continue with our example, let's edit the ``debian/control`` and \"fix\" "
-"our \"bug\"::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:67
-msgid ""
-"We also must adhere to the `Debian Maintainer Field Spec <MaintFieldSpec_>`_ "
-"and edit ``debian/control`` to replace::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:74
-msgid "with::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:79
-msgid ""
-"You can use the ``update-maintainer`` tool (in the ``ubuntu-dev-tools`` "
-"package) to do that."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:82
-msgid ""
-"Remember to document your changes in ``debian/changelog`` using ``dch -i`` "
-"and then we can generate a new source package::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:87
-msgid "Now we can examine our changes using ``debdiff``::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:92
-msgid ""
-"To create a patch file that you can send to others or attach to a bug report "
-"for sponsorship, run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:99
-msgid "Applying a Debdiff"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:101
-msgid ""
-"In order to apply a debdiff, first make sure you have the source code of the "
-"version that it was created against::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:106
-msgid ""
-"Then in a terminal, change to the directory where the source was "
-"uncompressed::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/traditional-packaging.rst:111
-msgid "A debdiff is just like a normal patch file. Apply it as usual with::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:6
-msgid "Source package URLs"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:8
-msgid ""
-"Bazaar provides some very nice shortcuts for accessing Launchpad's source "
-"branches of packages in both Ubuntu and Debian."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:11
-msgid "To refer to source branches use::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:15
-msgid ""
-"where *package* refers to the package name you're interested in.  This URL "
-"refers to the package in the current development version of Ubuntu.  To "
-"refer to the branch of Tomboy in the development version, you would use::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:21
-msgid ""
-"To refer to the version of a source package in an older release of Ubuntu, "
-"just prefix the package name with the release's code name.  E.g. to refer to "
-"Tomboy's source package in Saucy_ use::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:27
-msgid ""
-"Since they are unique, you can also abbreviate the distro-series name::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:31
-msgid ""
-"You can use a similar scheme to access the source branches in Debian, "
-"although there are no shortcuts for the Debian distro-series names.  To "
-"access the Tomboy branch in the current development series for Debian use::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:37
-msgid "and to access Tomboy in Debian Wheezy_ use::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:48
-msgid "Getting the source"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:50
-msgid ""
-"Every source package in Ubuntu has an associated source branch on Launchpad. "
-"These source branches are updated automatically by Launchpad, although the "
-"process is not currently foolproof."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:54
-msgid ""
-"There are a couple of things that we do first in order to make the workflow "
-"more efficient later.  Once you are used to the process you will learn when "
-"it makes sense to skip these steps."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:62
-msgid "Creating a shared repository"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:64
-msgid ""
-"Say that you want to work on the Tomboy package, and you've verified that "
-"the source package is named ``tomboy``.  Before actually branching the code "
-"for Tomboy, create a shared repository to hold the branches for this "
-"package.  The shared repository will make future work much more efficient."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:70
-msgid ""
-"Do this using the `bzr init-repo` command, passing it the directory name we "
-"would like to use::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:75
-msgid ""
-"You will see that a `tomboy` directory is created in your current working "
-"area.  Change to this new directory for the rest of your work::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:82
-msgid "Getting the trunk branch"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:84
-msgid ""
-"We use the `bzr branch` command to create a local branch of the package. "
-"We'll name the target directory `tomboy.dev` just to keep things easy to "
-"remember::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:90
-msgid ""
-"The tomboy.dev directory represents the version of Tomboy in the development "
-"version of Ubuntu, and you can always ``cd`` into this directory and do a "
-"`bzr pull` to get any future updates."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:97
-msgid "Ensuring the version is up to date"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:99
-msgid ""
-"When you do your ``bzr branch`` you will get a message telling you if the "
-"packaging branch is up to date.  For example::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:107
-msgid ""
-"Occasionally the importer fails and packaging branches do not match what is "
-"in the archive.  A message saying::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:112
-msgid ""
-"means the importer has failed.  You can find out why on http://package-"
-"import.ubuntu.com/status/ and `file a bug on the UDD project <UDD_>`_ to get "
-"the issue resolved."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:118
-msgid "Upstream Tar"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:120
-msgid "You can get the upstream tar by running::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:124
-msgid ""
-"This will try a number of methods to get the upstream tar, firstly by "
-"recreating it from the ``upstream-x.y`` tag in the bzr archive, then by "
-"downloading from the Ubuntu archive, lastly by running ``debian/rules get-"
-"orig-source``. The upstream tar will also be recreated when using bzr to "
-"build the package::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:132
-msgid ""
-"The `builddeb` plugin has several `configuration options <ConfOptions_>`_."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:136
-msgid "Getting a branch for a particular release"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:138
-msgid ""
-"When you want to do something like a `stable release update <SRU_>`_ (SRU), "
-"or you just want to examine the code in an old release, you'll want to grab "
-"the branch corresponding to a particular Ubuntu release.  For example, to "
-"get the Tomboy package for Quantal do::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:147
-msgid "Importing a Debian source package"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:149
-msgid ""
-"If the package you want to work on is available in Debian but not Ubuntu, "
-"it's still easy to import the code to a local bzr branch for development.  "
-"Let's say you want to import the `newpackage` source package.  We'll start "
-"by creating a shared repository as normal, but we also have to create a "
-"working tree to which the source package will be imported (remember to cd "
-"out of the `tomboy` directory created above)::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-getting-the-source.rst:162
-msgid ""
-"As you can see, we just need to provide the remote location of the dsc file, "
-"and Bazaar will do the rest.  You've now got a Bazaar source branch."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:3
-msgid "Ubuntu Distributed Development — Introduction"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:5
-msgid ""
-"This guide focuses on packaging using the *Ubuntu Distributed Development* "
-"(UDD) method."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:8
-msgid ""
-"*Ubuntu Distributed Development* (UDD) is a new technique for developing "
-"Ubuntu packages that uses tools, processes, and workflows similar to generic "
-"distributed version control system (DVCS) based software development.  The "
-"DVCS used for UDD is Bazaar_."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:14
-msgid "Traditional Packaging Limitations"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:16
-msgid ""
-"Traditionally Ubuntu packages have been kept in tar archive files.  A "
-"traditional source package is made up of the upstream source tar, a "
-"\"debian\" tar (or compressed diff file for older packages) containing the "
-"packaging and a .dsc meta-data file.  To see a traditional package run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:23
-msgid ""
-"This will download the upstream source ``kdetoys_4.6.5.orig.tar.bz2``, the "
-"packaging ``kdetoys_4.6.5-0ubuntu1.debian.tar.gz`` and the meta-data "
-"``kdetoys_4.6.5-0ubuntu1~ppa1.dsc``.  Assuming you have dpkg-dev installed "
-"it will extract these and give you the source package."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:28
-msgid ""
-"Traditional packaging would edit these files and upload.  However this gives "
-"limited opportunity to collaborate with other developers, changes have to be "
-"passed around as diff files with no central way to track them and two "
-"developers can not make changes at the same time.  So most teams have moved "
-"to putting their packaging in a revision control system.  This makes it "
-"easier for several developers to work on a package together.  However there "
-"is no direct connection between the revision control system and the archive "
-"packages so the two must be manually kept in sync.  Since each team works in "
-"its own revision control system a prospective developer must first work out "
-"where that is and how to get the packaging before they can work on the "
-"package."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:40
-msgid "Ubuntu Distributed Development"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:42
-msgid ""
-"With Ubuntu Distributed Development all packages in the Ubuntu (and Debian) "
-"archive are automatically imported into Bazaar branches on our code hosting "
-"site Launchpad.  Changes can be made directly to these branches in "
-"incremental steps and by anyone with commit access.  Changes can also be "
-"made in forked branches and merged back in with Merge Proposals when they "
-"are large enough to need review or if they are by someone without direct "
-"commit access."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:49
-msgid ""
-"UDD branches are all in a standard location, so doing a checkout is easy::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:53
-msgid ""
-"The merge history includes two separate branches, one for the upstream "
-"source and one which adds the ``debian/`` packaging directory::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:59
-msgid ""
-"(This command uses *qbzr* for a GUI, run ``log`` instead of ``qlog`` for "
-"console output.)"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:64
-msgid ""
-"This UDD branch of *kdetoys* shows the full packaging for each version "
-"uploaded to Ubuntu with grey circles and the upstream source versions with "
-"green circles.  Versions are tagged with either the version in Ubuntu such "
-"as ``4:4.2.29-0ubuntu1`` or for the upstream branch with the upstream "
-"version ``upstream-4.2.96``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:70
-msgid ""
-"Many Ubuntu packages are based on the packages in Debian, UDD also imports "
-"the Debian package into our branches.  In the *kdetoys* branch above the "
-"Debian versions from *unstable* are from the merge with blue circles while "
-"those from *Debian experimental* are from the merge with yellow circles.  "
-"Debian releases are tagged with their version number, e.g., ``4:4.2.2-1``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:76
-msgid ""
-"So from a UDD branch you can see the complete history of changes to the "
-"package and compare any two versions.  For example, to see the changes "
-"between version 4.2.2 in Debian and the 4.2.2 in Ubuntu use::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:82
-msgid ""
-"(This command uses *qbzr* for a GUI, run ``diff`` instead of ``qdiff`` for "
-"console output.)"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:87
-msgid ""
-"From this we can clearly see what has changed in Ubuntu compared to Debian, "
-"very handy."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:91
-msgid "Bazaar"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:93
-msgid ""
-"UDD branches use Bazaar, a distributed revision control system intended to "
-"be easy to use for those familiar with popular systems such as Subversion "
-"while offering the power of Git."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:97
-msgid ""
-"To do packaging with UDD you will need to know the basics of how to use "
-"Bazaar to manage files.  For an introduction to Bazaar see the `Bazaar Five "
-"Minute Tutorial <5MinTutorial_>`_ and the `Bazaar Users Guide "
-"<UsersGuide_>`_."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:105
-msgid "Limitations of UDD"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:107
-msgid ""
-"Ubuntu Distributed Development is a new method for working with Ubuntu "
-"packages.  It currently has some notable limitations:"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:110
-msgid ""
-"Doing a full branch with history can take a lot of time and network "
-"resources.  You may find it quicker to do a lightweight checkout ``bzr "
-"checkout --lightweight ubuntu:kdetoys`` but this will need a network access "
-"for any further bzr operations."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:115
-msgid ""
-"Working with patches is fiddly.  Patches can be seen as a branched revision "
-"control system, so we end up with RCS on top of RCS."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:118
-msgid ""
-"There is no way to build directly from branches.  You need to create a "
-"source package and upload that."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:121
-msgid ""
-"Some packages have not been successfully imported into UDD branches.  Recent "
-"versions of Bazaar will automatically notify you when this is the case. You "
-"can also check the `status of the package importer <ImportStatus_>`_ "
-"manually before working on a branch."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-intro.rst:126
-msgid ""
-"All of the above are being worked on and UDD is expected to become the main "
-"way to work on Ubuntu packages soon.  However currently most teams within "
-"Ubuntu do not yet work with UDD branches for their  development.  However "
-"because UDD branches are the same as the packages in the  archive any team "
-"should be able to accept merges against them."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:3
-msgid "Getting The Latest"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:5
-msgid ""
-"If someone else has landed changes on a package, you will want to pull those "
-"changes in your own copies of the package branches."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:10
-msgid "Updating your main branch"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:12
-msgid ""
-"Updating your copy of a branch that corresponds to the package in a "
-"particular release is very simple, simply use `bzr pull` from the "
-"appropriate directory::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:18
-msgid ""
-"This works wherever you have a checkout of a branch, so it will work for "
-"things like branches of `saucy`, `trusty-proposed`, etc."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:23
-msgid "Getting the latest in to your working branches"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:25
-msgid ""
-"Once you have updated your copy of a distroseries branch, then you may want "
-"to merge this in to your working branches as well, so that they are based on "
-"the latest code."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:29
-msgid ""
-"You don't have to do this all the time though.  You can work on slightly "
-"older code with no problems.  The disadvantage would come if you were "
-"working on some code that someone else changed.  If you are not working on "
-"the latest version then your changes may not be correct, and may even "
-"produce conflicts."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:34
-msgid ""
-"The merge does have to be done at some point though.  The longer it is left, "
-"the harder may be, so doing it regularly should keep each merge simple.  "
-"Even if there are many merges the total effort would hopefully be less."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:38
-msgid ""
-"To merge the changes you just need to use ``bzr merge``, but you must have "
-"committed your current work first::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:44
-msgid ""
-"Any conflicts will be reported, and you can fix them up.  To review the "
-"changes that you just merged use ``bzr diff``.  To undo the merge use ``bzr "
-"revert``.  Once you are happy with the changes then use ``bzr commit``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:50
-msgid "Referring to versions of a package"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:52
-msgid ""
-"You will often think in terms of versions of a package, rather than the "
-"underlying Bazaar revision numbers.  `bzr-builddeb` provides a revision "
-"specifier that makes this convenient.  Any command that takes a ``-r`` "
-"argument to specify a revision or revision range will work with this "
-"specifier, e.g. ``bzr log``, ``bzr diff``, and so on.  To view the versions "
-"of a package, use the ``package:`` specifier::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-latest.rst:61
-msgid ""
-"This shows you the difference between package version 0.1-1 and 0.1-2."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:3
-msgid "Merging — Updating from Debian and Upstream"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:5
-msgid ""
-"Merging is one of the strengths of Bazaar, and something we do often in "
-"Ubuntu development.  Updates can be merged from Debian, from a new upstream "
-"release, and from other Ubuntu developers.  Doing it in Bazaar is pretty "
-"simple, and all based around the ``bzr merge`` command [#]_."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:10
-msgid ""
-"While you are in any branch's working directory, you can merge in a branch "
-"from a different location.  First check that you have no uncommitted "
-"changes::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:15
-msgid ""
-"If that reports anything then you will either have to commit the changes, "
-"revert them, or shelve them to come back to later."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:20
-msgid "Merging from Debian"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:22
-msgid ""
-"Next run ``bzr merge`` passing the URL of the branch to merge from.  For "
-"example, to merge from the version of the package in Debian Unstable run "
-"[#]_::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:28
-msgid ""
-"This will merge the changes since the last merge point and leave you with "
-"changes to review.  This may cause some conflicts.  You can see everything "
-"that the ``merge`` command did by running::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:35
-msgid ""
-"If conflicts are reported then you need to edit those files to make them "
-"look how they should, removing the *conflict markers*.  Once you have done "
-"this, run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:42
-msgid ""
-"This will resolve any conflicted files that you fixed, and then tell you "
-"what else you have to deal with."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:45
-msgid ""
-"Once any conflicts are resolved, and you have made any other changes that "
-"you need, you will add a new changelog entry, and commit::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:51
-msgid "as described earlier."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:53
-msgid ""
-"However, before you commit, it is always a good thing to check all the "
-"Ubuntu changes by running::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:58
-msgid ""
-"which will show the differences between the Debian (0.6.10-5) and Ubuntu "
-"versions (0.6.10-5ubuntu1).  In similar way you can compare to any other "
-"versions.  To see all available versions run::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:64
-msgid ""
-"After testing and committing the merge, you will need to seek sponsorship or "
-"upload to the archive in the normal way."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:67
-msgid ""
-"If you are going to build the source package from this merged branch, you "
-"would use the ``-S`` option to the ``bd`` command.  One other thing you'll "
-"want to consider is also using the ``--package-merge`` option.  This will "
-"add the appropriate ``-v`` and ``-sa`` options to the source package so that "
-"all the changelog entries since the last Ubuntu change will be included in "
-"your ``_source.changes`` file.  For example::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:78
-msgid "Merging a new upstream version"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:80
-msgid ""
-"When upstream releases a new version (or you want to package a snapshot), "
-"you have to merge a tarball into your branch."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:83
-msgid ""
-"This is done using the ``bzr merge-upstream`` command.  If your package has "
-"a valid ``debian/watch`` file, from inside the branch that you want to merge "
-"to, just type this::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:89
-msgid ""
-"This will download the tarball and merge it into your branch, automatically "
-"adding a ``debian/changelog`` entry for you.  ``bzr-builddeb`` looks at the "
-"``debian/watch`` file for the upstream tarball location."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:93
-msgid ""
-"If you do *not* have a ``debian/watch`` file, you'll need to specify the "
-"location of the upstream tarball, and the version manually::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:98
-msgid ""
-"The ``--version`` option is used to specify the upstream version that is "
-"being merged in, as the command isn't able to infer that (yet)."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:101
-msgid ""
-"The last parameter is the location of the tarball that you are upgrading to; "
-"this can either be a local filesystem path, or a http, ftp, sftp, etc. URI "
-"as shown.  The command will automatically download the tarball for you.  The "
-"tarball will be renamed appropriately and, if required, converted to ``.gz``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:106
-msgid ""
-"The `merge-upstream` command will either tell you that it completed "
-"successfully, or that there were conflicts.  Either way you will be able to "
-"review the changes before committing as normal."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:110
-msgid ""
-"If you are merging an upstream release into an existing Bazaar branch that "
-"has not previously used the UDD layout, ``bzr merge-upstream`` will fail "
-"with an error that the tag for the previous upstream version is not "
-"available; the merge can't be completed without knowing what base version to "
-"merge against. To work around this, create a tag in your existing repository "
-"for the last upstream version present there; e.g., if the last Ubuntu "
-"release was *1.1-0ubuntu3*, create the tag *upstream-1.1* pointing to the "
-"bzr revision you want to use as the tip of the upstream branch."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:120
-msgid ""
-"You will need newer versions of ``bzr`` and the ``bzr-builddeb`` for the "
-"``merge`` command to work.  Use the versions from Ubuntu 12.04 (Precise) or "
-"the development versions from the ``bzr`` PPA.  Specifically, you need "
-"``bzr`` version 2.5 beta 5 or newer, and ``bzr-builddeb`` version 2.8.1 or "
-"newer.  For older versions, use the ``bzr merge-package`` command instead."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-merging.rst:127
-msgid ""
-"To check other available branches of a package in Debian, see package code "
-"page. E.g. https://code.launchpad.net/debian/+source/tomboy"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:3
-msgid "Seeking Review and Sponsorship"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:5
-msgid ""
-"One of the biggest advantages to using the UDD workflow is to improve "
-"quality by seeking review of changes by your peers.  This is true whether or "
-"not you have upload rights yourself.  Of course, if you don't have upload "
-"rights, you will need to seek sponsorship."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:10
-msgid ""
-"Once you are happy with your fix, and have a branch ready to go, the "
-"following steps can be used to publish your branch on Launchpad, link it to "
-"the bug issue, and create a *merge proposal* for others to review, and "
-"sponsors to upload."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:19
-msgid "Pushing to Launchpad"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:21
-msgid ""
-"We previously showed you how to :ref:`associate your branch to the bug <link-"
-"via-changelog>` using ``dch`` and ``bzr commit``.  However, the branch and "
-"bug don't actually get linked until you push the branch to Launchpad."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:25
-msgid ""
-"It is not critical to have a link to a bug for every change you make, but if "
-"you are fixing reported bugs then linking to them will be useful."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:28
-msgid "The general form of the URL you should push your branch to is::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:32
-msgid ""
-"For example, to push your fix for bug 12345 in the Tomboy package for "
-"Trusty, you'd use::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:37
-msgid ""
-"The last component of the path is arbitrary; it's up to you to pick "
-"something meaningful."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:40
-msgid ""
-"However, this usually isn't enough to get Ubuntu developers to review and "
-"sponsor your change.  You should next submit a *merge proposal*."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:43
-msgid "To do this open the bug page in a browser, e.g.::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:47
-msgid "If that fails, then you can use::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:51
-msgid ""
-"where most of the URL matches what you used for `bzr push`.  On this page, "
-"you'll see a link that says *Propose for merging into another branch*.  Type "
-"in an explanation of your change in the *Initial Comment* box.  Lastly, "
-"click *Propose Merge* to complete the process."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:56
-msgid ""
-"Merge proposals to package source branches will automatically subscribe the "
-"`~ubuntu-branches` team, which should be enough to reach an Ubuntu developer "
-"who can review and sponsor your package change."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:62
-msgid "Generating a debdiff"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:64
-msgid ""
-"As noted above, some sponsors still prefer reviewing a *debdiff* attached to "
-"bug reports instead of a merge proposal.  If you're requested to include a "
-"debdiff, you can generate one like this (from inside your `bug-12345` "
-"branch)::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:71
-msgid ""
-"Another way is to is to open the merge proposal and download the diff."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:73
-msgid ""
-"You should ensure that diff has the changes you expect, no more and no less. "
-"Name the diff appropriately, e.g. ``foobar-12345.debdiff`` and attach it to "
-"the bug report."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:79
-msgid "Dealing with feedback from sponsors"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:81
-msgid ""
-"If a sponsor reviews your branch and asks you to change something, you can "
-"do this fairly easily.  Simply go to the branch that you were working in "
-"before, make the changes requested, and then commit::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:87
-msgid ""
-"Now when you push your branch to Launchpad, Bazaar will remembered where you "
-"pushed to, and will update the branch on Launchpad with your latest commits. "
-"All you need to do is::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:93
-msgid ""
-"You can then reply to the merge proposal review email explaining what you "
-"changed, and asking for re-review, or you can reply on the merge proposal "
-"page in Launchpad."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:97
-msgid ""
-"Note that if you are sponsored via a debdiff attached to a bug report you "
-"need to manually update by generating a new diff and attaching that to the "
-"bug report."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:103
-msgid "Expectations"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:105
-msgid ""
-"The Ubuntu developers have set up a schedule of \"patch pilots\", who "
-"regularly review the sponsoring queue and give feedback on branches and "
-"patches. Even though this measure has been put in place it might still take "
-"several days until you hear back. This depends on how busy everybody is, if "
-"the development release is currently frozen, or other factors."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:111
-msgid ""
-"If you haven't heard back in a while, feel free to join `#ubuntu-devel` on "
-"`irc.freenode.net` and find out if somebody can help you there."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-sponsorship.rst:114
-msgid ""
-"For more information on the generall sponsorship process, review the "
-"documentation on our wiki as well: https://wiki.ubuntu.com/SponsorshipProcess"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:3
-msgid "Uploading a package"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:5
-msgid ""
-"Once your merge proposal is reviewed and approved, you will want to upload "
-"your package, either to the archive (if you have permission) or to your "
-"`Personal Package Archive <PPA_>`_ (PPA).  You might also want to do an "
-"upload if you are sponsoring someone else's changes."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:12
-msgid "Uploading a change made by you"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:14
-msgid ""
-"When you have a branch with a change that you would like to upload you need "
-"to get that change back on to the main source branch, build a source "
-"package, and then upload it."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:18
-msgid ""
-"First, you need to check that you have the latest version of the package in "
-"your checkout of the development package trunk::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:24
-msgid ""
-"This pulls in any changes that may have been committed while you were "
-"working on your fix.  From here, you have several options.  If the changes "
-"on the trunk are large and you feel should be tested along with your change "
-"you can merge them into your bug fix branch and test there.  If not, then "
-"you can carry on merging your bug fix branch into the development trunk "
-"branch.  As of bzr 2.5 and bzr-builddeb 2.8.1, this works with just the "
-"standard ``merge`` command::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:34
-msgid ""
-"For older versions of bzr, you can use the ``merge-package`` command "
-"instead::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:38
-msgid ""
-"This will merge the two trees, possibly producing conflicts, which you'll "
-"need to resolve manually."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:41
-msgid ""
-"Next you should make sure the ``debian/changelog`` is as you would like, "
-"with the correct distribution, version number, etc."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:44
-msgid ""
-"Once that is done you should review the change you are about to commit with "
-"``bzr diff``.  This should show you the same changes as a debdiff would "
-"before you upload the source package."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:48
-msgid ""
-"The next step is to build and test the modified source package as you "
-"normally would::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:53
-msgid ""
-"When you're finally happy with your branch, make sure you've committed all "
-"your changes, then tag the branch with the changelog's version number.  The "
-"``bzr tag`` command will do this for you automatically when given no "
-"arguments::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:60
-msgid ""
-"This tag will tell the package importer that what is in the Bazaar branch is "
-"the same as in the archive."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:63
-msgid "Now you can push the changes back to Launchpad::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:67
-msgid "(Change the destination if you are uploading an SRU or similar.)"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:69
-msgid ""
-"You need one last step to get your changes uploaded into Ubuntu or your PPA; "
-"you need to ``dput`` the source package to the appropriate location.  For "
-"example, if you want to upload your changes to your PPA, you'd do::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:75
-msgid "or, if you have permission to upload to the primary archive::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:79
-msgid ""
-"You are now free to delete your feature branch, as it is merged, and can be "
-"re-downloaded from Launchpad if needed."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:84
-msgid "Sponsoring a change"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:86
-msgid ""
-"Sponsoring someone else's change is just like the above procedure, but "
-"instead of merging from a branch you created, you merge from the branch in "
-"the merge proposal::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:92
-msgid ""
-"If there are lots of merge conflicts you would probably want to ask the "
-"contributor to fix them up.  See the next section to learn how to cancel a "
-"pending merge."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:96
-msgid ""
-"But if the changes look good, commit and then follow the rest of the "
-"uploading process::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:103
-msgid "Canceling an upload"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:105
-msgid ""
-"At any time before you `dput` the source package you can decide to cancel an "
-"upload and revert the changes::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:110
-msgid ""
-"You can do this if you notice something needs more work, or if you would "
-"like to ask the contributor to fix up conflicts when sponsoring something."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:115
-msgid "Sponsoring something and making your own changes"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:117
-msgid ""
-"If you are going to sponsor someone's work, but you would like to roll it up "
-"with some changes of your own then you can merge their work in to a separate "
-"branch first."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:121
-msgid ""
-"If you already have a branch where you are working on the package and you "
-"would like to include their changes, then simply run the ``bzr merge`` from "
-"that branch, instead of the checkout of the development package.  You can "
-"then make the changes and commit, and then carry on with your changes to the "
-"package."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:127
-msgid ""
-"If you don't have an existing branch, but you know you would like to make "
-"changes based on what the contributor provides then you should start by "
-"grabbing their branch::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-uploading.rst:133
-msgid ""
-"then work in this new branch, and then merge it in to the main one and "
-"upload as if it was your own work.  The contributor will still be mentioned "
-"in the changelog, and Bazaar will correctly attribute the changes they made "
-"to them."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:3
-msgid "Working on a Package"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:5
-msgid ""
-"Once you have the source package branch in a shared repository, you'll want "
-"to create additional branches for the fixes or other work you plan to do.  "
-"You'll want to base your branch off the package source branch for the distro "
-"release that you plan to upload to.  Usually this is the current development "
-"release, but it may be older releases if you're backporting to an SRU for "
-"example."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:13
-msgid "Branching for a change"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:15
-msgid ""
-"The first thing to do is to make sure your source package branch is up-to-"
-"date.  It will be if you just checked it out, otherwise do this::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:21
-msgid ""
-"Any updates to the package that have uploaded since your checkout will now "
-"be pulled in.  You do not want to make changes to this branch.  Instead, "
-"create a branch that will contain just the changes you're going to make.  "
-"Let's say you want to fix bug 12345 for the Tomboy project.  When you're in "
-"the shared repository you previously created for Tomboy, you can create your "
-"bug fix branch like this::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:31
-msgid ""
-"Now you can do all my work in the ``bug-12345`` directory.  You make changes "
-"there as necessary, committing as you go along.  This is just like doing any "
-"kind of software development with Bazaar.  You can make intermediate commits "
-"as often as you like, and when your changes are finished, you will use the "
-"standard ``dch`` command (from the ``devscripts`` package)::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:39
-msgid ""
-"This will drop you in an editor to add an entry to the `debian/changelog` "
-"file."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:44
-msgid ""
-"When you added your ``debian/changelog`` entry, you should have included a "
-"bug fix tag that indicated which Launchpad bug issue you're fixing.  The "
-"format of this textual tag is pretty strict: ``LP: #12345``.  The space "
-"between the ``:`` and the ``#`` is required and of course you should use the "
-"actual bug number that you're fixing.  Your ``debian/changelog`` entry might "
-"look something like::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:57
-msgid "Commit with the normal::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:61
-msgid ""
-"A hook in bzr-builddeb will use the debian/changelog text as the commit "
-"message and set the tag to mark bug #12345 as fixed."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:64
-msgid ""
-"This only works with bzr-builddeb 2.7.5 and bzr 2.4, for older versions use "
-"``debcommit``."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:71
-msgid ""
-"Along the way, you'll want to build your branch so that you can test it to "
-"make sure it does actually fix the bug."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:74
-msgid ""
-"In order to build the package you can use the ``bzr builddeb`` command from "
-"the ``bzr-builddeb`` package.  You can build a source package with::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:79
-msgid ""
-"(``bd`` is an alias for ``builddeb``.)  You can leave the package unsigned "
-"by appending ``-- -uc -us`` to the command."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:82
-msgid ""
-"It is also possible to use your normal tools, as long as they are able to "
-"strip the .bzr directories from the package, e.g.::"
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:87
-msgid ""
-"If you ever see an error related to trying to build a native package without "
-"a tarball, check to see if there is a ``.bzr-builddeb/default.conf`` file "
-"erroneously specifying the package as native.  If the changelog version has "
-"a dash in it, then it's not a native package, so remove the configuration "
-"file. Note that while ``bzr builddeb`` has a ``--native`` switch, it does "
-"not have a ``--no-native`` switch."
-msgstr ""
-
-#: ../ubuntu-packaging-guide/udd-working.rst:94
-msgid ""
-"Once you've got the source package, you can build it as normal with "
-"``pbuilder-dist`` (or ``pbuilder`` or `sbuild`_)."
 msgstr ""
 
 msgid "translator-credits"
