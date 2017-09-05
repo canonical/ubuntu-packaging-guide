@@ -1,5 +1,6 @@
 ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
 
+  [ Simon Quigley ]
   * Remove outdated Bazaar Ubuntu Distributed Development content and update
     the packaging guide to meet modern packaging standards (LP: #1569561)
     (LP: #1686100):
@@ -8,6 +9,10 @@ ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
     - Make cycle-branching.{svg,png} clearer.
     - lintian.ubuntuwire.org is down, remove that part (LP: #1686096).
     - Merge fixing-a-bug and fixing-a-bug-example, it's simpler this way.
+
+  [ Dmitry Shachnev ]
+  * Temporary downgrade debhelper compatibility level to 9, to allow
+    building on Ubuntu 12.04.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
 

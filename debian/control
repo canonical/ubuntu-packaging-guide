@@ -6,7 +6,7 @@ Uploaders: Andrew Starr-Bochicchio <asb@debian.org>, Dmitry Shachnev <mitya57@de
 Vcs-Bzr: lp:ubuntu-packaging-guide
 Vcs-Browser: https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk
 Build-Depends: cm-super-minimal,
-               debhelper (>= 10),
+               debhelper (>= 9),
                doc-base,
                latexmk,
                python3-polib,
