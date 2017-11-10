@@ -43,7 +43,7 @@ master_doc = 'ubuntu-packaging-guide/index'
 project = u'ubuntu-packaging-guide'
 authors = 'Ubuntu Developers'
 licence = 'Creative Commons Attribution-ShareAlike 3.0'
-copyright = u'2010-2015, ' + authors + ', ' + licence
+copyright = u'2010-2017, ' + authors + ', ' + licence
 
 
 changelog = "debian/changelog"
