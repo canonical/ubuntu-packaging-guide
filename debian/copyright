@@ -4,7 +4,7 @@ Upstream-Contact: Ubuntu Developers
 Source: http://launchpad.net/ubuntu-packaging-guide
 
 Files: *
-Copyright: 2010-2015, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Copyright: 2010-2017, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 License: CC-BY-SA-3.0
 
 Files: themes/ubuntu/static/images/background-header-home.png
