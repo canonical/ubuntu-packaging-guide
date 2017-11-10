@@ -9,8 +9,8 @@ Ubuntu Packaging Guide
 ==================================================
 
 Welcome to the Ubuntu Packaging and Development Guide! We are currently
-developing codename Artful Aardvark, which is to be released in October 2017
-as Ubuntu 17.10.
+developing codename Bionic Beaver, which is to be released in April 2018
+as Ubuntu 18.04 LTS.
 
 This is the official place for learning all about Ubuntu Development and
 packaging. After reading this guide you will have:
