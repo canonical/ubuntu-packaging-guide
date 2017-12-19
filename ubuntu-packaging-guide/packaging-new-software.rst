@@ -26,8 +26,8 @@ Download GNU Hello::
 
 Now uncompress it::
 
-    $ tar xf hello-2.7.tar.gz
-    $ cd hello-2.7
+    $ tar xf hello-2.10.tar.gz
+    $ cd hello-2.10
 
 This application uses the autoconf build system so we want to run ``./configure``
 to prepare for compilation.
@@ -58,7 +58,7 @@ the package name, version number, and path to the upstream tarball::
 
     $ sudo apt-get install dh-make bzr-builddeb
     $ cd ..
-    $ bzr dh-make hello 2.7 hello-2.7.tar.gz
+    $ bzr dh-make hello 2.10 hello-2.10.tar.gz
 
 When it asks what type of package type ``s`` for single binary. This will import
 the code into a branch and add the ``debian/`` packaging directory.  Have a look
@@ -72,7 +72,7 @@ example files::
 You should now customise each of the files.
 
 In ``debian/changelog`` change the
-version number to an Ubuntu version: ``2.7-0ubuntu1`` (upstream version 2.7,
+version number to an Ubuntu version: ``2.10-0ubuntu1`` (upstream version 2.10,
 Debian version 0, Ubuntu version 1).  Also change ``unstable`` to the current
 development Ubuntu release such as ``trusty``.
 
@@ -133,12 +133,12 @@ will be placed in ``..``.
 
 You can view the contents of the package with::
 
-    $ lesspipe hello_2.7-0ubuntu1_amd64.deb
+    $ lesspipe hello_2.10-0ubuntu1_amd64.deb
 
 Install the package and check it works (later you will be able to uninstall it
 using ``sudo apt-get remove hello`` if you want)::
 
-    $ sudo dpkg --install hello_2.7-0ubuntu1_amd64.deb
+    $ sudo dpkg --install hello_2.10-0ubuntu1_amd64.deb
 
 You can also install all packages at once using::
 
@@ -152,8 +152,8 @@ bugs.  Many errors can be automatically detected by our tool
 ``lintian`` which can be run on the source .dsc metadata file, .deb
 binary packages or .changes file::
 
-    $ lintian hello_2.7-0ubuntu1.dsc
-    $ lintian hello_2.7-0ubuntu1_amd64.deb
+    $ lintian hello_2.10-0ubuntu1.dsc
+    $ lintian hello_2.10-0ubuntu1_amd64.deb
 
 To see verbose description of the problems use ``--info`` lintian flag
 or ``lintian-info`` command.
@@ -177,7 +177,7 @@ now<./getting-set-up>`::
 
     $ bzr builddeb -S
     $ cd ../build-area
-    $ pbuilder-dist trusty build hello_2.7-0ubuntu1.dsc
+    $ pbuilder-dist trusty build hello_2.10-0ubuntu1.dsc
 
 When you are happy with your package you will want others to review it.  You
 can upload the branch to Launchpad for review::
@@ -188,7 +188,7 @@ Uploading it to a PPA will ensure it builds and give an easy way for you and
 others to test the binary packages.  You will need to set up a PPA in Launchpad
 and then upload with ``dput``::
 
-    $ dput ppa:<lp-username>/<ppa-name> hello_2.7-0ubuntu1.changes
+    $ dput ppa:<lp-username>/<ppa-name> hello_2.10-0ubuntu1.changes
 
 See :doc:`uploading<./udd-uploading>` for more information.
 

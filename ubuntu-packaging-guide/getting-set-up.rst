@@ -23,7 +23,7 @@ platform, Launchpad. Here's what we'll cover:
   Ubuntu. Doing so will allow you to test changes in the same environment where
   those changes will actually be applied and used.
 
-  Don't want to install the latest Ubuntu development version of Ubuntu? Spin
+  Don't want to install the latest development version of Ubuntu? Spin
   up an `LXD container <https://help.ubuntu.com/lts/serverguide/lxd.html>`_.
 
 Install basic packaging software
