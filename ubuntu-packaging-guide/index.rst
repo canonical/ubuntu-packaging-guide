@@ -73,6 +73,7 @@ Knowledge Base
    debian-dir-overview
    auto-pkg-test
    chroots
+   setting-up-sbuild
    kde
 
 Further Reading
