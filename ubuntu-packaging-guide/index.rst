@@ -71,6 +71,7 @@ Knowledge Base
 
    communication
    debian-dir-overview
+   ubuntu-dev-tools
    auto-pkg-test
    chroots
    setting-up-sbuild
