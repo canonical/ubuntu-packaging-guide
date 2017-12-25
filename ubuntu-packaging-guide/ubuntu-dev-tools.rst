@@ -67,7 +67,7 @@ Backporting packages
 ``ubuntu-dev-tools`` provides ``backportpackage`` allowing us to backport a
 package from specified release of Ubuntu or Debian. For example, to backport
 ``bzr`` package from latest development release for your installed Ubuntu version,
-simply:
+simply::
 
     $ backportpackage -w . bzr
 
