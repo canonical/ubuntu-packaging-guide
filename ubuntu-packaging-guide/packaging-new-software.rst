@@ -190,8 +190,6 @@ and then upload with ``dput``::
 
     $ dput ppa:<lp-username>/<ppa-name> hello_2.10-0ubuntu1.changes
 
-See :doc:`uploading<./udd-uploading>` for more information.
-
 You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the
 `MOTU mailing list <ubuntu-motu_>`_.  There might also be a more specific
 team you could ask such as the GNU team for more specific questions.

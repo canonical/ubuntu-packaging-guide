@@ -38,10 +38,9 @@ Patching the source
 ===================
 Now that we have the source package, we need to patch it to fix the
 vulnerability. You may use whatever patch method that is appropriate for the
-package, including :doc:`UDD techniques<./udd-intro>`, but this example will
-use ``edit-patch`` (from the ubuntu-dev-tools package). ``edit-patch`` is the
-easiest way to patch packages and it is basically a wrapper around every other
-patch system you can imagine.
+package, but this example will use ``edit-patch`` (from the ubuntu-dev-tools
+package). ``edit-patch`` is the easiest way to patch packages and it is
+basically a wrapper around every other patch system you can imagine.
 
 To create your patch using ``edit-patch``::
 
