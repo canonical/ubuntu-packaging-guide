@@ -98,7 +98,7 @@ The Ubuntu CI system uses the QEMU runner and runs the tests from the packages
 in the archive, with ``-proposed`` enabled. To reproduce the exact same
 environment, first install the necessary packages::
 
-        sudo apt-get install autopkgtest qemu-system qemu-utils
+        sudo apt install autopkgtest qemu-system qemu-utils autodep8
 
 Now build a testbed with::
 
