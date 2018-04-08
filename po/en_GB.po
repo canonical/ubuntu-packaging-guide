@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-09-03 14:51-0500\n"
-"PO-Revision-Date: 2018-01-18 05:48+0000\n"
-"Last-Translator: Simon Quigley <tsimonq2@ubuntu.com>\n"
+"PO-Revision-Date: 2018-04-07 19:41+0000\n"
+"Last-Translator: Stephan Woidowski <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-03-24 05:22+0000\n"
-"X-Generator: Launchpad (build 18573)\n"
+"X-Launchpad-Export-Date: 2018-04-08 05:27+0000\n"
+"X-Generator: Launchpad (build 18599)\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
 msgid "autopkgtest: Automatic testing for packages"
@@ -1213,6 +1213,8 @@ msgid ""
 "https://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information "
 "concerning the switch to the 3.0 source package formats."
 msgstr ""
+"https://wiki.debian.org/Projects/DebSrc3.0 summarises additional information "
+"concerning the switch to the 3.0 source package formats."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:368
 msgid ""
@@ -1220,10 +1222,13 @@ msgid ""
 "<policy-format_>`_  of  the Debian New Maintainers' Guide for additional "
 "details."
 msgstr ""
+"See ``man dpkg-source`` and the `source/format section (Section 5.21) "
+"<policy-format_>`_  of  the Debian New Maintainers' Guide for additional "
+"details."
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:372
 msgid "Additional Resources"
-msgstr ""
+msgstr "Additional Resources"
 
 #: ../ubuntu-packaging-guide/debian-dir-overview.rst:374
 msgid ""
@@ -1234,21 +1239,29 @@ msgid ""
 "rules files. `Chapter 5, \"Other files under the debian directory\" "
 "<OtherFiles_>`_ discusses additional files that may be used."
 msgstr ""
+"In addition to the links to the Debian Policy Manual in each section above, "
+"the Debian New Maintainers' Guide has more detailed descriptions of each "
+"file. `Chapter 4, \"Required files under the debian directory\" "
+"<RequiredFiles_>`_ further discusses the  control, changelog, copyright and "
+"rules files. `Chapter 5, \"Other files under the debian directory\" "
+"<OtherFiles_>`_ discusses additional files that may be used."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:3
 msgid "Fixing a bug in Ubuntu"
-msgstr ""
+msgstr "Fixing a bug in Ubuntu"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:6
 #: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:9
 msgid "Introduction"
-msgstr ""
+msgstr "Introduction"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:8
 msgid ""
 "If you followed the instructions to :doc:`get set up with Ubuntu "
 "Development<./getting-set-up>`, you should be all set and ready to go."
 msgstr ""
+"If you followed the instructions to :doc:`get set up with Ubuntu "
+"Development<./getting-set-up>`, you should be all set and ready to go."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:13
 msgid ""
@@ -1258,10 +1271,15 @@ msgid ""
 "and merged. In this guide we will go through all the necessary steps one by "
 "one."
 msgstr ""
+"As you can see in the image above, there is no surprises in the process of "
+"fixing bugs in Ubuntu: you found a problem, you get the code, work on the "
+"fix, test it, push your changes to Launchpad and ask for it to be reviewed "
+"and merged. In this guide we will go through all the necessary steps one by "
+"one."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:20
 msgid "Finding the problem"
-msgstr ""
+msgstr "Finding the problem"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:22
 msgid ""
@@ -1269,6 +1287,9 @@ msgid ""
 "bug report you are encountering yourself (which gives you a good opportunity "
 "to test the fix), or a problem you noted elsewhere, maybe in a bug report."
 msgstr ""
+"There are a lot of different ways to find things to work on. It might be a "
+"bug report you are encountering yourself (which gives you a good opportunity "
+"to test the fix), or a problem you noted elsewhere, maybe in a bug report."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:26
 msgid ""
@@ -1276,10 +1297,13 @@ msgid ""
 "idea of something to work on. It might also interest you to look at the bugs "
 "`triaged`_ by the Ubuntu One Hundred Papercuts team."
 msgstr ""
+"Take a look at `the bitesize bugs`_ in Launchpad, and that might give you an "
+"idea of something to work on. It might also interest you to look at the bugs "
+"`triaged`_ by the Ubuntu One Hundred Papercuts team."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:35
 msgid "Figuring out what to fix"
-msgstr ""
+msgstr "Figuring out what to fix"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:37
 msgid ""
@@ -1287,6 +1311,9 @@ msgid ""
 "problem, but you do know the path to the affected program on your system, "
 "you can discover the source package that you'll need to work on."
 msgstr ""
+"If you don't know the source package containing the code that has the "
+"problem, but you do know the path to the affected program on your system, "
+"you can discover the source package that you'll need to work on."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:41
 msgid ""
@@ -1295,10 +1322,14 @@ msgid ""
 "line. To find the binary package containing this application, use this "
 "command::"
 msgstr ""
+"Let's say you've found a bug in Bumprace, a racing game. The Bumprace "
+"application can be started by running ``/usr/bin/bumprace`` on the command "
+"line. To find the binary package containing this application, use this "
+"command::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:47
 msgid "This would print out::"
-msgstr ""
+msgstr "This would print out::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:51
 msgid ""
@@ -1308,20 +1339,27 @@ msgid ""
 "build multiple different binary packages. To find the source package for a "
 "particular binary package, type::"
 msgstr ""
+"Note that the part preceding the colon is the binary package name. It's "
+"often the case that the source package and binary package will have "
+"different names. This is most common when a single source package is used to "
+"build multiple different binary packages. To find the source package for a "
+"particular binary package, type::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:62
 msgid "``apt-cache`` is part of the standard installation of Ubuntu."
-msgstr ""
+msgstr "``apt-cache`` is part of the standard installation of Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:65
 msgid "Confirming the problem"
-msgstr ""
+msgstr "Confirming the problem"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:67
 msgid ""
 "Once you have figured out which package the problem is in, it's time to "
 "confirm that the problem exists."
 msgstr ""
+"Once you have figured out which package the problem is in, it's time to "
+"confirm that the problem exists."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:70
 msgid ""
@@ -1330,14 +1368,18 @@ msgid ""
 "already. This is easy to check, either take a look at Software Center or "
 "run::"
 msgstr ""
+"Let's say the package ``bumprace`` does not have a homepage in its package "
+"description. As a first step you would check if the problem is not solved "
+"already. This is easy to check, either take a look at Software Center or "
+"run::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:76
 msgid "The output should be similar to this::"
-msgstr ""
+msgstr "The output should be similar to this::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:102
 msgid "A counter-example would be ``gedit``, which has a homepage set::"
-msgstr ""
+msgstr "A counter-example would be ``gedit``, which has a homepage set::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:107
 msgid ""
@@ -1345,10 +1387,13 @@ msgid ""
 "already fixed. To avoid wasting efforts and duplicating work it makes sense "
 "to first do some detective work."
 msgstr ""
+"Sometimes you will find that a particular problem you are looking into is "
+"already fixed. To avoid wasting efforts and duplicating work it makes sense "
+"to first do some detective work."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:112
 msgid "Research bug situation"
-msgstr ""
+msgstr "Research bug situation"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:114
 msgid ""
@@ -1358,12 +1403,19 @@ msgid ""
 "https://bugs.launchpad.net/ubuntu/+source/bumprace and there is no open bug "
 "with our problem there."
 msgstr ""
+"First we should check if a bug for the problem exists in Ubuntu already. "
+"Maybe somebody is working on a fix already, or we can contribute to the "
+"solution somehow. For Ubuntu we have a quick look at "
+"https://bugs.launchpad.net/ubuntu/+source/bumprace and there is no open bug "
+"with our problem there."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:120
 msgid ""
 "For Ubuntu the URL ``https://bugs.launchpad.net/ubuntu/+source/<package>`` "
 "should always take to the bug page of the source package in question."
 msgstr ""
+"For Ubuntu the URL ``https://bugs.launchpad.net/ubuntu/+source/<package>`` "
+"should always take to the bug page of the source package in question."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:124
 msgid ""
@@ -1371,12 +1423,17 @@ msgid ""
 "at http://bugs.debian.org/src:bumprace and can't find a bug report for our "
 "problem either."
 msgstr ""
+"For Debian, which is the major source for Ubuntu's packages, we have a look "
+"at http://bugs.debian.org/src:bumprace and can't find a bug report for our "
+"problem either."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:128
 msgid ""
 "For Debian the URL ``http://bugs.debian.org/src:<package>`` should always "
 "take to the bug page of the source package in question."
 msgstr ""
+"For Debian the URL ``http://bugs.debian.org/src:<package>`` should always "
+"take to the bug page of the source package in question."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:131
 msgid ""
@@ -1386,10 +1443,15 @@ msgid ""
 "unfortunately often different for every package you have a look at, but if "
 "you search the web for it, you should in most cases find it pretty easily."
 msgstr ""
+"The problem we are working on is special as it only concerns the packaging-"
+"related bits of ``bumprace``. If it was a problem in the source code it "
+"would be helpful to also check the Upstream bug tracker. This is "
+"unfortunately often different for every package you have a look at, but if "
+"you search the web for it, you should in most cases find it pretty easily."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:138
 msgid "Offering help"
-msgstr ""
+msgstr "Offering help"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:140
 msgid ""
@@ -1398,6 +1460,10 @@ msgid ""
 "include as much information as you can: Under which circumstances does the "
 "bug occur? How did you fix the problem? Did you test your solution?"
 msgstr ""
+"If you found an open bug and it is not assigned to somebody and you are in a "
+"position to fix it, you should comment on it with your solution. Be sure to "
+"include as much information as you can: Under which circumstances does the "
+"bug occur? How did you fix the problem? Did you test your solution?"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:145
 msgid ""
@@ -1406,14 +1472,18 @@ msgid ""
 "to commit it is good enough? Did you manage to only partially fix the issue "
 "and you want to at least share your part of it?"
 msgstr ""
+"If no bug report has been filed, you can file a bug for it. What you might "
+"want to bear in mind is: Is the issue so small that just asking for somebody "
+"to commit it is good enough? Did you manage to only partially fix the issue "
+"and you want to at least share your part of it?"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:150
 msgid "It is great if you can offer help and will surely be appreciated."
-msgstr ""
+msgstr "It is great if you can offer help and will surely be appreciated."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:155
 msgid "Getting the code"
-msgstr ""
+msgstr "Getting the code"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:157
 msgid ""
@@ -1423,12 +1493,19 @@ msgid ""
 "grab the source code for any package. For example, to grab the source code "
 "for the tomboy package in ``xenial``, you can type this::"
 msgstr ""
+"Once you know the source package to work on, you will want to get a copy of "
+"the code on your system, so that you can debug it. The ubuntu-dev-tools "
+"package has a tool called ``pull-lp-source`` that a developer can use to "
+"grab the source code for any package. For example, to grab the source code "
+"for the tomboy package in ``xenial``, you can type this::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:165
 msgid ""
 "If you do not specify a release such as ``xenial``, it will automatically "
 "get the package from the development version."
 msgstr ""
+"If you do not specify a release such as ``xenial``, it will automatically "
+"get the package from the development version."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:168
 msgid ""
@@ -1437,10 +1514,14 @@ msgid ""
 "report for other developers to review. We'll describe specifics in the next "
 "sections."
 msgstr ""
+"Once you've got a local clone of the source package, you can investigate the "
+"bug, create a fix, generate a debdiff, and attach your debdiff to a bug "
+"report for other developers to review. We'll describe specifics in the next "
+"sections."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:173
 msgid "Work on a fix"
-msgstr ""
+msgstr "Work on a fix"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:175
 msgid ""
@@ -1449,6 +1530,10 @@ msgid ""
 "such as obvious typos first. Try to keep changes as minimal as possible and "
 "document your change and assumptions clearly."
 msgstr ""
+"There are entire books written about finding bugs, fixing them, testing "
+"them, etc. If you are completely new to programming, try to fix easy bugs "
+"such as obvious typos first. Try to keep changes as minimal as possible and "
+"document your change and assumptions clearly."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:180
 msgid ""
@@ -1456,37 +1541,47 @@ msgid ""
 "has fixed it already or is currently working on a fix. Good sources to check "
 "are:"
 msgstr ""
+"Before working on a fix yourself, make sure to investigate if nobody else "
+"has fixed it already or is currently working on a fix. Good sources to check "
+"are:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:183
 msgid "Upstream (and Debian) bug tracker (open and closed bugs),"
-msgstr ""
+msgstr "Upstream (and Debian) bug tracker (open and closed bugs),"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:184
 msgid ""
 "Upstream revision history (or newer release) might have fixed the problem,"
 msgstr ""
+"Upstream revision history (or newer release) might have fixed the problem,"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:185
 msgid "bugs or package uploads of Debian or other distributions."
-msgstr ""
+msgstr "bugs or package uploads of Debian or other distributions."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:190
 msgid ""
 "You may want to create a patch which includes the fix. The command ``edit-"
 "patch`` is a simple way to add a patch to a package. Run::"
 msgstr ""
+"You may want to create a patch which includes the fix. The command ``edit-"
+"patch`` is a simple way to add a patch to a package. Run::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:195
 msgid ""
 "This will copy the packaging to a temporary directory.  You can now edit "
 "files with a text editor or apply patches from upstream, for example::"
 msgstr ""
+"This will copy the packaging to a temporary directory.  You can now edit "
+"files with a text editor or apply patches from upstream, for example::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:200
 msgid ""
 "After editing the file type ``exit`` or press ``control-d`` to quit the "
 "temporary shell.  The new patch will have been added into ``debian/patches``."
 msgstr ""
+"After editing the file type ``exit`` or press ``control-d`` to quit the "
+"temporary shell.  The new patch will have been added into ``debian/patches``."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:203
 msgid ""
@@ -1495,6 +1590,10 @@ msgid ""
 "To get the template header that you can edit to reflect what the patch does, "
 "type this::"
 msgstr ""
+"You must then add a header to your patch containing meta information so that "
+"other developers can know the purpose of the patch and where it came from. "
+"To get the template header that you can edit to reflect what the patch does, "
+"type this::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:210
 msgid ""
@@ -1502,6 +1601,9 @@ msgid ""
 "sure to be thorough so you get all the details necessary to describe the "
 "patch."
 msgstr ""
+"This will open the template in a text editor. Follow the template and make "
+"sure to be thorough so you get all the details necessary to describe the "
+"patch."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:214
 msgid ""
@@ -1509,10 +1611,13 @@ msgid ""
 "not need a patch. Put ``Homepage: http://www.linux-games.com/bumprace/`` at "
 "the end of the first section and the bug should be fixed."
 msgstr ""
+"In this specific case, if you just want to edit ``debian/control``, you do "
+"not need a patch. Put ``Homepage: http://www.linux-games.com/bumprace/`` at "
+"the end of the first section and the bug should be fixed."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:219
 msgid "Documenting the fix"
-msgstr ""
+msgstr "Documenting the fix"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:221
 msgid ""
@@ -1522,16 +1627,23 @@ msgid ""
 "includes ``debian/changelog``, where changes of each uploaded package are "
 "tracked."
 msgstr ""
+"It is very important to document your change sufficiently so developers who "
+"look at the code in the future won't have to guess what your reasoning was "
+"and what your assumptions were. Every Debian and Ubuntu package source "
+"includes ``debian/changelog``, where changes of each uploaded package are "
+"tracked."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:226
 msgid "The easiest way to update this is to run::"
-msgstr ""
+msgstr "The easiest way to update this is to run::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:230
 msgid ""
 "This will add a boilerplate changelog entry for you and launch an editor "
 "where you can fill in the blanks. An example of this could be::"
 msgstr ""
+"This will add a boilerplate changelog entry for you and launch an editor "
+"where you can fill in the blanks. An example of this could be::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:239
 msgid ""
@@ -1541,24 +1653,31 @@ msgid ""
 "always is 'low'). The last line always contains the name, email address and "
 "timestamp (in :rfc:`5322` format) of the change."
 msgstr ""
+"``dch`` should fill out the first and last line of such a changelog entry "
+"for you already. Line 1 consists of the source package name, the version "
+"number, which Ubuntu release it is uploaded to, the urgency (which almost "
+"always is 'low'). The last line always contains the name, email address and "
+"timestamp (in :rfc:`5322` format) of the change."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:245
 msgid ""
 "With that out of the way, let's focus on the actual changelog entry itself: "
 "it is very important to document:"
 msgstr ""
+"With that out of the way, let's focus on the actual changelog entry itself: "
+"it is very important to document:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:248
 msgid "Where the change was done."
-msgstr ""
+msgstr "Where the change was done."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:249
 msgid "What was changed."
-msgstr ""
+msgstr "What was changed."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:250
 msgid "Where the discussion of the change happened."
-msgstr ""
+msgstr "Where the discussion of the change happened."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:252
 msgid ""
@@ -1569,6 +1688,12 @@ msgid ""
 "bugs, the bug will be automatically closed when the package is uploaded to "
 "Ubuntu."
 msgstr ""
+"In our (very sparse) example the last point is covered by ``(LP: #123456)`` "
+"which refers to Launchpad bug 123456. Bug reports or mailing list threads or "
+"specifications are usually good information to provide as a rationale for a "
+"change. As a bonus, if you use the ``LP: #<number>`` notation for Launchpad "
+"bugs, the bug will be automatically closed when the package is uploaded to "
+"Ubuntu."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:259
 msgid ""
@@ -1579,14 +1704,20 @@ msgid ""
 "fix for). Once a bug is filed explaining your changes, put that bug number "
 "in the changelog."
 msgstr ""
+"In order to get it sponsored in the next section, you need to file a bug "
+"report in Launchpad (if there isn't one already, if there is, use that) and "
+"explain why your fix should be included in Ubuntu. For example, for tomboy, "
+"you would file a bug `here`_ (edit the URL to reflect the package you have a "
+"fix for). Once a bug is filed explaining your changes, put that bug number "
+"in the changelog."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:269
 msgid "Testing the fix"
-msgstr ""
+msgstr "Testing the fix"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:271
 msgid "To build a test package with your changes, run these commands::"
-msgstr ""
+msgstr "To build a test package with your changes, run these commands::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:276
 msgid ""
@@ -1596,6 +1727,11 @@ msgid ""
 "``pbuilder-dist`` will build the package from source for whatever "
 "``release`` you choose."
 msgstr ""
+"This will create a source package from the branch contents (``-us -uc`` will "
+"just omit the step to sign the source package and ``-d`` will skip the step "
+"where it checks for build dependencies, pbuilder will take care of that) and "
+"``pbuilder-dist`` will build the package from source for whatever "
+"``release`` you choose."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:283
 msgid ""
@@ -1606,15 +1742,22 @@ msgid ""
 "responsible for all Ubuntu packages, while in Debian, packages have "
 "maintainers."
 msgstr ""
+"If ``debuild`` errors out with \"Version number suggests Ubuntu changes, but "
+"Maintainer: does not have Ubuntu address\" then run the ``update-"
+"maintainer`` command (from ubuntu-dev-tools) and it will automatically fix "
+"this for you. This happens because in Ubuntu, all Ubuntu Developers are "
+"responsible for all Ubuntu packages, while in Debian, packages have "
+"maintainers."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:289
 msgid ""
 "In this case with bumprace, run this to view the package information::"
 msgstr ""
+"In this case with bumprace, run this to view the package information::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:293
 msgid "As expected, there should now be a ``Homepage:`` field."
-msgstr ""
+msgstr "As expected, there should now be a ``Homepage:`` field."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:296
 msgid ""
@@ -1624,21 +1767,29 @@ msgid ""
 "them via ``sudo dpkg -i <package>.deb`` or by double-clicking on them in "
 "your file manager."
 msgstr ""
+"In a lot of cases you will have to actually install the package to make sure "
+"it works as expected. Our case is a lot easier. If the build succeeded, you "
+"will find the binary packages in ``~/pbuilder/<release>_result``. Install "
+"them via ``sudo dpkg -i <package>.deb`` or by double-clicking on them in "
+"your file manager."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:304
 msgid "Submitting the fix and getting it included"
-msgstr ""
+msgstr "Submitting the fix and getting it included"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:306
 msgid ""
 "With the changelog entry written and saved, run ``debuild`` one more time::"
 msgstr ""
+"With the changelog entry written and saved, run ``debuild`` one more time::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:310
 msgid ""
 "and this time it will be signed and you are now ready to get your diff to "
 "submit to get sponsored."
 msgstr ""
+"and this time it will be signed and you are now ready to get your diff to "
+"submit to get sponsored."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:313
 msgid ""
@@ -1647,6 +1798,10 @@ msgid ""
 "So, you should submit the patch to Debian, and you can do that by simply "
 "running this::"
 msgstr ""
+"In a lot of cases, Debian would probably like to have the patch as well "
+"(doing this is best practice to make sure a wider audience gets the fix). "
+"So, you should submit the patch to Debian, and you can do that by simply "
+"running this::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:320
 msgid ""
@@ -1654,18 +1809,25 @@ msgid ""
 "the correct place. Be sure to review the diff again to make sure it does not "
 "include random changes you made earlier."
 msgstr ""
+"This will take you through a series of steps to make sure the bug ends up in "
+"the correct place. Be sure to review the diff again to make sure it does not "
+"include random changes you made earlier."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:324
 msgid ""
 "Communication is important, so when you add some more description to it to "
 "the inclusion request, be friendly, explain it well."
 msgstr ""
+"Communication is important, so when you add some more description to it to "
+"the inclusion request, be friendly, explain it well."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:327
 msgid ""
 "If everything went well you should get a mail from Debian's bug tracking "
 "system with more information. This might sometimes take a few minutes."
 msgstr ""
+"If everything went well you should get a mail from Debian's bug tracking "
+"system with more information. This might sometimes take a few minutes."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:330
 msgid ""
@@ -1679,6 +1841,15 @@ msgid ""
 "patches to Debian are Ubuntu-only packages not building correctly, or Ubuntu-"
 "specific problems in general."
 msgstr ""
+"It might be beneficial to just get it included in Debian and have it flow "
+"down to Ubuntu, in which case you would not follow the below process. But, "
+"sometimes in the case of security updates and updates for stable releases, "
+"the fix is already in Debian (or ignored for some reason) and you would "
+"follow the below process. If you are doing such updates, please read our "
+":doc:`Security and stable release updates<./security-and-stable-release-"
+"updates>` article. Other cases where it is acceptable to wait to submit "
+"patches to Debian are Ubuntu-only packages not building correctly, or Ubuntu-"
+"specific problems in general."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:340
 msgid ""
@@ -1688,6 +1859,11 @@ msgid ""
 "the ``devscripts`` package. See ``man debdiff`` for all the details. To "
 "compare two source packages, pass the two dsc files as arguments::"
 msgstr ""
+"But if you're going to submit your fix to Ubuntu, now it's time to generate "
+"a \"debdiff\", which shows the difference between two Debian packages. The "
+"name of the command used to generate one is also ``debdiff``. It is part of "
+"the ``devscripts`` package. See ``man debdiff`` for all the details. To "
+"compare two source packages, pass the two dsc files as arguments::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:348
 msgid ""
@@ -1697,10 +1873,15 @@ msgid ""
 "case, pipe the output of the debdiff command to a file that you can then "
 "attach to the bug report::"
 msgstr ""
+"In this case, ``debdiff`` the dsc you downloaded with ``pull-lp-source`` and "
+"the new dsc file you generated. This will generate a patch that your sponsor "
+"can then apply locally (by using ``patch -p1 < /path/to/debdiff``). In this "
+"case, pipe the output of the debdiff command to a file that you can then "
+"attach to the bug report::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:356
 msgid "The format shown in ``1-1.0-1ubuntu1.debdiff`` shows:"
-msgstr ""
+msgstr "The format shown in ``1-1.0-1ubuntu1.debdiff`` shows:"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:358
 msgid ""
@@ -1709,21 +1890,28 @@ msgid ""
 "makes sure that if your patch needs work, that you can keep a consistent "
 "naming scheme."
 msgstr ""
+"``1-`` tells the sponsor that this is the first revision of your patch. "
+"Nobody is perfect, and sometimes follow-up patches need to be provided. This "
+"makes sure that if your patch needs work, that you can keep a consistent "
+"naming scheme."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:362
 msgid ""
 "``1.0-1ubuntu1`` shows the new version being used. This makes it easy to see "
 "what the new version is."
 msgstr ""
+"``1.0-1ubuntu1`` shows the new version being used. This makes it easy to see "
+"what the new version is."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:364
 msgid ""
 "``.debdiff`` is an extension that makes it clear that it is a debdiff."
 msgstr ""
+"``.debdiff`` is an extension that makes it clear that it is a debdiff."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:366
 msgid "While this format is optional, it works well and you can use this."
-msgstr ""
+msgstr "While this format is optional, it works well and you can use this."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:368
 msgid ""
@@ -1732,6 +1920,10 @@ msgid ""
 "Attach the debdiff, and leave a comment telling your sponsor how this patch "
 "can be applied and the testing you have done. An example comment can be::"
 msgstr ""
+"Next, go to the bug report, make sure you are logged into Launchpad, and "
+"click \"Add attachment or patch\" under where you would add a new comment. "
+"Attach the debdiff, and leave a comment telling your sponsor how this patch "
+"can be applied and the testing you have done. An example comment can be::"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:376
 msgid ""
@@ -1743,6 +1935,13 @@ msgid ""
 "until you get an answer from someone, and they can guide you as to what to "
 "do next."
 msgstr ""
+"Make sure you mark it as a patch (the Ubuntu Sponsors team will "
+"automatically be subscribed) and that you are subscribed to the bug report. "
+"You will then receive a review anywhere between several housr from "
+"submitting the patch to several weeks. If it takes longer than that, please "
+"join ``#ubuntu-motu`` on ``freenode`` and mention it there. Stick around "
+"until you get an answer from someone, and they can guide you as to what to "
+"do next."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:383
 msgid ""
@@ -1752,6 +1951,11 @@ msgid ""
 "follow the same steps and submit a follow-up patch on the bug report, "
 "otherwise submit to Debian as shown above."
 msgstr ""
+"Once you have received a review, your patch was either uploaded, your patch "
+"needs work, or is rejected for some other reason (possibly the fix is not "
+"fit for Ubuntu or should go to Debian instead). If your patch needs work, "
+"follow the same steps and submit a follow-up patch on the bug report, "
+"otherwise submit to Debian as shown above."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:389
 msgid ""
@@ -1760,16 +1964,22 @@ msgid ""
 "find a lot of new friends and people with the same passion that you have: "
 "making the world a better place by making better Open Source software."
 msgstr ""
+"Remember: good places to ask your questions are ``ubuntu-"
+"motu@lists.ubuntu.com`` and ``#ubuntu-motu`` on freenode. You will easily "
+"find a lot of new friends and people with the same passion that you have: "
+"making the world a better place by making better Open Source software."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:395
 msgid "Additional considerations"
-msgstr ""
+msgstr "Additional considerations"
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:397
 msgid ""
 "If you find a package and find that there are a couple of trivial things you "
 "can fix at the same time, do it. This will speed up review and inclusion."
 msgstr ""
+"If you find a package and find that there are a couple of trivial things you "
+"can fix at the same time, do it. This will speed up review and inclusion."
 
 #: ../ubuntu-packaging-guide/fixing-a-bug.rst:400
 msgid ""
@@ -1777,10 +1987,13 @@ msgid ""
 "send individual patches or merge proposals instead. If there are individual "
 "bugs filed for the issues already, this makes it even easier."
 msgstr ""
+"If there are multiple big things you want to fix, it might be advisable to "
+"send individual patches or merge proposals instead. If there are individual "
+"bugs filed for the issues already, this makes it even easier."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:5
 msgid "Fixing FTBFS packages"
-msgstr ""
+msgstr "Fixing FTBFS packages"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:7
 msgid ""
@@ -1796,12 +2009,16 @@ msgid ""
 "Package failed to build (F): Something actually went wrong with the build "
 "process."
 msgstr ""
+"Package failed to build (F): Something actually went wrong with the build "
+"process."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:15
 msgid ""
 "Cancelled build (X): The build has been cancelled for some reason. These "
 "should probably be avoided to start with."
 msgstr ""
+"Cancelled build (X): The build has been cancelled for some reason. These "
+"should probably be avoided to start with."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:17
 msgid ""
@@ -1809,6 +2026,9 @@ msgid ""
 "another package to either build, get updated, or (if the package is in main) "
 "one of it's dependancies is in the wrong part of the archive."
 msgstr ""
+"Package is waiting on another package (M): This package is waiting on "
+"another package to either build, get updated, or (if the package is in main) "
+"one of it's dependancies is in the wrong part of the archive."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:20
 msgid ""
@@ -1816,16 +2036,21 @@ msgid ""
 "fixed by a rebuild. Ask a developer to rebuild the package and that should "
 "fix it."
 msgstr ""
+"Failure in the chroot (C): Part of the chroot failed, this is most likely "
+"fixed by a rebuild. Ask a developer to rebuild the package and that should "
+"fix it."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:23
 msgid ""
 "Failed to upload (U): The package could not upload. This is usually just a "
 "case of asking for a rebuild, but check the build log first."
 msgstr ""
+"Failed to upload (U): The package could not upload. This is usually just a "
+"case of asking for a rebuild, but check the build log first."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:27
 msgid "First steps"
-msgstr ""
+msgstr "First steps"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:28
 msgid ""
@@ -1834,6 +2059,10 @@ msgid ""
 "and then getting the tarball or running ``dget PACKAGE_DSC`` on the .dsc "
 "file from the launchpad page. Once you have that, build it in a schroot."
 msgstr ""
+"The first thing you'll want to do is see if you can reproduce the FTBFS "
+"yourself. Get the code either by running ``bzr branch lp:ubuntu/PACKAGE`` "
+"and then getting the tarball or running ``dget PACKAGE_DSC`` on the .dsc "
+"file from the launchpad page. Once you have that, build it in a schroot."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:35
 msgid ""
@@ -1843,10 +2072,15 @@ msgid ""
 "help find if the issue is caused by a missing, unlisted, dependency (builds "
 "locally but fails on a schroot)."
 msgstr ""
+"You should be able to reproduce the FTBFS. If not, check if the build is "
+"downloading a missing dependency, which means you just need to make that a "
+"build-dependency in debian/control. Building the package locally can also "
+"help find if the issue is caused by a missing, unlisted, dependency (builds "
+"locally but fails on a schroot)."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:42
 msgid "Checking Debian"
-msgstr ""
+msgstr "Checking Debian"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:43
 msgid ""
@@ -1859,10 +2093,18 @@ msgid ""
 "https://wiki.debian.org/qa.debian.org/FTBFS, you will want to check it for "
 "solutions too."
 msgstr ""
+"Once you have reproduced the issue, it's time to try and find a solution. If "
+"the package is in Debian as well, you can check if the package builds there "
+"by going to http://packages.qa.debian.org/PACKAGE. If Debian has a newer "
+"version, you should merge it. If not, check the buildlogs and bugs linked on "
+"that page for any extra information on the ftbfs or patches. Debian also "
+"maintains a list of command FTBFSs and how to fix them which can be found at "
+"https://wiki.debian.org/qa.debian.org/FTBFS, you will want to check it for "
+"solutions too."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:53
 msgid "Other causes of a package to FTBFS"
-msgstr ""
+msgstr "Other causes of a package to FTBFS"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:54
 msgid ""
@@ -1870,10 +2112,13 @@ msgid ""
 "will have to file a MIR bug. https://wiki.ubuntu.com/MainInclusionProcess "
 "explains the procedure."
 msgstr ""
+"If a package is in main and missing a dependency that is not in main, you "
+"will have to file a MIR bug. https://wiki.ubuntu.com/MainInclusionProcess "
+"explains the procedure."
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:61
 msgid "Fixing the issue"
-msgstr ""
+msgstr "Fixing the issue"
 
 #: ../ubuntu-packaging-guide/fixing-ftbfs.rst:62
 msgid ""
@@ -1881,10 +2126,13 @@ msgid ""
 "other bug. Make a patch, add it to a bzr branch or bug, subscribe ubuntu-"
 "sponsors, then try to get it included upstream and/or in Debian."
 msgstr ""
+"Once you have found a fix to the problem, follow the same process as any "
+"other bug. Make a patch, add it to a bzr branch or bug, subscribe ubuntu-"
+"sponsors, then try to get it included upstream and/or in Debian."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:3
 msgid "Getting Set Up"
-msgstr ""
+msgstr "Getting Set Up"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:5
 msgid ""
@@ -1893,26 +2141,31 @@ msgid ""
 "start working with packages, and upload your packages to Ubuntu's hosting "
 "platform, Launchpad. Here's what we'll cover:"
 msgstr ""
+"There are a number of things you need to do to get started developing for "
+"Ubuntu. This article is designed to get your computer set up so that you can "
+"start working with packages, and upload your packages to Ubuntu's hosting "
+"platform, Launchpad. Here's what we'll cover:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:10
 msgid "Installing packaging-related software. This includes:"
-msgstr ""
+msgstr "Installing packaging-related software. This includes:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:12
 msgid "Ubuntu-specific packaging utilities"
-msgstr ""
+msgstr "Ubuntu-specific packaging utilities"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:13
 msgid "Encryption software so your work can be verified as being done by you"
 msgstr ""
+"Encryption software so your work can be verified as being done by you"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:14
 msgid "Additional encryption software so you can securely transfer files"
-msgstr ""
+msgstr "Additional encryption software so you can securely transfer files"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:16
 msgid "Creating and configuring your account on Launchpad"
-msgstr ""
+msgstr "Creating and configuring your account on Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:17
 msgid ""
@@ -1920,6 +2173,9 @@ msgid ""
 "packages, interact with other developers, and propose your changes on "
 "Launchpad."
 msgstr ""
+"Setting up your development environment to help you do local builds of "
+"packages, interact with other developers, and propose your changes on "
+"Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:22
 msgid ""
@@ -1927,16 +2183,21 @@ msgid ""
 "of Ubuntu. Doing so will allow you to test changes in the same environment "
 "where those changes will actually be applied and used."
 msgstr ""
+"It is advisable to do packaging work using the current development version "
+"of Ubuntu. Doing so will allow you to test changes in the same environment "
+"where those changes will actually be applied and used."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:26
 msgid ""
 "Don't want to install the latest Ubuntu development version of Ubuntu? Spin "
 "up an `LXD container <https://help.ubuntu.com/lts/serverguide/lxd.html>`_."
 msgstr ""
+"Don't want to install the latest Ubuntu development version of Ubuntu? Spin "
+"up an `LXD container <https://help.ubuntu.com/lts/serverguide/lxd.html>`_."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:30
 msgid "Install basic packaging software"
-msgstr ""
+msgstr "Install basic packaging software"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:32
 msgid ""
@@ -1944,10 +2205,13 @@ msgid ""
 "much easier. You will encounter these tools later in this guide. To install "
 "most of the tools you will need run this command::"
 msgstr ""
+"There are a number of tools that will make your life as an Ubuntu developer "
+"much easier. You will encounter these tools later in this guide. To install "
+"most of the tools you will need run this command::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:39
 msgid "This command will install the following software:"
-msgstr ""
+msgstr "This command will install the following software:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:41
 msgid ""
@@ -1955,28 +2219,37 @@ msgid ""
 "create a cryptographic key with which you will sign files you want to upload "
 "to Launchpad."
 msgstr ""
+"``gnupg`` -- `GNU Privacy Guard <GPG_>`_ contains tools you will need to "
+"create a cryptographic key with which you will sign files you want to upload "
+"to Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:44
 msgid ""
 "``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
 "isolated environment."
 msgstr ""
+"``pbuilder`` -- a tool to do reproducible builds of a package in a clean and "
+"isolated environment."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:46
 msgid ""
 "``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
 "collection of tools that make many packaging tasks easier."
 msgstr ""
+"``ubuntu-dev-tools`` (and ``devscripts``, a direct dependency) -- a "
+"collection of tools that make many packaging tasks easier."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:48
 msgid ""
 "``apt-file`` provides an easy way to find the binary package that contains a "
 "given file."
 msgstr ""
+"``apt-file`` provides an easy way to find the binary package that contains a "
+"given file."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:53
 msgid "Create your GPG key"
-msgstr ""
+msgstr "Create your GPG key"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:55
 msgid ""
@@ -1987,10 +2260,16 @@ msgid ""
 "worked on. If you upload a source package to Launchpad, it will only accept "
 "the package if it can absolutely determine who uploaded the package."
 msgstr ""
+"GPG stands for `GNU Privacy Guard <GPG_>`_ and it implements the OpenPGP "
+"standard which allows you to sign and encrypt messages and files. This is "
+"useful for a number of purposes. In our case it is important that you can "
+"sign files with your key so they can be identified as something that you "
+"worked on. If you upload a source package to Launchpad, it will only accept "
+"the package if it can absolutely determine who uploaded the package."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:62
 msgid "To generate a new GPG key, run::"
-msgstr ""
+msgstr "To generate a new GPG key, run::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:66
 msgid ""
@@ -2005,6 +2284,16 @@ msgid ""
 "passphrase, choose a safe one (a passphrase is just a password which is "
 "allowed to include spaces)."
 msgstr ""
+"GPG will first ask you which kind of key you want to generate. Choosing the "
+"default (RSA and DSA) is fine. Next it will ask you about the keysize. The "
+"default (currently 2048) is fine, but 4096 is more secure. Afterwards, it "
+"will ask you if you want it to expire the key at some stage. It is safe to "
+"say \"0\", which means the key will never expire. The last questions will be "
+"about your name and email address. Just pick the ones you are going to use "
+"for Ubuntu development here, you can add additional email addresses later "
+"on. Adding a comment is not necessary. Then you will have to set a "
+"passphrase, choose a safe one (a passphrase is just a password which is "
+"allowed to include spaces)."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:76
 msgid ""
@@ -2013,20 +2302,26 @@ msgid ""
 "just fine.  Move the cursor around, type some paragraphs of random text, "
 "load some web page."
 msgstr ""
+"Now GPG will create a key for you, which can take a little bit of time; it "
+"needs random bytes, so if you give the system some work to do it will be "
+"just fine.  Move the cursor around, type some paragraphs of random text, "
+"load some web page."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:81
 msgid "Once this is done, you will get a message similar to this one::"
-msgstr ""
+msgstr "Once this is done, you will get a message similar to this one::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:88
 msgid "In this case ``43CDE61D`` is the *key ID*."
-msgstr ""
+msgstr "In this case ``43CDE61D`` is the *key ID*."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:90
 msgid ""
 "Next, you need to upload the public part of your key to a keyserver so the "
 "world can identify messages and files as yours. To do so, enter::"
 msgstr ""
+"Next, you need to upload the public part of your key to a keyserver so the "
+"world can identify messages and files as yours. To do so, enter::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:95
 msgid ""
@@ -2035,10 +2330,14 @@ msgid ""
 "complete, your signed public key will be ready to verify your contributions "
 "around the world."
 msgstr ""
+"This will send your key to the Ubuntu keyserver, but a network of keyservers "
+"will automatically sync the key between themselves. Once this syncing is "
+"complete, your signed public key will be ready to verify your contributions "
+"around the world."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:102
 msgid "Create your SSH key"
-msgstr ""
+msgstr "Create your SSH key"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:104
 msgid ""
@@ -2048,10 +2347,15 @@ msgid ""
 "transfer files. For our purposes, we will mainly be using SSH to securely "
 "upload source packages to Launchpad."
 msgstr ""
+"SSH_ stands for *Secure Shell*, and it is a protocol that allows you to "
+"exchange data in a secure way over a network. It is common to use SSH to "
+"access and open a shell on another computer, and to use it to securely "
+"transfer files. For our purposes, we will mainly be using SSH to securely "
+"upload source packages to Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:110
 msgid "To generate an SSH key, enter::"
-msgstr ""
+msgstr "To generate an SSH key, enter::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:114
 msgid ""
@@ -2059,16 +2363,21 @@ msgid ""
 "is. For security purposes, it is highly recommended that you use a "
 "passphrase."
 msgstr ""
+"The default file name usually makes sense, so you can just leave it as it "
+"is. For security purposes, it is highly recommended that you use a "
+"passphrase."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:119
 msgid "Set up pbuilder"
-msgstr ""
+msgstr "Set up pbuilder"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:121
 msgid ""
 "``pbuilder`` allows you to build packages locally on your machine. It serves "
 "a couple of purposes:"
 msgstr ""
+"``pbuilder`` allows you to build packages locally on your machine. It serves "
+"a couple of purposes:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:124
 msgid ""
@@ -2076,16 +2385,21 @@ msgid ""
 "make sure your builds succeed in a reproducible way, but without modifying "
 "your local system"
 msgstr ""
+"The build will be done in a minimal and clean environment. This helps you "
+"make sure your builds succeed in a reproducible way, but without modifying "
+"your local system"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:127
 msgid ""
 "There is no need to install all necessary *build dependencies* locally"
 msgstr ""
+"There is no need to install all necessary *build dependencies* locally"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:128
 msgid ""
 "You can set up multiple instances for various Ubuntu and Debian releases"
 msgstr ""
+"You can set up multiple instances for various Ubuntu and Debian releases"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:130
 msgid "Setting ``pbuilder`` up is very easy, run::"
@@ -2098,10 +2412,14 @@ msgid ""
 "all the necessary packages for a \"minimal installation\". These will be "
 "cached though."
 msgstr ""
+"where <release> is for example `xenial`, `zesty`, `artful` or in the case of "
+"Debian maybe `sid` or `buster`. This will take a while as it will download "
+"all the necessary packages for a \"minimal installation\". These will be "
+"cached though."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:140
 msgid "Get set up to work with Launchpad"
-msgstr ""
+msgstr "Get set up to work with Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:142
 msgid ""
@@ -2109,23 +2427,27 @@ msgid ""
 "configure your system to work with Launchpad. This section will focus on the "
 "following topics:"
 msgstr ""
+"With a basic local configuration in place, your next step will be to "
+"configure your system to work with Launchpad. This section will focus on the "
+"following topics:"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:146
 msgid "What Launchpad is and creating a Launchpad account"
-msgstr ""
+msgstr "What Launchpad is and creating a Launchpad account"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:147
 msgid "Uploading your GPG and SSH keys to Launchpad"
-msgstr ""
+msgstr "Uploading your GPG and SSH keys to Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:148
 msgid ""
 "Configure your shell to recognize you (for putting your name in changelogs)"
 msgstr ""
+"Configure your shell to recognise you (for putting your name in changelogs)"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:152
 msgid "About Launchpad"
-msgstr ""
+msgstr "About Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:154
 msgid ""
@@ -2135,6 +2457,11 @@ msgid ""
 "team memberships.  You will also use Launchpad to publish your proposed "
 "fixes, and get other Ubuntu developers to review and sponsor them."
 msgstr ""
+"Launchpad is the central piece of infrastructure we use in Ubuntu. It not "
+"only stores our packages and our code, but also things like translations, "
+"bug reports, and information about the people who work on Ubuntu and their "
+"team memberships.  You will also use Launchpad to publish your proposed "
+"fixes, and get other Ubuntu developers to review and sponsor them."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:160
 msgid ""
@@ -2142,6 +2469,9 @@ msgid ""
 "information. This will allow you to download and upload code, submit bug "
 "reports, and more."
 msgstr ""
+"You will need to register with Launchpad and provide a minimal amount of "
+"information. This will allow you to download and upload code, submit bug "
+"reports, and more."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:164
 msgid ""
@@ -2149,10 +2479,13 @@ msgid ""
 "more information see the `Launchpad Help wiki "
 "<https://help.launchpad.net/>`_."
 msgstr ""
+"Besides hosting Ubuntu, Launchpad can host any Free Software project. For "
+"more information see the `Launchpad Help wiki "
+"<https://help.launchpad.net/>`_."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:169
 msgid "Get a Launchpad account"
-msgstr ""
+msgstr "Get a Launchpad account"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:171
 msgid ""
@@ -2161,6 +2494,10 @@ msgid ""
 "your Launchpad id, you can find this out by going to https://launchpad.net/~ "
 "and looking for the part after the `~` in the URL."
 msgstr ""
+"If you don't already have a Launchpad account, you can easily `create one "
+"<LP-AccountCreate_>`_. If you have a Launchpad account but cannot remember "
+"your Launchpad id, you can find this out by going to https://launchpad.net/~ "
+"and looking for the part after the `~` in the URL."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:176
 msgid ""
@@ -2168,6 +2505,9 @@ msgid ""
 "is encouraged for you to use your real name here so that your Ubuntu "
 "developer colleagues will be able to get to know you better."
 msgstr ""
+"Launchpad's registration process will ask you to choose a display name. It "
+"is encouraged for you to use your real name here so that your Ubuntu "
+"developer colleagues will be able to get to know you better."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:180
 msgid ""
@@ -2175,16 +2515,21 @@ msgid ""
 "link you need to open in your browser in order to verify your email address. "
 "If you don't receive it, check in your spam folder."
 msgstr ""
+"When you register a new account, Launchpad will send you an email with a "
+"link you need to open in your browser in order to verify your email address. "
+"If you don't receive it, check in your spam folder."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:184
 msgid ""
 "`The new account help page <LP-AccountHelp_>`_ on Launchpad has more "
 "information about the process and additional settings you can change."
 msgstr ""
+"`The new account help page <LP-AccountHelp_>`_ on Launchpad has more "
+"information about the process and additional settings you can change."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:191
 msgid "Upload your GPG key to Launchpad"
-msgstr ""
+msgstr "Upload your GPG key to Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:193
 msgid "First, you will need to get your fingerprint and key ID."
@@ -2192,15 +2537,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:195
 msgid "To find about your GPG fingerprint, run::"
-msgstr ""
+msgstr "To find about your GPG fingerprint, run::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:199
 msgid "and it will print out something like::"
-msgstr ""
+msgstr "and it will print out something like::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:206
 msgid "Then run this command to submit your key to Ubuntu keyserver::"
-msgstr ""
+msgstr "Then run this command to submit your key to Ubuntu keyserver::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:210
 msgid ""
@@ -2208,6 +2553,9 @@ msgid ""
 "line of output of the previous command). Now you can import your key to "
 "Launchpad."
 msgstr ""
+"where ``43CDE61D`` should be replaced by your key ID (which is in the first "
+"line of output of the previous command). Now you can import your key to "
+"Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:214
 msgid ""
@@ -2215,6 +2563,9 @@ msgid ""
 "fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
 "FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on \"Import Key\"."
 msgstr ""
+"Head to https://launchpad.net/~/+editpgpkeys and copy the \"Key "
+"fingerprint\" into the text box. In the case above this would be ``5C28 0144 "
+"FB08 91C0 2CF3  37AC 6F0B F90F 43CD E61D``. Now click on \"Import Key\"."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:219
 msgid ""
@@ -2225,6 +2576,12 @@ msgid ""
 "you for the password you chose for the key when GPG generated it. Enter the "
 "password, then click the link to confirm that the key is yours.`"
 msgstr ""
+"Launchpad will use the fingerprint to check the Ubuntu key server for your "
+"key and, if successful, send you an encrypted email asking you to confirm "
+"the key import. Check your email account and read the email that Launchpad "
+"sent you. `If your email client supports OpenPGP encryption, it will prompt "
+"you for the password you chose for the key when GPG generated it. Enter the "
+"password, then click the link to confirm that the key is yours.`"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:226
 msgid ""
@@ -2235,22 +2592,32 @@ msgid ""
 "encryption, copy the encrypted email's contents, type ``gpg`` in your "
 "terminal, then paste the email contents into your terminal window."
 msgstr ""
+"Launchpad encrypts the email, using your public key, so that it can be sure "
+"that the key is yours. If you are using Thunderbird, the default Ubuntu "
+"email client, you can install the `Enigmail plugin <Enigmail_>`_ to easily "
+"decrypt the message. If your email software does not support OpenPGP "
+"encryption, copy the encrypted email's contents, type ``gpg`` in your "
+"terminal, then paste the email contents into your terminal window."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:236
 msgid ""
 "Back on the Launchpad website, use the Confirm button and Launchpad will "
 "complete the import of your OpenPGP key."
 msgstr ""
+"Back on the Launchpad website, use the Confirm button and Launchpad will "
+"complete the import of your OpenPGP key."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:239
 msgid ""
 "Find more information at "
 "https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 msgstr ""
+"Find more information at "
+"https://help.launchpad.net/YourAccount/ImportingYourPGPKey"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:243
 msgid "Upload your SSH key to Launchpad"
-msgstr ""
+msgstr "Upload your SSH key to Launchpad"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:245
 msgid ""
@@ -2260,16 +2627,23 @@ msgid ""
 "and paste them into the text box on the web page that says \"Add an SSH "
 "key\". Now click \"Import Public Key\"."
 msgstr ""
+"Open https://launchpad.net/~/+editsshkeys in a web browser, also open "
+"``~/.ssh/id_rsa.pub`` in a text editor. This is the public part of your SSH "
+"key, so it is safe to share it with Launchpad. Copy the contents of the file "
+"and paste them into the text box on the web page that says \"Add an SSH "
+"key\". Now click \"Import Public Key\"."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:251
 msgid ""
 "For more information on this process, visit the `creating an SSH keypair "
 "<genssh_>`_ page on Launchpad."
 msgstr ""
+"For more information on this process, visit the `creating an SSH keypair "
+"<genssh_>`_ page on Launchpad."
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:258
 msgid "Configure your shell"
-msgstr ""
+msgstr "Configure your shell"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:259
 msgid ""
@@ -2277,20 +2651,25 @@ msgid ""
 "to properly credit you in the changelog. Simply open your `~/.bashrc` in a "
 "text editor and add something like this to the bottom of it::"
 msgstr ""
+"The Debian/Ubuntu packaging tools need to learn about you as well in order "
+"to properly credit you in the changelog. Simply open your `~/.bashrc` in a "
+"text editor and add something like this to the bottom of it::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:266
 msgid "Now save the file and either restart your terminal or run::"
-msgstr ""
+msgstr "Now save the file and either restart your terminal or run::"
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:270
 msgid ""
 "(If you do not use the default shell, which is `bash`, please edit the "
 "configuration file for that shell accordingly.)"
 msgstr ""
+"(If you do not use the default shell, which is `bash`, please edit the "
+"configuration file for that shell accordingly.)"
 
 #: ../ubuntu-packaging-guide/index.rst:9
 msgid "Ubuntu Packaging Guide"
-msgstr ""
+msgstr "Ubuntu Packaging Guide"
 
 #: ../ubuntu-packaging-guide/index.rst:11
 msgid ""
@@ -2298,30 +2677,37 @@ msgid ""
 "developing codename Artful Aardvark, which is to be released in October 2017 "
 "as Ubuntu 17.10."
 msgstr ""
+"Welcome to the Ubuntu Packaging and Development Guide! We are currently "
+"developing codename Artful Aardvark, which is to be released in October 2017 "
+"as Ubuntu 17.10."
 
 #: ../ubuntu-packaging-guide/index.rst:15
 msgid ""
 "This is the official place for learning all about Ubuntu Development and "
 "packaging. After reading this guide you will have:"
 msgstr ""
+"This is the official place for learning all about Ubuntu Development and "
+"packaging. After reading this guide you will have:"
 
 #: ../ubuntu-packaging-guide/index.rst:18
 msgid ""
 "Heard about the most important players, processes and tools in Ubuntu "
 "development,"
 msgstr ""
+"Heard about the most important players, processes and tools in Ubuntu "
+"development,"
 
 #: ../ubuntu-packaging-guide/index.rst:20
 msgid "Your development environment set up correctly,"
-msgstr ""
+msgstr "Your development environment set up correctly,"
 
 #: ../ubuntu-packaging-guide/index.rst:21
 msgid "A better idea of how to join our community,"
-msgstr ""
+msgstr "A better idea of how to join our community,"
 
 #: ../ubuntu-packaging-guide/index.rst:22
 msgid "Fixed an actual Ubuntu bug as part of the tutorials."
-msgstr ""
+msgstr "Fixed an actual Ubuntu bug as part of the tutorials."
 
 #: ../ubuntu-packaging-guide/index.rst:24
 msgid ""
@@ -2330,6 +2716,10 @@ msgid ""
 "single component can be obtained easily and every single change to the "
 "Ubuntu platform can be reviewed."
 msgstr ""
+"Ubuntu is not only a free and open source operating system, its platform is "
+"also open and developed in a transparent fashion. The source code for every "
+"single component can be obtained easily and every single change to the "
+"Ubuntu platform can be reviewed."
 
 #: ../ubuntu-packaging-guide/index.rst:29
 msgid ""
@@ -2337,6 +2727,9 @@ msgid ""
 "of Ubuntu platform developers is always interested in helping peers getting "
 "started."
 msgstr ""
+"This means you can actively get involved in improving it and the community "
+"of Ubuntu platform developers is always interested in helping peers getting "
+"started."
 
 #: ../ubuntu-packaging-guide/index.rst:33
 msgid ""
@@ -2345,6 +2738,10 @@ msgid ""
 "want you to be involved as well. We want you to get involved, to ask "
 "questions, to make Ubuntu better together with us."
 msgstr ""
+"Ubuntu is also a community of great people who believe in free software and "
+"that it should be accessible for everyone. Its members are welcoming and "
+"want you to be involved as well. We want you to get involved, to ask "
+"questions, to make Ubuntu better together with us."
 
 #: ../ubuntu-packaging-guide/index.rst:38
 msgid ""
@@ -2352,69 +2749,82 @@ msgid ""
 "article<./communication>` and you will find out how to most easily get in "
 "touch with other developers."
 msgstr ""
+"If you run into problems: don't panic! Check out the :doc:`communication "
+"article<./communication>` and you will find out how to most easily get in "
+"touch with other developers."
 
 #: ../ubuntu-packaging-guide/index.rst:42
 msgid "The guide is split up into two sections:"
-msgstr ""
+msgstr "The guide is split up into two sections:"
 
 #: ../ubuntu-packaging-guide/index.rst:44
 msgid "A list of articles based on tasks, things you want to get done."
-msgstr ""
+msgstr "A list of articles based on tasks, things you want to get done."
 
 #: ../ubuntu-packaging-guide/index.rst:45
 msgid ""
 "A set of knowledge-base articles that dig deeper into specific bits of our "
 "tools and workflows."
 msgstr ""
+"A set of knowledge-base articles that dig deeper into specific bits of our "
+"tools and workflows."
 
 #: ../ubuntu-packaging-guide/index.rst:49
 msgid "Articles"
-msgstr ""
+msgstr "Articles"
 
 #: ../ubuntu-packaging-guide/index.rst:66
 msgid "Knowledge Base"
-msgstr ""
+msgstr "Knowledge Base"
 
 #: ../ubuntu-packaging-guide/index.rst:79
 #: ../ubuntu-packaging-guide/libraries.rst:150
 msgid "Further Reading"
-msgstr ""
+msgstr "Further Reading"
 
 #: ../ubuntu-packaging-guide/index.rst:81
 msgid ""
 "You can read this guide offline in different formats, if you install one of "
 "the `binary packages <BinPkgs_>`_."
 msgstr ""
+"You can read this guide offline in different formats, if you install one of "
+"the `binary packages <BinPkgs_>`_."
 
 #: ../ubuntu-packaging-guide/index.rst:84
 msgid ""
 "If you want to learn more about building Debian packages, here are some "
 "Debian resources you may find useful:"
 msgstr ""
+"If you want to learn more about building Debian packages, here are some "
+"Debian resources you may find useful:"
 
 #: ../ubuntu-packaging-guide/index.rst:87
 msgid "`How to package for Debian <HowToPackage_>`_;"
-msgstr ""
+msgstr "`How to package for Debian <HowToPackage_>`_;"
 
 #: ../ubuntu-packaging-guide/index.rst:88
 msgid "`Debian Policy Manual <Policy_>`_;"
-msgstr ""
+msgstr "`Debian Policy Manual <Policy_>`_;"
 
 #: ../ubuntu-packaging-guide/index.rst:89
 msgid ""
 "`Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many "
 "languages;"
 msgstr ""
+"`Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many "
+"languages;"
 
 #: ../ubuntu-packaging-guide/index.rst:90
 msgid ""
 "`Packaging tutorial <PkgTutorial_>`_ (also available as a `package "
 "<PkgTutorialPkg_>`_);"
 msgstr ""
+"`Packaging tutorial <PkgTutorial_>`_ (also available as a `package "
+"<PkgTutorialPkg_>`_);"
 
 #: ../ubuntu-packaging-guide/index.rst:91
 msgid "`Guide for Packaging Python Modules <PythonModules_>`_."
-msgstr ""
+msgstr "`Guide for Packaging Python Modules <PythonModules_>`_."
 
 #: ../ubuntu-packaging-guide/index.rst:93
 msgid ""
@@ -2422,10 +2832,13 @@ msgid ""
 "have some suggestions, please `report a bug on Launchpad <Bugs_>`_. If you'd "
 "like to help work on the guide, `grab the source <Source_>`_ there as well."
 msgstr ""
+"We are always looking to improve this guide. If you find any problems or "
+"have some suggestions, please `report a bug on Launchpad <Bugs_>`_. If you'd "
+"like to help work on the guide, `grab the source <Source_>`_ there as well."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:3
 msgid "Introduction to Ubuntu Development"
-msgstr ""
+msgstr "Introduction to Ubuntu Development"
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:5
 msgid ""
@@ -2438,6 +2851,14 @@ msgid ""
 "package. Once this source package is compiled, the build process provides "
 "binary packages, which are the .deb files users can install."
 msgstr ""
+"Ubuntu is made up of thousands of different components, written in many "
+"different programming languages. Every component -  be it a software "
+"library, a tool or a graphical application - is available as a source "
+"package. Source packages in most cases consist of two parts: the actual "
+"source code and metadata. Metadata includes the dependencies of the package, "
+"copyright and licensing information, and instructions on how to build the "
+"package. Once this source package is compiled, the build process provides "
+"binary packages, which are the .deb files users can install."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:14
 msgid ""
@@ -2454,6 +2875,18 @@ msgid ""
 "packages that get on the image. These images are then used for installation "
 "tests and provide the feedback for further release planning."
 msgstr ""
+"Every time a new version of an application is released, or when someone "
+"makes a change to the source code that goes into Ubuntu, the source package "
+"must be uploaded to Launchpad's build machines to be compiled. The resulting "
+"binary packages then are distributed to the archive and its mirrors in "
+"different countries. The URLs in ``/etc/apt/sources.list`` point to an "
+"archive or mirror. Every day images are built for a selection of different "
+"Ubuntu flavours. They can be used in various circumstances. There are images "
+"you can put on a USB key, you can burn them on DVDs, you can use netboot "
+"images and there are images suitable for your phone and tablet. Ubuntu "
+"Desktop, Ubuntu Server, Kubuntu and others specify a list of required "
+"packages that get on the image. These images are then used for installation "
+"tests and provide the feedback for further release planning."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:27
 msgid ""
@@ -2470,6 +2903,18 @@ msgid ""
 "candidate release is made and if it does not contain any serious problems, "
 "it becomes the final release."
 msgstr ""
+"Ubuntu's development is very much dependent on the current stage of the "
+"release cycle. We release a new version of Ubuntu every six months, which is "
+"only possible because we have established strict freeze dates. With every "
+"freeze date that is reached developers are expected to make fewer, less "
+"intrusive changes. Feature Freeze is the first big freeze date after the "
+"first half of the cycle has passed. At this stage features must be largely "
+"implemented. The rest of the cycle is supposed to be focused on fixing bugs. "
+"After that the user interface, then the documentation, the kernel, etc. are "
+"frozen, then the beta release is put out which receives a lot of testing. "
+"From the beta release onwards, only critical bugs get fixed and a release "
+"candidate release is made and if it does not contain any serious problems, "
+"it becomes the final release."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:42
 msgid ""
@@ -2485,6 +2930,17 @@ msgid ""
 "a videocast, chat with attendants and subscribe to changes of "
 "specifications, so you are always up to date."
 msgstr ""
+"Thousands of source packages, billions of lines of code, hundreds of "
+"contributors require a lot of communication and planning to maintain high "
+"standards of quality. At the beginning and in the middle of each release "
+"cycle we have the Ubuntu Developer Summit where developers and contributors "
+"come together to plan the features of the next releases. Every feature is "
+"discussed by its stakeholders and a specification is written that contains "
+"detailed information about its assumptions, implementation, the necessary "
+"changes in other places, how to test it and so on. This is all done in an "
+"open and transparent fashion, so you can participate remotely and listen to "
+"a videocast, chat with attendants and subscribe to changes of "
+"specifications, so you are always up to date."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:54
 msgid ""
@@ -2495,6 +2951,12 @@ msgid ""
 "immediate coordination, developers and contributors use Internet Relay Chat "
 "(IRC). All discussions are open and public."
 msgstr ""
+"Not every single change can be discussed in a meeting though, particularly "
+"because Ubuntu relies on changes that are done in other projects. That is "
+"why contributors to Ubuntu constantly stay in touch. Most teams or projects "
+"use dedicated mailing lists to avoid too much unrelated noise. For more "
+"immediate coordination, developers and contributors use Internet Relay Chat "
+"(IRC). All discussions are open and public."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:61
 msgid ""
@@ -2505,6 +2967,12 @@ msgid ""
 "effective tool to stay on top of bugs in a package or project and organise "
 "the workload."
 msgstr ""
+"Another important tool regarding communication is bug reports. Whenever a "
+"defect is found in a package or piece of infrastructure, a bug report is "
+"filed in Launchpad. All information is collected in that report and its "
+"importance, status and assignee updated when necessary. This makes it an "
+"effective tool to stay on top of bugs in a package or project and organise "
+"the workload."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:68
 msgid ""
@@ -2517,6 +2985,14 @@ msgid ""
 "also that Upstreams get users, bug reports and patches from Ubuntu (and "
 "other distributions)."
 msgstr ""
+"Most of the software available through Ubuntu is not written by Ubuntu "
+"developers themselves. Most of it is written by developers of other Open "
+"Source projects and then integrated into Ubuntu. These projects are called "
+"\"Upstreams\", because their source code flows into Ubuntu, where we "
+"\"just\" integrate it. The relationship to Upstreams is critically important "
+"to Ubuntu. It is not just code that Ubuntu gets from Upstreams, but it is "
+"also that Upstreams get users, bug reports and patches from Ubuntu (and "
+"other distributions)."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:77
 msgid ""
@@ -2529,6 +3005,14 @@ msgid ""
 "but participation (and upload rights) generally is open to everyone who "
 "demonstrates ability and willingness."
 msgstr ""
+"The most important Upstream for Ubuntu is Debian. Debian is the distribution "
+"that Ubuntu is based on and many of the design decisions regarding the "
+"packaging infrastructure are made there. Traditionally, Debian has always "
+"had dedicated maintainers for every single package or dedicated maintenance "
+"teams. In Ubuntu there are teams that have an interest in a subset of "
+"packages too, and naturally every developer has a special area of expertise, "
+"but participation (and upload rights) generally is open to everyone who "
+"demonstrates ability and willingness."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:86
 msgid ""
@@ -2537,6 +3021,10 @@ msgid ""
 "something new and exciting, but also about sharing the solution and solving "
 "a problem for millions of users out there."
 msgstr ""
+"Getting a change into Ubuntu as a new contributor is not as daunting as it "
+"seems and can be a very rewarding experience. It is not only about learning "
+"something new and exciting, but also about sharing the solution and solving "
+"a problem for millions of users out there."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:91
 msgid ""
@@ -2549,6 +3037,14 @@ msgid ""
 "branches that are merged with each other after code reviews and sufficient "
 "discussion."
 msgstr ""
+"Open Source Development happens in a distributed world with different goals "
+"and different areas of focus. For example there might be the case that a "
+"particular Upstream is interested in working on a new big feature while "
+"Ubuntu, because of the tight release schedule, is interested in shipping a "
+"solid version with just an additional bug fix. That is why we make use of "
+"\"Distributed Development\", where code is being worked on in various "
+"branches that are merged with each other after code reviews and sufficient "
+"discussion."
 
 #: ../ubuntu-packaging-guide/introduction-to-ubuntu-development.rst:101
 msgid ""
@@ -2619,7 +3115,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:15
 msgid "Patching Policy"
-msgstr ""
+msgstr "Patching Policy"
 
 #: ../ubuntu-packaging-guide/kde.rst:17
 msgid ""
@@ -2637,13 +3133,15 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/kde.rst:27
 msgid "debian/rules"
-msgstr ""
+msgstr "debian/rules"
 
 #: ../ubuntu-packaging-guide/kde.rst:29
 msgid ""
 "Debian packages include some additions to the basic Debhelper usage. These "
 "are kept in the ``pkg-kde-tools`` package."
 msgstr ""
+"Debian packages include some additions to the basic Debhelper usage. These "
+"are kept in the ``pkg-kde-tools`` package."
 
 #: ../ubuntu-packaging-guide/kde.rst:32
 msgid ""
@@ -2651,6 +3149,9 @@ msgid ""
 "will ensure the correct build flags are used and add options such as "
 "handling kdeinit stubs and translations::"
 msgstr ""
+"Packages which use Debhelper 7 should add the ``--with=kde`` option. This "
+"will ensure the correct build flags are used and add options such as "
+"handling kdeinit stubs and translations::"
 
 #: ../ubuntu-packaging-guide/kde.rst:39
 msgid ""
@@ -2660,16 +3161,23 @@ msgid ""
 "/usr/share/pkg-kde-tools/qt-kde-team/2/debian-qt-kde.mk`` instead of running "
 "``dh``."
 msgstr ""
+"Some newer KDE packages use the ``dhmk`` system, an alternative to ``dh`` "
+"made by the Debian Qt/KDE team.  You can read about it in /usr/share/pkg-kde-"
+"tools/qt-kde-team/2/README.  Packages using this will ``include "
+"/usr/share/pkg-kde-tools/qt-kde-team/2/debian-qt-kde.mk`` instead of running "
+"``dh``."
 
 #: ../ubuntu-packaging-guide/kde.rst:47
 msgid "Translations"
-msgstr ""
+msgstr "Translations"
 
 #: ../ubuntu-packaging-guide/kde.rst:49
 msgid ""
 "Packages in main have their translations imported into Launchpad and "
 "exported from Launchpad into Ubuntu's language-packs."
 msgstr ""
+"Packages in main have their translations imported into Launchpad and "
+"exported from Launchpad into Ubuntu's language-packs."
 
 #: ../ubuntu-packaging-guide/kde.rst:52
 msgid ""
@@ -2677,6 +3185,9 @@ msgid ""
 "make available upstream translations and handle ``.desktop`` file "
 "translations."
 msgstr ""
+"So any KDE package in main must generate translation templates, include or "
+"make available upstream translations and handle ``.desktop`` file "
+"translations."
 
 #: ../ubuntu-packaging-guide/kde.rst:56
 msgid ""
@@ -2686,6 +3197,11 @@ msgid ""
 "files in ``po/``.  This will be done automatically during build if you use "
 "the ``--with=kde`` option to ``dh``."
 msgstr ""
+"To generate translation templates the package must include a ``Messages.sh`` "
+"file; complain to the upstream if it does not.  You can check it works by "
+"running ``extract-messages.sh`` which should produce one or more ``.pot`` "
+"files in ``po/``.  This will be done automatically during build if you use "
+"the ``--with=kde`` option to ``dh``."
 
 #: ../ubuntu-packaging-guide/kde.rst:63
 msgid ""
@@ -3704,7 +4220,8 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Andi Chandler https://launchpad.net/~bing\n"
 "  Daniel Holbach https://launchpad.net/~dholbach\n"
-"  Simon Quigley https://launchpad.net/~tsimonq2"
+"  Simon Quigley https://launchpad.net/~tsimonq2\n"
+"  Stephan Woidowski https://launchpad.net/~swoidowski"
 
 #~ msgid "add the following to the Source section in ``debian/control``::"
 #~ msgstr "add the following to the Source section in ``debian/control``::"
