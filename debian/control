@@ -1,7 +1,7 @@
 Source: ubuntu-packaging-guide
 Priority: optional
 Section: doc
-Maintainer: Ubuntu Developers <ubuntu-dev-team@lists.alioth.debian.org>
+Maintainer: Ubuntu Developers <ubuntu-dev-team@alioth-lists.debian.net>
 Uploaders: Andrew Starr-Bochicchio <asb@debian.org>, Dmitry Shachnev <mitya57@debian.org>
 Vcs-Bzr: lp:ubuntu-packaging-guide
 Vcs-Browser: https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk
