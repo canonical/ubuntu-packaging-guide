@@ -15,6 +15,7 @@ ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
     building on Ubuntu 14.04.
   * Build-depend on python3-stemmer to fix build with the latest Sphinx.
   * Use HTTPS links in debian/copyright.
+  * Update Maintainer field to ubuntu-dev-team@alioth-lists.debian.org.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
 
