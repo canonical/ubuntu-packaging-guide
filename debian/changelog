@@ -18,6 +18,7 @@ ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
   * Update Maintainer field to ubuntu-dev-team@alioth-lists.debian.org.
   * Use pkg-info.mk instead of calling dpkg-parsechangelog in debian/rules.
   * Bump Standards-Version to 4.2.1, no changes needed.
+  * Remove trailing spaces from debian/changelog.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
 
@@ -98,7 +99,7 @@ ubuntu-packaging-guide (0.3.5) unstable; urgency=medium
   * Add favicon (LP: #1281919).
 
   [ Daniel Holbach ]
-  * Update copyright. 
+  * Update copyright.
 
  -- Andrew Starr-Bochicchio <asb@debian.org>  Tue, 01 Apr 2014 19:59:27 -0400
 
@@ -136,7 +137,7 @@ ubuntu-packaging-guide (0.3.3) unstable; urgency=low
 
   [ Andrew Starr-Bochicchio ]
   * Use un-minified versions of 960.css and reset.css (Closes: #717008,
-    LP: #1201636). 
+    LP: #1201636).
 
   [ Dmitry Shachnev ]
   * Use different name for singlehtml doc-base files, to prevent warnings
@@ -170,7 +171,7 @@ ubuntu-packaging-guide (0.3.2) unstable; urgency=low
   * add German, build-depends on texlive-lang-german.
   * Update UDS information to the new world of UDSes.
   * Update information about "CD images". They are not explicitly for CDs and
-    never were. 
+    never were.
 
   [ Andrew Starr-Bochicchio ]
   * getting-set-up: Launchpad finds developer gpg keys quicker if they
@@ -211,7 +212,7 @@ ubuntu-packaging-guide (0.3.1) experimental; urgency=low
   * Bump build-dependency on Sphinx, we need at least 1.1.3+dfsg-6.
 
   [ Daniel Holbach ]
-  * Document where to find a list of required autopkgtests and where 
+  * Document where to find a list of required autopkgtests and where
     to get help.
   * Enable Russian translations. Add texlive-lang-cyrillic to debian/control
     as Build-Depends.
@@ -246,7 +247,7 @@ ubuntu-packaging-guide (0.3.0) experimental; urgency=low
     is the recommended workflow (LP: #973884).
   * debian/control: Add myself to Uploaders and remove
     Benjamin Drung. Thanks for his previous work.
-  
+
   [ Dmitry Shachnev ]
   * Fix search not working (LP: #814679).
   * Introduce -common package (LP: #1067338).
@@ -277,7 +278,7 @@ ubuntu-packaging-guide (0.2.4) unstable; urgency=low
   * Add missing CSS bits for headers and admonitions (LP: #1045386)
 
   [ Daniel Holbach ]
-  * Added article about using autopkgtest. 
+  * Added article about using autopkgtest.
 
  -- Benjamin Drung <bdrung@debian.org>  Wed, 10 Oct 2012 14:35:31 +0200
 
@@ -340,7 +341,7 @@ ubuntu-packaging-guide (0.2) UNRELEASED; urgency=low
     level of completeness of the translations is reached. (LP: #961936)
 
   [ Daniel Holbach ]
-  * Integrate sponsoring documentation (setting expectations, explain 
+  * Integrate sponsoring documentation (setting expectations, explain
     process). (LP: #996096)
   * Refer to the backports process (LP: #1017984).
 
