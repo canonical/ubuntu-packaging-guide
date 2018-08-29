@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
-VERSION := $(shell dpkg-parsechangelog | sed -rne 's,^Version: ([^-]+).*,\1,p')
+include /usr/share/dpkg/pkg-info.mk
+
 COMMON := /usr/share/ubuntu-packaging-guide
 
 %:
@@ -43,5 +44,5 @@ override_dh_installdocs:
 	dh_installdocs -Xwebsupport.js
 
 get-orig-source:
-	bzr export -r tag:$(VERSION) --root=ubuntu-packaging-guide-$(VERSION).orig \
-		ubuntu-packaging-guide_$(VERSION).tar.gz lp:ubuntu-packaging-guide
+	bzr export -r tag:$(DEB_VERSION) --root=ubuntu-packaging-guide-$(DEB_VERSION).orig \
+		ubuntu-packaging-guide_$(DEB_VERSION).tar.gz lp:ubuntu-packaging-guide
