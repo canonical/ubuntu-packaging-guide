@@ -17,6 +17,7 @@ ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
   * Use HTTPS links in debian/copyright.
   * Update Maintainer field to ubuntu-dev-team@alioth-lists.debian.org.
   * Use pkg-info.mk instead of calling dpkg-parsechangelog in debian/rules.
+  * Bump Standards-Version to 4.2.1, no changes needed.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
 
