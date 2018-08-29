@@ -16,6 +16,7 @@ ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
   * Build-depend on python3-stemmer to fix build with the latest Sphinx.
   * Use HTTPS links in debian/copyright.
   * Update Maintainer field to ubuntu-dev-team@alioth-lists.debian.org.
+  * Use pkg-info.mk instead of calling dpkg-parsechangelog in debian/rules.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
 
