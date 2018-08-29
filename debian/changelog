@@ -13,6 +13,7 @@ ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Temporary downgrade debhelper compatibility level to 9, to allow
     building on Ubuntu 14.04.
+  * Build-depend on python3-stemmer to fix build with the latest Sphinx.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
 
