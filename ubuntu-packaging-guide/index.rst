@@ -8,9 +8,7 @@
 Ubuntu Packaging Guide
 ==================================================
 
-Welcome to the Ubuntu Packaging and Development Guide! We are currently
-developing codename Bionic Beaver, which is to be released in April 2018
-as Ubuntu 18.04 LTS.
+Welcome to the Ubuntu Packaging and Development Guide!
 
 This is the official place for learning all about Ubuntu Development and
 packaging. After reading this guide you will have:
