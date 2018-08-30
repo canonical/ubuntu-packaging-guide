@@ -19,6 +19,7 @@ ubuntu-packaging-guide (1.0.0) UNRELEASED; urgency=medium
   * Use pkg-info.mk instead of calling dpkg-parsechangelog in debian/rules.
   * Bump Standards-Version to 4.2.1, no changes needed.
   * Remove trailing spaces from debian/changelog.
+  * Do not symlink non-English versions of searchtools.js.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 03 Sep 2017 11:19:47 -0500
 
