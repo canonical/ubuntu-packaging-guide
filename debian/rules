@@ -21,7 +21,7 @@ override_dh_link:
 	for dirname in _static _images; do \
 		for directory in `find debian/ -wholename */$$dirname -not -wholename *-common* -type d`; do \
 			cd $$directory; \
-			for filename in `find -type f -not -name translations.js -and -not -name searchtools.js`; do \
+			for filename in `find -type f -not \( -name translations.js -or -name searchtools.js -or -name _stemmer.js \)`; do \
 				rm $$filename; \
 				ln -s $(COMMON)/$$dirname/$$filename $$filename; \
 			done; \
