@@ -5,6 +5,7 @@ ubuntu-packaging-guide (1.0.1) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
   * Do not symlink _stemmer.js (closes: #910155).
+  * Symlink identical static files in html and singlehtml.
 
  -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 14 Sep 2018 02:18:18 +0100
 
