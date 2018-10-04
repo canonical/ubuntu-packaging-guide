@@ -28,6 +28,13 @@ override_dh_link:
 			cd -; \
 		done; \
 	done
+	for directory in `find debian/ -type d -name singlehtml`; do \
+		for filename in translations.js searchtools.js _stemmer.js; do \
+			if [ -f $$directory/_static/$$filename ]; then \
+				ln -sf ../../_static/$$filename $$directory/_static/$$filename; \
+			fi; \
+		done; \
+	done
 	# use system copies of javascript libraries instead
 	for jsname in jquery underscore doctools; do \
 		for filename in `find debian/ -wholename */_static/$$jsname.js`; do \
