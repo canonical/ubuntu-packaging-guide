@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (1.0.1) UNRELEASED; urgency=medium
+ubuntu-packaging-guide (1.0.1) unstable; urgency=medium
 
   [ Jelmer Vernooĳ ]
   * Use secure URI in Vcs control header.
@@ -7,7 +7,7 @@ ubuntu-packaging-guide (1.0.1) UNRELEASED; urgency=medium
   * Do not symlink _stemmer.js (closes: #910155).
   * Symlink identical static files in html and singlehtml.
 
- -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 14 Sep 2018 02:18:18 +0100
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 04 Oct 2018 16:26:43 +0300
 
 ubuntu-packaging-guide (1.0.0) unstable; urgency=medium
 
