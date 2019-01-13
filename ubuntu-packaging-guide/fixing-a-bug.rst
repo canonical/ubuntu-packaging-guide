@@ -375,7 +375,7 @@ applied and the testing you have done. An example comment can be::
 
 Make sure you mark it as a patch (the Ubuntu Sponsors team will automatically
 be subscribed) and that you are subscribed to the bug report. You will then
-receive a review anywhere between several housr from submitting the patch to
+receive a review anywhere between several hours from submitting the patch to
 several weeks. If it takes longer than that, please join ``#ubuntu-motu`` on
 ``freenode`` and mention it there. Stick around until you get an answer from
 someone, and they can guide you as to what to do next.

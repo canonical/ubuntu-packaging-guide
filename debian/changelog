@@ -1,3 +1,9 @@
+ubuntu-packaging-guide (1.0.2) UNRELEASED; urgency=medium
+
+  * Fix a typo in fixing-a-bug.rst, thanks Maik Wagner (LP: #1811573).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 13 Jan 2019 14:36:43 +0300
+
 ubuntu-packaging-guide (1.0.1) unstable; urgency=medium
 
   [ Jelmer Vernooĳ ]
