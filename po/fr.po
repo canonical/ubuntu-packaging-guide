@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-03 14:51-0500\n"
+"POT-Creation-Date: 2019-01-13 14:36+0300\n"
 "PO-Revision-Date: 2017-09-13 06:37+0000\n"
 "Last-Translator: Daniel Holbach <daniel@ubuntu.holba.ch>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2018-10-11 05:35+0000\n"
-"X-Generator: Launchpad (build 18790)\n"
+"X-Launchpad-Export-Date: 2019-01-14 05:35+0000\n"
+"X-Generator: Launchpad (build 18855)\n"
 "Language: fr\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -1782,7 +1782,7 @@ msgstr ""
 msgid ""
 "Make sure you mark it as a patch (the Ubuntu Sponsors team will "
 "automatically be subscribed) and that you are subscribed to the bug report. "
-"You will then receive a review anywhere between several housr from "
+"You will then receive a review anywhere between several hours from "
 "submitting the patch to several weeks. If it takes longer than that, please "
 "join ``#ubuntu-motu`` on ``freenode`` and mention it there. Stick around "
 "until you get an answer from someone, and they can guide you as to what to "
@@ -2049,8 +2049,8 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:26
 msgid ""
-"Don't want to install the latest Ubuntu development version of Ubuntu? Spin "
-"up an `LXD container <https://help.ubuntu.com/lts/serverguide/lxd.html>`_."
+"Don't want to install the latest development version of Ubuntu? Spin up an "
+"`LXD container <https://help.ubuntu.com/lts/serverguide/lxd.html>`_."
 msgstr ""
 
 #: ../ubuntu-packaging-guide/getting-set-up.rst:30
@@ -2510,37 +2510,34 @@ msgid "Ubuntu Packaging Guide"
 msgstr "Guide d'empaquetage pour Ubuntu"
 
 #: ../ubuntu-packaging-guide/index.rst:11
-msgid ""
-"Welcome to the Ubuntu Packaging and Development Guide! We are currently "
-"developing codename Artful Aardvark, which is to be released in October 2017 "
-"as Ubuntu 17.10."
+msgid "Welcome to the Ubuntu Packaging and Development Guide!"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:15
+#: ../ubuntu-packaging-guide/index.rst:13
 msgid ""
 "This is the official place for learning all about Ubuntu Development and "
 "packaging. After reading this guide you will have:"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:18
+#: ../ubuntu-packaging-guide/index.rst:16
 msgid ""
 "Heard about the most important players, processes and tools in Ubuntu "
 "development,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:20
+#: ../ubuntu-packaging-guide/index.rst:18
 msgid "Your development environment set up correctly,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:21
+#: ../ubuntu-packaging-guide/index.rst:19
 msgid "A better idea of how to join our community,"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:22
+#: ../ubuntu-packaging-guide/index.rst:20
 msgid "Fixed an actual Ubuntu bug as part of the tutorials."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/index.rst:24
+#: ../ubuntu-packaging-guide/index.rst:22
 msgid ""
 "Ubuntu is not only a free and open source operating system, its platform is "
 "also open and developed in a transparent fashion. The source code for every "
@@ -2552,7 +2549,7 @@ msgstr ""
 "Le code source de chaque composant s'obtient aisément et chaque modification "
 "de la plate-forme Ubuntu peut être examinée."
 
-#: ../ubuntu-packaging-guide/index.rst:29
+#: ../ubuntu-packaging-guide/index.rst:27
 msgid ""
 "This means you can actively get involved in improving it and the community "
 "of Ubuntu platform developers is always interested in helping peers getting "
@@ -2562,7 +2559,7 @@ msgstr ""
 "que la communauté des développeurs de la plate-forme Ubuntu se sent toujours "
 "concernée pour aider ses pairs à démarrer."
 
-#: ../ubuntu-packaging-guide/index.rst:33
+#: ../ubuntu-packaging-guide/index.rst:31
 msgid ""
 "Ubuntu is also a community of great people who believe in free software and "
 "that it should be accessible for everyone. Its members are welcoming and "
@@ -2575,7 +2572,7 @@ msgstr ""
 "souhaitons que vous vous impliquiez, posiez des questions, rendiez Ubuntu "
 "meilleur avec nous."
 
-#: ../ubuntu-packaging-guide/index.rst:38
+#: ../ubuntu-packaging-guide/index.rst:36
 msgid ""
 "If you run into problems: don't panic! Check out the :doc:`communication "
 "article<./communication>` and you will find out how to most easily get in "
@@ -2585,17 +2582,17 @@ msgstr ""
 "de communication<./communication>` et vous découvrirez comment rentrer plus "
 "facilement en contact avec d'autres développeurs."
 
-#: ../ubuntu-packaging-guide/index.rst:42
+#: ../ubuntu-packaging-guide/index.rst:40
 msgid "The guide is split up into two sections:"
 msgstr "Le guide est divisé en deux sections :"
 
-#: ../ubuntu-packaging-guide/index.rst:44
+#: ../ubuntu-packaging-guide/index.rst:42
 msgid "A list of articles based on tasks, things you want to get done."
 msgstr ""
 "Une liste d'articles basés sur les tâches ou les choses que vous "
 "souhaiteriez voir traitées."
 
-#: ../ubuntu-packaging-guide/index.rst:45
+#: ../ubuntu-packaging-guide/index.rst:43
 msgid ""
 "A set of knowledge-base articles that dig deeper into specific bits of our "
 "tools and workflows."
@@ -2603,11 +2600,11 @@ msgstr ""
 "Un ensemble d'articles composant une base de connaissances plus approfondies "
 "sur des parties spécifiques de nos outils et nos flux de travail."
 
-#: ../ubuntu-packaging-guide/index.rst:49
+#: ../ubuntu-packaging-guide/index.rst:47
 msgid "Articles"
 msgstr "Articles"
 
-#: ../ubuntu-packaging-guide/index.rst:66
+#: ../ubuntu-packaging-guide/index.rst:64
 msgid "Knowledge Base"
 msgstr "Base de connaissances"
 
@@ -3451,27 +3448,14 @@ msgstr ""
 "appelée GNU Bonjour, postée sur GNU.org_."
 
 #: ../ubuntu-packaging-guide/packaging-new-software.rst:23
-msgid ""
-"If you don't have the build tools lets make sure we have them first.  Also "
-"if you don't have the required dependencies lets install those as well."
+msgid "Download GNU Hello::"
 msgstr ""
-"Si vous n'avez pas les outils de compilation, assurez-vous de les obtenir au "
-"préalable. De même, si vous n'avez pas les dépendances requises, installez-"
-"les également."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:26
-msgid "Install build tools::"
-msgstr "Installez les outils de compilation ::"
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:27
+msgid "Now uncompress it::"
+msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:30
-msgid "Download main package::"
-msgstr "Téléchargez le paquet principal ::"
-
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:34
-msgid "Now uncompress main package::"
-msgstr "Maintenant, décompressez le paquet principal ::"
-
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:39
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:32
 msgid ""
 "This application uses the autoconf build system so we want to run "
 "``./configure`` to prepare for compilation."
@@ -3479,7 +3463,7 @@ msgstr ""
 "Cette application utilise le système de construction autoconf, nous "
 "exécuterons donc ``./configure`` pour préparer la compilation."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:42
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:35
 msgid ""
 "This will check for the required build dependencies. As ``hello`` is a "
 "simple example, ``build-essential`` should provide everything we need. For "
@@ -3494,35 +3478,30 @@ msgstr ""
 "développement nécessaires. Installez les paquets nécessaires et recommencez "
 "jusqu'à ce que la commande s'exécute avec succès.::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:50
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:43
 msgid "Now you can compile the source::"
 msgstr "Maintenant vous pouvez compiler la source ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:54
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:47
 msgid ""
 "If compilation completes successfully you can install and run the program::"
 msgstr ""
 "Si la compilation se termine avec succès, vous pouvez installer et exécuter "
 "le programme ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:60
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:53
 msgid "Starting a Package"
 msgstr "Commencer un paquet"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:62
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:55
 msgid ""
 "``bzr-builddeb`` includes a plugin to create a new package from a template. "
-"The plugin is a wrapper around the ``dh_make`` command. You should already "
-"have these if you installed ``packaging-dev``. Run the command providing the "
-"package name, version number, and path to the upstream tarball::"
+"The plugin is a wrapper around the ``dh_make`` command.  Run the command "
+"providing the package name, version number, and path to the upstream "
+"tarball::"
 msgstr ""
-"``bzr-builddeb`` inclut un greffon pour créer un nouveau paquet à partir "
-"d'un modèle. Ce greffon est une surcouche de la commande ``dh_make``. Ces "
-"programmes devraient déjà être présents si vous avez installé ``packaging-"
-"dev``. Exécutez la commande fournissant le nom du paquet, le numéro de "
-"version et le chemin vers l'archive de l'amont ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:71
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:63
 msgid ""
 "When it asks what type of package type ``s`` for single binary. This will "
 "import the code into a branch and add the ``debian/`` packaging directory.  "
@@ -3537,19 +3516,19 @@ msgstr ""
 "que les modules d'Emacs) de sorte que vous pouvez commencer par supprimer "
 "les fichiers optionnels d'exemple ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:80
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:72
 msgid "You should now customise each of the files."
 msgstr "Vous devriez maintenant personnaliser chacun des fichiers."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:82
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:74
 msgid ""
 "In ``debian/changelog`` change the version number to an Ubuntu version: "
-"``2.7-0ubuntu1`` (upstream version 2.7, Debian version 0, Ubuntu version 1). "
-" Also change ``unstable`` to the current development Ubuntu release such as "
-"``trusty``."
+"``2.10-0ubuntu1`` (upstream version 2.10, Debian version 0, Ubuntu version "
+"1).  Also change ``unstable`` to the current development Ubuntu release such "
+"as ``trusty``."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:87
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:79
 msgid ""
 "Much of the package building work is done by a series of scripts called "
 "``debhelper``.  The exact behaviour of ``debhelper`` changes with new major "
@@ -3563,7 +3542,7 @@ msgstr ""
 "``debhelper`` à quelle version se conformer. Vous souhaiterez généralement "
 "régler ce paramètre à la version la plus récente qui est ``9``."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:93
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:85
 msgid ""
 "``control`` contains all the metadata of the package.  The first paragraph "
 "describes the source package. The second and following paragraphs describe "
@@ -3577,7 +3556,7 @@ msgstr ""
 "paquets nécessaires pour compiler l'application. Pour ``bonjour``, assurez-"
 "vous qu'il comprend au moins ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:101
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:93
 msgid ""
 "You will also need to fill in a description of the program in the "
 "``Description:`` field."
@@ -3585,7 +3564,7 @@ msgstr ""
 "Vous devrez également remplir une description du programme dans le ``champ "
 "Description:``."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:104
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:96
 msgid ""
 "``copyright`` needs to be filled in to follow the licence of the upstream "
 "source.  According to the hello/COPYING file this is GNU GPL 3 or later."
@@ -3594,7 +3573,7 @@ msgstr ""
 "amont. Selon le fichier bonjour/COPYING, il s'agit de la licence GNU GPL 3 "
 "ou ultérieure."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:107
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:99
 msgid ""
 "``docs`` contains any upstream documentation files you think should be "
 "included in the final package."
@@ -3602,7 +3581,7 @@ msgstr ""
 "``docs`` contient les fichiers de documentation de l'amont qui, selon vous, "
 "devraient être inclus dans le paquet final."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:110
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:102
 msgid ""
 "``README.source`` and ``README.Debian`` are only needed if your package has "
 "any non-standard features, we don't so you can delete them."
@@ -3611,7 +3590,7 @@ msgstr ""
 "paquet possède une caractéristique non standard, ce qui n'est pas le cas "
 "donc vous pouvez les supprimer."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:113
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:105
 msgid ""
 "``source/format`` can be left as is, this describes the version format of "
 "the source package and should be ``3.0 (quilt)``."
@@ -3619,7 +3598,7 @@ msgstr ""
 "``source/format`` peut être laissé tel quel, il décrit le format de version "
 "du paquet source et devrait être ``3.0 (quilt)``."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:116
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:108
 msgid ""
 "``rules`` is the most complex file.  This is a Makefile which compiles the "
 "code and turns it into a binary package.  Fortunately most of the work is "
@@ -3632,7 +3611,7 @@ msgstr ""
 "de telle sorte que la cible universelle ``%`` du Makefile lance uniquement "
 "le script ``dh`` qui exécute toutes les opérations nécessaires."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:121
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:113
 msgid ""
 "All of these file are explained in more detail in the :doc:`overview of the "
 "debian directory<./debian-dir-overview>` article."
@@ -3640,15 +3619,15 @@ msgstr ""
 "Tous ces fichiers sont expliqués plus en détail dans l'article :doc:`aperçu "
 "du répertoire Debian<./debian-dir-overview>`."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:124
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:116
 msgid "Finally commit the code to your packaging branch::"
 msgstr "Enfin, soumettez le code à votre branche d'empaquetage ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:130
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:122
 msgid "Building the package"
 msgstr "Construisez le paquet"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:132
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:124
 msgid ""
 "Now we need to check that our packaging successfully compiles the package "
 "and builds the .deb binary package::"
@@ -3656,7 +3635,7 @@ msgstr ""
 "Maintenant, nous devons vérifier que notre empaquetage compile le paquet "
 "correctement et construit le paquet binaire .deb ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:138
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:130
 msgid ""
 "``bzr builddeb`` is a command to build the package in its current location. "
 "The ``-us -uc`` tell it there is no need to GPG sign the package.  The "
@@ -3666,25 +3645,25 @@ msgstr ""
 "emplacement actuel. Le ``-us -uc`` indique que GPG n'a pas besoin de signer "
 "le paquet. Le résultat sera placé dans le dossier ``..``."
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:142
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:134
 msgid "You can view the contents of the package with::"
 msgstr "Vous pouvez afficher le contenu du paquet avec ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:146
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:138
 msgid ""
 "Install the package and check it works (later you will be able to uninstall "
 "it using ``sudo apt-get remove hello`` if you want)::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:151
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:143
 msgid "You can also install all packages at once using::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:156
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:148
 msgid "Next Steps"
 msgstr "Étapes suivantes"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:158
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:150
 msgid ""
 "Even if it builds the .deb binary package, your packaging may have bugs.  "
 "Many errors can be automatically detected by our tool ``lintian`` which can "
@@ -3692,19 +3671,19 @@ msgid ""
 "file::"
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:166
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:158
 msgid ""
 "To see verbose description of the problems use ``--info`` lintian flag or "
 "``lintian-info`` command."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:169
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:161
 msgid ""
 "For Python packages, there is also a ``lintian4python`` tool that provides "
 "some additional lintian checks."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:172
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:164
 msgid ""
 "After making a fix to the packaging you can rebuild using ``-nc`` \"no "
 "clean\" without having to build from scratch::"
@@ -3713,7 +3692,7 @@ msgstr ""
 "reconstruire en utilisant ``-nc`` pour « no clean » afin d'éviter d'avoir à "
 "le reconstruire à partir de zéro ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:177
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:169
 msgid ""
 "Having checked that the package builds locally you should ensure it builds "
 "on a clean system using ``pbuilder``. Since we are going to upload to a PPA "
@@ -3735,7 +3714,7 @@ msgstr ""
 "configuré ``pbuilder-dist`` ou GPG, :doc:`faites le maintenant<./getting-set-"
 "up>` ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:190
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:182
 msgid ""
 "When you are happy with your package you will want others to review it.  You "
 "can upload the branch to Launchpad for review::"
@@ -3744,7 +3723,7 @@ msgstr ""
 "relecture par d'autres. Vous pouvez télécharger la branche vers Launchpad "
 "pour la relecture ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:195
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:187
 msgid ""
 "Uploading it to a PPA will ensure it builds and give an easy way for you and "
 "others to test the binary packages.  You will need to set up a PPA in "
@@ -3755,23 +3734,18 @@ msgstr ""
 "besoin de configurer un PPA dans Launchpad puis de télécharger avec "
 "``dput`` ::"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:201
-msgid "See :doc:`uploading<./udd-uploading>` for more information."
-msgstr ""
-"Voir :doc:`téléchargement<./udd-uploading>` pour plus d'informations."
-
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:203
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:193
 msgid ""
 "You can ask for reviews in ``#ubuntu-motu`` IRC channel, or on the `MOTU "
 "mailing list <ubuntu-motu_>`_.  There might also be a more specific team you "
 "could ask such as the GNU team for more specific questions."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:208
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:198
 msgid "Submitting for inclusion"
 msgstr "Soumettez pour inclusion"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:210
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:200
 msgid ""
 "There are a number of paths that a package can take to enter Ubuntu. In most "
 "cases, going through Debian first can be the best path. This way ensures "
@@ -3786,28 +3760,28 @@ msgstr ""
 "Debian et Ubuntu, mais également dans l'ensemble de leurs dérivés. Voici "
 "quelques liens utiles pour soumettre de nouveaux paquets à Debian :"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:217
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:207
 msgid ""
 "`Debian Mentors FAQ <MentorsFAQ_>`_ - debian-mentors is for the mentoring of "
 "new and prospective Debian Developers. It is where you can find a sponsor to "
 "upload your package to the archive."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:221
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:211
 msgid ""
 "`Work-Needing and Prospective Packages <WNPP_>`_ - Information on how to "
 "file \"Intent to Package\" and \"Request for Package\" bugs as well as list "
 "of open ITPs and RFPs."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:225
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:215
 msgid ""
 "`Debian Developer's Reference, 5.1. New packages <DevRef_>`_ - The entire "
 "document is invaluable for both Ubuntu and Debian packagers. This section "
 "documents processes for submitting new packages."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:229
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:219
 msgid ""
 "In some cases, it might make sense to go directly into Ubuntu first. For "
 "instance, Debian might be in a freeze making it unlikely that your package "
@@ -3816,11 +3790,11 @@ msgid ""
 "wiki."
 msgstr ""
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:235
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:225
 msgid "Screenshots"
 msgstr "Captures d'écran"
 
-#: ../ubuntu-packaging-guide/packaging-new-software.rst:237
+#: ../ubuntu-packaging-guide/packaging-new-software.rst:227
 msgid ""
 "Once you have uploaded a package to debian, you should add screenshots to "
 "allow propective users to see what the program is like. These should be "
@@ -4249,24 +4223,16 @@ msgstr "Correction de la source"
 msgid ""
 "Now that we have the source package, we need to patch it to fix the "
 "vulnerability. You may use whatever patch method that is appropriate for the "
-"package, including :doc:`UDD techniques<./udd-intro>`, but this example will "
-"use ``edit-patch`` (from the ubuntu-dev-tools package). ``edit-patch`` is "
-"the easiest way to patch packages and it is basically a wrapper around every "
-"other patch system you can imagine."
+"package, but this example will use ``edit-patch`` (from the ubuntu-dev-tools "
+"package). ``edit-patch`` is the easiest way to patch packages and it is "
+"basically a wrapper around every other patch system you can imagine."
 msgstr ""
-"Maintenant que nous avons le paquet source, nous avons besoin de le réparer "
-"pour corriger la vulnérabilité. Vous pouvez utiliser n'importe quelle "
-"méthode de réparation appropriée au paquet, y compris les :doc:`techniques "
-"UDD<./udd-intro>`, mais cet exemple va utiliser ``edit-patch`` (du paquet "
-"ubuntu-dev-tools). ``edit-patch`` est le moyen le plus aisé de corriger les "
-"paquets et il est essentiellement une surcouche de chaque système de "
-"réparation que vous pouvez imaginer."
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:46
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:45
 msgid "To create your patch using ``edit-patch``::"
 msgstr "Pour créer votre correctif en utilisant ``edit-patch`` ::"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:51
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:50
 msgid ""
 "This will apply the existing patches and put the packaging in a temporary "
 "directory. Now edit the files needed to fix the vulnerability.  Often "
@@ -4277,7 +4243,7 @@ msgstr ""
 "corriger la vulnérabilité. Souvent, l'amont a fourni un correctif afin que "
 "vous puissiez l'appliquer ::"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:57
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:56
 msgid ""
 "After making the necessary changes, you just hit Ctrl-D or type exit to "
 "leave the temporary shell."
@@ -4285,11 +4251,11 @@ msgstr ""
 "Après avoir effectué les modifications nécessaires, vous appuyez simplement "
 "sur Ctrl-D ou tapez exit pour quitter l'environnement temporaire."
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:61
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:60
 msgid "Formatting the changelog and patches"
 msgstr "Formatage du changelog et des correctifs"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:63
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:62
 msgid ""
 "After applying your patches you will want to update the changelog. The "
 "``dch`` command is used to edit the ``debian/changelog`` file and ``edit-"
@@ -4308,7 +4274,7 @@ msgstr ""
 "de distribution utilise precise-security puisqu'il s'agit d'un mise à jour "
 "de sécurité pour Precise) pour les mises à jour de sécurité ::"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:80
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:79
 msgid ""
 "Update your patch to use the appropriate patch tags. Your patch should have "
 "at a minimum the Origin, Description and Bug-Ubuntu tags. For example, edit "
@@ -4319,7 +4285,7 @@ msgstr ""
 "Description et Bug-Ubuntu. Par exemple, éditer debian/patches/99-fix-a-"
 "vulnerability.patch pour obtenir quelque chose comme ::"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:91
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:90
 msgid ""
 "Multiple vulnerabilities can be fixed in the same security upload; just be "
 "sure to use different patches for different vulnerabilities."
@@ -4328,11 +4294,11 @@ msgstr ""
 "téléchargement de sécurité ; il suffit de s'assurer d'utiliser des "
 "correctifs différents pour les différentes vulnérabilités."
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:95
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:94
 msgid "Test and Submit your work"
 msgstr "Testez et soumettez votre travail"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:97
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:96
 msgid ""
 "At this point the process is the same as for :doc:`fixing a regular bug in "
 "Ubuntu<./fixing-a-bug>`. Specifically, you will want to:"
@@ -4340,7 +4306,7 @@ msgstr ""
 "À ce stade, le processus est le même que pour :doc:`corriger un bogue normal "
 "dans Ubuntu<./fixing-a-bug>`. Plus précisément, vous devrez :"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:100
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:99
 msgid ""
 "Build your package and verify that it compiles without error and without any "
 "added compiler warnings"
@@ -4348,13 +4314,13 @@ msgstr ""
 "Créer votre paquet et vérifier qu'il se compile sans erreur et sans aucun "
 "avertissement additionnel du compilateur"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:102
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:101
 msgid "Upgrade to the new version of the package from the previous version"
 msgstr ""
 "Mettre à niveau vers la nouvelle version du paquet à partir de la version "
 "précédente"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:103
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:102
 msgid ""
 "Test that the new package fixes the vulnerability and does not introduce any "
 "regressions"
@@ -4362,7 +4328,7 @@ msgstr ""
 "Vérifier que le nouveau paquet corrige la vulnérabilité et n'introduit pas "
 "de régression"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:105
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:104
 msgid ""
 "Submit your work via a Launchpad merge proposal and file a Launchpad bug "
 "being sure to mark the bug as a security bug and to subscribe ``ubuntu-"
@@ -4373,7 +4339,7 @@ msgstr ""
 "d'abord de marquer le bogue comme étant un bogue de sécurité et ensuite de "
 "vous inscrire à ``ubuntu-security-sponsors``"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:109
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:108
 msgid ""
 "If the security vulnerability is not yet public then do not file a merge "
 "proposal and ensure you mark the bug as private."
@@ -4381,7 +4347,7 @@ msgstr ""
 "Si le problème de sécurité n'est pas encore public alors ne déposez pas une "
 "proposition de fusion mais assurez-vous de marquer le bogue comme privé."
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:112
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:111
 msgid ""
 "The filed bug should include a Test Case, i.e. a comment which clearly shows "
 "how to recreate the bug by running the old version then how to ensure the "
@@ -4392,7 +4358,7 @@ msgstr ""
 "version, puis comment s'assurer que le bogue n'existe plus dans la nouvelle "
 "version."
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:116
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:115
 msgid ""
 "The bug report should also confirm that the issue is fixed in Ubuntu "
 "versions newer than the one with the proposed fix (in the above example "
@@ -4405,11 +4371,11 @@ msgstr ""
 "corrigé dans les nouvelles versions, vous devrez préparer les mises à jour "
 "pour ces versions également."
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:123
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:122
 msgid "Stable Release Updates"
 msgstr "Mises à jour vers Version Stable"
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:125
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:124
 msgid ""
 "We also allow updates to releases where a package has a high impact bug such "
 "as a severe regression from a previous release or a bug which could cause "
@@ -4423,7 +4389,7 @@ msgstr ""
 "mises à jour à introduire elles-mêmes des bogues, nous ne les autorisons que "
 "lorsque les modifications peuvent être facilement comprises et vérifiées."
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:130
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:129
 msgid ""
 "The process for Stable Release Updates is just the same as the process for "
 "security bugs except you should subscribe ``ubuntu-sru`` to the bug."
@@ -4432,7 +4398,7 @@ msgstr ""
 "celui des bogues de sécurité, hormis que vous devez vous inscrire à ``ubuntu-"
 "sru`` pour le bogue."
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:133
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:132
 msgid ""
 "The update will go into the ``proposed`` archive (for example ``precise-"
 "proposed``) where it will need to be checked that it fixes the problem and "
@@ -4444,9 +4410,349 @@ msgstr ""
 "pas de nouveaux problèmes. Après une semaine sans problème rapporté, elle "
 "peut être déplacée vers ``updates``."
 
-#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:138
+#: ../ubuntu-packaging-guide/security-and-stable-release-updates.rst:137
 msgid ""
 "See the `Stable Release Updates wiki page <SRUWiki_>`_ for more information."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:3
+msgid "Setting up sbuild"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:5
+msgid ""
+"``sbuild`` simplifies building Debian/Ubuntu binary package from source in "
+"clean environment. It allows to try debugging packages in environment "
+"similar (as opposed to ``pbuild``) to builders used by Launchpad."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:9
+msgid ""
+"It works on different architectures and allows to build packages for other "
+"releases. It needs kernel supporting overlayfs."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:13
+msgid "Installing sbuild"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:15
+msgid ""
+"To use sbuild, you need to install sbuild and other required packages and "
+"add yourself to the ``sbuild`` group::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:21
+msgid "Create ``.sbuildrc`` in your home directory with following content::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:50
+msgid ""
+"Replace “Your Name <user@example.org>” with your name and e-mail address. "
+"Change default distribution if you want, but remember that you can specify "
+"target distribution when executing command."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:54
+msgid ""
+"If you haven’t restarted your session after adding yourself to the "
+"``sbuild`` group, enter::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:59
+msgid ""
+"Generate GPG keypair for sbuild and create chroot for specified release::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:64
+msgid ""
+"This will create chroot for your current architecture. You might want to "
+"specify another architecture. For this, you can use ``--arch`` option. "
+"Example::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:71
+msgid "Using schroot"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:74
+msgid "Entering schroot"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:76
+msgid ""
+"You can use ``schroot -c <release>-<architecture> [-u <USER>]`` to enter "
+"newly created chroot, but that’s not exactly the reason why you are using "
+"sbuild::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:83
+msgid "Using schroot for package building"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:85
+msgid ""
+"To build package using sbuild chroot, we use (surprisingly) the ``sbuild`` "
+"command. For example, to build ``hello`` package from x86_64 chroot, after "
+"applying some changes::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:98
+msgid ""
+"To build package from source package (``.dsc``), use location of the source "
+"package as second parameter::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:103
+msgid ""
+"To make use of all power of your CPU, you can specify number of threads used "
+"for building using standard ``-j<threads>``::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:109
+msgid "Maintaining schroots"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:112
+msgid "Listing chroots"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:114
+msgid ""
+"To get list of all your sbuild chroots, use ``schroot -l``. The ``source:`` "
+"chroots are used as base of new schroots. Changes here aren’t recommended, "
+"but if you have specific reason, you can open it using something like::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:122
+msgid "Updating schroots"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:124
+msgid "To upgrade the whole schroot::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:129
+msgid "Expiring active schroots"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:131
+msgid ""
+"If because of any reason, you haven’t stopped your schroot, you can expire "
+"all active schroots using::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:137
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:136
+msgid "Further reading"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:139
+msgid "There is `Debian wiki page <DebianWiki_>`_ covering sbuild usage."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:141
+msgid "`Ubuntu Wiki <UbuntuWiki_>`_ also has article about basics of sbuild."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/setting-up-sbuild.rst:143
+msgid ""
+"``sbuild`` manpages are covering details about sbuild usage and available "
+"features."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:3
+msgid "ubuntu-dev-tools: Tools for Ubuntu developers"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:5
+msgid ""
+"``ubuntu-dev-tools`` package is a collection of 30 tools created for making "
+"packaging work much easier for Ubuntu developers. It’s similar in scope to "
+"Debian ``devscripts`` package."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:10
+msgid "Setting up packaging environment"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:12
+msgid ""
+"``setup-packaging-environment`` command allows to interactively set up "
+"packaging environment, including setting environment variables, installing "
+"required packages and ensuring that required repositories are enabled."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:17
+msgid "Environment variables"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:20
+msgid "Introducing yourself"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:22
+msgid ""
+"``ubuntu-dev-tools`` configurations can be set using environment variables. "
+"It’s used for example in changelogs. For example, to set e-mail address (and "
+"full name), use ``UBUMAIL`` variable. It overrides the ``DEBEMAIL`` and "
+"``DEBFULLNAME`` variables used by ``devscripts``. To learn ``ubuntu-dev-"
+"tools`` about you, open `~/.bashrc` in text editor and add something like "
+"this::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:30
+msgid ""
+"Now, save this file and restart your terminal or use ``source ~/.bashrc``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:33
+msgid "Changing preferred builder"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:35
+msgid ""
+"Default builder is specified by ``UBUNTUTOOLS_BUILDER`` variable. To set "
+"between *pbuilder* (default), *pbuilder-dist*, and *sbuild*, change this "
+"variable. Example::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:41
+msgid "Save file and restart terminal."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:43
+msgid ""
+"You can also check whether to update the builder every time before building, "
+"by changing ``UBUNTUTOOLS_UPDATE_BUILDER`` from ``no`` (default) to ``yes``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:47
+msgid "Downloading source packages"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:49
+msgid ""
+"``ubuntu-dev-tools`` comes with ``pull-lp-source`` command, allowing to "
+"download source packages from Launchpad. Its usage is simple. To download "
+"latest source package for ubuntu-settings, use::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:55
+msgid ""
+"You can also specify release from which you want to download source or "
+"specify version of source package. ``-d`` option allows to download source "
+"package without extracting. A slightly more complex example would look like "
+"this::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:61
+msgid ""
+"``pull-debian-source`` package allows to do the same for Debian source "
+"packages. It has similar syntax."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:65
+msgid "Backporting packages"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:67
+msgid ""
+"``ubuntu-dev-tools`` provides ``backportpackage`` allowing us to backport a "
+"package from specified release of Ubuntu or Debian. For example, to backport "
+"``bzr`` package from latest development release for your installed Ubuntu "
+"version, simply::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:74
+msgid ""
+"This command allows to use more options. To specify Ubuntu release for which "
+"you are going to backport a package, use ``-d  dest`` or ``--"
+"destination=DEST`` parameter, where ``DEST`` is Ubuntu release, for example "
+"``xenial``. You can specify more than one destination. In turn, ``-s "
+"SOURCE`` and ``--source=SOURCE`` specifies the Ubuntu or Debian release from "
+"which you are going to backport a package. ``-w DIR`` and ``--workdir=DIR`` "
+"specifies directory, where package files will be downloaded, unpacked and "
+"built. By default, it will create temporary directory that will be "
+"automatically deleted. ``-U`` or ``--update`` allows to update build "
+"environment before building package. ``-u`` or ``--upload`` allows to upload "
+"package after building (for example to PPAs) using ``dput``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:86
+msgid "Requesting backports"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:88
+msgid ""
+"``requestbackport`` command makes creating backports through Launchpad bugs "
+"much easier. It creates testing checklist that will be included in the bug. "
+"For example, to request backporting libqt5webkit5 from latest development "
+"branch to current stable release (without optional parameters)::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:95
+msgid ""
+"You should fulfill the checklist if you have already tested the backport."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:97
+msgid ""
+"Additional options allows to specify destination of backport and its source, "
+"by using ``-d DEST`` or ``--destination=DEST`` and ``s SRC`` or ``--"
+"source=SRC``."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:101
+msgid "Other simple commands"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:103
+msgid ""
+"``ubuntu-dev-tools`` also includes small utilities allowing to do simple "
+"tasks like checking whether .iso file is an Ubuntu installation media."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:107
+msgid "``ubuntu-iso``"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:109
+msgid "To do this, use ``ubuntu-iso <pathtoiso>``, for example::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:114
+msgid "``bitesize``"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:116
+msgid ""
+"“Bitesize” tag is used on Launchpad to describe tasks that are suitable for "
+"begineers who want to contribute to one of the projects. ``bitesize`` "
+"command allows to add “bitesize” tag to Launchpad bug with just simple "
+"command, by providing its number, like::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:124
+msgid "``404main``"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:126
+msgid ""
+"``404main`` allows to check whether all of package build dependencies are "
+"included in main repository of specified Ubuntu distribution. Example::"
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:131
+msgid ""
+"If any of the required packages isn’t part of Ubuntu main repository, you "
+"can check whether the package fulfill `Ubuntu main inclusion requirements "
+"<Requirements_>`_ and request it."
+msgstr ""
+
+#: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:138
+msgid ""
+"``ubuntu-dev-tools`` manpages are covering more about usage of this package."
 msgstr ""
 
 msgid "translator-credits"
@@ -4932,6 +5238,23 @@ msgstr ""
 #~ "de supprimer les fichiers .la`_ et nous devrions aider avec ceci."
 
 #~ msgid ""
+#~ "If you don't have the build tools lets make sure we have them first.  Also "
+#~ "if you don't have the required dependencies lets install those as well."
+#~ msgstr ""
+#~ "Si vous n'avez pas les outils de compilation, assurez-vous de les obtenir au "
+#~ "préalable. De même, si vous n'avez pas les dépendances requises, installez-"
+#~ "les également."
+
+#~ msgid "Install build tools::"
+#~ msgstr "Installez les outils de compilation ::"
+
+#~ msgid "Download main package::"
+#~ msgstr "Téléchargez le paquet principal ::"
+
+#~ msgid "Now uncompress main package::"
+#~ msgstr "Maintenant, décompressez le paquet principal ::"
+
+#~ msgid ""
 #~ "Much of the package building work is done by a series of scripts called "
 #~ "``debhelper``.  The exact behaviour of ``debhelper`` changes with new major "
 #~ "versions, the compat file instructs ``debhelper`` which version to act as.  "
@@ -4946,6 +5269,10 @@ msgstr ""
 
 #~ msgid "Install the package and check it works::"
 #~ msgstr "Installez le paquet et vérifiez qu'il fonctionne ::"
+
+#~ msgid "See :doc:`uploading<./udd-uploading>` for more information."
+#~ msgstr ""
+#~ "Voir :doc:`téléchargement<./udd-uploading>` pour plus d'informations."
 
 #~ msgid "Let's look at an example package, ``kamoso`` in Natty::"
 #~ msgstr "Regardons un exemple de paquet, ``kamoso`` dans Natty ::"
@@ -6424,6 +6751,18 @@ msgstr ""
 #~ "les utiliser."
 
 #~ msgid ""
+#~ "``bzr-builddeb`` includes a plugin to create a new package from a template. "
+#~ "The plugin is a wrapper around the ``dh_make`` command. You should already "
+#~ "have these if you installed ``packaging-dev``. Run the command providing the "
+#~ "package name, version number, and path to the upstream tarball::"
+#~ msgstr ""
+#~ "``bzr-builddeb`` inclut un greffon pour créer un nouveau paquet à partir "
+#~ "d'un modèle. Ce greffon est une surcouche de la commande ``dh_make``. Ces "
+#~ "programmes devraient déjà être présents si vous avez installé ``packaging-"
+#~ "dev``. Exécutez la commande fournissant le nom du paquet, le numéro de "
+#~ "version et le chemin vers l'archive de l'amont ::"
+
+#~ msgid ""
 #~ "In ``debian/changelog`` change the version number to an Ubuntu version: "
 #~ "``2.7-0ubuntu1`` (upstream version 2.7, Debian version 0, Ubuntu version 1). "
 #~ " Also change ``unstable`` to the current development Ubuntu release such as "
@@ -7354,6 +7693,22 @@ msgstr ""
 #~ msgstr ""
 #~ "Les articles `Python/LibraryStyleGuide`_ et `Python/AppStyleGuide`_ sur le "
 #~ "wiki Debian ;"
+
+#~ msgid ""
+#~ "Now that we have the source package, we need to patch it to fix the "
+#~ "vulnerability. You may use whatever patch method that is appropriate for the "
+#~ "package, including :doc:`UDD techniques<./udd-intro>`, but this example will "
+#~ "use ``edit-patch`` (from the ubuntu-dev-tools package). ``edit-patch`` is "
+#~ "the easiest way to patch packages and it is basically a wrapper around every "
+#~ "other patch system you can imagine."
+#~ msgstr ""
+#~ "Maintenant que nous avons le paquet source, nous avons besoin de le réparer "
+#~ "pour corriger la vulnérabilité. Vous pouvez utiliser n'importe quelle "
+#~ "méthode de réparation appropriée au paquet, y compris les :doc:`techniques "
+#~ "UDD<./udd-intro>`, mais cet exemple va utiliser ``edit-patch`` (du paquet "
+#~ "ubuntu-dev-tools). ``edit-patch`` est le moyen le plus aisé de corriger les "
+#~ "paquets et il est essentiellement une surcouche de chaque système de "
+#~ "réparation que vous pouvez imaginer."
 
 #~ msgid "Getting the Source"
 #~ msgstr "Obtenir la source"
