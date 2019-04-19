@@ -88,7 +88,7 @@ scripts to handle this. See `Working with symbols files <SymbolsFiles_>`_ for ho
 create and keep these files up to date.
 
 .. _KubuntuML: https://lists.ubuntu.com/mailman/listinfo/kubuntu-devel
-.. _QtKDETeam: http://pkg-kde.alioth.debian.org/
+.. _QtKDETeam: https://qt-kde-team.pages.debian.net
 .. _dpm: https://launchpad.net/~dpm
-.. _SymbolsFiles: http://pkg-kde.alioth.debian.org/symbolfiles.html
+.. _SymbolsFiles: https://qt-kde-team.pages.debian.net/symbolfiles.html
 .. _Wiki: https://wiki.kubuntu.org/Kubuntu
