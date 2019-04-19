@@ -152,6 +152,6 @@ Further Reading
 Junichi Uekawa's `Debian Library Packaging Guide <LibraryGuide_>`_ goes into this topic in more
 detail.
 
-.. _SymbolsFiles: http://pkg-kde.alioth.debian.org/symbolfiles.html
+.. _SymbolsFiles: https://qt-kde-team.pages.debian.net/symbolfiles.html
 .. _LAFileRemoval: https://wiki.debian.org/ReleaseGoals/LAFileRemoval
 .. _LibraryGuide: http://www.netfort.gr.jp/~dancer/column/libpkg-guide/libpkg-guide.html
