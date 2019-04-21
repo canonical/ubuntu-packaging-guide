@@ -186,6 +186,6 @@ channel <qualityirc_>`_ to get in touch with developers who can help you.
 .. _gtk3: https://bazaar.launchpad.net/+branch/ubuntu/gtk+3.0/files/head:/debian/tests/
 .. _ubiquity: https://bazaar.launchpad.net/+branch/ubiquity/files/head:/debian/tests/
 .. _jenkins: http://autopkgtest.ubuntu.com/
-.. _running_tests_local: file:///usr/share/doc/autopkgtest/RREADME.running-tests.html
+.. _running_tests_local: https://salsa.debian.org/ci-team/autopkgtest/blob/master/doc/README.running-tests.rst
 .. _requiredtests: https://wiki.ubuntu.com/QATeam/RequiredTests
 .. _qualityirc: http://webchat.freenode.net/?channels=ubuntu-quality
