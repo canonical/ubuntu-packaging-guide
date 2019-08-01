@@ -4,6 +4,8 @@ ubuntu-packaging-guide (1.0.2) UNRELEASED; urgency=medium
   * Replace dead Alioth links, thanks Sergey Romanov (LP: #1825498).
   * Replace broken link to autopkgtest/README.running-tests.html,
     thanks Sergey Romanov (LP: #1825744).
+  * Build-depend on texlive-plain-generic instead of texlive-generic-extra
+    which was removed from testing (closes: #933590).
 
  -- Dmitry Shachnev <mitya57@debian.org>  Sun, 13 Jan 2019 14:36:43 +0300
 

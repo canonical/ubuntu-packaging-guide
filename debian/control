@@ -13,14 +13,14 @@ Build-Depends: cm-super-minimal,
                python3-sphinx (>= 1.1.3+dfsg-6~),
                python3-stemmer,
                texlive-fonts-recommended,
-               texlive-generic-extra,
                texlive-lang-cyrillic,
                texlive-lang-french,
                texlive-lang-german,
                texlive-lang-portuguese,
                texlive-lang-spanish,
                texlive-latex-extra,
-               texlive-latex-recommended
+               texlive-latex-recommended,
+               texlive-plain-generic
 #              texlive-lang-cjk,
 #              latex-cjk-japanese
 Homepage: https://launchpad.net/ubuntu-packaging-guide
