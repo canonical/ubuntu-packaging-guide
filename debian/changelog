@@ -6,6 +6,7 @@ ubuntu-packaging-guide (1.0.2) UNRELEASED; urgency=medium
     thanks Sergey Romanov (LP: #1825744).
   * Build-depend on texlive-plain-generic instead of texlive-generic-extra
     which was removed from testing (closes: #933590).
+  * Bump Standards-Version to 4.4.0, no changes needed.
 
  -- Dmitry Shachnev <mitya57@debian.org>  Sun, 13 Jan 2019 14:36:43 +0300
 

@@ -24,7 +24,7 @@ Build-Depends: cm-super-minimal,
 #              texlive-lang-cjk,
 #              latex-cjk-japanese
 Homepage: https://launchpad.net/ubuntu-packaging-guide
-Standards-Version: 4.2.1
+Standards-Version: 4.4.0
 
 Package: ubuntu-packaging-guide
 Depends: ubuntu-packaging-guide-html, ${misc:Depends}
