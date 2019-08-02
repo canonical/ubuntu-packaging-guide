@@ -20,7 +20,7 @@ Build-Depends: cm-super-minimal,
                texlive-lang-spanish,
                texlive-latex-extra,
                texlive-latex-recommended,
-               texlive-plain-generic
+               texlive-plain-generic | texlive-generic-extra
 #              texlive-lang-cjk,
 #              latex-cjk-japanese
 Homepage: https://launchpad.net/ubuntu-packaging-guide
