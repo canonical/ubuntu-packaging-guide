@@ -88,8 +88,7 @@ Integration (CI) system, it will not land in Ubuntu.  This also avoids clutterin
 your workstation with test packages or test configuration if the test does
 something more intrusive than the simple example above.
 
-The `README.running-tests <running_tests_local_>`_
-(`online version <DEP8_>`_) documentation explains all
+The `README.running-tests <running_tests_>`_ documentation explains all
 available testbeds (schroot, LXD, QEMU, etc.) and the most common scenarios how
 to run your tests with ``autopkgtest``, e. g. with locally built binaries, locally
 modified tests, etc.
@@ -180,12 +179,12 @@ can find examples of these tests and easily assign them to yourself.
 If you should run into any problems, you can join the `#ubuntu-quality IRC
 channel <qualityirc_>`_ to get in touch with developers who can help you.
 
-.. _DEP8: https://salsa.debian.org/ci-team/autopkgtest/raw/master/doc/README.package-tests.rst
-.. _libxml2: https://bazaar.launchpad.net/+branch/ubuntu/libxml2/files/head:/debian/tests/
-.. _gvfs: https://bazaar.launchpad.net/+branch/ubuntu/gvfs/files/head:/debian/tests/
-.. _gtk3: https://bazaar.launchpad.net/+branch/ubuntu/gtk+3.0/files/head:/debian/tests/
+.. _DEP8: https://salsa.debian.org/ci-team/autopkgtest/blob/master/doc/README.package-tests.rst
+.. _libxml2: https://git.launchpad.net/ubuntu/+source/libxml2/tree/debian/tests
+.. _gvfs: https://git.launchpad.net/ubuntu/+source/gvfs/tree/debian/tests
+.. _gtk3: https://git.launchpad.net/ubuntu/+source/gtk+3.0/tree/debian/tests
 .. _ubiquity: https://bazaar.launchpad.net/+branch/ubiquity/files/head:/debian/tests/
 .. _jenkins: http://autopkgtest.ubuntu.com/
-.. _running_tests_local: https://salsa.debian.org/ci-team/autopkgtest/blob/master/doc/README.running-tests.rst
+.. _running_tests: https://salsa.debian.org/ci-team/autopkgtest/blob/master/doc/README.running-tests.rst
 .. _requiredtests: https://wiki.ubuntu.com/QATeam/RequiredTests
 .. _qualityirc: http://webchat.freenode.net/?channels=ubuntu-quality

@@ -1,3 +1,9 @@
+ubuntu-packaging-guide (1.0.3) UNRELEASED; urgency=medium
+
+  * Update links on autopkgtest page, thanks Sergey Romanov.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 03 Aug 2019 21:17:53 +0300
+
 ubuntu-packaging-guide (1.0.2) unstable; urgency=medium
 
   * Fix a typo in fixing-a-bug.rst, thanks Maik Wagner (LP: #1811573).
