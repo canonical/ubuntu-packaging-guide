@@ -109,17 +109,17 @@ architectures, output directory, or using proxies). This will build e. g.
 
 Then run the tests of a source package like ``libpng`` in that QEMU image::
 
-        autopkgtest libpng --- qemu adt-trusty-amd64-cloud.img
+        autopkgtest libpng -- qemu adt-trusty-amd64-cloud.img
 
 The Ubuntu CI system runs packages with only selected packages from
 ``-proposed`` available (the package which caused the test to be run); to
 enable that, run::
 
-        autopkgtest libpng -U --apt-pocket=proposed=src:foo --- qemu adt-release-amd64-cloud.img
+        autopkgtest libpng -U --apt-pocket=proposed=src:foo -- qemu adt-release-amd64-cloud.img
 
 or to run with all packages from ``-proposed``::
 
-        autopkgtest libpng -U --apt-pocket=proposed --- qemu adt-release-amd64-cloud.img
+        autopkgtest libpng -U --apt-pocket=proposed -- qemu adt-release-amd64-cloud.img
 
 The ``autopkgtest`` manpage has a lot more valuable information on other
 testing options.
