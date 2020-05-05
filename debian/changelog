@@ -1,6 +1,10 @@
 ubuntu-packaging-guide (1.0.3) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
   * Update links on autopkgtest page, thanks Sergey Romanov.
+
+  [ Debian Janitor ]
+  * Drop custom source compression.
 
  -- Dmitry Shachnev <mitya57@debian.org>  Sat, 03 Aug 2019 21:17:53 +0300
 
