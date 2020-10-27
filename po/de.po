@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-packaging-guide 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-13 14:36+0300\n"
-"PO-Revision-Date: 2020-05-13 08:10+0000\n"
-"Last-Translator: Daniel Holbach <daniel@ubuntu.holba.ch>\n"
+"PO-Revision-Date: 2020-10-26 19:27+0000\n"
+"Last-Translator: Jens Maucher <Unknown>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2020-05-14 05:51+0000\n"
-"X-Generator: Launchpad (build 0385b538081bc4718df6fb844a3afc89729c94ce)\n"
+"X-Launchpad-Export-Date: 2020-10-27 05:54+0000\n"
+"X-Generator: Launchpad (build bc5a16cfdc4ba776ecdf84a052201ef8fb1f3321)\n"
 "Language: de_DE\n"
 
 #: ../ubuntu-packaging-guide/auto-pkg-test.rst:3
@@ -4815,7 +4815,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/setting-up-sbuild.rst:13
 msgid "Installing sbuild"
-msgstr ""
+msgstr "Installiere sbuild"
 
 #: ../ubuntu-packaging-guide/setting-up-sbuild.rst:15
 msgid ""
@@ -4825,7 +4825,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/setting-up-sbuild.rst:21
 msgid "Create ``.sbuildrc`` in your home directory with following content::"
-msgstr ""
+msgstr "Erstelle ``.sbuildrc`` im Home-Verzeichnis mit folgendem Inhalt::"
 
 #: ../ubuntu-packaging-guide/setting-up-sbuild.rst:50
 msgid ""
@@ -4944,7 +4944,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:3
 msgid "ubuntu-dev-tools: Tools for Ubuntu developers"
-msgstr ""
+msgstr "ubuntu-dev-tool: Werkzeuge für  Ubuntu Entwickler"
 
 #: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:5
 msgid ""
@@ -4970,7 +4970,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:20
 msgid "Introducing yourself"
-msgstr ""
+msgstr "Sich vorstellen"
 
 #: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:22
 msgid ""
@@ -5000,7 +5000,7 @@ msgstr ""
 
 #: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:41
 msgid "Save file and restart terminal."
-msgstr ""
+msgstr "Datei speichern und Terminal neu starten."
 
 #: ../ubuntu-packaging-guide/ubuntu-dev-tools.rst:43
 msgid ""
