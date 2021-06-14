@@ -26,7 +26,7 @@ In terms of development, these are the most important ones:
 IRC Channels
 ============
 
-For real-time discussions, please connect to irc.freenode.net and join one or
+For real-time discussions, please connect to irc.libera.chat and join one or
 any of these channels:
 
 * #ubuntu-devel (for general development discussion)

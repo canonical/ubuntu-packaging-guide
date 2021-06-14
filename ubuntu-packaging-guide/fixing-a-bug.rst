@@ -377,7 +377,7 @@ Make sure you mark it as a patch (the Ubuntu Sponsors team will automatically
 be subscribed) and that you are subscribed to the bug report. You will then
 receive a review anywhere between several hours from submitting the patch to
 several weeks. If it takes longer than that, please join ``#ubuntu-motu`` on
-``freenode`` and mention it there. Stick around until you get an answer from
+Libera Chat and mention it there. Stick around until you get an answer from
 someone, and they can guide you as to what to do next.
 
 Once you have received a review, your patch was either uploaded, your patch
@@ -387,7 +387,7 @@ the same steps and submit a follow-up patch on the bug report, otherwise
 submit to Debian as shown above.
 
 Remember: good places to ask your questions are ``ubuntu-motu@lists.ubuntu.com``
-and ``#ubuntu-motu`` on freenode. You will easily find a lot of new friends
+and ``#ubuntu-motu`` on Libera Chat. You will easily find a lot of new friends
 and people with the same passion that you have: making the world a better
 place by making better Open Source software.
 

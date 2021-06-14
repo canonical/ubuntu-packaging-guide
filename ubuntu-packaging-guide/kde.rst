@@ -4,7 +4,7 @@ KDE Packaging
 
 Packaging of KDE programs in Ubuntu is managed by the Kubuntu and
 MOTU teams.  You can contact the Kubuntu team on the `Kubuntu mailing
-list <KubuntuML_>`_ and ``#kubuntu-devel`` Freenode IRC channel.  More information
+list <KubuntuML_>`_ and ``#kubuntu-devel`` Libera Chat channel.  More information
 about Kubuntu development is on the `Kubuntu wiki page <Wiki_>`_.
 
 Our packaging follows the practices of the `Debian Qt/KDE Team <QtKDETeam_>`_

@@ -124,6 +124,6 @@ a knack for "making things work again," not being afraid to read documentation
 and ask questions, being a team player and enjoying some detective work.
 
 Good places to ask your questions are ``ubuntu-motu@lists.ubuntu.com`` and
-``#ubuntu-motu`` on ``freenode.``. You will easily find a lot of new friends
+``#ubuntu-motu`` on Libera Chat. You will easily find a lot of new friends
 and people with the same passion that you have: making the world a better
 place by making better Open Source software.
