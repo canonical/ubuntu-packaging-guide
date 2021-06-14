@@ -187,4 +187,4 @@ channel <qualityirc_>`_ to get in touch with developers who can help you.
 .. _jenkins: http://autopkgtest.ubuntu.com/
 .. _running_tests: https://salsa.debian.org/ci-team/autopkgtest/blob/master/doc/README.running-tests.rst
 .. _requiredtests: https://wiki.ubuntu.com/QATeam/RequiredTests
-.. _qualityirc: http://webchat.freenode.net/?channels=ubuntu-quality
+.. _qualityirc: https://web.libera.chat/#ubuntu-quality
