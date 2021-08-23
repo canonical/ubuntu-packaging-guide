@@ -2,6 +2,13 @@ ubuntu-packaging-guide (1.0.3) UNRELEASED; urgency=medium
 
   [ Dmitry Shachnev ]
   * Update links on autopkgtest page, thanks Sergey Romanov.
+  * Add quotes to fix error from jQuery: unrecognized expression:
+    a[href=#top].
+  * Change Maintainer address to ubuntu-packaging-guide@packages.debian.org.
+  * Replace freenode links with Libera Chat.
+
+  [ Logan Rosen ]
+  * Update deprecated QEMU command syntax.
 
   [ Debian Janitor ]
   * Drop custom source compression.
