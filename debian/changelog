@@ -1,3 +1,10 @@
+ubuntu-packaging-guide (1.0.4) UNRELEASED; urgency=medium
+
+  * Build-depend on tex-gyre, to fix PDF docs build with Sphinx 4
+    (closes: #997442).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 24 Oct 2021 13:51:26 +0300
+
 ubuntu-packaging-guide (1.0.3) unstable; urgency=medium
 
   [ Dmitry Shachnev ]
