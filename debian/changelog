@@ -1,4 +1,4 @@
-ubuntu-packaging-guide (1.0.4) UNRELEASED; urgency=medium
+ubuntu-packaging-guide (1.0.4) unstable; urgency=medium
 
   * Build-depend on tex-gyre, to fix PDF docs build with Sphinx 4
     (closes: #997442).
