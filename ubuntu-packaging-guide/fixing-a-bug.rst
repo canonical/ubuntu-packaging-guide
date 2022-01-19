@@ -39,14 +39,14 @@ but you do know the path to the affected program on your system, you can
 discover the source package that you'll need to work on.
 
 Let's say you've found a bug in Bumprace, a racing game. The Bumprace
-application can be started by running ``/usr/bin/bumprace`` on the command
+application can be started by running ``/usr/games/bumprace`` on the command
 line. To find the binary package containing this application, use this command::
 
-    $ apt-file find /usr/bin/bumprace
+    $ apt-file find /usr/games/bumprace
 
 This would print out::
 
-    bumprace: /usr/bin/bumprace
+    bumprace: /usr/games/bumprace
 
 Note that the part preceding the colon is the binary package name. It's often
 the case that the source package and binary package will have different names.
