@@ -33,7 +33,8 @@ This application uses the autoconf build system so we want to run ``./configure`
 to prepare for compilation.
 
 This will check for the required build dependencies. As ``hello`` is a simple
-example, ``build-essential`` should provide everything we need. For more
+example, ``build-essential`` should provide everything we need (and, in more
+recent Ubuntu releases, e.g., 20.04, the ``texinfo`` package also).  For more
 complex programs, the command will fail if you do not have the needed libraries
 and development files. Install the needed packages and repeat until the command
 runs successfully.::
@@ -59,6 +60,10 @@ the package name, version number, and path to the upstream tarball::
     $ sudo apt-get install dh-make bzr-builddeb
     $ cd ..
     $ bzr dh-make hello 2.10 hello-2.10.tar.gz
+
+Note: unfortunately the ``bzr dh-make`` subcommand is no longer available in
+releases later than Ubuntu 20.04; so, you might need a container or virtual
+machine (see `LXD <LXD_>`_) running Ubuntu 20.04 for this particular step.
 
 When it asks what type of package type ``s`` for single binary. This will import
 the code into a branch and add the ``debian/`` packaging directory.  Have a look
@@ -90,6 +95,11 @@ includes at least::
 
     Build-Depends: debhelper (>= 9)
 
+Or, in more recent Ubuntu releases (e.g., Ubuntu 20.04), append ``texinfo``,
+as noted earlier::
+
+    Build-Depends: debhelper-compat (= 12), texinfo
+
 You will also need to fill in a description of the program in the
 ``Description:`` field.
 
@@ -113,7 +123,8 @@ Makefile target just runs the ``dh`` script which will run everything needed.
 All of these file are explained in more detail in the :doc:`overview of the
 debian directory<./debian-dir-overview>` article.
 
-Finally commit the code to your packaging branch::
+Finally commit the code to your packaging branch (make sure to ``bzr add``
+any files that changed; for example, ``debian/source/format``)::
 
     $ bzr add debian/source/format
     $ bzr commit -m "Initial commit of Debian packaging."
@@ -130,6 +141,14 @@ builds the .deb binary package::
 ``bzr builddeb`` is a command to build the package in its current location.
 The ``-us -uc`` tell it there is no need to GPG sign the package.  The result
 will be placed in ``..``.
+
+Note: if it fails with ``You must run ./configure before running 'make'.``,
+add this to ``debian/rules`` (make sure to ``bzr add/commit`` it) and retry
+``bzr builddeb``::
+
+    override_dh_auto_clean:
+            [ -f Makefile ] || ./configure
+            dh_auto_clean
 
 You can view the contents of the package with::
 
@@ -236,3 +255,4 @@ be uploaded to http://screenshots.debian.net/upload .
 .. _WNPP: http://www.debian.org/devel/wnpp/
 .. _DevRef: http://www.debian.org/doc/manuals/developers-reference/pkgs.html#newpackage
 .. _NewPackages: https://wiki.ubuntu.com/UbuntuDevelopment/NewPackages
+.. _LXD: https://linuxcontainers.org/lxd/
