@@ -95,10 +95,9 @@ includes at least::
 
     Build-Depends: debhelper (>= 9)
 
-Or, in more recent Ubuntu releases (e.g., Ubuntu 20.04), append ``texinfo``,
-as noted earlier::
+And append ``texinfo``, as noted earlier::
 
-    Build-Depends: debhelper-compat (= 12), texinfo
+    Build-Depends: debhelper (>= 9), texinfo
 
 You will also need to fill in a description of the program in the
 ``Description:`` field.
