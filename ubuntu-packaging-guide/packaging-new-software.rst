@@ -33,8 +33,8 @@ This application uses the autoconf build system so we want to run ``./configure`
 to prepare for compilation.
 
 This will check for the required build dependencies. As ``hello`` is a simple
-example, ``build-essential`` should provide everything we need (and, in more
-recent Ubuntu releases, e.g., 20.04, the ``texinfo`` package also).  For more
+example, ``build-essential`` and ``texinfo`` should provide everything we need.
+For more
 complex programs, the command will fail if you do not have the needed libraries
 and development files. Install the needed packages and repeat until the command
 runs successfully.::
@@ -124,7 +124,7 @@ All of these file are explained in more detail in the :doc:`overview of the
 debian directory<./debian-dir-overview>` article.
 
 Finally commit the code to your packaging branch (make sure to ``bzr add``
-any files that changed; for example, ``debian/source/format``)::
+any untracked files that changed; for example, ``debian/source/format``)::
 
     $ bzr add debian/source/format
     $ bzr commit -m "Initial commit of Debian packaging."
