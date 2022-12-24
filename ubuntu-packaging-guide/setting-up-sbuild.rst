@@ -25,7 +25,7 @@ Create ``.sbuildrc`` in your home directory with following content::
     $maintainer_name='Your Name <user@example.org>';
 
     # Default distribution to build.
-    $distribution = "bionic";
+    $distribution = "jammy";
     # Build arch-all by default.
     $build_arch_all = 1;
 
@@ -59,13 +59,13 @@ If you haven’t restarted your session after adding yourself to the
 Generate GPG keypair for sbuild and create chroot for specified release::
 
     $ sbuild-update --keygen
-    $ mk-sbuild bionic
+    $ mk-sbuild jammy
 
 This will create chroot for your current architecture. You might want to
 specify another architecture. For this, you can use ``--arch`` option.
 Example::
 
-    $ mk-sbuild xenial --arch=i386
+    $ mk-sbuild jammy --arch=i386
 
 Using schroot
 =============
@@ -77,7 +77,7 @@ You can use ``schroot -c <release>-<architecture> [-u <USER>]`` to enter
 newly created chroot, but that’s not exactly the reason why you are
 using sbuild::
 
-    $ schroot -c bionic-amd64 -u root
+    $ schroot -c jammy-amd64 -u root
 
 Using schroot for package building
 ----------------------------------
@@ -93,17 +93,17 @@ chroot, after applying some changes::
     dpkg-source --commit
     dch -i                                      #
     update-maintainer                           # changes
-    sbuild -d bionic-amd64
+    sbuild -d jammy-amd64
 
 To build package from source package (``.dsc``), use location of the
 source package as second parameter::
 
-    sbuild -d bionic-amd64 ~/packages/goodbye_*.dsc
+    sbuild -d jammy-amd64 ~/packages/goodbye_*.dsc
 
 To make use of all power of your CPU, you can specify number of threads
 used for building using standard ``-j<threads>``::
 
-    sbuild -d bionic-amd64 -j8
+    sbuild -d jammy-amd64 -j8
 
 Maintaining schroots
 ====================
@@ -116,14 +116,14 @@ To get list of all your sbuild chroots, use ``schroot -l``. The
 recommended, but if you have specific reason, you can open it using
 something like::
 
-    $ schroot -c source:bionic-amd64
+    $ schroot -c source:jammy-amd64
 
 Updating schroots
 -----------------
 
 To upgrade the whole schroot::
 
-    $ sbuild-update -ubc bionic-amd64
+    $ sudo sbuild-update -udcar jammy-amd64
 
 Expiring active schroots
 ------------------------
