@@ -16,24 +16,44 @@ directory in rst files. The html template and css can be found under
 ``ubuntu-packaging-guide/index.rst`` file so that it appears in the table of
 contents.
 
-Development is hosted on Launchpad:
-
-:Bugs: https://bugs.launchpad.net/ubuntu-packaging-guide/
-:Bzr Branch: lp:ubuntu-packaging-guide
-:Translations: https://translations.launchpad.net/ubuntu-packaging-guide
-
 This project is licensed under the CC-BY-SA-3.0, the full text of which can be
 found in ``COPYING``. Further information can be found in ``debian/copyright``.
+
+Contributing
+------------
+
+We welcome everyone who wants to improve the Ubuntu documentation! 
+Whether you've found a typo, have a suggestion for improving existing 
+content, or want to add new content, we'd love to hear from you.
+ 
+You can find this ``git`` repository on `GitHub <https://github.com/canonical/ubuntu-packaging-guide>`_ 
+and `Launchpad <https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/+git/main>`_.
+
+To contribute, simply choose the platform of your liking and submit a pull request with your changes, open a bug ticket to describe your issue or just ask a question:
+ 
+* `Issues on GitHub <https://github.com/canonical/ubuntu-packaging-guide/issues>`_ 
+* `Discussions on GitHub <https://github.com/canonical/ubuntu-packaging-guide/discussions>`_
+* `Pull Requests on GitHub <https://github.com/canonical/ubuntu-packaging-guide/pulls>`_ 
+* `Bugs on Launchpad <https://bugs.launchpad.net/ubuntu-packaging-guide>`_
+
+
+We'll review your contribution as soon as possible, but please note that 
+our Ubuntu maintainers often have full inboxes, so it may take some time 
+before we can get to your request.
+
+**Note:** We are currently in a transition phase from ``bazaar`` to ``git``. 
+Please ignore instructions to use ``bazaar`` to contribute, or even better – 
+bring such instructions to our attention, so we can fix them.
 
 
 Sphinx & reStructuredText
 -------------------------
 
-The guide is built using `Sphinx <http://sphinx-doc.org/>`_. Articles should
+The guide is built using `Sphinx <https://sphinx-doc.org/>`_. Articles should
 be written in reStructuredText. The following links might be helpful:
 
-* http://docutils.sourceforge.net/docs/user/rst/quickstart.html
-* http://docutils.sourceforge.net/docs/user/rst/quickref.html
+* https://docutils.sourceforge.io/docs/user/rst/quickstart.html
+* https://docutils.sourceforge.io/docs/user/rst/quickref.html
 
 
 Building
@@ -54,9 +74,6 @@ Translating
 -----------
 
 We use Sphinx l10n module and Gettext for translating Ubuntu Packaging Guide.
-Translating takes place on
-`Launchpad <http://translations.launchpad.net/ubuntu-packaging-guide>`_, and
-translated ``.po`` files are automatically imported to the bzr branch.
 
 Some notes about translating the guide:
 
