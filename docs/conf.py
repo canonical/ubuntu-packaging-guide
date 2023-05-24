@@ -44,10 +44,7 @@ extensions = [
 
 templates_path = ['_templates']
 
-html_extra_path = [
-    'googleaf254801a5285c31.html',
-    'sitemap-index.xml'
-]
+html_extra_path = []
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -75,7 +72,9 @@ if os.path.exists(changelog):
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 
-exclude_patterns = []
+exclude_patterns = [
+    ".sphinx/venv/*"
+]
 
 # Sphinx-copybutton config options:
 # 1) prompt to be stripped from copied code.
@@ -91,7 +90,8 @@ copybutton_only_copy_prompt_lines = False
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
-html_logo = '_static/circle_of_friends.png'
+html_logo = '_static/ubuntu_logo.png'
+html_title = "Ubuntu Packaging Guide"
 html_theme_options = {
     'light_css_variables': {
         'color-sidebar-background-border': 'none',
