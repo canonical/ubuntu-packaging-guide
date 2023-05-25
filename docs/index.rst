@@ -36,34 +36,30 @@ The guide is split up into two sections:
 .. grid:: 1 1 2 2
    :gutter: 3
 
-   .. grid-item-card:: **Articles**
-       :link: articles
+   .. grid-item-card:: **Tutorial**
+       :link: tutorial
        :link-type: doc
+      
+       Get started - a hands-on introduction to the Ubuntu Packaging Guide for
+       new users
 
-       A list of articles based on tasks, things you want to get done.
-
-   .. grid-item-card:: **Knowledge base**
-       :link: knowledge-base
+   .. grid-item-card:: **How-to guides**
+       :link: how-to
        :link-type: doc
-
-       A set of knowledge-base articles that dig deeper into specific bits of
-       our tools and workflows.
-
-.. grid:: 1 1 2 2
-   :gutter: 3
-   :reverse:
-
-   .. grid-item-card:: **Reference**
-       :link: articles
-       :link-type: doc
-
-       This is where our Diataxis restructuring will happen
-
+      
+       Step-by-step guides covering key operations and common tasks
+    
    .. grid-item-card:: **Explanation**
-       :link: knowledge-base
+       :link: explanation
        :link-type: doc
-
-       Consider this a placeholder
+          
+       Discussion and clarification of key topics
+    
+   .. grid-item-card:: **Reference**
+       :link: reference
+       :link-type: doc
+      
+       Technical information - specifications, APIs, architecture
 
 Having trouble? We would like to help!
 ======================================
@@ -92,8 +88,11 @@ community projects, contributions, suggestions, fixes and constructive feedback.
    :hidden:
    :maxdepth: 2
 
-   articles
-   knowledge-base
+   introduction-to-ubuntu-development.rst
+   tutorial
+   how-to
+   explanation
+   reference
 
 Further reading
 ===============
