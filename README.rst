@@ -19,7 +19,7 @@ directory, and your article should appear in both the Diataxis section page and
 the navigation menu on the left-hand-side of the screen.
 
 This project is licensed under the CC-BY-SA-3.0, the full text of which can be
-found in ``COPYING``. Further information can be found in ``debian/copyright``.
+found in ``COPYING``.
 
 How to build this documentation
 -------------------------------
