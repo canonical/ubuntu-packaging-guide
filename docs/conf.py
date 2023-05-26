@@ -39,7 +39,6 @@ extensions = [
     'sphinx_design',
 ]
 
-
 # Add any paths that contain templates here, relative to this directory.
 
 templates_path = ['_templates']
@@ -52,15 +51,6 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
-changelog = "debian/changelog"
-if os.path.exists(changelog):
-    changelogfile = codecs.open(changelog, mode='r', encoding='utf-8')
-    head = changelogfile.readline()
-    match = re.compile(".*\((.*)\).*").match(head)
-    if match:
-        version = match.group(1)
-    changelogfile.close()
-    
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
