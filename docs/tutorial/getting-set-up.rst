@@ -175,8 +175,8 @@ find this out by going to https://launchpad.net/~ and looking for the
 part after the `~` in the URL.
 
 Launchpad's registration process will ask you to choose a display name. It is
-encouraged for you to use your real name here so that your Ubuntu developer
-colleagues will be able to get to know you better.
+encouraged for you to use your name or known identity here so that your Ubuntu
+developer colleagues will be able to get to know you better.
 
 When you register a new account, Launchpad will send you an email with a link
 you need to open in your browser in order to verify your email address. If
