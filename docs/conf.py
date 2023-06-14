@@ -27,14 +27,13 @@ copyright = f'Canonical Group Ltd, {datetime.date.today().year}'
 # -- General configuration ---------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-needs_sphinx = '5.1.1'
+needs_sphinx = '4.3.2'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 
 extensions = [
-    'm2r2',
     'sphinx_copybutton',
     'sphinx_design',
 ]

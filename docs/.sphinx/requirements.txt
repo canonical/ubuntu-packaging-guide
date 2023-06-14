@@ -1,6 +1,5 @@
 furo
-m2r2
-sphinx==5.1.1
+sphinx<6.0dev
 sphinx_autobuild
 sphinx_copybutton
 sphinx_design
