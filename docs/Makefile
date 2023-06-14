@@ -22,14 +22,14 @@ install:
 	@echo "\n" \
 		"--------------------------------------------------------------- \n" \
 		"* watch, build and serve the documentation: make run \n" \
-                "* only build: make html \n" \
-                "* only epub: make epub \n" \
-                "* only serve: make serve \n" \
-                "* clean built doc files: make clean-doc \n" \
-                "* clean full environment: make clean \n" \
-            		"* check spelling: make spelling \n" \
-                "* check links: make linkcheck \n" \
-                "* check inclusive language: make woke \n" \
+		"* only build: make html \n" \
+		"* only epub: make epub \n" \
+		"* only serve: make serve \n" \
+		"* clean built doc files: make clean-doc \n" \
+		"* clean full environment: make clean \n" \
+		"* check spelling: make spelling \n" \
+		"* check links: make linkcheck \n" \
+		"* check inclusive language: make woke \n" \
 		"--------------------------------------------------------------- \n"
 run:
 	. $(VENV); sphinx-autobuild -c . -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"
