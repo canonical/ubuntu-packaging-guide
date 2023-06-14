@@ -3,3 +3,4 @@ po/*
 !po/*.pot
 !po/*.po
 translators.html
+docs/.sphinx/venv
