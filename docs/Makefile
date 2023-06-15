@@ -48,6 +48,10 @@ clean: clean-doc
 clean-doc:
 	git clean -fx "$(BUILDDIR)"
 
+distclean:
+	rm -rf "$(BUILDDIR)"
+	rm -rf "$(VENVDIR)"
+
 spelling: html
 	$(IN_VENV); python3 -m pyspelling -c .sphinx/spellingcheck.yaml
 
