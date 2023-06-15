@@ -12,6 +12,19 @@ IN_VENV       ?= . $(VENVDIR)/bin/activate
 
 # Put it first so that "make" without argument is like "make help".
 help:
+	@echo "The following make targets are available:"
+	@echo "* install   -- set up a virtual-env to work on documentation"
+	@echo "* run       -- watch, build and serve the documentation"
+	@echo "* html      -- build HTML output under $(BUILDDIR)/html"
+	@echo "* serve     -- serve HTML output from $(BUILDDIR)/html"
+	@echo "* epub      -- build epub output under $(BUILDDIR)/epub"
+	@echo "* pdf       -- build pdf output under $(BUILDDIR)/pdf"
+	@echo "* clean-doc -- clean built doc files"
+	@echo "* clean     -- clean full environment"
+	@echo "* spelling  -- check spelling"
+	@echo "* linkcheck -- check external links"
+	@echo "* woke      -- check inclusive language"
+	@echo "-------------------------------------------"
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 install:
@@ -19,17 +32,6 @@ install:
 	python3 -m venv $(VENVDIR)
 	$(IN_VENV); pip install --upgrade -r .sphinx/requirements.txt
 
-	@echo "---------------------------------------------------------------"
-	@echo "* watch, build and serve the documentation: make run"
-	@echo "* only build: make html"
-	@echo "* only epub: make epub"
-	@echo "* only serve: make serve"
-	@echo "* clean built doc files: make clean-doc"
-	@echo "* clean full environment: make clean"
-	@echo "* check spelling: make spelling"
-	@echo "* check links: make linkcheck"
-	@echo "* check inclusive language: make woke"
-	@echo "---------------------------------------------------------------"
 run:
 	$(IN_VENV); sphinx-autobuild -c . -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"
 
