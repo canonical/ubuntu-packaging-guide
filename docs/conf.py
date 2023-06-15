@@ -127,3 +127,27 @@ html_css_files = [
 html_js_files = [
     'js/github_issue_links.js',
 ]
+
+# -- Options for EPUB output -------------------------------------------------
+
+epub_basename = 'ubuntu-packaging-guide'
+epub_show_urls = 'no'
+
+# -- Options for PDF output --------------------------------------------------
+
+latex_engine = 'xelatex'
+latex_show_pagerefs = True
+latex_show_urls = 'footnote'
+latex_elements = {
+    'papersize': 'a4paper',
+}
+latex_documents = [
+    (
+        root_doc,
+        'ubuntu-packaging-guide.tex',
+        html_title,
+        author,
+        'manual',
+        True,
+    ),
+]
