@@ -25,7 +25,6 @@ help:
 	@echo "* linkcheck -- check external links"
 	@echo "* woke      -- check inclusive language"
 	@echo "-------------------------------------------"
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 install:
 	@echo "... setting up virtualenv"
