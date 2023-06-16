@@ -32,16 +32,20 @@ install:
 	$(IN_VENV); pip install --upgrade -r .sphinx/requirements.txt
 
 run:
-	$(IN_VENV); sphinx-autobuild -c . -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"
+	$(IN_VENV); sphinx-autobuild -c . -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"/html
 
 html:
-	$(IN_VENV); $(SPHINXBUILD) -c . -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"
+	$(IN_VENV); $(SPHINXBUILD) -c . -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"/html
 
 epub:
-	$(IN_VENV); $(SPHINXBUILD) -c . -b epub "$(SOURCEDIR)" "$(BUILDDIR)"
+	$(IN_VENV); $(SPHINXBUILD) -c . -b epub "$(SOURCEDIR)" "$(BUILDDIR)"/epub
+
+pdf:
+	$(IN_VENV); $(SPHINXBUILD) -b latex "$(SOURCEDIR)" "$(BUILDDIR)"/pdf
+	$(IN_VENV); $(MAKE) -C "$(BUILDDIR)"/pdf all-pdf
 
 serve:
-	python3 -m http.server 8000 -d "$(BUILDDIR)"
+	python3 -m http.server 8000 -d "$(BUILDDIR)"/html
 
 clean: clean-doc
 	rm -rf "$(VENVDIR)"
@@ -56,8 +60,9 @@ distclean:
 spelling: html
 	$(IN_VENV); python3 -m pyspelling -c .sphinx/spellingcheck.yaml
 
-linkcheck:
-	$(IN_VENV); $(SPHINXBUILD) -c . -b linkcheck  "$(SOURCEDIR)" "$(BUILDDIR)"
+linkcheck: html epub
+	$(IN_VENV); $(SPHINXBUILD) -c . -b linkcheck  "$(SOURCEDIR)" "$(BUILDDIR)"/html
+	$(IN_VENV); $(SPHINXBUILD) -c . -b linkcheck  "$(SOURCEDIR)" "$(BUILDDIR)"/epub
 
 woke:
 	type woke >/dev/null 2>&1 || { snap install woke; exit 1; }
