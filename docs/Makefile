@@ -32,10 +32,10 @@ install:
 	$(IN_VENV); pip install --upgrade -r .sphinx/requirements.txt
 
 run:
-	$(IN_VENV); sphinx-autobuild -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"/html
+	$(IN_VENV); sphinx-autobuild -b html "$(SOURCEDIR)" "$(BUILDDIR)"/html
 
 html:
-	$(IN_VENV); $(SPHINXBUILD) -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"/html
+	$(IN_VENV); $(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)"/html
 
 epub:
 	$(IN_VENV); $(SPHINXBUILD) -b epub "$(SOURCEDIR)" "$(BUILDDIR)"/epub
