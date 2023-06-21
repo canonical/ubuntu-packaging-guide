@@ -89,10 +89,11 @@ community projects, contributions, suggestions, fixes and constructive feedback.
    :maxdepth: 2
 
    introduction-to-ubuntu-development.rst
-   tutorial
-   how-to
-   explanation
-   reference
+   tutorial.rst
+   how-to.rst
+   explanation.rst
+   reference.rst
+   contribute.rst
 
 Further reading
 ===============
