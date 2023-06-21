@@ -3,6 +3,18 @@
 Ubuntu Packaging Guide
 ######################
 
+.. important::
+
+   The Packaging and Development guide has not been updated for some time, and
+   is currently undergoing a major overhaul to bring it up to date. It does not
+   currently reflect the state of Packaging in Ubuntu and should not be used by
+   beginners to Ubuntu packaging.
+
+   As part of this overhaul we have moved the source code to a GitHub
+   repository to make contributing easier. If you are an experienced packager
+   and would like to contribute, we would love for you to be involved! See
+   :ref:`our contribution page <contribute>` for details of how to join in.
+
 Welcome to the Ubuntu Packaging and Development Guide!
 
 This is the official place for learning all about Ubuntu Development and
@@ -89,10 +101,11 @@ community projects, contributions, suggestions, fixes and constructive feedback.
    :maxdepth: 2
 
    introduction-to-ubuntu-development.rst
-   tutorial
-   how-to
-   explanation
-   reference
+   tutorial.rst
+   how-to.rst
+   explanation.rst
+   reference.rst
+   contribute.rst
 
 Further reading
 ===============
