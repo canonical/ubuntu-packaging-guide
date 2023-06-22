@@ -8,6 +8,7 @@ SOURCEDIR     ?= .
 BUILDDIR      ?= _build
 VENVDIR       ?= .sphinx/venv
 IN_VENV       ?= . $(VENVDIR)/bin/activate
+PYTHON        ?= python3
 
 
 # Put it first so that "make" without argument is like "make help".
@@ -28,7 +29,7 @@ help:
 
 install:
 	@echo "... setting up virtualenv"
-	python3 -m venv $(VENVDIR)
+	$(PYTHON) -m venv $(VENVDIR)
 	$(IN_VENV); pip install --upgrade -r .sphinx/requirements.txt
 
 run:
@@ -45,7 +46,7 @@ pdf:
 	$(IN_VENV); $(MAKE) -C "$(BUILDDIR)"/pdf all-pdf
 
 serve:
-	python3 -m http.server 8000 -d "$(BUILDDIR)"/html
+	$(PYTHON) -m http.server 8000 -d "$(BUILDDIR)"/html
 
 clean: clean-doc
 	rm -rf "$(VENVDIR)"
@@ -58,7 +59,7 @@ distclean:
 	rm -rf "$(VENVDIR)"
 
 spelling: html
-	$(IN_VENV); python3 -m pyspelling -c .sphinx/spellingcheck.yaml
+	$(IN_VENV); $(PYTHON) -m pyspelling -c .sphinx/spellingcheck.yaml
 
 linkcheck: html epub
 	$(IN_VENV); $(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)"/html
