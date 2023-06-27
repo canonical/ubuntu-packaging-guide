@@ -3,7 +3,7 @@
 Contribute to the Ubuntu Packaging Guide
 ****************************************
 
-The Ubuntu Packaging Guide is an open source project that warmly welcomes
+The `Ubuntu Packaging Guide <https://github.com/canonical/ubuntu-packaging-guide>`_ is an open source project that warmly welcomes
 community contributions and suggestions.
 
 This document describes how to contribute changes to the Ubuntu Packaging
