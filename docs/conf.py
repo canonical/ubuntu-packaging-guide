@@ -6,65 +6,26 @@
 
 # -- Path setup --------------------------------------------------------------
 
-import datetime
 import os
 import sys
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown:
-
-#sys.path.insert(0, os.path.abspath('../../'))
-#sys.path.insert(0, os.path.abspath('../'))
-#sys.path.insert(0, os.path.abspath('./'))
-#sys.path.insert(0, os.path.abspath('.'))
+import datetime
 
 # -- Project information -----------------------------------------------------
 
 project = 'Ubuntu Packaging Guide'
-copyright = f'Canonical Group Ltd, {datetime.date.today().year}'
+author = 'Canonical Group Ltd.'
+version = '2.0'
+copyright = f'{author}, {datetime.date.today().year}'
 
 # -- General configuration ---------------------------------------------------
 
-# If your documentation needs a minimal Sphinx version, state it here.
-needs_sphinx = '5.1.1'
-
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
-
+needs_sphinx = '4.3.2'
 extensions = [
-    'm2r2',
     'sphinx_copybutton',
     'sphinx_design',
 ]
-
-# Add any paths that contain templates here, relative to this directory.
-
-templates_path = ['_templates']
-
-html_extra_path = []
-
-# The suffix of source filenames.
-source_suffix = '.rst'
-
-# The master toctree document.
-master_doc = 'index'
-
-# The version info for the project you're documenting, acts as replacement for
-# |version| and |release|, also used in various other places throughout the
-# built documents.
-
-# version = version.version_string()
-# release = version
-
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-
-exclude_patterns = [
-    ".sphinx/venv/*"
-]
+root_doc = 'index'
+exclude_patterns = ['.sphinx/venv/*']
 
 # Sphinx-copybutton config options:
 # 1) prompt to be stripped from copied code.
@@ -75,13 +36,9 @@ copybutton_only_copy_prompt_lines = False
 
 # -- Options for HTML output -------------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
 html_theme = 'furo'
 html_logo = '_static/ubuntu_logo.png'
-html_title = "Ubuntu Packaging Guide"
+html_title = 'Ubuntu Packaging Guide'
 html_theme_options = {
     'light_css_variables': {
         'color-sidebar-background-border': 'none',
@@ -127,4 +84,28 @@ html_css_files = [
 ]
 html_js_files = [
     'js/github_issue_links.js',
+]
+
+# -- Options for EPUB output -------------------------------------------------
+
+epub_basename = 'ubuntu-packaging-guide'
+epub_show_urls = 'no'
+
+# -- Options for PDF output --------------------------------------------------
+
+latex_engine = 'xelatex'
+latex_show_pagerefs = True
+latex_show_urls = 'footnote'
+latex_elements = {
+    'papersize': 'a4paper',
+}
+latex_documents = [
+    (
+        root_doc,
+        'ubuntu-packaging-guide.tex',
+        html_title,
+        author,
+        'manual',
+        True,
+    ),
 ]

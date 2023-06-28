@@ -1,2 +1,5 @@
+default:
+	$(MAKE) -C docs
+
 %:
-	make -C docs $@
+	$(MAKE) -C docs $@
