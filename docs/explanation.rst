@@ -18,7 +18,7 @@ knowledge and become better at packaging and development.
    explanation/package-model.rst
    explanation/sponsoring.rst
    explanation/proposed-migrations.rst
-   explanation/stable-release-upgrades.rst
+   explanation/stable-release-updates.rst
    explanation/debian-syncs.rst
    explanation/debian-merges.rst
    explanation/transitions.rst
