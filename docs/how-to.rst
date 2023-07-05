@@ -17,3 +17,13 @@ How do I...?
 
 .. toctree::
    :maxdepth: 1
+
+   how-to/get-package-source.rst
+   how-to/download-new-upstream-version.rst
+   how-to/build-packages.rst
+   how-to/install-built-packages.rst
+   how-to/run-tests.rst
+   how-to/upload-packages-to-ppa.rst
+   how-to/write-patchfiles.rst
+   how-to/propose-changes.rst
+   how-to/use-schroots.rst

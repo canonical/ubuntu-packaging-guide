@@ -11,3 +11,15 @@ knowledge and become better at packaging and development.
 
 .. toctree::
    :maxdepth: 1
+
+   explanation/ubuntu-release-cadence.rst
+   explanation/launchpad-and-archive.rst
+   explanation/upstream-and-downstream.rst
+   explanation/package-model.rst
+   explanation/sponsoring.rst
+   explanation/proposed-migrations.rst
+   explanation/stable-release-upgrades.rst
+   explanation/debian-syncs.rst
+   explanation/debian-merges.rst
+   explanation/transitions.rst
+   explanation/backports.rst
