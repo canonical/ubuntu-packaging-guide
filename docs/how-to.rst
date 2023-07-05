@@ -17,11 +17,3 @@ How do I...?
 
 .. toctree::
    :maxdepth: 1
-
-   Fix a bug in Ubuntu <how-to/fixing-a-bug.rst>
-   Fix a security bug in Ubuntu <how-to/security-and-stable-release-updates.rst>
-   Package new software <how-to/packaging-new-software.rst>
-   Fix failing to build packages <how-to/fixing-ftbfs.rst>
-   Set up ubuntu-dev-tools <how-to/ubuntu-dev-tools.rst>
-   Use chroots <how-to/chroots.rst>
-   Set up sbuild <how-to/setting-up-sbuild.rst>

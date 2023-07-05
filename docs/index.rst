@@ -100,7 +100,6 @@ community projects, contributions, suggestions, fixes and constructive feedback.
    :hidden:
    :maxdepth: 2
 
-   introduction-to-ubuntu-development.rst
    tutorial.rst
    how-to.rst
    explanation.rst

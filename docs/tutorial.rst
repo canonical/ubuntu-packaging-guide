@@ -19,5 +19,3 @@ helping to set up your computer so that you can start working with packages.
 
 .. toctree::
    :maxdepth: 1
-
-   tutorial/getting-set-up.rst

@@ -11,9 +11,3 @@ knowledge and become better at packaging and development.
 
 .. toctree::
    :maxdepth: 1
-
-   explanation/patches-to-packages
-   explanation/libraries
-   explanation/backports
-   explanation/auto-pkg-test
-   explanation/kde
