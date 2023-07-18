@@ -127,3 +127,22 @@ Some notes about translating the guide:
 
 To test your translation, use ``make BUILDER-LANGUAGE`` command (for example,
 ``make html-it`` will build HTML docs in Italian language).
+
+Pre-commit checks
+-----------------
+
+Optionally, you can run pre-commit checks on your changes. To do so:
+
+1. Install the ``pre-commit`` package from the Ubuntu repositories::
+
+    sudo apt install pre-commit
+
+2. Install the ``woke`` snap by running::
+
+    sudo snap install woke
+
+   Alternatively, you can install it by following instructions in `<https://docs.getwoke.tech/installation/>`_.
+3. Navigate to the top-level directory of this repository and run ``pre-commit install --install-hooks``.
+4. The following checks are run automatically before every commit:
+  - Inclusive naming checks (``woke``).
+5. To ignore any violation reported by ``woke``, see `<https://docs.getwoke.tech/ignore/>`_.
