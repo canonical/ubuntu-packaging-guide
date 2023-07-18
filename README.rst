@@ -145,4 +145,16 @@ Optionally, you can run pre-commit checks on your changes. To do so:
 3. Navigate to the top-level directory of this repository and run ``pre-commit install --install-hooks``.
 4. The following checks are run automatically before every commit:
   - Inclusive naming checks (``woke``).
-5. To ignore any violation reported by ``woke``, see `<https://docs.getwoke.tech/ignore/>`_.
+5. You can ignore a violation reported by ``woke``.
+  - To ignore an entire file, specify the file name in the ``.wokeignore`` file at the root of this repository.
+    You can create it if it doesn't exist already::
+
+      # This will ignore the report.xml file in the build directory
+      build/report.xml
+
+  - To ignore a single line, use ``.. wokeignore:rule=<violation-name>`` before the line::
+
+      .. wokeignore:rule=foo
+      This line containing foo will be ignored.
+
+For more information on ignoring ``woke`` violations, see `<https://docs.getwoke.tech/ignore/>`_.
