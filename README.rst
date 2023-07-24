@@ -131,23 +131,19 @@ To test your translation, use ``make BUILDER-LANGUAGE`` command (for example,
 Pre-commit checks
 -----------------
 
-Optionally, you can run pre-commit checks on your changes. To do so:
+Optionally, you can run pre-commit checks on your changes. To do so, run::
 
-1. Install the ``pre-commit`` package from the Ubuntu repositories::
+  make install-pre-commit-hooks
 
-    sudo apt install pre-commit
-
-2. Install the ``woke`` snap by running::
-
-    sudo snap install woke
-
-   Alternatively, you can install it by following instructions in `<https://docs.getwoke.tech/installation/>`_.
-3. Navigate to the top-level directory of this repository and run ``pre-commit install --install-hooks``.
-4. The following checks are run automatically before every commit:
+The following checks are run automatically on the staged files before every commit:
   - Inclusive naming checks (``woke``).
-5. You can ignore a violation reported by ``woke``.
-  - To ignore an entire file, specify the file name in the ``.wokeignore`` file at the root of this repository.
-    You can create it if it doesn't exist already::
+
+To run all pre-commit checks on all files, run::
+
+  make pre-commit
+
+You can ignore a violation reported by ``woke``.
+  - To ignore an entire file, specify the file name in the ``.wokeignore`` file at the root of this repository::
 
       # This will ignore the report.xml file in the build directory
       build/report.xml
