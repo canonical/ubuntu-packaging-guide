@@ -65,9 +65,20 @@ linkcheck: html epub
 	$(IN_VENV); $(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)"/html
 	$(IN_VENV); $(SPHINXBUILD) -b linkcheck "$(SOURCEDIR)" "$(BUILDDIR)"/epub
 
-woke:
-	type woke >/dev/null 2>&1 || { snap install woke; exit 1; }
-	woke $(find -name "*.rst") -c https://github.com/canonical-web-and-design/Inclusive-naming/raw/main/config.yml
+install-pre-commit:
+	type pre-commit >/dev/null 2>&1 || sudo apt install -y pre-commit
+
+install-woke:
+	type woke >/dev/null 2>&1 || sudo snap install woke
+
+install-pre-commit-hooks: install-pre-commit install-woke
+	pre-commit install --install-hooks
+
+pre-commit: install-pre-commit install-woke
+	pre-commit run -a
+
+woke: install-pre-commit install-woke
+	pre-commit run woke -a
 
 .PHONY: help Makefile
 

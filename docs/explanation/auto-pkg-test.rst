@@ -181,12 +181,14 @@ can find examples of these tests and easily assign them to yourself.
 If you should run into any problems, you can join the `#ubuntu-quality IRC
 channel <qualityirc_>`_ to get in touch with developers who can help you.
 
+.. wokeignore:rule=master
 .. _DEP8: https://salsa.debian.org/ci-team/autopkgtest/blob/master/doc/README.package-tests.rst
 .. _libxml2: https://git.launchpad.net/ubuntu/+source/libxml2/tree/debian/tests
 .. _gvfs: https://git.launchpad.net/ubuntu/+source/gvfs/tree/debian/tests
 .. _gtk3: https://git.launchpad.net/ubuntu/+source/gtk+3.0/tree/debian/tests
 .. _ubiquity: https://bazaar.launchpad.net/+branch/ubiquity/files/head:/debian/tests/
 .. _jenkins: http://autopkgtest.ubuntu.com/
+.. wokeignore:rule=master
 .. _running_tests: https://salsa.debian.org/ci-team/autopkgtest/blob/master/doc/README.running-tests.rst
 .. _requiredtests: https://wiki.ubuntu.com/QATeam/RequiredTests
 .. _qualityirc: https://web.libera.chat/#ubuntu-quality

@@ -127,3 +127,30 @@ Some notes about translating the guide:
 
 To test your translation, use ``make BUILDER-LANGUAGE`` command (for example,
 ``make html-it`` will build HTML docs in Italian language).
+
+Pre-commit checks
+-----------------
+
+Optionally, you can run pre-commit checks on your changes. To do so, run::
+
+  make install-pre-commit-hooks
+
+The following checks are run automatically on the staged files before every commit:
+  - Inclusive naming checks (``woke``).
+
+To run all pre-commit checks on all files, run::
+
+  make pre-commit
+
+You can ignore a violation reported by ``woke``.
+  - To ignore an entire file, specify the file name in the ``.wokeignore`` file at the root of this repository::
+
+      # This will ignore the report.xml file in the build directory
+      build/report.xml
+
+  - To ignore a single line, use ``.. wokeignore:rule=<violation-name>`` before the line::
+
+      .. wokeignore:rule=foo
+      This line containing foo will be ignored.
+
+For more information on ignoring ``woke`` violations, see `<https://docs.getwoke.tech/ignore/>`_.
