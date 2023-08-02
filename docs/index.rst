@@ -81,6 +81,16 @@ community projects, contributions, suggestions, fixes and constructive feedback.
 
 If you run into problems, don't panic! The following communication channels are there to help you through:
 
+Launchpad:
+~~~~~~~~~~
+
+`Launchpad`_ is the general development platform where Ubuntu itself and most of 
+Ubuntu related software projects live. It is the place where bugs are tracked,
+source code is stored, tracked, get built, tested and much more.
+
+We will go into more detail in the following articles. For now you can think of
+Launchpad as a platforms like GitHub, GitLab or BitBucket.
+
 Mailing lists:
 ~~~~~~~~~~~~~~
 In a project where thousands of lines of code are changed, lots of decisions
@@ -132,6 +142,7 @@ resources you may find useful:
 
 .. Links:
 .. _Code of Conduct: https://ubuntu.com/community/code-of-conduct
+.. _Launchpad: https://launchpad.net
 
 .. _BinPkgs: https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide
 .. _HowToPackage: https://wiki.debian.org/HowToPackageForDebian
