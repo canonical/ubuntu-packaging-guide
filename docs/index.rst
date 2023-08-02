@@ -145,7 +145,9 @@ these mailing lists useful in the beginning:
 -----
 
 We are always looking to improve this guide. If you find any problems or have
-some suggestions, use the **Give feedback** button at the top of any page to open a GitHub issue or directly contribute by submitting a pull request to the `source`_ repository.
+some suggestions, use the **Give feedback** button at the top of any page to 
+open a GitHub issue or directly contribute by submitting a pull request to the 
+`source`_ repository.
 
 .. toctree::
    :hidden:
