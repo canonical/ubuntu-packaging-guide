@@ -122,9 +122,9 @@ Feel free to introduce yourself `here <https://discourse.ubuntu.com/c/intro/101>
 
 Mailing lists:
 ~~~~~~~~~~~~~~
-In a project where thousands of lines of code are changed, lots of decisions
-are made and hundreds of people interact every day, it is important to 
-communicate effectively.
+For long-lived discussions or announcements you can subscribe/write to any of 
+the `Ubuntu mailing lists <https://lists.ubuntu.com/>`_. You may find especially 
+these mailing lists useful in the beginning:
 
 * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce 
   (announce-only, the most important development announcements go here)
@@ -132,6 +132,8 @@ communicate effectively.
   (general Ubuntu development discussion)
 * https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
   (MOTU Team discussion, get help with packaging)
+
+-----
 
 We are always looking to improve this guide. If you find any problems or have
 some suggestions, use the **Give feedback** button at the top of any page to open a GitHub issue or directly contribute by submitting a pull request to the `source`_ repository.
