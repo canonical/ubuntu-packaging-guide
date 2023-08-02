@@ -45,7 +45,6 @@ make Ubuntu better together with us.
 In this documentation
 ---------------------
 
-
 .. grid:: 1 1 2 2
    :gutter: 3
 
