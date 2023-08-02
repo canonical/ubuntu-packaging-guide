@@ -91,6 +91,26 @@ source code is stored, tracked, get built, tested and much more.
 We will go into more detail in the following articles. For now you can think of
 Launchpad as a platforms like GitHub, GitLab or BitBucket.
 
+IRC channels:
+~~~~~~~~~~~~~
+For real-time discussions, please connect to ``irc.libera.chat`` and join one or
+any of the `IRC channels <https://wiki.ubuntu.com/IRC/ChannelList>`_. You may 
+find especially these channels useful in the beginning:
+
+* ``#ubuntu-devel`` (for general development discussion)
+* ``#ubuntu-motu`` (for MOTU team discussion and generally getting help)
+
+You can follow these `instructions <https://libera.chat/guides/connect>`_ how
+to connect to ``irc.libera.chat``.
+
+When you join ``irc.libera.chat`` for the first time, you should follow these 
+`instructions <https://libera.chat/guides/registration>`_ to register a 
+nickname. If you don't register it, someone else may end up registering the 
+nickname you want/used.
+
+.. note::
+  Certain channels even require you to register before you can write in them.
+
 Discourse:
 ~~~~~~~~~~
 The `Ubuntu Discourse <https://discourse.ubuntu.com>`_ instance is a meeting 
@@ -112,14 +132,6 @@ communicate effectively.
   (general Ubuntu development discussion)
 * https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
   (MOTU Team discussion, get help with packaging)
-
-IRC channels:
-~~~~~~~~~~~~~
-For real-time discussions, please connect to irc.libera.chat and join one or
-any of these channels:
-
-* #ubuntu-devel (for general development discussion)
-* #ubuntu-motu (for MOTU team discussion and generally getting help)
 
 We are always looking to improve this guide. If you find any problems or have
 some suggestions, use the **Give feedback** button at the top of any page to open a GitHub issue or directly contribute by submitting a pull request to the `source`_ repository.
