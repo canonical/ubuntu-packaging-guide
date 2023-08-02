@@ -77,9 +77,18 @@ Project and community
 ---------------------
 
 The Ubuntu Packaging Guide is an open source project that warmly welcomes
-community projects, contributions, suggestions, fixes and constructive feedback. Read our `Code of Conduct`_ to get started.
+community projects, contributions, suggestions, fixes and constructive feedback. 
+In a project where thousands of lines of code are changed, lots of decisions
+are made and hundreds of people interact every day, it is important to 
+communicate effectively. Read our `Code of Conduct`_ to get started.
 
-If you run into problems, don't panic! The following communication channels are there to help you through:
+If you run into problems, don't panic! The following communication channels are 
+there to help you through.
+
+.. tip::
+  It is encouraged for you to use the same nickname (a known identity or your 
+  real name) accross all the following communication channels, so that your 
+  Ubuntu developer colleagues will be able to get to know you better. 
 
 Launchpad:
 ~~~~~~~~~~
