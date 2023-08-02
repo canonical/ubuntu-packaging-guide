@@ -91,6 +91,15 @@ source code is stored, tracked, get built, tested and much more.
 We will go into more detail in the following articles. For now you can think of
 Launchpad as a platforms like GitHub, GitLab or BitBucket.
 
+Discourse:
+~~~~~~~~~~
+The `Ubuntu Discourse <https://discourse.ubuntu.com>`_ instance is a meeting 
+point for the Ubuntu community and a forum about general Ubuntu development 
+where you can find discussions, announcements, team updates, documentation and
+much more.
+
+Feel free to introduce yourself `here <https://discourse.ubuntu.com/c/intro/101>`_.
+
 Mailing lists:
 ~~~~~~~~~~~~~~
 In a project where thousands of lines of code are changed, lots of decisions
