@@ -45,7 +45,6 @@ make Ubuntu better together with us.
 In this documentation
 ---------------------
 
-
 .. grid:: 1 1 2 2
    :gutter: 3
 
@@ -78,15 +77,63 @@ Project and community
 ---------------------
 
 The Ubuntu Packaging Guide is an open source project that warmly welcomes
-community projects, contributions, suggestions, fixes and constructive feedback. Read our `Code of Conduct`_ to get started.
+community projects, contributions, suggestions, fixes and constructive feedback. 
+In a project where thousands of lines of code are changed, lots of decisions
+are made and hundreds of people interact every day, it is important to 
+communicate effectively. Read our `Code of Conduct`_ to get started.
 
-If you run into problems, don't panic! The following communication channels are there to help you through:
+If you run into problems, don't panic! The following communication channels are 
+there to help you through.
+
+.. tip::
+  It is encouraged for you to use the same nickname (a known identity or your 
+  real name) accross all the following communication channels, so that your 
+  Ubuntu developer colleagues will be able to get to know you better. 
+
+Launchpad:
+~~~~~~~~~~
+
+`Launchpad`_ is the general development platform where Ubuntu itself and most of 
+Ubuntu related software projects live. It is the place where bugs are tracked,
+source code is stored, tracked, get built, tested and much more.
+
+We will go into more detail in the following articles. For now you can think of
+Launchpad as a platforms like GitHub, GitLab or BitBucket.
+
+IRC channels:
+~~~~~~~~~~~~~
+For real-time discussions, please connect to ``irc.libera.chat`` and join one or
+any of the `IRC channels <https://wiki.ubuntu.com/IRC/ChannelList>`_. You may 
+find especially these channels useful in the beginning:
+
+* ``#ubuntu-devel`` (for general development discussion)
+* ``#ubuntu-motu`` (for MOTU team discussion and generally getting help)
+
+You can follow these `instructions <https://libera.chat/guides/connect>`_ how
+to connect to ``irc.libera.chat``.
+
+When you join ``irc.libera.chat`` for the first time, you should follow these 
+`instructions <https://libera.chat/guides/registration>`_ to register a 
+nickname. If you don't register it, someone else may end up registering the 
+nickname you want/used.
+
+.. note::
+  Certain channels even require you to register before you can write in them.
+
+Discourse:
+~~~~~~~~~~
+The `Ubuntu Discourse <https://discourse.ubuntu.com>`_ instance is a meeting 
+point for the Ubuntu community and a forum about general Ubuntu development 
+where you can find discussions, announcements, team updates, documentation and
+much more.
+
+Feel free to introduce yourself `here <https://discourse.ubuntu.com/c/intro/101>`_.
 
 Mailing lists:
 ~~~~~~~~~~~~~~
-In a project where thousands of lines of code are changed, lots of decisions
-are made and hundreds of people interact every day, it is important to 
-communicate effectively.
+For long-lived discussions or announcements you can subscribe/write to any of 
+the `Ubuntu mailing lists <https://lists.ubuntu.com/>`_. You may find especially 
+these mailing lists useful in the beginning:
 
 * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce 
   (announce-only, the most important development announcements go here)
@@ -95,16 +142,12 @@ communicate effectively.
 * https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
   (MOTU Team discussion, get help with packaging)
 
-IRC channels:
-~~~~~~~~~~~~~
-For real-time discussions, please connect to irc.libera.chat and join one or
-any of these channels:
-
-* #ubuntu-devel (for general development discussion)
-* #ubuntu-motu (for MOTU team discussion and generally getting help)
+-----
 
 We are always looking to improve this guide. If you find any problems or have
-some suggestions, use the **Give feedback** button at the top of any page to open a GitHub issue or directly contribute by submitting a pull request to the `source`_ repository.
+some suggestions, use the **Give feedback** button at the top of any page to 
+open a GitHub issue or directly contribute by submitting a pull request to the 
+`source`_ repository.
 
 .. toctree::
    :hidden:
@@ -133,6 +176,7 @@ resources you may find useful:
 
 .. Links:
 .. _Code of Conduct: https://ubuntu.com/community/code-of-conduct
+.. _Launchpad: https://launchpad.net
 
 .. _BinPkgs: https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide
 .. _HowToPackage: https://wiki.debian.org/HowToPackageForDebian
