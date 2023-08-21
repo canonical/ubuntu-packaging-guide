@@ -1,7 +1,7 @@
 .. _index:
 
 Ubuntu Packaging Guide
-######################
+======================
 
 .. important::
 
@@ -42,8 +42,8 @@ make Ubuntu better together with us.
 
 -----
 
-The guide is split up into two sections:
-
+In this documentation
+---------------------
 
 .. grid:: 1 1 2 2
    :gutter: 3
@@ -73,28 +73,87 @@ The guide is split up into two sections:
       
        Technical information - specifications, APIs, architecture
 
-Having trouble? We would like to help!
-======================================
-
-If you run into problems: don't panic! Check out the :ref:`communication
-article<communication>` and you will find out how to most easily get in
-touch with other developers.
-
-- Links to other communication channels go here
-- Use the "Give feedback" button at the top of any page to open a GitHub issue
-  and let us know what problem you're having
-
 Project and community
-=====================
+---------------------
 
 The Ubuntu Packaging Guide is an open source project that warmly welcomes
-community projects, contributions, suggestions, fixes and constructive feedback.
+community projects, contributions, suggestions, fixes and constructive feedback. 
+In a project where thousands of lines of code are changed, lots of decisions
+are made and hundreds of people interact every day, it is important to 
+communicate effectively.
 
-* Read our `Code of Conduct`_
-* IRC?
-* Discourse?
-* Mailing list?
-* GitHub?
+Read our `Code of Conduct`_ to get started. If you run into problems, don't panic!
+The following communication channels are there to help you.
+
+.. tip::
+  It is encouraged for you to use the same nickname (a known identity or your 
+  real name) accross all the following communication channels, so that your 
+  Ubuntu developer colleagues will be able to get to know you better. 
+
+Launchpad:
+~~~~~~~~~~
+
+`Launchpad`_ is the general development platform where Ubuntu itself and most of 
+Ubuntu related software projects live. It is the place where bugs are tracked,
+source code is stored, tracked, get built, tested and much more.
+
+We will go into more detail in the following articles. For now, you can think of
+Launchpad as a platforms like GitHub, GitLab or BitBucket.
+
+IRC channels:
+~~~~~~~~~~~~~
+For real-time discussions, please connect to ``irc.libera.chat`` and join one or
+any of the `IRC channels`_. You may find especially these channels useful in the beginning:
+
+* ``#ubuntu-devel``, for general development discussion
+* ``#ubuntu-motu``, for `Masters of the Universe`_ (MOTU) team discussion and
+generally getting help.
+* ``#ubuntu-meeting``, meetings are held here by various Ubuntu teams and everyone
+is welcome to participate.
+
+You can follow these `instructions`_ on how to connect to ``irc.libera.chat``.
+Also, when you join ``irc.libera.chat`` for the first time, you should follow the
+`instructions to register a nickname`_ and register a nickname. If you don't register it,
+someone else may end up registering the nickname you want/used.
+
+.. note::
+  Certain channels even require you to register before you can write in them.
+
+Discourse:
+~~~~~~~~~~
+The `Ubuntu Discourse <https://discourse.ubuntu.com>`_ instance is a meeting 
+point for the Ubuntu community and a forum about general Ubuntu development 
+where you can find discussions, announcements, team updates, documentation and
+much more.
+
+Feel free to introduce yourself `here <https://discourse.ubuntu.com/c/intro/101>`_.
+
+Mailing lists:
+~~~~~~~~~~~~~~
+For long-lived discussions or announcements you can subscribe/write to any of 
+the `Ubuntu mailing lists <https://lists.ubuntu.com/>`_. You may find especially 
+these mailing lists useful in the beginning:
+
+* https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce 
+  (announce-only, the most important development announcements go here)
+* https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel
+  (general Ubuntu development discussion)
+* https://lists.ubuntu.com/mailman/listinfo/ubuntu-motu
+  (MOTU Team discussion, get help with packaging)
+
+.. note::
+  When you subscribe to mailing lists, expect to receive a lot of emails.
+  A good way to manage these is to create email filters. For example,
+  the `bug mailing lists <https://lists.ubuntu.com/#Bug+Lists>`_ generate a high
+  volume of emails and using the `custom email headers <https://wiki.ubuntu.com/Bugs/HowToFilter>`_
+  to filter them can help.
+
+-----
+
+We are always looking to improve this guide. If you find any problems or have
+some suggestions, use the **Give feedback** button at the top of any page to 
+open a GitHub issue or directly contribute by submitting a pull request to the 
+`source`_ repository.
 
 .. toctree::
    :hidden:
@@ -107,7 +166,7 @@ community projects, contributions, suggestions, fixes and constructive feedback.
    contribute.rst
 
 Further reading
-===============
+---------------
 
 You can read this guide offline in different formats, if you install one of
 the `binary packages <BinPkgs_>`_.
@@ -115,25 +174,24 @@ the `binary packages <BinPkgs_>`_.
 If you want to learn more about building Debian packages, here are some Debian
 resources you may find useful:
 
-* `How to package for Debian <HowToPackage_>`_;
-* `Debian Policy Manual <Policy_>`_;
-* `Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many languages;
-* `Packaging tutorial <PkgTutorial_>`_ (also available as a `package <PkgTutorialPkg_>`_);
-* `Guide for Packaging Python Modules <PythonModules_>`_.
-
-We are always looking to improve this guide. If you find any problems or have
-some suggestions, please `report a bug on Launchpad <Bugs_>`_.
-If you'd like to help work on the guide, `grab the source <Source_>`_ there as well.
+* `How to package for Debian <HowToPackage_>`_
+* `Debian Policy Manual <Policy_>`_
+* `Debian New Maintainers' Guide <NewMaintGuide_>`_ — available in many languages
+* `Packaging tutorial <PkgTutorial_>`_ (also available as a `package <PkgTutorialPkg_>`_)
+* `Guide for Packaging Python Modules <PythonModules_>`_
 
 .. Links:
 .. _Code of Conduct: https://ubuntu.com/community/code-of-conduct
-
+.. _Launchpad: https://launchpad.net
+.. _IRC channels: https://wiki.ubuntu.com/IRC/ChannelList
 .. _BinPkgs: https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide
 .. _HowToPackage: https://wiki.debian.org/HowToPackageForDebian
 .. _Policy: http://www.debian.org/doc/debian-policy/
 .. _NewMaintGuide: http://www.debian.org/doc/manuals/maint-guide/
 .. _PkgTutorial: http://www.debian.org/doc/manuals/packaging-tutorial/
 .. _PkgTutorialPkg: https://launchpad.net/ubuntu/+source/packaging-tutorial
-.. _Bugs: https://bugs.launchpad.net/ubuntu-packaging-guide
-.. _Source: https://code.launchpad.net/~ubuntu-packaging-guide-team/ubuntu-packaging-guide/trunk
 .. _PythonModules: https://wiki.debian.org/Python/LibraryStyleGuide
+.. _source: https://github.com/canonical/ubuntu-packaging-guide
+.. _Masters of the Universe: https://wiki.ubuntu.com/MOTU
+.. _instructions: https://libera.chat/guides/connect
+.. _instructions to register a nickname: https://libera.chat/guides/registration
