@@ -106,8 +106,10 @@ For real-time discussions, please connect to ``irc.libera.chat`` and join one or
 any of the `IRC channels`_. You may find especially these channels useful in the beginning:
 
 * ``#ubuntu-devel``, for general development discussion
-* ``#ubuntu-motu``, for `Masters of the Universe`_ (MOTU) team discussion and generally getting help.
-* ``#ubuntu-meeting``, for discussions on Ubuntu and related topics.
+* ``#ubuntu-motu``, for `Masters of the Universe`_ (MOTU) team discussion and
+generally getting help.
+* ``#ubuntu-meeting``, meetings are held here by various Ubuntu teams and everyone
+is welcome to participate.
 
 You can follow these `instructions`_ on how to connect to ``irc.libera.chat``.
 Also, when you join ``irc.libera.chat`` for the first time, you should follow the
