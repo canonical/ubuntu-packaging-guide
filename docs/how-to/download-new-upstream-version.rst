@@ -18,20 +18,19 @@ repositories for newly available updates of the upstream project.
 
 .. note::
     If the source package does not contain a ``watch`` file, there may be
-    an explaination and instructions in the ``README.source`` or 
+    an explanation and instructions in the ``README.source`` or 
     ``README.debian`` file (if available) that tell you how to proceed.
 
 .. caution::
-    Only if there is no automatic download mechanism and you can't find any
-    download instructions, you should download any upstream file manually.
+    You should only download any upstream file(s) manually if there is no automatic download mechanism and you can't find any download instructions. 
 
-    Remember that a package may get distributed to hundred thousands of users.
+    Remember that a package may get distributed to hundreds of thousands of users.
     Humans are the weakest link in this distribution chain, because we may
     accidentally miss or skip a verification step, misspell a URL, copy the 
     wrong URL or copy a URL only partially, etc.
 
 If you just want to check if a new update is available, but you don't want to 
-download anything you can run the following command from the root of the 
+download anything, you can run the following command from the root of the 
 source tree::
 
     uscan --safe
@@ -65,5 +64,5 @@ Further Information
 -------------------
 
 - man page -- :manpage:`uscan(1)`
-- debian wiki -- `debian/watch <https://wiki.debian.org/debian/watch>`_
-- debian policy ``4.6.2.0`` -- `Upstream source location: debian/watch <https://www.debian.org/doc/debian-policy/ch-source.html#upstream-source-location-debian-watch>`_
+- Debian wiki -- `debian/watch <https://wiki.debian.org/debian/watch>`_
+- Debian policy ``4.6.2.0`` -- `Upstream source location: debian/watch <https://www.debian.org/doc/debian-policy/ch-source.html#upstream-source-location-debian-watch>`_
