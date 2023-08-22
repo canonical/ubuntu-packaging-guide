@@ -12,7 +12,6 @@ support matrices, and so on.
 .. toctree::
    :maxdepth: 1
 
-   reference/communication
    reference/debian-dir-overview
    reference/package-tests.rst
    reference/package-version-format.rst
