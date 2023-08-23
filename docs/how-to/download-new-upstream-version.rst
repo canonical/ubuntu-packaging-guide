@@ -3,6 +3,10 @@
 Download a new :term:`Upstream` Version
 =======================================
 
+.. caution::
+
+    Work in progress!
+
 Once in a while you need to download a new :term:`Upstream` release or check if a newer
 :term:`Upstream` release exists.
 
