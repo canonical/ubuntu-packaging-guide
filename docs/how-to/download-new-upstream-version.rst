@@ -1,68 +1,93 @@
 ..  _download-new-upstream-version:
 
-===============================
-Download a new Upstream Version
-===============================
+Download a new :term:`Upstream` Version
+=======================================
 
-.. caution::
+Once in a while you need to download a new :term:`Upstream` release or check if a newer
+:term:`Upstream` release exists.
 
-    Work in progress!
-
-Once in a while you need to download a new upstream release or check if a newer 
-upstream release exists.
-
-Most of the source packages contain a ``watch`` file in the ``debian`` folder.
-This is a configuration file for the :manpage:`uscan(1)` utility which allows
-you to automatically scan ``http`` or ``ftp`` sites or :manpage:`git(1)`
-repositories for newly available updates of the upstream project.
+Most of the :term:`Source Packages <Source Package>` contain a ``watch`` file in the ``debian``
+folder. This is a configuration file for the :manpage:`uscan(1)` utility which allows you to
+automatically search :term:`HTTP` or :term:`FTP` sites or :manpage:`git(1)` repositories
+for newly available updates of the :term:`Upstream` project.
 
 .. note::
-    If the source package does not contain a ``watch`` file, there may be
-    an explanation and instructions in the ``README.source`` or 
-    ``README.debian`` file (if available) that tell you how to proceed.
+    If the :term:`Source Package` does not contain a :file:`debian/watch` file, there may be
+    an explanation and instructions in the :file:`debain/README.source` or
+    :file:`debian/README.debian` file (if available) that tell you how to proceed.
 
 .. caution::
-    You should only download any upstream file(s) manually if there is no automatic download mechanism and you can't find any download instructions. 
+    You should download :term:`Upstream` file(s) manually only if there is no automatic
+    download mechanism and you can't find any download instructions.
 
     Remember that a package may get distributed to hundreds of thousands of users.
     Humans are the weakest link in this distribution chain, because we may
-    accidentally miss or skip a verification step, misspell a URL, copy the 
-    wrong URL or copy a URL only partially, etc.
+    accidentally miss or skip a verification step, misspell a :term:`URL`, copy the
+    wrong :term:`URL` or copy a :term:`URL` only partially, etc.
 
-If you just want to check if a new update is available, but you don't want to 
-download anything, you can run the following command from the root of the 
-source tree::
+    If you still have to download :term:`Upstream` file(s) manually make sure to
+    verify :term:`Cryptographic Signatures` (if available). The :term:`Signing Key`
+    of the :term:`Upstream` project should be stored in the :term:`Source Package`
+    as :file:`debian/upstream/signing-key.asc` (if the :term:`Upstream` project
+    has a :term:`Signing Key`).
+
+    :manpage:`uscan(1)` verifies downloads against this :term:`Signing Key`
+    automatically (if available).
+
+Download new :term:`Upstream` Version (if available)
+----------------------------------------------------
+
+Running :manpage:`uscan(1)` from the :term:`Root` of the :term:`Source Tree` will
+check if a newer :term:`Upstream` Version exits and downloads it:
+
+.. code:: bash
+
+    uscan
+
+If :manpage:`uscan(1)` could not find a newer :term:`Upstream` version it will
+return with the exit code `1` and print nothing to the :term:`Standard Output`.
+
+:manpage:`uscan(1)` reads the first entry in :file:`debian/changelog` to determine
+the name and version of the :term:`Source Package`.
+
+You can allways add the ``--verbose`` flag to see more information (e.g., which version
+:manpage:`uscan(1)` found):
+
+.. code:: bash
+
+    uscan --verbose
+
+Check for new :term:`Upstream` Version (no download)
+----------------------------------------------------
+
+If you just want to check if a new update is available, but you don't want to download
+anything, you can run the :manpage:`uscan(1)` :term:`Command` with the ``--safe`` flag
+from the :term:`Root` of the :term:`Source Tree`:
+
+.. code:: bash
 
     uscan --safe
 
-.. note::
-    If :manpage:`uscan(1)` could not find a newer upstream version it will 
-    return with the exit code `1` and print nothing to the standard output.
+Force Download of latest :term:`Upstream` Version
+-------------------------------------------------
 
-You can add the ``--verbose`` flag to see more information (e.g., which version 
-:manpage:`uscan(1)` found)::
+You can use the ``--force-download`` flag to download the latest :term:`Upstream` release
+from the :term:`Upstream` project, even if the :term:`Upstream` Release is up-to-date
+with the :term:`Source Package`:
 
-    uscan --safe --verbose 
-
-You can use the ``--force-download`` flag to download the new upstream release
-even if it is up-to-date with the source package::
+.. code:: bash
 
     uscan --force-download
 
 .. note::
-    :manpage:`uscan(1)` reads the first entry in ``debian/changelog`` to 
-    determine the name and the lastest upstream version of the source package.
 
-.. note::
-    If the upstream project has a signing key it should be stored in the source
-    package as ``debian/upstream/signing-key.asc``. :manpage:`uscan(1)` does 
-    attempt to verify a download against this key (if available).
-
-
+    In most cases you actually want to download the :term:`Source` from the :term:`Archive`
+    and not re-download the :term:`Source` from the :term:`Upstream` project. Check out the
+    how-to :ref:`get-package-source`.
 
 Further Information
 -------------------
 
-- man page -- :manpage:`uscan(1)`
+- Manual page -- :manpage:`uscan(1)`
 - Debian wiki -- `debian/watch <https://wiki.debian.org/debian/watch>`_
 - Debian policy ``4.6.2.0`` -- `Upstream source location: debian/watch <https://www.debian.org/doc/debian-policy/ch-source.html#upstream-source-location-debian-watch>`_
