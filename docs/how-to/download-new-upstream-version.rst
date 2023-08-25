@@ -1,6 +1,6 @@
 ..  _download-new-upstream-version:
 
-Download a new :term:`Upstream` Version
+Download a new :term:`Upstream` version
 =======================================
 
 .. caution::
@@ -38,11 +38,11 @@ for newly available updates of the :term:`Upstream` project.
     :manpage:`uscan(1)` verifies downloads against this :term:`Signing Key`
     automatically (if available).
 
-Download new :term:`Upstream` Version (if available)
+Download new :term:`Upstream` version (if available)
 ----------------------------------------------------
 
 Running :manpage:`uscan(1)` from the :term:`Root` of the :term:`Source Tree` will
-check if a newer :term:`Upstream` Version exits and downloads it:
+check if a newer :term:`Upstream` version exits and downloads it:
 
 .. code:: bash
 
@@ -61,7 +61,7 @@ You can allways add the ``--verbose`` flag to see more information (e.g., which 
 
     uscan --verbose
 
-Check for new :term:`Upstream` Version (no download)
+Check for new :term:`Upstream` version (no download)
 ----------------------------------------------------
 
 If you just want to check if a new update is available, but you don't want to download
@@ -72,8 +72,8 @@ from the :term:`Root` of the :term:`Source Tree`:
 
     uscan --safe
 
-Force Download of latest :term:`Upstream` Version
--------------------------------------------------
+Force the download of the latest :term:`Upstream` version
+-----------------------------------------------------
 
 You can use the ``--force-download`` flag to download the latest :term:`Upstream` release
 from the :term:`Upstream` project, even if the :term:`Upstream` Release is up-to-date
@@ -86,8 +86,50 @@ with the :term:`Source Package`:
 .. note::
 
     In most cases you actually want to download the :term:`Source` from the :term:`Archive`
-    and not re-download the :term:`Source` from the :term:`Upstream` project. Check out the
-    how-to :ref:`get-package-source`.
+    and not re-download the :term:`Source` from the :term:`Upstream` project.
+    
+    :ref:`How to get the Source from the Archive? <get-package-source>`
+
+Download the :term:`Source` of older Versions from the :term:`Upstream` project
+-------------------------------------------------------------------------------
+
+If you want to download the :term:`Source` of a specific version from the
+:term:`Upstream` project you can use the ``--download-version`` flag.
+
+Basic syntax:
+
+.. code:: bash
+
+    uscan --download-version VERSION
+
+For example:
+
+.. code:: bash
+
+    uscan --download-version '1.0'
+
+In the special case that you want to download the :term:`Source` for the
+current version of the :term:`Source Package` from the :term:`Upstream` project
+you can use the ``--download-current-version`` flag instead, which parses the
+version to download from the first entry in :file:`debian/changelog` file:
+
+.. code:: bash
+
+    uscan --download-current-version
+
+.. note::
+
+    The ``--download-version`` and ``--download-current-version`` flags are
+    both a :term:`best-effort` features of :manpage:`uscan(1)`.
+    
+    There are special cases where they do not work for technical reasons.
+
+.. note::
+
+    In most cases you actually want to download the :term:`Source` from the :term:`Archive`
+    and not re-download the :term:`Source` from the :term:`Upstream` project.
+    
+    :ref:`How to get the Source from the Archive? <get-package-source>`
 
 Further Information
 -------------------
