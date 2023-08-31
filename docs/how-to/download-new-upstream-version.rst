@@ -24,23 +24,25 @@ for newly available updates of the :term:`Upstream` project.
     an explanation and instructions in the :file:`debain/README.source` or
     :file:`debian/README.debian` file (if available) that tell you how to proceed.
 
-.. caution::
-    You should download :term:`Upstream` file(s) manually only if there is no automatic
-    download mechanism and you can't find any download instructions.
+Best practices
+--------------
 
-    Remember that a package may get distributed to hundreds of thousands of users.
-    Humans are the weakest link in this distribution chain, because we may
-    accidentally miss or skip a verification step, misspell a :term:`URL`, copy the
-    wrong :term:`URL` or copy a :term:`URL` only partially, etc.
+You should download :term:`Upstream` file(s) manually only if there is no automatic
+download mechanism and you can't find any download instructions.
 
-    If you still have to download :term:`Upstream` file(s) manually make sure to
-    verify :term:`Cryptographic Signatures` (if available). The :term:`Signing Key`
-    of the :term:`Upstream` project should be stored in the :term:`Source Package`
-    as :file:`debian/upstream/signing-key.asc` (if the :term:`Upstream` project
-    has a :term:`Signing Key`).
+Remember that a package may get distributed to hundreds of thousands of users.
+Humans are the weakest link in this distribution chain, because we may
+accidentally miss or skip a verification step, misspell a :term:`URL`, copy the
+wrong :term:`URL` or copy a :term:`URL` only partially, etc.
 
-    :manpage:`uscan(1)` verifies downloads against this :term:`Signing Key`
-    automatically (if available).
+If you still have to download :term:`Upstream` file(s) manually make sure to
+verify :term:`Cryptographic Signatures` (if available). The :term:`Signing Key`
+of the :term:`Upstream` project should be stored in the :term:`Source Package`
+as :file:`debian/upstream/signing-key.asc` (if the :term:`Upstream` project
+has a :term:`Signing Key`).
+
+:manpage:`uscan(1)` verifies downloads against this :term:`Signing Key`
+automatically (if available).
 
 Download new :term:`Upstream` version (if available)
 ----------------------------------------------------
