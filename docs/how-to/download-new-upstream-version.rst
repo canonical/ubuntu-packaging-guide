@@ -7,7 +7,7 @@ Download a new :term:`Upstream` version
 
     Work in progress!
 
-Once in a while you need to download a new :term:`Upstream` release or check if a newer
+Once in a while you may need to download a new :term:`Upstream` release or check if a newer
 :term:`Upstream` release exists.
 
 Most of the :term:`Source Packages <Source Package>` contain a ``watch`` file in the ``debian``
