@@ -42,7 +42,7 @@ Download new :term:`Upstream` version (if available)
 ----------------------------------------------------
 
 Running :manpage:`uscan(1)` from the :term:`Root` of the :term:`Source Tree` will
-check if a newer :term:`Upstream` version exits and downloads it:
+check if a newer :term:`Upstream` version exists and downloads it:
 
 .. code:: bash
 
