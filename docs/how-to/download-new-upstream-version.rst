@@ -8,7 +8,11 @@ Download a new :term:`Upstream` version
     Work in progress!
 
 Once in a while you may need to download a new :term:`Upstream` release or check if a newer
-:term:`Upstream` release exists.
+:term:`Upstream` release exists; for example:
+
+- When fixing a bug, to rule out that a more recent version may have already fixed the bug.
+- As a :term:`Source Packages <Source Package>` :term:`Maintainer`, to check for, download,
+  and package a newer :term:`Upstream` release.
 
 Most of the :term:`Source Packages <Source Package>` contain a ``watch`` file in the ``debian``
 folder. This is a configuration file for the :manpage:`uscan(1)` utility which allows you to
