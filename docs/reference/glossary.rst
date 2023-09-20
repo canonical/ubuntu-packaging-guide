@@ -426,7 +426,22 @@ Glossary
         Refers to the :term:`End of Support` (Life) for a product/software.
 
     End of Line
-        *Work in Progress*
+        The end of a line of encoded text that is indicated by a control character
+        or sequence of control characters.
+
+        This is relevant for text parser which often parse text line by line.
+
+        The most common examples for control character(s) that indicate a *end of line* are:
+
+        +--------------------------------------------+---------------+---------------+---------------+------------------+
+        | :term:`Operating System`                   | Abbreviation* | hex value(s)* | dec value(s)* | Escape sequence* |
+        +--------------------------------------------+---------------+---------------+---------------+------------------+
+        | :term:`Unix` and :term:`Unix`-like systems | ``LF``        | ``0A``        | ``10``        | ``\n``           |
+        +--------------------------------------------+---------------+---------------+---------------+------------------+
+        | Windows systems                            | ``CR`` ``LF`` | ``0D`` ``0A`` | ``13`` ``10`` | ``\r`` ``\n``    |
+        +--------------------------------------------+---------------+---------------+---------------+------------------+
+
+        \* for the character encoding ``ASCII``
 
     End of Support
         *Work in Progress*
