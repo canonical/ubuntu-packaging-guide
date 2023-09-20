@@ -130,7 +130,23 @@ Glossary
         *Work in Progress*
 
     Bazaar
-        *Work in Progress*
+        A distributed :term:`Version Control System` to collaborate on software development,
+        that was developed by :term:`Canonical` and is part of the :term:`GNU` system.
+
+        *Bazaar* as a :term:`Canonical` project is discontinued. Development has been carried
+        forward in the community as :term:`Breezy`.
+
+        See also: `Bazaar (Launchpad) <https://launchpad.net/bzr>`
+
+        .. note::
+        
+            *Bazaar* is replaced in favor of a :term:`git`-based workflow as the
+            main :term:`Version Control System` within :term:`Ubuntu`. There are
+            some projects that still use it, but be aware that documents that reference
+            *Bazaar* as an actively used :term:`Version Control System` within :term:`Ubuntu`
+            are most likely outdated.
+
+            See also: :term:`git-ubuntu`
 
     Big-Endian
         *Work in Progress*
