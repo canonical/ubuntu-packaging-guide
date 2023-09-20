@@ -510,6 +510,9 @@ Glossary
     Patch
         *Work in Progress*
 
+    PCRE
+        Abbreviation for :term:`Perl Compatible Regular Expressions`
+
     Perl Compatible Regular Expressions
         *Work in Progress*
         
