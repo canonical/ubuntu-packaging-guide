@@ -509,12 +509,12 @@ Glossary
         Abbreviation for :term:`End of Support`
 
     ESM
-        Abbreviation for :term:`Extended Security Maintenance`
+        Abbreviation for :term:`Expanded Security Maintenance`
 
     EULA
         Abbreviation for :term:`End-user license agreement`
 
-    Extended Security Maintenance
+    Expanded Security Maintenance
         *Work in Progress*
         
         See also: `Expanded Security Maintenance (homepage) <https://ubuntu.com/esm>`_
