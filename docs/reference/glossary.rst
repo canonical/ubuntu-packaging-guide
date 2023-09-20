@@ -637,7 +637,10 @@ Glossary
         *Work in Progress* (the pocket)
 
     Main Inclusion Review
-        *Work in Progress* (see https://github.com/canonical/ubuntu-mir)
+        The review process when a :term:`Package` in :term:`Universe` or :term:`Multiverse`
+        gets requested to be promoted to :term:`Main` or :term:`Restricted`.
+
+        See: :doc:`Main Inclusion Review (explanation article) </explanation/main-inclusion-review>`
 
     Mailing List
         *Work in Progress*
@@ -662,6 +665,12 @@ Glossary
 
     MIR
         Abbreviation for :term:`Main Inclusion Review`
+
+    MIR Team
+        The :term:`Ubuntu` team that reviews requests to promote :term:`Packages <Package>`
+        in :term:`Universe` or :term:`Multiverse` to :term:`Main` or :term:`Restricted`.
+
+        See: :doc:`Main Inclusion Review (explanation article) </explanation/main-inclusion-review>`
 
     MOTU
         Abbreviation for :term:`Masters of the Universe`

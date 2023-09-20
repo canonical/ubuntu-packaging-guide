@@ -23,3 +23,4 @@ knowledge and become better at packaging and development.
    explanation/debian-merges.rst
    explanation/transitions.rst
    explanation/backports.rst
+   explanation/main-inclusion-review.rst
