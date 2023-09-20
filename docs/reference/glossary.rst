@@ -87,7 +87,12 @@ Glossary
         See :term:`Ubuntu Archive`
 
     Archive Admin
-        *Work in Progress*
+        An administrator that is responsible for maintenance tasks of the
+        :term:`Ubuntu Package Archive <Ubuntu Archive>`, including processing of new
+        :term:`Packages <Package>`, migration of :term:`Packages <Package>` between
+        :term:`Components <Component>`, and other administrative matters.
+
+        See also: `"Ubuntu Package Archive Administrators" team on Launchpad <https://launchpad.net/~ubuntu-archive>`_
 
     Archive Mirror
         A :term:`Mirror` of the :term:`Ubuntu Archive`.
