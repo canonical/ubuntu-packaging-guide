@@ -1002,6 +1002,8 @@ Glossary
     Waiting on Upstream
         *Work in Progress*
 
+        See also: :term:`Upstream`
+
     Watch File
         The :file:`debian/watch` file in a :term:`Source Package`.
 
