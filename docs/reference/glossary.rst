@@ -89,6 +89,9 @@ Glossary
     Archive Admin
         *Work in Progress*
 
+    Archive Mirror
+        A :term:`Mirror` of the :term:`Ubuntu Archive`.
+
     ARM
         *ARM* (formerly an acronym for *Advanced RISC Machines* and originally
         *Acorn RISC Machine*) is a widely used family of :term:`RISC` :term:`CPU`
@@ -1177,6 +1180,8 @@ Glossary
 
     User Interface Freeze Exception
         *Work in Progress*
+
+        See: :doc:`/explanation/development-process`
 
     UX
         Abbreviation for :term:`User Experience`
