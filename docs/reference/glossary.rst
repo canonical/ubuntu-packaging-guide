@@ -1001,6 +1001,9 @@ Glossary
     Upstream
         *Work in Progress*
 
+    URI
+        Abbreviation for :term:`Uniform Resource Identifier`
+
     US
         Abbreviation for :term:`Ubuntu Summit`
 
