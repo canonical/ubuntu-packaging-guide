@@ -547,7 +547,9 @@ Glossary
         Abbreviation for :term:`Pull Request`
 
     Public Key Cryptography Standards
-        *Work in Progress* (see https://en.wikipedia.org/wiki/PKCS)
+        *Work in Progress*
+
+        See also: `PKCS (Wikipedia) <https://en.wikipedia.org/wiki/PKCS>`_
 
     Pull
         *Work in Progress*
