@@ -950,6 +950,12 @@ Glossary
     Ubuntu
         *Work in Progress*
 
+    Ubuntu Archive
+        The *Ubuntu Package Archive* is and :term:`APT` :term:`Repository` that is
+        preconfigured by default on :term:`Ubuntu` installations. It hosts :term:`Debian`
+        :term:`Binary Packages <Binary Package>` (``.deb`` files) and
+        :term:`Source Packages <Source Package>` (``.dsc`` files).
+
     Ubuntu Cloud Archive
         *Work in Progress* 
         
@@ -962,6 +968,12 @@ Glossary
 
     Ubuntu CVE Tracker
         *Work in Progress* (see https://launchpad.net/ubuntu-cve-tracker and https://ubuntu.com/security/cves)
+
+    Ubuntu Delta
+        A modification to an :term:`Ubuntu` :term:`Package` that is derived from a :term:`Debian`
+        :term:`Package`.
+
+        See also: :doc:`Upstream & Downstream (explanation) </explanation/upstream-and-downstream>`
 
     Ubuntu Desktop
         *Work in Progress*
@@ -981,6 +993,25 @@ Glossary
         See also:
         `Ubuntu Developer Summit is now Ubuntu Summit (Ubuntu Blog) <https://ubuntu.com/blog/uds-is-now-ubuntu-summit>`_,
         `Developer Summit (Ubuntu Wiki) <https://wiki.ubuntu.com/DeveloperSummit>`_
+
+    Ubuntu flavours
+        *Ubuntu flavours* are :term:`Distributions <Distribution>` of the default :term:`Ubuntu`
+        releases, which choose their own default applications and settings. *Ubuntu flavours* are
+        owned and developed by members of the :term:`Ubuntu` community and backed by the full
+        :term:`Ubuntu Archive` for :term:`Packages <Package>` and updates.
+
+        Officially recognised flavours are:
+
+        - `Edubuntu`_
+        - `Kubuntu`_
+        - `Lubuntu`_
+        - `Ubuntu Budgie`_
+        - `Ubuntu Cinnamon`_
+        - `Ubuntu Kylin`_
+        - `Ubuntu MATE`_
+        - `Ubuntu Studio`_
+        - `Ubuntu Unity`_
+        - `Xubuntu`_
 
     Ubuntu IRC Council
         *Work in Progress*
