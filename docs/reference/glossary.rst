@@ -1024,6 +1024,8 @@ Glossary
         :term:`Binary Packages <Binary Package>` (``.deb`` files) and
         :term:`Source Packages <Source Package>` (``.dsc`` files).
 
+        See: :doc:`Ubuntu Package Archive (explanation) </explanation/archive>`
+
     Ubuntu Cloud Archive
         *Work in Progress* 
         
