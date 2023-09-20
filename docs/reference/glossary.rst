@@ -399,6 +399,11 @@ Glossary
     DSA
         Abbreviation for :term:`Debian System Administration`
 
+    dsc
+        `.dsc` is the file extension of a :term:`Debian` source control file.
+        
+        See: `Chapter 5. Control files and their fields (Debian Policy Manual v4.6.2.0) <https://www.debian.org/doc/debian-policy/ch-controlfields.html>`_
+
     End of Life
         *Work in Progress*
 
