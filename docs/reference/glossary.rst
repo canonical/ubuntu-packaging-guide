@@ -602,7 +602,7 @@ Glossary
     Maintainer
         *Work in Progress*
 
-    Master of the Universe
+    Masters of the Universe
         *Work in Progress*
 
     Merge
@@ -621,7 +621,7 @@ Glossary
         Abbreviation for :term:`Main Inclusion Review`
 
     MOTU
-        Abbreviation for :term:`Master of the Universe`
+        Abbreviation for :term:`Masters of the Universe`
 
     MP
         Abbreviation for :term:`Merge Proposal`
