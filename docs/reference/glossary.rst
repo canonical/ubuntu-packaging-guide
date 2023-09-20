@@ -529,7 +529,12 @@ Glossary
         Abbreviation for :term:`Ubuntu IRC Council`
 
     Image
-        *Work in Progress*
+        Within the context of :term:`Ubuntu` development, an *"Image"* refers to an
+        ``.iso`` file that contains a bootable :term:`Ubuntu` installer that can be
+        burned to a CD to make installation disks.
+
+        See also: `www.releases.ubuntu.com <https://www.releases.ubuntu.com/>`_,
+        `Optical disc image (Wikipedia) <https://en.wikipedia.org/wiki/Optical_disc_image>`_
 
     Individual Contributor
         *Work in Progress*
