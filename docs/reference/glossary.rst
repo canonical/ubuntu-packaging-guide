@@ -90,12 +90,40 @@ Glossary
         *Work in Progress*
 
     ARM
-        *Work in Progress*
+        *ARM* (formerly an acronym for *Advanced RISC Machines* and originally
+        *Acorn RISC Machine*) is a widely used family of :term:`RISC` :term:`CPU`
+        :term:`Architectures <Architecture>` known for their efficiency,
+        low power consumption, and versatility, which are widely used in
+        :term:`Embedded Systems` and mobile devices.
+
+        Notable examples are :term:`arm64` and :term:`armhf`.
+
+        See also: `ARM architecture family (Wikipedia) <https://en.wikipedia.org/wiki/ARM_architecture_family>`_
+
+    ARM Hard Float
+        See :term:`armhf`
 
     arm64
-        *Work in Progress*
+        :term:`CPU` :term:`Architecture` identifier (also known as ARM64,
+        :term:`ARMv8`, and :term:`AArch64`) for a 64-bit :term:`ARM` :term:`Architecture`
+        variant.
+
+        See also: `AArch64 (Wikipedia) <https://en.wikipedia.org/wiki/AArch64>`_
 
     armhf
+        :term:`CPU` :term:`Architecture` identifier (also known as ARM32,
+        :term:`ARMv7`, :term:`AArch32`, and :term:`ARM Hard Float`) for a 32-bit
+        :term:`ARM` :term:`Architecture` variant.
+
+        See also: `AArch64 (Wikipedia) <https://en.wikipedia.org/wiki/AArch64>`_
+
+    ARMv7
+        See :term:`armhf`
+
+    ARMv8
+        See :term:`arm64`
+
+    autopkgtest
         *Work in Progress*
 
     Backports
