@@ -748,7 +748,20 @@ Glossary
         *Work in Progress*
 
     Ubuntu Developer Summit
-        *Work in Progress* (see https://wiki.ubuntu.com/DeveloperSummit)
+        Between 2004 and 2012, :term:`Ubuntu` releases were planned during regularly scheduled
+        summits, where the greater :term:`Ubuntu` community would come together for
+        planning and hacking sessions. This event occurred two times a year, each one
+        running for a week. The discussions were highly technical and heavily influenced
+        the direction of the subsequent :term:`Ubuntu` release.
+
+        These events were called *"Ubuntu Developer Summit"* (UDS).
+
+        These events are continued since November 2022 as ":term:`Ubuntu Summit`" (US)
+        to include the broader :term:`Ubuntu` community and not only developers.
+        
+        See also:
+        `Ubuntu Developer Summit is now Ubuntu Summit (Ubuntu Blog) <https://ubuntu.com/blog/uds-is-now-ubuntu-summit>`_,
+        `Developer Summit (Ubuntu Wiki) <https://wiki.ubuntu.com/DeveloperSummit>`_
 
     Ubuntu IRC Council
         *Work in Progress*
@@ -764,7 +777,26 @@ Glossary
         *Work in Progress*
 
     Ubuntu Summit
-        See :term:`Ubuntu Developer Summit`
+        The *Ubuntu Summit* (US) is a continuation of :term:`Ubuntu Developer Summit`
+        since November 2022. The change in name aims to broadening the scope, which
+        opens the event up to additional audiences.
+
+        While the :term:`Ubuntu Developer Summit` was focused on technical development,
+        the talks and workshops of the *Ubuntu Summit* will cover development as well
+        as design, writing, and community leadership with a wide range of technical
+        skill levels.
+        
+        The name also results in a nifty new acronym, *"US"*, or more appropriately,
+        simply *"Us"*. This fits very nicely with the meaning of :term:`Ubuntu`,
+        *"I am what I am because of who we all are"*.
+
+        If you have any question feel free to send an email at
+        `summit@ubuntu.com <mailto:summit@ubuntu.com>`_.
+
+        Also, check out the :term:`Mailing List` specific to the *Ubuntu Summit*, you can
+        sign up `here <https://lists.ubuntu.com/mailman/listinfo/summit-news>`_.
+
+        You can find more information at `summit.ubuntu.com <https://summit.ubuntu.com/>`_.
 
     UCA
         Abbreviation for :term:`Ubuntu Cloud Archive`
