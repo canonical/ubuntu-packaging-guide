@@ -644,6 +644,9 @@ Glossary
     Stable Release Update
         *Work in Progress*
 
+    Stack
+        *Work in Progress*
+
     tarball
         *Work in Progress*
 
