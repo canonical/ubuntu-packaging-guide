@@ -11,7 +11,9 @@ knowledge and become better at packaging and development.
    :maxdepth: 1
 
    explanation/releases.rst
-   explanation/launchpad-and-archive.rst
+   explanation/development-process.rst
+   explanation/archive.rst
+   explanation/launchpad.rst
    explanation/upstream-and-downstream.rst
    explanation/package-model.rst
    explanation/sponsoring.rst

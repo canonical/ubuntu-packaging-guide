@@ -1,2 +1,0 @@
-Launchpad & the Archive
-=======================
