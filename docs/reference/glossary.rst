@@ -997,7 +997,13 @@ Glossary
         Abbreviation for :term:`Version Control System`
 
     Version Control System
-        *Work in Progress*
+        A software tool or system that enables developers to track and manage changes
+        to their :term:`Source Code` and collaborate with others effectively. It maintains
+        a history of :term:`Source Code` revisions, allowing users to revert to previous
+        versions, track modifications, and work on different :term:`Branches <Branch>`
+        of :term:`Source Code` simultaneously. *Version Control Systems* are crucial
+        for :term:`Source Code` management and collaboration in :term:`Open Source Software`
+        development projects.
 
     Waiting on Upstream
         *Work in Progress*
