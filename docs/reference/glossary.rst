@@ -259,7 +259,16 @@ Glossary
         Abbreviation for :term:`Common Vulnerabilities and Exposures`
 
     Debian
-        *Work in Progress*
+        *Debian* is a widely used community-driven
+        :term:`Free and Open Source <Free and Open Source Software>` :term:`Operating System`
+        known for its stability and extensive software :term:`Repository`. It follows
+        a strict commitment to :term:`Free and Open Source Software` principles and
+        serves as the basis for various :term:`Linux` :term:`Distributions <distribution>`
+        (including :term:`Ubuntu`). *Debian'* :term:`Package Manager`, :term:`APT`,
+        simplifies software installation and updates, making it a popular choice
+        for servers and desktops.
+
+        See also: `www.debian.org <https://www.debian.org/>`_
 
     Debian System Administration
         *Work in Progress*
