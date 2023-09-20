@@ -311,7 +311,11 @@ Glossary
         *Work in Progress*
 
     Copyright File
-        *Work in Progress*
+        The :file:`debian/copyright` file in a :term:`Source Package`.
+
+        See: :doc:`/reference/debian-dir-overview`
+
+        See also: `Section 4.5. Copyright (Debian Policy Manual v4.6.2.0) <https://www.debian.org/doc/debian-policy/ch-source.html#copyright-debian-copyright>`_
 
     CPU
         Abbreviation for :term:`Central Processing Unit`
