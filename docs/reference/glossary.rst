@@ -507,6 +507,9 @@ Glossary
     Package
         *Work in Progress*
 
+    Package Manager
+        *Work in Progress*
+
     Patch
         *Work in Progress*
 
