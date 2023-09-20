@@ -397,6 +397,9 @@ Glossary
     Internet Relay Chat
         Internet Relay Chat (:term:`IRC`)
 
+    ISO
+        *Work in Progress*
+
     ITP
         Abbreviation for :term:`Intent to Package`
 
