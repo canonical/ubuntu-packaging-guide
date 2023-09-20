@@ -527,12 +527,6 @@ Glossary
     Stable Release Update
         *Work in Progress*
 
-    Subversion
-        *Work in Progress*
-
-    SVN
-        *Work in Progress*
-
     tarball
         *Work in Progress*
 
