@@ -1004,6 +1004,9 @@ Glossary
     URI
         Abbreviation for :term:`Uniform Resource Identifier`
 
+    URL
+        Abbreviation for :term:`Uniform Resource Locator`
+
     US
         Abbreviation for :term:`Ubuntu Summit`
 
