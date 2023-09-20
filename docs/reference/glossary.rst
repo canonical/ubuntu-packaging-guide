@@ -353,6 +353,10 @@ Glossary
     Debian System Administration
         *Work in Progress*
 
+    deb
+    debs
+        `.deb` is the file extension of a :term:`Debian` :term:`Binary Package`.
+
     Developer Membership Board
         *Work in Progress*
 
