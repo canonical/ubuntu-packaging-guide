@@ -566,6 +566,11 @@ Glossary
 
         See also: `Reduced instruction set computer (Wikipedia) <https://en.wikipedia.org/wiki/Reduced_instruction_set_computer>`_
 
+    Request for Comments
+        *Work in Progress*
+
+        See also: `Request for Comments (Wikipedia) <https://en.wikipedia.org/wiki/Request_for_Comments>`_
+
     Request of Maintainer
         *Work in Progress*
 
