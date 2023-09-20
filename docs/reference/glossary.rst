@@ -242,6 +242,20 @@ Glossary
     diff
         *Work in Progress*
 
+    Distribution
+        In general, a software *distribution* (also called *"distro"*) is a set of
+        software components that is distributed as a whole to users.
+
+        Usually people think specifically of :term:`Linux` *distributions*. A :term:`Linux`
+        *distribution* (or distro), is a complete :term:`Operating System` based on the
+        :term:`Linux` :term:`Kernel`. It includes essential system components, software
+        applications, and :term:`Package Management Tools <Package Manager>`, tailored
+        to a specific purpose or user preferences. :term:`Linux` distributions vary
+        in features, desktop environments, and software :term:`Repositories <Repository>`,
+        allowing users to choose the one that best suits their needs.
+
+        See also: `Linux distribution (Wikipedia) <https://en.wikipedia.org/wiki/Linux_distribution>`_
+
     DMB
         Abbreviation for :term:`Developer Membership Board`
 
