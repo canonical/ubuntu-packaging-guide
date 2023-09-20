@@ -741,6 +741,11 @@ Glossary
     Ubuntu Cloud Archive
         *Work in Progress* (see https://wiki.ubuntu.com/OpenStack/CloudArchive)
 
+    Ubuntu Code of Conduct
+        *Work in Progress*
+
+        See: https://ubuntu.com/community/ethos/code-of-conduct
+
     Ubuntu CVE Tracker
         *Work in Progress* (see https://launchpad.net/ubuntu-cve-tracker and https://ubuntu.com/security/cves)
 
