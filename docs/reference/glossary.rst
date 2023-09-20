@@ -313,6 +313,9 @@ Glossary
     Free and Open Source Software
         *Work in Progress* (see https://en.wikipedia.org/wiki/Free_and_open-source_software)
 
+    Free Software
+        *Work in Progress*
+
     FTBFS
         Abbreviation for :term:`Failed to build from Source`
 
