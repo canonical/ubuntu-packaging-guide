@@ -1155,7 +1155,10 @@ Glossary
         See also: `Unix (Wikipedia) <https://en.wikipedia.org/wiki/Unix>`_
 
     Upstream
-        *Work in Progress*
+        A software project (and associated entities), another software project
+        depends on directly or indirectly.
+
+        See :ref:`Upstream (explanation) <Upstream>`
 
     URI
         Abbreviation for :term:`Uniform Resource Identifier`
