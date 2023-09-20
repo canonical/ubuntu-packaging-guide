@@ -1,3 +1,5 @@
+.. _GitHub: https://github.com/
+
 .. _Edubuntu: https://edubuntu.org/
 .. _Kubuntu: https://kubuntu.org/
 .. _Lubuntu: https://lubuntu.me/
