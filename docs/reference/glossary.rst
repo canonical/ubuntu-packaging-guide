@@ -240,7 +240,12 @@ Glossary
         *Work in Progress* (see https://wiki.ubuntu.com/DeveloperMembershipBoard)
 
     diff
-        *Work in Progress*
+        A text format that shows the difference between files that are compared.
+        A file that contains text in this format usually has the file extension `.diff`.
+        This file format does not work well for comparing files in a non-text encoded
+        fromat (e.g. ``.bin``, ``.png``, ``.jpg``).
+
+        See also :manpage:`diff(1)`, :manpage:`git-diff(1)`
 
     Distribution
         In general, a software *distribution* (also called *"distro"*) is a set of
