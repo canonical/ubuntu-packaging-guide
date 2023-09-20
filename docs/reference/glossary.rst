@@ -423,7 +423,9 @@ Glossary
         Abbreviation for :term:`End-user license agreement`
 
     Extended Security Maintenance
-        *Work in Progress* (see https://ubuntu.com/esm)
+        *Work in Progress*
+        
+        See also: `Expanded Security Maintenance (homepage) <https://ubuntu.com/esm>`_
 
     Failed to build from Source
         *Work in Progress*
