@@ -751,7 +751,9 @@ Glossary
         *Work in Progress* (see https://wiki.ubuntu.com/DeveloperSummit)
 
     Ubuntu IRC Council
-        *Work in Progress* (see https://wiki.ubuntu.com/IRC/IrcCouncil)
+        *Work in Progress*
+
+        See also: `IRC Council (Ubuntu Wiki) <https://wiki.ubuntu.com/IRC/IrcCouncil>`_
 
     Ubuntu Pro
         *Work in Progress*
