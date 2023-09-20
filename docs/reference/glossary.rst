@@ -85,11 +85,20 @@ Glossary
         Abbreviation for :term:`Continuous Integration`
 
     Circle of Friends
-        The Ubuntu logo is called *Circle of Friends*, because it is derived
+        The :term:`Ubuntu` logo is called *Circle of Friends*, because it is derived
         from a picture that shows three friends extending their arms,
         overlapping in the shape of a circle. It should represent the
         `core values of Ubuntu <https://design.ubuntu.com/brand>`_:
         *Freedom*, *Reliable*, *Precise* and *Collaborative*.
+
+        .. image:: ../images/reference/glossary/CoF-Square.svg
+            :width: 200
+            :height: 200
+            :alt: Circle of Friends (Ubuntu Logo)
+        
+        .. image:: ../images/reference/glossary/Old-Ubuntu-Login-Background.jpg
+            :height: 200
+            :alt: Old Ubuntu-Login background showing three people in a circle holding hands.
 
     CLA
         Abbreviation for :term:`Contributor Licence Agreement`
