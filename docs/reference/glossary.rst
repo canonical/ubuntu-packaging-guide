@@ -509,6 +509,7 @@ Glossary
         *Work in Progress*
 
     s390x
+        *Work in Progress*
 
     Service-level Agreement
         *Work in Progress*
@@ -535,8 +536,10 @@ Glossary
         *Work in Progress*
 
     Subversion
+        *Work in Progress*
 
     SVN
+        *Work in Progress*
 
     tarball
         *Work in Progress*
