@@ -10,7 +10,8 @@ support matrices, and so on.
 .. toctree::
    :maxdepth: 1
 
-   reference/debian-dir-overview
+   reference/debian-dir-overview.rst
+   reference/architectures.rst
    reference/package-tests.rst
    reference/package-version-format.rst
    reference/source-package-formats.rst

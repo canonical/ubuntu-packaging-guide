@@ -25,7 +25,16 @@ Glossary
         *Work in Progress*
 
     APT
-        Abbreviation for *Advanced Package Manager*. See :ref:`apt`
+        Abbreviation for *Advanced Package Manager*. 
+        
+        See: :doc:`/reference/apt`
+
+    Architecture
+        Within the context of :term:`Ubuntu`, this refers to the system architecture
+        (more specifically, the CPU architecture and its instruction set) an application
+        is designed for.
+
+        See also: :doc:`/reference/architectures`, `Computer Architecture (Wikipedia) <https://en.wikipedia.org/wiki/Computer_architecture>`_
 
     Architecture Not Allowed In Source
         *Work in Progress*
@@ -51,6 +60,11 @@ Glossary
     Bazaar
         *Work in Progress*
 
+    Big-Endian
+        *Work in Progress*
+
+        See also: :term:`Endianness`
+
     Binaries
         *Work in Progress*
 
@@ -71,6 +85,10 @@ Glossary
 
     BZR
         Abbreviation for :term:`Bazaar`
+
+    Central Processing Unit
+        The main component of a computer, that is responsible for executing the instructions
+        of a computer program, such as arithmetic, logic, and input/output (I/O) operations.
 
     Certified Ubuntu Engineer
         Develop and certify your skills on the world's most popular :term:`Linux` :term:`OS`. https://ubuntu.com/credentials
@@ -100,6 +118,9 @@ Glossary
             :height: 200
             :alt: Old Ubuntu-Login background showing three people in a circle holding hands.
 
+    CISC
+        Abbreviation for :term:`Complex Instruction Set` Computer
+
     CLA
         Abbreviation for :term:`Contributor Licence Agreement`
 
@@ -124,6 +145,14 @@ Glossary
     Common Vulnerabilities and Exposures
         *Work in Progress*
 
+    Complex Instruction Set
+        A :term:`CPU` :term:`Architecture` featuring a rich and diverse set of instructions,
+        often capable of performing complex operations in a single instruction. :term:`CISC`
+        processors aim to minimize the number of instructions needed to complete a task,
+        potentially sacrificing execution speed for instruction richness.
+
+        See also: `Complex instruction set computer (Wikipedia) <https://en.wikipedia.org/wiki/Complex_instruction_set_computer>`_
+
     Continuous Integration
         *Work in Progress*
 
@@ -144,6 +173,9 @@ Glossary
 
     Copyright File
         *Work in Progress*
+
+    CPU
+        Abbreviation for :term:`Central Processing Unit`
 
     CRD
         Abbreviation for :term:`Coordinated Release Date`
@@ -186,6 +218,11 @@ Glossary
 
     End-user license agreement
         *Work in Progress*
+
+    Endianness
+        *Work in Progress*
+
+        See also: :term:`Little-Endian`, :term:`Big-Endian`, `Endianness (Wikipedia) <https://en.wikipedia.org/wiki/Endianness>`_
 
     EoL
         Abbreviation for either :term:`End of Life` or :term:`End of Line`
@@ -328,6 +365,11 @@ Glossary
     Linux Containers
         See :term:`LXC`
 
+    Little-Endian
+        *Work in Progress*
+
+        See also: :term:`Endianness`
+
     Long Term Support
         *Work in Progress*
 
@@ -464,6 +506,16 @@ Glossary
     Rebase
         *Work in Progress*
 
+    Reduced Instruction Set
+        a :term:`CPU`  characterized by a simplified and streamlined
+        set of instructions, optimized for efficient and fast execution of basic operations.
+        :term:`RISC` processors typically prioritize speed over complexity.
+
+        Examples of :term:`RISC` :term:`Architectures <Architecture>` are :term:`arm64`,
+        :term:`armhf`, :term:`RISC-V`, :term:`ppc64el`, and :term:`PowerPC`.
+
+        See also: `Reduced instruction set computer (Wikipedia) <https://en.wikipedia.org/wiki/Reduced_instruction_set_computer>`_
+
     Request of Maintainer
         *Work in Progress*
 
@@ -481,6 +533,9 @@ Glossary
 
     Restricted
         *Work in Progress* (the pocket)
+
+    RISC
+        Abbreviation for :term:`Reduced Instruction Set` Computer
 
     RISC-V
         *Work in Progress*
