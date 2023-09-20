@@ -714,6 +714,13 @@ Glossary
 
         See: :doc:`Main Inclusion Review (explanation article) </explanation/main-inclusion-review>`
 
+    Mirror
+        A server that *"mirrors"* (replicates and keeps in sync) the content of another
+        server to distribute network traffic, reduce latency, and provide redundancy,
+        ensuring high availability and fault tolerance.
+
+        See also: :term:`Archive Mirror`, :term:`CD Mirror`
+
     MOTU
         Abbreviation for :term:`Masters of the Universe`
 
