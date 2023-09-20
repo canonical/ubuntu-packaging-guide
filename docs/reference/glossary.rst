@@ -746,6 +746,12 @@ Glossary
     National Institute of Standards and Technology
         *Work in Progress*
 
+    Native Package
+        *Native source packages* are :term:`Source Packages <Source Package>` that
+        are their own :term:`Upstream`, therefore they do not have an :term:`orig tarball`.
+
+        See: :ref:`Native Source Packages (explanation) <NativeSourcePackages>`
+
     Not built from Source
         *Work in Progress*
 
