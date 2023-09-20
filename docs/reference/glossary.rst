@@ -684,7 +684,14 @@ Glossary
         *Work in Progress*
 
     Patch
-        *Work in Progress*
+        A *patch* is a (often small) piece of code or a software update designed
+        to fix or improve a computer program or system. It is typically applied
+        to address :term:`Security Vulnerabilities <Common Vulnerabilities and Exposures>`,
+        :term:`Bugs <Bug>`, or enhance functionality, ensuring the software remains
+        up-to-date and reliable. *Patches* are essential for maintaining software
+        integrity and security.
+
+        See also: `Patch (Wikipedia) <https://en.wikipedia.org/wiki/Patch_(computing)>`_
 
     PCRE
         Abbreviation for :term:`Perl Compatible Regular Expressions`
