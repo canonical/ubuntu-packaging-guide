@@ -483,6 +483,9 @@ Glossary
     Never Part Of A Stable Release
         *Work in Progress*
 
+    NIST
+        Abbreviation for :term:`National Institute of Standards and Technology`
+
     NPOASR
         Abbreviation for :term:`Never Part Of A Stable Release`
 
