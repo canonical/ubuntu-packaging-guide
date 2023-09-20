@@ -488,7 +488,20 @@ Glossary
         *Work in Progress*
 
     GNU
-        *Work in Progress*
+        *GNU* is a recursive acronym for *"GNU's Not Unix!"*. It is a collection
+        of :term:`Free and Open Source Software` that can be used as an :term:`Operating System`
+        and aims to respect its users' freedom. The collection of
+        :term:`Free and Open Source Software` is often used with :term:`Unix`-like
+        kernels like :term:`Linux` (these :term:`Distributions <Distribution>` are
+        commonly referred to as *"GNU/Linux"*).
+
+        For example, :term:`Debian` and :term:`Ubuntu` are *GNU/Linux*
+        :term:`Distributions <Distribution>`.
+
+        Most of the *GNU* software is licensed under the *GNU*
+        :term:`General Public License` (:term:`GPL`).
+
+        See also: `GNU (Wikipedia) <https://en.wikipedia.org/wiki/GNU>`_, `www.gnu.org <https://www.gnu.org>`_
 
     GPL
         Abbreviation for :term:`GNU` :term:`General Public License`
