@@ -5,9 +5,12 @@ Glossary
 
     80x86
         See :term:`i386`
-        
+
     AA
         Abbreviation for :term:`Archive Admin`
+
+    AArch32
+        See :term:`armhf`
 
     ABI
         Abbreviation for :term:`Application Binary Interface`
