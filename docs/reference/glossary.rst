@@ -150,7 +150,15 @@ Glossary
         Abbreviation for :term:`Bug Tracking System`
 
     Bug
-        *Work in Progress*
+        In software development a *"bug"* refers to unintended or unexpected behaviour
+        of a computer program or system that produce incorrect results, or crashes.
+        *Bugs* can occur due to programming mistakes, design issues, or unexpected
+        interactions between different parts of the software.
+        
+        Identifying and fixing *Bugs* is a fundamental part of the software development
+        process to ensure that the software functions as intended and is free of errors.
+
+        See also: `Software bug (Wikipedia) <https://en.wikipedia.org/wiki/Software_bug>`_
 
     Bug Tracking System
         A platform used by software development teams to manage and monitor the progress
