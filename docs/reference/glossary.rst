@@ -510,6 +510,11 @@ Glossary
     Patch
         *Work in Progress*
 
+    Perl Compatible Regular Expressions
+        *Work in Progress*
+        
+        See also: `PCRE (Reference Implementation) <https://www.pcre.org/>`_
+
     Personal Package Archive
         *Work in Progress*
 
