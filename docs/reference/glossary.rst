@@ -237,7 +237,9 @@ Glossary
         *Work in Progress*
 
     Developer Membership Board
-        *Work in Progress* (see https://wiki.ubuntu.com/DeveloperMembershipBoard)
+        *Work in Progress*
+
+        See also: `Developer Membership Board (Ubuntu Wiki) <https://wiki.ubuntu.com/DeveloperMembershipBoard>`_
 
     diff
         A text format that shows the difference between files that are compared.
