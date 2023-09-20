@@ -140,6 +140,12 @@ Glossary
     Binaries
         *Work in Progress*
 
+    Binary Package
+        A :term:`Debian` *binary package* is a standardized format with the file extension
+        :file:`.deb` that the :term:`Package Manager` (:manpage:`dpkg(1)` or :manpage:`apt(8)`)
+        can understand to install and uninstall software on a target machine to simplify
+        distributing software to a target machine and managing software on a target machine.
+
     Branch
         *Work in Progress*
 
