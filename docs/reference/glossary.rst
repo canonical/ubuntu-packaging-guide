@@ -574,6 +574,9 @@ Glossary
 
         See also: `Reduced instruction set computer (Wikipedia) <https://en.wikipedia.org/wiki/Reduced_instruction_set_computer>`_
 
+    RegEx
+        Abbreviation for :term:`Regular Expression`
+
     Regular Expression
         A sequence of characters that specifies a text-matching pattern. String-search
         algorithms usually use these patterns for input validation or find (and replace)
