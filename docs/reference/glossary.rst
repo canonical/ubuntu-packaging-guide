@@ -758,6 +758,9 @@ Glossary
 
         See: `Ubuntu Pro (homepage) <https://ubuntu.com/pro>`_
 
+    Ubuntu Server
+        *Work in Progress*
+
     Ubuntu Summit
         See :term:`Ubuntu Developer Summit`
 
