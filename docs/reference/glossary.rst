@@ -589,6 +589,9 @@ Glossary
     Restricted
         *Work in Progress* (the pocket)
 
+    RFC
+        Abbreviation for :term:`Request for Comments`
+
     RISC
         Abbreviation for :term:`Reduced Instruction Set` Computer
 
