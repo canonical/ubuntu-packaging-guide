@@ -725,6 +725,12 @@ Glossary
     Watch File
         *Work in Progress*
 
+    Whitespace
+        *Whitespace* characters refer to characters in a text (especially :term:`Source Code`)
+        that are used for formatting and spacing, but do not produce visible marks
+        or symbols when rendered. Common *Whitespace* characters include spaces,
+        tabs, and newline characters.
+
     WoU
         Abbreviation for :term:`Waiting on Upstream`
 
