@@ -369,6 +369,9 @@ Glossary
     debs
         `.deb` is the file extension of a :term:`Debian` :term:`Binary Package`.
 
+    Devel
+        Shorthand term for the :term:`Current Release in Development`.
+
     Developer Membership Board
         *Work in Progress*
 
