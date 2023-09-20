@@ -269,6 +269,8 @@ Glossary
     Code of Conduct
         *Work in Progress*
 
+        See also: :term:`Ubuntu Code of Conduct`
+
     Code Review
         *Work in Progress*
 
