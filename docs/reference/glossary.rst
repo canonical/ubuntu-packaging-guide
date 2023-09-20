@@ -353,7 +353,9 @@ Glossary
         *Work in Progress*
 
     IBM
-        *Work in Progress* Abbreviation for *International Business Machines* (see https://www.ibm.com/)
+        *Work in Progress* Abbreviation for *International Business Machines*
+
+        Find more information on the `IBM website <https://www.ibm.com/>`_.
 
     IBM zSystems
         *Work in Progress*
