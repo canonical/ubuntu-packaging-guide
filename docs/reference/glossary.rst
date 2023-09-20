@@ -438,7 +438,12 @@ Glossary
         *Work in Progress*
 
     Federal Information Processing Standards
-        *Work in Progress* (see https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)
+        A set of standards and guidelines of the United States federal government
+        developed by :term:`National Institute of Standards and Technology` (:term:`NIST`)
+        to ensure the security and interoperability of computer systems and software
+        used by non-military federal agencies and its contractors.
+            
+        See also: `Federal Information Processing Standards (Wikipedia) <https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards>`_
 
     FFE
         Abbreviation for :term:`Feature Freeze Exception`
