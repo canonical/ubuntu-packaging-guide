@@ -29,6 +29,10 @@ exclude_patterns = ['.sphinx/venv/*']
 
 manpages_url = 'https://manpages.ubuntu.com/manpages/mantic/en/man{section}/{page}.{section}.html'
 
+rst_epilog = """
+.. include:: /reuse/links.rst
+"""
+
 # Sphinx-copybutton config options:
 # 1) prompt to be stripped from copied code.
 # 2) Set to copy all lines (not just prompt lines) to ensure multiline snippets
