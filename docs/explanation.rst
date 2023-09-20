@@ -10,7 +10,7 @@ knowledge and become better at packaging and development.
 .. toctree::
    :maxdepth: 1
 
-   explanation/ubuntu-release-cadence.rst
+   explanation/releases.rst
    explanation/launchpad-and-archive.rst
    explanation/upstream-and-downstream.rst
    explanation/package-model.rst
