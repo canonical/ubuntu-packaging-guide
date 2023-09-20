@@ -1,5 +1,2 @@
-.. _transitions:
-
-===========
 Transitions
 ===========

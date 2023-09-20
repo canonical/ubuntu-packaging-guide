@@ -1,6 +1,3 @@
-..  _install-built-packages:
-
-======================
 Install built packages
 ======================
 

@@ -1,5 +1,2 @@
-.. _backports:
-
-=========
 Backports
 =========

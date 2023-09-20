@@ -1,5 +1,2 @@
-.. _sponsoring:
-
-==========
 Sponsoring
 ==========

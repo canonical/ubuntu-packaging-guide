@@ -1,5 +1,3 @@
-.. reference_index:
-
 Reference
 *********
 

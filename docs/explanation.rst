@@ -1,5 +1,3 @@
-.. _explanation_index:
-
 Explanation
 ***********
 

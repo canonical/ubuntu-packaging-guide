@@ -1,5 +1,3 @@
-.. _index:
-
 Ubuntu Packaging Guide
 ======================
 
@@ -13,7 +11,7 @@ Ubuntu Packaging Guide
    As part of this overhaul we have moved the source code to a GitHub
    repository to make contributing easier. If you are an experienced packager
    and would like to contribute, we would love for you to be involved! See
-   :ref:`our contribution page <contribute>` for details of how to join in.
+   :doc:`our contribution page </contribute>` for details of how to join in.
 
 Welcome to the Ubuntu Packaging and Development Guide!
 
@@ -107,9 +105,9 @@ any of the `IRC channels`_. You may find especially these channels useful in the
 
 * ``#ubuntu-devel``, for general development discussion
 * ``#ubuntu-motu``, for `Masters of the Universe`_ (MOTU) team discussion and
-generally getting help.
+  generally getting help.
 * ``#ubuntu-meeting``, meetings are held here by various Ubuntu teams and everyone
-is welcome to participate.
+  is welcome to participate.
 
 You can follow these `instructions`_ on how to connect to ``irc.libera.chat``.
 Also, when you join ``irc.libera.chat`` for the first time, you should follow the

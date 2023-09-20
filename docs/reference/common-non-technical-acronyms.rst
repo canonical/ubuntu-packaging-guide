@@ -1,6 +1,3 @@
-.. _common-non-technical-acronyms:
-
-=============================
 Common non-technical Acronyms
 =============================
 
