@@ -493,7 +493,13 @@ Glossary
         *Work in Progress*
 
     Operating System
-        *Work in Progress*
+        An *operating system* (OS) is essential system software that manages computer
+        hardware and software resources. It provides crucial services for computer
+        programs, including hardware control, task scheduling, memory management,
+        file operations, and user interfaces, simplifying program development and
+        execution.
+
+        See also: `Operating system (Wikipedia) <https://en.wikipedia.org/wiki/Operating_system>`_
 
     orig tarball
         *Work in Progress*
