@@ -497,7 +497,11 @@ Glossary
         Abbreviation for Graphical :term:`User Interface`
 
     i386
-        *Work in Progress*
+        :term:`CPU` :term:`Architecture` identifier (also known as :term:`Intel x86`,
+        :term:`80x86`, and :term:`x86`), that was originally released as 80386; a
+        32-Bit Microprocessor by Intel.
+
+        See also: `i386 (Wikipedia) <https://en.wikipedia.org/wiki/I386>`_
 
     IBM
         *Work in Progress* Abbreviation for *International Business Machines*
