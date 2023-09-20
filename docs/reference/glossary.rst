@@ -647,6 +647,9 @@ Glossary
     Stack
         *Work in Progress*
 
+    Staging Environment
+        *Work in Progress*
+
     tarball
         *Work in Progress*
 
