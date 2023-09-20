@@ -405,7 +405,7 @@ Glossary
         See: `Chapter 5. Control files and their fields (Debian Policy Manual v4.6.2.0) <https://www.debian.org/doc/debian-policy/ch-controlfields.html>`_
 
     End of Life
-        *Work in Progress*
+        Refers to the :term:`End of Support` (Life) for a product/software.
 
     End of Line
         *Work in Progress*
