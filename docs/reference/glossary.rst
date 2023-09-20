@@ -987,6 +987,12 @@ Glossary
     US
         Abbreviation for :term:`Ubuntu Summit`
 
+    User Experience
+        The overall experience and satisfaction a user has while interacting with
+        a product or system. It considers usability, accessibility, user flow, and
+        the emotional response of users to ensure a positive and efficient interaction
+        with the :term:`User Interface` and the product as a whole.
+
     User Interface
         *Work in Progress*
 
