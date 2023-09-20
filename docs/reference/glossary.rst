@@ -450,6 +450,9 @@ Glossary
     Merge
         *Work in Progress*
 
+    Merge Conflict
+        *Work in Progress*
+
     Merge Proposal
         *Work in Progress*
 
