@@ -574,6 +574,14 @@ Glossary
 
         See also: `Reduced instruction set computer (Wikipedia) <https://en.wikipedia.org/wiki/Reduced_instruction_set_computer>`_
 
+    Regular Expression
+        A sequence of characters that specifies a text-matching pattern. String-search
+        algorithms usually use these patterns for input validation or find (and replace)
+        operations on strings.
+
+        While this general term stems from theoretical computer science and formal language
+        theory, people usually think of :term:`Perl Compatible Regular Expressions` (:term:`PCRE`).
+
     Request for Comments
         *Work in Progress*
 
