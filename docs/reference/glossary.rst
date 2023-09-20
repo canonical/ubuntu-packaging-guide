@@ -12,6 +12,9 @@ Glossary
     AArch32
         See :term:`armhf`
 
+    AArch64
+        See :term:`arm64`
+
     ABI
         Abbreviation for :term:`Application Binary Interface`
 
