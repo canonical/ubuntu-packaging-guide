@@ -158,6 +158,17 @@ Glossary
     BZR
         Abbreviation for :term:`Bazaar`
 
+    Canonical
+        *Canonical Ltd.* is a UK-based private company that is devoted to the
+        :term:`Free and Open Source Software` philosophy and created several
+        notable software projects, including :term:`Ubuntu`. *Canonical* offers
+        commercial support for :term:`Ubuntu` and related services and is responsible
+        for delivering six-monthly milestone releases and regular :term:`LTS` releases
+        for enterprise production use, as well as security updates, support and the
+        entire online infrastructure for community interaction.
+
+        Find out more on the Canonical website: `canonical.com <https://canonical.com/>`_
+
     Central Processing Unit
         The main component of a computer, that is responsible for executing the instructions
         of a computer program, such as arithmetic, logic, and input/output (I/O) operations.
