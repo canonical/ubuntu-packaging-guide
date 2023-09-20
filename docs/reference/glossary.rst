@@ -92,6 +92,8 @@ Glossary
     Archive Mirror
         A :term:`Mirror` of the :term:`Ubuntu Archive`.
 
+        See the section :ref:`ArchiveMirrors` for more details.
+
     ARM
         *ARM* (formerly an acronym for *Advanced RISC Machines* and originally
         *Acorn RISC Machine*) is a widely used family of :term:`RISC` :term:`CPU`
@@ -217,6 +219,9 @@ Glossary
 
         Find out more on the Canonical website: `canonical.com <https://canonical.com/>`_
 
+    CD
+        Abbreviation for :term:`Continuous Delivery`
+
     CD Mirror
         A :term:`Mirror` of the :term:`Ubuntu` :term:`Image` archive
         (`cdimage.ubuntu.com <https://cdimage.ubuntu.com/>`_).
@@ -306,8 +311,38 @@ Glossary
 
         See also: `Complex instruction set computer (Wikipedia) <https://en.wikipedia.org/wiki/Complex_instruction_set_computer>`_
 
+    Component
+        *Components* are logical subdivisions or namespaces of the :term:`Packages <Package>`
+        in a :ref:`ArchiveSuite`. The :term:`APT` :term:`Package Manager` can individually
+        subscribe to the *components* of a :ref:`ArchiveSuite`.
+
+        The :term:`Packages <Package>` of an :term:`Ubuntu` :ref:`ArchiveSeries` are categorized
+        if they are :term:`Open Source Software` and part of the Base :term:`Packages <Package>`
+        for a given :ref:`ArchiveSeries` and sorted into the *components*
+        :ref:`ArchiveComponents_Main`,
+        :ref:`ArchiveComponents_Restricted`,
+        :ref:`ArchiveComponents_Universe`, or
+        :ref:`ArchiveComponents_Multiverse`, as shown in the following table:
+
+        +----------------------------+-----------------------------------+-------------------------------------+
+        |                            | :term:`Open Source Software`      | :term:`Closed Source Software`      |
+        +----------------------------+-----------------------------------+-------------------------------------+
+        | **Ubuntu Base Packages**   | :ref:`ArchiveComponents_Main`     | :ref:`ArchiveComponents_Restricted` |
+        +----------------------------+-----------------------------------+-------------------------------------+
+        | **Community Packages**     | :ref:`ArchiveComponents_Universe` | :ref:`ArchiveComponents_Multiverse` |
+        +----------------------------+-----------------------------------+-------------------------------------+
+
+        See: :ref:`Components (explanation) <ArchiveComponents>`
+
+    Continuous Delivery
+        *Work in Progress*
+
+        See also: `Continuous delivery (Wikipedia) <https://en.wikipedia.org/wiki/Continuous_delivery>`_
+
     Continuous Integration
         *Work in Progress*
+
+        See also: `Continuous integration (Wikipedia) <https://en.wikipedia.org/wiki/Continuous_integration>`_
 
     Contributor Licence Agreement
         *Work in Progress*
@@ -686,7 +721,11 @@ Glossary
         LXD is system container manager (see https://documentation.ubuntu.com/lxd/en/latest/)
 
     Main
-        *Work in Progress* (the pocket)
+        A :term:`Component` of every :term:`Ubuntu` :ref:`ArchiveSeries` in the
+        :term:`Ubuntu Archive` that contains :term:`Open Source <Open Source Software>`
+        :term:`Packages <Package>` which are supported and maintained by :term:`Canonical`.
+
+        See: :ref:`ArchiveComponents`
 
     Main Inclusion Review
         The review process when a :term:`Package` in :term:`Universe` or :term:`Multiverse`
@@ -741,7 +780,13 @@ Glossary
         Abbreviation for :term:`Micro Release Exception`
 
     Multiverse
-        *Work in Progress* (the pocket)
+        A :term:`Component` of every :term:`Ubuntu` :ref:`ArchiveSeries` in the
+        :term:`Ubuntu Archive` that contains :term:`Packages <Package>` of
+        :term:`Closed Source Software` or :term:`Open Source Software` restricted by
+        copyright or legal issues. These :term:`Packages <Package>` are maintained and supported by
+        the :term:`Ubuntu` community.
+
+        See: :ref:`ArchiveComponents`
 
     National Institute of Standards and Technology
         *Work in Progress*
@@ -832,7 +877,13 @@ Glossary
         Abbreviation for :term:`Public Key Cryptography Standards`
 
     Pocket
-        *Work in Progress*
+        A *pocket* is a :term:`Package` sub-:term:`repository <Repository>` within
+        the :term:`Ubuntu Archive`. Every :term:`Ubuntu` :term:`Series` has the *pockets*
+        :ref:`ArchivePockets_Release`, :ref:`ArchivePockets_Security`,
+        :ref:`ArchivePockets_Updates`, :ref:`ArchivePockets_Proposed`, and
+        :ref:`ArchivePockets_Backports`.
+
+        See: :ref:`Pockets (explanation) <ArchivePockets>`
 
     POSIX
         Abbreviation for *Portable Operating System Interface*: A family of
@@ -922,7 +973,11 @@ Glossary
         *Work in Progress*
 
     Restricted
-        *Work in Progress* (the pocket)
+        A :term:`Component` of every :term:`Ubuntu` :ref:`ArchiveSeries` in the
+        :term:`Ubuntu Archive` that contains :term:`Closed Source <Closed Source Software>`
+        :term:`Packages <Package>` which are supported and maintained by :term:`Canonical`.
+
+        See: :ref:`ArchiveComponents`
 
     RFC
         Abbreviation for :term:`Request for Comments`
@@ -963,6 +1018,13 @@ Glossary
 
     s390x
         *Work in Progress*
+
+    Series
+        A *series* refers to the :term:`Packages <Package>` in the :term:`Ubuntu Archive`
+        that target a specific :term:`Ubuntu` version. A *series* is usually referred
+        to by its :term:`Codename`.
+
+        See: :ref:`Series (explanation) <ArchiveSeries>`
 
     Service-level Agreement
         *Work in Progress*
@@ -1168,7 +1230,12 @@ Glossary
         See also: `URL (Wikipedia) <https://en.wikipedia.org/wiki/URL>`_
 
     Universe
-        *Work in Progress* (the pocket)
+        A :term:`Component` of every :term:`Ubuntu` :ref:`ArchiveSeries` in the
+        :term:`Ubuntu Archive` that contains :term:`Open Source <Open Source Software>`
+        :term:`Packages <Package>` which are supported and maintained by the :term:`Ubuntu`
+        community.
+
+        See: :ref:`ArchiveComponents`
 
     Unix
         *Unix* is an :term:`Operating System` whose development started in the late 1960s
