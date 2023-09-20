@@ -988,7 +988,11 @@ Glossary
         *Work in Progress*
 
     Watch File
-        *Work in Progress*
+        The :file:`debian/watch` file in a :term:`Source Package`.
+
+        See: :doc:`/reference/debian-dir-overview`
+
+        See also: :manpage:`uscan(1)`, `Section 4.11. Upstream source location (Debian Policy Manual v4.6.2.0) <https://www.debian.org/doc/debian-policy/ch-source.html#upstream-source-location-debian-watch>`_
 
     Whitespace
         *Whitespace* characters refer to characters in a text (especially :term:`Source Code`)
