@@ -337,6 +337,16 @@ Glossary
     CUE
         Abbreviation for :term:`Certified Ubuntu Engineer`
 
+    Current Release in Development
+        :term:`Ubuntu` follows a strict time-based release cycle. Every six months a
+        new :term:`Ubuntu` version is released.
+
+        The *"Current Release in Development"* is the :term:`Ubuntu` version that is
+        in development for the next release at any given time. It is also often referred
+        to as "devel".
+
+        See: :doc:`Ubuntu Releases (explanation) </explanation/releases>`
+
     CVE
         Abbreviation for :term:`Common Vulnerabilities and Exposures`
 
