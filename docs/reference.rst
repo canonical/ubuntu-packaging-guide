@@ -14,7 +14,6 @@ support matrices, and so on.
    reference/architectures.rst
    reference/package-tests.rst
    reference/package-version-format.rst
-   reference/source-package-formats.rst
    reference/git-ubuntu.rst
    reference/apt.rst
    reference/debian-policy.rst
