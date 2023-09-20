@@ -144,7 +144,10 @@ Glossary
         *Work in Progress*
 
     Breezy
-        A fork of the :term:`Bazaar` version control system.
+        A :term:`Fork` of the :term:`Bazaar` :term:`Version Control System`.
+
+        See also: `Breezy (Launchpad) <https://launchpad.net/brz>`_,
+        `www.breezy-vcs.org <https://www.breezy-vcs.org/>`_
 
     BTS
         Abbreviation for :term:`Bug Tracking System`
