@@ -754,7 +754,9 @@ Glossary
         *Work in Progress* (see https://wiki.ubuntu.com/IRC/IrcCouncil)
 
     Ubuntu Pro
-        *Work in Progress* (see https://ubuntu.com/pro)
+        *Work in Progress*
+
+        See: `Ubuntu Pro (homepage) <https://ubuntu.com/pro>`_
 
     Ubuntu Summit
         See :term:`Ubuntu Developer Summit`
