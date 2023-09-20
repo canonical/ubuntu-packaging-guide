@@ -471,6 +471,9 @@ Glossary
     Multiverse
         *Work in Progress* (the pocket)
 
+    National Institute of Standards and Technology
+        *Work in Progress*
+
     Not built from Source
         *Work in Progress*
 
