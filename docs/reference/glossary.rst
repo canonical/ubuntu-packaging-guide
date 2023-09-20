@@ -311,7 +311,9 @@ Glossary
         Abbreviation for :term:`Feature Request`
 
     Free and Open Source Software
-        *Work in Progress* (see https://en.wikipedia.org/wiki/Free_and_open-source_software)
+        *Work in Progress*
+
+        See also: `Free and open-source software (Wikipedia) <https://en.wikipedia.org/wiki/Free_and_open-source_software>`_
 
     Free Software
         *Work in Progress*
