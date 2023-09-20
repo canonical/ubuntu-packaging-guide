@@ -809,7 +809,11 @@ Glossary
         Abbreviation for :term:`Real Time Operating System`
 
     Rules File
-        *Work in Progress*
+        The :file:`debian/rules` file in a :term:`Source Package`.
+
+        See: :doc:`/reference/debian-dir-overview`
+
+        See also: `Section 4.9. Main building script (Debian Policy Manual v4.6.2.0) <https://www.debian.org/doc/debian-policy/ch-source.html#main-building-script-debian-rules>`_
 
     s390x
         *Work in Progress*
