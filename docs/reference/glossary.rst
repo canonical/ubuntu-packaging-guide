@@ -975,6 +975,11 @@ Glossary
     UIFe
         Abbreviation for :term:`User Interface Freeze Exception`
 
+    Uniform Resource Identifier
+        *Work in Progress*
+
+        See also: `Uniform Resource Identifier (Wikipedia) <https://en.wikipedia.org/wiki/Uniform_Resource_Identifier>`_
+
     Universe
         *Work in Progress* (the pocket)
 
