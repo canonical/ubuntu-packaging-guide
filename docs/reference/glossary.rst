@@ -269,6 +269,9 @@ Glossary
     Code of Conduct
         *Work in Progress*
 
+    Code Review
+        *Work in Progress*
+
     CoF
         Abbreviation for :term:`Circle of Friends`
 
