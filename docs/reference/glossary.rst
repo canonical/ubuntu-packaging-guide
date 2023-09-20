@@ -202,6 +202,9 @@ Glossary
     CoC
         Abbreviation for :term:`Code of Conduct`
 
+    Codename
+        *Work in Progress*
+
     Code of Conduct
         *Work in Progress*
 
