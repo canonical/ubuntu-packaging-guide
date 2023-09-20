@@ -3,7 +3,3 @@
 ============================
 Stable Release Updates (SRU)
 ============================
-
-.. caution::
-
-    Work in progress!

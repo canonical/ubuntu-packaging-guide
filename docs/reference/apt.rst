@@ -3,7 +3,3 @@
 ===
 APT
 ===
-
-.. caution::
-
-    Work in progress!

@@ -4,10 +4,6 @@
 Get the Source of a Package
 ===========================
 
-.. caution::
-
-    Work in progress!
-
 Before you can work on a packge you need to get the source code of a given 
 package. This article presents multiple ways how you can achive this.
 

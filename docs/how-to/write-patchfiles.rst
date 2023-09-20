@@ -3,7 +3,3 @@
 ================
 Write patchfiles
 ================
-
-.. caution::
-
-    Work in progress!

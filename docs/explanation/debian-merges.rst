@@ -3,7 +3,3 @@
 =============
 Debian Merges
 =============
-
-.. caution::
-
-    Work in progress!

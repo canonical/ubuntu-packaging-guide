@@ -3,7 +3,3 @@
 ==============
 ``git-ubuntu``
 ==============
-
-.. caution::
-
-    Work in progress!

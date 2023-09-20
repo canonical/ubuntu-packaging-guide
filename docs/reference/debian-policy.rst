@@ -3,7 +3,3 @@
 =============
 Debian Policy
 =============
-
-.. caution::
-
-    Work in progress!

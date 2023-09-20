@@ -3,7 +3,3 @@
 ============
 Debian Syncs
 ============
-
-.. caution::
-
-    Work in progress!

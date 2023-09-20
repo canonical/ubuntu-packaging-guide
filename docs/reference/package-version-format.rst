@@ -3,7 +3,3 @@
 ======================
 Package version format
 ======================
-
-.. caution::
-
-    Work in progress!

@@ -3,7 +3,3 @@
 =====================
 Upstream & Downstream
 =====================
-
-.. caution::
-
-    Work in progress!

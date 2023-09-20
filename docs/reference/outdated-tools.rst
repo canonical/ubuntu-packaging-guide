@@ -3,7 +3,3 @@
 ================================
 (To be) Outdated packaging tools
 ================================
-
-.. caution::
-
-    Work in progress!

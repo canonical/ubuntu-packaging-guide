@@ -3,7 +3,3 @@
 ==========
 Sponsoring
 ==========
-
-.. caution::
-
-    Work in progress!

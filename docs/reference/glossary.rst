@@ -4,11 +4,6 @@
 Glossary
 ========
 
-.. caution::
-
-    Work in progress!
-
-
 .. glossary::
 
     AA

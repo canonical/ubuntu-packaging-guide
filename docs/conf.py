@@ -29,6 +29,12 @@ exclude_patterns = ['.sphinx/venv/*']
 
 manpages_url = 'https://manpages.ubuntu.com/manpages/mantic/en/man{section}/{page}.{section}.html'
 
+rst_prolog = """
+.. caution::
+
+    Work in progress!
+"""
+
 rst_epilog = """
 .. include:: /reuse/links.rst
 """

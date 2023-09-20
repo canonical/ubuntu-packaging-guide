@@ -3,7 +3,3 @@
 ==============
 Getting Set Up
 ==============
-
-.. caution::
-
-    Work in progress!

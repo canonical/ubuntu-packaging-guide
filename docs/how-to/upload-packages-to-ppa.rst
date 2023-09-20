@@ -3,7 +3,3 @@
 ========================
 Upload packages to a PPA
 ========================
-
-.. caution::
-
-    Work in progress!

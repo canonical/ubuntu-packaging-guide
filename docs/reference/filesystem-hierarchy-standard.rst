@@ -3,7 +3,3 @@
 =============================
 Filesystem Hierarchy Standard
 =============================
-
-.. caution::
-
-    Work in progress!

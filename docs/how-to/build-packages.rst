@@ -3,7 +3,3 @@
 ==============
 Build packages
 ==============
-
-.. caution::
-
-    Work in progress!

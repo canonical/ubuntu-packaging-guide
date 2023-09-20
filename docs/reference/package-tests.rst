@@ -3,7 +3,3 @@
 =============
 Package Tests
 =============
-
-.. caution::
-
-    Work in progress!

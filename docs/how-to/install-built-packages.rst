@@ -4,10 +4,6 @@
 Install built packages
 ======================
 
-.. caution::
-
-    Work in progress!
-
 You have a built binary package of a source package and want to install 
 it (e.g. to test the package). This article demonstrates multiple ways 
 how you can achive that.

@@ -3,7 +3,3 @@
 ===============================
 Download a new Upstream Version
 ===============================
-
-.. caution::
-
-    Work in progress!

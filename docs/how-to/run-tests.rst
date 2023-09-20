@@ -3,7 +3,3 @@
 =========
 Run tests
 =========
-
-.. caution::
-
-    Work in progress!

@@ -3,7 +3,3 @@
 ===================
 Proposed Migrations
 ===================
-
-.. caution::
-
-    Work in progress!

@@ -3,7 +3,3 @@
 =============
 Package Model
 =============
-
-.. caution::
-
-    Work in progress!

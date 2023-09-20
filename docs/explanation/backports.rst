@@ -3,7 +3,3 @@
 =========
 Backports
 =========
-
-.. caution::
-
-    Work in progress!

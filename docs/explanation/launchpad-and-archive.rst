@@ -3,7 +3,3 @@
 =======================
 Launchpad & the Archive
 =======================
-
-.. caution::
-
-    Work in progress!

@@ -4,10 +4,6 @@
 Common non-technical Acronyms
 =============================
 
-.. caution::
-
-    Work in progress!
-
 a11y
     Abbreviation for *accessibility*
 

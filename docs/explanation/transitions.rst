@@ -3,7 +3,3 @@
 ===========
 Transitions
 ===========
-
-.. caution::
-
-    Work in progress!
