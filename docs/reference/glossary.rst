@@ -1002,6 +1002,9 @@ Glossary
     User Interface Freeze Exception
         *Work in Progress*
 
+    UX
+        Abbreviation for :term:`User Experience`
+
     VCS
         Abbreviation for :term:`Version Control System`
 
