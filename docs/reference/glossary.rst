@@ -994,7 +994,10 @@ Glossary
         with the :term:`User Interface` and the product as a whole.
 
     User Interface
-        *Work in Progress*
+        Refers to the visual elements and design of a digital product or application
+        that users interact with. It includes components like buttons, menus, icons,
+        and layout, focusing on how information is presented and how users navigate
+        through the interface.
 
     User Interface Freeze Exception
         *Work in Progress*
