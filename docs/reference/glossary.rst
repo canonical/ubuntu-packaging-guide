@@ -294,6 +294,9 @@ Glossary
     DMB
         Abbreviation for :term:`Developer Membership Board`
 
+    Domain Name System
+        *Work in Progress*
+
     Downstream
         *Work in Progress*
 
