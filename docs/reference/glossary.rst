@@ -585,6 +585,13 @@ Glossary
         While this general term stems from theoretical computer science and formal language
         theory, people usually think of :term:`Perl Compatible Regular Expressions` (:term:`PCRE`).
 
+    Repository
+        *Work in Progress* 
+        
+        .. note::
+    
+            ambiguity between git or apt repository
+
     Request for Comments
         *Work in Progress*
 
