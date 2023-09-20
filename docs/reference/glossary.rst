@@ -84,7 +84,7 @@ Glossary
         *Work in Progress*
 
     Archive
-        *Work in Progress*
+        See :term:`Ubuntu Archive`
 
     Archive Admin
         *Work in Progress*
