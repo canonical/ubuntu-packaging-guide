@@ -199,6 +199,9 @@ Glossary
     CLI
         Abbreviation for :term:`Command Line Interface`
 
+    Closed Source Software
+        *Work in Progress*
+
     CoC
         Abbreviation for :term:`Code of Conduct`
 
