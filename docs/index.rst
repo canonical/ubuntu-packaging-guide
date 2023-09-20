@@ -104,7 +104,7 @@ For real-time discussions, please connect to ``irc.libera.chat`` and join one or
 any of the `IRC channels`_. You may find especially these channels useful in the beginning:
 
 * ``#ubuntu-devel``, for general development discussion
-* ``#ubuntu-motu``, for `Masters of the Universe`_ (MOTU) team discussion and
+* ``#ubuntu-motu``, for :term:`Masters of the Universe` (:term:`MOTU`) team discussion and
   generally getting help.
 * ``#ubuntu-meeting``, meetings are held here by various Ubuntu teams and everyone
   is welcome to participate.
@@ -130,7 +130,7 @@ Mailing lists:
 ~~~~~~~~~~~~~~
 For long-lived discussions or announcements you can subscribe/write to any of 
 the `Ubuntu mailing lists <https://lists.ubuntu.com/>`_. You may find especially 
-these mailing lists useful in the beginning:
+these :term:`Mailing Lists <Mailing List>` useful in the beginning:
 
 * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce 
   (announce-only, the most important development announcements go here)
@@ -140,7 +140,7 @@ these mailing lists useful in the beginning:
   (MOTU Team discussion, get help with packaging)
 
 .. note::
-  When you subscribe to mailing lists, expect to receive a lot of emails.
+  When you subscribe to :term:`Mailing Lists <Mailing List>`, expect to receive a lot of emails.
   A good way to manage these is to create email filters. For example,
   the `bug mailing lists <https://lists.ubuntu.com/#Bug+Lists>`_ generate a high
   volume of emails and using the `custom email headers <https://wiki.ubuntu.com/Bugs/HowToFilter>`_
@@ -180,7 +180,6 @@ resources you may find useful:
 
 .. Links:
 .. _Code of Conduct: https://ubuntu.com/community/code-of-conduct
-.. _Launchpad: https://launchpad.net
 .. _IRC channels: https://wiki.ubuntu.com/IRC/ChannelList
 .. _BinPkgs: https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide
 .. _HowToPackage: https://wiki.debian.org/HowToPackageForDebian

@@ -1,5 +1,6 @@
 .. _GitHub: https://github.com/
 .. _GitUbuntuBugs: https://bugs.launchpad.net/git-ubuntu
+.. _Launchpad: https://launchpad.net
 
 .. _Edubuntu: https://edubuntu.org/
 .. _Kubuntu: https://kubuntu.org/
