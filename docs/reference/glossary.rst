@@ -214,6 +214,13 @@ Glossary
 
         Find out more on the Canonical website: `canonical.com <https://canonical.com/>`_
 
+    CD Mirror
+        A :term:`Mirror` of the :term:`Ubuntu` :term:`Image` archive
+        (`cdimage.ubuntu.com <https://cdimage.ubuntu.com/>`_).
+
+        You can find a complete list of officially recognized :term:`Ubuntu` :term:`Image`
+        archive :term:`Mirrors <Mirror>` `here <https://launchpad.net/ubuntu/+cdmirrors>`_.
+
     Central Processing Unit
         The main component of a computer, that is responsible for executing the instructions
         of a computer program, such as arithmetic, logic, and input/output (I/O) operations.
