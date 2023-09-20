@@ -23,7 +23,11 @@ Glossary
             Do not confuse with :term:`Application Programming Interface` (:term:`API`)!
 
     amd64
-        *Work in Progress*
+        :term:`CPU` :term:`Architecture` identifier for the ``AMD64`` (also known
+        as :term:`x64`, :term:`x86-64`, :term:`x86_64`, and :term:`Intel 64`)
+        architecture; a 64-bit version of the :term:`i386` instruction set.
+
+        See also: `X86-64 (Wikipedia) <https://en.wikipedia.org/wiki/X86-64>`_
 
     ANAIS
         Abbreviation for :term:`Architecture Not Allowed In Source`
@@ -362,6 +366,12 @@ Glossary
 
     IEEE
         Abbreviation for :term:`Institute of Electrical and Electronics Engineers`
+
+    Intel 64
+        See :term:`arm64`
+
+    Intel x86
+        See :term:`i386`
 
     IRC
         Abbreviation for :term:`Internet Relay Chat`
@@ -716,10 +726,13 @@ Glossary
         Abbreviation for :term:`Waiting on Upstream`
 
     x64
-        *Work in Progress*
-
+        See :term:`amd64`
+    
     x86
-        *Work in Progress*
+        See :term:`i386`
 
     x86-64
-        *Work in Progress*
+        See :term:`amd64`
+
+    x86_64
+        See :term:`amd64`
