@@ -322,13 +322,7 @@ Glossary
     GA
         Abbreviation for :term:`General Availability`
 
-    GDPR
-        Abbreviation for :term:`General Data Protection Regulation`
-
     General Availability
-        *Work in Progress*
-
-    General Data Protection Regulation
         *Work in Progress*
 
     General Public License
