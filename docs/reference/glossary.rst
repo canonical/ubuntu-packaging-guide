@@ -635,7 +635,10 @@ Glossary
         *Work in Progress*
 
     Launchpad
-        *Work in Progress*
+        The general development platform where :term:`Ubuntu` itself and most of
+        :term:`Ubuntu` related software projects live.
+
+        See: :doc:`Launchpad (explanation article) </explanation/launchpad>`
 
     Linux
         *Work in Progress*
