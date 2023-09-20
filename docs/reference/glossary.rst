@@ -641,7 +641,13 @@ Glossary
         See: :doc:`Launchpad (explanation article) </explanation/launchpad>`
 
     Linux
-        *Work in Progress*
+        *Linux* is an :term:`Open Source <Open Source Software>` :term:`Operating System`
+        :term:`Kernel` originally created by *Linus Torvalds* in 1991. It forms the
+        core of various *Linux* :term:`Distributions <Distribution>`, such as :term:`Debian`
+        and :term:`Ubuntu`. *Linux* is known for its stability, security, and flexibility,
+        making it a popular choice for servers, desktops, and embedded systems.
+
+        See also: `Linux (Wikipedia) <https://en.wikipedia.org/wiki/Linux>`_
 
     LinuxONE
         *Work in Progress*
