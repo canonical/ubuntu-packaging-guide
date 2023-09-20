@@ -980,6 +980,11 @@ Glossary
 
         See also: `Uniform Resource Identifier (Wikipedia) <https://en.wikipedia.org/wiki/Uniform_Resource_Identifier>`_
 
+    Uniform Resource Locator
+        *Work in Progress*
+
+        See also: `URL (Wikipedia) <https://en.wikipedia.org/wiki/URL>`_
+
     Universe
         *Work in Progress* (the pocket)
 
