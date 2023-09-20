@@ -220,7 +220,11 @@ Glossary
         Develop and certify your skills on the world's most popular :term:`Linux` :term:`OS`. https://ubuntu.com/credentials
 
     Changelog
-        *Work in Progress*
+        The :file:`debian/changelog` file in a :term:`Source Package`.
+
+        See: :doc:`/reference/debian-dir-overview`
+
+        See also: `Section 4.4 Debian changelog (Debian Policy Manual v4.6.2.0) <https://www.debian.org/doc/debian-policy/ch-source.html#debian-changelog-debian-changelog>`_
 
     Checkout
         *Work in Progress*
