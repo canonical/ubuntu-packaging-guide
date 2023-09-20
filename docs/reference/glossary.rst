@@ -304,6 +304,12 @@ Glossary
     FIPS
         Abbreviation for :term:`Federal Information Processing Standards`
 
+    Fork
+        In the context of :term:`Open Source Software` development, a *"fork"* refers
+        to the process of creating a new, independent version of a software project by
+        copying its :term:`Source Code` to evolve separately, potentially with different
+        goals, features, or contributors.
+
     FOSS
         Abbreviation for :term:`Free and Open Source Software`
 
