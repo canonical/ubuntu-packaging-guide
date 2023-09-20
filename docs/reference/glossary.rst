@@ -18,6 +18,10 @@ Glossary
     ABI
         Abbreviation for :term:`Application Binary Interface`
 
+        .. warning::
+
+            Do not confuse with :term:`Application Programming Interface` (:term:`API`)!
+
     amd64
         *Work in Progress*
 
@@ -27,11 +31,38 @@ Glossary
     API
         Abbreviation for :term:`Application Programming Interface`
 
+        .. warning::
+
+            Do not confuse with :term:`Application Binary Interface` (:term:`ABI`)!
+
     Application Binary Interface
-        *Work in Progress*
+        Defines how two binary applications interface eachother like calling conventions,
+        data type sizes, and system call interfaces, ensuring compatibility and proper
+        communication between different parts of a software system, such as libraries,
+        executables, and the :term:`Operating System`. *Application Binary Interfaces*
+        are crucial for enabling software components compiled on different systems
+        to work together seamlessly.
+
+        See also: `Kernel ABI (Ubuntu Wiki) <https://wiki.ubuntu.com/KernelTeam/BuildSystem/ABI>`_, `Application binary interface (Wikipedia) <https://en.wikipedia.org/wiki/Application_binary_interface>`_
+
+        .. warning::
+
+            Do not confuse with :term:`Application Programming Interface` (:term:`API`)!
 
     Application Programming Interface
-        *Work in Progress*
+        An *Application Programming Interface* (API), is a set of rules that allows
+        different software applications to communicate with each other. It defines
+        the methods and data formats that applications can use to request and exchange
+        information, perform specific tasks, or access the functionality of another
+        software component, such as an :term:`Operating System`, library, or online
+        service. *APIs* enable developers to build upon existing software and create
+        new applications by providing a standardized way to interact with external
+        systems, services, or libraries without needing to understand their internal
+        workings.
+
+        .. warning::
+
+            Do not confuse with :term:`Application Binary Interface` (:term:`ABI`)!
 
     APT
         Abbreviation for *Advanced Package Manager*. 
