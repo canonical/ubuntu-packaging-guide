@@ -829,6 +829,10 @@ Glossary
     Source Code
         *Work in Progress*
 
+    Source Package
+        A :term:`Debian` *source package* contains the :term:`Source` material used
+        to build one or more :term:`Binary Packages <Binary Package>`.
+
     Source Tree
         *Work in Progress*
 
