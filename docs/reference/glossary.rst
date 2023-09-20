@@ -384,11 +384,11 @@ Glossary
 
         See also: `Linux distribution (Wikipedia) <https://en.wikipedia.org/wiki/Linux_distribution>`_
 
-    DNS
-        Abbreviation for :term:`Domain Name System`
-
     DMB
         Abbreviation for :term:`Developer Membership Board`
+
+    DNS
+        Abbreviation for :term:`Domain Name System`
 
     Domain Name System
         *Work in Progress*
