@@ -312,6 +312,9 @@ Glossary
     End-user license agreement
         *Work in Progress*
 
+    Embedded Systems
+        *Work in Progress*
+
     Endianness
         *Work in Progress*
 
