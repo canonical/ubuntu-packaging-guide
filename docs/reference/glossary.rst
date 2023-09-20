@@ -1016,7 +1016,18 @@ Glossary
         *Work in Progress*
 
     Ubuntu
-        *Work in Progress*
+        The word *"ubuntu"* is derived from the pronunciation of an an ancient African word
+        *"oǒ’boǒntoō"* meaning *'humanity to others'*. It is often described as reminding
+        us that *'I am what I am because of who we all are'*.
+
+        The *Ubuntu* :term:`Operating System` tries to bring that spirit to the world of
+        computers and software. The *Ubuntu* :term:`Distribution` is a :term:`Debian`-based
+        :term:`Linux` :term:`Distribution` and aims to represents the best of what the world's
+        software community has shared with the world.
+
+        See: `The story of Ubuntu <https://ubuntu.com/about>`_,
+        `Ubuntu ethos <https://ubuntu.com/community/ethos>`_,
+        `Ubuntu Project Governance <https://ubuntu.com/community/governance>`_
 
     Ubuntu Archive
         The *Ubuntu Package Archive* is and :term:`APT` :term:`Repository` that is
