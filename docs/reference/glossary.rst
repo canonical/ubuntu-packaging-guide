@@ -977,6 +977,8 @@ Glossary
         A :term:`Debian` *source package* contains the :term:`Source` material used
         to build one or more :term:`Binary Packages <Binary Package>`.
 
+        See: :ref:`Source Packages (explanation) <SourcePackages>`
+
     Source Tree
         *Work in Progress*
 
