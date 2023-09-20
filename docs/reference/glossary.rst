@@ -153,7 +153,17 @@ Glossary
         *Work in Progress*
 
     Bug Tracking System
-        *Work in Progress*
+        A platform used by software development teams to manage and monitor the progress
+        of reported issues or :term:`Bugs <Bug>` within a software project. It provides
+        a centralized platform for users to report problems, assign tasks to developers,
+        track the status of issues, prioritize fixes, and maintain a comprehensive record
+        of software defects and their resolutions. This system helps streamline the debugging
+        process and enhances communication among team members, ultimately leading to improved
+        software quality.
+
+        :term:`Launchpad` is the *Bug Tracking System* for :term:`Ubuntu` :term:`Packages <Package>`.
+
+        See also: `Bug tracking system (Wikipedia) <https://en.wikipedia.org/wiki/Bug_tracking_system>`_
 
     BZR
         Abbreviation for :term:`Bazaar`
