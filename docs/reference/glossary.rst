@@ -400,6 +400,9 @@ Glossary
     ITP
         Abbreviation for :term:`Intent to Package`
 
+    Kernel
+        *Work in Progress*
+
     Keyring
         *Work in Progress*
 
