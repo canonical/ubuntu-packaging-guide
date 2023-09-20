@@ -441,6 +441,9 @@ Glossary
     Main Inclusion Review
         *Work in Progress* (see https://github.com/canonical/ubuntu-mir)
 
+    Mailing List
+        *Work in Progress*
+
     Maintainer
         *Work in Progress*
 
