@@ -739,7 +739,9 @@ Glossary
         *Work in Progress*
 
     Ubuntu Cloud Archive
-        *Work in Progress* (see https://wiki.ubuntu.com/OpenStack/CloudArchive)
+        *Work in Progress* 
+        
+        See: `Cloud Archive (Ubuntu Wiki) <https://wiki.ubuntu.com/OpenStack/CloudArchive>`_
 
     Ubuntu Code of Conduct
         *Work in Progress*
