@@ -989,7 +989,14 @@ Glossary
         *Work in Progress* (the pocket)
 
     Unix
-        *Work in Progress*
+        *Unix* is an :term:`Operating System` whose development started in the late 1960s
+        at AT&T Bell Labs. It is characterized by its multi-user and multi-tasking
+        capabilities, hierarchical file system, and a suite of
+        :term:`Command Line <Command Line Interface>` utilities.
+        *Unix* has been influential in shaping modern :term:`Operating Systems <Operating System>`
+        and remains the basis for various *Unix*-like systems, including :term:`Linux` and *macOS*.
+
+        See also: `Unix (Wikipedia) <https://en.wikipedia.org/wiki/Unix>`_
 
     Upstream
         *Work in Progress*
