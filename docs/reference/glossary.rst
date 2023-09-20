@@ -409,7 +409,10 @@ Glossary
         *Work in Progress*
 
     Downstream
-        *Work in Progress*
+        A software project(s) (and associated entities) that depend on
+        another software project directly or indirectly.
+
+        See :ref:`Downstream (explanation) <Downstream>`
 
     DSA
         Abbreviation for :term:`Debian System Administration`
