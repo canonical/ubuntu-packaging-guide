@@ -721,7 +721,12 @@ Glossary
         *Work in Progress*
 
     tarball
-        *Work in Progress*
+        A file in the :manpage:`tar(5)` archive format, which collects any number of
+        files, directories, and other file system objects (symbolic links, device nodes, etc.)
+        into a single stream of bytes. The format was originally designed to be used with
+        tape drives, but nowadays it is widely used as a general packaging mechanism.
+
+        See also: :term:`orig tarball`
 
     TLS
         Abbreviation for :term:`Transport Layer Security`
