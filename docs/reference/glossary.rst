@@ -3,6 +3,9 @@ Glossary
 
 .. glossary::
 
+    80x86
+        See :term:`i386`
+        
     AA
         Abbreviation for :term:`Archive Admin`
 
