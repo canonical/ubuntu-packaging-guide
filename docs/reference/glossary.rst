@@ -162,6 +162,8 @@ Glossary
         can understand to install and uninstall software on a target machine to simplify
         distributing software to a target machine and managing software on a target machine.
 
+        See: :ref:`Binary Packages (explanation) <BinaryPackages>`
+
     Branch
         *Work in Progress*
 
