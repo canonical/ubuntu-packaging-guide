@@ -744,6 +744,9 @@ Glossary
     Ubuntu CVE Tracker
         *Work in Progress* (see https://launchpad.net/ubuntu-cve-tracker and https://ubuntu.com/security/cves)
 
+    Ubuntu Desktop
+        *Work in Progress*
+
     Ubuntu Developer Summit
         *Work in Progress* (see https://wiki.ubuntu.com/DeveloperSummit)
 
