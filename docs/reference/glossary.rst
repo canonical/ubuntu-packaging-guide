@@ -669,7 +669,14 @@ Glossary
         See also: `Operating system (Wikipedia) <https://en.wikipedia.org/wiki/Operating_system>`_
 
     orig tarball
-        *Work in Progress*
+    original tarball
+        The ``.orig.tar.ext`` and ``.orig-component.tar.ext`` (where ``ext`` can be
+        ``gz``, ``bz2``, ``lzma`` and ``xz`` and ``component`` can contain alphanumeric
+        characters (``a-zA-Z0-9``) and hyphens ``-``) :manpage:`tar(5)` archive files
+        of a :term:`Debian` :term:`Source Package` that contains the original :term:`Source`
+        of the :term:`Upstream` project.
+
+        See also: :manpage:`dpkg-source(1)`, :term:`tarball`
 
     OS
         Abbreviation for :term:`Operating System`
