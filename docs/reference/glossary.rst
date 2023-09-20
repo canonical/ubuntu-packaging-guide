@@ -292,7 +292,14 @@ Glossary
         *Work in Progress*
 
     Control File
-        *Work in Progress*
+        The :file:`debian/control` file in a :term:`Source Package`.
+
+        See: :doc:`/reference/debian-dir-overview`
+
+        This can also refer to a :term:`Debian` source control file (``.dsc`` file)
+        or the control file in a :term:`Binary Package` (``.deb`` file).
+
+        See: `Chapter 5. Control files and their fields (Debian Policy Manual v4.6.2.0) <https://www.debian.org/doc/debian-policy/ch-controlfields.html>`_
 
     Coordinated Release Date
         The date at which the details of a :term:`CVE` are to be publicly disclosed.
