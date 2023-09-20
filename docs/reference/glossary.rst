@@ -1026,6 +1026,11 @@ Glossary
 
         See: :doc:`Ubuntu Package Archive (explanation) </explanation/archive>`
 
+    Ubuntu autopkgtest Cloud
+        *Work in Progress*
+
+        See: `autopkgtest.ubuntu.com <https://autopkgtest.ubuntu.com/>`_
+
     Ubuntu Cloud Archive
         *Work in Progress* 
         
