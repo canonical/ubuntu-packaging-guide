@@ -259,6 +259,27 @@ Instead you can do this:
        
            echo "Hello, World!"
 
+Definition lists
+----------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Input
+     - Output
+   * - .. code:: reStructuredText
+
+            Term 1:
+                Definition
+
+            Term 2:
+                Definition
+     - Term 1:
+           Definition
+       
+       Term 2:
+           Definition
+
 .. _Canonical' reStructuredText style guide: https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/style-guide/
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 .. _markdown: https://www.sphinx-doc.org/en/master/usage/markdown.html
