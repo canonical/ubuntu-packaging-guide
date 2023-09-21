@@ -86,6 +86,39 @@ Adhere to the following conventions:
 - Do not skip levels (for example, do not follow an H2 heading with an H4 heading).
 - Use sentence style for headings (capitalise only the first word).
 
+Inline formatting
+-----------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Input
+     - Output
+   * - ``*Italic*``
+     - *Italic*
+   * - ``**Bold**``
+     - **Bold**
+   * - ````code````
+     - ``code``
+   * - ``:term:`Ubuntu```
+     - :term:`Ubuntu`
+   * - ``:file:`/file/path```
+     - :file:`/file/path`
+   * - ``:manpage:`man(1)```
+     - :manpage:`man(1)`
+   * - ``:command:`command```
+     - :command:`command`
+   * - ``:kbd:`key```
+     - :kbd:`key`
+
+Adhere to the following conventions:
+
+- Use italics sparingly. Common uses for italics are titles and names (for example,
+  when referring to a section title that you cannot link to, or when introducing
+  the name for a concept).
+- Use bold sparingly. Avoid using bold for emphasis and rather rewrite the sentence
+  to get your point across.
+
 .. _Canonical' reStructuredText style guide: https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/style-guide/
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 .. _markdown: https://www.sphinx-doc.org/en/master/usage/markdown.html
