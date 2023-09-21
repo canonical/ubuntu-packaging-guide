@@ -300,6 +300,63 @@ Cards
             
             Card content
 
+Tabs
+----
+
+.. list-table::
+   :header-rows: 1
+
+   * - Input
+     - Output
+   * - .. code:: reStructuredText
+
+           .. tab-set::
+    
+               .. tab-item:: Label1
+                   :sync: key1
+       
+                   Content 1
+       
+               .. tab-item:: Label2
+                   :sync: key2
+       
+                    Content 2
+       
+           .. tab-set::
+       
+               .. tab-item:: Label1
+                   :sync: key1
+       
+                   Content 1
+       
+               .. tab-item:: Label2
+                   :sync: key2
+       
+                   Content 2
+     - .. tab-set::
+
+           .. tab-item:: Label1
+               :sync: key1
+   
+               Content 1
+   
+           .. tab-item:: Label2
+               :sync: key2
+   
+               Content 2
+   
+       .. tab-set::
+   
+           .. tab-item:: Label1
+               :sync: key1
+   
+               Content 1
+   
+           .. tab-item:: Label2
+               :sync: key2
+   
+               Content 2
+
 .. _Canonical' reStructuredText style guide: https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/style-guide/
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 .. _markdown: https://www.sphinx-doc.org/en/master/usage/markdown.html
