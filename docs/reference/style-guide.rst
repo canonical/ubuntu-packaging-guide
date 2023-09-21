@@ -280,6 +280,26 @@ Definition lists
        Term 2:
            Definition
 
+Cards
+-----
+
+.. grid:: 2
+    
+    .. grid-item::
+        :child-align: center
+
+        .. code:: reStructuredText
+
+            .. card:: Card title
+                Card content
+
+    .. grid-item::
+        :child-align: center
+
+        .. card:: Card title
+            
+            Card content
+
 .. _Canonical' reStructuredText style guide: https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/style-guide/
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 .. _markdown: https://www.sphinx-doc.org/en/master/usage/markdown.html
