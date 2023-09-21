@@ -119,6 +119,71 @@ Adhere to the following conventions:
 - Use bold sparingly. Avoid using bold for emphasis and rather rewrite the sentence
   to get your point across.
 
+
+Notes
+-----
+
+.. grid:: 2
+    :gutter: 2
+    
+    .. grid-item::
+        :child-align: center
+
+        .. code:: reStructuredText
+
+            .. note::
+                A note.
+
+    .. grid-item-card::
+
+            .. note::
+                A note.
+
+    .. grid-item::
+        :child-align: center
+
+        .. code:: reStructuredText
+
+            .. tip::
+                A tip.
+
+    .. grid-item-card::
+
+            .. tip::
+                A tip. 
+    
+    .. grid-item::
+        :child-align: center
+
+        .. code:: reStructuredText
+
+            .. important::
+                Important information.
+
+    .. grid-item-card::
+
+            .. important::
+                Important information. 
+    
+    .. grid-item::
+        :child-align: center
+
+        .. code:: reStructuredText
+
+            .. caution::
+                This might damage your hardware!
+
+    .. grid-item-card::
+
+            .. caution::
+                This might damage your hardware!
+
+Adhere to the following conventions:
+
+- Use notes sparingly.
+- Only use the following note types: ``note``, ``tip``, ``important``, ``caution``
+- Only use a caution if there is a clear hazard of hardware damage or data loss.
+
 .. _Canonical' reStructuredText style guide: https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/style-guide/
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 .. _markdown: https://www.sphinx-doc.org/en/master/usage/markdown.html
