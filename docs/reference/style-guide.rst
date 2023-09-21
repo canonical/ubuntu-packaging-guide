@@ -184,6 +184,81 @@ Adhere to the following conventions:
 - Only use the following note types: ``note``, ``tip``, ``important``, ``caution``
 - Only use a caution if there is a clear hazard of hardware damage or data loss.
 
+Code blocks
+-----------
+
+To start a code block, start a code block with ``.. code::``.
+The code block must be surrounded by empty lines.
+
+When starting a code block, you can specify the code language to enforce a specific
+sytax highlighting, but in many cases, the default sytax highlighting works just fine.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Input
+     - Output
+   * - .. code:: reStructuredText
+       
+            .. code::
+       
+                echo "Hello, World!"
+     - .. code::
+       
+           echo "Hello, World!"
+   * - .. code:: reStructuredText
+
+            .. code:: text
+       
+                echo "Hello, World!"
+     - .. code:: text
+       
+           echo "Hello, World!"
+   * - .. code:: reStructuredText
+
+            .. code:: bash
+       
+                echo "Hello, World!"
+     - .. code:: bash
+       
+           echo "Hello, World!"
+
+Fore the sake of consistency, please **do not** use the pattern:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Input
+     - Output
+   * - .. code:: reStructuredText
+       
+            Look, after this text starts a code block::
+       
+                echo "Hello, World!"
+     - Look, after this text starts a code block::
+       
+           echo "Hello, World!"
+
+Instead you can do this:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Input
+     - Output
+   * - .. code:: reStructuredText
+       
+            Look, after this text starts a code block:
+
+            .. code::
+       
+                echo "Hello, World!"
+     - Look, after this text starts a code block:
+
+       .. code::
+       
+           echo "Hello, World!"
+
 .. _Canonical' reStructuredText style guide: https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/style-guide/
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 .. _markdown: https://www.sphinx-doc.org/en/master/usage/markdown.html
