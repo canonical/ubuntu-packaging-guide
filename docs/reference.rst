@@ -23,3 +23,4 @@ support matrices, and so on.
    reference/outdated-tools.rst
    reference/common-non-technical-acronyms.rst
    reference/glossary.rst
+   reference/style-guide.rst
