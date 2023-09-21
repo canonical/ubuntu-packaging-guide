@@ -357,6 +357,35 @@ Tabs
    
                Content 2
 
+More useful markup
+------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Input
+     - Output
+   * - .. code:: reStructuredText
+
+           | Line 1
+           | Line 2
+           | Line 3
+     - | Line 1
+       | Line 2
+       | Line 3
+   * - .. code:: reStructuredText
+
+           ----
+     - A horizontal line
+     
+       (for technical reasons the horizontal line can not be displayed here)
+   * - .. code:: reStructuredText
+
+           .. This is a comment
+     - 
+
+
+
 .. _Canonical' reStructuredText style guide: https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/style-guide/
 .. _reStructuredText: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 .. _markdown: https://www.sphinx-doc.org/en/master/usage/markdown.html
