@@ -1,2 +1,2 @@
-Basic Overview of the ``debian/`` Directory
+Basic overview of the ``debian/`` directory
 ===========================================

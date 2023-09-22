@@ -40,14 +40,14 @@ MIR team weekly meeting
 -----------------------
 
 The MIR team holds weekly meetings every Tuesday at 16:30 CET on the
-:term:`IRC` Server ``irc.libera.chat`` in the ``#ubuntu-meeting`` channel.
+:term:`IRC` server ``irc.libera.chat`` in the ``#ubuntu-meeting`` channel.
 You can follow these `instructions <https://libera.chat/guides/connect>`_ on
 how to connect to ``irc.libera.chat``.
 
 The purpose of the meeting is:
 
 - to distribute the workload fairly between the members of the MIR team
-- provide a timely response to reporters of MIR applications
+- to provide a timely response to reporters of MIR applications
 - detection and discussion of any current or complex cases
 
 Due to the nature of the Main Inclusion Review process there are times

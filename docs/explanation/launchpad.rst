@@ -59,53 +59,54 @@ git-based workflow for the development of Ubuntu source packages
 ----------------------------------------------------------------
 
 Launchpad hosts a :doc:`/reference/git-ubuntu` importer service that maintains
-a view of the entire packaging version history of Ubuntu source packages using
+a view of the entire packaging version history of Ubuntu :term:`source packages <Source Package>` using
 git repositories with a common branching and tagging scheme. The git-ubuntu
 :term:`CLI` provides tooling and automation that understands these repositories
 to make the development of Ubuntu itself easier.
 
-You can see the web-view of these repositories when you click on the "Code" tab of any
-:term:`Source Package` on Launchpad, for example: https://code.launchpad.net/ubuntu/+source/hello
+You can see the web-view of these repositories when you click on the "Code" tab
+of any source package on Launchpad, for example, in the
+`"hello" source package <https://code.launchpad.net/ubuntu/+source/hello>`_ as
+shown in the following screenshot:
 
 .. image:: ../images/explanation/launchpad/GitUbuntuRepositoryOfTheHelloPackage.png
    :align: center
    :width: 35 em
    :alt: Screenshot of the Launchpad Code page for the hello source package with an arrow pointing to the Code tab. 
 
-Comment Markup
+Comment markup
 --------------
 
-Unfortunately Launchpad only regognizes a very limited set of markup patterns when you write comments. 
+Unfortunately Launchpad only recognizes a very limited set of markup patterns when you write comments. 
 
 .. note::
-
     
-    Support for a wider range of markup patterns is a very comman and old request/wish; 
+    Support for a wider range of markup patterns is a very common and old request/wish; 
     take for example LP: `#391780 <https://bugs.launchpad.net/launchpad/+bug/391780>`_.
     
-    You can "upvote" (mark yourself as effected) or leave a comment to this bug report to
+    You can "upvote" (mark yourself as affected) or leave a comment on this bug report to
     show your support for the feature request.
 
     **Reminder:** Please stay civil! The Launchpad team has only limited resources.
 
 
-The full range of pattern is documented `here <https://help.launchpad.net/Comments>`_. 
-The most important patterns are:
+The full range of patterns
+`is documented in Launchpad <https://help.launchpad.net/Comments>`_. 
 
 URIs
 ~~~~
 
 Launchpad can recognize ``http``, ``https``, ``ftp``, ``sftp``, ``mailto``,
-``news``, ``irc`` and ``jabber`` :term:`URI's <URI>`.
+``news``, ``irc`` and ``jabber`` :term:`URIs <URI>`.
 
 .. note::
 
-    ``tel``, ``urn``, ``telnet``, ``ldap`` :term:`URI's <URI>`, relative 
-    :term:`URL's <URL>` like ``example.com`` and E-Mail addresses like 
+    ``tel``, ``urn``, ``telnet``, ``ldap`` :term:`URIs <URI>`, relative 
+    :term:`URLs <URL>` like ``example.com`` and email addresses like 
     ``test@example.com`` are **NOT** recognized. 
 
 
-Referencing Launchpad Bugs
+Referencing Launchpad bugs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Synopsis
@@ -117,9 +118,10 @@ Synopsis
 
 .. note::
 
-    This pattern is case invariant. The amount of :term:`Whitespace` can be 
-    variable, but if you place :term:`Whitespace` anywhere else; the 
-    :term:`Regular Expression` might not parse the input correctly. 
+    This pattern is case invariant. The amount of :term:`whitespace <Whitespace>` can be 
+    variable, but if you place whitespace anywhere else the 
+    :term:`regular expression <Regular Expression>` might not parse the input
+    correctly. 
 
 Examples
 ^^^^^^^^
@@ -168,21 +170,21 @@ Examples
 Whitespaces
 ~~~~~~~~~~~
 
-Launchpad will
+Launchpad will:
 
-- cut off any :term:`Whitespace` to the right and
-- keep any :term:`Whitespace` to the left and
-- reduce any :term:`Whitespace` between non-:term:`Whitespace` characters to 
+- cut off any whitespace to the right,
+- keep any whitespace to the left, and
+- reduce any whitespace between non-whitespace characters to 
   just one (this includes new-line characters as well).
 
 .. note::
 
-    Technically Launchpad passes :term:`Whitespace` through and 
-    the browser just ignores the :term:`Whitespace`.
+    Technically Launchpad passes whitespace through and the browser just
+    ignores the whitespace.
 
 .. warning::
 
-    Because of the above described behaviour you will have a bad time trying to write a table:
+    Because of the behaviour described above you will have a hard time trying to write a table:
 
     .. list-table::
         :header-rows: 1
@@ -203,7 +205,7 @@ Launchpad will
             | \| sit \| amet \| consectetur \|  
             | \| adipiscing \| elit \| sed \|
 
-    or long chunks of :term:`Whitespace` between two sections:
+    or long chunks of whitespace between two sections:
 
     .. list-table::
         :header-rows: 1
@@ -224,68 +226,67 @@ Launchpad will
             | 
             | But they're still just two paragraphs
 
-Getting Help
+Getting help
 ------------
 
 If you need help with Launchpad you can choose any of the following methods:
 
-IRC Chatrooms
+IRC chatrooms
 ~~~~~~~~~~~~~
 
-On the ``irc.libera.chat`` :term:`IRC` server exists the ``#launchpad`` channel, where you
+On the ``irc.libera.chat`` :term:`IRC` server you will find the ``#launchpad`` channel, where you
 can ask the Launchpad team and the Ubuntu community for help.
 
-Mailing Lists
+Mailing lists
 ~~~~~~~~~~~~~
 
-If you prefer to ask for help via E-Mail, you can write to the
+If you prefer to ask for help via email, you can write to the
 `launchpad-users <https://launchpad.net/~launchpad-users>`_ 
 mailing list (``launchpad-users@lists.launchpad.net``).
 
 Ask a question
 ~~~~~~~~~~~~~~
 
-As mentioned above, Launchpad has a community FAQ feature (called "Answers") where
+As mentioned above, Launchpad has a `community FAQ feature <https://answers.launchpad.net/launchpad>`_
+(called "Answers") where
 you can see other people's questions or ask one yourself. Use can use the *Answers*
-feature of the Launchpad project on Launchpad itself: https://answers.launchpad.net/launchpad
+feature of the Launchpad project on Launchpad itself.
 
 Report a bug
 ~~~~~~~~~~~~
 
 If you encounter any bug related to Launchpad, you can submit a bug report to the
-:term:`Bug Tracking System` of the Launchpad project on Launchpad itself: 
-https://bugs.launchpad.net/launchpad
+:term:`Bug Tracking System` of the Launchpad project `on Launchpad itself <https://bugs.launchpad.net/launchpad>`_.
 
-Staging Environment
+Staging environment
 -------------------
 
 Before new features are deployed to the production environment they get
-deployed to a staging environment (https://qastaging.launchpad.net/) where
+`deployed to a staging environment <https://qastaging.launchpad.net/>`_ where
 the changes can get tested.
 
-You can use the staging environment, to try out :term:`Launchpad` features.
+You can use the staging environment, to try out Launchpad features.
 
 API
 ---
 
-Launchpad has a Web :term:`API` that you can use to interact with its services.
-This makes it easy for developer communities like :term:`Ubuntu's <Ubuntu>` to
+Launchpad has a web :term:`API` that you can use to interact with its services.
+This makes it easy for developer communities like Ubuntu's to
 automate specific workflows.
 
-You can find the reference documentation for the Web :term:`API`:
-https://launchpad.net/+apidoc/
+You can find the reference `documentation for the web API <https://launchpad.net/+apidoc/>`_ on Launchpad.
 
-The Launchpad team even created an :term:`Open Source <Open Source Software>`
-ython library ``launchpadlib``: https://help.launchpad.net/API/launchpadlib
+The Launchpad team even created an :term:`open source <Open Source Software>`
+Python library, `launchpadlib <https://help.launchpad.net/API/launchpadlib>`_.
 
 Resources
 ---------
 
-- `Launchpad Home Page <Launchpad_>`_
+- `Launchpad home page <Launchpad_>`_
 - `The Launchpad software project on Launchpad itself <https://launchpad.net/launchpad>`_
-    - `Launchpad Bug Tracker <https://bugs.launchpad.net/launchpad>`_
-    - `Launchpad Questions & Answers <https://answers.launchpad.net/launchpad>`_
-- `Launchpad Wiki <https://help.launchpad.net/>`_
-- `Launchpad Development Wiki <https://dev.launchpad.net/>`_
-- `Launchpad Blog <https://blog.launchpad.net/>`_
+    - `Launchpad bug tracker <https://bugs.launchpad.net/launchpad>`_
+    - `Launchpad questions and answers <https://answers.launchpad.net/launchpad>`_
+- `Launchpad wiki <https://help.launchpad.net/>`_
+- `Launchpad development wiki <https://dev.launchpad.net/>`_
+- `Launchpad blog <https://blog.launchpad.net/>`_
 - :doc:`/reference/git-ubuntu`

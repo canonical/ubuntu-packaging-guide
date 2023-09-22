@@ -154,16 +154,16 @@ of a suite.
 
 The packages of an Ubuntu series are categorized according to whether they are
 :term:`Open Source Software` or :term:`Closed Source Software`, and whether or
-not they are part of the Base packages for a given series. On this basis they are
+not they are part of the "base" packages for a given series. On this basis they are
 sorted into the components "main", "restricted", "universe", or "multiverse",
 as shown in the following table:
 
 +----------------------------+-----------------------------------+-------------------------------------+
-|                            | Open Source Software              | Closed Source Software              |
+|                            | Open source software              | Closed source software              |
 +----------------------------+-----------------------------------+-------------------------------------+
-| **Ubuntu Base Packages**   | :ref:`ArchiveComponents_Main`     | :ref:`ArchiveComponents_Restricted` |
+| **Ubuntu base packages**   | :ref:`ArchiveComponents_Main`     | :ref:`ArchiveComponents_Restricted` |
 +----------------------------+-----------------------------------+-------------------------------------+
-| **Community Packages**     | :ref:`ArchiveComponents_Universe` | :ref:`ArchiveComponents_Multiverse` |
+| **Community packages**     | :ref:`ArchiveComponents_Universe` | :ref:`ArchiveComponents_Multiverse` |
 +----------------------------+-----------------------------------+-------------------------------------+
 
 :term:`Canonical` maintains the base packages and provides security updates. See
@@ -303,7 +303,7 @@ Package uploads
 
 Ubuntu encourages contributions from any person in the wider community.
 However, direct uploading to the Ubuntu package archive is restricted. These
-general contributions need to be reviewed and uploaded by a :term:`Sponsor`.
+general contributions need to be reviewed and uploaded by a :term:`sponsor <Sponsor>`.
 
 See our :doc:`article on sponsoring </explanation/sponsoring>` that explains this
 process in more detail.

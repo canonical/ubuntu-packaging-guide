@@ -1,2 +1,2 @@
-Debian Policy
+Debian policy
 =============

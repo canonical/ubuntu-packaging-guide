@@ -1,2 +1,2 @@
-Download a new Upstream Version
+Download a new Upstream version
 ===============================
