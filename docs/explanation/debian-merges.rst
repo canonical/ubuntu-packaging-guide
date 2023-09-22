@@ -1,2 +1,2 @@
-Debian Merges
+Debian merges
 =============

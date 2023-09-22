@@ -135,7 +135,8 @@ A combination of a series and a pocket. For example:
 | ``jammy-backports`` | ``jammy``            | :ref:`ArchivePockets_Backports` |
 +---------------------+----------------------+---------------------------------+
 
-There is a list of `all active suites <http://archive.ubuntu.com/ubuntu/dists/>`_.
+You can see `all active suites <http://archive.ubuntu.com/ubuntu/dists/>`_ in
+the archive.
 
 .. note::
 

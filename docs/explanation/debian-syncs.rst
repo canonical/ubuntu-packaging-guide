@@ -1,2 +1,2 @@
-Debian Syncs
+Debian syncs
 ============

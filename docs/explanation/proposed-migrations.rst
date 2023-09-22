@@ -1,2 +1,2 @@
-Proposed Migrations
+Proposed migrations
 ===================

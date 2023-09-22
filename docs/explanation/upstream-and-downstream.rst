@@ -1,13 +1,13 @@
-Upstream & Downstream
-=====================
+Upstream and downstream
+=======================
 
 An :term:`Ubuntu` installation consists of :term:`packages <Package>` - copied and unpacked onto
-the target machine. The :term:`Ubuntu` project - packages, distributes and maintains software of
+the target machine. The :term:`Ubuntu` project packages, distributes and maintains software of
 thousands of :term:`open-source <Open Source Software>` projects for users, ready to install.
 The collection of :term:`Ubuntu` :term:`packages <Package>` is derived from the collection of
 :term:`packages <Package>` maintained by the community-driven :term:`Debian` project.
 
-An important duty of a :term:`Ubuntu` :term:`Package` :term:`Maintainer` is to collaborate with
+An important duty of an :term:`Ubuntu` :term:`Package` :term:`Maintainer` is to collaborate with
 the :term:`open-source <Open Source Software>` projects the :term:`Ubuntu`:term:`packages <Package>`
 are derive from. Especially with :term:`Debian` by keeping the :term:`Ubuntu` copies of
 :term:`packages <Package>` up-to-date and by sharing improvements made in :term:`Ubuntu` back up

@@ -2,70 +2,67 @@ Launchpad
 =========
 
 Launchpad is a software collaboration and hosting platform similar to platforms
-like `GitHub`_.
-
-Launchpad is also the platform where the :term:`Ubuntu` project lives.
-This is one of the major differences between :term:`Ubuntu' <Ubuntu>`
-and :term:`Debian' <Debian>` infrastructure.
+like `GitHub`_. Launchpad is also the platform where the :term:`Ubuntu` project lives.
+This is one of the major differences between the Ubuntu and :term:`Debian`
+infrastructure.
 
 .. note::
 
-    Although the :term:`Ubuntu` project is probably the largest userbase of Launchpad, 
+    Although the Ubuntu project is probably the largest user base of Launchpad, 
     Launchpad can be used by anyone. 
 
 Launchpad features, among others, are:
 
 - **Bugs**: :term:`Bug Tracking System`
-- **Code**: :term:`Source Code` hosting with :term:`git` or :term:`Bazaar`
-  :term:`Version Control <Version Control System>` and :term:`Code Review` features
+- **Code**: :term:`source code <Source Code>` hosting with :term:`git` or :term:`Bazaar`,
+  :term:`version control <Version Control System>` and :term:`code review <Code Review>` features
 - **Answers**: community support site and knowledge base
 - **Translations**: collaboration platform for localizing software 
 - **Blueprints**: feature planning and specification tracking
-- :term:`Ubuntu` :term:`Package` building and hosting
-- Team/Group Management
+- Ubuntu :term:`package <Package>` building and hosting
+- Team/Group management
 
-While platforms like `GitHub`_ put users and groups at the top level, Launchpad
-puts projects at the top level. If you take :term:`Ubuntu` as an example, you can
+While platforms like GitHub put users and groups at the top level, Launchpad
+puts projects at the top level. If you take Ubuntu as an example, you can
 see that you can access it at the top level: https://launchpad.net/ubuntu.
 Users and groups begin with a ``~``, for instance https://launchpad.net/~techboard.
 
 Why not use platforms like GitHub?
 ----------------------------------
 
-Although Launchpad' :term:`UI` and :term:`UX` are a bit dated, Launchpad offers an
-unparalleled :term:`Ubuntu` :term:`Package` building and hosting infrastructure that
+Although Launchpad's :term:`UI` and :term:`UX` are a bit dated, Launchpad offers an
+unparalleled Ubuntu package building and hosting infrastructure that
 no other platform offers. Even simple requirements like building for architectures
-like :term:`PowerPC`, :term:`s390x`, or :term:`RISC-V` can not be fulfilled by `GitHub`_ 
+like :term:`PowerPC`, :term:`s390x`, or :term:`RISC-V` can not be fulfilled by GitHub 
 or similar platforms.
 
 Personal Package Archive (PPA)
 ------------------------------
 
-Launchpad PPAs allow you to build installable :term:`Ubuntu` :term:`Packages <Package>` for 
-multiple :term:`Architectures <Architecture>` and to host them in your own software
-:term:`Repository`. 
+Launchpad PPAs allow you to build installable Ubuntu packages for multiple
+:term:`architectures <Architecture>` and to host them in your own software
+:term:`repository <Repository>`. 
 
 Using a PPA is straightforward; you don't need the approval of anyone, therefore users 
-will have to enable it manually. See :ref:`InstallPackagesFromPPA`.
+will have to enable it manually. See how to :ref:`InstallPackagesFromPPA`.
 
-This is pretty useful when you want to test a change or show others that a change
-builds successfull or is installable. Some people have the special permission to trigger
-the :term:`autopkgtests <autopkgtest>` for :term:`Packages <Package>` in a PPA.
+This is useful when you want to test a change, or to show others that a change
+builds successfully or is installable. Some people have special permission to
+trigger the :term:`autopkgtests <autopkgtest>` for packages in a PPA.
 
 .. tip::
 
     You can ask in the :term:`IRC` channel ``#ubuntu-devel`` if someone can trigger 
-    :term:`autopkgtests <autopkgtest>` in your PPA if you don't have the permission.
+    autopkgtests in your PPA if you don't have the permission.
 
-git-based workflow for the development of Ubuntu Source Packages
+git-based workflow for the development of Ubuntu source packages
 ----------------------------------------------------------------
 
 Launchpad hosts a :doc:`/reference/git-ubuntu` importer service that maintains
-a view of the entire packaging version history of :term:`Ubuntu` 
-:term:`Source Packages <Source Package>` using :term:`git` :term:`Repositories <Repository>`
-with a common branching and tagging scheme. The :doc:`/reference/git-ubuntu` :term:`CLI`
-provides tooling and automation that understands these :term:`Repositories <Repository>`
-to make the development of :term:`Ubuntu` itself easier.
+a view of the entire packaging version history of Ubuntu source packages using
+git repositories with a common branching and tagging scheme. The git-ubuntu
+:term:`CLI` provides tooling and automation that understands these repositories
+to make the development of Ubuntu itself easier.
 
 You can see the web-view of these repositories when you click on the "Code" tab of any
 :term:`Source Package` on Launchpad, for example: https://code.launchpad.net/ubuntu/+source/hello
@@ -236,7 +233,7 @@ IRC Chatrooms
 ~~~~~~~~~~~~~
 
 On the ``irc.libera.chat`` :term:`IRC` server exists the ``#launchpad`` channel, where you
-can ask the Launchpad team and the :term:`Ubuntu` community for help.
+can ask the Launchpad team and the Ubuntu community for help.
 
 Mailing Lists
 ~~~~~~~~~~~~~

@@ -1,2 +1,2 @@
-Ubuntu Development Process
+Ubuntu development process
 ==========================
