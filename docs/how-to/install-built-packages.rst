@@ -2,53 +2,56 @@ Install built packages
 ======================
 
 You have a built :term:`binary package <Binary Package>` of a
-:term:`source packages <Source Package>` and want to install it (e.g. to test
-the package). This article demonstrates multiple ways how you can achive that.
+:term:`source package <Source Package>` and want to install it (e.g. to test
+the package). This article demonstrates three ways to achieve that: manually
+installing binaries with the Advanced Package Manager (APT), manually
+installing with the Debian Package Manager (dpkg), and installing from a
+Personal Package Archive (PPA).
 
-Manual installation of binary packages (``.deb`` files)
--------------------------------------------------------
-
-Using the Advanced Package Manager (APT)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Manually install ``.deb`` files with APT
+----------------------------------------
 
 Install binary packages
-^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: text
+.. code:: bash
 
     sudo apt install <PACKAGE.deb>...
 
 Example
+^^^^^^^
 
 .. code:: bash
 
     sudo apt install hello_2.10-3_amd64.deb
 
-Uninstall packages (and keep its configuration files)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Uninstall packages (keeping config files)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. tip::
 
-    It can be useful to keep the configuration files to avoid having to reconfigure the package if it is reinstalled later.
+    It can be useful to keep the configuration files to avoid needing to reconfigure the package if it is reinstalled later.
 
-.. code:: text
+.. code:: bash
 
     sudo apt remove <PACKAGE-NAME>...
 
 Example
+^^^^^^^
 
 .. code:: bash
 
     sudo apt remove hello
 
-Uninstall packages (and delete its configuration files)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Uninstall packages (deleting config files)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: text
+.. code:: bash
 
     sudo apt purge <PACKAGE-NAME>...
 
 Example
+^^^^^^^
 
 .. code:: bash
 
@@ -56,48 +59,51 @@ Example
 
 You can find further information on the manual page: :manpage:`apt(8)`.
 
-Using the debian package manager (:command:`dpkg`)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Install using :command:`dpkg`
+-----------------------------
 
 Install binary packages
-^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: text
+.. code:: bash
 
     sudo dpkg --install <PACKAGE.deb>...
 
 Example
+^^^^^^^
 
 .. code:: bash
 
     sudo dpkg --install hello_2.10-3_amd64.deb
 
-Uninstall packages (and keep its configuration files)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Uninstall packages (keeping config files)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. tip::
 
     It can be useful to keep the configuration files to avoid having to reconfigure
-    the :term:`Package` if it is reinstalled later.
+    the package if it is reinstalled later.
 
-.. code:: text
+.. code:: bash
 
     sudo dpkg --remove <PACKAGE-NAME>...
 
 Example
+^^^^^^^
 
 .. code:: bash
 
     sudo dpkg --remove hello
 
-Uninstall packages (and delete its configuration files)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Uninstall packages (deleting config files)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: text
+.. code:: bash
 
     sudo dpkg --purge <PACKAGE-NAME>...
 
 Example
+^^^^^^^
 
 .. code:: bash
 
@@ -113,75 +119,84 @@ Install packages from a PPA
 Using :command:`add-apt-repository`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The :command:`add-apt-repository` command is part of the ``software-properties-common`` 
-package. It adds a :term:`Repository` (e.g. :term:`Launchpad` :term:`Personal Package Archive`)
-into the :file:`/etc/apt/sources.list` or :file:`/etc/apt/sources.list.d`
-(see :manpage:`sources.list(5)`), so you can install the :term:`Packages <Package>`
-provided by the :term:`Repository` like any other :term:`Package` from the :term:`Ubuntu Archive`.
+The :command:`add-apt-repository` command is part of the
+``software-properties-common`` package. It adds a :term:`Repository` (e.g. a
+:term:`Personal Package Archive` from :term:`Launchpad`) into the
+:file:`/etc/apt/sources.list` or :file:`/etc/apt/sources.list.d` (see
+:manpage:`sources.list(5)`), so you can install the packages provided by the
+repository like any other package from the :term:`Ubuntu Archive`.
 
 Usage
+^^^^^
 
-.. code:: text
+.. code:: bash
 
     sudo add-apt-repository ppa:<LAUNCHPAD-USERNAME>/<PPA-NAME>
 
 Example
+^^^^^^^
 
 .. code:: bash
 
     sudo add-apt-repository ppa:dviererbe/hello
     sudo apt install hello
 
-You can find further information about the command on the manual page: :manpage:`add-apt-repository(1)`.
+You can find further information about the command on the manual page:
+:manpage:`add-apt-repository(1)`.
 
 
 Add PPA to :file:`sources.list` manually
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you visit the web interface of the :term:`PPA` you want to add; you can see 
-a text called *Technical details about this PPA*. When you click on the text, it
-will unfold und show the details you need to add the :term:`PPA`.
+When you visit the web interface of the :term:`PPA` you want to add, you can
+see a text reading something like "Technical details about this PPA". When you
+click on the text, it will unfold und show the details you need to add the
+PPA.
 
 .. image:: ../images/how-to/install-built-packages/launchpad-ppa-webinterface.png
    :align: center
    :width: 35 em
-   :alt: Screenshot of the web-interface of the dviererbe/hello PPA; highlighting the technical details section.
+   :alt: Web-interface of the dviererbe/hello PPA; highlighting the technical details section.
 
-1. Add :term:`PPA` entry to :file:`/etc/apt/sources.list.d`
+The steps to add the PPA are as follows:
+
+1. Add the PPA entry to :file:`/etc/apt/sources.list.d`
    
-   .. code:: bash
+   .. code-block:: bash
 
        sudo editor /etc/apt/sources.list.d/launchpad_ppa.sources
 
-   Add the lines like this and save
+   Add the following lines (substituting ``LAUNCHPAD-USERNAME`` AND
+   ``PPA-NAME`` for your own case) and save the file:
     
-   .. code::
+   .. code-block::
         
        deb https://ppa.launchpadcontent.net/LAUNCHPAD-USERNAME/PPA-NAME/ubuntu SERIES main 
        deb-src https://ppa.launchpadcontent.net/LAUNCHPAD-USERNAME/PPA-NAME/ubuntu SERIES main 
     
-2. Add the :term:`PPA` :term:`Signing Key` to ``/etc/apt/trusted.gpg.d``
+2. Add the PPA :term:`Signing Key` to ``/etc/apt/trusted.gpg.d``:
    
-   .. code::
+   .. code-block::
 
        SIGNING_KEY='PASTE SIGNING KEY HERE'
        wget --quiet --output-document - \
        "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x${SIGNING_KEY,,}" \
        | sudo gpg --output /etc/apt/trusted.gpg.d/launchpad-ppa.gpg --dearmor -
 
-3. Update package information
+3. Update the package information:
    
    .. code::
 
        sudo apt update
 
-4. Install package from :term:`PPA`
+4. Install the package from the PPA:
 
    .. code:: bash
 
        sudo apt install PACKAGE-NAME
 
-Example
+Example:
+^^^^^^^^
 
 .. code:: bash
 
@@ -200,10 +215,12 @@ Example
 
 Download the `.deb` files
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-You can download the :term:`Binary Package` from a :term:`Personal Package Archive`
-and install it with :command:`apt` or :command:`dpkg` (see above).
+
+You can download the binary package from a PPA and install it with
+:command:`apt` or :command:`dpkg` (see above).
 
 Example
+^^^^^^^
 
 .. code:: bash
 
@@ -212,11 +229,11 @@ Example
 
 .. note::
 
-    The ``pull-ppa-deb`` command is part of the ``ubuntu-dev-tools`` :term:`Package`. 
-    This :term:`Package` also provides the commands: 
+    The ``pull-ppa-deb`` command is part of the ``ubuntu-dev-tools`` package. 
+    This package also provides the commands: 
 
-    - ``pull-lp-debs`` (to pull binary packages from launchpad) and 
-    - ``pull-debian-debs`` (to pull binary packages from debians archive).
+    - ``pull-lp-debs`` (to pull binary packages from Launchpad) and 
+    - ``pull-debian-debs`` (to pull binary packages from Debian's archive).
 
     You can find further information about them on the manual page :manpage:`pull-pkg(1)`.
 

@@ -50,7 +50,7 @@ more than four years after the initial release of Ubuntu 16.04 LTS.
 Interim releases
 ~~~~~~~~~~~~~~~~
 
-Every other release, between :ref:`LTSReleases`, is an "interim release" that
+Every other release, between LTS releases, is an "interim release" that
 is also often called a "regular release".
 
 Many developers use interim releases because they provide newer compilers or
@@ -185,7 +185,7 @@ which have the fewest possible packages installed: available in the
 installer for Ubuntu Server, Ubuntu Desktop, and as separate cloud images.
 
 Canonical publishes Ubuntu on all major public clouds, and the latest
-:term:`image` for each :ref:`LTS <LTSReleases>` version will always include
+:term:`image` for each LTS version will always include
 security updates
 rolled up to at most two weeks ago.
 

@@ -1,2 +1,2 @@
-Getting Set Up
+Getting set up
 ==============

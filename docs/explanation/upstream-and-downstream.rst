@@ -8,7 +8,7 @@ projects for users, ready to install. The collection of Ubuntu packages is
 derived from the collection of packages maintained by the community-driven
 :term:`Debian` project.
 
-An important duty of an Ubuntu :term:`Package` :term:`Maintainer` is to
+An important duty of an Ubuntu package :term:`Maintainer` is to
 collaborate with the open source projects the Ubuntu packages are derived from --
 especially with Debian. We do this by keeping the Ubuntu copies of packages
 up-to-date and by sharing improvements made in Ubuntu back up to Debian.
@@ -137,7 +137,6 @@ Why do we upstream changes?
   system could lead to the indirect exposure of other systems.
 - **Mutual benefit**: By syncing the Debian packages into the Ubuntu package
   collection, Ubuntu benefits from the upstream maintenance work. In exchange,
-  Ubuntu :term:`maintainers <Maintainer>` upstream changes to Debian. This
-  results in a win-win situation where both parties benefit from working
-  together.
+  Ubuntu Maintainers upstream changes to Debian. This results in a win-win
+  situation where both parties benefit from working together.
   

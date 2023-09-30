@@ -109,7 +109,7 @@ in the :ref:`format 1.0 <SourcePackageFormat_1.0>`.
 A source package in this format is a tarball (``.tar.ext`` where ``ext``
 can be ``gz``, ``bz2``, ``lzma`` or ``xz``).
 
-For example, take a look at the ``subiquity`` package:
+For example, let's take a look at the ``subiquity`` package:
 
 .. code:: bash
 

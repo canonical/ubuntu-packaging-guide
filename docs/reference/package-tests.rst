@@ -1,2 +1,2 @@
-Package Tests
+Package tests
 =============

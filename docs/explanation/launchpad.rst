@@ -101,7 +101,7 @@ Launchpad can recognize ``http``, ``https``, ``ftp``, ``sftp``, ``mailto``,
 
 .. note::
 
-    ``tel``, ``urn``, ``telnet``, ``ldap`` :term:`URIs <URI>`, relative 
+    ``tel``, ``urn``, ``telnet``, ``ldap`` URIs, relative 
     :term:`URLs <URL>` like ``example.com`` and email addresses like 
     ``test@example.com`` are **NOT** recognized. 
 
