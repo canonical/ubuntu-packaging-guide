@@ -121,10 +121,10 @@ Using :command:`add-apt-repository`
 
 The :command:`add-apt-repository` command is part of the
 ``software-properties-common`` package. It adds a :term:`Repository` (e.g. a
-:term:`Personal Package Archive` from :term:`Launchpad`) into the
-:file:`/etc/apt/sources.list` or :file:`/etc/apt/sources.list.d` (see
-:manpage:`sources.list(5)`), so you can install the packages provided by the
-repository like any other package from the :term:`Ubuntu Archive`.
+:term:`Personal Package Archive` from :term:`Launchpad`) to the
+:file:`/etc/apt/sources.list.d` directory (see :manpage:`sources.list(5)`),
+so you can install the packages provided by the repository like any other
+package from the :term:`Ubuntu Archive`.
 
 Usage
 ^^^^^
