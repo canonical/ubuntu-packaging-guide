@@ -269,7 +269,7 @@ You can see which mirror is the country mirror by doing a simple
     .. tab-item:: Tunisia (TN)
 
         Tunisia does not have any third-party mirrors in its country. Therefore the
-        Tunisia country mirror is just the main Ubuntu package archive server
+        Tunisia country mirror is just the primary Ubuntu package archive server
         (``archive.ubuntu.com``).
 
         .. code:: bash
