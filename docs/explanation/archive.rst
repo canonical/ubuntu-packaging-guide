@@ -309,6 +309,53 @@ general contributions need to be reviewed and uploaded by a :term:`sponsor <Spon
 See our :doc:`article on sponsoring </explanation/sponsoring>` that explains this
 process in more detail.
 
+Security update propagation
+---------------------------
+
+This section is a niche technical explanation. You can skip it if you don't feel that
+this is currently relevant for you.
+
+Because security updates contain fixes for :term:`Common Vulnerabilities and Exposures`
+(CVE), it is mission critical to distribute them as fast as possible to end users.
+Mirrors are a technical burdon in this case, because there is a delay between the
+synchronoization of a mirror and the primary Ubuntu package archive server.
+
+In the worst case a bad actor gets informed about a CVE and can utilize it, before
+the update reaches a target machine.
+
+Therefore the APT package manager is configured by defult (on Ubuntu) to also check
+for updates from ``security.ubuntu.com``. Security updates will get uploaded here
+first. If a mirror does not provide the update yet a client will download it from
+``security.ubuntu.com`` instead from the mirror.
+
+You can see this yourself if you look what the :manpage:`sources.list(5)` file contains
+on your Ubuntu machine:
+
+.. code:: bash
+
+    cat /etc/apt/sources.list
+
+At the end of the file you will find something similar to this:
+
+.. code:: text
+
+    deb http://security.ubuntu.com/ubuntu SERIES-security main restricted
+    # deb-src http://security.ubuntu.com/ubuntu SERIES-security main restricted
+    deb http://security.ubuntu.com/ubuntu SERIES-security universe
+    # deb-src http://security.ubuntu.com/ubuntu SERIES-security universe
+    deb http://security.ubuntu.com/ubuntu SERIES-security multiverse
+    # deb-src http://security.ubuntu.com/ubuntu SERIES-security multiverse
+
+Because the :manpage:`sources.list(5)` file is read from top to bottom, the APT
+package manager will download updates from the mirror first and only download it
+from ``security.ubuntu.com`` if the mirror has an older version,
+because the mirror has not syncronized with the primary Ubuntu package archive
+server yet.
+
+``security.ubuntu.com`` points to the same servers as ``archive.ubuntu.com`` if
+you do a DNS lookup. It is used in the :manpage:`sources.list(5)` file for the
+security pocket to prevent a user/script from accidentaly changing it to a mirror.
+
 Resources
 ---------
 
