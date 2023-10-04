@@ -82,8 +82,9 @@ A source package in this format contains at least an original tarball
 and a debian tarball (``.debian.tar.ext``). It can also contain additional
 original tarballs (``.orig-component.tar.ext``), where ``component`` can only
 contain alphanumeric (``a-z``, ``A-Z``, ``0-9``) characters and hyphens (``-``).
-Optionally, each original tarball can be accompanied by a detached upstream
-signature (``.orig.tar.ext.asc`` and ``.orig-component.tar.ext.asc``).
+Optionally, each original tarball can be accompanied by a
+:term:`detached signature <Detached Signature>` from the upstream project
+(``.orig.tar.ext.asc`` and ``.orig-component.tar.ext.asc``).
 
 For example, take a look at the ``hello`` package:
 
@@ -94,9 +95,12 @@ For example, take a look at the ``hello`` package:
 Now you should see the following files:
 
 - :file:`hello_2.10-3.dsc`: The **Debian Source Control** file of the source package.
-- :file:`hello_2.10.orig.tar.gz`: The tarball containing the original :term:`Source Code` of the Upstream project.
-- :file:`hello_2.10.orig.tar.gz.asc`: The detached Upstream signature of :file:`hello_2.10.orig.tar.gz`.
-- :file:`hello_2.10-3.debian.tar.xz`: The tarball containing the content of the Debian directory.
+- :file:`hello_2.10.orig.tar.gz`: The tarball containing the original
+  :term:`source code <Source Code>` of the upstream project.
+- :file:`hello_2.10.orig.tar.gz.asc`: The detached upstream signature of
+  :file:`hello_2.10.orig.tar.gz`.
+- :file:`hello_2.10-3.debian.tar.xz`: The tarball containing the content of the
+  Debian directory.
 
 .. _SourcePackageFormat_3.0native:
 

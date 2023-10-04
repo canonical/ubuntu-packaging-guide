@@ -419,6 +419,12 @@ Glossary
     debs
         `.deb` is the file extension of a :term:`Debian` :term:`Binary Package`.
 
+    Detached Signature
+        A detached signature is a :term:`Digital Signature <Signature>` that is separated
+        from the data it signs. In contrast to an embedded signature, which is included
+        within the data it signs, a detached signature is kept as a separate file
+        or entity. 
+
     Devel
         Shorthand term for the :term:`Current Release in Development`.
 
@@ -1045,6 +1051,21 @@ Glossary
 
     Service-level Agreement
         *Work in Progress*
+
+    Signature
+        A digital signature is a cryptographic record that verifies the authenticity
+        and integrity of data.
+
+        Every :term:`Package` in the :term:`Ubuntu Archive` is digitally signed,
+        enabling users to detect data corruption during the download or unwanted/malicious
+        modifications. Furthermore, some :term:`Upstream` projects sign their releases,
+        which lets Ubuntu :term:`Maintainers <Maintainer>` and users of the corresponding
+        packages verify that the :term:`Source Code` is from the developers of the
+        upstream project.
+
+        The tool :manpage:`gpg(1)` is commonly used to create and modify digital
+        signatures. Further information can be found in the
+        `GNU Privacy Handbook <https://www.gnupg.org/gph/en/manual.html#AEN136>`_.
 
     Signing Key
         *Work in Progress*
