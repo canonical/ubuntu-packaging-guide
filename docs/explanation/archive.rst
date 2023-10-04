@@ -154,9 +154,9 @@ of a suite.
 
 The packages of an Ubuntu series are categorized according to whether they are
 :term:`Open Source Software` or :term:`Closed Source Software`, and whether or
-not they are part of the "base" packages for a given series. On this basis they are
-sorted into the components "main", "restricted", "universe", or "multiverse",
-as shown in the following table:
+not they are part of the :term:`base packages <Ubuntu Base Packages>` for a given
+series. On this basis they are sorted into the components "main", "restricted",
+"universe", or "multiverse", as shown in the following table:
 
 +----------------------------+-----------------------------------+-------------------------------------+
 |                            | Open source software              | Closed source software              |

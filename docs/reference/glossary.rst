@@ -1129,6 +1129,13 @@ Glossary
 
         See: `autopkgtest.ubuntu.com <https://autopkgtest.ubuntu.com/>`_
 
+    Ubuntu Base Packages
+        :term:`Packages <Package>` that are in the :term:`Main` or :term:`Restricted`
+        :term:`Component`. These are packages that are maintained by :term:`Canonical`,
+        because they are fundamental for :term:`Ubuntu`.
+
+        See also: :term:`Main Inclusion Review`
+
     Ubuntu Cloud Archive
         *Work in Progress* 
         
