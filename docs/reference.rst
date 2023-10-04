@@ -19,5 +19,6 @@ support matrices, and so on.
    reference/debian-policy.rst
    reference/filesystem-hierarchy-standard.rst
    reference/outdated-tools.rst
+   reference/launchpad-comments.rst
    reference/common-non-technical-acronyms.rst
    reference/glossary.rst
