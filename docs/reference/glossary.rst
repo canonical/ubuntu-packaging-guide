@@ -482,7 +482,7 @@ Glossary
         Refers to the :term:`End of Support` (Life) for a product/software.
 
     End of Line
-        The end of a line of encoded text that is indicated by a control character
+        The end of a line of encoded text is indicated by a control character
         or sequence of control characters.
 
         This is relevant for text parser which often parse text line by line.
