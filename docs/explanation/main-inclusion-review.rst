@@ -50,10 +50,14 @@ The purpose of the meeting is:
 - to provide a timely response to reporters of MIR applications
 - detection and discussion of any current or complex cases
 
-Due to the nature of the Main Inclusion Review process there are times
-when this meeting is very busy. Usually at the beginning of a new Ubuntu
-release not a lot is happening.
+You should attend these meetings if you submit an MIR request until it is approved or rejected.
 
+Usually, the amount of MIR requests increases during the six-month development
+period of a new Ubuntu release. Especially right before the various feature freezes 
+(see :doc:`/explanation/development-process`), Ubuntu developers submit MIR requests
+they have been working on before they have to submit an exception request. As a result,
+the meetings tend to be quieter, and response times to MIR requests are, on average,
+faster after the release of a new Ubuntu version.
 
 Resources
 ---------
