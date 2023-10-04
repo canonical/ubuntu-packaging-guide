@@ -482,8 +482,8 @@ Glossary
         Refers to the :term:`End of Support` (Life) for a product/software.
 
     End of Line
-        The end of a line of encoded text is indicated by a control character
-        or sequence of control characters.
+        The end of a line of :term:`encoded text <Text Encoding>` is indicated by
+        a control character or sequence of control characters.
 
         This is relevant for text parser which often parse text line by line.
 
@@ -1110,6 +1110,18 @@ Glossary
         tape drives, but nowadays it is widely used as a general packaging mechanism.
 
         See also: :term:`orig tarball`
+
+    Text Encoding
+        **Text encoding** refers to the method or schema used to represent and store
+        text characters in a digital format. It involves assigning numerical codes
+        (typically binary) to each character in a character set, which allows computers
+        to process and display text. 
+
+        For example, ``ASCII`` and ``UTF-8`` are commonly used text encoding formats.
+
+        The choice of a text encoding format is essential for ensuring proper character
+        representation, especially when dealing with different languages and special
+        characters.
 
     TLS
         Abbreviation for :term:`Transport Layer Security`
