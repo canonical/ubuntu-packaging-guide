@@ -19,8 +19,8 @@ to Main or Restricted. The Ubuntu :term:`MIR Team` reviews packages for promotio
 
 This review process is called **Main Inclusion Review (MIR)**.
 
-Apply a package for Main Inclusion Review
------------------------------------------
+Submit a package for Main Inclusion Review
+------------------------------------------
 
 The `Main Inclusion Review documentation <MainInclusionReviewDocumentation_>`_
 by the MIR team provides instructions on how to apply for
