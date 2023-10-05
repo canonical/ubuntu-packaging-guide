@@ -50,8 +50,8 @@ more than four years after the initial release of Ubuntu 16.04 LTS.
 Interim releases
 ~~~~~~~~~~~~~~~~
 
-Every other release, between LTS releases, is an "interim release" that
-is also often called a "regular release".
+In the years between LTS releases, Canonical also produces **interim releases**,
+sometimes also called "regular releases".
 
 Many developers use interim releases because they provide newer compilers or
 access to newer :term:`Kernels <Kernel>` and newer libraries, and they are often
