@@ -45,7 +45,7 @@ To clone a source package git repository to a directory:
 To generate the :term:`orig tarballs <orig tarball>` for a given source package:
 
 .. code-block:: bash
-    
+
     git-ubuntu export-orig
 
 Example
@@ -231,8 +231,7 @@ Next, copy the download link of the ``.dsc`` file:
    :width: 35 em
    :alt: Launchpad overview page for the 2.10-3 release of the hello source package with an arrow pointing to the .dsc file link. 
 
-Finally, call ``dget`` with the copied URL:
-    
+Finally, call ``dget`` with the copied URL:   
    .. code-block:: bash
    
        dget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/hello/2.10-3/hello_2.10-3.dsc
