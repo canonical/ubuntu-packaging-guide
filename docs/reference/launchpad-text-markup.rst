@@ -15,7 +15,7 @@ Examples of textareas where the Launchpad text markup is accepted are:
         .. image:: /images/reference/launchpad-comments/ReportABug.png
             :align: center
             :width: 100%
-            :alt: Screenshot of an example Launchpad "Report a bug" page. 
+            :alt: Screenshot of an example Launchpad "Report a bug" page where "You can write Launchpad text markup here." is written in the textarea input field "Further Information".
 
         +++
 
@@ -26,7 +26,7 @@ Examples of textareas where the Launchpad text markup is accepted are:
         .. image:: /images/reference/launchpad-comments/Bug.png
             :align: center
             :width: 100%
-            :alt: Screenshot of an example Launchpad Launchpad page. 
+            :alt: Screenshot of an example Launchpad bug page where the description is currently beeing edited and "You can write Launchpad text markup here." is written in the textarea input fields "Bug Description" and "Add comment". 
 
         +++
 
@@ -37,7 +37,7 @@ Examples of textareas where the Launchpad text markup is accepted are:
         .. image:: /images/reference/launchpad-comments/ProposeBranchForMerging.png
             :align: center
             :width: 100%
-            :alt: Screenshot of an example Launchpad Launchpad page. 
+            :alt: Screenshot of an example Launchpad "Propose for merging" page where "You can write Launchpad text markup here." is written in the textarea input field "Description of the change".
 
         +++
 
@@ -48,7 +48,7 @@ Examples of textareas where the Launchpad text markup is accepted are:
         .. image:: /images/reference/launchpad-comments/EditMergeRequestComment.png
             :align: center
             :width: 100%
-            :alt: Screenshot of an example Launchpad Launchpad page. 
+            :alt: Screenshot of an example Launchpad merge proposal page where the first comment is beeing edited and the textarea input field contains the text "You can write Launchpad text markup here.".
 
         +++
 
@@ -59,7 +59,7 @@ Examples of textareas where the Launchpad text markup is accepted are:
         .. image:: /images/reference/launchpad-comments/EditProfileDescription.png
             :align: center
             :width: 100%
-            :alt: Screenshot of an example Launchpad Launchpad page. 
+            :alt: Screenshot of an example Launchpad Profile page where the description is beeing edited and the textarea input field contains the text "You can write Launchpad text markup here.".
 
         +++
         
@@ -70,7 +70,7 @@ Examples of textareas where the Launchpad text markup is accepted are:
         .. image:: /images/reference/launchpad-comments/EditPPADescription.png
             :align: center
             :width: 100%
-            :alt: Screenshot of an example Launchpad PPA page whose description gets edited. 
+            :alt: Screenshot of an example Launchpad PPA page where the description is beeing edited and the textarea input field contains the text "You can write Launchpad text markup here.".
 
         +++
         
