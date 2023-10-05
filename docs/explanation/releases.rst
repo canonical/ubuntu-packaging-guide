@@ -175,8 +175,9 @@ Every Ubuntu release is provided as both a :term:`Server <Ubuntu Server>` and
 
 Ubuntu Desktop provides a graphical :term:`User Interface` (:term:`GUI`) for
 everyday computing tasks, making it suitable for personal computers and laptops.
-:term:`Ubuntu Server`, on the other hand, is a command-line-based :term:`Operating System`
-optimized for server environments, lacking a :term:`GUI` and focusing on server-related
+:term:`Ubuntu Server`, on the other hand, provides a text-based :term:`User Interface`
+(:term:`TUI`) instead of a :term:`GUI`, optimized for server environments, that
+allows machines on the server to be run headless, focusing on server-related
 services and applications, making it ideal for hosting web services, databases, and
 other server functions.
 
