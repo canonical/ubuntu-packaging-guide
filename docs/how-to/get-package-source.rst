@@ -45,6 +45,7 @@ To clone a source package git repository to a directory:
 To generate the orig tarballs for a given source package:
 
 .. code-block:: bash
+    
     git-ubuntu export-orig
 
 Example
