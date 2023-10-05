@@ -148,8 +148,8 @@ the archive.
 Components
 ----------
 
-**Components** are logical subdivisions or namespaces of the packages
-in a suite. The APT package manager can subscribe to the individual components
+**Components** are logical subdivisions or :term:`namespaces <Namespace>` of the 
+packages in a suite. The APT package manager can subscribe to the individual components
 of a suite.
 
 The packages of an Ubuntu series are categorized according to whether they are

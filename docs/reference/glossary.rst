@@ -793,6 +793,18 @@ Glossary
 
         See: :ref:`ArchiveComponents`
 
+    Namespace
+        A concept in computer science and software development that defines a scope
+        or context in which identifiers (such as variable names, functions, or classes)
+        are unique and distinct. It helps prevent naming conflicts and organizes
+        code elements into separate compartments. Namespaces are commonly used in
+        programming languages to group and categorize code, making it more manageable
+        and maintainable. They play a crucial role in encapsulation and modularity,
+        allowing developers to create reusable and organized code structures.
+        Namespaces are particularly important in larger software projects where
+        numerous components and libraries need to coexist without clashing with
+        each other's names.
+
     National Institute of Standards and Technology
         *Work in Progress*
 
