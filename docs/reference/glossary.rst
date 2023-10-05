@@ -224,6 +224,12 @@ Glossary
 
         Find out more on the Canonical website: `canonical.com <https://canonical.com/>`_
 
+    Canonical Discourse
+        A :term:`Discourse` instance for internal/company-wide discussions. 
+        The discussions here will only be accessible to the :term:`Canonical` employes.
+
+        See: `discourse.ubuntu.com <https://discourse.canonical.com>
+
     CD
         Abbreviation for :term:`Continuous Delivery`
 
@@ -440,6 +446,13 @@ Glossary
         fromat (e.g. ``.bin``, ``.png``, ``.jpg``).
 
         See also :manpage:`diff(1)`, :manpage:`git-diff(1)`
+
+    Discourse
+        An :term:`open-source <Open Source Software>` forum software that is used 
+        by :term:`Ubuntu` and :term:`Canonical`.
+
+        See also: :term:`Ubuntu Discourse`, :term:`Canonical Discourse`,
+        `Discourse Project Homepage <https://www.discourse.org/>`_
 
     Distribution
         In general, a software *distribution* (also called *"distro"*) is a set of
@@ -1206,6 +1219,15 @@ Glossary
         See also:
         `Ubuntu Developer Summit is now Ubuntu Summit (Ubuntu Blog) <https://ubuntu.com/blog/uds-is-now-ubuntu-summit>`_,
         `Developer Summit (Ubuntu Wiki) <https://wiki.ubuntu.com/DeveloperSummit>`_
+
+    Ubuntu Discourse
+        A :term:`Discourse` instance about general :term:`Ubuntu` development that
+        is accessible to the general public, where you can find discussions,
+        announcements, team updates, documentation and much more.
+
+        Feel free `to introduce yourself <https://discourse.ubuntu.com/c/intro/101>`_.
+
+        See: `discourse.ubuntu.com <https://discourse.ubuntu.com>
 
     Ubuntu flavours
         *Ubuntu flavours* are :term:`Distributions <Distribution>` of the default :term:`Ubuntu`
