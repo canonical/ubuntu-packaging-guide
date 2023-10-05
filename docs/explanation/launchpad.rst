@@ -79,7 +79,7 @@ Text markup
 
 Launchpad has some markup features that you can use when you e.g. report bugs, write comments, create merge proposals.
 
-See the :doc:`/reference/launchpad-comments` reference for more details.
+See the :doc:`/reference/launchpad-text-markup` reference for more details.
 
 Getting help
 ------------
