@@ -42,7 +42,7 @@ To clone a source package git repository to a directory:
     git ubuntu clone PACKAGE [DIRECTORY]
 
 
-To generate the orig tarballs for a given source package:
+To generate the :term:`orig tarballs <orig tarball>` for a given source package:
 
 .. code-block:: bash
     
