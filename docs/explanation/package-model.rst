@@ -24,7 +24,8 @@ A source package is composed of:
 
 The **Source Control** file contains metadata about the source package, for
 instance, a list of additional files, name and version, list of the binary
-packages it produces, dependencies, a digital signature and many more fields.
+packages it produces, dependencies, a :term:`digital signature <Signature>`
+and many more fields.
 
 .. note::
 
@@ -38,33 +39,59 @@ There are multiple formats for how the source is packaged. The format of a
 source package is declared in the :file:`debian/source/format` file. This file
 should always exist. If this file can not be found, the :ref:`format 1.0 <SourcePackageFormat_1.0>`
 is assumed for backwards compatibility, but :manpage:`lintian(1)` will warn you
-about it.
+about it when you try to build a source package.
 
 .. tip::
 
-    If you don't know what source format to use, you should probably pick either 
-    :ref:`3.0 (quilt) <SourcePackageFormat_3.0quilt>` or
-    :ref:`3.0 (native) <SourcePackageFormat_3.0native>`.
+    We strongly recommend to use the :ref:`3.0 (quilt) <SourcePackageFormat_3.0quilt>` format
+    for new packages.
+
+    You should only pick a different format if you **really** know what you are doing.
 
 .. _NativeSourcePackages:
 
 Native source packages
 ^^^^^^^^^^^^^^^^^^^^^^
 
-In most cases, a software project is packaged by external contributors
-(:term:`maintainers <Maintainer>`) only tangentially related to the software
-project. Often, the source package has to do modifications to solve specific
-problems for its target :term:`distribution <Distribution>`. The source package
-can, in these cases, be considered as its own software project, like a fork.
-
-Consequently, the :term:`Upstream` releases and source package releases do not
+In most cases, a software project is packaged by external contributors called the
+:term:`maintainers <Maintainer>` of the package. Because the packaging is often done
+by a 3rd-party (from the perspective of the software project), the software to be
+packaged is often not designed to be packaged. In these cases the source package
+has to do modifications to solve specific problems for its target
+:term:`distribution <Distribution>`. The source package can, in these cases, be
+considered as its own software project, like a :term:`fork <Fork>`. Consequently,
+the :term:`Upstream` releases and source package releases do not
 always align.
 
 Native packages almost always originate from software projects designed with
 Debian packaging in mind and have no independent existence outside its target
-distribution. Native packages do not differentiate between Upstream releases
-and source package releases. Therefore, the version identifier of a native
-package does not have an Ubuntu- or Debian-specific component.
+distribution. Consequently native packages do not differentiate between Upstream
+releases and source package releases. Therefore, the version identifier of a native
+package does not have an Debian-specific component.
+
+For example:
+
+- The `debhelper package`_ (provides tools for building Debian packages) is a native
+  package from Debian. Because it is designed with packaging in mind, the packaging
+  specific files are part of the original :term:`source code <Source Code>`. The
+  debhelper developers are also maintainers of the Debian package. The Debian debhelper
+  package gets merged into the Ubuntu debhelper package and has therefore a ``ubuntu``
+  suffix in the version identifier.
+- In contrast, the `Ubuntu bash package`_ (the default :term:`shell <Shell>` on
+  Ubuntu) is **NOT** a native package. The `bash Software`_ originates from the
+  :term:`GNU project <GNU>`. The bash releases of the GNU project project will get
+  packaged by Debian maintainers and the `Debian bash package`_ is merged into the
+  Ubuntu bash package by Ubuntu maintainers. The Debian and Ubuntu packages both
+  are effectivley their own seperate software projects maintained by other people
+  than the developers of the software that gets packaged. This is the process how
+  most software is packaged on Ubuntu.
+
+.. warning::
+
+    Although native packages sound like the solution to use for your software project
+    if you want to distribute your software to Ubuntu/Debian, we **strongly** recommend
+    against using native package formats for new packages. Native packages are known
+    to cause long-term maintenance problems.
 
 .. _SourcePackageFormat_3.0quilt:
 
@@ -92,11 +119,25 @@ For example, take a look at the ``hello`` package:
 
     pull-lp-source --download-only 'hello' '2.10-3'
 
-Now you should see the following files:
+.. note::
+
+    You need to install ``ubuntu-dev-tools`` to run the :command:`pull-lp-source`:
+
+    .. code:: bash
+    
+        sudo apt install ubuntu-dev-tools
+
+When you now run :manpage:`ls(1)`:
+
+.. code:: bash
+
+    ls -1 debhelper_*
+
+you should see the following files:
 
 - :file:`hello_2.10-3.dsc`: The **Debian Source Control** file of the source package.
-- :file:`hello_2.10.orig.tar.gz`: The tarball containing the original
-  :term:`source code <Source Code>` of the upstream project.
+- :file:`hello_2.10.orig.tar.gz`: The tarball containing the original source code
+  of the upstream project.
 - :file:`hello_2.10.orig.tar.gz.asc`: The detached upstream signature of
   :file:`hello_2.10.orig.tar.gz`.
 - :file:`hello_2.10-3.debian.tar.xz`: The tarball containing the content of the
@@ -113,16 +154,30 @@ in the :ref:`format 1.0 <SourcePackageFormat_1.0>`.
 A source package in this format is a tarball (``.tar.ext`` where ``ext``
 can be ``gz``, ``bz2``, ``lzma`` or ``xz``).
 
-For example, let's take a look at the ``subiquity`` package:
+For example, let's take a look at the ``debhelper`` package:
 
 .. code:: bash
 
-    pull-lp-source --download-only 'ubiquity' '23.10.2'
+    pull-lp-source --download-only 'debhelper' '13.11.6ubuntu1'
 
-Now you should see the following files:
+When you now run :manpage:`ls(1)`:
 
-- ``ubiquity_23.10.2.dsc``:  The **Debian Source Control** file of the source package.
-- ``ubiquity_23.10.2.tar.xz``: The tarball containing the source code of the project.
+.. code:: bash
+
+    ls -1 debhelper_*
+
+you should see the following files:
+
+- ``debhelper_13.11.6ubuntu1.dsc``:  The **Debian Source Control** file of the source package.
+- ``debhelper_13.11.6ubuntu1.tar.xz``: The tarball containing the source code of the project.
+
+Other examples of native source packages are:
+
+- `ubuntu-dev-tools <https://launchpad.net/ubuntu/+source/ubuntu-dev-tools>`_
+- `ubuntu-release-upgrader <https://launchpad.net/ubuntu/+source/ubuntu-release-upgrader>`_
+- `dh-cargo <https://launchpad.net/ubuntu/+source/dh-cargo>`_
+- `ubiquity <https://launchpad.net/ubuntu/+source/ubiquity>`_
+- `subiquity <https://launchpad.net/ubuntu/+source/subiquity>`_
 
 .. _SourcePackageFormat_1.0:
 
@@ -204,3 +259,8 @@ Resources
 - `Debian policy manual v4.6.2.0 -- Chapter 4. Source packages <https://www.debian.org/doc/debian-policy/ch-source.html>`_
 - The manual page :manpage:`dpkg-source(1)`
 - `Debian wiki -- 3.0 source package format <https://wiki.debian.org/Projects/DebSrc3.0>`_
+
+.. _debhelper package: https://launchpad.net/ubuntu/+source/debhelper
+.. _bash Software: https://www.gnu.org/software/bash/
+.. _Debian bash package: https://tracker.debian.org/pkg/bash
+.. _Ubuntu bash package: https://launchpad.net/ubuntu/+source/bash
