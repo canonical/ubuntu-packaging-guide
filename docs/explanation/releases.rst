@@ -185,10 +185,9 @@ Additionally, each release of Ubuntu is available in minimal configurations,
 which have the fewest possible packages installed: available in the
 installer for Ubuntu Server, Ubuntu Desktop, and as separate cloud images.
 
-Canonical publishes Ubuntu on all major public clouds, and the latest
-:term:`image` for each LTS version will always include
-security updates
-rolled up to at most two weeks ago.
+Canonical publishes Ubuntu on all major public clouds, and the latest :term:`image`
+for each LTS version will always include any security update provided since the
+LTS release date, until two weeks prior to the image creation date.
 
 Ubuntu flavours
 ---------------
