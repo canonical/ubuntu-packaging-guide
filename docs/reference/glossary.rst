@@ -1111,7 +1111,20 @@ Glossary
         *Work in Progress*
 
     Stack
-        *Work in Progress*
+        In computer science, a **Stack** is a data-structure that can store a
+        collection of elements linearly with two primary operations:
+
+        - "Push": adds an element to the collection
+        - "Pop": removes the most recently added element in the collection
+
+        Stack implementatuons also often have a "Peak" operation to see the most
+        recently added element in the collection without removing it.
+
+        The name **Stack** stems from the analogy of items "stacked" ontop of
+        eachother like a stack of plates where you have to remove the plates
+        above to access the plates below.
+
+        See also: `Stack (abstract data type) <https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>`_
 
     Staging Environment
         *Work in Progress*
