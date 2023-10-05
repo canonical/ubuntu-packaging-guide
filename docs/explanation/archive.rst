@@ -8,7 +8,7 @@ access. The **Ubuntu package archive** hosts :term:`Debian`
 :term:`binary packages <Binary Package>` (``.deb`` files) and
 :term:`source packages <Source Package>` (``.dsc`` files). On Ubuntu
 installations, the Ubuntu package archive is configured as the default source
-for the :term:`APT` :term:`Package Manager` to download and install packages from.
+for the :term:`APT` package manager to download and install packages from.
 
 .. note::
 
@@ -24,7 +24,8 @@ Repositories
 ------------
 
 In the context of package management, **repositories** are servers containing
-sets of packages that a package manager can download and install.
+sets of packages that a :term:`package manager <Package Manager>` can download
+and install.
 
 This term can refer to the Ubuntu package archive as a whole or just 
 :ref:`suites <ArchiveSuite>`, :ref:`pockets <ArchivePockets>`, or
