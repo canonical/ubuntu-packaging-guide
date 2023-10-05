@@ -173,12 +173,12 @@ Editions
 Every Ubuntu release is provided as both a :term:`Server <Ubuntu Server>` and
 :term:`Desktop <Ubuntu Desktop>` edition.
 
-Ubuntu Desktop is designed for end-users and provides a graphical :term:`User Interface`
-(:term:`GUI`) for everyday computing tasks, making it suitable for personal computers
-and laptops. :term:`Ubuntu Server`, on the other hand, is a command-line-based
-:term:`Operating System` optimized for server environments, lacking a :term:`GUI`
-and focusing on server-related services and applications, making it ideal for hosting
-web services, databases, and other server functions.
+Ubuntu Desktop provides a graphical :term:`User Interface` (:term:`GUI`) for
+everyday computing tasks, making it suitable for personal computers and laptops.
+:term:`Ubuntu Server`, on the other hand, is a command-line-based :term:`Operating System`
+optimized for server environments, lacking a :term:`GUI` and focusing on server-related
+services and applications, making it ideal for hosting web services, databases, and
+other server functions.
 
 Additionally, each release of Ubuntu is available in minimal configurations,
 which have the fewest possible packages installed: available in the
