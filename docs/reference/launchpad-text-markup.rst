@@ -323,7 +323,7 @@ be displayed on Launchpad:
             http://localhost:8086/bar/baz/foo.bar.html;
 
     * - Result
-      - `http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html>`_;
+      - `http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_;
 
 .. list-table::
 
@@ -343,7 +343,7 @@ be displayed on Launchpad:
             http://localhost:8086/bar/baz/foo.bar.html?
 
     * - Result
-      - `http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html>`_?
+      - `http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_?
 
 .. list-table::
 
@@ -353,7 +353,7 @@ be displayed on Launchpad:
             http://localhost:8086/bar/baz/foo.bar.html,
 
     * - Result
-      - `http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html>`_,
+      - `http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_,
 
 .. list-table::
 
@@ -363,7 +363,7 @@ be displayed on Launchpad:
             <http://localhost:8086/bar/baz/foo.bar.html>
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html>`_>
+      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>
 
 .. list-table::
 
@@ -373,7 +373,7 @@ be displayed on Launchpad:
             <http://localhost:8086/bar/baz/foo.bar.html>,
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html>`_>,
+      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>,
 
 .. list-table::
 
@@ -383,7 +383,7 @@ be displayed on Launchpad:
             <http://localhost:8086/bar/baz/foo.bar.html>.
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html>`_>.
+      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>.
 
 .. list-table::
 
@@ -393,7 +393,7 @@ be displayed on Launchpad:
             <http://localhost:8086/bar/baz/foo.bar.html>;
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html>`_>;
+      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>;
 
 .. list-table::
 
@@ -403,7 +403,7 @@ be displayed on Launchpad:
             <http://localhost:8086/bar/baz/foo.bar.html>:
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html>`_>:
+      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>:
 
 
 .. list-table::
@@ -414,7 +414,7 @@ be displayed on Launchpad:
             <http://localhost:8086/bar/baz/foo.bar.html>?
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html>`_>?
+      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>?
 
 .. list-table::
 
@@ -679,3 +679,5 @@ Resources
 ---------
 
 - `Comments (help.launchpad.net) <https://help.launchpad.net/Comments>`_
+
+.. _DemoUrl: http://localhost:8086/bar/baz/foo.bar.html
