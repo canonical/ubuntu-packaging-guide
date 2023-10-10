@@ -237,8 +237,7 @@ Glossary
         A :term:`Mirror` of the :term:`Ubuntu` :term:`Image` archive
         (`cdimage.ubuntu.com <https://cdimage.ubuntu.com/>`_).
 
-        You can find a complete list of officially recognized :term:`Ubuntu` :term:`Image`
-        archive :term:`Mirrors <Mirror>` `here <https://launchpad.net/ubuntu/+cdmirrors>`_.
+        See the `complete list of officially recognized Ubuntu image archive mirrors <https://launchpad.net/ubuntu/+cdmirrors>`_.
 
     Central Processing Unit
         The main component of a computer, that is responsible for executing the instructions
@@ -1291,8 +1290,7 @@ Glossary
         If you have any question feel free to send an email at
         `summit@ubuntu.com <mailto:summit@ubuntu.com>`_.
 
-        Also, check out the :term:`Mailing List` specific to the *Ubuntu Summit*, you can
-        sign up `here <https://lists.ubuntu.com/mailman/listinfo/summit-news>`_.
+        Also, check out the `Ubuntu Summit mailing list <https://lists.ubuntu.com/mailman/listinfo/summit-news>`_.
 
         You can find more information at `summit.ubuntu.com <https://summit.ubuntu.com/>`_.
 
