@@ -1,58 +1,58 @@
 Download a new upstream version
 ===============================
 
-Once in a while you may need to download a new :term:`Upstream` release or check if a newer
-:term:`Upstream` release exists; for example:
+Once in a while you may need to download a new :term:`upstream <Upstream>` release
+or check if a newer upstream release exists; for example:
 
 - When fixing a bug, to rule out that a more recent version may have already fixed the bug.
-- As a :term:`Source Packages <Source Package>` :term:`Maintainer`, to check for, download,
-  and package a newer :term:`Upstream` release.
+- As a :term:`source package <Source Package>` :term:`maintainer <Maintainer>`, to check for,
+  download, and package a newer upstream release.
 
-Most of the :term:`Source Packages <Source Package>` contain a ``watch`` file in the ``debian``
+Most of the source packages contain a ``watch`` file in the ``debian``
 folder. This is a configuration file for the :manpage:`uscan(1)` utility which allows you to
 automatically search :term:`HTTP` or :term:`FTP` sites or :manpage:`git(1)` repositories
-for newly available updates of the :term:`Upstream` project.
+for newly available updates of the upstream project.
 
 .. note::
-    If the :term:`Source Package` does not contain a :file:`debian/watch` file, there may be
+    If the source package does not contain a :file:`debian/watch` file, there may be
     an explanation and instructions in the :file:`debain/README.source` or
     :file:`debian/README.debian` file (if available) that tell you how to proceed.
 
 Best practices
 --------------
 
-You should download :term:`Upstream` file(s) manually only if there is no automatic
+You should download upstream file(s) manually only if there is no automatic
 download mechanism and you can't find any download instructions.
 
 Remember that a package may get distributed to hundreds of thousands of users.
 Humans are the weakest link in this distribution chain, because we may
 accidentally miss or skip a verification step, misspell a :term:`URL`, copy the
-wrong :term:`URL` or copy a :term:`URL` only partially, etc.
+wrong URL or copy a URL only partially, etc.
 
-If you still have to download :term:`Upstream` file(s) manually make sure to
+If you still have to download upstream file(s) manually make sure to
 verify :term:`Cryptographic Signatures` (if available). The :term:`Signing Key`
-of the :term:`Upstream` project should be stored in the :term:`Source Package`
-as :file:`debian/upstream/signing-key.asc` (if the :term:`Upstream` project
-has a :term:`Signing Key`).
+of the upstream project should be stored in the source package
+as :file:`debian/upstream/signing-key.asc` (if the upstream project
+has a signing key).
 
-:manpage:`uscan(1)` verifies downloads against this :term:`Signing Key`
+:manpage:`uscan(1)` verifies downloads against this signing key
 automatically (if available).
 
 Download new upstream version (if available)
 --------------------------------------------
 
 Running :manpage:`uscan(1)` from the :term:`Root` of the :term:`Source Tree` will
-check if a newer :term:`Upstream` version exists and downloads it:
+check if a newer upstream version exists and downloads it:
 
 .. code-block:: bash
 
     uscan
 
-If :manpage:`uscan(1)` could not find a newer :term:`Upstream` version it will
+If :manpage:`uscan(1)` could not find a newer upstream version it will
 return with the exit code `1` and print nothing to the :term:`Standard Output`.
 
 :manpage:`uscan(1)` reads the first entry in :file:`debian/changelog` to determine
-the name and version of the :term:`Source Package`.
+the name and version of the source package.
 
 You can allways add the ``--verbose`` flag to see more information (e.g., which version
 :manpage:`uscan(1)` found):
@@ -66,35 +66,28 @@ Check for new upstream version (no download)
 
 If you just want to check if a new update is available, but you don't want to download
 anything, you can run the :manpage:`uscan(1)` :term:`Command` with the ``--safe`` flag
-from the :term:`Root` of the :term:`Source Tree`:
+from the :term:`Root` of the source tree:
 
 .. code-block:: bash
 
     uscan --safe
 
-Force the download of the latest upstream version
--------------------------------------------------
+Force the download
+------------------
 
-You can use the ``--force-download`` flag to download the latest :term:`Upstream` release
-from the :term:`Upstream` project, even if the :term:`Upstream` Release is up-to-date
-with the :term:`Source Package`:
+You can use the ``--force-download`` flag to download an upstream release
+from the upstream project, even if the upstream Release is up-to-date
+with the source package:
 
 .. code-block:: bash
 
     uscan --force-download
 
-.. note::
-
-    In most cases you actually want to download the :term:`Source` from the :term:`Archive`
-    and not re-download the :term:`Source` from the :term:`Upstream` project.
-    
-    :ref:`How to get the Source from the Archive? <get-package-source>`
-
 Download the source of older versions from the upstream project
 ---------------------------------------------------------------
 
-If you want to download the :term:`Source` of a specific version from the
-:term:`Upstream` project you can use the ``--download-version`` flag.
+If you want to download the source of a specific version from the
+upstream project you can use the ``--download-version`` flag.
 
 Basic syntax:
 
@@ -108,8 +101,8 @@ For example:
 
     uscan --download-version '1.0'
 
-In the special case that you want to download the :term:`Source` for the
-current version of the :term:`Source Package` from the :term:`Upstream` project
+In the special case that you want to download the source for the
+current version of the source package from the upstream project
 you can use the ``--download-current-version`` flag instead, which parses the
 version to download from the first entry in :file:`debian/changelog` file:
 
@@ -126,8 +119,8 @@ version to download from the first entry in :file:`debian/changelog` file:
 
 .. note::
 
-    In most cases you actually want to download the :term:`Source` from the :term:`Archive`
-    and not re-download the :term:`Source` from the :term:`Upstream` project.
+    In most cases you actually want to download the source from the :term:`Ubuntu Archive`
+    and not re-download the source from the upstream project.
     
     :ref:`How to get the Source from the Archive? <get-package-source>`
 
