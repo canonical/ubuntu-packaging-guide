@@ -1,6 +1,8 @@
+.. _CanonicalDiscourse: https://discourse.canonical.com
 .. _GitHub: https://github.com/
 .. _GitUbuntuBugs: https://bugs.launchpad.net/git-ubuntu
 .. _Launchpad: https://launchpad.net
+.. _UbuntuDiscourse: https://discourse.ubuntu.com
 
 .. _Edubuntu: https://edubuntu.org/
 .. _Kubuntu: https://kubuntu.org/

@@ -228,7 +228,7 @@ Glossary
         A :term:`Discourse` instance for internal/company-wide discussions. 
         The discussions here will only be accessible to the :term:`Canonical` employes.
 
-        See: `discourse.ubuntu.com <https://discourse.canonical.com>
+        See: `discourse.canonical.com <CanonicalDiscourse_>`_
 
     CD
         Abbreviation for :term:`Continuous Delivery`
@@ -1239,7 +1239,7 @@ Glossary
 
         Feel free `to introduce yourself <https://discourse.ubuntu.com/c/intro/101>`_.
 
-        See: `discourse.ubuntu.com <https://discourse.ubuntu.com>
+        See: `discourse.ubuntu.com <UbuntuDiscourse_>`_
 
     Ubuntu flavours
         *Ubuntu flavours* are :term:`Distributions <Distribution>` of the default :term:`Ubuntu`

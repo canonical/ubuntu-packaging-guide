@@ -119,7 +119,7 @@ someone else may end up registering the nickname you want/used.
 
 Discourse:
 ~~~~~~~~~~
-The `Ubuntu Discourse <https://discourse.ubuntu.com>`_ instance is a meeting 
+The `Ubuntu Discourse <UbuntuDiscourse_>`_ instance is a meeting 
 point for the Ubuntu community and a forum about general Ubuntu development 
 where you can find discussions, announcements, team updates, documentation and
 much more.
