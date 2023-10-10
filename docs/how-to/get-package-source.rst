@@ -77,16 +77,19 @@ The following command will install ``ubtuntu-dev-tools``, which includes
 
 .. code-block:: bash
 
-    sudo apt install ubuntu-dev-tools
+    sudo apt update && sudo apt install ubuntu-dev-tools
 
 Basic usage
 ~~~~~~~~~~~
 
-.. code-block::lock:: bash
+.. code-block:: none
 
-    pull-pkg [OPTIONS] <PACKAGE-NAME> <SERIES|VERSION>
+    pull-pkg [OPTIONS] PACKAGE-NAME [SERIES|VERSION]
 
 You can find further information on the manual page :manpage:`pull-pkg(1)`.
+
+Examples
+~~~~~~~~
 
 There are convenience scripts that follow a similar syntax and set the
 ``OPTIONS`` for pull type and :term:`Distribution` appropriately. Here are
@@ -124,21 +127,21 @@ three examples (although there are others):
 
   .. code-block:: bash
     
-      pull-ppa-source --ppa dviererbe/hello hello
+      pull-ppa-source --ppa 'dviererbe/hello' 'hello'
 
 * To download the latest version of the ``hello`` source package for the
   ``mantic`` release from the same Launchpad PPA:
 
   .. code-block:: bash
 
-      pull-ppa-source --ppa dviererbe/hello hello mantic
+      pull-ppa-source --ppa 'dviererbe/hello' 'hello' 'mantic'
 
 * To download version ``2.10-3`` of the ``hello`` source package for the
   ``mantic`` release from the same Launchpad PPA:
 
   .. code-block:: bash
 
-      pull-ppa-source --ppa dviererbe/hello hello 2.10-3
+      pull-ppa-source --ppa 'dviererbe/hello' 'hello' '2.10-3'
 
 :command:`pull-debian-source`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -148,49 +151,76 @@ three examples (although there are others):
 
   .. code-block:: bash
 
-      pull-debian-source hello
+      pull-debian-source 'hello'
 
 * To download the latest version of the ``hello`` source package for the
   ``sid`` release from Debian:
 
   .. code-block:: bash
 
-      pull-debian-source hello sid
+      pull-debian-source 'hello' 'sid'
 
 * To download the version ``2.10-3`` of the ``hello`` source package from Debian:
 
   .. code-block:: bash
 
-      pull-debian-source hello 2.10-3
+      pull-debian-source 'hello' '2.10-3'
 
 :command:`apt-get source`
 -------------------------
 
-The :term:`APT` :term:`Package Manager` can also fetch source packages.
+The :term:`APT` package manager can also fetch source packages.
 
 .. important::
 
    Source packages are tracked separately from
    :term:`binary packages <Binary Package>` via ``deb-src`` lines in the
-   :manpage:`sources.list(5)` file. This means that you will need to add
-   such a line for each :term:`repository<Repository>` you want to get sources
-   from; otherwise you will probably get either the wrong (too old/too new)
-   source versions -- or none at all.
+   :manpage:`sources.list(5)` files. This means that you will need to add
+   such a line for each :term:`repository <Repository>` you want to get source
+   packages from; otherwise you will probably get either the wrong (too old/too new)
+   source package versions -- or none at all.
 
 Basic usage
-^^^^^^^^^^^
+~~~~~~~~~~~
 
-.. code-block:: bash
+.. tab-set::
 
-    apt-get source <PACKAGE>
+    .. tab-item:: apt
+        :sync: apt
+
+        .. code-block:: none
+
+            apt source PACKAGE-NAME
+
+        You can find further information on the manual page :manpage:`apt(8)`.
+
+    .. tab-item:: apt-get
+        :sync: apt-get
+
+        .. code-block:: none
+
+            apt-get source PACKAGE-NAME
+
+        You can find further information on the manual page :manpage:`apt-get(8)`.
 
 Example
-^^^^^^^
-.. code-block:: bash
+~~~~~~~
 
-    apt-get source hello
+.. tab-set::
 
-You can find further information on the manual page :manpage:`apt-get(8)`.
+    .. tab-item:: apt
+        :sync: apt
+
+        .. code-block:: bash
+
+            apt source 'hello'
+
+    .. tab-item:: apt-get
+        :sync: apt-get
+
+        .. code-block:: bash
+
+            apt-get source 'hello'
 
 ``dget``
 --------
@@ -202,21 +232,21 @@ the ``.dsc`` or ``.changes`` file (debian tarball, :term:`orig tarballs <orig ta
 :term:`upstream` :term:`signatures <Signature>`).
 
 Install
-^^^^^^^
+~~~~~~~
 
 .. code-block:: bash
 
-    sudo apt install devscripts
+    sudo apt update && sudo apt install devscripts
 
 Basic usage
-^^^^^^^^^^^
+~~~~~~~~~~~
 
 .. code-block:: bash
 
-    dget <URL>
+    dget URL
 
 Example
-^^^^^^^
+~~~~~~~
 
 Go to Launchpad and select the package you want to download (in this example;
 the latest version of the ``hello`` source package):
