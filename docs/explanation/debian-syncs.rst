@@ -1,9 +1,2 @@
-.. _debian-syncs:
-
+Debian syncs
 ============
-Debian Syncs
-============
-
-.. caution::
-
-    Work in progress!

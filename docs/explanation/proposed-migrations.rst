@@ -1,9 +1,2 @@
-.. _proposed-migrations:
-
+Proposed migrations
 ===================
-Proposed Migrations
-===================
-
-.. caution::
-
-    Work in progress!

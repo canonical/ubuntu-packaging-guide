@@ -1,9 +1,2 @@
-.. _debian-merges:
-
+Debian merges
 =============
-Debian Merges
-=============
-
-.. caution::
-
-    Work in progress!

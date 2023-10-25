@@ -54,6 +54,7 @@ ol, ul {
 th.head {
     text-transform: uppercase;
     font-size: var(--font-size--small);
+    text-align: initial;
 }
 
 table.docutils {

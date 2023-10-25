@@ -1,9 +1,2 @@
-.. _getting-set-up:
-
+Getting set up
 ==============
-Getting Set Up
-==============
-
-.. caution::
-
-    Work in progress!

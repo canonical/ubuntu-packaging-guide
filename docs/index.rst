@@ -1,5 +1,3 @@
-.. _index:
-
 Ubuntu Packaging Guide
 ======================
 
@@ -13,7 +11,7 @@ Ubuntu Packaging Guide
    As part of this overhaul we have moved the source code to a GitHub
    repository to make contributing easier. If you are an experienced packager
    and would like to contribute, we would love for you to be involved! See
-   :ref:`our contribution page <contribute>` for details of how to join in.
+   :doc:`our contribution page </contribute>` for details of how to join in.
 
 Welcome to the Ubuntu Packaging and Development Guide!
 
@@ -106,10 +104,10 @@ For real-time discussions, please connect to ``irc.libera.chat`` and join one or
 any of the `IRC channels`_. You may find especially these channels useful in the beginning:
 
 * ``#ubuntu-devel``, for general development discussion
-* ``#ubuntu-motu``, for `Masters of the Universe`_ (MOTU) team discussion and
-generally getting help.
+* ``#ubuntu-motu``, for :term:`Masters of the Universe` (:term:`MOTU`) team discussion and
+  generally getting help.
 * ``#ubuntu-meeting``, meetings are held here by various Ubuntu teams and everyone
-is welcome to participate.
+  is welcome to participate.
 
 You can follow these `instructions`_ on how to connect to ``irc.libera.chat``.
 Also, when you join ``irc.libera.chat`` for the first time, you should follow the
@@ -121,7 +119,7 @@ someone else may end up registering the nickname you want/used.
 
 Discourse:
 ~~~~~~~~~~
-The `Ubuntu Discourse <https://discourse.ubuntu.com>`_ instance is a meeting 
+The `Ubuntu Discourse <UbuntuDiscourse_>`_ instance is a meeting 
 point for the Ubuntu community and a forum about general Ubuntu development 
 where you can find discussions, announcements, team updates, documentation and
 much more.
@@ -132,7 +130,7 @@ Mailing lists:
 ~~~~~~~~~~~~~~
 For long-lived discussions or announcements you can subscribe/write to any of 
 the `Ubuntu mailing lists <https://lists.ubuntu.com/>`_. You may find especially 
-these mailing lists useful in the beginning:
+these :term:`Mailing Lists <Mailing List>` useful in the beginning:
 
 * https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce 
   (announce-only, the most important development announcements go here)
@@ -142,7 +140,7 @@ these mailing lists useful in the beginning:
   (MOTU Team discussion, get help with packaging)
 
 .. note::
-  When you subscribe to mailing lists, expect to receive a lot of emails.
+  When you subscribe to :term:`Mailing Lists <Mailing List>`, expect to receive a lot of emails.
   A good way to manage these is to create email filters. For example,
   the `bug mailing lists <https://lists.ubuntu.com/#Bug+Lists>`_ generate a high
   volume of emails and using the `custom email headers <https://wiki.ubuntu.com/Bugs/HowToFilter>`_
@@ -182,7 +180,6 @@ resources you may find useful:
 
 .. Links:
 .. _Code of Conduct: https://ubuntu.com/community/code-of-conduct
-.. _Launchpad: https://launchpad.net
 .. _IRC channels: https://wiki.ubuntu.com/IRC/ChannelList
 .. _BinPkgs: https://launchpad.net/ubuntu/+source/ubuntu-packaging-guide
 .. _HowToPackage: https://wiki.debian.org/HowToPackageForDebian

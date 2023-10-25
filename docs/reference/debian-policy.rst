@@ -1,9 +1,2 @@
-.. _debian-policy:
-
+Debian policy
 =============
-Debian Policy
-=============
-
-.. caution::
-
-    Work in progress!

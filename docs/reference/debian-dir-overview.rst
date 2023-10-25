@@ -1,9 +1,2 @@
-.. _debian-dir-overview:
-
+Basic overview of the ``debian/`` directory
 ===========================================
-Basic Overview of the ``debian/`` Directory
-===========================================
-
-.. caution::
-
-    Work in progress!

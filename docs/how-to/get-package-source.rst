@@ -1,194 +1,273 @@
-.. _get-package-source:
-
-===========================
-Get the Source of a Package
+Get the source of a package
 ===========================
 
-.. caution::
+Before you can work on a :term:`source package<Source Package>` you need to get
+the :term:`source code<Source Code>` of that package. This article presents
+four ways to achieve this: :command:`git-ubuntu`, :command:`pull-pkg`, and
+:command:`apt-get source`, and :command:`dget`.
 
-    Work in progress!
-
-Before you can work on a packge you need to get the source code of a given 
-package. This article presents multiple ways how you can achive this.
-
-``git-ubuntu``
---------------
+git-ubuntu
+----------
 
 .. note::
 
-   ``git-ubuntu`` is the modern way of working with ubuntu source packages.
+   ``git-ubuntu`` is the modern way of working with :term:`Ubuntu`
+   source packages.
 
 .. warning::
 
-    ``git-ubuntu`` is still in active development. It is possible that you 
-    run into rough edges or unsupported edge cases. You can ask for help
-    in the #ubuntu-devel channel or open a bug report on launchpad.
+    ``git-ubuntu`` is still in active development and these instructions
+    will likely change over time. While ``git-ubuntu`` will become the
+    default packaging method, for now you may encounter rough edges or
+    unsupported edge cases. You can ask for help in the ``#ubuntu-devel``
+    channel or `open a bug report <GitUbuntuBugs_>`_ on :term:`Launchpad`.
+    Bug reports are very welcome!
 
-Install::
+Install
+~~~~~~~
 
-    $ sudo snap install --classic --edge git-ubuntu 
+The following command will install ``git-ubuntu``:
 
-Basic usage::
+.. code-block:: bash
 
-    # Clone a source package git repository to a directory
-    $ git ubuntu clone PACKAGE [DIRECTORY]
+    sudo snap install --classic --edge git-ubuntu 
 
-    # Generate the orig tarballs for a given source package
-    $ git-ubuntu export-orig
+Basic usage
+~~~~~~~~~~~
 
-Example::
+To clone a source package git repository to a directory:
 
-    $ git ubuntu clone hello 
-    $ cd hello
-    $ git ubuntu export-orig
+.. code-block:: bash
+
+    git ubuntu clone PACKAGE [DIRECTORY]
+
+
+To generate the :term:`orig tarballs <orig tarball>` for a given source package:
+
+.. code-block:: bash
+
+    git-ubuntu export-orig
+
+Example
+~~~~~~~
+
+.. code-block:: bash
+
+    git ubuntu clone hello 
+    cd hello
+    git ubuntu export-orig
 
 You can find further information in these two blog articles (note that they are from 2017):
 
-- `git ubuntu clone <GitUbuntuBlogArticle1_>`_
-- `Git Ubuntu: More on the imported repositories <GitUbuntuBlogArticle2_>`_
+- `git ubuntu clone <https://ubuntu.com/blog/git-ubuntu-clone>`_
+- `Git Ubuntu: More on the imported repositories <https://ubuntu.com/blog/git-ubuntu-more-on-the-imported-repositories>`_
 
-``pull-pkg``
-------------
+pull-pkg
+--------
 
-The ``pull-pkg`` command is part of the ``ubuntu-dev-tools`` package and 
-downloads a specified version of a package, or the latest version from a
-specified release.
+The :command:`pull-pkg` command is part of the ``ubuntu-dev-tools`` package
+and downloads a specific version of a source package, or the latest version
+from a specified release.
 
-Install::
+Install
+~~~~~~~
 
-    $ sudo apt install ubuntu-dev-tools
+The following command will install ``ubtuntu-dev-tools``, which includes
+:command:`pull-pkg`:
 
-Basic usage::
+.. code-block:: bash
 
-    $ pull-pkg [OPTIONS] <PACKAGE-NAME> <SERIES|VERSION>
+    sudo apt update && sudo apt install ubuntu-dev-tools
 
-You can find further information on the `man page <PullPkgManPage_>`_.
+Basic usage
+~~~~~~~~~~~
 
-There are convenience scripts that follow a simmelar syntax and set 
-the ``OPTIONS`` for pull type and distribution appropriately, these
-are (among others):
+.. code-block:: none
 
-``pull-lp-source``
-^^^^^^^^^^^^^^^^^^
+    pull-pkg [OPTIONS] PACKAGE-NAME [SERIES|VERSION]
+
+You can find further information on the manual page :manpage:`pull-pkg(1)`.
 
 Examples
-""""""""
+~~~~~~~~
 
-download the latest version of the ``hello`` package from debian::
+There are convenience scripts that follow a similar syntax and set the
+``OPTIONS`` for pull type and :term:`Distribution` appropriately. Here are
+three examples (although there are others):
 
-    $ pull-lp-source hello
+:command:`pull-lp-source`
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-download the latest version of the ``hello`` package for the ``mantic`` release from Launchpad sid::
+* To download the latest version of the ``hello`` source package for the
+  :term:`Current Release in Development` from Launchpad:
 
-    $ pull-lp-source hello mantic
+  .. code-block:: bash
 
-download the version ``2.10-3`` of the ``hello`` package from Launchpad::
+      pull-lp-source hello
 
-    $ pull-lp-source hello 2.10-3
+* To download the latest version of the ``hello`` source package for the 
+  Ubuntu ``mantic`` release from Launchpad:
+
+  .. code-block:: bash
+
+      pull-lp-source hello mantic
+
+* To download version ``2.10-3`` of the ``hello`` source package from Launchpad:
+
+  .. code-block:: bash
+
+      pull-lp-source hello 2.10-3
     
-``pull-ppa-source``
-^^^^^^^^^^^^^^^^^^^
+:command:`pull-ppa-source`
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Examples
-""""""""
+* To download the latest version of the ``hello`` source package from the
+  Launchpad :term:`Personal Package Archive` (PPA), also called ``hello``, of
+  the user ``dviererbe``:
 
-download the latest version of the ``hello`` package from the Launchpad PPA with the name ``hello`` of the user ``dviererbe``::
+  .. code-block:: bash
     
-    $ pull-ppa-source --ppa dviererbe/hello hello
+      pull-ppa-source --ppa 'dviererbe/hello' 'hello'
 
-download the latest version of the ``hello`` package for the ``mantic`` release from the Launchpad PPA with the name ``hello`` of the user ``dviererbe``::
+* To download the latest version of the ``hello`` source package for the
+  ``mantic`` release from the same Launchpad PPA:
 
-    $ pull-ppa-source --ppa dviererbe/hello hello mantic
+  .. code-block:: bash
 
-download the version ``2.10-3`` of the ``hello`` package for the ``mantic`` release from the Launchpad PPA with the name ``hello`` of the user ``dviererbe``::
+      pull-ppa-source --ppa 'dviererbe/hello' 'hello' 'mantic'
 
-    $ pull-ppa-source --ppa dviererbe/hello hello 2.10-3
+* To download version ``2.10-3`` of the ``hello`` source package for the
+  ``mantic`` release from the same Launchpad PPA:
 
-``pull-debian-source``
-^^^^^^^^^^^^^^^^^^^^^^
+  .. code-block:: bash
 
-Examples
-""""""""
+      pull-ppa-source --ppa 'dviererbe/hello' 'hello' '2.10-3'
 
-download the latest version of the ``hello`` package from debian::
+:command:`pull-debian-source`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    $ pull-debian-source hello
+* To download the latest version of the ``hello`` source package from
+  :term:`Debian`:
 
-download the latest version of the ``hello`` package for the ``sid`` release from debian::
+  .. code-block:: bash
 
-    $ pull-debian-source hello sid
+      pull-debian-source 'hello'
 
-download the version ``2.10-3`` of the ``hello`` package from debian::
+* To download the latest version of the ``hello`` source package for the
+  ``sid`` release from Debian:
 
-    $ pull-debian-source hello 2.10-3
+  .. code-block:: bash
 
-``apt-get source``
-------------------
+      pull-debian-source 'hello' 'sid'
 
-The APT package manager can also fetch source packages via ``apt-get source``.
+* To download the version ``2.10-3`` of the ``hello`` source package from Debian:
+
+  .. code-block:: bash
+
+      pull-debian-source 'hello' '2.10-3'
+
+:command:`apt-get source`
+-------------------------
+
+The :term:`APT` package manager can also fetch source packages.
 
 .. important::
 
-   Source packages are tracked separately from binary packages via ``deb-src``
-   lines in the ``sources.list(5)`` file. This means that you will need to add
-   such a line for each repository you want to get sources from; otherwise
-   you will probably get either the wrong (too old/too new) source versions
-   or none at all.
+   Source packages are tracked separately from
+   :term:`binary packages <Binary Package>` via ``deb-src`` lines in the
+   :manpage:`sources.list(5)` files. This means that you will need to add
+   such a line for each :term:`repository <Repository>` you want to get source
+   packages from; otherwise you will probably get either the wrong (too old/too new)
+   source package versions -- or none at all.
 
-Basic usage::
+Basic usage
+~~~~~~~~~~~
 
-    $ apt-get source <PACKAGE>
+.. tab-set::
 
-Example::
+    .. tab-item:: apt
+        :sync: apt
 
-    $ apt-get source hello
+        .. code-block:: none
 
-You can find further information on the `man page <AptGetManPage_>`_.
+            apt source PACKAGE-NAME
+
+        You can find further information on the manual page :manpage:`apt(8)`.
+
+    .. tab-item:: apt-get
+        :sync: apt-get
+
+        .. code-block:: none
+
+            apt-get source PACKAGE-NAME
+
+        You can find further information on the manual page :manpage:`apt-get(8)`.
+
+Example
+~~~~~~~
+
+.. tab-set::
+
+    .. tab-item:: apt
+        :sync: apt
+
+        .. code-block:: bash
+
+            apt source 'hello'
+
+    .. tab-item:: apt-get
+        :sync: apt-get
+
+        .. code-block:: bash
+
+            apt-get source 'hello'
 
 ``dget``
 --------
 
-The ``dget`` command is part of the ``devscripts`` package. If you call it with 
-the URL of a ``.dsc`` or ``.changes`` file it acts as a source package aware ``wget``.
+The :command:`dget` command is part of the ``devscripts`` package. If you call
+it with the URL of a ``.dsc`` or ``.changes`` file it acts as a source package
+aware :manpage:`wget(1)` and downloads all asssociated files that are listed in
+the ``.dsc`` or ``.changes`` file (debian tarball, :term:`orig tarballs <orig tarball>`,
+:term:`upstream` :term:`signatures <Signature>`).
 
-Install::
+Install
+~~~~~~~
 
-    $ sudo apt install devscripts
+.. code-block:: bash
 
-Basic usage::
+    sudo apt update && sudo apt install devscripts
 
-    $ dget <URL>
+Basic usage
+~~~~~~~~~~~
+
+.. code-block:: bash
+
+    dget URL
 
 Example
+~~~~~~~
 
-1. Go to Launchpad and select the package you want to download (in this example; the latest version of the ``hello`` package):
+Go to Launchpad and select the package you want to download (in this example;
+the latest version of the ``hello`` source package):
 
 .. image:: ../images/how-to/get-package-source/lp-hello-package.png
    :align: center
    :width: 35 em
-   :alt: Illustration of the workflow between releases
+   :alt: Launchpad overview page for the hello source package with an arrow pointing to the Mantic Minotaur 2.10-3 release. 
 
-2. Copy the link of the ``.dsc`` file:
+Next, copy the download link of the ``.dsc`` file:
 
 .. image:: ../images/how-to/get-package-source/lp-hello-package-2.10-3.png
    :align: center
    :width: 35 em
-   :alt: Illustration of the workflow between releases
+   :alt: Launchpad overview page for the 2.10-3 release of the hello source package with an arrow pointing to the .dsc file link. 
 
-3. Call ``dget`` with the copied URL:
-::
+Finally, call ``dget`` with the copied URL:   
+   .. code-block:: bash
+   
+       dget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/hello/2.10-3/hello_2.10-3.dsc
 
-    $ dget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/hello/2.10-3/hello_2.10-3.dsc
+Note that this works for links from Debian and Launchpad Personal Package Archives too.
 
-.. note::
-
-    This works for links from debian and Launchpad PPAs too.
-
-You can find further information on the `man page <DgetManPage_>`_.
-
-.. _GitUbuntuBlogArticle1: https://ubuntu.com/blog/git-ubuntu-clone
-.. _GitUbuntuBlogArticle2: https://ubuntu.com/blog/git-ubuntu-more-on-the-imported-repositories
-.. _PullPkgManPage: https://manpages.ubuntu.com/manpages/lunar/en/man1/pull-pkg.1.html
-.. _AptGetManPage: https://manpages.ubuntu.com/manpages/lunar/en/man8/apt-get.8.html
-.. _SourcesListManPage: https://manpages.ubuntu.com/manpages/lunar/en/man5/sources.list.5.html
-.. _DgetManPage: https://manpages.ubuntu.com/manpages/lunar/en/man1/dget.1.html
+You can find further information on the manual page :manpage:`dget(1)`.

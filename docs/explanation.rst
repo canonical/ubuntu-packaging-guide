@@ -1,5 +1,3 @@
-.. _explanation_index:
-
 Explanation
 ***********
 
@@ -12,10 +10,12 @@ knowledge and become better at packaging and development.
 .. toctree::
    :maxdepth: 1
 
-   explanation/ubuntu-release-cadence.rst
-   explanation/launchpad-and-archive.rst
    explanation/upstream-and-downstream.rst
    explanation/package-model.rst
+   explanation/development-process.rst
+   explanation/releases.rst
+   explanation/archive.rst
+   explanation/launchpad.rst
    explanation/sponsoring.rst
    explanation/proposed-migrations.rst
    explanation/stable-release-updates.rst
@@ -23,3 +23,4 @@ knowledge and become better at packaging and development.
    explanation/debian-merges.rst
    explanation/transitions.rst
    explanation/backports.rst
+   explanation/main-inclusion-review.rst

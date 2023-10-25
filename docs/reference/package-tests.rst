@@ -1,9 +1,2 @@
-.. _package-tests:
-
+Package tests
 =============
-Package Tests
-=============
-
-.. caution::
-
-    Work in progress!
