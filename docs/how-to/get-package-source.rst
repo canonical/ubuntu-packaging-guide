@@ -46,7 +46,7 @@ To generate the :term:`orig tarballs <orig tarball>` for a given source package:
 
 .. code-block:: bash
 
-    git-ubuntu export-orig
+    git ubuntu export-orig
 
 Example
 ~~~~~~~
