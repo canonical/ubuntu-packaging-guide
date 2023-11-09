@@ -1,0 +1,42 @@
+name: Spellcheck
+on: 
+  push:
+  pull_request:  
+
+jobs: 
+  spell-check:
+    name: Language tool & Misspell check
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out code
+        uses: actions/checkout@v3
+      - name: running language tool 
+        uses: reviewdog/action-languagetool@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
+          reporter: github-check
+          # Change reporter level as per requirement.
+          level: warning
+          language: en-US
+          disabled_categories: 'TYPOS,TYPOGRAPHY,CASING'
+          disabled_rules: 'WHITESPACE_RULE,DASH_RULE,WORD_CONTAINS_UNDERSCORE,UPPERCASE_SENTENCE_START,ARROWS,COMMA_PARENTHESIS_WHITESPACE,UNLIKELY_OPENING_PUNCTUATION,CURRENCY,EN_UNPAIRED_BRACKETS,METRIC_UNITS_EN_US,ENGLISH_WORD_REPEAT_BEGINNING_RULE,ENGLISH_WORD_REPEAT_RULE,DOUBLE_PUNCTUATION,EVERY_EACH_SINGULAR,PCT_SINGULAR_NOUN_PLURAL_VERB_AGREEMENT,STATE_OF_THE_ART,HYPHEN_TO_EN,MISSING_HYPHEN,OUT_OF_POCKET_HYPHEN,COMMA_COMPOUND_SENTENCE,COM_COME,YOUR,EN_COMPOUNDS'
+          enabled_only: 'false'
+          enabled_rules: ''
+          enabled_categories: ''
+          patterns: "**.rst"
+      
+      - name: running misspell
+        # To perform misspell check even after the language tool test fails 
+        if: success() || failure()  
+        uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          locale: "US"
+          reporter: github-check
+          # level can be set to [info,warning,error]
+          level: warning
+          pattern: "**.rst"
+          exclude: |
+            ./.git/*
+            ./.cache/*
