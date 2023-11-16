@@ -39,7 +39,7 @@ To clone a source package git repository to a directory:
 
 .. code-block:: bash
 
-    git ubuntu clone PACKAGE [DIRECTORY]
+    git-ubuntu clone PACKAGE [DIRECTORY]
 
 
 To generate the :term:`orig tarballs <orig tarball>` for a given source package:
@@ -53,13 +53,13 @@ Example
 
 .. code-block:: bash
 
-    git ubuntu clone hello 
+    git-ubuntu clone hello 
     cd hello
-    git ubuntu export-orig
+    git-ubuntu export-orig
 
 You can find further information in these two blog articles (note that they are from 2017):
 
-- `git ubuntu clone <https://ubuntu.com/blog/git-ubuntu-clone>`_
+- `git-ubuntu clone <https://ubuntu.com/blog/git-ubuntu-clone>`_
 - `Git Ubuntu: More on the imported repositories <https://ubuntu.com/blog/git-ubuntu-more-on-the-imported-repositories>`_
 
 pull-pkg
