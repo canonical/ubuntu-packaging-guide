@@ -45,7 +45,7 @@ Contribution format for the project
 Sphinx & reStructuredText
 -------------------------
 
-The Guide is built using `Sphinx <https://sphinx-doc.org/>`_. Articles should
+The Guide is built using `Sphinx <https://www.sphinx-doc.org/>`_. Articles should
 be written in reStructuredText. The following links might be helpful:
 
 * https://docutils.sourceforge.io/docs/user/rst/quickstart.html
