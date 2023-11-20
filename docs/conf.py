@@ -121,3 +121,18 @@ latex_documents = [
         True,
     ),
 ]
+
+# -- Options for linkcheck ---------------------------------------------------
+
+# If true, check the validity of #anchors in links.
+linkcheck_anchors = False
+linkcheck_ignore = [
+    r"https://bugs\.launchpad\.net/ubuntu/\+bug/2",
+    r"https?://localhost.+",
+    r"ftp:.+",
+    r"sftp:.+",
+    r"news:.+",
+    r"irc:.+",
+    r"mailto:.+",
+    r"jabber:noreply@launchpad\.net",
+]
