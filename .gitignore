@@ -3,4 +3,7 @@ po/*
 !po/*.pot
 !po/*.po
 translators.html
+docs/.sphinx/.doctrees/
 docs/.sphinx/venv
+docs/.sphinx/warnings.txt
+__pycache__
