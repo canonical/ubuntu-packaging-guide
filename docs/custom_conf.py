@@ -148,6 +148,22 @@ custom_html_js_files = []
 
 manpages_url = 'https://manpages.ubuntu.com/manpages/noble/en/man{section}/{page}.{section}.html'
 
+rst_prolog = '''
+.. caution::
+
+   The Packaging and Development guide is currently undergoing a major overhaul
+   to bring it up to date. The current state you are seeing now is a preview of
+   this effort.
+
+   The current version is unstable (changing URLs can occur at any time) and
+   most content is not in properly reviewed yet. Proceed with caution and be
+   aware of technical inaccuracies.
+
+   If you are an experienced packager and would like to contribute, we would
+   love for you to be involved! See :doc:`our contribution page </contribute>`
+   for details of how to join in.
+'''
+
 # Specify a reST string that is included at the end of each file.
 # If commented out, use the default (which pulls the reuse/links.txt
 # file into each reST file).
