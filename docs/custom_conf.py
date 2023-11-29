@@ -146,7 +146,7 @@ custom_html_js_files = []
 
 ## The following settings override the default configuration.
 
-manpages_url = 'https://manpages.ubuntu.com/manpages/noble/en/man{section}/{page}.{section}.html'
+manpages_url = 'https://manpages.ubuntu.com/manpages/en/man{section}/{page}.{section}.html'
 
 rst_prolog = '''
 .. caution::
