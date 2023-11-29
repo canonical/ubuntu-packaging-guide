@@ -146,6 +146,8 @@ custom_html_js_files = []
 
 ## The following settings override the default configuration.
 
+manpages_url = 'https://manpages.ubuntu.com/manpages/noble/en/man{section}/{page}.{section}.html'
+
 # Specify a reST string that is included at the end of each file.
 # If commented out, use the default (which pulls the reuse/links.txt
 # file into each reST file).
