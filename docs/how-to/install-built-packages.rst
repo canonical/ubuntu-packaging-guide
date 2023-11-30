@@ -4,7 +4,7 @@ Install built packages
 You have a built :term:`binary packages <Binary Package>` of a
 :term:`source package <Source Package>` and want to install it
 (e.g. to test the packages). This article demonstrates multiple ways 
-how you can achive that.
+how you can achieve that.
 
 Using your package manager
 --------------------------
@@ -15,8 +15,8 @@ packages on an Ubuntu installation.
 
 .. note::
 
-    :manpage:`apt(8)` is indended to be used interactively by humans and does not
-    gurantee a stable :term:`command line interface <Command Line Interface>`
+    :manpage:`apt(8)` is intended to be used interactively by humans and does not
+    guarantee a stable :term:`command line interface <Command Line Interface>`
     (suitable for machine-readability) while :manpage:`apt-get(8)` is intended for
     unattended usage, for example, in scripts.
     
@@ -265,7 +265,7 @@ Add PPA manually
 
 When you visit the web interface of the Launchpad PPA you want to add, you can
 see a text reading something like "Technical details about this PPA". When you
-click on the text, it will unfold und show the details you need to add the
+click on the text, it will unfold and show the details you need to add the
 PPA.
 
 .. image:: ../images/how-to/install-built-packages/launchpad-ppa-webinterface.png
@@ -409,10 +409,10 @@ package. You need to install it, before you can use it:
     The ``ubuntu-dev-tools`` package also provides the commands: 
 
     - ``pull-lp-debs`` (to download binary packages from Launchpad) and 
-    - ``pull-debian-debs`` (to download binary packages from Debian's archive).
+    - ``pull-debian-debs`` (to download binary packages from the Debian archive).
 
 For example, on an :term:`amd64` machine, the following command will download the
-binary package named ``hello`` and trageting ``amd64`` from the Launchpad PPA named
+binary package named ``hello`` and targeting ``amd64`` from the Launchpad PPA named
 ``hello`` of the Launchpad user ``dviererbe``:
 
 .. code-block:: bash

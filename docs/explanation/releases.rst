@@ -7,7 +7,7 @@ Release cadence
 :term:`Ubuntu` follows a strict time-based release cycle. Every six months since
 2004, :term:`Canonical` publishes a new Ubuntu version and its set of
 :term:`packages <Package>` are declared stable (production-quality). Simultaneously,
-a new version begins development; it is given its own :term:`codename`, but also referred
+a new version begins development; it is given its own :term:`code name`, but also referred
 to as the ":term:`Current Release in Development`" or ":term:`Devel`".
 
 .. _LTSReleases:
@@ -15,7 +15,7 @@ to as the ":term:`Current Release in Development`" or ":term:`Devel`".
 LTS releases
 ~~~~~~~~~~~~
 
-Since 2006 every fourth release, made every two years in April, receives
+Since 2006, every fourth release, made every two years in April, receives
 :ref:`LongTermSupport` for large-scale deployments. This is the origin of the
 term "LTS" for stable, maintained releases.
 
@@ -176,7 +176,7 @@ Every Ubuntu release is provided as both a :term:`Server <Ubuntu Server>` and
 Ubuntu Desktop provides a graphical :term:`User Interface` (:term:`GUI`) for
 everyday computing tasks, making it suitable for personal computers and laptops.
 :term:`Ubuntu Server`, on the other hand, provides a text-based :term:`User Interface`
-(:term:`TUI`) instead of a :term:`GUI`, optimized for server environments, that
+(:term:`TUI`) instead of a :term:`GUI`, optimised for server environments, that
 allows machines on the server to be run headless, focusing on server-related
 services and applications, making it ideal for hosting web services, databases, and
 other server functions.
@@ -216,10 +216,10 @@ distributions take Ubuntu as a base for their own distinctive ideas and approach
 Resources
 ---------
 
-- `The Ubuntu lifecycle and release cadence <https://ubuntu.com/about/release-cycle>`_
+- `The Ubuntu life cycle and release cadence <https://ubuntu.com/about/release-cycle>`_
 - `Ubuntu wiki -- List of releases <https://wiki.ubuntu.com/Releases>`_
 - `Ubuntu flavours <https://ubuntu.com/desktop/flavours>`_
-- `Ubuntu wiki -- Ubuntu flavors <https://wiki.ubuntu.com/UbuntuFlavors>`_
+- `Ubuntu wiki -- Ubuntu flavours <https://wiki.ubuntu.com/UbuntuFlavors>`_
 - `Ubuntu wiki -- time-based releases <https://wiki.ubuntu.com/TimeBasedReleases>`_
 - `Mark Shuttleworth's blog -- the art of release <https://www.markshuttleworth.com/archives/146>`_
 - `Ubuntu wiki -- point release process <https://wiki.ubuntu.com/PointReleaseProcess>`_

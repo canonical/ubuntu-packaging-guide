@@ -14,18 +14,18 @@ infrastructure.
 Launchpad features, among others, are:
 
 - **Bugs**: :term:`Bug Tracking System`
-- **Code**: :term:`source code <Source Code>` hosting with :term:`git` or :term:`Bazaar`,
+- **Code**: :term:`source code <Source Code>` hosting with :term:`Git` or :term:`Bazaar`,
   :term:`version control <Version Control System>` and :term:`code review <Code Review>` features
 - **Answers**: community support site and knowledge base
-- **Translations**: collaboration platform for localizing software 
+- **Translations**: collaboration platform for localising software
 - **Blueprints**: feature planning and specification tracking
 - Ubuntu :term:`package <Package>` building and hosting
 - Team/Group management
 
 While platforms like GitHub put users and groups at the top level, Launchpad
 puts projects at the top level. If you take Ubuntu as an example, you can
-see that you can access it at the top level: https://launchpad.net/ubuntu.
-Users and groups begin with a ``~``, for instance https://launchpad.net/~techboard.
+see that you can access it at the top level: `https://launchpad.net/ubuntu`.
+Users and groups begin with a ``~``, for instance `https://launchpad.net/~ubuntu-foundations-team`.
 
 Why not use platforms like GitHub?
 ----------------------------------
@@ -39,12 +39,12 @@ or similar platforms.
 Personal Package Archive (PPA)
 ------------------------------
 
-Launchpad PPAs allow you to build installable Ubuntu packages for multiple
+Launchpad PPA repositories allow you to build installable Ubuntu packages for multiple
 :term:`architectures <Architecture>` and to host them in your own software
 :term:`repository <Repository>`. 
 
 Using a PPA is straightforward; you don't need the approval of anyone, therefore users 
-will have to enable it manually. See how to :ref:`InstallPackagesFromPPA`.
+have to enable it manually. See how to :ref:`InstallPackagesFromPPA`.
 
 This is useful when you want to test a change, or to show others that a change
 builds successfully or is installable. Some people have special permission to
@@ -86,8 +86,8 @@ Getting help
 
 If you need help with Launchpad you can choose any of the following methods:
 
-IRC chatrooms
-~~~~~~~~~~~~~
+IRC chat rooms
+~~~~~~~~~~~~~~
 
 On the ``irc.libera.chat`` :term:`IRC` server you will find the ``#launchpad`` channel, where you
 can ask the Launchpad team and the Ubuntu community for help.

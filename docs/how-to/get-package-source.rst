@@ -227,7 +227,7 @@ Example
 
 The :command:`dget` command is part of the ``devscripts`` package. If you call
 it with the URL of a ``.dsc`` or ``.changes`` file it acts as a source package
-aware :manpage:`wget(1)` and downloads all asssociated files that are listed in
+aware :manpage:`wget(1)` and downloads all associated files that are listed in
 the ``.dsc`` or ``.changes`` file (debian tarball, :term:`orig tarballs <orig tarball>`,
 :term:`upstream` :term:`signatures <Signature>`).
 

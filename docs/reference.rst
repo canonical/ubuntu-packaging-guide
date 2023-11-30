@@ -20,5 +20,4 @@ support matrices, and so on.
    reference/filesystem-hierarchy-standard.rst
    reference/outdated-tools.rst
    reference/launchpad-text-markup.rst
-   reference/common-non-technical-acronyms.rst
    reference/glossary.rst

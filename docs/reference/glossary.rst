@@ -174,6 +174,12 @@ Glossary
 
         See: :ref:`Binary Packages (explanation) <BinaryPackages>`
 
+    Blank space
+        *Blank space* characters refer to characters in a text (especially :term:`Source Code`)
+        that are used for formatting and spacing but do not produce visible marks
+        or symbols when rendered. Common *blank space* characters include spaces,
+        tabs and newline characters.
+
     Branch
         *Work in Progress*
 
@@ -290,7 +296,7 @@ Glossary
     CoC
         Abbreviation for :term:`Code of Conduct`
 
-    Codename
+    Code name
         *Work in Progress*
 
     Code of Conduct
@@ -1395,12 +1401,6 @@ Glossary
         See: :doc:`/reference/debian-dir-overview`
 
         See also: :manpage:`uscan(1)`, `Section 4.11. Upstream source location (Debian Policy Manual v4.6.2.0) <https://www.debian.org/doc/debian-policy/ch-source.html#upstream-source-location-debian-watch>`_
-
-    Whitespace
-        *Whitespace* characters refer to characters in a text (especially :term:`Source Code`)
-        that are used for formatting and spacing, but do not produce visible marks
-        or symbols when rendered. Common *Whitespace* characters include spaces,
-        tabs, and newline characters.
 
     WoU
         Abbreviation for :term:`Waiting on Upstream`

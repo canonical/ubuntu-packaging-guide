@@ -85,7 +85,7 @@ The following communication channels are there to help you.
 
 .. tip::
   It is encouraged for you to use the same nickname (a known identity or your 
-  real name) accross all the following communication channels, so that your 
+  real name) across all the following communication channels, so that your
   Ubuntu developer colleagues will be able to get to know you better. 
 
 Launchpad:
