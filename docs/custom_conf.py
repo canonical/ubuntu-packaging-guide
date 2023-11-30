@@ -49,7 +49,7 @@ ogp_image = 'https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg
 # Update with the favicon for your product (default is the circle of friends)
 html_favicon = '.sphinx/_static/favicon.png'
 
-html_title = 'Ubuntu Packaging Guide'
+html_title = ''
 
 # (Some settings must be part of the html_context dictionary, while others
 #  are on root level. Don't move the settings.)
@@ -145,6 +145,24 @@ custom_html_css_files = []
 custom_html_js_files = []
 
 ## The following settings override the default configuration.
+
+manpages_url = 'https://manpages.ubuntu.com/manpages/en/man{section}/{page}.{section}.html'
+
+rst_prolog = '''
+.. caution::
+
+   The Packaging and Development guide is currently undergoing a major overhaul
+   to bring it up to date. The current state you are seeing now is a preview of
+   this effort.
+
+   The current version is unstable (changing URLs can occur at any time) and
+   most content is not in properly reviewed yet. Proceed with caution and be
+   aware of technical inaccuracies.
+
+   If you are an experienced packager and would like to contribute, we would
+   love for you to be involved! See :doc:`our contribution page </contribute>`
+   for details of how to join in.
+'''
 
 # Specify a reST string that is included at the end of each file.
 # If commented out, use the default (which pulls the reuse/links.txt
