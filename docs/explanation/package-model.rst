@@ -82,7 +82,7 @@ For example:
   :term:`GNU project <GNU>`. The bash releases of the GNU project project will get
   packaged by Debian maintainers and the `Debian bash package`_ is merged into the
   Ubuntu bash package by Ubuntu maintainers. The Debian and Ubuntu packages both
-  are effectivley their own seperate software projects maintained by other people
+  are effectively their own separate software projects maintained by other people
   than the developers of the software that gets packaged. This is the process how
   most software is packaged on Ubuntu.
 
@@ -100,8 +100,8 @@ Format: ``3.0 (quilt)``
 
 A new-generation source package format that records modifications in a
 :manpage:`quilt(1)` :term:`Patch` series within the :file:`debian/patches`
-folder. The patches are organized as a :term:`stack <Stack>`, and you can apply,
-un-apply, and update them easily by traversing the stack (push/pop). These
+folder. The patches are organised as a :term:`stack <Stack>`, and you can apply,
+unapply, and update them easily by traversing the stack (push/pop). These
 changes are automatically applied during the extraction of the source package.
 
 A source package in this format contains at least an original tarball
@@ -243,14 +243,14 @@ package to the :term:`Ubuntu Archive`.
 Binary packages
 ---------------
 
-A **binary package** is a standardized format that the :term:`Package Manager`
+A **binary package** is a standardised format that the :term:`Package Manager`
 (:manpage:`dpkg(1)` or :manpage:`apt(8)`) can understand to install and
 uninstall software on a target machine. This simplifies distributing software
 to a target machine and managing the software on that machine.
 
 A Debian binary package uses the :file:`.deb` file extension and contains a set
 of files that will be installed on the host system and a set of files that
-control how the files will be (un-)installed.
+control how the files will be installed or uninstalled.
 
 Resources
 ---------

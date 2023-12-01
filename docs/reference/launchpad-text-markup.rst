@@ -2,7 +2,7 @@ Launchpad text markup
 =====================
 
 Any `textarea <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea>`_
-input field on Launchpad will process the entered text to regognize certain patterns
+input field on Launchpad will process the entered text to recognise certain patterns
 to enhance the resulting displayed output.
 
 Examples of textareas where the Launchpad text markup is accepted are:
@@ -76,7 +76,7 @@ Examples of textareas where the Launchpad text markup is accepted are:
         
         :term:`PPA` description
 
-Unlike platforms like GitHub, Launchpad unfortunately only recognizes a very limited
+Unlike platforms like GitHub, Launchpad unfortunately only recognises a very limited
 set of markup patterns when you write comments. The most useful pattern are documented
 in this article.
 
@@ -105,7 +105,7 @@ The following pattern is used by Launchpad to detect bug references:
 
     LP: #<LP-Bug-Number>[, #<LP-Bug-Number>]... 
 
-This pattern is case invariant and the amount of whitespace can be variable, but if you place whitespace anywhere else the regular expression used by Launchpad might not parse the bug reference correctly!
+This pattern is case invariant, and the amount of blank space can be variable, but if you place blank space anywhere else, the regular expression used by Launchpad might not parse the bug reference correctly.
 
 .. note::
 
@@ -135,14 +135,14 @@ be displayed on Launchpad:
             (LP: #1)
 
       - (LP: `#1 <https://bugs.launchpad.net/ubuntu/+bug/1>`_)
-      - a bug reference can be surrounden by brackets
+      - a bug reference can be surrounded by brackets
     * - .. code:: text
 
             LP: #1, #2.
 
       - LP: `#1 <https://bugs.launchpad.net/ubuntu/+bug/1>`_, `#2 <https://bugs.launchpad.net/ubuntu/+bug/2>`_.
       - | there can be multiple bug references
-        | seperated by a ``,``
+        | separated by a ``,``
     * - .. code:: text
 
             LP:
@@ -156,7 +156,7 @@ be displayed on Launchpad:
         | `#2 <https://bugs.launchpad.net/ubuntu/+bug/2>`_,
         | `#3 <https://bugs.launchpad.net/ubuntu/+bug/3>`_,
         | `#4 <https://bugs.launchpad.net/ubuntu/+bug/4>`_
-      - | the amount of :term:`whitespace <Whitespace>` can be variable and 
+      - | the amount of :term:`blank space <Blank space>` can be variable and
         | a new-line will not disrupt this pattern
     * - .. code:: text
 
@@ -187,7 +187,7 @@ be displayed on Launchpad:
           LP: #1 , #2  
 
       - LP: `#1 <https://bugs.launchpad.net/ubuntu/+bug/1>`_ , #2
-      - | if you place whitespace anywhere else the
+      - | if you place blank space anywhere else the
         | :term:`regular expression <Regular Expression>` might not parse the
         | input correctly
     * - .. code:: text
@@ -202,25 +202,25 @@ be displayed on Launchpad:
       - | an empty new-line will interrupt the pattern,
         | but a trailing ``,`` will not
 
-Whitespaces
------------
+Blank spaces
+------------
 
 Launchpad will:
 
-- cut off any whitespace to the right,
-- keep any whitespace to the left, and
-- reduce any whitespace between non-whitespace characters to 
+- cut off any blank space to the right,
+- keep any blank space to the left, and
+- reduce any blank space between non-blank-space characters to
   just one (this includes new-line characters as well).
 
 .. note::
 
-    Technically Launchpad passes whitespace through and the browser just
-    ignores the whitespace.
+    Technically Launchpad passes blank space through and the browser just
+    ignores the blank space.
 
 .. warning::
 
     Because of the behaviour described above you will have a hard time trying to
-    write a table or long chunks of whitespace between two sections.
+    write a table or long chunks of blank space between two sections.
 
     The following table shows examples how text entered into a text input field
     will be displayed on Launchpad:
@@ -234,40 +234,40 @@ Launchpad will:
 
                 | Column 1   | Column 2 | Column 3    |
                 |------------+----------+-------------|
-                | Lorem      | ipsum    | dolor       |
-                | sit        | amet     | consectetur |
-                | adipiscing | elit     | sed         |
+                | Example    | table    | text        |
+                | Example    | table    | text        |
+                | Example    | table    | text        |
 
           - | \| Column 1 \| Column 2 \| Column 3 \|  
             | \|\-\-\-\-\-\-\-\-\-\-\-\-+\-\-\-\-\-\-\-\-\-\-+\-\-\-\-\-\-\-\-\-\-\-\-\-\|  
-            | \| Lorem | ipsum | dolor \|  
-            | \| sit \| amet \| consectetur \|  
-            | \| adipiscing \| elit \| sed \|
+            | \| Example | table | text \|
+            | \| Example | table | text \|
+            | \| Example | table | text \|
         * - .. code:: text
 
                 Here are two paragraphs with lots   
-                of whitespace between them.
+                of blank space between them.
                 
                 
                 
                 
                 But they're still just two paragraphs
 
-          - | Here are two paragraphs with lots of whitespace between them.
+          - | Here are two paragraphs with lots of blank space between them.
             | 
             | But they're still just two paragraphs
 
-URIs
-----
+URI addresses
+-------------
 
-Launchpad can recognize ``http``, ``https``, ``ftp``, ``sftp``, ``mailto``,
+Launchpad can recognise ``http``, ``https``, ``ftp``, ``sftp``, ``mailto``,
 ``news``, ``irc`` and ``jabber`` :term:`URIs <URI>`.
 
 .. note::
 
-    ``tel``, ``urn``, ``telnet``, ``ldap`` :term:`URIs <URI>`, relative 
+    ``tel``, ``urn``, ``telnet``, ``ldap`` :term:`URI <URI>`, relative
     :term:`URLs <URL>` like ``example.com`` and email addresses like 
-    ``test@example.com`` are **NOT** recognized. 
+    ``test@example.com`` are **NOT** recognised.
 
 Examples
 ~~~~~~~~
@@ -280,130 +280,130 @@ be displayed on Launchpad:
     * - Input
       - .. code:: text
 
-          http://localhost:8086/bar/baz/foo.html
+          http://localhost:8086/example/sample.html
 
     * - Result
-      - `http://localhost:8086/bar/baz/foo.html <http://localhost:8086/bar/baz/foo.html>`_
+      - `http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html>`_
         
 .. list-table::
 
     * - Input
       - .. code:: text
 
-          http://localhost:8086/bar/baz/foo.html
+          http://localhost:8086/example/sample.html
 
     * - Result
-      - `http://localhost:8086/bar/baz/foo.html <http://localhost:8086/bar/baz/foo.html>`_
+      - `http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html>`_
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            ftp://localhost:8086/bar/baz/foo.bar.html
+            ftp://localhost:8086/example/sample.html
 
     * - Result
-      - `ftp://localhost:8086/bar/baz/foo.bar.html <ftp://localhost:8086/bar/baz/foo.bar.html>`_
+      - `ftp://localhost:8086/example/sample.html <ftp://localhost:8086/example/sample.html>`_
     
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            sftp://localhost:8086/bar/baz/foo.bar.html.
+            sftp://localhost:8086/example/sample.html.
 
     * - Result
-      - `sftp://localhost:8086/bar/baz/foo.bar.html <sftp://localhost:8086/bar/baz/foo.bar.html>`_.
+      - `sftp://localhost:8086/example/sample.html <sftp://localhost:8086/example/sample.html>`_.
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://localhost:8086/bar/baz/foo.bar.html;
+            http://localhost:8086/example/sample.html;
 
     * - Result
-      - `http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_;
+      - `http://localhost:8086/example/sample.html <DemoUrl_>`_;
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            news://localhost:8086/bar/baz/foo.bar.html:
+            news://localhost:8086/example/sample.html:
 
     * - Result
-      - `news://localhost:8086/bar/baz/foo.bar.html <news://localhost:8086/bar/baz/foo.bar.html>`_:
+      - `news://localhost:8086/example/sample.html <news://localhost:8086/example/sample.html>`_:
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://localhost:8086/bar/baz/foo.bar.html?
+            http://localhost:8086/example/sample.html?
 
     * - Result
-      - `http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_?
+      - `http://localhost:8086/example/sample.html <DemoUrl_>`_?
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://localhost:8086/bar/baz/foo.bar.html,
+            http://localhost:8086/example/sample.html,
 
     * - Result
-      - `http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_,
+      - `http://localhost:8086/example/sample.html <DemoUrl_>`_,
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            <http://localhost:8086/bar/baz/foo.bar.html>
+            <http://localhost:8086/example/sample.html>
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>
+      - <`http://localhost:8086/example/sample.html <DemoUrl_>`_>
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            <http://localhost:8086/bar/baz/foo.bar.html>,
+            <http://localhost:8086/example/sample.html>,
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>,
+      - <`http://localhost:8086/example/sample.html <DemoUrl_>`_>,
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            <http://localhost:8086/bar/baz/foo.bar.html>.
+            <http://localhost:8086/example/sample.html>.
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>.
+      - <`http://localhost:8086/example/sample.html <DemoUrl_>`_>.
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            <http://localhost:8086/bar/baz/foo.bar.html>;
+            <http://localhost:8086/example/sample.html>;
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>;
+      - <`http://localhost:8086/example/sample.html <DemoUrl_>`_>;
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            <http://localhost:8086/bar/baz/foo.bar.html>:
+            <http://localhost:8086/example/sample.html>:
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>:
+      - <`http://localhost:8086/example/sample.html <DemoUrl_>`_>:
 
 
 .. list-table::
@@ -411,190 +411,190 @@ be displayed on Launchpad:
     * - Input
       - .. code:: text
 
-            <http://localhost:8086/bar/baz/foo.bar.html>?
+            <http://localhost:8086/example/sample.html>?
 
     * - Result
-      - <`http://localhost:8086/bar/baz/foo.bar.html <DemoUrl_>`_>?
+      - <`http://localhost:8086/example/sample.html <DemoUrl_>`_>?
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            (http://localhost:8086/bar/baz/foo.bar.html)
+            (http://localhost:8086/example/sample.html)
 
     * - Result
-      - (`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html)>`_
+      - (`http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html)>`_
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            (http://localhost:8086/bar/baz/foo.bar.html),
+            (http://localhost:8086/example/sample.html),
 
     * - Result
-      - (`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html)>`_,
+      - (`http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html)>`_,
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            (http://localhost:8086/bar/baz/foo.bar.html).
+            (http://localhost:8086/example/sample.html).
 
     * - Result
-      - (`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html)>`_.
+      - (`http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html)>`_.
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            (http://localhost:8086/bar/baz/foo.bar.html);
+            (http://localhost:8086/example/sample.html);
 
     * - Result
-      - (`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html)>`_;
+      - (`http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html)>`_;
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            (http://localhost:8086/bar/baz/foo.bar.html):
+            (http://localhost:8086/example/sample.html):
 
     * - Result
-      - (`http://localhost:8086/bar/baz/foo.bar.html <http://localhost:8086/bar/baz/foo.bar.html)>`_:
+      - (`http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html)>`_:
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://localhost/bar/baz/foo.bar.html?a=b&b=a
+            http://localhost/example/sample.html?a=b&b=a
 
     * - Result
-      - `http://localhost/bar/baz/foo.bar.html?a=b&b=a <http://localhost/bar/baz/foo.bar.html?a=b&b=a>`_
+      - `http://localhost/example/sample.html?a=b&b=a <http://localhost/example/sample.html?a=b&b=a>`_
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://localhost/bar/baz/foo.bar.html?a=b&b=a.
+            http://localhost/example/sample.html?a=b&b=a.
 
     * - Result
-      - `http://localhost/bar/baz/foo.bar.html?a=b&b=a <http://localhost/bar/baz/foo.bar.html?a=b&b=a>`_.
+      - `http://localhost/example/sample.html?a=b&b=a <http://localhost/example/sample.html?a=b&b=a>`_.
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://localhost/bar/baz/foo.bar.html?a=b&b=a,
+            http://localhost/example/sample.html?a=b&b=a,
 
     * - Result
-      - `http://localhost/bar/baz/foo.bar.html?a=b&b=a <http://localhost/bar/baz/foo.bar.html?a=b&b=a>`_,
+      - `http://localhost/example/sample.html?a=b&b=a <http://localhost/example/sample.html?a=b&b=a>`_,
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://localhost/bar/baz/foo.bar.html?a=b&b=a;
+            http://localhost/example/sample.html?a=b&b=a;
 
     * - Result
-      - `http://localhost/bar/baz/foo.bar.html?a=b&b=a <http://localhost/bar/baz/foo.bar.html?a=b&b=a>`_;
+      - `http://localhost/example/sample.html?a=b&b=a <http://localhost/example/sample.html?a=b&b=a>`_;
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://localhost/bar/baz/foo.bar.html?a=b&b=a:
+            http://localhost/example/sample.html?a=b&b=a:
 
     * - Result
-      - `http://localhost/bar/baz/foo.bar.html?a=b&b=a <http://localhost/bar/baz/foo.bar.html?a=b&b=a>`_:
+      - `http://localhost/example/sample.html?a=b&b=a <http://localhost/example/sample.html?a=b&b=a>`_:
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://localhost/bar/baz/foo.bar.html?a=b&b=a:b;c@d_e%f~g#h,j!k-l+m$n*o'p
+            http://localhost/example/sample.html?a=b&b=a:b;c@d_e%f~g#h,j!k-l+m$n*o'p
 
     * - Result
-      - `http://localhost/bar/baz/foo.bar.html?a=b&b=a:b;c@d_e%f~g#h,j!k-l+m$n*o'p <http://localhost/bar/baz/foo.bar.html?a=b&b=a:b;c@d_e%f~g#h,j!k-l+m$n*o'p>`_
+      - `http://localhost/example/sample.html?a=b&b=a:b;c@d_e%f~g#h,j!k-l+m$n*o'p <http://localhost/example/sample.html?a=b&b=a:b;c@d_e%f~g#h,j!k-l+m$n*o'p>`_
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://www.searchtools.com/test/urls/(parens).html
+            http://www.example.com/test/example(parentheses).html
 
     * - Result
-      - `http://www.searchtools.com/test/urls/(parens).html <http://www.searchtools.com/test/urls/(parens).html>`_
+      - `http://www.example.com/test/example(parentheses).html <http://www.example.com/test/example(parentheses).html>`_
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://www.searchtools.com/test/urls/-dash.html
+            http://www.example.com/test/example-dash.html
 
     * - Result
-      - `http://www.searchtools.com/test/urls/-dash.html <http://www.searchtools.com/test/urls/-dash.html>`_
+      - `http://www.example.com/test/example-dash.html <http://www.example.com/test/example-dash.html>`_
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://www.searchtools.com/test/urls/_underscore.html
+            http://www.example.com/test/example_underscore.html
 
     * - Result
-      - `http://www.searchtools.com/test/urls/_underscore.html <http://www.searchtools.com/test/urls/_underscore.html>`_
+      - `http://www.example.com/test/example_underscore.html <http://www.example.com/test/example_underscore.html>`_
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://www.searchtools.com/test/urls/period.x.html
+            http://www.example.com/test/example.period.x.html
 
     * - Result
-      - `http://www.searchtools.com/test/urls/period.x.html <http://www.searchtools.com/test/urls/period.x.html>`_
+      - `http://www.example.com/test/example.period.x.html <http://www.example.com/test/example.period.x.html>`_
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://www.searchtools.com/test/urls/!exclamation.html
+            http://www.example.com/test/example!exclamation.html
 
     * - Result
-      - `http://www.searchtools.com/test/urls/!exclamation.html <http://www.searchtools.com/test/urls/!exclamation.html>`_
+      - `http://www.example.com/test/example!exclamation.html <http://www.example.com/test/example!exclamation.html>`_
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://www.searchtools.com/test/urls/~tilde.html
+            http://www.example.com/test/example~tilde.html
 
     * - Result
-      - `http://www.searchtools.com/test/urls/~tilde.html <http://www.searchtools.com/test/urls/~tilde.html>`_
+      - `http://www.example.com/test/example~tilde.html <http://www.example.com/test/example~tilde.html>`_
 
 .. list-table::
 
     * - Input
       - .. code:: text
 
-            http://www.searchtools.com/test/urls/*asterisk.html
+            http://www.example.com/test/example*asterisk.html
 
     * - Result
-      - `http://www.searchtools.com/test/urls/*asterisk.html <http://www.searchtools.com/test/urls/*asterisk.html>`_
+      - `http://www.example.com/test/example*asterisk.html <http://www.example.com/test/example*asterisk.html>`_
 
 .. list-table::
 
@@ -680,4 +680,4 @@ Resources
 
 - `Comments (help.launchpad.net) <https://help.launchpad.net/Comments>`_
 
-.. _DemoUrl: http://localhost:8086/bar/baz/foo.bar.html
+.. _DemoUrl: http://localhost:8086/example/sample.html

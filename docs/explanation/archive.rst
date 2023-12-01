@@ -37,7 +37,7 @@ Series
 ------
 
 A **series** refers to the packages that target a specific Ubuntu version. A
-series is usually referred to by its :term:`codename <Codename>`.
+series is usually referred to by its :term:`code name <Code name>`.
 
 Examples of series are: ``mantic``, ``lunar``, ``jammy``, ``focal``, ``bionic``, ``xenial``, ``trusty``.
 
@@ -141,7 +141,7 @@ the archive.
 
 .. note::
 
-    The ``devel`` series always mirrors the series with the codename of the
+    The ``devel`` series always mirrors the series with the code name of the
     :term:`current release in development <Current Release in Development>`.
 
 .. _ArchiveComponents:
@@ -153,7 +153,7 @@ Components
 packages in a suite. The APT package manager can subscribe to the individual components
 of a suite.
 
-The packages of an Ubuntu series are categorized according to whether they are
+The packages of an Ubuntu series are categorised according to whether they are
 :term:`Open Source Software` or :term:`Closed Source Software`, and whether or
 not they are part of the :term:`base packages <Ubuntu Base Packages>` for a given
 series. On this basis they are sorted into the components "main", "restricted",
@@ -223,7 +223,7 @@ from the Ubuntu package archive. To provide a good
 by other servers to distribute network traffic, reduce latency, and provide redundancy,
 which ensures high availability and fault tolerance.
 
-Here is a complete list of officially recognized
+Here is a complete list of officially recognised
 `Ubuntu package archive mirrors <https://launchpad.net/ubuntu/+archivemirrors>`_.
 
 .. note::
@@ -232,7 +232,7 @@ Here is a complete list of officially recognized
     images", because ISO images can be downloaded and burned to a CD to make
     installation disks.)
 
-    You can find a complete list of officially recognized
+    You can find a complete list of officially recognised
     `Ubuntu CD mirrors <https://launchpad.net/ubuntu/+cdmirrors>`_.
 
 Country mirrors
@@ -317,13 +317,13 @@ this is currently relevant for you.
 
 Because security updates contain fixes for :term:`Common Vulnerabilities and Exposures`
 (CVE), it is mission critical to distribute them as fast as possible to end users.
-Mirrors are a technical burdon in this case, because there is a delay between the
-synchronoization of a mirror and the primary Ubuntu package archive server.
+Mirrors are a technical burden in this case, because there is a delay between the
+synchronisation of a mirror and the primary Ubuntu package archive server.
 
-In the worst case a bad actor gets informed about a CVE and can utilize it, before
+In the worst case a bad actor gets informed about a CVE and can use it, before
 the update reaches a target machine.
 
-Therefore the APT package manager is configured by defult (on Ubuntu) to also check
+Therefore the APT package manager is configured by default (on Ubuntu) to also check
 for updates from ``security.ubuntu.com``. Security updates will get uploaded here
 first. If a mirror does not provide the update yet a client will download it from
 ``security.ubuntu.com`` instead from the mirror.
@@ -349,12 +349,12 @@ At the end of the file you will find something similar to this:
 Because the :manpage:`sources.list(5)` file is read from top to bottom, the APT
 package manager will download updates from the mirror first and only download it
 from ``security.ubuntu.com`` if the mirror has an older version,
-because the mirror has not syncronized with the primary Ubuntu package archive
+because the mirror has not synchronised with the primary Ubuntu package archive
 server yet.
 
 ``security.ubuntu.com`` points to the same servers as ``archive.ubuntu.com`` if
 you do a DNS lookup. It is used in the :manpage:`sources.list(5)` file for the
-security pocket to prevent a user/script from accidentaly changing it to a mirror.
+security pocket to prevent a user/script from accidentally changing it to a mirror.
 
 Resources
 ---------

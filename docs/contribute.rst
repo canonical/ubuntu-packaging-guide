@@ -37,7 +37,7 @@ If you found an issue and want to submit a fix for it, or have written a guide
 you would like to add to the documentation, feel free to
 `open a pull request to submit your fix <https://github.com/canonical/ubuntu-packaging-guide/pulls>`_
 against our ``main`` branch. If you need help, please use the discussion board
-or contact one of the repo administrators.
+or contact one of the repository administrators.
 
 Contribution format for the project
 ===================================
@@ -48,15 +48,15 @@ Sphinx & reStructuredText
 The Guide is built using `Sphinx <https://www.sphinx-doc.org/>`_. Articles should
 be written in reStructuredText. The following links might be helpful:
 
-* https://docutils.sourceforge.io/docs/user/rst/quickstart.html
-* https://docutils.sourceforge.io/docs/user/rst/quickref.html
+* `A ReStructuredText Primer <https://docutils.sourceforge.io/docs/user/rst/quickstart.html>`_
+* `Quick reStructuredText <https://docutils.sourceforge.io/docs/user/rst/quickref.html>`_
 
 How to add a new Sphinx extension
 ---------------------------------
 
 In general, there are two places you will need to update to add new extensions.
 
-* ``docs/conf.py`` - add the name of the extension to the extensions config
+* ``docs/conf.py`` - add the name of the extension to the extensions configuration
   parameter 
 * ``docs/.sphinx/requirements.txt`` - add the name of the extension to the
   bottom of the list
@@ -72,8 +72,8 @@ to the ``conf.py`` file, as in this example: ::
 Translations
 ------------
 
-We use Sphinx's l10n module and Gettext for translating the Ubuntu Packaging
-Guide.
+We use the localisation (l10n) module for Sphinx and gettext for translating
+the Ubuntu Packaging Guide.
 
 Some notes about translating the guide:
 
@@ -84,11 +84,11 @@ Some notes about translating the guide:
 - The Guide uses email-style reStructuredText links. If you see a link in
   the text like::
 
-    `Translatable link text <LinkReference_>`_
+    `Translatable link text <Link_Reference_>`_
 
   Then replace the "Translatable link text" with your translations, but keep
-  the "LinkReference" unchanged (even if it is in English). The same applies
-  if a URL is used instead of LinkReference.
+  the ``Link_Reference`` unchanged (even if it is in English). The same applies
+  if a URL is used instead of ``Link_Reference``.
 
 To test your translation, use ``make BUILDER-LANGUAGE`` command (for example,
 ``make html-it`` will build HTML docs in Italian language).

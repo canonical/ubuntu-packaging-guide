@@ -54,7 +54,7 @@ return with the exit code `1` and print nothing to the :term:`Standard Output`.
 :manpage:`uscan(1)` reads the first entry in :file:`debian/changelog` to determine
 the name and version of the source package.
 
-You can allways add the ``--verbose`` flag to see more information (e.g., which version
+You can always add the ``--verbose`` flag to see more information (e.g., which version
 :manpage:`uscan(1)` found):
 
 .. code-block:: bash
