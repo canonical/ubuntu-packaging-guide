@@ -1063,7 +1063,7 @@ Glossary
     Series
         A *series* refers to the :term:`Packages <Package>` in the :term:`Ubuntu Archive`
         that target a specific :term:`Ubuntu` version. A *series* is usually referred
-        to by its :term:`Codename`.
+        to by its :term:`Code name`.
 
         See: :ref:`Series (explanation) <ArchiveSeries>`
 

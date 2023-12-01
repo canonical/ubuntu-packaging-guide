@@ -7,7 +7,7 @@ Release cadence
 :term:`Ubuntu` follows a strict time-based release cycle. Every six months since
 2004, :term:`Canonical` publishes a new Ubuntu version and its set of
 :term:`packages <Package>` are declared stable (production-quality). Simultaneously,
-a new version begins development; it is given its own :term:`code name`, but also referred
+a new version begins development; it is given its own :term:`Code name`, but also referred
 to as the ":term:`Current Release in Development`" or ":term:`Devel`".
 
 .. _LTSReleases:

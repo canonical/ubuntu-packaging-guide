@@ -37,7 +37,7 @@ Series
 ------
 
 A **series** refers to the packages that target a specific Ubuntu version. A
-series is usually referred to by its :term:`code name <Codename>`.
+series is usually referred to by its :term:`code name <Code name>`.
 
 Examples of series are: ``mantic``, ``lunar``, ``jammy``, ``focal``, ``bionic``, ``xenial``, ``trusty``.
 
