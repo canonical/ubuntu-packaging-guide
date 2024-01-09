@@ -15,7 +15,7 @@ import datetime
 ############################################################
 
 # Product name
-project = 'Ubuntu packaging'
+project = 'Ubuntu'
 author = 'Canonical Group Ltd.'
 version = '2.0'
 
@@ -49,14 +49,14 @@ ogp_image = 'https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg
 # Update with the favicon for your product (default is the circle of friends)
 html_favicon = '.sphinx/_static/favicon.png'
 
-html_title = ''
+html_title = 'Ubuntu Packaging Guide'
 
 # (Some settings must be part of the html_context dictionary, while others
 #  are on root level. Don't move the settings.)
 html_context = {
 
     # Change to the link to your product website (without "https://")
-    'product_page': 'ubuntu.com/',
+    'product_page': 'ubuntu.com',
 
     # Add your product tag to ".sphinx/_static" and change the path
     # here (start with "_static"), default is the circle of friends
@@ -115,6 +115,7 @@ linkcheck_ignore = [
     r"irc:.+",
     r"mailto:.+",
     r"jabber:noreply@launchpad\.net",
+    r"http://www.example.com/.+",
 ]
 
 # Pages on which to ignore anchors

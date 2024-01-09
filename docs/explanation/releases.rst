@@ -221,7 +221,6 @@ Resources
 - `Ubuntu flavours <https://ubuntu.com/desktop/flavours>`_
 - `Ubuntu wiki -- Ubuntu flavours <https://wiki.ubuntu.com/UbuntuFlavors>`_
 - `Ubuntu wiki -- time-based releases <https://wiki.ubuntu.com/TimeBasedReleases>`_
-- `Mark Shuttleworth's blog -- the art of release <https://www.markshuttleworth.com/archives/146>`_
 - `Ubuntu wiki -- point release process <https://wiki.ubuntu.com/PointReleaseProcess>`_
 - `Ubuntu wiki -- end of life process <https://wiki.ubuntu.com/EndOfLifeProcess>`_
 - `Ubuntu releases <https://releases.ubuntu.com/>`_
