@@ -115,6 +115,7 @@ linkcheck_ignore = [
     r"irc:.+",
     r"mailto:.+",
     r"jabber:noreply@launchpad\.net",
+    r"http://www.example.com/.+",
 ]
 
 # Pages on which to ignore anchors
