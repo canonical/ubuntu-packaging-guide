@@ -15,7 +15,7 @@ import datetime
 ############################################################
 
 # Product name
-project = 'Ubuntu packaging'
+project = 'Ubuntu'
 author = 'Canonical Group Ltd.'
 version = '2.0'
 
@@ -56,7 +56,7 @@ html_title = 'Ubuntu Packaging Guide'
 html_context = {
 
     # Change to the link to your product website (without "https://")
-    'product_page': 'ubuntu.com/',
+    'product_page': 'ubuntu.com',
 
     # Add your product tag to ".sphinx/_static" and change the path
     # here (start with "_static"), default is the circle of friends
