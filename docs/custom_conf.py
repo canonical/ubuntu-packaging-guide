@@ -49,7 +49,7 @@ ogp_image = 'https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg
 # Update with the favicon for your product (default is the circle of friends)
 html_favicon = '.sphinx/_static/favicon.png'
 
-html_title = ''
+html_title = 'Ubuntu Packaging Guide'
 
 # (Some settings must be part of the html_context dictionary, while others
 #  are on root level. Don't move the settings.)
