@@ -283,7 +283,7 @@ be displayed on Launchpad:
           http://localhost:8086/example/sample.html
 
     * - Result
-      - `http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html>`_
+      - `http://localhost:8086/example/sample.html <DemoUrl_>`_
         
 .. list-table::
 
@@ -293,7 +293,7 @@ be displayed on Launchpad:
           http://localhost:8086/example/sample.html
 
     * - Result
-      - `http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html>`_
+      - `http://localhost:8086/example/sample.html <DemoUrl_>`_
 
 .. list-table::
 
@@ -424,7 +424,7 @@ be displayed on Launchpad:
             (http://localhost:8086/example/sample.html)
 
     * - Result
-      - (`http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html)>`_
+      - (`http://localhost:8086/example/sample.html <DemoUrl_>`_)
 
 .. list-table::
 
@@ -434,7 +434,7 @@ be displayed on Launchpad:
             (http://localhost:8086/example/sample.html),
 
     * - Result
-      - (`http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html)>`_,
+      - (`http://localhost:8086/example/sample.html <DemoUrl_>`_),
 
 .. list-table::
 
@@ -444,7 +444,7 @@ be displayed on Launchpad:
             (http://localhost:8086/example/sample.html).
 
     * - Result
-      - (`http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html)>`_.
+      - (`http://localhost:8086/example/sample.html <DemoUrl_>`_).
 
 .. list-table::
 
@@ -454,7 +454,7 @@ be displayed on Launchpad:
             (http://localhost:8086/example/sample.html);
 
     * - Result
-      - (`http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html)>`_;
+      - (`http://localhost:8086/example/sample.html <DemoUrl_>`_);
 
 .. list-table::
 
@@ -464,7 +464,7 @@ be displayed on Launchpad:
             (http://localhost:8086/example/sample.html):
 
     * - Result
-      - (`http://localhost:8086/example/sample.html <http://localhost:8086/example/sample.html)>`_:
+      - (`http://localhost:8086/example/sample.html <DemoUrl_>`_):
 
 .. list-table::
 
