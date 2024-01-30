@@ -252,9 +252,9 @@ Country mirrors are accessible via the domain name format:
 You can see which mirror is the country mirror by doing a simple
 :term:`DNS` lookup. For example:
 
-.. tab-set::
+.. tabs::
 
-    .. tab-item:: Finland (FI)
+    .. tab:: Finland (FI)
 
         .. code:: bash
 
@@ -267,7 +267,7 @@ You can see which mirror is the country mirror by doing a simple
 
         Therefore, ``mirrors.nic.funet.fi`` is Finland's country mirror.
 
-    .. tab-item:: Tunisia (TN)
+    .. tab:: Tunisia (TN)
 
         Tunisia does not have any third-party mirrors in its country. Therefore the
         Tunisia country mirror is just the primary Ubuntu package archive server
