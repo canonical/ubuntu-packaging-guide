@@ -9,6 +9,10 @@ import datetime
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
+#
+# If you're not familiar with Sphinx and don't want to use advanced
+# features, it is sufficient to update the settings in the "Project
+# information" section.
 
 ############################################################
 ### Project information
@@ -17,10 +21,12 @@ import datetime
 # Product name
 project = 'Ubuntu'
 author = 'Canonical Group Ltd.'
-version = '2.0'
+version = '2.0-preview'
 
-# Uncomment if your product uses release numbers
-# release = '1.0'
+# The title you want to display for the documentation in the sidebar.
+# You might want to include a version number here.
+# To not display any title, set this option to an empty string.
+html_title = project + ' documentation'
 
 # The default value uses the current year as the copyright year.
 #
@@ -38,28 +44,35 @@ version = '2.0'
 
 copyright = '%s, %s' % (datetime.date.today().year, author)
 
-## Open Graph configuration - defines what is displayed in the website preview
-# The URL of the documentation output
+## Open Graph configuration - defines what is displayed as a link preview
+## when linking to the documentation from another website (see https://ogp.me/)
+# The URL where the documentation will be hosted (leave empty if you
+# don't know yet)
+# NOTE: If no ogp_* variable is defined (e.g. if you remove this section) the
+# sphinxext.opengraph extension will be disabled.
 ogp_site_url = 'https://canonical-ubuntu-packaging-guide.readthedocs-hosted.com/'
 # The documentation website name (usually the same as the product name)
 ogp_site_name = 'Ubuntu Packaging Guide'
-# An image or logo that is used in the preview
+# The URL of an image or logo that is used in the preview
 ogp_image = 'https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg'
 
-# Update with the favicon for your product (default is the circle of friends)
+# Update with the local path to the favicon for your product
+# (default is the circle of friends)
 html_favicon = '.sphinx/_static/favicon.png'
-
-html_title = 'Ubuntu Packaging Guide'
 
 # (Some settings must be part of the html_context dictionary, while others
 #  are on root level. Don't move the settings.)
 html_context = {
 
-    # Change to the link to your product website (without "https://")
+    # Change to the link to the website of your product (without "https://")
+    # For example: "ubuntu.com/lxd" or "microcloud.is"
+    # If there is no product website, edit the header template to remove the
+    # link (see the readme for instructions).
     'product_page': 'ubuntu.com',
 
-    # Add your product tag to ".sphinx/_static" and change the path
-    # here (start with "_static"), default is the circle of friends
+    # Add your product tag (the orange part of your logo, will be used in the
+    # header) to ".sphinx/_static" and change the path here (start with "_static")
+    # (default is the circle of friends)
     'product_tag': '_static/tag.png',
 
     # Change to the discourse instance you want to be able to link to
@@ -67,11 +80,15 @@ html_context = {
     # (use an empty value if you don't want to link)
     'discourse': 'https://discourse.ubuntu.com',
 
-    # Change to the GitHub info for your project
+    # Change to the Mattermost channel you want to link to
+    # (use an empty value if you don't want to link)
+    'mattermost': '',
+
+    # Change to the GitHub URL for your project
     'github_url': 'https://github.com/canonical/ubuntu-packaging-guide',
 
     # Change to the branch for this version of the documentation
-    'github_version': '2.0-preview',
+    'github_version': version,
 
     # Change to the folder that contains the documentation
     # (usually "/" or "/docs/")
@@ -83,6 +100,9 @@ html_context = {
 
     # Controls the existence of Previous / Next buttons at the bottom of pages
     # Valid options: none, prev, next, both
+    # You can override the default setting on a page-by-page basis by specifying
+    # it as file-wide metadata at the top of the file, see
+    # https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html
     'sequential_nav': "none"
 }
 
@@ -96,7 +116,10 @@ slug = ""
 
 # Set up redirects (https://documatt.gitlab.io/sphinx-reredirects/usage.html)
 # For example: 'explanation/old-name.html': '../how-to/prettify.html',
-
+# You can also configure redirects in the Read the Docs project dashboard
+# (see https://docs.readthedocs.io/en/stable/guides/redirects.html).
+# NOTE: If this variable is not defined, set to None, or the dictionary is empty,
+# the sphinx_reredirects extension will be disabled.
 redirects = {}
 
 ############################################################
@@ -104,7 +127,6 @@ redirects = {}
 ############################################################
 
 # Links to ignore when checking links
-
 linkcheck_ignore = [
     'http://127.0.0.1:8000',
     r"https://bugs\.launchpad\.net/ubuntu/\+bug/2",
@@ -116,11 +138,10 @@ linkcheck_ignore = [
     r"mailto:.+",
     r"jabber:noreply@launchpad\.net",
     r"http://www.example.com/.+",
-]
+    ]
 
 # Pages on which to ignore anchors
 # (This list will be appended to linkcheck_anchors_ignore_for_url)
-
 custom_linkcheck_anchors_ignore_for_url = []
 
 ############################################################
@@ -130,14 +151,34 @@ custom_linkcheck_anchors_ignore_for_url = []
 ## The following settings are appended to the default configuration.
 ## Use them to extend the default functionality.
 
-# Add extensions
-custom_extensions = []
+# NOTE: Remove this variable to disable the MyST parser extensions.
+#custom_myst_extensions = []
 
-# Add MyST extensions
-custom_myst_extensions = []
+# Add custom Sphinx extensions as needed. 
+# This array contains recommended extensions that should be used.
+# NOTE: The following extensions are handled automatically and do 
+# not need to be added here: myst_parser, sphinx_copybutton, sphinx_design,
+# sphinx_reredirects, sphinxcontrib.jquery, sphinxext.opengraph
+custom_extensions = [
+    #'sphinx_tabs.tabs',
+    #'canonical.youtube-links',
+    #'canonical.related-links',
+    #'canonical.custom-rst-roles',
+    #'canonical.terminal-output'
+    ]
+
+# Add custom required Python modules that must be added to the
+# .sphinx/requirements.txt file.
+# NOTE: The following modules are handled automatically and do not need to be
+# added here: canonical-sphinx-extensions, furo, linkify-it-py, myst-parser,
+# pyspelling, sphinx, sphinx-autobuild, sphinx-copybutton, sphinx-design,
+# sphinx-reredirects, sphinx-tabs, sphinxcontrib-jquery, sphinxext-opengraph
+custom_required_modules = []
 
 # Add files or directories that should be excluded from processing.
-custom_excludes = []
+custom_excludes = [
+    'doc-cheat-sheet*',
+    ]
 
 # Add CSS files (located in .sphinx/_static/)
 custom_html_css_files = []
@@ -149,7 +190,30 @@ custom_html_js_files = []
 
 manpages_url = 'https://manpages.ubuntu.com/manpages/en/man{section}/{page}.{section}.html'
 
+# Specify a reST string that is included at the end of each file.
+# If commented out, use the default (which pulls the reuse/links.txt
+# file into each reST file).
+# custom_rst_epilog = ''
+
+# By default, the documentation includes a feedback button at the top.
+# You can disable it by setting the following configuration to True.
+disable_feedback_button = False
+
+# Add tags that you want to use for conditional inclusion of text
+# (https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#tags)
+custom_tags = []
+
+############################################################
+### Additional configuration
+############################################################
+
+## Add any configuration that is not covered by the common conf.py file.
+
+# Define a :center: role that can be used to center the content of table cells.
 rst_prolog = '''
+.. role:: center
+   :class: align-center
+
 .. caution::
 
    The Packaging and Development guide is currently undergoing a major overhaul
@@ -164,26 +228,6 @@ rst_prolog = '''
    love for you to be involved! See :doc:`our contribution page </contribute>`
    for details of how to join in.
 '''
-
-# Specify a reST string that is included at the end of each file.
-# If commented out, use the default (which pulls the reuse/links.txt
-# file into each reST file).
-custom_rst_epilog = '''
-.. include:: /reuse/links.txt
-'''
-# By default, the documentation includes a feedback button at the top.
-# You can disable it by setting the following configuration to True.
-disable_feedback_button = False
-
-# Add tags that you want to use for conditional inclusion of text
-# (https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#tags)
-custom_tags = []
-
-############################################################
-### Additional configuration
-############################################################
-
-## Add any configuration that is not covered by the common conf.py file.
 
 # The root toctree document.
 root_doc = 'index'
