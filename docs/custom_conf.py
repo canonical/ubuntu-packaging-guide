@@ -160,7 +160,7 @@ custom_linkcheck_anchors_ignore_for_url = []
 # not need to be added here: myst_parser, sphinx_copybutton, sphinx_design,
 # sphinx_reredirects, sphinxcontrib.jquery, sphinxext.opengraph
 custom_extensions = [
-    #'sphinx_tabs.tabs',
+    'sphinx_tabs.tabs',
     #'canonical.youtube-links',
     #'canonical.related-links',
     #'canonical.custom-rst-roles',
