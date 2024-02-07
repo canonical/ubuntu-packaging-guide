@@ -10,7 +10,7 @@ or check if a newer upstream release exists; for example:
 
 Most of the source packages contain a ``watch`` file in the ``debian``
 folder. This is a configuration file for the :manpage:`uscan(1)` utility which allows you to
-automatically search :term:`HTTP` or :term:`FTP` sites or :manpage:`git(1)` repositories
+automatically search HTTP or FTP sites or :manpage:`git(1)` repositories
 for newly available updates of the upstream project.
 
 .. note::
@@ -30,9 +30,9 @@ accidentally miss or skip a verification step, misspell a :term:`URL`, copy the
 wrong URL or copy a URL only partially, etc.
 
 If you still have to download upstream file(s) manually make sure to
-verify :term:`Cryptographic Signatures` (if available). The :term:`Signing Key`
-of the upstream project should be stored in the source package
-as :file:`debian/upstream/signing-key.asc` (if the upstream project
+verify :term:`Cryptographic Signatures <Cryptographic Signature>` (if available).
+The :term:`Signing Key` of the upstream project should be stored in the source
+package as :file:`debian/upstream/signing-key.asc` (if the upstream project
 has a signing key).
 
 :manpage:`uscan(1)` verifies downloads against this signing key
@@ -65,7 +65,7 @@ Check for new upstream version (no download)
 --------------------------------------------
 
 If you just want to check if a new update is available, but you don't want to download
-anything, you can run the :manpage:`uscan(1)` :term:`Command` with the ``--safe`` flag
+anything, you can run the :manpage:`uscan(1)` command with the ``--safe`` flag
 from the :term:`Root` of the source tree:
 
 .. code-block:: bash
@@ -122,7 +122,7 @@ version to download from the first entry in :file:`debian/changelog` file:
     In most cases you actually want to download the source from the :term:`Ubuntu Archive`
     and not re-download the source from the upstream project.
     
-    :ref:`How to get the Source from the Archive? <get-package-source>`
+    :doc:`How to get the Source from the Archive? </how-to/get-package-source>`
 
 Further Information
 -------------------

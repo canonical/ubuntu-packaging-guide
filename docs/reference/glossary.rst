@@ -158,6 +158,9 @@ Glossary
 
             See also: :term:`git-ubuntu`
 
+    best-effort
+        *Work in Progress*
+
     Big-Endian
         *Work in Progress*
 
@@ -394,6 +397,9 @@ Glossary
 
     CRD
         Abbreviation for :term:`Coordinated Release Date`
+
+    Cryptographic Signature
+        *Work in Progress*
 
     CUE
         Abbreviation for :term:`Certified Ubuntu Engineer`
@@ -1035,6 +1041,9 @@ Glossary
     RoM
         Abbreviation for :term:`Request of Maintainer`
 
+    Root
+        *Work in Progress*
+
     RoP
         Abbreviation for :term:`Request of Porter`
 
@@ -1068,6 +1077,9 @@ Glossary
         See: :ref:`Series (explanation) <ArchiveSeries>`
 
     Service-level Agreement
+        *Work in Progress*
+
+    Shell
         *Work in Progress*
 
     Signature
@@ -1134,6 +1146,9 @@ Glossary
     Staging Environment
         *Work in Progress*
 
+    Standard Output
+        *Work in Progress*
+
     tarball
         A file in the :manpage:`tar(5)` archive format, which collects any number of
         files, directories, and other file system objects (symbolic links, device nodes, etc.)
@@ -1165,6 +1180,9 @@ Glossary
 
     Trusted Platform Module
         *Work in Progress*
+
+    TUI
+        Abbreviation for text-based :term:`User Interface`
 
     Ubuntu
         The word *"ubuntu"* is derived from the pronunciation of an an ancient African word
@@ -1270,6 +1288,9 @@ Glossary
         *Work in Progress*
 
         See also: `IRC Council (Ubuntu Wiki) <https://wiki.ubuntu.com/IRC/IrcCouncil>`_
+
+    Ubuntu Keyserver
+        *Work in Progress*
 
     Ubuntu Pro
         *Work in Progress*
