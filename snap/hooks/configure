@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+
+set -e
+
+port="$(snapctl get http.port)"
+
+if ! [[ "$port" =~ ^[0-9]+$ && "$port" -ge 1 && "$port" -le 65535 ]]; then
+    echo "\"$port\" is not a valid port number. A valid port number has to be between 1 and 65535 (inclusive)." >&2
+    exit 1
+fi
+
+# Checking the validity of the address is hard. I want to avoid restricting
+# someones usecase, because of my assumtions. Therefore I do not extensively
+# check the validity of the address.
+# TL;DR: Give the user enough rope to hang themself.
+address="$(snapctl get http.address)"
+if [[ "$address" =~ " " ]]; then
+    echo "\"$address\" is not a valid IPv4 or domain address. It contains spaces." >&2
+    exit 1
+fi
+
+if [[ -z "$address" ]]; then
+    echo "\"$address\" is not a valid IPv4 or domain address. It is empty." >&2
+    exit 1
+fi
+
+if snapctl services ubuntu-packaging-guide.deamon | grep -q "active"; then
+    snapctl restart ubuntu-packaging-guide.deamon
+fi

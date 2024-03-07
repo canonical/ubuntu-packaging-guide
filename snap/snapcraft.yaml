@@ -1,0 +1,95 @@
+name: ubuntu-packaging-guide
+title: Ubuntu Packaging Guide
+base: core22
+summary: A web-based guide/reference about Ubuntu development and deb packaging.
+description: |
+  This snap provides an HTTP file server that hosts the Ubuntu Packaging Guide locally on your machine. This allows you to access the guide even when you are offline or have a poor internet connection.
+
+  The web server listens by default on the address `http://localhost:9000`
+  
+  To launch a browser with the listening address, run the command:    
+  `ubuntu-packaging-guide browse`
+  
+  To change the listening address, use the commands:    
+  `snap set ubuntu-packaging-guide http.port=VALUE`    
+  `snap set ubuntu-packaging-guide http.address=VALUE`
+  
+  To stop/restart/start the web server, use the commands:    
+  `snap stop ubuntu-packaging-guide.deamon`    
+  `snap restart ubuntu-packaging-guide.deamon`    
+  `snap start ubuntu-packaging-guide.deamon`
+
+  See more details by running the command:    
+  `ubuntu-packaging-guide --help`
+icon: snap/local/ubuntu-logo.png
+license: CC-BY-3.0
+source-code: https://github.com/canonical/ubuntu-packaging-guide
+issues: https://github.com/canonical/ubuntu-packaging-guide/issues
+website: https://packaging.ubuntu.com/
+adopt-info: metadata
+
+grade: devel
+confinement: strict
+architectures:
+  - build-on: [amd64]
+    build-for: [amd64]
+  - build-on: [amd64]
+    build-for: [arm64]
+
+parts:
+  metadata:
+    source: .
+    plugin: nil
+    build-packages:
+      - python3
+    override-build: |
+      git rev-parse HEAD > COMMIT-HASH
+      python3 snap/local/eng/print-version.py > VERSION
+      craftctl set version="$(cat VERSION)+git.$(git rev-parse --short HEAD)"
+      mv COMMIT-HASH "$SNAPCRAFT_PART_INSTALL"
+      mv VERSION "$SNAPCRAFT_PART_INSTALL"
+      craftctl default
+    organize:
+      COMMIT-HASH: usr/share/ubuntu-packaging-guide/meta/COMMIT-HASH
+      VERSION: usr/share/ubuntu-packaging-guide/meta/VERSION
+  html-pages:
+    source: ./docs
+    plugin: nil
+    build-packages:
+      - python3
+      - python3-pip
+    override-build: |
+      python3 build_requirements.py
+      pip3 install -r .sphinx/requirements.txt
+      sphinx-build -b dirhtml . "$SNAPCRAFT_PART_INSTALL/dist" -c . -d .sphinx/.doctrees
+      craftctl default
+    organize:
+      dist: usr/share/ubuntu-packaging-guide/www
+  file-server:
+    source: snap/local/src
+    plugin: dump
+    organize:
+      cli.py: usr/bin/cli
+      deamon.py: usr/bin/deamon
+      common.py: usr/lib/ubuntu-packaging-guide/common.py
+    stage-packages:
+      - python3
+    override-stage: |
+      craftctl default
+      chmod 555 usr/bin/cli usr/bin/deamon
+
+apps:
+  ubuntu-packaging-guide:
+    command: usr/bin/cli
+    environment:
+      PYTHONPATH: $SNAP/usr/lib/ubuntu-packaging-guide
+    plugs:
+      - desktop
+  deamon:
+    command: usr/bin/deamon
+    daemon: simple
+    environment:
+      PYTHONPATH: $SNAP/usr/lib/ubuntu-packaging-guide
+    plugs:
+      - network
+      - network-bind

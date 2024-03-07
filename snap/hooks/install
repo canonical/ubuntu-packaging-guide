@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+set -e
+
+# initialize with default values
+snapctl set http.port=9000
+snapctl set http.address=localhost
