@@ -22,3 +22,4 @@ helping to set up your computer so that you can start working with packages.
    tutorial/make-changes-to-package.rst
    tutorial/create-new-package.rst
    tutorial/fix-bug.rst
+   tutorial/merge-a-package.rst
