@@ -25,3 +25,4 @@ How do I...?
    how-to/write-patchfiles.rst
    how-to/propose-changes.rst
    how-to/use-schroots.rst
+   how-to/merge-a-package.rst
