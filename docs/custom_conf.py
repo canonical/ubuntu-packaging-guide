@@ -138,6 +138,7 @@ linkcheck_ignore = [
     r"mailto:.+",
     r"jabber:noreply@launchpad\.net",
     r"http://www.example.com/.+",
+    r"https://merges.ubuntu.com/.*",
     ]
 
 # Pages on which to ignore anchors
