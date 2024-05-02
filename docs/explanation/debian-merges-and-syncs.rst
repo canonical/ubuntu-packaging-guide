@@ -23,7 +23,7 @@ Beginning with the archive opening for a new Ubuntu release until the
 higher version identifiers than the corresponding Ubuntu packages are
 automatically copied from Debian unstable (also known as :term:`Code name` 
 "Sid") into the Ubuntu package archive if the corresponding Ubuntu packages
-do not carry :term:`Ubuntu Delta`. This process is called "synchronization with
+do not carry :term:`Ubuntu Delta`. This process is called "synchronisation with
 Debian", or "sync" for short.
 
 On request (via a :term:`Launchpad` bug-ticket), 
