@@ -11,9 +11,8 @@ You can find the full documentation [here](https://canonical-ubuntu-packaging-gu
 
 The theme used
 in these docs is the "furo" theme, which has been modified to approach a more
-Ubuntu-esque appearance.The furo documentation has [instructions on how to change]
-(https://github.com/pradyunsg/furo) most of the theme's functionality.
-
+Ubuntu-esque appearance.The furo documentation has `instructions on how to change 
+<https://github.com/pradyunsg/furo>`_ most of the theme's functionality.
 
 If adding a new article, make sure to add it to the index page for the Diataxis
 section it belongs in. These indexes are in ``docs/`` and should be easy to
