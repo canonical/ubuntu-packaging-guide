@@ -3,14 +3,17 @@ The Ubuntu Packaging Guide
 
 This guide is often one of the first things that a new Ubuntu contributor will
 look at. Helping make it better can have a big impact.
-
 The actual articles can be found under the ``docs/`` directory in rst files.
 Images can be placed in the ``docs/images/`` folder.
+The html, js and css files can be found under ``docs/_static``. 
 
-The html, js and css files can be found under ``docs/_static``. The theme used
+You can find the full documentation [here](https://canonical-ubuntu-packaging-guide.readthedocs-hosted.com/).
+
+The theme used
 in these docs is the "furo" theme, which has been modified to approach a more
-Ubuntu-esque appearance. The furo documentation has `instructions on how to
-change<https://github.com/pradyunsg/furo>`_ most of the theme's functionality.
+Ubuntu-esque appearance.The furo documentation has [instructions on how to change]
+(https://github.com/pradyunsg/furo) most of the theme's functionality.
+
 
 If adding a new article, make sure to add it to the index page for the Diataxis
 section it belongs in. These indexes are in ``docs/`` and should be easy to
