@@ -23,6 +23,7 @@ found in ``COPYING``.
 
 How to build this documentation
 -------------------------------
+Find the full documentation for the [Ubuntu Packaging Guide]("https://canonical-ubuntu-packaging-guide.readthedocs-hosted.com/en/latest/) at "Read the Docs".
 
 To build this documentation on your own machine, first clone this
 repository: ::
