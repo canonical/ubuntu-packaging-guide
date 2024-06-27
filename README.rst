@@ -9,7 +9,7 @@ Images can be placed in the ``docs/images/`` folder.
 
 The html, js and css files can be found under ``docs/_static``. The theme used
 in these docs is the "furo" theme, which has been modified to approach a more
-Ubuntu-esque appearance. The 'furo documentation <https://github.com/pradyunsg/furo>'_ has instructions on how to
+Ubuntu-esque appearance. The `furo documentation <https://github.com/pradyunsg/furo>`_ has instructions on how to
 change most of the theme's functionality.
 
 If adding a new article, make sure to add it to the index page for the Diataxis
