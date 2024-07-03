@@ -122,7 +122,6 @@ pdf-prep: install
 
 pdf-prep-force:
 	@. $(VENV); apt-get update
-	@. $(VENV); apt-get upgrade -y
 	@. $(VENV); apt-get install --no-install-recommends -y latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng \
 
 pdf: pdf-prep
