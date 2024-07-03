@@ -338,7 +338,7 @@ latex_elements = {
 \begin{flushleft}
     \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=south east, inner sep=0] at (current page.south east) {
-    \includegraphics[width=\paperwidth, height=\paperheight]{front-page}
+    \includegraphics[width=\paperwidth, height=\paperheight]{front-page-light}
     };
     \end{tikzpicture}
 \end{flushleft}
@@ -347,7 +347,7 @@ latex_elements = {
 
 \begin{adjustwidth}{8cm}{0pt}
 \begin{flushleft}
-    \huge \textcolor{white}{\textbf{}{\raggedright{Ubuntu Packaging Guide}}}
+    \huge \textcolor{black}{\textbf{}{\raggedright{Ubuntu Packaging Guide}}}
 \end{flushleft}
 \end{adjustwidth}
 
