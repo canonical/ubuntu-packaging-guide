@@ -121,8 +121,8 @@ pdf-prep: install
 # Entrypoint to install system packages, separate from usual workflow due to permanence
 
 pdf-prep-force:
-	@. $(VENV); apt-get update
-	@. $(VENV); apt-get install --no-install-recommends -y latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng \
+	apt-get update
+	apt-get install --no-install-recommends -y latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng \
 
 pdf: pdf-prep
 	@. $(VENV); sphinx-build -M latexpdf "$(SOURCEDIR)" "_build" $(SPHINXOPTS)
