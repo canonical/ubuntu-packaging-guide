@@ -275,7 +275,7 @@ Glossary
         `core values of Ubuntu <https://design.ubuntu.com/brand>`_:
         *Freedom*, *Reliable*, *Precise* and *Collaborative*.
 
-        .. image:: ../images/reference/glossary/CoF-Square.svg
+        .. image:: ../images/reference/glossary/CoF-Square.png
             :width: 200
             :height: 200
             :alt: Circle of Friends (Ubuntu Logo)
