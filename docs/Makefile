@@ -65,6 +65,8 @@ pa11y-install:
 		}
 
 install: $(VENVDIR) woke-install
+	sudo apt-get update
+	sudo apt-get install --assume-yes python3-distro-info
 
 run: install
 	. $(VENV); sphinx-autobuild -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)

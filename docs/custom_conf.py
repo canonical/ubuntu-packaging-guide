@@ -1,4 +1,5 @@
 import datetime
+import distro_info
 
 # Custom configuration for the Sphinx documentation builder.
 # All configuration specific to your project should be done in this file.
@@ -174,7 +175,9 @@ custom_extensions = [
 # added here: canonical-sphinx-extensions, furo, linkify-it-py, myst-parser,
 # pyspelling, sphinx, sphinx-autobuild, sphinx-copybutton, sphinx-design,
 # sphinx-reredirects, sphinx-tabs, sphinxcontrib-jquery, sphinxext-opengraph
-custom_required_modules = []
+custom_required_modules = [
+    'distro_info',
+    ]
 
 # Add files or directories that should be excluded from processing.
 custom_excludes = [
@@ -189,7 +192,9 @@ custom_html_js_files = []
 
 ## The following settings override the default configuration.
 
-manpages_url = 'https://manpages.ubuntu.com/manpages/en/man{section}/{page}.{section}.html'
+manpages_url = ("https://manpages.ubuntu.com/manpages/"
+                f"{distro_info.UbuntuDistroInfo().stable()}/en/"
+                "man{section}/{page}.{section}.html")
 
 # Specify a reST string that is included at the end of each file.
 # If commented out, use the default (which pulls the reuse/links.txt
