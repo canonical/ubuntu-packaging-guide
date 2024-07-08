@@ -223,7 +223,7 @@ export translations from Launchpad and integrate them into the package.
 
 This deadline marks the date after which translations for such packages are not
 guaranteed to be included in the final release. Depending on the package and
-its maintainer's workflow, they may be exported later.
+its maintainers workflow, they may be exported later.
 
 Other packages can still be translated until the
 :ref:`LanguagePackTranslationDeadline`.
