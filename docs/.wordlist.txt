@@ -1,9 +1,11 @@
 addons
+ABI
 API
 APIs
 balancer
 Charmhub
 CLI
+deprioritised
 dropdown
 Diátaxis
 EBS
@@ -27,6 +29,7 @@ MyST
 namespace
 namespaces
 NodePort
+Numbat
 observability
 OEM
 OLM
@@ -35,12 +38,17 @@ pre
 ReadMe
 reST
 reStructuredText
+roadmap
+Roadmap
 RTD
 subdirectories
 subtree
 subfolders
+Tahr
+toolchain
 Ubuntu
 UI
+UIF
 UUID
 VM
 YAML
