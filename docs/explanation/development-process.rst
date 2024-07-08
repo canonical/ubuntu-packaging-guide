@@ -62,7 +62,7 @@ Stabilisation and deadlines (freezes)
 
 During development, caution is increasingly exercised in making changes
 to Ubuntu to ensure a stable state is reached in time for the final release
-date. Modifications to the Ubuntu package archive get incrementaly restricted,
+date. Modifications to the Ubuntu package archive get incrementally restricted,
 effectively freezing the state of the Ubuntu package archive. The
 deadlines when these restrictions get enabled are called "freezes". During
 freezes, exceptions must be requested to approve changes. See 
