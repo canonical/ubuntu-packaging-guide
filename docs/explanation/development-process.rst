@@ -4,18 +4,18 @@ Ubuntu development process
 Each release cycle follows the same general pattern, with the following
 major phases. Ubuntu contributors are expected to follow this process closely
 to ensure that their work is aligned with that of others. Because of the
-time-based release cycle, Ubuntu contributors must be well-coordinated to
+time-based release cycle, Ubuntu contributors must coordinate well to
 produce an on-time release.
 
 See also the article, :doc:`/explanation/releases`, for more details about the
 release cadence.
 
-Beginning a new Release
+Beginning a new release
 -----------------------
 
 The Ubuntu infrastructure is prepared for a new development branch at the
 beginning of each cycle. The package build system is set up, the toolchain
-is organized, :term:`seeds` are branched, and many other pieces are made ready
+is organised, :term:`seeds` are branched, and many other pieces are made ready
 before development can properly begin. Once these preparations are made, the
 new branch is officially announced on the
 `ubuntu-devel-announce mailing list <https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce>`_ 
@@ -23,7 +23,7 @@ and opened for uploads to the :doc:`/explanation/archive`.
 
 .. note::
     See the `Ubuntu 24.04 LTS (Noble Numbat) archive opening announcement email <https://lists.ubuntu.com/archives/ubuntu-devel-announce/2023-October/001341.html>`_
-    as an example announcement for an archive opening.
+    as an example.
 
 Planning
 --------
@@ -44,10 +44,10 @@ The :term:`Canonical` teams meet after every release at the Roadmap Planning
 Sprint to plan the roadmap for the next release and discuss how to implement
 the roadmap at the Engineering Sprint.
 
-Merging with Upstream & Feature Development
+Merging with Upstream & feature development
 -------------------------------------------
 
-The first phase of the release cycle is characterized by bringing new releases
+The first phase of the release cycle is characterised by bringing new releases
 of :term:`upstream` components into Ubuntu, either directly or via 
 :doc:`Merges and Syncs from Debian </explanation/debian-merges-and-syncs>`. 
 Development of planned projects for the release often begins while merging is
@@ -57,10 +57,10 @@ is reasonably consistent and usable.
 The automatic import of new package versions from Debian ends at the 
 :ref:`DebianImportFreeze`.
 
-Stabilization & Deadlines (Freezes)
------------------------------------
+Stabilisation and deadlines (freezes)
+-------------------------------------
 
-During development, greater caution is gradually exercised in making changes
+During development, caution is increasingly exercised in making changes
 to Ubuntu to ensure a stable state is reached in time for the final release
 date. The typical order and length of the various freezes can be seen on the
 current Release Schedule, which is usually posted as a Discourse article under
@@ -75,10 +75,10 @@ See :doc:`how to request a freeze exception </how-to/request-freeze-exception>`.
 
 .. _TestingWeeks:
 
-Testing Weeks
+Testing weeks
 ~~~~~~~~~~~~~
 
-During a release's development phase, testing weeks are organized to focus the
+During a release's development phase, testing weeks are organised to focus the
 Ubuntu community's efforts on testing Ubuntu's latest daily
 :term:`ISO images <Image>` and its :term:`flavours <Ubuntu flavours>`. These
 weeks are crucial for discovering bugs and getting early feedback about new
@@ -87,7 +87,7 @@ features.
 .. note::
     The testing weeks replaced the older practice of alpha and beta milestones.
     For example, Ubuntu 14.04 LTS (Trusty Tahr) had Alpha 1, Alpha 2, Beta 1,
-    and Beta 2 Milestones.
+    and Beta 2 milestones.
 
     See `the email <https://lists.ubuntu.com/archives/ubuntu-release/2018-April/004434.html>`_
     that announced the process change.
@@ -113,15 +113,15 @@ Feature Freeze (FF)
 ~~~~~~~~~~~~~~~~~~~
 
 At this point, Ubuntu developers should stop introducing new features,
-packages, and :term:`API`/:term:`ABI` changes and concentrate on fixing bugs
-in the current release in development.
+packages, and :term:`API`/:term:`ABI` changes, and instead concentrate on
+fixing bugs in the current release in development.
 
 .. _User Interface Freeze:
 
 User Interface Freeze (UIF)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The user interface should be finalized to allow documentation writers and
+The user interface should be finalised to allow documentation writers and
 translators to work on a consistent target that doesn't render screenshots or
 documentation obsolete.
 
@@ -183,7 +183,7 @@ Beta Freeze
 
 For the beta release's preparation, all uploads are queued and subject to
 manual approval by the release team. Changes to packages that affect beta
-release images (flavours included) require release team approval before
+release images (flavours included) require the release team's approval before
 uploading. Uploads for packages that do not affect images will generally be
 accepted as time permits.
 
@@ -193,7 +193,7 @@ accepted as time permits.
     containing a specified package or to determine whether the specified
     package is part of the supported seed. 
     
-    If the outputted list is empty, uploading it during a freeze should be
+    If the list output is empty, uploading it during a freeze should be
     safe.
 
 The freeze allows Archive Admins to fix package inconsistencies or critical
@@ -213,7 +213,7 @@ discretion of the release managers.
 
 .. _NonLanguagePackTranslationDeadline:
 
-Non Language Pack Translation Deadline
+Non-language-pack translation deadline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Some translation data cannot currently be updated via the language pack
@@ -276,19 +276,19 @@ high-priority bugs that might justify delaying the release.
 
 .. _LanguagePackTranslationDeadline:
 
-Language Pack Translation Deadline
+Language pack translation deadline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Translations done up until this date will be included in the final release's
 language packs. 
 
-Finalization
+Finalisation
 ------------
 
 As the final release approaches, the focus narrows to fixing "showstopper"
 bugs and thoroughly validating the installation images. Every image is tested
 to ensure that the installation methods work as advertised. Low-impact bugs
-and other issues are deprioritized to focus developers on this effort.
+and other issues are deprioritised to focus developers on this effort.
 
 This phase is vital, as severe bugs that affect the experience of booting
 or installing the images must be fixed before the final release.
