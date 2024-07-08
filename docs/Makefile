@@ -11,9 +11,11 @@ BUILDDIR      = _build
 VENVDIR       = $(SPHINXDIR)/venv
 PA11Y         = $(SPHINXDIR)/node_modules/pa11y/bin/pa11y.js
 VENV          = $(VENVDIR)/bin/activate
+SHELL = /usr/bin/bash
 
-.PHONY: full-help help woke-install pa11y-install install run html epub serve \
-        clean clean-doc spelling linkcheck woke pa11y pdf pdf-prep pdf-prep-force Makefile
+.PHONY: full-help help distro-info-install woke-install pa11y-install install \
+        run html epub serve clean clean-doc spelling linkcheck woke pa11y \
+		pdf pdf-prep pdf-prep-force Makefile
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -38,13 +40,13 @@ full-help: $(VENVDIR)
 	@echo "\n\033[1;31mNOTE: This help texts shows unsupported targets!\033[0m"
 	@echo "Run 'make help' to see supported targets."
 	
-$(SPHINXDIR)/requirements.txt:
+$(SPHINXDIR)/requirements.txt: distro-info-install
 	python3 build_requirements.py
 
 # If requirements are updated, venv should be rebuilt and timestamped.
 $(VENVDIR): $(SPHINXDIR)/requirements.txt
 	@echo "... setting up virtualenv"
-	python3 -m venv $(VENVDIR)
+	python3 -m venv --system-site-packages $(VENVDIR)
 	. $(VENV); pip install --require-virtualenv \
 	    --upgrade -r $(SPHINXDIR)/requirements.txt \
             --log $(VENVDIR)/pip_install.log
@@ -53,6 +55,15 @@ $(VENVDIR): $(SPHINXDIR)/requirements.txt
 	@. $(VENV); pip list --local --format=freeze > $(VENVDIR)/pip_list.txt
 	@touch $(VENVDIR)
 
+distro-info-install:
+	if (dpkg --status python3-distro-info | grep installed); then \
+		echo "Skip installing python3-distro-info, because it is already installed."; \
+	else \
+		echo "Installing python3-distro-info..."; \
+		sudo apt-get update; \
+		sudo apt-get install --assume-yes python3-distro-info; \
+	fi
+	
 woke-install:
 	@type woke >/dev/null 2>&1 || \
             { echo "Installing \"woke\" snap... \n"; sudo snap install woke; }
@@ -65,8 +76,6 @@ pa11y-install:
 		}
 
 install: $(VENVDIR) woke-install
-	sudo apt-get update
-	sudo apt-get install --assume-yes python3-distro-info
 
 run: install
 	. $(VENV); sphinx-autobuild -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
