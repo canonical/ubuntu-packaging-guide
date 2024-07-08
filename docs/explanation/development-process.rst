@@ -68,7 +68,7 @@ the `"Release" topic <https://discourse.ubuntu.com/c/release/>`_.
 
 .. note::
     In the past, the Release Schedule was published in the Ubuntu Wiki.
-    See for example the `release schedule of Ubuntu 20.04 LTS (FocalFossa) <https://wiki.ubuntu.com/FocalFossa/ReleaseSchedule>`_.
+    See for example the `release schedule of Ubuntu 20.04 LTS (Focal Fossa) <https://wiki.ubuntu.com/FocalFossa/ReleaseSchedule>`_.
 
 During freezes, exceptions must be requested to approve changes.
 See :doc:`how to request a freeze exception </how-to/request-freeze-exception>`.
