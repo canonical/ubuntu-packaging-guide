@@ -62,16 +62,18 @@ Stabilisation and deadlines (freezes)
 
 During development, caution is increasingly exercised in making changes
 to Ubuntu to ensure a stable state is reached in time for the final release
-date. The typical order and length of the various freezes can be seen on the
+date. Modifications to the Ubuntu package archive get incrementaly restricted,
+effectively freezing the state of the Ubuntu package archive. The
+deadlines when these restrictions get enabled are called "freezes". During
+freezes, exceptions must be requested to approve changes. See 
+:doc:`how to request a freeze exception </how-to/request-freeze-exception>`.
+The typical order and length of the various freezes can be seen on the
 current Release Schedule, which is usually posted as a Discourse article under
-the `"Release" topic <https://discourse.ubuntu.com/c/release/>`_. 
+the `"Release" topic <https://discourse.ubuntu.com/c/release/>`_.
 
 .. note::
     In the past, the Release Schedule was published in the Ubuntu Wiki.
     See for example the `release schedule of Ubuntu 20.04 LTS (Focal Fossa) <https://wiki.ubuntu.com/FocalFossa/ReleaseSchedule>`_.
-
-During freezes, exceptions must be requested to approve changes.
-See :doc:`how to request a freeze exception </how-to/request-freeze-exception>`.
 
 .. _TestingWeeks:
 
