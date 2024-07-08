@@ -15,9 +15,9 @@ Beginning a new release
 
 The Ubuntu infrastructure is prepared for a new development branch at the
 beginning of each cycle. The package build system is set up, the toolchain
-is organised, :term:`seeds` are branched, and many other pieces are made ready
-before development can properly begin. Once these preparations are made, the
-new branch is officially announced on the
+is organised, :term:`seeds <Seeds>` are branched, and many other pieces are made
+ready before development can properly begin. Once these preparations are made,
+the new branch is officially announced on the
 `ubuntu-devel-announce mailing list <https://lists.ubuntu.com/mailman/listinfo/ubuntu-devel-announce>`_ 
 and opened for uploads to the :doc:`/explanation/archive`.
 

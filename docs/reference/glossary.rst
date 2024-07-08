@@ -1068,6 +1068,11 @@ Glossary
     s390x
         *Work in Progress*
 
+    Seeds
+        Seeds are lists of packages, that define which packages goes into the
+        :term:`Main` component of the :term:`Ubuntu Archive` and which packages
+        goes into the distribution :term:`images <Image>`.
+
     Series
         A *series* refers to the :term:`Packages <Package>` in the :term:`Ubuntu Archive`
         that target a specific :term:`Ubuntu` version. A *series* is usually referred
