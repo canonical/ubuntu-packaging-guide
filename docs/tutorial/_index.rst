@@ -16,7 +16,7 @@ This tutorial will introduce you to the basics of Ubuntu packaging, while
 helping to set up your computer so that you can start working with packages.
 
 .. toctree::
-   :maxdepth: 1
+   :titlesonly:
 
    getting-set-up
    make-changes-to-package

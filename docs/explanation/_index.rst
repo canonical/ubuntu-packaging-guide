@@ -8,7 +8,7 @@ knowledge and become better at packaging and development.
 -----
 
 .. toctree::
-   :maxdepth: 1
+   :titlesonly:
 
    upstream-and-downstream
    package-model

@@ -14,7 +14,7 @@ How do I...?
 ============
 
 .. toctree::
-   :maxdepth: 1
+   :titlesonly:
 
    get-package-source
    download-new-upstream-version

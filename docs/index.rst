@@ -143,7 +143,7 @@ open a GitHub issue or directly contribute by submitting a pull request to the
 
 .. toctree::
    :hidden:
-   :maxdepth: 2
+   :titlesonly:
 
    tutorial/_index
    how-to/_index

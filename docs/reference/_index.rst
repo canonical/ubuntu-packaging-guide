@@ -8,7 +8,7 @@ support matrices, and so on.
 -----
 
 .. toctree::
-   :maxdepth: 1
+   :titlesonly:
 
    debian-dir-overview
    architectures
