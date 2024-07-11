@@ -18,8 +18,8 @@ helping to set up your computer so that you can start working with packages.
 .. toctree::
    :maxdepth: 1
 
-   tutorial/getting-set-up.rst
-   tutorial/make-changes-to-package.rst
-   tutorial/create-new-package.rst
-   tutorial/fix-bug.rst
-   tutorial/merge-a-package.rst
+   getting-set-up
+   make-changes-to-package
+   create-new-package
+   fix-bug
+   merge-a-package
