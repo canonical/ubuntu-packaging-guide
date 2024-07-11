@@ -125,11 +125,11 @@ pdf-prep-force:
 	apt-get install --no-install-recommends -y latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng \
 
 pdf: pdf-prep
-	@. $(VENV); sphinx-build -M latexpdf "$(SOURCEDIR)" "_build" $(SPHINXOPTS)
-	@. $(VENV); rm ./_build/latex/front-page-light.pdf || true
-	@. $(VENV); rm ./_build/latex/normal-page-footer.pdf || true
-	@. $(VENV); find ./_build/latex -name "*.pdf" -exec mv -t ./ {} +
-	@. $(VENV); rm -r _build
+	. $(VENV); sphinx-build -M latexpdf "$(SOURCEDIR)" "_build" $(SPHINXOPTS)
+	rm ./_build/latex/front-page-light.pdf || true
+	rm ./_build/latex/normal-page-footer.pdf || true
+	find ./_build/latex -name "*.pdf" -exec mv -t ./ {} +
+	rm -r _build
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
