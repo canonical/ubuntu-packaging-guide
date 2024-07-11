@@ -254,7 +254,7 @@ latex_additional_files = [
     "./.sphinx/fonts/UbuntuMono-RI.ttf",
     "./.sphinx/fonts/UbuntuMono-B.ttf",
     "./.sphinx/images/Canonical-logo-4x.png",
-    "./.sphinx/images/front-page.png",
+    "./.sphinx/images/front-page-light.pdf",
     "./.sphinx/images/normal-page-footer.pdf",
 ]
 
