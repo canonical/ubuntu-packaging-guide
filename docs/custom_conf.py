@@ -246,6 +246,18 @@ epub_show_urls = 'no'
 
 # -- Options for PDF output --------------------------------------------------
 
+latex_additional_files = [
+    "./.sphinx/fonts/Ubuntu-B.ttf",
+    "./.sphinx/fonts/Ubuntu-R.ttf",
+    "./.sphinx/fonts/Ubuntu-RI.ttf",
+    "./.sphinx/fonts/UbuntuMono-R.ttf",
+    "./.sphinx/fonts/UbuntuMono-RI.ttf",
+    "./.sphinx/fonts/UbuntuMono-B.ttf",
+    "./.sphinx/images/Canonical-logo-4x.png",
+    "./.sphinx/images/front-page.png",
+    "./.sphinx/images/normal-page-footer.pdf",
+]
+
 latex_engine = 'xelatex'
 latex_show_pagerefs = True
 latex_show_urls = 'footnote'
@@ -267,8 +279,8 @@ latex_elements = {
 %\usepackage{charter}
 %\usepackage[defaultsans]{lato}
 %\usepackage{inconsolata}
-\setmainfont[Path = ../../.sphinx/fonts/, UprightFont = *-R, BoldFont = *-B, ItalicFont=*-RI]{Ubuntu}
-\setmonofont[Path = ../../.sphinx/fonts/, UprightFont = *-R]{UbuntuMono}
+\setmainfont[UprightFont = *-R, BoldFont = *-B, ItalicFont=*-RI, Extension = .ttf]{Ubuntu}
+\setmonofont[UprightFont = *-R, BoldFont = *-B, ItalicFont=*-RI, Extension = .ttf]{UbuntuMono}
 \usepackage[most]{tcolorbox}
 \tcbuselibrary{breakable}
 \usepackage{lastpage}
@@ -295,10 +307,10 @@ latex_elements = {
   \tcb@layer@dec%
 }
 \makeatother
-\newenvironment{sphinxclassprompt}{\color{yellowgreen}\setmonofont[Color = 9ACD32, Path = ../../.sphinx/fonts/, UprightFont = *-R]{UbuntuMono}}{}
+\newenvironment{sphinxclassprompt}{\color{yellowgreen}\setmonofont[Color = 9ACD32, UprightFont = *-R]{UbuntuMono}}{}
 \tcbset{enhanced jigsaw, colback=black, fontupper=\color{white}}
 \newtcolorbox{termbox}{use color stack, breakable, colupper=white, halign=flush left}
-\newenvironment{sphinxclassterminal}{\setmonofont[Color = white, Path = ../../.sphinx/fonts/, UprightFont = *-R]{UbuntuMono}\sphinxsetup{VerbatimColor={black}}\begin{termbox}}{\end{termbox}}
+\newenvironment{sphinxclassterminal}{\setmonofont[Color = white, UprightFont = *-R]{UbuntuMono}\sphinxsetup{VerbatimColor={black}}\begin{termbox}}{\end{termbox}}
 \newcommand{\dimtorightedge}{%
   \dimexpr\paperwidth-1in-\hoffset-\oddsidemargin\relax}
 \newcommand{\dimtotop}{%
