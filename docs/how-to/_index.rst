@@ -22,7 +22,7 @@ How do I...?
    install-built-packages
    run-tests
    upload-packages-to-ppa
-   write-patchfiles
+   patch-management
    propose-changes
    use-schroots
    request-freeze-exception

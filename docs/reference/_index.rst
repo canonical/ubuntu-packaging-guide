@@ -13,5 +13,6 @@ support matrices, and so on.
    debian-dir-overview
    architectures
    package-version-format
+   patchfile-headers
    launchpad-text-markup
    glossary
