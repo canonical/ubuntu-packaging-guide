@@ -27,3 +27,4 @@ How do I...?
    use-schroots
    request-freeze-exception
    merge-a-package
+   extract-packages
