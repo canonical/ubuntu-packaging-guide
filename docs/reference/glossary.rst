@@ -1123,6 +1123,12 @@ Glossary
 
     SRU
         Abbreviation for :term:`Stable Release Update`
+    
+    SRU Verification Team
+        *Work in Progress*
+    
+    Stable Release Managers
+        *Work in Progress*
 
     Stable Release Update
         *Work in Progress*
@@ -1265,6 +1271,11 @@ Glossary
 
         See: `discourse.ubuntu.com <UbuntuDiscourse_>`_
 
+    Ubuntu ESM Team
+        *Work in Progress*
+
+        See also: `Ubuntu ESM Team <https://launchpad.net/~ubuntu-esm-team>`_
+
     Ubuntu flavours
         *Ubuntu flavours* are :term:`Distributions <Distribution>` of the default :term:`Ubuntu`
         releases, which choose their own default applications and settings. *Ubuntu flavours* are
@@ -1299,6 +1310,15 @@ Glossary
 
     Ubuntu Server
         *Work in Progress*
+
+    Ubuntu SRU Team
+        *Work in Progress*
+
+        See also: `Ubuntu SRU Team <https://wiki.ubuntu.com/StableReleaseUpdates#Contacting_the_SRU_team>_
+
+    Ubuntu Stable Release
+        The Ubuntu stable release is the officially published version of Ubuntu and
+        its set of :term:`packages <Package>`.
 
     Ubuntu Summit
         The *Ubuntu Summit* (US) is a continuation of :term:`Ubuntu Developer Summit`

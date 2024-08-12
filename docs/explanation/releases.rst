@@ -1,3 +1,5 @@
+.. _UbuntuReleases:
+
 Ubuntu releases
 ===============
 

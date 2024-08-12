@@ -14,3 +14,6 @@
 .. _Ubuntu Studio: https://ubuntustudio.org/
 .. _Ubuntu Unity: https://ubuntuunity.org/
 .. _Xubuntu: https://xubuntu.org/
+
+.. _Ask a bug supervisor: https://answers.launchpad.net/launchpad/+question/140509
+.. _contact the Ubuntu SRU Team: https://wiki.ubuntu.com/StableReleaseUpdates#Contacting_the_SRU_team
