@@ -72,9 +72,10 @@ Manual.
 The control file
 ----------------
 
-The :file:`debian/control` file contains the information that the package
-manager (such as ``apt-get``, ``synaptic``, and ``adept``) uses, build-time
-dependencies, maintainer information, and much more.
+The :file:`debian/control` file contains the information that the
+:term:`package manager <Package Manager>` (such as ``apt-get``, ``synaptic``,
+and ``adept``) uses, build-time dependencies, maintainer information, and much
+more.
 
 For the Ubuntu ``hello`` package, the :file:`debian/control` file looks
 something like this:
@@ -106,7 +107,7 @@ The first paragraph describes the source package including the list of packages
 required to build the package from source in the ``Build-Depends`` field. It
 also contains some meta-information such as the maintainer's name, the version
 of Debian Policy that the package complies with, the location of the packaging
-version control repository, and the upstream home page.
+version control repository, and the :term:`upstream <Upstream>` home page.
 
 Note that in Ubuntu, we set the ``Maintainer`` field to a general address
 because anyone can change any package (this differs from Debian where changing
@@ -119,7 +120,8 @@ should generally have the ``Maintainer`` field set to
 further information, see the `Debian Maintainer Field spec <MaintField_>`_ on
 the Ubuntu wiki.
 
-Each additional paragraph describes a binary package to be built.
+Each additional paragraph describes a :term:`binary package <Binary Package>` to
+be built.
 
 For further information see the
 `control file section (Chapter 5) <policy-control_>`_ of the Debian Policy
@@ -175,8 +177,8 @@ itself. An example template would be:
     License version 2 can be found in the file
     `/usr/share/common-licenses/GPL-2'.
 
-This example follows the Machine-readable debian/copyright format. You are
-encouraged to use this format as well.
+This example follows the `Machine-readable debian/copyright <DEP5_>`_ format.
+You are encouraged to use this format as well.
 
 The rules file
 --------------
@@ -298,8 +300,8 @@ This would create two binary packages, ``foo`` and ``foo-common``. Both would
 require their own paragraph in :file:`debian/control`.
 
 See :manpage:`dh_install(1)` and the
-`install file section (Section 5.11) <https://www.debian.org/doc/manuals/maint-guide/dother.en.html#install>`_
-of the Debian New Maintainers' Guide for additional details.
+`install file section (Section 5.11) <maint-install>`_ of the Debian New
+Maintainers' Guide for additional details.
 
 The watch file
 ~~~~~~~~~~~~~~
@@ -344,7 +346,7 @@ Manual.
 
 For a list of packages where the :file:`watch` file reports they are not in sync
 with upstream see
-`Ubuntu External Health Status <http://qa.ubuntuwire.org/uehs/no_updated.html>`_.
+`Ubuntu External Health Status <https://qa.ubuntuwire.org/uehs/no_updated.html>`_.
 
 The source/format file
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -373,8 +375,9 @@ a number of new features:
 https://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information
 concerning the switch to the 3.0 source package formats.
 
-See ``man dpkg-source`` and the `source/format section (Section 5.21)
-<policy-format_>`_  of  the Debian New Maintainers' Guide for additional details.
+See :manpage:`dpkg-source(1)` and the
+`source/format section (Section 5.21) <maint-format_>`_  of the Debian New
+Maintainers' Guide for additional details.
 
 Additional Resources
 --------------------
@@ -386,12 +389,14 @@ further discusses the  control, changelog, copyright and rules files.
 `Chapter 5, "Other files under the debian directory" <OtherFiles_>`_
 discusses additional files that may be used.
 
-.. _policy-watch: https://www.debian.org/doc/debian-policy/ch-source.html#s-debianwatch
-.. _policy-rules: https://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules
-.. _policy-control: https://www.debian.org/doc/debian-policy/ch-controlfields.html
 .. _policy-changelog: https://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog
+.. _policy-control: https://www.debian.org/doc/debian-policy/ch-controlfields.html
 .. _policy-copyright: https://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile
-.. _policy-format: https://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef
+.. _policy-rules: https://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules
+.. _maint-install: https://www.debian.org/doc/manuals/maint-guide/dother.en.html#install
+.. _policy-watch: https://www.debian.org/doc/debian-policy/ch-source.html#s-debianwatch
+.. _maint-format: https://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef
+.. _DEP5: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 .. _MaintField: https://wiki.ubuntu.com/DebianMaintainerField
 .. _Q21146: https://answers.launchpad.net/launchpad/+question/21146
 .. _Bug231797: https://launchpad.net/launchpad/+bug/231797
