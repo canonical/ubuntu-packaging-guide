@@ -87,14 +87,13 @@ something like this:
     Priority: optional
     Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
     XSBC-Original-Maintainer: Jane Doe <packager@example.com>
-    Standards-Version: 3.9.5
-    Build-Depends: debhelper (>= 7)
-    Vcs-Bzr: lp:ubuntu/hello
-    Homepage: http://www.gnu.org/software/hello/
+    Standards-Version: 4.6.2
+    Build-Depends: debhelper-compat (= 13), help2man, texinfo
+    Homepage: https://www.gnu.org/software/hello/
 
     Package: hello
     Architecture: any
-    Depends: ${shlibs:Depends}
+    Depends: ${misc:Depends}, ${shlibs:Depends}
     Description: The classic greeting, and a good example
      The GNU hello program produces a familiar, friendly greeting. It
      allows non-programmers to use a classic computer science tool which
