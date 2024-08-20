@@ -73,9 +73,8 @@ The control file
 ----------------
 
 The :file:`debian/control` file contains the information that the
-:term:`package manager <Package Manager>` (such as ``apt-get``, ``synaptic``,
-and ``adept``) uses, build-time dependencies, maintainer information, and much
-more.
+:term:`package manager <Package Manager>` (such as :term:`APT`) uses, build-time
+dependencies, maintainer information, and much more.
 
 For the Ubuntu ``hello`` package, the :file:`debian/control` file looks
 something like this:
