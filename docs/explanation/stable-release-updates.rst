@@ -13,8 +13,8 @@ operations, and any problem they experience with it can be disruptive.
 When are Stable Release Updates necessary?
 ------------------------------------------
 
-:term:`SRU` require great caution because they're automatically recommended to a very
-large number of users. So, when you propose an update, there should be a strong rationale
+:term:`SRU` require great caution because they're automatically recommended to a large
+number of users. So, when you propose an update, there should be a strong rationale
 for it. Also, the update should present a low risk of :ref:`regressions <Regressions>`.
 
 You can propose an :term:`SRU` in the following cases:
@@ -35,8 +35,9 @@ You can propose an :term:`SRU` in the following cases:
 Low priority and Extended Security Maintenance (ESM) uploads
 ------------------------------------------------------------
 
-Low-priority uploads, such as updates that fix bugs that don't affect users at
-runtime, can be staged and bundled with a future :term:`SRU` or security update.
+You can stage and bundle low-priority uploads with a future :term:`SRU` or
+security update. These uploads may include updates that fix bugs that don't
+affect users at runtime.
 
 For uploads to stable releases in their :term:`ESM` period, please prepare the 
 :term:`SRU` bug, then contact the :term:`Ubuntu ESM Team`.
@@ -126,8 +127,8 @@ Initially, the ``Phased-Update-Percentage`` is set to 10%, with a job running ev
 hours to monitor for :ref:`regressions <Regressions>`. If no issues are detected, the
 update percentage increments by 10% until it reaches 100%. So an update will become
 fully phased after 54 hours. If a regression is found, the update is halted and the
-``Phased-Update-Percentage`` is set to 0%. This will cause supported package managers
-not to install the update.
+``Phased-Update-Percentage`` is set to 0%. This will then cause supported package
+managers not to install the update.
 
 Investigating halted phased updates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -135,7 +136,7 @@ Investigating halted phased updates
 To investigate why phasing stopped, use the phased updates report.
 
 When investigating an increased rate of crashes, focus on the crashes with the highest
-number of occurrences. Examine the Occurrences table to determine if these crashes are
+number of occurrences. Examine the occurrences table to determine if these crashes are
 happening more frequently with the updated version of the package. If they are,
 investigate the cause and address the crash in a follow-up :term:`SRU`. If not,
 `contact the Ubuntu SRU Team`_ about overriding the crash report.
@@ -154,6 +155,8 @@ containing lines of the form ``source package``, ``version``, and ``$THING_TO_IG
 
 ``$THING_TO_IGNORE`` can either be an ``errors.ubuntu.com`` problem URL to ignore or
 ``increased-rate``.
+
+.. _Verification:
 
 Verification
 ------------
@@ -205,12 +208,12 @@ or the person performing update verification to ensure that the upload doesn't c
 Regressions
 -----------
 
-Regressions are unintended negative consequences that updates introduce. They appear as
-new bugs or failures in previously well-functioning aspect of an Ubuntu release. 
+Regressions are unintended negative consequences that updates introduce. They appear
+as new bugs or failures in previously well-functioning aspect of an Ubuntu release. 
 
-If a package update introduces a regression that makes it through the verification
-process to :ref:`updates <ArchivePockets_Updates>`, file a bug report about the issue
-and add the tag ``regression-update`` to the bug.
+If a package update introduces a regression that makes it through the
+:ref:`verification <Verification>` process to :ref:`updates <ArchivePockets_Updates>`,
+file a bug report about the issue and add the tag ``regression-update`` to the bug.
 
 For regressions that only apply to the package in
 :ref:`proposed <ArchivePockets_Proposed>`, follow up on the bug with a detailed
