@@ -61,8 +61,8 @@ Here is a sample :file:`debian/changelog` file for hello:
     -- Jane Doe <packager@example.com>  Thu, 21 Oct 2013 11:12:00 -0400
 
 Notice that the version has a ``-0ubuntu1`` appended to it, this is the distro
-revision, used so that the packaging can be updated (to fix bugs for example)
-with new uploads within the same source release version.
+revision, used so that the package can be updated (to fix bugs for example) with
+new uploads within the same source release version.
 
 Ubuntu and Debian have slightly different package versioning schemes to avoid
 conflicting packages with the same source version. If a Debian package has been
@@ -233,7 +233,7 @@ Each debhelper command will record when it's successfully run in
 tell which commands have already been run, for which packages, and skip running
 those commands again.
 
-Each time ``dh`` is run, it examines teh log, and finds the last logged command
+Each time ``dh`` is run, it examines the log, and finds the last logged command
 that is in the specified sequence. It then continues with the next command in
 the sequence. The ``--until``, ``--before``, ``--after``, and ``--remaining``
 options can override this behaviour.
