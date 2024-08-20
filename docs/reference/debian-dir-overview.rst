@@ -13,13 +13,10 @@ complete list.
 The changelog file
 ------------------
 
-This file is, as its name implies a listing of the changes made in each version.
-It has a specific format that gives the package name, version, distribution
-changes, and who made the changes at a given time. If you have a
-:term:`GPG key <Signing Key>` (see:
-:doc:`Getting set up </tutorial/getting-set-up>`), make sure to use the same
-name and email address in :file:`debian/changelog` as you have in your key. The
-following is a template :file:`debian/changelog`:
+This file is a listing of the changes made in each version. It has a specific
+format that gives the package name, version, distribution changes, and who made
+the changes at a given time. The following is a template
+:file:`debian/changelog`:
 
 .. code-block:: none
 
@@ -31,10 +28,20 @@ following is a template :file:`debian/changelog`:
     [optional blank line(s), stripped]
     -- maintainer name <email address>[two spaces]  date
 
-The format (especially of the date) is important. The date should be in
-:rfc:`5322` format, which can be obtained by using the command
-:command:`date -R`. For convenience, the command :command:`dch` may be used to
-edit the changelog. It will update the date automatically.
+.. note::
+
+    If you have a :term:`GPG key <Signing Key>` (see
+    :doc:`Getting set up </tutorial/getting-set-up>`), then make sure to use the
+    same name and email address in :file:`debian/changelog` entry as you have in
+    your key.
+
+.. important::
+
+    The format (especially of the date) is important. The date should be in
+    :rfc:`5322` format, which can be obtained by using the command
+    :command:`date -R`. For convenience, the command :command:`dch` may be used
+    to edit the changelog. It will update the date automatically. For further
+    information, see :manpage:`dch(1)`.
 
 Minor bullet points are indicated by a dash "-", while major points use an
 asterisk "*".
@@ -107,21 +114,23 @@ also contains some meta-information such as the maintainer's name, the version
 of Debian Policy that the package complies with, the location of the packaging
 version control repository, and the :term:`upstream <Upstream>` home page.
 
-Note that in Ubuntu, we set the ``Maintainer`` field to a general address
-because anyone can change any package (this differs from Debian where changing
-packages is usually restricted to an individual or a team). Packages in Ubuntu
-should generally have the ``Maintainer`` field set to
-``Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>``. If the
-``Maintainer`` field is modified, the old value should be saved in the
-``XSBC-Original-Maintainer`` field. This can be done automatically with the
-``update-maintainer`` script available in the ``ubuntu-dev-tools`` package. For
-further information, see the `Debian Maintainer Field spec <MaintField_>`_ on
-the Ubuntu wiki.
+.. note::
+
+    In Ubuntu, we set the ``Maintainer`` field to a general address
+    because anyone can change any package (this differs from Debian where
+    changing packages is usually restricted to an individual or a team).
+    Packages in Ubuntu should generally have the ``Maintainer`` field set to
+    ``Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>``. If the
+    ``Maintainer`` field is modified, the old value should be saved in the
+    ``XSBC-Original-Maintainer`` field. This can be done automatically with the
+    ``update-maintainer`` script available in the ``ubuntu-dev-tools`` package.
+    For further information, see the
+    `Debian Maintainer Field spec <MaintField_>`_ on the Ubuntu wiki.
 
 Each additional paragraph describes a :term:`binary package <Binary Package>` to
 be built.
 
-For further information see the
+For further information, see the
 `control file section (Chapter 5) <policy-control_>`_ of the Debian Policy
 Manual.
 
