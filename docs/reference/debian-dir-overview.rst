@@ -313,7 +313,6 @@ writing), while the following lines contain any URLs to parse. For example:
 .. code-block:: none
 
     version=4
-
     http://ftp.gnu.org/gnu/hello/hello-(.*).tar.gz
 
 Running :command:`uscan` in the root source directory will now compare the
