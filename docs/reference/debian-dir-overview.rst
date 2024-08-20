@@ -299,7 +299,7 @@ This would create two binary packages, ``foo`` and ``foo-common``. Both would
 require their own paragraph in :file:`debian/control`.
 
 See :manpage:`dh_install(1)` and the
-`install file section (Section 5.11) <maint-install>`_ of the Debian New
+`install file section (Section 5.11) <maint-install_>`_ of the Debian New
 Maintainers' Guide for additional details.
 
 The watch file
@@ -330,9 +330,9 @@ downloaded. For example:
     hello: Successfully downloaded updated package hello-2.7.tar.gz
         and symlinked hello_2.7.orig.tar.gz to it
 
-If your tarballs live on Launchpad, the :file:`debian/watch` file is a little
-more complicated (see `Question 21146 <Q21146_>`_ and `Bug 231797 <Bug231797_>`_
-for why this is). In that case, use something like:
+If your tarballs live on :term:`Launchpad`, the :file:`debian/watch` file is a
+little more complicated (see `Question 21146 <Q21146_>`_ and
+`Bug 231797 <Bug231797_>`_ for why this is). In that case, use something like:
 
 .. code-block:: none
 
@@ -371,8 +371,8 @@ a number of new features:
 - Debian-specific changes are no longer stored in a single .diff.gz but in
   multiple patches compatible with quilt under :file:`debian/patches/`
 
-https://wiki.debian.org/Projects/DebSrc3.0 summarizes additional information
-concerning the switch to the 3.0 source package formats.
+The Debian `DebSrc3.0 <DebSrc3.0_>`_ page summarizes additional information
+concerning the switch to the ``3.0`` source package formats.
 
 See :manpage:`dpkg-source(1)` and the
 `source/format section (Section 5.21) <maint-format_>`_  of the Debian New
@@ -394,6 +394,7 @@ discusses additional files that may be used.
 .. _policy-rules: https://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules
 .. _maint-install: https://www.debian.org/doc/manuals/maint-guide/dother.en.html#install
 .. _policy-watch: https://www.debian.org/doc/debian-policy/ch-source.html#s-debianwatch
+.. _DebSrc3.0: https://wiki.debian.org/Projects/DebSrc3.0
 .. _maint-format: https://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef
 .. _DEP5: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 .. _MaintField: https://wiki.ubuntu.com/DebianMaintainerField
