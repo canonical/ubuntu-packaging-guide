@@ -1,5 +1,5 @@
-Basic overview of the ``debian/`` directory
-===========================================
+Basic overview of the :file:`debian/` directory
+===============================================
 
 This article will briefly explain the different files important to the packaging
 of Ubuntu packages which are contained in the :file:`debian/` directory. The
@@ -10,8 +10,8 @@ used in order to customise and configure the behaviour of the package. Some of
 these files are discussed in this article, but this is not meant to be a
 complete list.
 
-The changelog file
-------------------
+The :file:`changelog` file
+--------------------------
 
 This file is a listing of the changes made in each version. It has a specific
 format that gives the package name, version, distribution changes, and who made
@@ -89,8 +89,8 @@ For further information, see the
 `changelog section (Section 4.4) <policy-changelog_>`_ of the Debian Policy
 Manual.
 
-The control file
-----------------
+The :file:`control` file
+------------------------
 
 The :file:`debian/control` file contains the information that the
 :term:`package manager <Package Manager>` (such as :term:`APT`) uses, build-time
@@ -183,8 +183,8 @@ For further information, see the
 `control file section (Chapter 5) <policy-control_>`_ of the Debian Policy
 Manual.
 
-The copyright file
-------------------
+The :file:`copyright` file
+--------------------------
 
 This file gives the :term:`copyright <Copyright>` information for both the
 upstream source and the packaging. Ubuntu and
@@ -237,8 +237,8 @@ itself. An example template would be:
 This example follows the `Machine-readable debian/copyright <DEP5_>`_ format.
 You are encouraged to use this format as well.
 
-The rules file
---------------
+The :file:`rules` file
+----------------------
 
 The last file we need to look at is :file:`debian/rules`. This does all the work
 for creating our package. It is a Makefile with targets to compile and install
@@ -306,8 +306,8 @@ of the Debian Policy Manual.
 Additional files
 ----------------
 
-The install file
-~~~~~~~~~~~~~~~~
+The :file:`install` file
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The :file:`install` file is used by ``dh_install`` to install files into the
 binary package. It has two standard use cases:
@@ -360,8 +360,8 @@ See :manpage:`dh_install(1)` and the
 `install file section (Section 5.11) <maint-install_>`_ of the Debian New
 Maintainers' Guide for additional details.
 
-The watch file
-~~~~~~~~~~~~~~
+The :file:`watch` file
+~~~~~~~~~~~~~~~~~~~~~~
 
 The :file:`debian/watch` file allows us to check automatically for new upstream
 versions using the tool ``uscan`` found in the ``devscripts`` package. The
@@ -404,8 +404,8 @@ For a list of packages where the :file:`watch` file reports they are not in sync
 with upstream see
 `Ubuntu External Health Status <https://qa.ubuntuwire.org/uehs/no_updated.html>`_.
 
-The source/format file
-~~~~~~~~~~~~~~~~~~~~~~
+The :file:`source/format` file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This file indicates the format of the source package. It should contain
 a single line indicating the desired format:
