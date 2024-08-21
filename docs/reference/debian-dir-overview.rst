@@ -95,7 +95,10 @@ The control file
 
 The :file:`debian/control` file contains the information that the
 :term:`package manager <Package Manager>` (such as :term:`APT`) uses, build-time
-dependencies, maintainer information, and much more.
+dependencies, maintainer information, and much more. The file consists of one
+or more stanzas of fields, with each stanza separated by empty lines. The fields
+consist of key-value pairs separated by a colon ":"; conventionally, a single
+space follows the colon.
 
 For the Ubuntu ``hello`` package, the :file:`debian/control` file looks
 something like this:
@@ -122,7 +125,7 @@ something like this:
      the GNU Project's `hello world' program (which is itself an example
      for the GNU Project).
 
-The first paragraph describes the source package including the list of packages
+The first stanza describes the source package including the list of packages
 required to build the package from source in the ``Build-Depends`` field. It
 also contains some meta-information such as the maintainer's name, the version
 of Debian Policy that the package complies with, the location of the packaging
@@ -141,7 +144,7 @@ version control repository, and the :term:`upstream <Upstream>` home page.
     For further information, see the
     `Debian Maintainer Field spec <MaintField_>`_ on the Ubuntu wiki.
 
-Each additional paragraph describes a :term:`binary package <Binary Package>` to
+Each additional stanza describes a :term:`binary package <Binary Package>` to
 be built.
 
 For further information, see the
@@ -318,7 +321,7 @@ independent file might look like:
     /usr/share/locale/
 
 This would create two binary packages, ``foo`` and ``foo-common``. Both would
-require their own paragraph in :file:`debian/control`.
+require their own stanza in :file:`debian/control`.
 
 See :manpage:`dh_install(1)` and the
 `install file section (Section 5.11) <maint-install_>`_ of the Debian New
