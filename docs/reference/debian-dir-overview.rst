@@ -37,9 +37,9 @@ should be installed.
 ``urgency`` describes how important an upgrade is. Its value can be one of the
 following: ``low``, ``medium``, ``high``, ``emergency``, or ``critical``.
 
-The change details consist of lines indented by two spaces, but these
-conventionally are a list indented by at least two spaces. Major bullet points
-use an asterisk "*", while minor bullet points are indicated by a dash "-".
+The change details consist of lines indented by at least two spaces, but these
+conventionally are a list. Major bullet points use an asterisk "*", while minor
+bullet points are indicated by a dash "-".
 
 The changelog entry ends with a line indented by one space that contains the
 maintainer's name, email, and date of change. The maintainer here is the one
