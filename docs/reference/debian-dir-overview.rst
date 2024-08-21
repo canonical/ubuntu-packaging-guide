@@ -154,10 +154,11 @@ Manual.
 The copyright file
 ------------------
 
-This file gives the copyright information for both the upstream source and the
-packaging. Ubuntu and `Debian Policy (Section 12.5) <policy-copyright_>`_
-require that each package installs a verbatim copy of its copyright and license
-information to :file:`/usr/share/doc/$(package_name)/copyright`.
+This file gives the :term:`copyright <Copyright>` information for both the
+upstream source and the packaging. Ubuntu and
+`Debian Policy (Section 12.5) <policy-copyright_>`_ require that each package
+installs a verbatim copy of its copyright and license information to
+:file:`/usr/share/doc/$(package_name)/copyright`.
 
 Generally, copyright information is found in the :file:`COPYING` file in the
 program's source directory. This file should include such infromation as the
