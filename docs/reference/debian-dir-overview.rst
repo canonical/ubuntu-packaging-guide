@@ -143,7 +143,8 @@ The first stanza describes the source package. It contains the following fields:
     `Debian Maintainer Field spec <MaintField_>`_ on the Ubuntu wiki.
 
 - ``Uploaders``: The list of names and email addresses of co-maintainers.
-- ``Section`` (recommended):
+- ``Section`` (recommended): The application area into which the package has
+  been classified.
 - ``Priority`` (recommended): How important the package is.
 - ``Build-Depends`` fields: Lists the packages required to build the package
   from source. For a full list of the 
@@ -157,7 +158,8 @@ The first stanza describes the source package. It contains the following fields:
     `Version Control System fields (Section 5.6.26) <policy-vcs_>`_ of
     the Debian Policy Manual for more details.
 
-- ``Testsuite``
+- ``Testsuite``: A comma-separated list of values allowing test execution
+  environments to discover packages which provide tests.
 - ``Rules-Requires-Root``: Defines whether the source package requires root
   access during selected targets.
 
@@ -167,7 +169,8 @@ be built. These stanzas contain the following fields:
 - ``Package`` (required): The name of the binary package.
 - ``Architecture`` (required): The :term:`architectures <Architecture>`
   supported.
-- ``Section`` (recommended):
+- ``Section`` (recommended): The application area into which the package has
+  been classified.
 - ``Priority`` (recommended): How important the package is.
 - ``Essential``: Optional boolean field to prevent the package manager from
   removing the package when set to ``yes``. When this field is absent, the
@@ -176,8 +179,10 @@ be built. These stanzas contain the following fields:
 - ``Description`` (required): Contains a description of the binary package. This
   field consists of a synopsis and a long description.
 - ``Homepage``: The upstream home page.
-- ``Built-Using``:
-- ``Package-Type``:
+- ``Built-Using``: This field is used in cases where the package incorporates
+  parts of other packages and relies on specific versions.
+- ``Package-Type``: Indicates the type of the package, for example: ``deb`` or
+  ``udeb``.
 
 For further information, see the
 `control file section (Chapter 5) <policy-control_>`_ of the Debian Policy
