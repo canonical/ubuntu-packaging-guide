@@ -54,11 +54,10 @@ responsible for the release, but it need not be the package maintainer.
 
 .. important::
 
-    The format (especially of the date) is important. The date should be in
-    :rfc:`5322` format, which can be obtained by using the command
-    :command:`date -R`. For convenience, the command :command:`dch` may be used
-    to edit the changelog. It will update the date automatically. For further
-    information, see :manpage:`dch(1)`.
+    The date should be in :rfc:`5322` format, which can be obtained by using the
+    command :command:`date -R`. For convenience, the command :command:`dch` may
+    be used to edit the changelog. It will update the date automatically. For
+    further information, see :manpage:`dch(1)`.
 
 If you are packaging from scratch, :command:`dch --create` (:command:`dch` is in
 the ``devscripts`` package) will create a standard :file:`debian/changelog` for
