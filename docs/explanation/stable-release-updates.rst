@@ -46,7 +46,7 @@ General requirements
 --------------------
 
 The general requirements for :term:`SRU` are designed to ensure the stability and 
-reliability of `Ubuntu releases <UbuntuReleases>`_.
+reliability of :ref:`Ubuntu releases <UbuntuReleases>`.
 
 To prevent future :ref:`regressions <Regressions>` when users upgrade to newer
 Ubuntu versions, bugs should be fixed in the current development release before being
@@ -74,7 +74,7 @@ The following steps outline the process for submitting and managing an
 
 1. Ensure that the bug is fixed in the current development release and that its
    status is marked as ``Fix Released``. If the source package has changed names
-   between `releases <UbuntuReleases>`_, add the new source package as ``Also affecting``
+   between :ref:`releases <UbuntuReleases>`, add the new source package as ``Also affecting``
    in the bug report.
 2. Don't create a meta-bug with a title like ``Please SRU this`` instead of using
    existing bug reports. This approach is redundant and lacks transparency for the
@@ -104,8 +104,8 @@ The following steps outline the process for submitting and managing an
    change the bug status to ``In Progress``. The status will be automatically updated to
    ``Fix Committed`` once accepted into ``release-proposed``.
 6. Ensure that the version number doesn't conflict with any future versions in other
-   Ubuntu releases. Also, include a reference to the :term:`SRU` bug number in the
-   changelog using the ``LP: #NNNNNN`` format, and only reference public bugs.
+   :ref:`Ubuntu releases <UbuntuReleases>`. Also, include a reference to the :term:`SRU` bug
+   number in the changelog using the ``LP: #NNNNNN`` format, and only reference public bugs.
 7. Once the :term:`Ubuntu SRU Team` reviews and accepts your upload, test the binaries
    in the :term:`Ubuntu Archive` and follow up in the bug report with your verification
    results. The :term:`Ubuntu SRU Team` will evaluate the testing feedback and move the
@@ -117,7 +117,7 @@ The following steps outline the process for submitting and managing an
    ``Importance: critical`` label.
 
 SRU phasing
---------------
+-----------
 
 Once a package is released to :ref:`updates <ArchivePockets_Updates>`,
 the update is then phased so that the update is gradually made available to expanding
@@ -167,7 +167,7 @@ that which will exist after the package is copied to
 Generally, this will be with a system that's up to date from
 :ref:`release <ArchivePockets_Release>`,
 :ref:`security <ArchivePockets_Security>`, and
-:ref:`updates (explanation) <ArchivePockets_Updates>`.
+:ref:`updates <ArchivePockets_Updates>`.
 It shouldn't include other packages from
 :ref:`proposed <ArchivePockets_Proposed>` or
 :ref:`backports <ArchivePockets_Backports>`,
@@ -184,7 +184,7 @@ If you encounter a regression in a package uploaded to
 
 1. File a bug report describing the nature of the regression.
 #. Tag the bug as ``regression-proposed``.
-#. `Ask a bug supervisor`_ to target the bug to the appropriate `Ubuntu releases <UbuntuReleases>`_.
+#. `Ask a bug supervisor`_ to target the bug to the appropriate :ref:`Ubuntu releases <UbuntuReleases>`.
 #. Follow up on the :term:`SRU` bug report referenced from the package changelog, pointing
    to the new bug. If there is more than one bug in the :term:`SRU` changelog, follow up to
    the bug that is most closely related to the regression.
@@ -209,7 +209,8 @@ Regressions
 -----------
 
 Regressions are unintended negative consequences that updates introduce. They appear
-as new bugs or failures in previously well-functioning aspect of an Ubuntu release. 
+as new bugs or failures in previously well-functioning aspect of an
+:ref:`Ubuntu release <UbuntuReleases>`. 
 
 If a package update introduces a regression that makes it through the
 :ref:`verification <Verification>` process to :ref:`updates <ArchivePockets_Updates>`,
