@@ -6,7 +6,7 @@ of Ubuntu packages which are contained in the :file:`debian/` directory. The
 most important of them are :file:`debian/changelog`, :file:`debian/control`,
 :file:`debian/copyright`, and :file:`debian/rules`. These are required for all
 packages. A number of additional files in the :file:`debian/` directory may be
-used in order to customize and configure the behaviour of the package. Some of
+used in order to customise and configure the behaviour of the package. Some of
 these files are discussed in this article, but this is not meant to be a
 complete list.
 
@@ -47,7 +47,7 @@ responsible for the release, but it need not be the package maintainer.
 
 .. note::
 
-    If you have a :term:`GPG key <Signing Key>` (see
+    If you have a :term:`signing key <Signing Key>` (see
     :doc:`Getting set up </tutorial/getting-set-up>`), then make sure to use the
     same name and email address in :file:`debian/changelog` entry as you have in
     your key.
@@ -73,9 +73,9 @@ Here is a sample :file:`debian/changelog` file for hello:
 
     -- Jane Doe <packager@example.com>  Thu, 21 Oct 2013 11:12:00 -0400
 
-Notice that the version has a ``-0ubuntu1`` appended to it, this is the distro
-revision, used so that the package can be updated (to fix bugs for example) with
-new uploads within the same source release version.
+Notice that the version has a ``-0ubuntu1`` appended to it, this is the
+distribution revision, used so that the package can be updated (to fix bugs for
+example) with new uploads within the same source release version.
 
 Ubuntu and Debian have slightly different package versioning schemes to avoid
 conflicting packages with the same source version. If a Debian package has been
@@ -150,11 +150,11 @@ The first stanza describes the source package. It contains the following fields:
 - ``Standards-Version`` (required): The version of Debian Policy that the
   package complies with.
 - ``Homepage``: The :term:`upstream <Upstream>` home page.
-- :term:`Version Control System (VCS) <Version Control System>` fields: 
+- :term:`Version Control System <Version Control System>` fields: 
 
   * ``VCS-Browser``: Web interface to browse the repository.
   * ``VCS-<type>``: The repository location. See
-    `Version Control Systems (VCS) fields (Section 5.6.26) <policy-vcs_>`_ of
+    `Version Control System fields (Section 5.6.26) <policy-vcs_>`_ of
     the Debian Policy Manual for more details.
 
 - ``Testsuite``
@@ -193,7 +193,7 @@ installs a verbatim copy of its copyright and license information to
 :file:`/usr/share/doc/$(package_name)/copyright`.
 
 Generally, copyright information is found in the :file:`COPYING` file in the
-program's source directory. This file should include such infromation as the
+program's source directory. This file should include such information as the
 names of the author and the packager, the URL from which the source came, a
 copyright line with the year and copyright holder, and the text of the copyright
 itself. An example template would be:
@@ -265,16 +265,16 @@ target that :file:`debian/rules` is called with as an argument to
 :file:`/usr/bin/dh`, which itself will call the necessary ``dh_*`` commands.
 
 ``dh`` runs a sequence of debhelper commands. The supported sequences correspond
-to the targets of a :file:`debian/rules` file: "build", "clean", "install",
-"binary-arch", "binary-indep", and "binary". In order to see what commands are
-run in each target, run:
+to the targets of a :file:`debian/rules` file: ``build`` ``clean`` ``install``
+``binary-arch`` ``binary-indep`` and ``binary`` In order to see what commands
+are run in each target, run:
 
 .. code-block:: bash
 
     dh binary-arch --no-act
 
-Commands in the binary-indep sequence are passed the "-i" option to ensure they
-only work on binary independent packages, and commands in the binary-arch
+Commands in the ``binary-indep`` sequence are passed the "-i" option to ensure
+they only work on binary independent packages, and commands in the binary-arch
 sequences are passed the "-a" option to ensure they only work on architecture
 dependent packages.
 
@@ -423,13 +423,13 @@ source format, Lintian will warn about the missing file.
 You are encouraged to use the newer ``3.0`` source format. It provides
 a number of new features:
 
-- Support for additional compression formats: bzip2, lzma and xz
+- Support for additional compression formats: ``bzip2``, ``lzma`` and ``xz``
 - Support for multiple upstream tarballs
 - Not necessary to repack the upstream tarball to strip the debian directory
-- Debian-specific changes are no longer stored in a single .diff.gz but in
-  multiple patches compatible with quilt under :file:`debian/patches/`
+- Debian-specific changes are no longer stored in a single :file:`.diff.gz` but
+  in multiple patches compatible with quilt under :file:`debian/patches/`
 
-The Debian `DebSrc3.0 <DebSrc3.0_>`_ page summarizes additional information
+The Debian `DebSrc3.0 <DebSrc3.0_>`_ page summarises additional information
 concerning the switch to the ``3.0`` source package formats.
 
 See :manpage:`dpkg-source(1)` and the
