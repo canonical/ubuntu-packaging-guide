@@ -22,11 +22,28 @@ the changes at a given time. The following is a template
 
     package (version) distribution; urgency=urgency
     [optional blank line(s), stripped]
-     * change details
-      - more change details
-     * even more change details
+      * change details
+        - more change details
+      * even more change details
     [optional blank line(s), stripped]
-    -- maintainer name <email address>[two spaces]  date
+     -- maintainer name <email address>[two spaces]  date
+
+``package`` and ``version`` are the source package name and version number,
+respectively.
+
+The ``distribution`` field lists the distribution(s) in which this release
+should be installed.
+
+``urgency`` describes how important an upgrade is. Its value can be one of the
+following: ``low``, ``medium``, ``high``, ``emergency``, or ``critical``.
+
+The change details consist of lines indented by two spaces, but these
+conventionally are a list indented by at least two spaces. Major bullet points
+use an asterisk "*", while minor bullet points are indicated by a dash "-".
+
+The changelog entry ends with a line indented by one space that contains the
+maintainer's name, email, and date of change. The maintainer here is the one
+responsible for the release, but it need not be the package maintainer.
 
 .. note::
 
@@ -42,9 +59,6 @@ the changes at a given time. The following is a template
     :command:`date -R`. For convenience, the command :command:`dch` may be used
     to edit the changelog. It will update the date automatically. For further
     information, see :manpage:`dch(1)`.
-
-Minor bullet points are indicated by a dash "-", while major points use an
-asterisk "*".
 
 If you are packaging from scratch, :command:`dch --create` (:command:`dch` is in
 the ``devscripts`` package) will create a standard :file:`debian/changelog` for
