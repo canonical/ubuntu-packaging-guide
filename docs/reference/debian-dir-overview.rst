@@ -265,9 +265,9 @@ target that :file:`debian/rules` is called with as an argument to
 :file:`/usr/bin/dh`, which itself will call the necessary ``dh_*`` commands.
 
 ``dh`` runs a sequence of debhelper commands. The supported sequences correspond
-to the targets of a :file:`debian/rules` file: ``build`` ``clean`` ``install``
-``binary-arch`` ``binary-indep`` and ``binary`` In order to see what commands
-are run in each target, run:
+to the targets of a :file:`debian/rules` file: ``build``, ``clean``,
+``install``, ``binary-arch``, ``binary-indep``, and ``binary``. In order to see
+what commands are run in each target, run:
 
 .. code-block:: bash
 
@@ -296,7 +296,7 @@ or run entirely different commands instead.
 
 .. note::
 
-    To use this override feature, you should Build-Depend on ``debhelper``
+    To use the override feature, you should Build-Depend on ``debhelper``
     version 7.0.50 or above.
 
 Have a look at :file:`/usr/share/doc/debhelper/examples/` and :manpage:`dh(1)`
@@ -373,6 +373,18 @@ writing), while the following lines contain any URLs to parse. For example:
     version=4
     http://ftp.gnu.org/gnu/hello/hello-(.*).tar.gz
 
+.. note::
+
+    If your tarballs live on :term:`Launchpad`, the :file:`debian/watch` file is
+    a little more complicated (see `Question 21146 <Q21146_>`_ and
+    `Bug 231797 <Bug231797_>`_ for why this is). In that case, use something
+    like:
+
+    .. code-block:: none
+
+        version=4
+        https://launchpad.net/flufl.enum/+download http://launchpad.net/flufl.enum/.*/flufl.enum-(.+).tar.gz
+
 Running :command:`uscan` in the root source directory will now compare the
 upstream version number in the :file:`debian/changelog` with the latest upstream
 version. If a new upstream version is found, it will be automatically
@@ -387,14 +399,6 @@ downloaded. For example:
     hello: Successfully downloaded updated package hello-2.7.tar.gz
         and symlinked hello_2.7.orig.tar.gz to it
 
-If your tarballs live on :term:`Launchpad`, the :file:`debian/watch` file is a
-little more complicated (see `Question 21146 <Q21146_>`_ and
-`Bug 231797 <Bug231797_>`_ for why this is). In that case, use something like:
-
-.. code-block:: none
-
-    version=4
-    https://launchpad.net/flufl.enum/+download http://launchpad.net/flufl.enum/.*/flufl.enum-(.+).tar.gz
 
 For further information, see :manpage:`uscan(1)` and the
 `watch file section (Section 4.11) <policy-watch_>`_ of the Debian Policy
