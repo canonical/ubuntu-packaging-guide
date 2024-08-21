@@ -410,8 +410,7 @@ For further information, see :manpage:`uscan(1)` and the
 Manual.
 
 For a list of packages where the :file:`watch` file reports they are not in sync
-with upstream see
-`Ubuntu External Health Status <https://qa.ubuntuwire.org/uehs/no_updated.html>`_.
+with upstream see `Ubuntu External Health Status <UbuntuExternalHealthStatus_>`_.
 
 The :file:`source/format` file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -464,6 +463,7 @@ discusses additional files that may be used.
 .. _policy-rules: https://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules
 .. _maint-install: https://www.debian.org/doc/manuals/maint-guide/dother.en.html#install
 .. _policy-watch: https://www.debian.org/doc/debian-policy/ch-source.html#s-debianwatch
+.. _UbuntuExternalHealthStatus: https://qa.ubuntuwire.org/uehs/no_updated.html
 .. _DebSrc3.0: https://wiki.debian.org/Projects/DebSrc3.0
 .. _maint-format: https://www.debian.org/doc/manuals/maint-guide/dother.en.html#sourcef
 .. _DEP5: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
