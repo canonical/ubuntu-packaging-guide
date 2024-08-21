@@ -124,11 +124,10 @@ something like this:
      the GNU Project's `hello world' program (which is itself an example
      for the GNU Project).
 
-The first stanza describes the source package including the list of packages
-required to build the package from source in the ``Build-Depends`` field. It
-also contains some meta-information such as the maintainer's name, the version
-of Debian Policy that the package complies with, the location of the packaging
-version control repository, and the :term:`upstream <Upstream>` home page.
+The first stanza describes the source package. It contains the following fields:
+
+- ``Source`` (required): The name of the source package.
+- ``Maintainer`` (required): The name and email of the package maintainer.
 
 .. note::
 
@@ -143,8 +142,42 @@ version control repository, and the :term:`upstream <Upstream>` home page.
     For further information, see the
     `Debian Maintainer Field spec <MaintField_>`_ on the Ubuntu wiki.
 
+- ``Uploaders``: The list of names and email addresses of co-maintainers.
+- ``Section`` (recommended):
+- ``Priority`` (recommended): How important the package is.
+- ``Build-Depends`` fields: Lists the packages required to build the package
+  from source. For a full list of the 
+- ``Standards-Version`` (required): The version of Debian Policy that the
+  package complies with.
+- ``Homepage``: The :term:`upstream <Upstream>` home page.
+- :term:`Version Control System (VCS) <Version Control System>` fields: 
+
+  * ``VCS-Browser``: Web interface to browse the repository.
+  * ``VCS-<type>``: The repository location. See
+    `Version Control Systems (VCS) fields (Section 5.6.26) <policy-vcs_>`_ of
+    the Debian Policy Manual for more details.
+
+- ``Testsuite``
+- ``Rules-Requires-Root``: Defines whether the source package requires root
+  access during selected targets.
+
 Each additional stanza describes a :term:`binary package <Binary Package>` to
-be built.
+be built. These stanzas contain the following fields:
+
+- ``Package`` (required): The name of the binary package.
+- ``Architecture`` (required): The :term:`architectures <Architecture>`
+  supported.
+- ``Section`` (recommended):
+- ``Priority`` (recommended): How important the package is.
+- ``Essential``: Optional boolean field to prevent the package manager from
+  removing the package when set to ``yes``. When this field is absent, the
+  default behaviour is ``no``.
+- ``Depends`` fields:
+- ``Description`` (required): Contains a description of the binary package. This
+  field consists of a synopsis and a long description.
+- ``Homepage``: The upstream home page.
+- ``Built-Using``:
+- ``Package-Type``:
 
 For further information, see the
 `control file section (Chapter 5) <policy-control_>`_ of the Debian Policy
@@ -414,6 +447,7 @@ further discusses the  control, changelog, copyright and rules files.
 discusses additional files that may be used.
 
 .. _policy-changelog: https://www.debian.org/doc/debian-policy/ch-source.html#s-dpkgchangelog
+.. _policy-vcs: https://www.debian.org/doc/debian-policy/ch-controlfields.html#s-f-vcs-fields
 .. _policy-control: https://www.debian.org/doc/debian-policy/ch-controlfields.html
 .. _policy-copyright: https://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile
 .. _policy-rules: https://www.debian.org/doc/debian-policy/ch-source.html#s-debianrules
