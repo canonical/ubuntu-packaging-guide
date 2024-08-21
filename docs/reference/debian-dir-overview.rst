@@ -423,11 +423,13 @@ a single line indicating the desired format:
 - ``3.0 (quilt)`` for packages with a separate upstream tarball
 - ``1.0`` for packages wishing to explicitly declare the default format
 
-Currently, the package source format will default to ``1.0`` if the
-:file:`debian/source/format` file does not exist, but you should not rely on
-this behaviour, as it is deprecated. You should make this explicit in the
-:file:`source/format` file. If you choose not to use this file to define the
-source format, Lintian will warn about the missing file.
+.. note::
+
+    Currently, the package source format will default to ``1.0`` if the
+    :file:`debian/source/format` file does not exist, but you should not rely on
+    this behaviour, as it is deprecated. You should make this choice explicit in
+    the :file:`debian/source/format` file. If you choose not to use this file to
+    define the source format, Lintian will warn about the missing file.
 
 You are encouraged to use the newer ``3.0`` source format. It provides
 a number of new features:
