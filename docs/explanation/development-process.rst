@@ -118,7 +118,7 @@ At this point, Ubuntu developers should stop introducing new features,
 packages, and :term:`API`/:term:`ABI` changes, and instead concentrate on
 fixing bugs in the current release in development.
 
-.. _User Interface Freeze:
+.. _UserInterfaceFreeze:
 
 User Interface Freeze (UIF)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

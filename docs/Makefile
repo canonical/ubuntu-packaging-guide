@@ -63,7 +63,11 @@ distro-info-install:
 		sudo apt-get update; \
 		sudo apt-get install --assume-yes python3-distro-info; \
 	fi
-	
+
+releases-reference:
+	cd "$(SOURCEDIR)/reference/releases"; \
+	python3 generateReStructuredText.py
+
 woke-install:
 	@type woke >/dev/null 2>&1 || \
             { echo "Installing \"woke\" snap... \n"; sudo snap install woke; }
@@ -77,17 +81,17 @@ pa11y-install:
 
 install: $(VENVDIR) woke-install
 
-run: install
+run: install releases-reference
 	. $(VENV); sphinx-autobuild -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
 
 # Doesn't depend on $(BUILDDIR) to rebuild properly at every run.
-html: install
+html: install releases-reference
 	. $(VENV); $(SPHINXBUILD) -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)" -w .sphinx/warnings.txt $(SPHINXOPTS)
 
-epub: install
+epub: install releases-reference
 	. $(VENV); $(SPHINXBUILD) -b epub "$(SOURCEDIR)" "$(BUILDDIR)" -w .sphinx/warnings.txt $(SPHINXOPTS)
 
-serve: html
+serve: html releases-reference
 	cd "$(BUILDDIR)"; python3 -m http.server 8000
 
 clean: clean-doc
@@ -98,6 +102,8 @@ clean: clean-doc
 clean-doc:
 	git clean -fx "$(BUILDDIR)"
 	rm -rf .sphinx/.doctrees
+	rm $(SOURCEDIR)/reference/releases/index.rst
+	rm $(SOURCEDIR)/reference/releases/ubuntu*.rst
 
 spelling: html
 	. $(VENV) ; python3 -m pyspelling -c .sphinx/spellingcheck.yaml -j $(shell nproc)
