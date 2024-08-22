@@ -307,13 +307,21 @@ class UbuntuSeries:
             if release.Href is not None:
                 id = release.ReleaseName() + " Announcement"
                 links[id] = (release.Href, "Release Announcement")
-                rst +=  f"        {"-" if linkCount == 0 else " "} | |{id}|_\n"
+                if linkCount == 0:
+                    rst += "        - | "
+                else:
+                    rst += "          | "
+                rst +=  f"|{id}|_\n"
                 linkCount += 1
             
             if release.NotesHref is not None:
                 id = release.ReleaseName() + " Notes"
                 links[id] = (release.NotesHref, "Release Notes")
-                rst +=  f"        {"-" if linkCount == 0 else " "} | |{id}|_\n"
+                if linkCount == 0:
+                    rst += "        - | "
+                else:
+                    rst += "          | "
+                rst +=  f"|{id}|_\n"
                 linkCount += 1
 
             if linkCount == 0:
