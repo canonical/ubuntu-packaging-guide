@@ -467,14 +467,16 @@ a single line indicating the desired format:
     :manpage:`lintian(1)` will warn you about it when you try to build a source
     package.
 
-You are encouraged to use the newer ``3.0`` source format. It provides
+You are strongly recommended to use the newer ``3.0`` source format. It provides
 a number of new features:
 
 - Support for additional compression formats: ``bzip2``, ``lzma`` and ``xz``
 - Support for multiple upstream tarballs
 - Not necessary to repack the upstream tarball to strip the debian directory
 - Debian-specific changes are no longer stored in a single :file:`.diff.gz` but
-  in multiple patches compatible with quilt under :file:`debian/patches/`
+  in multiple patches compatible with quilt under :file:`debian/patches/`. The
+  patches to be applied automatically are listed in the
+  :file:`debian/patches/series` file.
 
 The Debian `DebSrc3.0 <DebSrc3.0_>`_ page summarises additional information
 concerning the switch to the ``3.0`` source package formats.
