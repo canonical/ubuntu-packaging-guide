@@ -245,11 +245,49 @@ You are encouraged to use this format as well.
 The :file:`rules` file
 ----------------------
 
-The last file we need to look at is :file:`debian/rules`. This does all the work
-for creating our package. It is a Makefile with targets to compile and install
-the application, then create the :file:`.deb` file from the installed files. It
-also has a target to clean up all the build files so you end up with just a
-source package again.
+The :file:`debian/rules` file does all the work for creating our package. It is
+a Makefile with targets to compile and install the application, then create the
+:file:`.deb` file from the installed files. It also has a target to clean up all
+the build files so you end up with just a source package again.
+
+More specifically, the :file:`debian/rules` file has the following targets:
+
+- ``build`` (required)
+
+  This target configures and compiles the package.
+
+- ``build-arch`` (required), ``build-indep`` (required)
+
+  The ``build-arch`` target configures and compiles architecture-dependent
+  binary packages (distinguished by not having the ``all`` value in the
+  ``Architecture`` field).
+
+  The ``build-indep`` target configures and compiles architecture-independent
+  binary packages (distinguished by the ``all`` value for the ``Architecture``
+  field).
+
+- ``binary`` (required), ``binary-arch`` (required), ``binary-indep`` (required)
+
+  The ``binary`` target is all that the user needs to build the binary
+  package(s) from the source package. It is typically an empty target that
+  depends on its two parts, ``binary-arch`` and ``binary-indep``.
+
+  The ``binary-arch`` target builds the binary packages which are
+  architecture-dependent.
+
+  The ``binary-indep`` target builds the binary packages which are
+  architecture-independent.
+
+- ``clean`` (required)
+
+  This target undoes the effects of the ``build`` and ``binary`` targets, but
+  it does not affect output files that a ``binary`` target creates in the parent
+  directory.
+
+- ``patch`` (optional)
+
+  This target prepares the source for editing. For example, it may unpack
+  additional upstream archives, apply patches, etc.
 
 Here is a simplified version of the :file:`debian/rules` file created by
 :command:`dh_make` (which can be found in the ``dh-make`` package):
