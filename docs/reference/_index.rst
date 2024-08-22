@@ -10,6 +10,8 @@ support matrices, and so on.
 .. toctree::
    :titlesonly:
 
+   releases/index
+   archive-events
    debian-dir-overview
    architectures
    package-version-format

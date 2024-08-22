@@ -1,0 +1,2695 @@
+{
+    "series": 
+    [
+        {
+            "version": "4.10",
+            "lts": false,
+            "codename": "Warty Warthog",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Beta Release",
+                        "date": "2004-09-15",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2004-September/000000.html"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2004-10-13",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2004-October/000002.html"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2004-10-26",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2004-October/000003.html"
+                    },
+                    {
+                        "type": "End of Standard Support",
+                        "date": "2006-04-30",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2006-March/000061.html"
+                    }
+                ]
+            },
+            "href": "https://wiki.ubuntu.com/WartyWarthog"
+        },
+        { 
+            "version": "5.04", 
+            "lts": false,
+            "codename": "Hoary Hedgehog",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Seed Freeze",
+                        "date": "2004-11-29"
+                    },
+                    {
+                        "type": "Upstream Version Freeze",
+                        "date": "2005-01-03"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2025-01-10"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2005-02-07"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2005-02-28"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2005-03-09"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2005-03-28"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2005-03-30"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2005-04-08",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2005-April/000023.html"
+                    },
+                    {
+                        "type": "End of Standard Support",
+                        "date": "2006-10-31",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-security-announce/2006-October/000422.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/HoaryReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/HoaryHedgehog"
+        },
+        { 
+            "version": "5.10", 
+            "lts": false,
+            "codename": "Breezy Badger",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2005-04-14"
+                    },
+                    {
+                        "type": "Upstream Version Freeze",
+                        "date": "2005-07-07"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2005-07-21"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2005-08-11"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2005-08-25"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2005-09-01"
+                    },
+                    {
+                        "type": "String Freeze",
+                        "date": "2005-09-01"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2005-09-08"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2005-09-08"
+                    },
+                    {
+                        "type": "Artwork Deadline",
+                        "date": "2005-09-29"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2005-09-29"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2005-09-29"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2005-10-06"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2005-10-06"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2005-10-12",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2005-October/000038.html"
+                    },
+                    {
+                        "type": "End of Standard Support",
+                        "date": "2007-04-13"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/BreezyReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/BreezyBadger"
+        },
+        { 
+            "version": "6.06", 
+            "codename": "Dapper Drake",
+            "lts": true,
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Upstream Version Freeze",
+                        "date": "2006-01-19"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2006-02-02"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2006-02-23"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2006-04-06"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2006-04-13"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2006-04-20"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2006-04-20"
+                    },
+                    {
+                        "type": "String Freeze",
+                        "date": "2006-04-27"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2006-05-18"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2006-05-18"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2006-05-25"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2006-05-25"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2006-06-01",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/DapperReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2006-June/000083.html"
+                    },
+                    { 
+                        "type": "Point Release",
+                        "pointReleaseNumber": 1,
+                        "date": "2006-08-10",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2006-August/000088.html"
+                    },
+                    { 
+                        "type": "Point Release",
+                        "pointReleaseNumber": 2,
+                        "date": "2008-01-21",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2008-January/000107.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "component": "Desktop",
+                        "date": "2009-07-14",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2009-July/000123.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "component": "Server",
+                        "date": "2011-06-01",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2011-June/000149.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/DapperReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/DapperDrake"
+        },
+        {
+            "version": "6.10",
+            "codename": "Edgy Eft",
+            "lts": false,
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Upstream Version Freeze",
+                        "date": "2006-07-13"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2006-07-13"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2006-09-07"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2006-09-14"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2006-09-21"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2006-09-28"
+                    },
+                    {
+                        "type": "Universe Freeze",
+                        "date": "2006-09-28"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2006-10-05"
+                    },
+                    {
+                        "type": "String Freeze",
+                        "date": "2006-10-05"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2006-10-12"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2006-10-19"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2006-10-19"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2006-10-26",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2006-October/000093.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2008-04-26",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-security-announce/2008-March/000684.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/EdgyReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/EdgyEft"
+        },
+        { 
+            "version": "7.04", 
+            "lts": false,
+            "codename": "Feisty Fawn",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2006-11-02",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel/2006-November/022171.html"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2006-12-21"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2007-02-08"
+                    },
+                    {
+                        "type": "Upstream Version Freeze",
+                        "date": "2007-02-08"
+                    },
+                    {
+                        "type": "Artwork Deadline",
+                        "date": "2007-02-08"
+                    },
+                    {
+                        "type": "Universe Freeze",
+                        "date": "2007-02-08"
+                    },
+                    {
+                        "type": "Artwork Deadline",
+                        "date": "2007-02-22"
+                    },
+                    {
+                        "type": "Universe New Packages Freeze",
+                        "date": "2007-02-22"
+                    },
+                    {
+                        "type": "String Freeze",
+                        "date": "2007-03-08"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2007-03-15"
+                    },
+                    {
+                        "type": "Artwork Deadline",
+                        "date": "2007-03-15"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2007-03-23"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2007-04-05"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2007-04-05"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2007-04-12"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2007-04-12"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2007-04-19",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2007-April/000102.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2008-10-19",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2008-September/000113.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/FeistyReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/FeistyFawn"
+        },
+        { 
+            "version": "7.10", 
+            "lts": false,
+            "codename": "Gutsy Gibbon",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2007-04-26"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2007-06-21"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2007-08-16"
+                    },
+                    {
+                        "type": "Artwork Deadline",
+                        "date": "2007-08-16"
+                    },
+                    {
+                        "type": "Artwork Deadline",
+                        "date": "2007-08-30"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2007-09-13"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2007-09-20"
+                    },
+                    {
+                        "type": "Artwork Deadline",
+                        "date": "2007-09-20"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2007-09-27"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2007-10-04"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2007-10-04"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2007-10-11"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2007-10-11"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2007-10-18",
+                        "notes": {
+                            "href": "https://wiki.ubuntu.com/GutsyGibbon/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2007-October/000105.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2009-04-18",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2009-March/000118.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/GutsyReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/GutsyGibbon"
+        },
+        { 
+            "version": "8.04", 
+            "lts": true,
+            "codename": "Hardy Heron",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2007-10-25"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 1,
+                        "date": "2007-11-29",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/HardyHeron/Alpha1"
+                        }
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2007-12-13"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 2,
+                        "date": "2007-12-20",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/HardyHeron/Alpha2"
+                        }
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 3,
+                        "date": "2008-01-10",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/HardyHeron/Alpha3"
+                        }
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 4,
+                        "date": "2008-01-31",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/HardyHeron/Alpha4"
+                        }
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2008-02-14"
+                    },
+                    {
+                        "type": "Artwork Deadline",
+                        "date": "2008-02-14"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 5,
+                        "date": "2008-02-21",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/HardyHeron/Alpha5"
+                        }
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2008-02-28"
+                    },
+                    {
+                        "type": "Artwork Deadline",
+                        "date": "2008-02-28"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 6,
+                        "date": "2008-03-06",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/HardyHeron/Alpha6"
+                        }
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2008-03-13"
+                    },
+                    {
+                        "type": "Artwork Deadline",
+                        "date": "2008-03-13"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2008-03-20",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/HardyHeron/Beta"
+                        }
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2008-03-20"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2008-04-10"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2008-04-10"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2008-04-10"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2008-04-17"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2008-04-17"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2008-04-24",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2008-April/000111.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 1,
+                        "date": "2008-06-03",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2008-July/000112.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 2,
+                        "date": "2009-01-22",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/HardyReleaseNotes/ChangeSummary/8.04.2"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2009-January/000117.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 3,
+                        "date": "2009-07-16",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/HardyReleaseNotes/ChangeSummary/8.04.3"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2009-July/000124.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 4,
+                        "date": "2010-01-29",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/HardyReleaseNotes/ChangeSummary/8.04.4"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2010-January/000128.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "component": "Desktop",
+                        "date": "2011-04-11",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2011-April/000144.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "component": "Server",
+                        "date": "2013-03-29",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2013-March/000168.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/HardyReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/HardyHeron"
+        },
+        { 
+            "version": "8.10", 
+            "lts": false,
+            "codename": "Intrepid Ibex",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2008-10-30",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/IntrepidReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2008-October/000116.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2010-04-30",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2010-March/000130.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/IntrepidReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/IntrepidIbex"
+        },
+        { 
+            "version": "9.04", 
+            "lts": false,
+            "codename": "Jaunty Jackalope",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2009-04-23",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/JauntyJackalope/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2009-April/000122.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2010-10-23",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2010-September/000137.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/JauntyReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/JauntyJackalope"
+        },
+        { 
+            "version": "9.10", 
+            "lts": false,
+            "codename": "Karmic Koala",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2009-10-29",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/KarmicKoala/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2009-October/000127.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2011-04-30",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2011-March/000142.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/KarmicReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/KarmicKoala"
+        },
+        { 
+            "version": "10.04", 
+            "lts": true,
+            "codename": "Lucid Lynx",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2010-04-29",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/LucidLynx/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2010-April/000133.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 1,
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/LucidLynx/ReleaseNotes/ChangeSummary/10.04.1"
+                        },
+                        "date": "2010-08-18",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2010-August/000134.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 2,
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/LucidLynx/ReleaseNotes/ChangeSummary/10.04.2"
+                        },
+                        "date": "2011-02-18",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2011-February/000141.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 3,
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/LucidLynx/ReleaseNotes/ChangeSummary/10.04.3"
+                        },
+                        "date": "2011-07-21",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2011-July/000150.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 4,
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/LucidLynx/ReleaseNotes/ChangeSummary/10.04.4"
+                        },
+                        "date": "2012-02-16",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2012-February/000155.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "component": "Desktop",
+                        "date": "2013-05-09",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2013-March/000169.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "component": "Server",
+                        "date": "2015-04-30",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2015-April/000196.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/LucidReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/LucidLynx"
+        },
+        { 
+            "version": "10.10", 
+            "lts": false,
+            "codename": "Maverick Meerkat",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2010-10-10",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/MaverickMeerkat/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2010-October/000139.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2012-04-10",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2012-April/000158.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/MaverickReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/MaverickMeerkat"
+        },
+        { 
+            "version": "11.04", 
+            "lts": false,
+            "codename": "Natty Narwhal",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2011-04-28",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2011-April/000147.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2012-10-28",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2012-October/000165.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/NattyReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/NattyNarwhal"
+        },
+        { 
+            "version": "11.10", 
+            "lts": false,
+            "codename": "Oneiric Ocelot",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2011-10-13",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2011-October/000153.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2013-05-09",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2013-March/000167.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/OneiricReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/OneiricOcelot"
+        },
+        { 
+            "version": "12.04", 
+            "lts": true,
+            "codename": "Precise Pangolin",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2011-10-20"
+                    },
+                    {
+                        "type": "Feature Definition Freeze",
+                        "date": "2011-11-24"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 1,
+                        "date": "2011-12-01"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2012-01-12"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 2,
+                        "date": "2012-02-02"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2012-02-16"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2012-02-23"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2012-02-23"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "betaReleaseNumber": 1,
+                        "date": "2012-03-01"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2012-03-22"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2012-03-22"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "betaReleaseNumber": 2,
+                        "date": "2012-03-29"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2012-04-05"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2012-04-12"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2012-04-12"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2012-04-19"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2012-04-26",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2012-April/000159.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 1,
+                        "date": "2012-08-24",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes/ChangeSummary/12.04.1"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2012-August/000160.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 2,
+                        "date": "2013-02-14",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes/ChangeSummary/12.04.2"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2013-February/000166.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 3,
+                        "date": "2013-08-23",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes/ChangeSummary/12.04.3"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2013-August/000175.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 4,
+                        "date": "2014-02-06",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes/ChangeSummary/12.04.4"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2014-February/000180.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 5,
+                        "date": "2014-08-08",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes/ChangeSummary/12.04.5"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2014-August/000189.html"
+                    },
+                    {
+                        "type": "Hardware Enablement End of Life",
+                        "date": "2014-08-08",
+                        "affectedPointReleases": [ 2, 3, 4 ],
+                        "href": "https://wiki.ubuntu.com/1204_HWE_EOL"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2017-04-28",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2017-March/000218.html"
+                    },
+                    {
+                        "type": "End of Expanded Security Maintenance",
+                        "date": "2019-04-28"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/PrecisePangolin/ReleaseSchedule"
+            }
+        },
+        { 
+            "version": "12.10", 
+            "lts": false,
+            "codename": "Quantal Quetzal",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2012-10-18",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/QuantalQuetzal/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2012-October/000164.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2014-05-16",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2014-May/000184.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/QuantalQuetzal/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/QuantalQuetzal"
+        },
+        { 
+            "version": "13.04", 
+            "lts": false,
+            "codename": "Raring Ringtail",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2013-04-25",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/RaringRingtail/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2013-April/000171.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2014-01-27",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2014-January/000178.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/RaringRingtail/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/RaringRingtail"
+        },
+        { 
+            "version": "13.10", 
+            "lts": false,
+            "codename": "Saucy Salamander",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2013-10-17",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/SaucySalamander/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2013-October/000177.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2014-07-17",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2014-June/000185.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/SaucySalamander/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/SaucySalamander"
+        },
+        { 
+            "version": "14.04", 
+            "lts": true,
+            "codename": "Trusty Tahr",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2013-10-21",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2013-October/001066.html"
+                    },
+                    {
+                        "type": "Feature Definition Freeze",
+                        "date": "2013-11-21"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 1,
+                        "date": "2013-12-19"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "date": "2014-01-23"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2014-02-06"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2014-02-20"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2014-02-27"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "betaReleaseNumber": 1,
+                        "date": "2014-02-27"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2014-03-13"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2014-03-20"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2014-03-27"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "betaReleaseNumber": 2,
+                        "date": "2014-03-27"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2014-04-03"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2014-04-03"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2014-04-10"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2014-04-10"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2014-04-10"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2014-04-17",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2014-April/000182.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 1,
+                        "date": "2014-07-25",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes/ChangeSummary/14.04.1"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2014-July/000188.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 2,
+                        "date": "2015-02-20",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes/ChangeSummary/14.04.2"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2015-February/000192.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 3,
+                        "date": "2015-08-06",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes/ChangeSummary/14.04.3"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2015-August/000200.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 4,
+                        "date": "2016-02-18",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes/ChangeSummary/14.04.4"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2016-February/000205.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 5,
+                        "date": "2016-08-04",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes/ChangeSummary/14.04.5"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2016-August/000211.html"
+                    },
+                    {
+                        "type": "Hardware Enablement End of Life",
+                        "date": "2016-08-04",
+                        "affectedPointReleases": [ 2, 3, 4 ],
+                        "href": "https://wiki.ubuntu.com/1404_HWE_EOL"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 6,
+                        "date": "2019-03-07",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes/ChangeSummary/14.04.6"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2019-March/000240.html"
+                    },
+                    {
+                        "type": "Hardware Enablement End of Life",
+                        "date": "2019-04-25",
+                        "affectedPointReleases": [ 5 ],
+                        "href": "https://wiki.ubuntu.com/1404_HWE_EOL"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2019-04-25",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2019-March/000241.html"
+                    },
+                    {
+                        "type": "End of Expanded Security Maintenance",
+                        "date": "2024-04-17"
+                    },
+                    {
+                        "type": "End of Legacy Support add-on",
+                        "date": "2026-04-17",
+                        "href": "https://canonical.com/blog/canonical-expands-long-term-support-to-12-years-starting-with-ubuntu-14-04-lts"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/TrustyTahr/ReleaseSchedule"
+            }
+        },
+        { 
+            "version": "14.10", 
+            "lts": false,
+            "codename": "Utopic Unicorn",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2014-10-23",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/UtopicUnicorn/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2014-October/000191.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2015-07-23",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2015-July/000197.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/UtopicUnicorn/ReleaseSchedule"
+            }
+        },
+        { 
+            "version": "15.04", 
+            "lts": false,
+            "codename": "Vivid Vervet",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2015-04-23",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/VividVervet/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2015-April/000195.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2016-02-04",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2016-January/000203.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/VividVervet/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/VividVervet"
+        },
+        { 
+            "version": "15.10", 
+            "lts": false,
+            "codename": "Wily Werewolf",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2015-10-22",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/WilyWerewolf/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2015-October/000202.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2019-07-28",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2016-July/000210.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/WilyWerewolf/ReleaseSchedule"
+            }
+        },
+        { 
+            "version": "16.04", 
+            "lts": true,
+            "codename": "Xenial Xerus",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2015-10-29",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2015-October/001157.html"
+                    },
+                    {
+                        "type": "Feature Definition Freeze",
+                        "date": "2015-11-26"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 1,
+                        "date": "2016-01-07"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 2,
+                        "date": "2016-01-28"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2016-02-18"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2016-02-18"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2016-02-25"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "betaReleaseNumber": 1,
+                        "date": "2016-02-25"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2016-03-10"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2016-03-17"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2016-03-24"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "betaReleaseNumber": 2,
+                        "date": "2016-03-24"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2016-04-07"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2016-04-07"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2016-04-14"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2016-04-14"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2016-04-14"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2016-04-21",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/XenialXerus/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2016-April/000207.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 1,
+                        "date": "2016-07-21",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.1"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2016-July/000209.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 2,
+                        "date": "2017-02-17",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.2"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-release/2017-February/004036.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 3,
+                        "date": "2017-08-03",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.3"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2017-August/000224.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 4,
+                        "date": "2018-03-01",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.4"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2018-March/000229.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 5,
+                        "date": "2018-08-02",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.5"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2018-August/000235.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 6,
+                        "date": "2019-02-28",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.6"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2019-February/000239.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 7,
+                        "date": "2020-08-13",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/XenialXerus/ReleaseNotes/ChangeSummary/16.04.7"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2020-August/000261.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2021-04-30",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2021-March/000266.html"
+                    },
+                    {
+                        "type": "End of Expanded Security Maintenance",
+                        "date": "2026-04-30"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/XenialXerus/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/XenialXerus"
+        },
+        { 
+            "version": "16.10", 
+            "lts": false,
+            "codename": "Yakkety Yak",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2016-10-13",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/YakketyYak/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2016-October/000213.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2017-07-20",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/YakketyYak/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/YakketyYak"
+        },
+        { 
+            "version": "17.04", 
+            "lts": false,
+            "codename": "Zesty Zapus",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2017-04-13",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/ZestyZapus/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2017-April/000220.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2018-01-13",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2018-January/000227.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/ZestyZapus/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/ZestyZapus"
+        },
+        { 
+            "version": "17.10", 
+            "lts": false,
+            "codename": "Artful Aardvark",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Freeze",
+                        "date": "2017-10-12",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2017-October/001230.html"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2017-10-19",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2017-October/000226.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2018-07-19",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/ArtfulAardvark/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/ArtfulAardvark"
+        },
+        { 
+            "version": "18.04", 
+            "lts": true,
+            "codename": "Bionic Beaver",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2017-10-27",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2017-October/001231.html"
+                    },
+                    {
+                        "type": "Feature Definition Freeze",
+                        "date": "2017-11-30"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 1,
+                        "date": "2018-01-11"
+                    },
+                    {
+                        "type": "Alpha Release",
+                        "alphaReleaseNumber": 2,
+                        "date": "2018-02-01"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2018-03-01"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2018-03-01"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2018-03-08"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "betaReleaseNumber": 1,
+                        "date": "2018-03-08"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2018-03-22"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2018-03-29"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2018-04-05"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2018-04-05"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2018-04-12"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2018-04-12"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2018-04-19"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2018-04-19"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2018-04-19"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2018-04-26",
+                        "release": 
+                        {
+                            "notes": "https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2018-April/000231.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 1,
+                        "date": "2018-07-26",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes/ChangeSummary/18.04.1"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000234.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 2,
+                        "date": "2019-02-15",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes/ChangeSummary/18.04.2"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2019-February/000238.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 3,
+                        "date": "2019-08-08",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes/ChangeSummary/18.04.3"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2019-August/000248.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 4,
+                        "date": "2020-02-12",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes/ChangeSummary/18.04.4"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2020-February/000254.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 5,
+                        "date": "2020-08-13",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes/ChangeSummary/18.04.5"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2020-August/000260.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 6,
+                        "date": "2021-09-17",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2021-September/000272.html"
+                    },
+                    {
+                        "type": "End of Standard Support",
+                        "date": "2023-05-31",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2023-June/000292.html"
+                    },
+                    {
+                        "type": "End of Expanded Security Maintenance",
+                        "date": "2028-04-30"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/BionicBeaver/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/BionicBeaver"
+        },
+        { 
+            "version": "18.10", 
+            "lts": false,
+            "codename": "Cosmic Cuttlefish",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2018-10-18",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/CosmicCuttlefish/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2018-October/000237.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2019-07-18",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2019-July/000246.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/CosmicCuttlefish/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/CosmicCuttlefish"
+        },
+        { 
+            "version": "19.04", 
+            "lts": false,
+            "codename": "Disco Dingo",
+            "releaseSchedule":
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2019-04-18",
+                        "notes":
+                        {
+                            "href": "https://wiki.ubuntu.com/DiscoDingo/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2019-April/000243.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2020-01-23",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2020-January/000253.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/DiscoDingo/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/DiscoDingo"
+        },
+        { 
+            "version": "19.10", 
+            "lts": false,
+            "codename": "Eoan Ermine",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Freeze",
+                        "date": "2019-10-11",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2019-October/001267.html"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2019-10-17",
+                        "notes": {
+                            "href": "https://wiki.ubuntu.com/EoanErmine/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2019-October/000250.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2020-07-17",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2020-July/000258.html"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/EoanErmine/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/EoanErmine"
+        },
+        { 
+            "version": "20.04", 
+            "lts": true,
+            "codename": "Focal Fossa",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2019-10-28",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2019-October/001268.html"
+                    },
+                    {
+                        "type": "Feature Definition Freeze",
+                        "date": "2019-11-28"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2020-02-27"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2020-02-27"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2020-03-19"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2020-03-26"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2020-03-30"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2020-04-02"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2020-04-09"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2020-04-09"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2020-04-16"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2020-04-16"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2020-04-16"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2020-04-23",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/FocalFossa/ReleaseNotes"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2020-April/000256.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 1,
+                        "date": "2020-08-06",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/ChangeSummary/20.04.1"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2020-August/000259.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 2,
+                        "date": "2021-02-04",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/ChangeSummary/20.04.2"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2021-February/000264.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 3,
+                        "date": "2021-08-26",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/ChangeSummary/20.04.3"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2021-August/000271.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 4,
+                        "date": "2022-02-24",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/ChangeSummary/20.04.4"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2022-February/000277.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 5,
+                        "date": "2022-09-01",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/ChangeSummary/20.04.5"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2022-September/000283.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 6,
+                        "date": "2023-03-23",
+                        "notes": 
+                        {
+                            "href": "https://wiki.ubuntu.com/FocalFossa/ReleaseNotes/ChangeSummary/20.04.6"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2023-March/000287.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2025-04-23"
+                    },
+                    {
+                        "type": "End of Expanded Security Maintenance",
+                        "date": "2030-04-23"
+                    }
+                ],
+                "href": "https://wiki.ubuntu.com/FocalFossa/ReleaseSchedule"
+            },
+            "href": "https://wiki.ubuntu.com/FocalFossa"
+        },
+        { 
+            "version": "20.10", 
+            "lts": false,
+            "codename": "Groovy Gorilla",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2020-10-22",
+                        "notes":
+                        {
+                            "href": "https://discourse.ubuntu.com/t/groovy-gorilla-release-notes/15533"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2020-October/000263.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2021-07-22",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2021-July/000270.html"
+                    }
+                ],
+                "href": "https://discourse.ubuntu.com/t/groovy-gorilla-release-schedule/15531"
+            },
+            "href": "https://wiki.ubuntu.com/GroovyGorilla"
+        },
+        { 
+            "version": "21.04", 
+            "lts": false,
+            "codename": "Hirsute Hippo",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Final Release",
+                        "date": "2021-04-22",
+                        "notes": 
+                        {
+                            "href": "https://discourse.ubuntu.com/t/hirsute-hippo-release-notes/19221"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2021-April/000268.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2022-01-22",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2022-January/000276.html"
+                    }
+                ],
+                "href": "https://discourse.ubuntu.com/t/hirsute-hippo-release-schedule/18539"
+            }
+        },
+        { 
+            "version": "21.10", 
+            "lts": false,
+            "codename": "Impish Indri",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2021-04-28",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2021-April/001293.html"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2021-10-14",
+                        "notes": 
+                        {
+                            "href": "https://discourse.ubuntu.com/t/impish-indri-release-notes/21951"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2021-October/000274.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2022-07-14",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2022-July/000281.html"
+                    }
+                ],
+                "href": "https://discourse.ubuntu.com/t/impish-indri-release-schedule/18540"
+            }
+        },
+        {
+            "version": "22.04",
+            "lts": true,
+            "codename": "Jammy Jellyfish",        
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2021-10-18",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2021-October/001302.html"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2022-02-24"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2022-02-24"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2022-03-17"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2022-03-24"
+                    },
+                    {
+                        "type": "Kernel Feature Freeze",
+                        "date": "2022-03-24"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2022-03-28"
+                    },
+                    {
+                        "type": "Hardware Enablement Freeze",
+                        "date": "2022-03-28"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2022-03-31"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2022-04-07"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2022-04-07"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2022-04-14",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2022-April/001312.html"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2022-04-14"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2022-04-14"        
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2022-04-21",
+                        "notes": 
+                        {
+                            "href": "https://discourse.ubuntu.com/t/jammy-jellyfish-release-notes/24668"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2022-April/000279.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 1,
+                        "date": "2022-08-11",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2022-August/000282.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 2,
+                        "date": "2023-02-23",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2023-February/000286.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 3,
+                        "date": "2023-08-10",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2023-August/000294.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 4,
+                        "date": "2024-02-22",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2024-February/000299.html"
+                    },
+                    {
+                        "type": "Point Release",
+                        "pointReleaseNumber": 5,
+                        "date": "2024-08-29"
+                    },
+                    {
+                        "type": "End of Standard Support",
+                        "date": "2027-06-21"
+                    },
+                    {
+                        "type": "End of Expanded Security Maintenance",
+                        "date": "2032-04-21"
+                    }
+                ],
+                "href": "https://discourse.ubuntu.com/t/jammy-jellyfish-release-schedule/23906"
+            }
+        },
+        { 
+            "version": "22.10", 
+            "lts": false,
+            "codename": "Kinetic Kudu",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2022-04-28",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2022-April/001313.html"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2022-08-25"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2022-08-25"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2022-09-15"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2022-09-22"
+                    },
+                    {
+                        "type": "Kernel Feature Freeze",
+                        "date": "2022-09-22"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2022-09-26"
+                    },
+                    {
+                        "type": "Hardware Enablement Freeze",
+                        "date": "2022-09-26"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2022-09-29"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2022-10-06"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2022-10-06"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2022-10-13",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2022-October/001324.html"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2022-10-13"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2022-10-13"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2022-10-20",
+                        "notes": 
+                        {
+                            "href": "https://discourse.ubuntu.com/t/kinetic-kudu-release-notes/27976"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2022-October/000285.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2023-07-20",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2023-June/000291.html"
+                    }
+                ],
+                "href": "https://discourse.ubuntu.com/t/kinetic-kudu-release-schedule/27263"
+            }
+        },
+        { 
+            "version": "23.04", 
+            "lts": false,
+            "codename": "Lunar Lobster",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2022-10-27",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel-announce/2022-November/001326.html"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2023-02-23"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2023-02-23"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2023-03-16"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2023-03-23"
+                    },
+                    {
+                        "type": "Kernel Feature Freeze",
+                        "date": "2023-03-23"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2023-03-27"
+                    },
+                    {
+                        "type": "Hardware Enablement Freeze",
+                        "date": "2023-03-27"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2023-03-30"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2023-04-06"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2023-04-06"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2023-04-13"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2023-04-13"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2023-04-13"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2023-04-20",
+                        "notes": 
+                        {
+                            "href": "https://discourse.ubuntu.com/t/lunar-lobster-release-notes/31910/2"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2023-April/000289.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2024-01-25",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2024-January/000298.html"
+                    }
+                ],
+                "href": "https://discourse.ubuntu.com/t/lunar-lobster-release-schedule/27284/3"
+            }
+        },
+        { 
+            "version": "23.10", 
+            "lts": false,
+            "codename": "Mantic Minotaur",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2023-05-03",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel/2023-May/042555.html"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2023-08-17"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2023-08-17"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2023-09-07"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2023-09-14"
+                    },
+                    {
+                        "type": "Kernel Feature Freeze",
+                        "date": "2023-09-14"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2023-09-18"
+                    },
+                    {
+                        "type": "Hardware Enablement Freeze",
+                        "date": "2023-09-18"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2023-09-21"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2023-09-28"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2023-09-28"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2023-10-05"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2023-10-08"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2023-10-08"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2023-10-16",
+                        "notes":
+                        {
+                            "href": "https://discourse.ubuntu.com/t/mantic-minotaur-release-notes/35534"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2023-October/000296.html"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2024-07-16"
+                    }
+                ],
+                "href": "https://discourse.ubuntu.com/t/mantic-minotaur-release-schedule/34989"
+            }
+        },
+        { 
+            "version": "24.04", 
+            "lts": true,
+            "codename": "Noble Numbat",
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2023-10-26",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel/2023-October/042835.html"
+                    },
+                    {
+                        "type": "Feature Freeze",
+                        "date": "2024-02-29"
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2024-02-29"
+                    },
+                    {
+                        "type": "User Interface Freeze",
+                        "date": "2024-03-21"
+                    },
+                    {
+                        "type": "Documentation String Freeze",
+                        "date": "2024-03-28"
+                    },
+                    {
+                        "type": "Kernel Feature Freeze",
+                        "date": "2024-03-28"
+                    },
+                    {
+                        "type": "Beta Freeze",
+                        "date": "2024-04-01"
+                    },
+                    {
+                        "type": "Hardware Enablement Freeze",
+                        "date": "2024-04-01"
+                    },
+                    {
+                        "type": "Beta Release",
+                        "date": "2024-04-12",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2024-April/000300.html"
+                    },
+                    {
+                        "type": "Kernel Freeze",
+                        "date": "2024-04-11"
+                    },
+                    {
+                        "type": "Non Language Pack Translation Deadline",
+                        "date": "2024-04-11"
+                    },
+                    {
+                        "type": "Final Freeze",
+                        "date": "2024-04-18"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2024-04-18"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2024-04-18"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2024-04-25",
+                        "notes": 
+                        {
+                            "href": "https://discourse.ubuntu.com/t/noble-numbat-release-notes/39890"
+                        },
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-announce/2024-April/000301.html"
+                    },
+                    { 
+                        "type": "Point Release",
+                        "pointReleaseNumber": 1,
+                        "date": "2024-08-29"
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2029-04-25"
+                    },
+                    {
+                        "type": "End of Expanded Security Maintenance",
+                        "date": "2034-04-25"
+                    }
+                ],
+                "href": "https://discourse.ubuntu.com/t/noble-numbat-release-schedule/35649"
+            }
+        },
+        {
+            "version": "24.10", 
+            "lts": false,
+            "codename": "Oracular Oriole",
+            "images": [
+                {
+                    "name": "CD images (daily builds)",
+                    "href": "https://cdimage.ubuntu.com/daily-live/current/"
+                }
+            ],
+            "releaseSchedule": 
+            {
+                "events": 
+                [
+                    {
+                        "type": "Archive Opening",
+                        "date": "2024-05-08",
+                        "href": "https://lists.ubuntu.com/archives/ubuntu-devel/2024-May/042993.html"
+                    },
+                    {
+                        "type": "Ubuntu Testing Week",
+                        "date": "2024-06-04",
+                        "mandatory": false
+                    },
+                    {
+                        "type": "Debian Import Freeze",
+                        "date": "2024-08-15"
+                    },
+                    {
+                       "type": "Feature Freeze",
+                       "date": "2024-08-15"
+                    },
+                    {
+                       "type": "Ubuntu Testing Week",
+                       "date": "2024-08-22",
+                       "mandatory": false
+                    },
+                    {
+                       "type": "User Interface Freeze",
+                       "date": "2024-09-05"
+                    },
+                    {
+                       "type": "Documentation String Freeze",
+                       "date": "2024-09-12"
+                    },
+                    {
+                        "type": "Kernel Feature Freeze",
+                        "date": "2024-09-12"
+                    },
+                    {
+                       "type": "Beta Freeze",
+                       "date": "2024-09-16"
+                    },
+                    {
+                       "type": "Hardware Enablement Freeze",
+                       "date": "2024-09-16"
+                    },
+                    {
+                       "type": "Beta Release",
+                       "date": "2024-09-19"
+                    },
+                    {
+                       "type": "Kernel Freeze",
+                       "date": "2024-09-26"
+                    },
+                    {
+                       "type": "Non Language Pack Translation Deadline",
+                       "date": "2024-09-26"
+                    },
+                    {
+                       "type": "Final Freeze",
+                       "date": "2024-10-03"
+                    },
+                    {
+                        "type": "Language Pack Translation Deadline",
+                        "date": "2024-10-03"
+                    },
+                    {
+                        "type": "Release Candidate Release",
+                        "date": "2024-10-03"
+                    },
+                    {
+                        "type": "Final Release",
+                        "date": "2024-10-10",
+                        "notes": 
+                        {
+                            "href": "https://discourse.ubuntu.com/t/oracular-oriole-release-notes/44878"
+                        }
+                    },
+                    {
+                        "type":"End of Standard Support",
+                        "date": "2025-07-10"
+                    }
+                ],
+                "href": "https://discourse.ubuntu.com/t/oracular-oriole-release-schedule/36460"
+            }
+        }
+    ]    
+}

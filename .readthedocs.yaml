@@ -13,6 +13,7 @@ build:
   jobs:
     post_checkout:
       - cd 'docs' && python3 build_requirements.py
+      - cd 'docs/reference/releases' && generateReStructuredText.py
   apt_packages:
     - python3-distro-info
 
