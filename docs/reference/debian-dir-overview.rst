@@ -462,11 +462,10 @@ a single line indicating the desired format:
 
 .. note::
 
-    Currently, the package source format will default to ``1.0`` if the
-    :file:`debian/source/format` file does not exist, but you should not rely on
-    this behaviour, as it is deprecated. You should make this choice explicit in
-    the :file:`debian/source/format` file. If you choose not to use this file to
-    define the source format, Lintian will warn about the missing file.
+    The :file:`debian/source/format` file should always exist. If the file can
+    not be found, the format ``1.0`` is assumed for backwards compatibility, but
+    :manpage:`lintian(1)` will warn you about it when you try to build a source
+    package.
 
 You are encouraged to use the newer ``3.0`` source format. It provides
 a number of new features:
