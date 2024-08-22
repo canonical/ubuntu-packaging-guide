@@ -351,7 +351,8 @@ class UbuntuSeries:
             elif event.Type == "End of Standard Support" and event.Component is not None:
                 name = f":ref:`{event.Type} <{event.Type}>` ({event.Component})"
             elif event.Type == "Hardware Enablement End of Life":
-                name = f":ref:`{event.Type} <{event.Type}>` for {", ".join(map(lambda pointReleaseNumber: self.Version + "." + str(pointReleaseNumber), event.AffectedPointReleases))}"
+                affectedReleases=", ".join(map(lambda pointReleaseNumber: self.Version + "." + str(pointReleaseNumber), event.AffectedPointReleases))
+                name = f":ref:`{event.Type} <{event.Type}>` for {affectedReleases}"
             else:
                 name = f":ref:`{event.Type} <{event.Type}>`"
 
