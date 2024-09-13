@@ -206,6 +206,9 @@ Glossary
 
         See also: `Software bug (Wikipedia) <https://en.wikipedia.org/wiki/Software_bug>`_
 
+    Bug supervisor
+        *Work in Progress*
+
     Bug Tracking System
         A platform used by software development teams to manage and monitor the progress
         of reported issues or :term:`Bugs <Bug>` within a software project. It provides
@@ -238,6 +241,9 @@ Glossary
         The discussions here will only be accessible to the :term:`Canonical` employes.
 
         See: `discourse.canonical.com <CanonicalDiscourse_>`_
+
+    Canonical partner archive
+        *Work in Progress*
 
     CD
         Abbreviation for :term:`Continuous Delivery`

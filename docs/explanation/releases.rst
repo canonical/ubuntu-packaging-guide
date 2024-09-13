@@ -226,3 +226,5 @@ Resources
 - `Ubuntu wiki -- point release process <https://wiki.ubuntu.com/PointReleaseProcess>`_
 - `Ubuntu wiki -- end of life process <https://wiki.ubuntu.com/EndOfLifeProcess>`_
 - `Ubuntu releases <https://releases.ubuntu.com/>`_
+- `Ask a bug supervisor <https://answers.launchpad.net/launchpad/+question/140509>`
+- `contact the Ubuntu SRU Team <https://wiki.ubuntu.com/StableReleaseUpdates#Contacting_the_SRU_team>`
