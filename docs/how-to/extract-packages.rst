@@ -1,7 +1,7 @@
 Extract packages
 ================
 
-This article demonstrates how to extract the contents of debian packages.
+This article demonstrates how to extract the contents of Debian packages.
 
 See also the article :doc:`/explanation/package-model` for a deeper 
 understanding of package formats.
@@ -15,21 +15,21 @@ This section demonstrates how to extract the content of a source package.
 
 .. note::
 
-    A source package archive has the file ending `.dsc`.
-    See also the man page :manpage:`dsc(5)` for further information.
+    A source package archive has the file extension `.dsc`.
+    See also the manual page :manpage:`dsc(5)` for further information.
 
 .. important::
 
     Make sure that you have the `dpkg-dev` package installed. 
-    To install it run the following commands in a terminal:
+    To install it, run the following commands in a terminal:
 
-    .. code-block:: bash
+    .. code-block:: none
 
         sudo apt update && sudo apt install dpkg-dev
 
-Run the follwong command in a terminal:
+Run the following command in a terminal:
 
-.. code-block:: bash
+.. code-block:: none
 
     dpkg-source --extract SOURCE-PACKAGE.dsc [OUTPUT-DIRECTORY]
 
@@ -39,27 +39,27 @@ Run the follwong command in a terminal:
 ``OUTPUT-DIRECTORY`` (optional)
     The path to the directory where to extract the content of the source
     package to. This directory **must not** exist. If no output directory is 
-    specified the content will be extracted into a directory named 
+    specified, the content is extracted into a directory named 
     ``NAME-VERSION`` (where ``NAME`` is the name of the source package and 
     ``VERSION`` its version) under the current working directory.
 
-See the man page :manpage:`dpkg-source(1)` for further informations.
+See the manual page :manpage:`dpkg-source(1)` for further information.
 
 .. _ExtractBinaryPackage:
 
 Extract a binary package
 ------------------------
 
-This section demonstrates how to extract the content a binary packages.
+This section demonstrates how to extract the content a binary package.
 
 .. note::
 
-    A binary package archive has the file ending `.deb`.
-    See also the man page :manpage:`deb(5)` for further information.
+    A binary package archive has the file extension `.deb`.
+    See also the manual page :manpage:`deb(5)` for further information.
 
-Run the follwong command in a terminal:
+Run the following command in a terminal:
 
-.. code-block:: bash
+.. code-block:: none
 
     dpkg-deb --extract BINARY-PACKAGE.dsc OUTPUT-DIRECTORY
 
@@ -68,24 +68,24 @@ Run the follwong command in a terminal:
 
 ``OUTPUT-DIRECTORY``
     The path to the directory where to extract the content of the binary
-    package to. In comparison to :ref:`ExtractSourcePackage` this directory
+    package to. In comparison to :ref:`ExtractSourcePackage`, this directory
     can already exist and even contain files.
 
-See the man page :manpage:`dpkg-deb(1)` for further informations.
+See the manual page :manpage:`dpkg-deb(1)` for further information.
 
 .. tip::
 
-    Using ``--vextract`` instead of ``--extract`` will also display
+    Using ``--vextract`` instead of ``--extract`` also outputs a list of
     the extracted files to :term:`standard output <Standard Output>`.
 
-    To just list the contained files use the ``--contents`` option:
+    To just list the files that the package contains, use the ``--contents`` option:
 
-    .. code-block:: bash
+    .. code-block:: none
 
         dpkg-deb --contents BINARY-PACKAGE.dsc
 
 .. tip::
 
     You can also replace ``dpkg-deb`` with ``dpkg`` for the examples 
-    demonstarted here. ``dpkg`` will forward the options to ``dpkg-deb``. 
-    See the man page :manpage:`dpkg(1)` for further informations.
+    demonstrated here. ``dpkg`` forwards the options to ``dpkg-deb``. 
+    See the manual page :manpage:`dpkg(1)` for further information.
