@@ -7,7 +7,7 @@ to ensure that their work is aligned with that of others. Because of the
 time-based release cycle, Ubuntu contributors must coordinate well to
 produce an on-time release.
 
-See also the article, :doc:`/explanation/releases`, for more details about the
+See also the article :doc:`/explanation/releases` for more details about the
 release cadence.
 
 Beginning a new release
@@ -36,52 +36,49 @@ proposed by individual developers.
 The broader open-source community gets together at the :term:`Ubuntu Summit` 
 (similar but different to the past 
 :term:`Ubuntu Developer Summits <Ubuntu Developer Summit>`) to share
-experiences and ideas and to inspire future exciting projects covering
+experiences and ideas and to inspire future projects covering
 development as well as design, writing, and community leadership with a wide
 range of technical skill levels.
 
-The :term:`Canonical` teams meet after every release at the Roadmap Planning 
-Sprint to plan the roadmap for the next release and discuss how to implement
-the roadmap at the Engineering Sprint.
 
-Merging with Upstream & feature development
--------------------------------------------
+Merging with upstream and feature development
+---------------------------------------------
 
 The first phase of the release cycle is characterised by bringing new releases
 of :term:`upstream` components into Ubuntu, either directly or via 
-:doc:`Merges and Syncs from Debian </explanation/debian-merges-and-syncs>`. 
-Development of planned projects for the release often begins while merging is
-still underway, and their development is accelerated once the package archive
+:doc:`Merges and syncs from Debian </explanation/debian-merges-and-syncs>`. 
+The development of planned projects for the release often begins while merging is
+still underway, and the development accelerates once the package archive
 is reasonably consistent and usable.
 
 The automatic import of new package versions from Debian ends at the 
 :ref:`DebianImportFreeze`.
 
-Stabilisation and deadlines (freezes)
--------------------------------------
+Stabilisation and milestones (freezes)
+--------------------------------------
 
-During development, caution is increasingly exercised in making changes
-to Ubuntu to ensure a stable state is reached in time for the final release
-date. Modifications to the Ubuntu package archive get incrementally restricted,
-effectively freezing the state of the Ubuntu package archive. The
-deadlines when these restrictions get enabled are called "freezes". During
-freezes, exceptions must be requested to approve changes. See 
+Developers should increasingly exercise caution in making changes to Ubuntu to
+ensure a stable state is reached in time for the final release date.
+Archive admins incrementally restrict modifications to the Ubuntu package
+archive, effectively freezing the state of the Ubuntu package archive. The
+milestones when these restrictions get enabled are called "freezes".
+During freezes, developers must request exceptions to approve changes. See 
 :doc:`how to request a freeze exception </how-to/request-freeze-exception>`.
-The typical order and length of the various freezes can be seen on the
-current Release Schedule, which is usually posted as a Discourse article under
-the `"Release" topic <https://discourse.ubuntu.com/c/release/>`_.
+The release team usually posts the current Release Schedule as a Discourse
+article under the `"Release" topic <https://discourse.ubuntu.com/c/release/>`_.
+It shows the typical order and length of the various freezes.
 
 .. note::
     In the past, the Release Schedule was published in the Ubuntu Wiki.
-    See for example the `release schedule of Ubuntu 20.04 LTS (Focal Fossa) <https://wiki.ubuntu.com/FocalFossa/ReleaseSchedule>`_.
+    See, for example, the `release schedule of Ubuntu 20.04 LTS (Focal Fossa) <https://wiki.ubuntu.com/FocalFossa/ReleaseSchedule>`_.
 
 .. _TestingWeeks:
 
 Testing weeks
 ~~~~~~~~~~~~~
 
-During a release's development phase, testing weeks are organised to focus the
-Ubuntu community's efforts on testing Ubuntu's latest daily
+During a release's development phase, the release team organise testing weeks to
+focus the Ubuntu community's efforts on testing Ubuntu's latest daily
 :term:`ISO images <Image>` and its :term:`flavours <Ubuntu flavours>`. These
 weeks are crucial for discovering bugs and getting early feedback about new
 features.
@@ -99,9 +96,9 @@ features.
 Debian Import Freeze
 ~~~~~~~~~~~~~~~~~~~~
 
-The automatic import of new packages and versions of existing packages from
-Debian gets disabled. The import of a new package or version of an existing
-package from Debian has to be requested. 
+Archive admins disable the automatic import of new packages and versions of
+existing packages from Debian. The import of a new package or version of an
+existing package from Debian has to be requested. 
 
 .. note::
 
@@ -130,11 +127,11 @@ documentation obsolete.
 After the user interface freeze, the following things are not allowed to change
 without a freeze exception:
 
-* the user interface of individual applications that are installed by default,
-* the appearance of the desktop,
-* the distribution-specific artwork,
-* all user-visible strings in the desktop and applications that are installed 
-  by default.
+* User interface of individual applications that are installed by default
+* Appearance of the desktop
+* Distribution-specific artwork
+* All user-visible strings in the desktop and applications that are installed 
+  by default
 
 .. _DocumentationStringFreeze:
 
@@ -144,8 +141,8 @@ Documentation String Freeze
 Documentation strings should no longer be created or modified. This freeze
 ensures that the documentation can be accurately translated.
 
-Exceptions to this rule may be considered before release for significant and
-glaring typographical errors or exceptional circumstances.
+Exceptions to this rule may be considered before the release for significant and
+glaring errors or exceptional circumstances.
 
 .. _KernelFeatureFreeze:
 
@@ -169,7 +166,7 @@ Hardware Enablement Freeze
 
 All new hardware enablement tasks for devices targeting the given release
 should be finished, and all the respective packages should be in the Ubuntu
-package archive. The release team will no longer accept changes in the Ubuntu
+package archive. The release team no longer accepts changes in the Ubuntu
 package archive related to supporting new image types or platforms.
 This freeze ensures that any new platforms are already available for testing
 of the beta images and in the weeks leading to the :ref:`FinalFreeze`.
@@ -183,10 +180,10 @@ of the beta images and in the weeks leading to the :ref:`FinalFreeze`.
 Beta Freeze
 ~~~~~~~~~~~
 
-For the beta release's preparation, all uploads are queued and subject to
+In preparation for the beta release, all uploads are queued and subject to
 manual approval by the release team. Changes to packages that affect beta
 release images (flavours included) require the release team's approval before
-uploading. Uploads for packages that do not affect images will generally be
+uploading. Uploads for packages that do not affect images are generally
 accepted as time permits.
 
 .. tip::
@@ -207,7 +204,7 @@ Beta Freeze restrictions no longer apply.
 Kernel Freeze
 ~~~~~~~~~~~~~
 
-The Kernel Freeze is a deadline for kernel updates since they require several
+The Kernel Freeze is the final date for kernel updates because they require several
 lockstep actions that must be folded into the image-building process.
 
 Exceptional circumstances may justify exemptions to the freeze at the
@@ -223,7 +220,7 @@ mechanism. Because these items require more disruptive integration work,
 they are subject to an earlier deadline to give time to developers to manually
 export translations from Launchpad and integrate them into the package.
 
-This deadline marks the date after which translations for such packages are not
+This marks the date after which translations for such packages are not
 guaranteed to be included in the final release. Depending on the package and
 its maintainers workflow, they may be exported later.
 
@@ -244,24 +241,25 @@ Unseeded packages
 ^^^^^^^^^^^^^^^^^
 
 Packages in :ref:`ArchiveComponents_Universe` that aren't seeded in any of the
-Ubuntu flavours just remain in :ref:`FeatureFreeze` because they do not affect
+Ubuntu flavours remain in :ref:`FeatureFreeze` because they do not affect
 the release; however, when the Ubuntu package archive is frozen, fixes must be
 manually reviewed and accepted by the release team members.
 
 When the Final Release is close (~1.5 days out), developers should consider
 uploading to the :ref:`proposed pocket <ArchivePockets_Proposed>`, from which
-the release team will cherry-pick into the
+the release team cherry-picks into the
 :ref:`release pocket <ArchivePockets_Release>` if circumstances allow.
 All packages uploaded to the proposed pocket that do not make it into the
-release pocket until the Final Release will become candidates for
+release pocket until the Final Release become candidates for
 :ref:`StableReleaseUpdates_Summary`. Therefore, uploads to the proposed pocket
 during Final Freeze should meet the requirements of Stable Release Updates if
 the upload is not accepted into the release pocket. In particular, the upload
-must reference at least one bug, which will be used to track the stable update. 
+must reference at least one bug, which is used to track the stable update. 
 
-If you are sure that your upload will be accepted during Final Freeze, you can
-upload directly to the release pocket, but be aware that you have to re-upload
-after Final Release if the upload gets rejected.
+.. note::
+    If you are sure that your upload will be accepted during Final Freeze, you can
+    upload directly to the release pocket, but be aware that you have to re-upload
+    after Final Release if the upload gets rejected.
 
 .. _ReleaseCandidate:
 
@@ -302,12 +300,12 @@ Stable Release Updates.
 Final Release
 -------------
 
-Once the :ref:`ReleaseCandidate` ISO is declared stable, it will be announced on the 
-`ubuntu-announce mailing list <https://lists.ubuntu.com/archives/ubuntu-announce/>`_
-and referred to as the "Final Release".
+Once the release team declares the :ref:`ReleaseCandidate` ISO stable and names it
+the "Final Release", a representative of the team announces it on the 
+`ubuntu-announce mailing list <https://lists.ubuntu.com/archives/ubuntu-announce/>`_.
 
 .. note::
-    See for example the `Ubuntu 24.04 LTS (Noble Numbat) release announcement <https://lists.ubuntu.com/archives/ubuntu-announce/2024-April/000301.html>`_.
+    See, for example, the `Ubuntu 24.04 LTS (Noble Numbat) release announcement <https://lists.ubuntu.com/archives/ubuntu-announce/2024-April/000301.html>`_.
 
 .. _StableReleaseUpdates_Summary:
 
