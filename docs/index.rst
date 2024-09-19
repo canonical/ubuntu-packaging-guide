@@ -84,7 +84,7 @@ Ubuntu related software projects live. It is the place where bugs are tracked,
 source code is stored, tracked, get built, tested and much more.
 
 We will go into more detail in the following articles. For now, you can think of
-Launchpad as a platforms like GitHub, GitLab or BitBucket.
+Launchpad as a platform like GitHub, GitLab or BitBucket.
 
 IRC channels:
 ~~~~~~~~~~~~~
