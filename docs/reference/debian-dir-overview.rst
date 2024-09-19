@@ -42,7 +42,7 @@ conventionally are a list. Major bullet points use an asterisk "*", while minor
 bullet points are indicated by a dash "-".
 
 The changelog entry ends with a line indented by one space that contains the
-maintainer's name, email, and date of change. The maintainer here is the one
+name, email of the maintainer, and date of change. The maintainer here is the one
 responsible for the release, but it need not be the package maintainer.
 
 .. note::
