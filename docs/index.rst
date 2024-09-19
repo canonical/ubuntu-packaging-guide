@@ -31,30 +31,40 @@ make Ubuntu better together with us.
 In this documentation
 ---------------------
 
+.. toctree::
+   :hidden:
+   :titlesonly:
+
+   tutorial/_index
+   how-to/_index
+   explanation/_index
+   reference/_index
+   contribute
+
 .. grid:: 1 1 2 2
    :gutter: 3
 
    .. grid-item-card:: **Tutorial**
-       :link: tutorial
+       :link: tutorial/_index
        :link-type: doc
       
        Get started - a hands-on introduction to the Ubuntu Packaging Guide for
        new users
 
    .. grid-item-card:: **How-to guides**
-       :link: how-to
+       :link: how-to/_index
        :link-type: doc
       
        Step-by-step guides covering key operations and common tasks
     
    .. grid-item-card:: **Explanation**
-       :link: explanation
+       :link: explanation/_index
        :link-type: doc
           
        Discussion and clarification of key topics
     
    .. grid-item-card:: **Reference**
-       :link: reference
+       :link: reference/_index
        :link-type: doc
       
        Technical information - specifications, APIs, architecture
@@ -140,16 +150,6 @@ We are always looking to improve this guide. If you find any problems or have
 some suggestions, use the **Give feedback** button at the top of any page to 
 open a GitHub issue or directly contribute by submitting a pull request to the 
 `source`_ repository.
-
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-
-   tutorial.rst
-   how-to.rst
-   explanation.rst
-   reference.rst
-   contribute.rst
 
 Further reading
 ---------------
