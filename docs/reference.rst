@@ -12,12 +12,6 @@ support matrices, and so on.
 
    reference/debian-dir-overview.rst
    reference/architectures.rst
-   reference/package-tests.rst
    reference/package-version-format.rst
-   reference/git-ubuntu.rst
-   reference/apt.rst
-   reference/debian-policy.rst
-   reference/filesystem-hierarchy-standard.rst
-   reference/outdated-tools.rst
    reference/launchpad-text-markup.rst
    reference/glossary.rst

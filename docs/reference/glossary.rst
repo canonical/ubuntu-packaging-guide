@@ -71,7 +71,7 @@ Glossary
     APT
         Abbreviation for *Advanced Package Manager*. 
         
-        See: :doc:`/reference/apt`
+        See: `Advanced Packaging Tool (Ubuntu Server documentation) <https://ubuntu.com/server/docs/package-management#advanced-packaging-tool>`_
 
     Architecture
         Within the context of :term:`Ubuntu`, this refers to the system architecture
