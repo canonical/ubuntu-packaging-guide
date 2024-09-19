@@ -189,8 +189,7 @@ Glossary
     Breezy
         A :term:`Fork` of the :term:`Bazaar` :term:`Version Control System`.
 
-        See also: `Breezy (Launchpad) <https://launchpad.net/brz>`_,
-        `www.breezy-vcs.org <https://www.breezy-vcs.org/>`_
+        See also: `Breezy (Launchpad) <https://launchpad.net/brz>`_
 
     BTS
         Abbreviation for :term:`Bug Tracking System`

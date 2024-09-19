@@ -3,11 +3,14 @@ ARMv
 Backport
 Backports
 BitBucket
+boolean
 CET
 Changelog
 CISC
 CVE
 Cryptographic
+dch
+DebSrc
 DNS
 DevOps
 Devel
@@ -71,6 +74,8 @@ listinfo
 localhost
 lp
 mailto
+Matic
+MoM
 motu
 noreply
 o'p
