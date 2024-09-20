@@ -61,9 +61,9 @@ Run the following command in a terminal:
 
 .. code-block:: none
 
-    dpkg-deb --extract BINARY-PACKAGE.dsc OUTPUT-DIRECTORY
+    dpkg-deb --extract BINARY-PACKAGE.deb OUTPUT-DIRECTORY
 
-``BINARY-PACKAGE.dsc``
+``BINARY-PACKAGE.deb``
     The path to the binary package control file.
 
 ``OUTPUT-DIRECTORY``
@@ -82,7 +82,7 @@ See the manual page :manpage:`dpkg-deb(1)` for further information.
 
     .. code-block:: none
 
-        dpkg-deb --contents BINARY-PACKAGE.dsc
+        dpkg-deb --contents BINARY-PACKAGE.deb
 
 .. tip::
 
