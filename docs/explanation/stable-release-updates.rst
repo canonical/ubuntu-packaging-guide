@@ -145,14 +145,13 @@ When investigating an increased rate of crashes, focus on the crashes with the
 highest number of occurrences. Examine the occurrences table to determine if 
 these crashes are happening more frequently with the updated version of the 
 package. If they are, investigate the cause and address the crash in a follow-up
-SRU. If not, contact the :term:`Ubuntu SRU Team` about overriding the crash
-report.
+SRU. If not, contact the Ubuntu SRU Team about overriding the crash report.
 
 For new errors, verify that they're indeed new by reviewing the versions table 
 and checking the ``Traceback`` or ``Stacktrace`` to determine if the error 
 originates from the updated package or an underlying library. If you believe the
-error wasn't caused by the update, you can contact the :term:`Ubuntu SRU Team`
-to override the crash.
+error wasn't caused by the update, you can contact the Ubuntu SRU Team to
+override the crash.
 
 Overriding halted phased updates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
