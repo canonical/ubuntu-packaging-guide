@@ -1,6 +1,13 @@
 Stable Release Updates (SRU)
 ============================
 
+.. note::
+
+   This explanantion tries to give you a general overview of the Ubuntu
+   Stable Release Updates Process. See the dedicated 
+   :external+sru:ref:`Ubuntu Stable Release Updates Documentation <home>`
+   for specific details.
+
 After publication of a :term:`Ubuntu Stable Release`, there may be a need
 to update it or fix bugs. You can fix these newly discovered bugs and make
 updates through a special process known as Stable Release Update (SRU).
