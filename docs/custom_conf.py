@@ -169,7 +169,10 @@ custom_extensions = [
     #'canonical.related-links',
     #'canonical.custom-rst-roles',
     #'canonical.terminal-output'
+    'sphinx.ext.intersphinx',
     ]
+
+intersphinx_mapping = {'sru': ('https://canonical-sru-docs.readthedocs-hosted.com/en/latest', None)}
 
 # Add custom required Python modules that must be added to the
 # .sphinx/requirements.txt file.
