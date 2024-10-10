@@ -1327,7 +1327,7 @@ Glossary
         See also: `Ubuntu SRU Team <https://wiki.ubuntu.com/StableReleaseUpdates#Contacting_the_SRU_team>`_
 
     Ubuntu Stable Release
-        Ubuntu stable releases are officially published versions of Ubuntu
+        Ubuntu stable releases are officially-published versions of Ubuntu
         and their :term:`packages <Package>`.
 
     Ubuntu Summit

@@ -312,17 +312,17 @@ the "Final Release", a representative of the team announces it on the
 Stable Release Updates
 ----------------------
 
-After publication of a :term:`Ubuntu Stable Release`, there may be a need
-to update it or fix bugs. You can fix these newly discovered bugs and make
+After publication of an :term:`Ubuntu Stable Release`, there may be a need
+to update it or fix bugs. You can fix these newly-discovered bugs and make
 updates through a special process known as **Stable Release Update (SRU)**.
 
 The SRU process ensures that any changes made to a stable release are thoroughly
-vetted and tested before being made available to users. This is because many of
-the users rely on the stability of the stable release for their day-to-day
+vetted and tested before being made available to users. This is because many
+users rely on the stability of the stable release for their day-to-day
 operations, and any problem they experience with it can be disruptive.
 
 The following paragraphs intend to give you a brief introduction to the SRU
-process. See the decicated :external+sru:ref:`Ubuntu SRU Documentation <home>`
+process. See the dedicated :external+sru:ref:`Ubuntu SRU Documentation <home>`
 for more details about this process.
 
 When are SRUs necessary?
@@ -354,12 +354,12 @@ See also: :external+sru:doc:`SRU requirements <explanation/requirements>`
 Overview
 ~~~~~~~~
 
-A typical SRU will be perfomed like this:
+A typical SRU will be performed like this:
 
 1. Ensure the bug is fixed in the :term:`current development release
    <Current Release in Development>` and all subsequent supported releases to
    ensure consistency across different Ubuntu versions, especially preventing
-   regressions when users upgrade to newer ones.
+   regressions when users upgrade to newer releases.
 #. Update the **existing** bug report detailing the Impact of the Bug, the Test
    Plan to verify that the bug was fixed and highlight where problems could
    occur.
@@ -370,7 +370,7 @@ A typical SRU will be perfomed like this:
    in the :term:`Ubuntu Archive` and follow up in the bug report with your 
    verification results.
 #. The Ubuntu SRU Team will evaluate the testing feedback and move the package
-   into :ref:`updates <ArchivePockets_Updates>` after it passes a minimum aging
+   into :ref:`updates <ArchivePockets_Updates>` after it passes a minimum ageing
    period of 7 days without regressions.
 
 See :external+sru:ref:`how to perform an SRU <howto-perform-standard-sru>`.
@@ -382,20 +382,20 @@ Once the SRU team accepts the SRU into the proposed pocket, the SRU has to be
 verified by the reporter or affected users of the SRU bug in a software 
 environment that closely resembles the state after the SRU team copies the
 package to the updates pocket. Generally, this will be with a system that's up
-to date from the release, security, and updates pockets. It shouldn't include
-other packages from the proposed or backports pocket, except commonly installed
+to date with the release, security, and updates pockets. It shouldn't include
+other packages from the proposed or backports pocket, except commonly-installed
 packages built from the affected source package.
 
-Read more about this process :external+sru:doc:`here <howto/release>`.
+Read :external+sru:doc:`more about this process <howto/release>`.
 
 SRU phasing
 ^^^^^^^^^^^
 
 Once a package is released to the updates pocket, the update is then phased 
-so that the update is gradually made available to expanding subsets of Ubuntu
+so it is gradually made available to expanding subsets of Ubuntu
 users.
 
-Read more about this process :external+sru:ref:`here <explanation-phasing>`.
+Read :external+sru:ref:`more about this process <explanation-phasing>`.
 
 .. _Regressions:
 
@@ -403,20 +403,20 @@ Regressions
 ^^^^^^^^^^^
 
 Regressions are unintended negative consequences that updates introduce.
-They appear as new bugs or failures in previously well-functioning aspect of an 
+They appear as new bugs or failures in previously well-functioning aspects of an 
 Ubuntu release. 
 
-Read more about regressions :external+sru:ref:`here <explanation-regressions>`
-and how to handle them :external+sru:ref:`here <howto-report-regression>`.
+Read :external+sru:ref:`more about regressions <explanation-regressions>`
+and :external+sru:ref:`how to handle them <howto-report-regression>`.
 
 Updates removal
 ^^^^^^^^^^^^^^^
 
 If a bug fixed by an update doesn't get any testing or verification feedback for
-90 days, an automated call for testing comment will be made on the bug report.
-If no testing occurs within an additional 15 days, totaling 105 days without any
+90 days, an automated "call for testing" comment will be made on the bug report.
+If no testing occurs within an additional 15 days, totalling 105 days without any
 testing, the :term:`Stable Release Managers` will remove the package from
 proposed and close the bug task as ``Won't Fix``.
 
-Also, updates will be removed from proposed if they introduce a nontrivial
+Also, updates will be removed from proposed if they introduce a non-trivial
 regression.
