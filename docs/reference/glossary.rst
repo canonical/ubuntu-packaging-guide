@@ -1326,6 +1326,16 @@ Glossary
 
         See also: `Ubuntu SRU Team <https://wiki.ubuntu.com/StableReleaseUpdates#Contacting_the_SRU_team>`_
 
+    Ubuntu Sponsors
+        *Work in Progress*
+
+        See also: `Ubuntu Sponsors <https://launchpad.net/~ubuntu-sponsors>`_
+
+    Ubuntu Security Sponsors
+        *Work in Progress*
+
+        See also: `Ubuntu Security Sponsors Team <https://launchpad.net/~ubuntu-security-sponsors>`_
+
     Ubuntu Stable Release
         The Ubuntu stable release is the officially published version of Ubuntu and
         its set of :term:`packages <Package>`.

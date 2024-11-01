@@ -16,7 +16,7 @@ knowledge and become better at packaging and development.
    releases
    archive
    launchpad
-   sponsoring
+   sponsorship
    proposed-migrations
    stable-release-updates
    debian-merges-and-syncs

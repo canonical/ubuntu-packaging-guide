@@ -306,7 +306,7 @@ Ubuntu encourages contributions from any person in the wider community.
 However, direct uploading to the Ubuntu package archive is restricted. These
 general contributions need to be reviewed and uploaded by a :term:`sponsor <Sponsor>`.
 
-See our :doc:`article on sponsoring </explanation/sponsoring>` that explains this
+See our :doc:`article on sponsorship </explanation/sponsorship>` that explains this
 process in more detail.
 
 Security update propagation
