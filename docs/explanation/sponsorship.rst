@@ -19,7 +19,6 @@ To request sponsorship, follow these steps:
 
 1. `File an Ubuntu bug in Launchpad <https://bugs.launchpad.net/ubuntu/+filebug>`_ or follow up on an existing one.
 #. Add the necessary files, such as patches or ``.diff.gz`` files, according to the package's requirements. If the change is a patch, follow the patch tagging guidelines. For security updates, follow the security update packaging guidelines see `Packaging <https://wiki.ubuntu.com/SecurityTeam/UpdatePreparation#Packaging>`_.
-
 #. Link your changes to the bug. See `SeekingSponsorship <https://wiki.ubuntu.com/DistributedDevelopment/Documentation/SeekingSponsorship>`_.
 #. Subscribe ``ubuntu-sponsors`` or ``ubuntu-security-sponsors`` to the bug.
 
