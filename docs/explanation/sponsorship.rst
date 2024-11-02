@@ -6,7 +6,7 @@ Sponsorship is a process that allows developers without upload rights to submit 
 When can you request sponsorship?
 ---------------------------------
 
-Since upload rights are carefully managed to ensure system stability and security, new contributors usually don't have them. So if you don't have upload rights, you can request sponsorship in the following situations:
+Since upload rights are carefully managed to ensure system stability and security, new contributors don't have them. So if you don't have upload rights, you can request sponsorship in the following situations:
 
 - Making changes to existing packages or incremental updates.
 - Submitting security updates or bug fixes.
@@ -18,14 +18,14 @@ Requesting sponsorship
 To request sponsorship, follow these steps:
 
 1. `File an Ubuntu bug in Launchpad <https://bugs.launchpad.net/ubuntu/+filebug>`_ or follow up on an existing one.
-#. Add the necessary files, such as patches or ``.diff.gz`` files, according to the package's requirements. If the change is a patch, follow the patch tagging guidelines. For security updates, follow the security update packaging guidelines see `Packaging <https://wiki.ubuntu.com/SecurityTeam/UpdatePreparation#Packaging>`_.
-#. Link your changes to the bug. See `SeekingSponsorship <https://wiki.ubuntu.com/DistributedDevelopment/Documentation/SeekingSponsorship>`_.
+#. Add the necessary files, such as patches or ``.diff.gz`` files, according to the package's requirements. If the change is a patch, follow the patch tagging guidelines. For security updates, follow the security update packaging guidelines described in `Packaging <https://wiki.ubuntu.com/SecurityTeam/UpdatePreparation#Packaging>`_.
+#. Link your changes to the bug. See `Seeking Sponsorship <https://wiki.ubuntu.com/DistributedDevelopment/Documentation/SeekingSponsorship>`_.
 #. Subscribe ``ubuntu-sponsors`` or ``ubuntu-security-sponsors`` to the bug.
 
 Sponsoring a patch
 ------------------
 
-Members of the :term:`Ubuntu Sponsors` and :term:`Ubuntu Security Sponsors` teams have the right to sponsor patches or new packages. So if you are interested in sponsoring, you can apply to join these teams.
+Members of the :term:`Ubuntu Sponsors` and :term:`Ubuntu Security Sponsors` teams have the right to sponsor patches or new packages. If you are interested in sponsoring, you can apply to join these teams.
 
 Responding to feedback from sponsors
 ------------------------------------
@@ -36,7 +36,7 @@ If a sponsor reviews your changes and requests further modifications, make the m
 
     $ bzr commit
 
-Now, push your modifications to :term:`Launchpad`. Since ``bzr`` remembers the previous push location, you can simply run:
+Now, push your modifications to :term:`Launchpad`. Since ``bzr`` remembers the previous push location, you can run:
 
 .. code-block:: none
 
@@ -47,7 +47,7 @@ After pushing your modifications, reply to the sponsor's request explaining the 
 Resources
 ---------
 
-- `SponsorshipProcess <https://wiki.ubuntu.com/SponsorshipProcess>`_
-- `SeekingSponsorship <https://wiki.ubuntu.com/DistributedDevelopment/Documentation/SeekingSponsorship>`_
-- `UpdatePreparation <https://wiki.ubuntu.com/SecurityTeam/UpdatePreparation#Packaging>`_
+- `Sponsorship Process <https://wiki.ubuntu.com/SponsorshipProcess>`_
+- `Seeking Sponsorship <https://wiki.ubuntu.com/DistributedDevelopment/Documentation/SeekingSponsorship>`_
+- `Update Preparation <https://wiki.ubuntu.com/SecurityTeam/UpdatePreparation#Packaging>`_
 - `Seeking Review and Sponsorship <https://ubuntu-packaging-guide.readthedocs.io/en/latest/ubuntu-packaging-guide/udd-sponsorship.html>`_
