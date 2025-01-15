@@ -145,6 +145,6 @@ Here is a complete, working example of running the autopkgtest following the bui
 Resources
 ---------
 
-* `Chapter 6. Building the package (Debian New Maintainers' Guide) <https://www.debian.org/doc/manuals/maint-guide/build.html>`
-* `SimpleSbuild (Ubuntu Wiki) <https://wiki.ubuntu.com/SimpleSbuild>`
-* `sbuild (Debian Wiki) <https://wiki.debian.org/sbuild>`
+* `Chapter 6. Building the package (Debian New Maintainers' Guide) <https://www.debian.org/doc/manuals/maint-guide/build.html>`_
+* `SimpleSbuild (Ubuntu Wiki) <https://wiki.ubuntu.com/SimpleSbuild>`_
+* `sbuild (Debian Wiki) <https://wiki.debian.org/sbuild>`_
