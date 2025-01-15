@@ -18,6 +18,7 @@ How do I...?
 
    get-package-source
    download-new-upstream-version
+   copyright-and-licensing
    build-packages
    install-built-packages
    run-tests
