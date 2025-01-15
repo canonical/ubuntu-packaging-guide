@@ -133,7 +133,7 @@ To build both a binary *and* a source package with one sbuild run:
 
     Launchpad rejects uploads which contains both binaries and sources,
     however this is required for uploads to the Debian NEW queue. That being
-    said, uploads to Debian with binaries `will not migrate to Testing <https://lists.debian.org/debian-devel-announce/2019/07/msg00002.html>`.
+    said, uploads to Debian with binaries `will not migrate to Testing <https://lists.debian.org/debian-devel-announce/2019/07/msg00002.html>`_.
 
 Here is a complete, working example of running the autopkgtest following the build:
 
