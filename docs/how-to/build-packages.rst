@@ -3,6 +3,7 @@ Build packages
 
 In Ubuntu, packages can be built in several ways, depending on the intended
 artifacts. We'll cover the following types of builds:
+
 * Source-only
 * Binary-only (using installed build dependencies)
 * Binary-only (using sbuild for a clean environment)
