@@ -3,10 +3,10 @@ Build packages
 
 In Ubuntu, packages can be built in several ways, depending on the intended
 artifacts. We'll cover the following types of builds:
- * Source-only
- * Binary-only (using installed build dependencies)
- * Binary-only (using sbuild for a clean environment)
- * Source and binary (using sbuild for a clean environment)
+* Source-only
+* Binary-only (using installed build dependencies)
+* Binary-only (using sbuild for a clean environment)
+* Source and binary (using sbuild for a clean environment)
 
 In Ubuntu, only source uploads are permitted to PPAs or the archive. That
 being said, it is best practice to perform a local build and iron out any
@@ -145,6 +145,6 @@ Here is a complete, working example of running the autopkgtest following the bui
 Resources
 ---------
 
- * `Chapter 6. Building the package (Debian New Maintainers' Guide) <https://www.debian.org/doc/manuals/maint-guide/build.html>`
- * `SimpleSbuild (Ubuntu Wiki) <https://wiki.ubuntu.com/SimpleSbuild>`
- * `sbuild (Debian Wiki) <https://wiki.debian.org/sbuild>`
+* `Chapter 6. Building the package (Debian New Maintainers' Guide) <https://www.debian.org/doc/manuals/maint-guide/build.html>`
+* `SimpleSbuild (Ubuntu Wiki) <https://wiki.ubuntu.com/SimpleSbuild>`
+* `sbuild (Debian Wiki) <https://wiki.debian.org/sbuild>`
