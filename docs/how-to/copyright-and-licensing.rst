@@ -13,10 +13,10 @@ interact.
 DEP-5 and Copyright Files
 -------------------------
 
-Ubuntu and Debian use the `DEP-5 standard <https://dep-team.pages.debian.net/deps/dep5/>`
-for tracking copyright references in packages. Per Debian Policy `4.5 <https://www.debian.org/doc/debian-policy/ch-source.html#copyright-debian-copyright>`,
-`12.5 <https://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`, and
-`2.3 <https://www.debian.org/doc/debian-policy/ch-archive.html#s-pkgcopyright>`
+Ubuntu and Debian use the `DEP-5 standard <https://dep-team.pages.debian.net/deps/dep5/>`_
+for tracking copyright references in packages. Per Debian Policy `4.5 <https://www.debian.org/doc/debian-policy/ch-source.html#copyright-debian-copyright>`_,
+`12.5 <https://www.debian.org/doc/debian-policy/ch-docs.html#s-copyrightfile>`_, and
+`2.3 <https://www.debian.org/doc/debian-policy/ch-archive.html#s-pkgcopyright>`_
 (which should be considered as the Single Source Of Truth for policy regarding
 copyright files), every package must have a copyright file. While DEP-5 is
 technically not a hard requirement, it is best practice to use DEP-5 when
@@ -50,7 +50,7 @@ Tools for Copyright File Verification
 -------------------------------------
 
 Many tools exist to verify the licenses in a package. You can find a current
-list on the `CopyrightReviewTools Debian Wiki page <https://wiki.debian.org/CopyrightReviewTools>`.
+list on the `CopyrightReviewTools Debian Wiki page <https://wiki.debian.org/CopyrightReviewTools>`_.
 
 The most commonly used tool for this is :manpage:`licensecheck(1)`. Here is an
 example of how you may use it:
@@ -59,22 +59,20 @@ example of how you may use it:
 
     licensecheck --check '.*' --recursive --deb-machine --lines 0 -- *
 
-!!!FIXME!!! slightly more checks here
-
 If all else fails, you will need to manually open each file and make a
 determination based on its copyright header (if there is one).
 
 Further Information
 -------------------
 
- * `Debian Free Software Guidelines <https://www.debian.org/social_contract.html#guidelines>`
- * `DFSG and Software License FAQ (Draft) <https://people.debian.org/~bap/dfsg-faq.html>`
- * `Licensing exercises from the Debian Developer process <https://salsa.debian.org/nm-team/nm-templates/-/blob/master/nm_pp1.txt?ref_type=heads#L48>`
+ * `Debian Free Software Guidelines <https://www.debian.org/social_contract.html#guidelines>`_
+ * `DFSG and Software License FAQ (Draft) <https://people.debian.org/~bap/dfsg-faq.html>`_
+ * `Licensing exercises from the Debian Developer process <https://salsa.debian.org/nm-team/nm-templates/-/blob/master/nm_pp1.txt?ref_type=heads#L48>`_
    - It can be incredibly helpful to answer these questions in your own notes,
      and ask a Debian Developer to verify your answers. Alternatively, you may
      politely ask a Debian Developer for their own answers to those questions.
- * `Ubuntu open-source licenses <https://ubuntu.com/legal/open-source-licences>`
- * `Debian license information <https://www.debian.org/legal/licenses/>`
- * `DFSGLicenses on the Debian Wiki <https://wiki.debian.org/DFSGLicenses>`
- * `The Open Source Definition from OSI <https://opensource.org/osd>`
- * `debian-legal mailing list archives <https://lists.debian.org/debian-legal/>`
+ * `Ubuntu open-source licenses <https://ubuntu.com/legal/open-source-licences>`_
+ * `Debian license information <https://www.debian.org/legal/licenses/>`_
+ * `DFSGLicenses on the Debian Wiki <https://wiki.debian.org/DFSGLicenses>`_
+ * `The Open Source Definition from OSI <https://opensource.org/osd>`_
+ * `debian-legal mailing list archives <https://lists.debian.org/debian-legal/>`_
