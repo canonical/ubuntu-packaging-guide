@@ -83,9 +83,11 @@ Resources
 * `Debian Free Software Guidelines <https://www.debian.org/social_contract.html#guidelines>`_
 * `DFSG and Software License FAQ (Draft) <https://people.debian.org/~bap/dfsg-faq.html>`_
 * `Licensing exercises from the Debian Developer process <https://salsa.debian.org/nm-team/nm-templates/-/blob/master/nm_pp1.txt?ref_type=heads#L48>`_
-  - It can be incredibly helpful to answer these questions in your own notes,
-    and ask a Debian Developer to verify your answers. Alternatively, you may
-    politely ask a Debian Developer for their own answers to those questions.
+
+   - It can be incredibly helpful to answer these questions in your own notes,
+     and ask a Debian Developer to verify your answers. Alternatively, you may
+     politely ask a Debian Developer for their own answers to those questions.
+
 * `Ubuntu open-source licenses <https://ubuntu.com/legal/open-source-licences>`_
 * `Debian license information <https://www.debian.org/legal/licenses/>`_
 * `DFSGLicenses on the Debian Wiki <https://wiki.debian.org/DFSGLicenses>`_
