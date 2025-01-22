@@ -61,6 +61,39 @@ specific license, please review the DFSG FAQ linked in the Resources section:
   file. Some jurisdictions allow copyright for software to be changed
   posthumously, so it is important to still credit authors in this case.
 
+Copyright of Image Files
+++++++++++++++++++++++++
+
+When including image files in a source package, you should also verify there
+are no embedded licenses within the `Exif data <https://en.wikipedia.org/wiki/Exif>`_
+for the image. Additionally, you should also ensure the color profile is free.
+(Examples of non-free color profiles include the `Adobe formats <https://www.adobe.com/support/downloads/iccprofiles/icc_eula_win_end.html>`_.)
+
+You can use the following Bash script to determine whether an image file has
+such data:
+
+.. code-block:: bash
+
+    for i in *; do
+        if [[ "$(exiftool "$i")" =~ (creator|copyright|license|description) ]]; then
+            exiftool "$i"
+        fi
+    done
+
+A non-free image file may output something like:
+
+.. code-block:: ini
+
+    Profile Creator                 : Hewlett-Packard
+    Profile Copyright               : Copyright (c) 1998 Hewlett-Packard Company
+    Profile Description             : Adobe RGB 1998
+
+If there are no licensing details within the Exif data, it is assumed that it
+is licensed the same as the source package or specific directory it resides in.
+
+While this was later proved to be a false positive, you can find an example of
+a non-free image (and how to inform upstreams) `here <https://github.com/lxqt/lxqt-runner/issues/241>`_.
+
 Tools for Copyright File Verification
 -------------------------------------
 
