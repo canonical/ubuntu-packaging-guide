@@ -26,25 +26,25 @@ When you should (not) rewrite a copyright file to use DEP-5
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 You **should** rewrite a copyright file to use DEP-5 if:
- * you are updating to a new upstream version in an Ubuntu-only package.
- * you are updating to a new upstream version in a package that is in both
-   Debian and Ubuntu, and you are sending the delta upstream to Debian.
- * a package you maintain in Debian does not use DEP-5.
+* you are updating to a new upstream version in an Ubuntu-only package.
+* you are updating to a new upstream version in a package that is in both
+  Debian and Ubuntu, and you are sending the delta upstream to Debian.
+* a package you maintain in Debian does not use DEP-5.
 
 You **should not** rewrite a copyright file to use DEP-5 if:
- * you are performing a Stable Release Update, except in the case of
-   documented Microrelease Exceptions.
- * a package does not have an extensive Ubuntu delta and you do not plan on
-   sending the change to Debian.
- * there is general disagreement with the team claiming maintenance of the
-   package in Ubuntu (this should be discussed on the ubuntu-devel mailing
-   list).
- * the package contains an extremely large number of files under different
-   copyrights, and the maintenance of an accurate DEP-5 copyright file for
-   the package would render further maintenance effectively impossible.
-   This exception is not to be used lightly, and should be fallen back on
-   only for the largest and most extremely complicated packages in Debian
-   and Ubuntu, such as the Linux kernel.
+* you are performing a Stable Release Update, except in the case of
+  documented Microrelease Exceptions.
+* a package does not have an extensive Ubuntu delta and you do not plan on
+  sending the change to Debian.
+* there is general disagreement with the team claiming maintenance of the
+  package in Ubuntu (this should be discussed on the ubuntu-devel mailing
+  list).
+* the package contains an extremely large number of files under different
+  copyrights, and the maintenance of an accurate DEP-5 copyright file for
+  the package would render further maintenance effectively impossible.
+  This exception is not to be used lightly, and should be fallen back on
+  only for the largest and most extremely complicated packages in Debian
+  and Ubuntu, such as the Linux kernel.
 
 Tools for Copyright File Verification
 -------------------------------------
@@ -65,14 +65,14 @@ determination based on its copyright header (if there is one).
 Further Information
 -------------------
 
- * `Debian Free Software Guidelines <https://www.debian.org/social_contract.html#guidelines>`_
- * `DFSG and Software License FAQ (Draft) <https://people.debian.org/~bap/dfsg-faq.html>`_
- * `Licensing exercises from the Debian Developer process <https://salsa.debian.org/nm-team/nm-templates/-/blob/master/nm_pp1.txt?ref_type=heads#L48>`_
-   - It can be incredibly helpful to answer these questions in your own notes,
-     and ask a Debian Developer to verify your answers. Alternatively, you may
-     politely ask a Debian Developer for their own answers to those questions.
- * `Ubuntu open-source licenses <https://ubuntu.com/legal/open-source-licences>`_
- * `Debian license information <https://www.debian.org/legal/licenses/>`_
- * `DFSGLicenses on the Debian Wiki <https://wiki.debian.org/DFSGLicenses>`_
- * `The Open Source Definition from OSI <https://opensource.org/osd>`_
- * `debian-legal mailing list archives <https://lists.debian.org/debian-legal/>`_
+* `Debian Free Software Guidelines <https://www.debian.org/social_contract.html#guidelines>`_
+* `DFSG and Software License FAQ (Draft) <https://people.debian.org/~bap/dfsg-faq.html>`_
+* `Licensing exercises from the Debian Developer process <https://salsa.debian.org/nm-team/nm-templates/-/blob/master/nm_pp1.txt?ref_type=heads#L48>`_
+  - It can be incredibly helpful to answer these questions in your own notes,
+    and ask a Debian Developer to verify your answers. Alternatively, you may
+    politely ask a Debian Developer for their own answers to those questions.
+* `Ubuntu open-source licenses <https://ubuntu.com/legal/open-source-licences>`_
+* `Debian license information <https://www.debian.org/legal/licenses/>`_
+* `DFSGLicenses on the Debian Wiki <https://wiki.debian.org/DFSGLicenses>`_
+* `The Open Source Definition from OSI <https://opensource.org/osd>`_
+* `debian-legal mailing list archives <https://lists.debian.org/debian-legal/>`_
