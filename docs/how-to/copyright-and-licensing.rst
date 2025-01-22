@@ -46,6 +46,18 @@ You **should not** rewrite a copyright file to use DEP-5 if:
   only for the largest and most extremely complicated packages in Debian
   and Ubuntu, such as the Linux kernel.
 
+Unclear Licensing and Special Cases
++++++++++++++++++++++++++++++++++++
+
+There are several cases in which the licensing of source files is
+questionable. Below you will find several examples; when in doubt about a
+specific license, please review the DFSG FAQ linked in the Resources section:
+* A source package which contains no licensing information is considered to be
+  proprietary, and thus not eligible for inclusion in Ubuntu.
+* Files licensed in the public domain still must be listed in the copyright
+  file. Some jurisdictions allow copyright for software to be changed
+  posthumously, so it is important to still credit authors in this case.
+
 Tools for Copyright File Verification
 -------------------------------------
 
@@ -62,8 +74,8 @@ example of how you may use it:
 If all else fails, you will need to manually open each file and make a
 determination based on its copyright header (if there is one).
 
-Further Information
--------------------
+Resources
+---------
 
 * `Debian Free Software Guidelines <https://www.debian.org/social_contract.html#guidelines>`_
 * `DFSG and Software License FAQ (Draft) <https://people.debian.org/~bap/dfsg-faq.html>`_
