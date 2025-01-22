@@ -26,12 +26,14 @@ When you should (not) rewrite a copyright file to use DEP-5
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 You **should** rewrite a copyright file to use DEP-5 if:
+
 * you are updating to a new upstream version in an Ubuntu-only package.
 * you are updating to a new upstream version in a package that is in both
   Debian and Ubuntu, and you are sending the delta upstream to Debian.
 * a package you maintain in Debian does not use DEP-5.
 
 You **should not** rewrite a copyright file to use DEP-5 if:
+
 * you are performing a Stable Release Update, except in the case of
   documented Microrelease Exceptions.
 * a package does not have an extensive Ubuntu delta and you do not plan on
@@ -52,6 +54,7 @@ Unclear Licensing and Special Cases
 There are several cases in which the licensing of source files is
 questionable. Below you will find several examples; when in doubt about a
 specific license, please review the DFSG FAQ linked in the Resources section:
+
 * A source package which contains no licensing information is considered to be
   proprietary, and thus not eligible for inclusion in Ubuntu.
 * Files licensed in the public domain still must be listed in the copyright
