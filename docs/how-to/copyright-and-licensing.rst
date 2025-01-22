@@ -39,6 +39,12 @@ You **should not** rewrite a copyright file to use DEP-5 if:
  * there is general disagreement with the team claiming maintenance of the
    package in Ubuntu (this should be discussed on the ubuntu-devel mailing
    list).
+ * the package contains an extremely large number of files under different
+   copyrights, and the maintenance of an accurate DEP-5 copyright file for
+   the package would render further maintenance effectively impossible.
+   This exception is not to be used lightly, and should be fallen back on
+   only for the largest and most extremely complicated packages in Debian
+   and Ubuntu, such as the Linux kernel.
 
 Tools for Copyright File Verification
 -------------------------------------
