@@ -134,7 +134,19 @@ Glossary
         See :term:`arm64`
 
     autopkgtest
-        *Work in Progress*
+        :manpage:`autopkgtest(1)` is a software that interprets and executes tests
+        found in :term:`source packages <Source Package>` that follow the :term:`DEP 8`
+        specification.
+
+        See also: `autopkgtest.ubuntu.com <https://autopkgtest.ubuntu.com/>`_
+
+    autopkgtest Cloud
+        The :term:`Ubuntu project <Ubuntu>` operates a testing infrastructure used to
+        execute automated tests for Ubuntu :term:`source packages <Source Package>`.
+        It is an implementation of the `DEP 8` specification, enabling large-scale
+        testing across a variety of architectures and environments.
+
+        See: 
 
     Backports
         *Work in Progress*
@@ -434,12 +446,31 @@ Glossary
 
         See also: `www.debian.org <https://www.debian.org/>`_
 
+    Debian Enhancement Proposal
+        A Debian Enhancement Proposal (:term:`DEP`) is a formal document that outlines
+        proposed changes, enhancements, or new processes within the
+        :term:`Debian project <Debian>`. DEPs provide a structured way for contributors
+        to suggest, discuss, and document improvements to Debian' software, policies,
+        or workflows.
+
+        See: `dep-team.pages.debian.net <https://dep-team.pages.debian.net/>`_
+
     Debian System Administration
         *Work in Progress*
 
     deb
     debs
         `.deb` is the file extension of a :term:`Debian` :term:`Binary Package`.
+
+    DEP
+        Abbreviation for :term:`Debian Enhancement Proposal`
+
+    DEP 8
+        :term:`DEP` 8 is a specification from the :term:`Debian project <Debian>`
+        that defines a standardized framework for automated testing of
+        :term:`source <Source Package>` and :term:`binary packages <Binary Package>`.
+
+        See: `Current DEP-8 Specification <https://dep-team.pages.debian.net/deps/dep8/>`_
 
     Detached Signature
         A detached signature is a :term:`Digital Signature <Signature>` that is separated
