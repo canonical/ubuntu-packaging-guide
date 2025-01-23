@@ -40,7 +40,7 @@ into the Debian package or :term:`Upstream` project and are no longer needed.
     must also request the respective freeze exception. 
 
     After the Final Release, you must follow the 
-    :doc:`/explanation/stable-release-updates` process. For additional details
+    :ref:`StableReleaseUpdates_Summary` process. For additional details
     about the freezes, see the :doc:`/explanation/development-process` article.
 
 Merges
