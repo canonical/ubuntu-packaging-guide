@@ -354,7 +354,7 @@ See also: :external+sru:doc:`SRU requirements <explanation/requirements>`
 Overview
 ~~~~~~~~
 
-A typical SRU will be performed like this:
+A typical SRU is performed like this:
 
 1. Ensure the bug is fixed in the :term:`current development release
    <Current Release in Development>` and all subsequent supported releases to
@@ -364,12 +364,12 @@ A typical SRU will be performed like this:
    Plan to verify that the bug was fixed and highlight where problems could
    occur.
 #. Get the package with the SRU patch into the upload queue.
-#. The SRU team will then review from the unapproved queue. When the upload is
+#. The SRU team then reviews from the unapproved queue. When the upload is
    ready, the SRU team accepts the upload into the proposed pocket.
 #. Once the builds are ready, autopkgtest are triggered. Test the binaries
    in the :term:`Ubuntu Archive` and follow up in the bug report with your 
    verification results.
-#. The Ubuntu SRU Team will evaluate the testing feedback and move the package
+#. The Ubuntu SRU Team evaluates the testing feedback and moves the package
    into :ref:`updates <ArchivePockets_Updates>` after it passes a minimum ageing
    period of 7 days without regressions.
 
@@ -381,7 +381,7 @@ Verification
 Once the SRU team accepts the SRU into the proposed pocket, the SRU has to be
 verified by the reporter or affected users of the SRU bug in a software 
 environment that closely resembles the state after the SRU team copies the
-package to the updates pocket. Generally, this will be with a system that's up
+package to the updates pocket. Generally, this is with a system that's up
 to date with the release, security, and updates pockets. It shouldn't include
 other packages from the proposed or backports pocket, except commonly-installed
 packages built from the affected source package.
@@ -391,11 +391,11 @@ Read :external+sru:doc:`more about this process <howto/release>`.
 SRU phasing
 ^^^^^^^^^^^
 
-Once a package is released to the updates pocket, the update is then phased 
+Once a package is released to the updates pocket, the update is then phased, 
 so it is gradually made available to expanding subsets of Ubuntu
 users.
 
-Read :external+sru:ref:`more about this process <explanation-phasing>`.
+Read :external+sru:ref:`more about phasing <explanation-phasing>`.
 
 .. _Regressions:
 
@@ -407,16 +407,16 @@ They appear as new bugs or failures in previously well-functioning aspects of an
 Ubuntu release. 
 
 Read :external+sru:ref:`more about regressions <explanation-regressions>`
-and :external+sru:ref:`how to handle them <howto-report-regression>`.
+and :external+sru:ref:`how to handle regressions <howto-report-regression>`.
 
 Updates removal
 ^^^^^^^^^^^^^^^
 
 If a bug fixed by an update doesn't get any testing or verification feedback for
-90 days, an automated "call for testing" comment will be made on the bug report.
+90 days, an automated "call for testing" comment is made on the bug report.
 If no testing occurs within an additional 15 days, totalling 105 days without any
-testing, the :term:`Stable Release Managers` will remove the package from
+testing, the :term:`Stable Release Managers` removes the package from
 proposed and close the bug task as ``Won't Fix``.
 
-Also, updates will be removed from proposed if they introduce a non-trivial
+Also, updates are removed from proposed if they introduce a non-trivial
 regression.
