@@ -18,7 +18,6 @@ knowledge and become better at packaging and development.
    launchpad
    sponsoring
    proposed-migrations
-   stable-release-updates
    debian-merges-and-syncs
    transitions
    backports

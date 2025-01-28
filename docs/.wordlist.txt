@@ -41,6 +41,9 @@ reStructuredText
 roadmap
 Roadmap
 RTD
+SRU
+SRUs
+StableReleaseUpdates
 subdirectories
 subtree
 subfolders
