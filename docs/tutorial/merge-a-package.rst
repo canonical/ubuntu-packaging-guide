@@ -2,7 +2,7 @@ Merge a package from Debian
 ===========================
 
 This article is still work in progress. You can use the
-`Ubuntu Maintainer Handbook <https://github.com/canonical/ubuntu-maintainers-handbook/blob/main/PackageMerging.md#build-source-package>`_
+`Ubuntu Maintainer Handbook <https://github.com/canonical/ubuntu-maintainers-handbook/blob/main/PackageMerging.md>`_
 in the meantime.
 
 .. note::
