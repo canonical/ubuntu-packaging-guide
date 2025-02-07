@@ -36,7 +36,7 @@ I want to submit a fix
 If you found an issue and want to submit a fix for it, or have written a guide
 you would like to add to the documentation, feel free to
 `open a pull request to submit your fix <https://github.com/canonical/ubuntu-packaging-guide/pulls>`_
-against our ``main`` branch. If you need help, please use the discussion board
+against our ``2.0-preview`` branch. If you need help, please use the discussion board
 or contact one of the repository administrators.
 
 Contribution format for the project
