@@ -1329,8 +1329,6 @@ Glossary
     Ubuntu ESM Team
         *Work in Progress*
 
-        See also: `Ubuntu ESM Team <https://launchpad.net/~ubuntu-esm-team>`_
-
     Ubuntu flavours
         *Ubuntu flavours* are :term:`Distributions <Distribution>` of the default :term:`Ubuntu`
         releases, which choose their own default applications and settings. *Ubuntu flavours* are
