@@ -14,3 +14,5 @@
 .. _Ubuntu Studio: https://ubuntustudio.org/
 .. _Ubuntu Unity: https://ubuntuunity.org/
 .. _Xubuntu: https://xubuntu.org/
+
+.. _DEP3Spec: https://dep-team.pages.debian.net/deps/dep3/
