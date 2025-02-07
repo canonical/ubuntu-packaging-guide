@@ -9,6 +9,54 @@ access. The **Ubuntu package archive** hosts :term:`Debian`
 :term:`source packages <Source Package>` (``.dsc`` files). On Ubuntu
 installations, the Ubuntu package archive is configured as the default source
 for the :term:`APT` package manager to download and install packages from.
+This Archive splits into many layers, each with its own terminology.
+The different terminology is quite confusing at first, but if we take a look,
+layer-by-layer, we'll see not just what all the terms mean, but how they all
+fit together.
+
+Let's have a quick overview with this diagram. The general flow is that the
+Archive splits into :ref:`Ubuntu series <ArchiveSeries>`. Each series is split
+up into :ref:`pockets <ArchivePockets>`, and then each pocket contains four
+:ref:`components <ArchiveComponents>`. If we tried to show all of this on one
+diagram, it would be quite extensive, so let's take a look through a single path:
+
+.. mermaid::
+
+    flowchart TD;
+      A[Ubuntu package archive] --> B([Splits into Ubuntu **series**]);
+
+      B --> C[e.g., mantic];
+      B --> D[noble]; 
+      B --> E[oracular, etc]; 
+
+      D --> H([Series split into **pockets**]);
+
+      H --> I[-release];
+      H --> J[-proposed];
+      H --> K[-updates];
+      H --> L[-security];
+      H --> M[-backports];
+
+      K --> N([Splits into **components**]);
+
+      N --> O[main];
+      N --> P[universe];
+      N --> Q[restricted];
+      N --> R[multiverse];
+
+      style C fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+      style D fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+      style E fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+
+      style I fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+      style J fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+      style K fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+      style L fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+      style M fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+      style O fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+      style P fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+      style Q fill:#fff,stroke:#cfcfcf,stroke-width:2px;
+      style R fill:#fff,stroke:#cfcfcf,stroke-width:2px;
 
 .. note::
 
