@@ -18,7 +18,7 @@ done
 if ! grep --silent --fixed-strings '3.0 (quilt)' \
     "${SourcePackageRoot}/debian/source/format"
 then
-    echo -e '\033[1;33mWARNING\033[0m: This source package does \033[1mNOT\033[0m uses the 3.0 (quilt) format. The corresponding defaults defined in ~/.quiltrc do not get applied.'
+    echo -e '\033[1;33mWARNING\033[0m: This source package does \033[1mNOT\033[0m use the 3.0 (quilt) format. The corresponding defaults defined in ~/.quiltrc do not get applied.'
     exit 0
 fi
 
@@ -34,7 +34,7 @@ fi
 # how quilt output should be colored
 : "${QUILT_COLORS:="diff_hdr=1;32:diff_add=1;34:diff_rem=1;31:diff_hunk=1;33:diff_ctx=35:diff_cctx=33"}"
 
-# set default arguments for quilt commands: 
+# set default arguments for quilt commands:
 : "${QUILT_DIFF_ARGS:="-p ab --no-timestamps --no-index --color=auto"}"
 : "${QUILT_PATCHES_ARGS:="--color=auto"}"
 : "${QUILT_PUSH_ARGS:="--color=auto"}"
