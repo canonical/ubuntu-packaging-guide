@@ -11,7 +11,7 @@ BUILDDIR      = _build
 VENVDIR       = $(SPHINXDIR)/venv
 PA11Y         = $(SPHINXDIR)/node_modules/pa11y/bin/pa11y.js
 VENV          = $(VENVDIR)/bin/activate
-SHELL = /usr/bin/bash
+SHELL = /bin/bash
 
 .PHONY: full-help help distro-info-install woke-install pa11y-install install \
         run html epub serve clean clean-doc spelling linkcheck woke pa11y \
@@ -54,19 +54,11 @@ $(VENVDIR): $(SPHINXDIR)/requirements.txt
             mv $(VENVDIR)/pip_list.txt $(VENVDIR)/pip_list.txt.bak
 	@. $(VENV); pip list --local --format=freeze > $(VENVDIR)/pip_list.txt
 	@touch $(VENVDIR)
-
-distro-info-install:
-	if (dpkg --status python3-distro-info | grep installed); then \
-		echo "Skip installing python3-distro-info, because it is already installed."; \
-	else \
-		echo "Installing python3-distro-info..."; \
-		sudo apt-get update; \
-		sudo apt-get install --assume-yes python3-distro-info; \
-	fi
 	
 woke-install:
 	@type woke >/dev/null 2>&1 || \
-            { echo "Installing \"woke\" snap... \n"; sudo snap install woke; }
+		{ echo "Installing \"woke\" using Go..."; \
+		go install github.com/get-woke/woke@latest; }
 
 pa11y-install:
 	@type $(PA11Y) >/dev/null 2>&1 || { \

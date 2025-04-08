@@ -1,7 +1,7 @@
 import sys
 sys.path.append('/usr/lib/python3/dist-packages')
 import datetime
-import distro_info
+# import distro_info
 
 # Custom configuration for the Sphinx documentation builder.
 # All configuration specific to your project should be done in this file.
@@ -192,9 +192,9 @@ custom_html_js_files = []
 
 ## The following settings override the default configuration.
 
-manpages_url = ("https://manpages.ubuntu.com/manpages/"
-                f"{distro_info.UbuntuDistroInfo().stable()}/en/"
-                "man{section}/{page}.{section}.html")
+# manpages_url = ("https://manpages.ubuntu.com/manpages/"
+#                 f"{distro_info.UbuntuDistroInfo().stable()}/en/"
+#                 "man{section}/{page}.{section}.html")
 
 # Specify a reST string that is included at the end of each file.
 # If commented out, use the default (which pulls the reuse/links.txt
