@@ -397,7 +397,12 @@ Glossary
         The date at which the details of a :term:`CVE` are to be publicly disclosed.
 
     Copyleft
-        *Work in Progress*
+        Licenses which implement copyleft grant certain freedoms to their works, under
+        the stipulation that these freedoms are preserved in all derivative works.
+
+        One famous example of copyleft is the :term:`GNU` :term:`General Public License`,
+        which gives its users :term:`Free Software` rights as long as equivalent
+        rights are maintained in modified distributions of said software.
 
     Copyright
         *Work in Progress*
@@ -669,7 +674,13 @@ Glossary
         *Work in Progress*
 
     General Public License
-        *Work in Progress*
+        The :term:`GNU` General Public Licenses (GPL) are a set of :term:`Free Software`
+        licenses. They grant users the ability to use, study, modify, and distribute
+        the software and source code. Additionally, the GPLs are :term:`Copyleft`, so
+        any derivative works must be distributed with the same or requivalent freedoms.
+
+        Prominent projects which use a version of the GPL include :term:`git` and
+        :term:`Linux`.
 
     git
         *Work in Progress*
