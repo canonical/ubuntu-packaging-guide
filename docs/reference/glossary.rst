@@ -658,7 +658,6 @@ Glossary
         :term:`Open Source Software`, so the two categories are often collectively
         referred to as :term:`Free and Open Source Software`.
 
-
         See also: `Free software (Wikipedia) <https://en.wikipedia.org/wiki/Free_software>`_, `FSF Four Freedoms <https://static.fsf.org/nosvn/posters/handout-four-freedoms.pdf>`_
 
     FTBFS
