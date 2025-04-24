@@ -1189,7 +1189,8 @@ Glossary
     Source Code
         The source code of a program is a set of human-readable instructions written in
         a programming language. Those instructions are later converted to machine code
-        to be directly executed by a computer.
+        to be directly executed by a computer. Generally, programmers study and modify
+        software by reading and editing the source code.
 
     Source Package
         A :term:`Debian` *source package* contains the :term:`Source` material used
