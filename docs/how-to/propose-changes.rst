@@ -191,71 +191,14 @@ If the bug doesn't yet exist in Launchpad, create a new bug report. Provide a cl
 Get the source code
 -------------------
 
-Once you're assigned to the bug, get the source code for the affected package. There are several ways to do this, depending on what you need and how you prefer to work.
+Once you're assigned to the bug, get the source code for the affected package. There are four methods to do this and they include:
 
-apt-get source
-~~~~~~~~~~~~~~
+- ``git-ubuntu``
+- ``pull-pkg``
+- ``apt-get source``
+- ``dget``
 
-To get the source code of the package using ``apt-get source``, follow these steps:
-
-1. Edit ``/etc/apt/sources.list``
-2. Uncomment lines starting with ``deb-src``
-3. Run the command:
-
-    .. code-block:: bash
-
-        sudo apt-get update
-
-4. Get the source code by running the command:
-
-    .. code-block:: bash
-
-        apt-get source <package-name>
-
-    .. note::
-
-        Ensure you run the preceding command without ``sudo``.
-
-        This will download and unpack files like ``.dsc``, ``.orig.tar.xz``, and ``.debian.tar.xz`` in your current directory.
-
-git-ubuntu
-~~~~~~~~~~
-
-You can also use `git-ubuntu <https://canonical-git-ubuntu.readthedocs-hosted.com/en/latest/>`_  to clone the package repository. This is the recommended way to work with Ubuntu packages, as it provides a more modern and efficient workflow.
-
-To use ``git-ubuntu``, clone the package repository:
-
-    .. code-block:: bash
-
-        git ubuntu clone <package-name>
-
-This gives you access to the full development history, including Ubuntu-specific changes.
-
-pull-lp-source
-~~~~~~~~~~~~~~
-
-Use this method to fetch and extract the source package directly from Launchpad.
-
-To use ``pull-lp-source``, run the following command:
-
-    .. code-block:: bash
-
-        pull-lp-source <package-name> <release>
-
-This downloads and extracts the source into your current directory. If you omit the release, it downloads the latest development version.
-
-pull-pkg
-~~~~~~~~
-
-``pull-pkg`` works like ``pull-lp-source``. Use ``pull-pkg`` to fetch packages from Ubuntu or Debian archives.
-
-To use ``pull-pkg``, run the following command:
-
-    .. code-block:: bash
-
-        pull-pkg --pull source --distro ubuntu <package-name> <release>
-
-This downloads the source package from the specified release. If you omit the release, it defaults to the latest development version.
+For detailed instructions on using these methods to get the source code, see :ref:`get-package-source`.
 
 Create a patch to fix the issue
 -------------------------------
