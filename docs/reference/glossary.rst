@@ -398,7 +398,7 @@ Glossary
 
     Copyleft
         Licenses which implement copyleft grant certain freedoms to their works, under
-        the stipulation that these freedoms are preserved in all derivative works.
+        the condition that these freedoms are preserved in all derivative works.
 
         One famous example of copyleft is the :term:`GNU` :term:`General Public License`,
         which gives its users :term:`Free Software` rights as long as equivalent
