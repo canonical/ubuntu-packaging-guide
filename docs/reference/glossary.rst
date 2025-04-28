@@ -840,6 +840,14 @@ Glossary
     Maintainer
         *Work in Progress*
 
+    Makefile
+        A Makefile declares a set of tasks to be automatically executed. Makefiles are
+        most commonly used to describe how a program is compiled, installed, cleaned,
+        and uninstalled. The actions the Makefile performs in order to achieve these
+        tasks consist of :term:`Shell` commands.
+
+        See also: `GNU Make Documentation <https://www.gnu.org/software/make/manual/make.html#Introduction>`_
+
     Masters of the Universe
         *Work in Progress*
 
