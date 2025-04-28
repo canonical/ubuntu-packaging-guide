@@ -246,7 +246,7 @@ The :file:`rules` file
 ----------------------
 
 The :file:`debian/rules` file does all the work for creating our package. It is
-a Makefile with targets to compile and install the application, then create the
+a :term:`Makefile` with targets to compile and install the application, then create the
 :file:`.deb` file from the installed files. It also has a target to clean up all
 the build files so you end up with just a source package again.
 
