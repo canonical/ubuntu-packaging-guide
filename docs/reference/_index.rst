@@ -11,6 +11,7 @@ support matrices, and so on.
    :titlesonly:
 
    debian-dir-overview
+   debian-policy
    architectures
    package-version-format
    launchpad-text-markup
