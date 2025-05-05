@@ -25,7 +25,7 @@ However, static and variable files should be separated since static files can re
 Core filesystem hierarchies
 ---------------------------
 
-The FHS prescribes three top-level filesystem hierarchies for UNIX-like operating systems:
+The FHS prescribes three main filesystem hierarchies for UNIX-like operating systems:
 
 - the root filesystem (``/``) hierarchy
 - the ``/usr`` hierarchy
