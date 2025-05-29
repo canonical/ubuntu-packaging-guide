@@ -71,7 +71,7 @@ Glossary
     APT
         Abbreviation for *Advanced Package Manager*. 
         
-        See: :doc:`/reference/apt`
+        See: `Advanced Packaging Tool (Ubuntu Server documentation) <https://ubuntu.com/server/docs/package-management#advanced-packaging-tool>`_
 
     Architecture
         Within the context of :term:`Ubuntu`, this refers to the system architecture
@@ -134,7 +134,19 @@ Glossary
         See :term:`arm64`
 
     autopkgtest
-        *Work in Progress*
+        :manpage:`autopkgtest(1)` is a software that interprets and executes tests
+        found in :term:`source packages <Source Package>` that follow the :term:`DEP 8`
+        specification.
+
+        See also: `autopkgtest.ubuntu.com <https://autopkgtest.ubuntu.com/>`_
+
+    autopkgtest Cloud
+        The :term:`Ubuntu project <Ubuntu>` operates a testing infrastructure used to
+        execute automated tests for Ubuntu :term:`source packages <Source Package>`.
+        It is an implementation of the `DEP 8` specification, enabling large-scale
+        testing across a variety of architectures and environments.
+
+        See: 
 
     Backports
         *Work in Progress*
@@ -189,8 +201,7 @@ Glossary
     Breezy
         A :term:`Fork` of the :term:`Bazaar` :term:`Version Control System`.
 
-        See also: `Breezy (Launchpad) <https://launchpad.net/brz>`_,
-        `www.breezy-vcs.org <https://www.breezy-vcs.org/>`_
+        See also: `Breezy (Launchpad) <https://launchpad.net/brz>`_
 
     BTS
         Abbreviation for :term:`Bug Tracking System`
@@ -205,6 +216,9 @@ Glossary
         process to ensure that the software functions as intended and is free of errors.
 
         See also: `Software bug (Wikipedia) <https://en.wikipedia.org/wiki/Software_bug>`_
+
+    Bug supervisor
+        *Work in Progress*
 
     Bug Tracking System
         A platform used by software development teams to manage and monitor the progress
@@ -238,6 +252,9 @@ Glossary
         The discussions here will only be accessible to the :term:`Canonical` employes.
 
         See: `discourse.canonical.com <CanonicalDiscourse_>`_
+
+    Canonical partner archive
+        *Work in Progress*
 
     CD
         Abbreviation for :term:`Continuous Delivery`
@@ -275,7 +292,7 @@ Glossary
         `core values of Ubuntu <https://design.ubuntu.com/brand>`_:
         *Freedom*, *Reliable*, *Precise* and *Collaborative*.
 
-        .. image:: ../images/reference/glossary/CoF-Square.svg
+        .. image:: ../images/reference/glossary/CoF-Square.png
             :width: 200
             :height: 200
             :alt: Circle of Friends (Ubuntu Logo)
@@ -380,7 +397,12 @@ Glossary
         The date at which the details of a :term:`CVE` are to be publicly disclosed.
 
     Copyleft
-        *Work in Progress*
+        Licenses which implement copyleft grant certain freedoms to their works, under
+        the condition that these freedoms are preserved in all derivative works.
+
+        One famous example of copyleft is the :term:`GNU` :term:`General Public License`,
+        which gives its users :term:`Free Software` rights as long as equivalent
+        rights are maintained in modified distributions of said software.
 
     Copyright
         *Work in Progress*
@@ -429,12 +451,31 @@ Glossary
 
         See also: `www.debian.org <https://www.debian.org/>`_
 
+    Debian Enhancement Proposal
+        A Debian Enhancement Proposal (:term:`DEP`) is a formal document that outlines
+        proposed changes, enhancements, or new processes within the
+        :term:`Debian project <Debian>`. DEPs provide a structured way for contributors
+        to suggest, discuss, and document improvements to Debian' software, policies,
+        or workflows.
+
+        See: `dep-team.pages.debian.net <https://dep-team.pages.debian.net/>`_
+
     Debian System Administration
         *Work in Progress*
 
     deb
     debs
         `.deb` is the file extension of a :term:`Debian` :term:`Binary Package`.
+
+    DEP
+        Abbreviation for :term:`Debian Enhancement Proposal`
+
+    DEP 8
+        :term:`DEP` 8 is a specification from the :term:`Debian project <Debian>`
+        that defines a standardized framework for automated testing of
+        :term:`source <Source Package>` and :term:`binary packages <Binary Package>`.
+
+        See: `Current DEP-8 Specification <https://dep-team.pages.debian.net/deps/dep8/>`_
 
     Detached Signature
         A detached signature is a :term:`Digital Signature <Signature>` that is separated
@@ -593,12 +634,31 @@ Glossary
         Abbreviation for :term:`Feature Request`
 
     Free and Open Source Software
-        *Work in Progress*
+        The term "Free and Open Source Software" encompasses both :term:`Free Software`
+        and :term:`Open Source Software`. In short, free and open-source software not
+        only makes its :term:`Source Code` publicly available, but also allows users to
+        use, distribute, modify, and distribute modified copies of the software free of
+        charge.
 
         See also: `Free and open-source software (Wikipedia) <https://en.wikipedia.org/wiki/Free_and_open-source_software>`_
 
     Free Software
-        *Work in Progress*
+        A common definition of Free Software is any software which guarantees the Free
+        Software Foundation's four essential freedoms:
+
+        - The freedom to run the program as you wish, for any purpose (freedom 0).
+        - The freedom to study how the program works, and change it so it does your
+          computing as you wish (freedom 1). This requires access to the source code.
+        - The freedom to redistribute copies of the original software program
+          (freedom 2).
+        - The freedom to distribute copies of your modified versions to others (freedom 3).
+          This also requires access to the source code.
+
+        The definition of free software has significant overlap with
+        :term:`Open Source Software`, so the two categories are often collectively
+        referred to as :term:`Free and Open Source Software`.
+
+        See also: `Free software (Wikipedia) <https://en.wikipedia.org/wiki/Free_software>`_, `FSF Four Freedoms <https://static.fsf.org/nosvn/posters/handout-four-freedoms.pdf>`_
 
     FTBFS
         Abbreviation for :term:`Failed to build from Source`
@@ -613,7 +673,13 @@ Glossary
         *Work in Progress*
 
     General Public License
-        *Work in Progress*
+        The :term:`GNU` General Public Licenses (GPL) are a set of :term:`Free Software`
+        licenses. They grant users the ability to use, study, modify, and distribute
+        the software and source code. Additionally, the GPLs are :term:`Copyleft`, so
+        any derivative works must be distributed with the same or requivalent freedoms.
+
+        Prominent projects which use a version of the GPL include :term:`git` and
+        :term:`Linux`.
 
     git
         *Work in Progress*
@@ -866,7 +932,15 @@ Glossary
         *Work in Progress*
 
     Open Source Software
-        *Work in Progress*
+        Open source software is any software with a license that guarantees a certain
+        set of rights to users of the software: the rights to use, study, modify, and
+        distribute both the software and its source code for any purpose.
+
+        The definition of open source software has significant overlap with
+        :term:`Free Software`, so the two categories are often collectively
+        referred to as :term:`Free and Open Source Software`.
+
+        See also: `The Open Source Initiative's standard definition of Open Source <https://opensource.org/osd>`_
 
     Operating System
         An *operating system* (OS) is essential system software that manages computer
@@ -1069,6 +1143,11 @@ Glossary
     s390x
         *Work in Progress*
 
+    Seeds
+        Seeds are lists of packages, that define which packages goes into the
+        :term:`Main` component of the :term:`Ubuntu Archive` and which packages
+        goes into the distribution :term:`images <Image>`.
+
     Series
         A *series* refers to the :term:`Packages <Package>` in the :term:`Ubuntu Archive`
         that target a specific :term:`Ubuntu` version. A *series* is usually referred
@@ -1107,7 +1186,10 @@ Glossary
         *Work in Progress*
 
     Source Code
-        *Work in Progress*
+        The source code of a program is a set of human-readable instructions written in
+        a programming language. Those instructions are later converted to machine code
+        to be directly executed by a computer. Generally, programmers study and modify
+        software by reading and editing the source code.
 
     Source Package
         A :term:`Debian` *source package* contains the :term:`Source` material used
@@ -1123,6 +1205,12 @@ Glossary
 
     SRU
         Abbreviation for :term:`Stable Release Update`
+    
+    SRU Verification Team
+        *Work in Progress*
+    
+    Stable Release Managers
+        *Work in Progress*
 
     Stable Release Update
         *Work in Progress*
@@ -1265,6 +1353,11 @@ Glossary
 
         See: `discourse.ubuntu.com <UbuntuDiscourse_>`_
 
+    Ubuntu ESM Team
+        *Work in Progress*
+
+        See also: `Ubuntu ESM Team <https://launchpad.net/~ubuntu-esm-team>`_
+
     Ubuntu flavours
         *Ubuntu flavours* are :term:`Distributions <Distribution>` of the default :term:`Ubuntu`
         releases, which choose their own default applications and settings. *Ubuntu flavours* are
@@ -1299,6 +1392,25 @@ Glossary
 
     Ubuntu Server
         *Work in Progress*
+
+    Ubuntu SRU Team
+        *Work in Progress*
+
+        See also: `Ubuntu SRU Team <https://wiki.ubuntu.com/StableReleaseUpdates#Contacting_the_SRU_team>`_
+
+    Ubuntu Sponsors
+        *Work in Progress*
+
+        See also: `Ubuntu Sponsors <https://launchpad.net/~ubuntu-sponsors>`_
+
+    Ubuntu Security Sponsors
+        *Work in Progress*
+
+        See also: `Ubuntu Security Sponsors Team <https://launchpad.net/~ubuntu-security-sponsors>`_
+
+    Ubuntu Stable Release
+        Ubuntu stable releases are officially-published versions of Ubuntu
+        and their :term:`packages <Package>`.
 
     Ubuntu Summit
         The *Ubuntu Summit* (US) is a continuation of :term:`Ubuntu Developer Summit`

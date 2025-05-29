@@ -252,9 +252,9 @@ Country mirrors are accessible via the domain name format:
 You can see which mirror is the country mirror by doing a simple
 :term:`DNS` lookup. For example:
 
-.. tab-set::
+.. tabs::
 
-    .. tab-item:: Finland (FI)
+    .. tab:: Finland (FI)
 
         .. code:: bash
 
@@ -267,7 +267,7 @@ You can see which mirror is the country mirror by doing a simple
 
         Therefore, ``mirrors.nic.funet.fi`` is Finland's country mirror.
 
-    .. tab-item:: Tunisia (TN)
+    .. tab:: Tunisia (TN)
 
         Tunisia does not have any third-party mirrors in its country. Therefore the
         Tunisia country mirror is just the primary Ubuntu package archive server
@@ -306,7 +306,7 @@ Ubuntu encourages contributions from any person in the wider community.
 However, direct uploading to the Ubuntu package archive is restricted. These
 general contributions need to be reviewed and uploaded by a :term:`sponsor <Sponsor>`.
 
-See our :doc:`article on sponsoring </explanation/sponsoring>` that explains this
+See our :doc:`article on sponsorship </explanation/sponsorship>` that explains this
 process in more detail.
 
 Security update propagation

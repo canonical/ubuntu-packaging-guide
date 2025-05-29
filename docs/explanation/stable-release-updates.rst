@@ -1,2 +1,0 @@
-Stable Release Updates (SRU)
-============================

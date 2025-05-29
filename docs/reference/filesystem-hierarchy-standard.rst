@@ -1,2 +1,0 @@
-Filesystem Hierarchy Standard (FHS)
-===================================

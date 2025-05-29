@@ -183,10 +183,9 @@ The :term:`APT` package manager can also fetch source packages.
 Basic usage
 ~~~~~~~~~~~
 
-.. tab-set::
+.. tabs::
 
-    .. tab-item:: apt
-        :sync: apt
+    .. group-tab:: apt
 
         .. code-block:: none
 
@@ -194,8 +193,7 @@ Basic usage
 
         You can find further information on the manual page :manpage:`apt(8)`.
 
-    .. tab-item:: apt-get
-        :sync: apt-get
+    .. group-tab:: apt-get
 
         .. code-block:: none
 
@@ -206,21 +204,15 @@ Basic usage
 Example
 ~~~~~~~
 
-.. tab-set::
+.. tabs::
 
-    .. tab-item:: apt
-        :sync: apt
+    .. code-tab:: bash apt
 
-        .. code-block:: bash
+        apt source 'hello'
 
-            apt source 'hello'
+    .. code-tab:: bash apt-get
 
-    .. tab-item:: apt-get
-        :sync: apt-get
-
-        .. code-block:: bash
-
-            apt-get source 'hello'
+        apt-get source 'hello'
 
 ``dget``
 --------

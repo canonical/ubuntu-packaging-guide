@@ -1,4 +1,7 @@
+import sys
+sys.path.append('/usr/lib/python3/dist-packages')
 import datetime
+import distro_info
 
 # Custom configuration for the Sphinx documentation builder.
 # All configuration specific to your project should be done in this file.
@@ -138,6 +141,7 @@ linkcheck_ignore = [
     r"mailto:.+",
     r"jabber:noreply@launchpad\.net",
     r"http://www.example.com/.+",
+    r"https://merges.ubuntu.com/.*",
     ]
 
 # Pages on which to ignore anchors
@@ -160,12 +164,15 @@ custom_linkcheck_anchors_ignore_for_url = []
 # not need to be added here: myst_parser, sphinx_copybutton, sphinx_design,
 # sphinx_reredirects, sphinxcontrib.jquery, sphinxext.opengraph
 custom_extensions = [
-    #'sphinx_tabs.tabs',
+    'sphinx_tabs.tabs',
     #'canonical.youtube-links',
     #'canonical.related-links',
     #'canonical.custom-rst-roles',
     #'canonical.terminal-output'
+    'sphinx.ext.intersphinx',
     ]
+
+intersphinx_mapping = {'sru': ('https://canonical-sru-docs.readthedocs-hosted.com/en/latest', None)}
 
 # Add custom required Python modules that must be added to the
 # .sphinx/requirements.txt file.
@@ -190,7 +197,9 @@ custom_html_js_files = []
 
 ## The following settings override the default configuration.
 
-manpages_url = 'https://manpages.ubuntu.com/manpages/en/man{section}/{page}.{section}.html'
+manpages_url = ("https://manpages.ubuntu.com/manpages/"
+                f"{distro_info.UbuntuDistroInfo().stable()}/en/"
+                "man{section}/{page}.{section}.html")
 
 # Specify a reST string that is included at the end of each file.
 # If commented out, use the default (which pulls the reuse/links.txt
@@ -248,12 +257,21 @@ epub_show_urls = 'no'
 
 # -- Options for PDF output --------------------------------------------------
 
+latex_additional_files = [
+    "./.sphinx/fonts/Ubuntu-B.ttf",
+    "./.sphinx/fonts/Ubuntu-R.ttf",
+    "./.sphinx/fonts/Ubuntu-RI.ttf",
+    "./.sphinx/fonts/UbuntuMono-R.ttf",
+    "./.sphinx/fonts/UbuntuMono-RI.ttf",
+    "./.sphinx/fonts/UbuntuMono-B.ttf",
+    "./.sphinx/images/Canonical-logo-4x.png",
+    "./.sphinx/images/front-page-light.pdf",
+    "./.sphinx/images/normal-page-footer.pdf",
+]
+
 latex_engine = 'xelatex'
 latex_show_pagerefs = True
 latex_show_urls = 'footnote'
-latex_elements = {
-    'papersize': 'a4paper',
-}
 latex_documents = [
     (
         root_doc,
@@ -264,3 +282,123 @@ latex_documents = [
         True,
     ),
 ]
+latex_elements = {
+    'papersize': 'a4paper',
+    'pointsize': '11pt',
+    'fncychap': '',
+    'preamble': r'''
+%\usepackage{charter}
+%\usepackage[defaultsans]{lato}
+%\usepackage{inconsolata}
+\setmainfont[UprightFont = *-R, BoldFont = *-B, ItalicFont=*-RI, Extension = .ttf]{Ubuntu}
+\setmonofont[UprightFont = *-R, BoldFont = *-B, ItalicFont=*-RI, Extension = .ttf]{UbuntuMono}
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{breakable}
+\usepackage{lastpage}
+\usepackage{tabto}
+\usepackage{ifthen}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{changepage}
+\usepackage{array}
+\usepackage{tabularx}
+\graphicspath{ {../../.sphinx/images/} }
+\definecolor{yellowgreen}{RGB}{154, 205, 50}
+\definecolor{title}{RGB}{76, 17, 48}
+\definecolor{subtitle}{RGB}{116, 27, 71}
+\definecolor{label}{RGB}{119, 41, 100}
+\definecolor{copyright}{RGB}{174, 167, 159}
+\makeatletter
+\def\tcb@finalize@environment{%
+  \color{.}% hack for xelatex
+  \tcb@layer@dec%
+}
+\makeatother
+\newenvironment{sphinxclassprompt}{\color{yellowgreen}\setmonofont[Color = 9ACD32, UprightFont = *-R]{UbuntuMono}}{}
+\tcbset{enhanced jigsaw, colback=black, fontupper=\color{white}}
+\newtcolorbox{termbox}{use color stack, breakable, colupper=white, halign=flush left}
+\newenvironment{sphinxclassterminal}{\setmonofont[Color = white, UprightFont = *-R]{UbuntuMono}\sphinxsetup{VerbatimColor={black}}\begin{termbox}}{\end{termbox}}
+\newcommand{\dimtorightedge}{%
+  \dimexpr\paperwidth-1in-\hoffset-\oddsidemargin\relax}
+\newcommand{\dimtotop}{%
+  \dimexpr\height-1in-\voffset-\topmargin-\headheight-\headsep\relax}
+\newtoggle{tpage}
+\AtBeginEnvironment{titlepage}{\global\toggletrue{tpage}}
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[R]{\thepage\ of \pageref*{LastPage}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+\fancypagestyle{normal}{
+    \fancyhf{}
+    \fancyfoot[R]{\thepage\ of \pageref*{LastPage}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+\fancypagestyle{titlepage}{%
+    \fancyhf{}
+    \fancyfoot[L]{\footnotesize \textcolor{copyright}{© 2024 Canonical Ltd. All rights reserved.}}
+}
+\newcommand\sphinxbackoftitlepage{\thispagestyle{titlepage}}
+\titleformat{\chapter}[block]{\Huge \color{title} \bfseries\filright}{\thechapter .}{1.5ex}{}
+\titlespacing{\chapter}{0pt}{0pt}{0pt}
+\titleformat{\section}[block]{\huge \bfseries\filright}{\thesection .}{1.5ex}{} 
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titleformat{\subsection}[block]{\Large \bfseries\filright}{\thesubsection .}{1.5ex}{} 
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\setcounter{tocdepth}{1}
+\renewcommand\pagenumbering[1]{}
+''',
+    'sphinxsetup': 'verbatimwithframe=false, pre_border-radius=0pt, verbatimvisiblespace=\\phantom{}, verbatimcontinued=\\phantom{}',
+    'extraclassoptions': 'openany,oneside',
+    'maketitle': r'''
+\begin{titlepage}
+\begin{flushleft}
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east, inner sep=0] at (current page.south east) {
+    \includegraphics[width=\paperwidth, height=\paperheight]{front-page-light}
+    };
+    \end{tikzpicture}
+\end{flushleft}
+
+\vspace*{3cm}
+
+\begin{adjustwidth}{8cm}{0pt}
+\begin{flushleft}
+    \huge \textcolor{black}{\textbf{}{\raggedright{Ubuntu Packaging Guide}}}
+\end{flushleft}
+\end{adjustwidth}
+
+\vfill
+
+\begin{adjustwidth}{8cm}{0pt}
+\begin{tabularx}{0.5\textwidth}{ l l }
+    \hspace{3cm}  & \textcolor{lightgray}{© 2024 Canonical Ltd.}  \\
+    \hspace{3cm}  & \textcolor{lightgray}{All rights reserved.}   \\
+    \hspace{3cm}  &                                               \\
+    \hspace{3cm}  &                                               \\
+                                 
+\end{tabularx}
+\end{adjustwidth}
+
+\end{titlepage}
+\RemoveFromHook{shipout/background}
+\AddToHook{shipout/background}{
+      \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=south west, align=left, inner sep=0] at (current page.south west) {
+        \includegraphics[width=\paperwidth]{normal-page-footer}
+      };
+      \end{tikzpicture}
+      \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north east, opacity=0.5, inner sep=35] at (current page.north east) {
+        \includegraphics[width=4cm]{Canonical-logo-4x}
+      };
+      \end{tikzpicture}
+    }
+''',
+}

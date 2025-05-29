@@ -11,9 +11,11 @@ BUILDDIR      = _build
 VENVDIR       = $(SPHINXDIR)/venv
 PA11Y         = $(SPHINXDIR)/node_modules/pa11y/bin/pa11y.js
 VENV          = $(VENVDIR)/bin/activate
+SHELL = /usr/bin/bash
 
-.PHONY: full-help help woke-install pa11y-install install run html epub serve \
-        clean clean-doc spelling linkcheck woke pa11y Makefile
+.PHONY: full-help help distro-info-install woke-install pa11y-install install \
+        run html epub serve clean clean-doc spelling linkcheck woke pa11y \
+		pdf pdf-prep pdf-prep-force Makefile
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -28,6 +30,8 @@ help:
         "* check spelling: make spelling \n" \
         "* check inclusive language: make woke \n" \
         "* check accessibility: make pa11y \n" \
+        "* build PDF: make pdf \n" \
+        "* force install packages for PDF generation: make pdf-prep-force \n" \
         "* other possible targets: make <press TAB twice> \n" \
         "--------------------------------------------------------------- \n"
 
@@ -36,13 +40,13 @@ full-help: $(VENVDIR)
 	@echo "\n\033[1;31mNOTE: This help texts shows unsupported targets!\033[0m"
 	@echo "Run 'make help' to see supported targets."
 	
-$(SPHINXDIR)/requirements.txt:
+$(SPHINXDIR)/requirements.txt: distro-info-install
 	python3 build_requirements.py
 
 # If requirements are updated, venv should be rebuilt and timestamped.
 $(VENVDIR): $(SPHINXDIR)/requirements.txt
 	@echo "... setting up virtualenv"
-	python3 -m venv $(VENVDIR)
+	python3 -m venv --system-site-packages $(VENVDIR)
 	. $(VENV); pip install --require-virtualenv \
 	    --upgrade -r $(SPHINXDIR)/requirements.txt \
             --log $(VENVDIR)/pip_install.log
@@ -51,6 +55,15 @@ $(VENVDIR): $(SPHINXDIR)/requirements.txt
 	@. $(VENV); pip list --local --format=freeze > $(VENVDIR)/pip_list.txt
 	@touch $(VENVDIR)
 
+distro-info-install:
+	if (dpkg --status python3-distro-info | grep installed); then \
+		echo "Skip installing python3-distro-info, because it is already installed."; \
+	else \
+		echo "Installing python3-distro-info..."; \
+		sudo apt-get update; \
+		sudo apt-get install --assume-yes python3-distro-info; \
+	fi
+	
 woke-install:
 	@type woke >/dev/null 2>&1 || \
             { echo "Installing \"woke\" snap... \n"; sudo snap install woke; }
@@ -98,6 +111,36 @@ woke: woke-install
 
 pa11y: pa11y-install html
 	find $(BUILDDIR) -name *.html -print0 | xargs -n 1 -0 $(PA11Y)
+
+# Standard PDF generation checks for system packages and provides context if not found
+
+pdf-prep: install
+	@. $(VENV); (dpkg-query -W -f='$${Status}' latexmk 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package latexmk is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' fonts-freefont-otf 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package fonts-freefont-otf is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' fonts-ibm-plex 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package fonts-ibm-plex is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' texlive-latex-recommended 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package texlive-latex-recommended is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' texlive-latex-extra 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package texlive-latex-extra is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' texlive-fonts-recommended 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package texlive-fonts-recommended is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' texlive-font-utils 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package texlive-font-utils is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' texlive-lang-cjk 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package texlive-lang-cjk is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' texlive-xetex 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package texlive-xetex is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' plantuml 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package plantuml is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' xindy 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package xindy is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' tex-gyre 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package tex-gyre is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+	@. $(VENV); (dpkg-query -W -f='$${Status}' dvipng 2>/dev/null | grep -c "ok installed" >/dev/null && echo "Package dvipng is installed") || (echo "PDF generation requires the installation of the following packages: latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng" && echo "" && echo "make pdf-prep-force will install these packages" && echo "" && echo "Please be aware these packages will be installed to your system" && false)
+
+# Entrypoint to install system packages, separate from usual workflow due to permanence
+
+pdf-prep-force:
+	apt-get update
+	apt-get install --no-install-recommends -y latexmk fonts-freefont-otf fonts-ibm-plex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-font-utils texlive-lang-cjk texlive-xetex plantuml xindy tex-gyre dvipng \
+
+pdf: pdf-prep
+	. $(VENV); sphinx-build -M latexpdf "$(SOURCEDIR)" "_build" $(SPHINXOPTS)
+	rm ./_build/latex/front-page-light.pdf || true
+	rm ./_build/latex/normal-page-footer.pdf || true
+	find ./_build/latex -name "*.pdf" -exec mv -t ./ {} +
+	rm -r _build
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

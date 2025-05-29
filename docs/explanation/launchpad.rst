@@ -58,7 +58,7 @@ trigger the :term:`autopkgtests <autopkgtest>` for packages in a PPA.
 git-based workflow for the development of Ubuntu source packages
 ----------------------------------------------------------------
 
-Launchpad hosts a :doc:`/reference/git-ubuntu` importer service that maintains
+Launchpad hosts a :term:`git-ubuntu` importer service that maintains
 a view of the entire packaging version history of Ubuntu :term:`source packages <Source Package>` using
 git repositories with a common branching and tagging scheme. The git-ubuntu
 :term:`CLI` provides tooling and automation that understands these repositories
@@ -144,4 +144,3 @@ Resources
 - `Launchpad wiki <https://help.launchpad.net/>`_
 - `Launchpad development wiki <https://dev.launchpad.net/>`_
 - `Launchpad blog <https://blog.launchpad.net/>`_
-- :doc:`/reference/git-ubuntu`
