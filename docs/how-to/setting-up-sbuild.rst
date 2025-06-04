@@ -102,6 +102,10 @@ source package as second parameter::
 
     sbuild -d jammy-amd64 ~/packages/goodbye_*.dsc
 
+To add additional repositories like PPAs or enabling the proposed pocket one can use ``--extra-repository``::
+
+    sbuild -d jammy-amd64 --extra-repository="deb http://archive.ubuntu.com/ubuntu $release-proposed main universe" ~/packages/goodbye_*.dsc
+
 To make use of all power of your CPU, you can specify number of threads
 used for building using standard ``-j<threads>``::
 
