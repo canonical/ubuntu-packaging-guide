@@ -104,7 +104,12 @@ source package as second parameter::
 
 To add additional repositories like PPAs or enabling the proposed pocket one can use ``--extra-repository``::
 
-    sbuild -d jammy-amd64 --extra-repository="deb http://archive.ubuntu.com/ubuntu $release-proposed main universe" ~/packages/goodbye_*.dsc
+    # Adding a PPA
+    sbuild -d noble-amd64 --extra-repository="deb [trusted=yes] http://ppa.launchpad.net/$lpuser/$ppaname/ubuntu noble main" *.dsc
+    # If for example, proposed was disabled at mk-sbuild via --skip-proposed
+    sbuild -d noble-amd64 --extra-repository="deb http://archive.ubuntu.com/ubuntu noble-proposed main universe" ~/packages/goodbye_*.dsc
+    # Same for different architectures at ports.ubuntu.com
+    sbuild -d noble-s390x --extra-repository="deb http://ports.ubuntu.com/ubuntu-ports noble-proposed main universe" ~/packages/goodbye_*.dsc
 
 To make use of all power of your CPU, you can specify number of threads
 used for building using standard ``-j<threads>``::
