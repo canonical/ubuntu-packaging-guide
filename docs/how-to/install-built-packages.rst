@@ -32,10 +32,9 @@ packages on an Ubuntu installation.
 Install ``.deb`` files
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. tab-set::
+.. tabs::
 
-    .. tab-item:: apt
-        :sync: apt
+    .. group-tab:: apt
 
         You can install one or multiple ``.deb`` files by using :command:`apt install` command:
 
@@ -51,8 +50,7 @@ Install ``.deb`` files
         
             sudo apt install 'hello_2.10-3_amd64.deb'
 
-    .. tab-item:: apt-get
-        :sync: apt-get
+    .. group-tab:: apt-get
 
         You can install one or multiple ``.deb`` files by using :command:`apt-get install` command:
 
@@ -68,8 +66,7 @@ Install ``.deb`` files
         
             sudo apt-get install hello_2.10-3_amd64.deb
 
-    .. tab-item:: dpkg
-        :sync: dpkg
+    .. group-tab:: dpkg
 
         You can install one or multiple ``.deb`` files by using :command:`dpkg --install` command:
 
@@ -99,10 +96,9 @@ packages.
 Keep the configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. tab-set::
+.. tabs::
 
-    .. tab-item:: apt
-        :sync: apt
+    .. group-tab:: apt
     
         You can uninstall one or multiple packages and **keep** their configuration
         files by using the :command:`apt remove` command:
@@ -118,8 +114,7 @@ Keep the configuration files
         
             sudo apt remove hello
 
-    .. tab-item:: apt-get
-        :sync: apt-get
+    .. group-tab:: apt-get
     
         You can uninstall one or multiple packages and **keep** their configuration
         files by using the :command:`apt-get remove` command:
@@ -136,8 +131,7 @@ Keep the configuration files
             sudo apt-get remove hello
 
 
-    .. tab-item:: dpkg
-        :sync: dpkg
+    .. group-tab:: dpkg
 
         You can uninstall one or multiple packages and **keep** their configuration
         files by using the :command:`dpkg --remove` command:
@@ -156,10 +150,9 @@ Keep the configuration files
 Delete the configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. tab-set::
+.. tabs::
 
-    .. tab-item:: apt
-        :sync: apt
+    .. group-tab:: apt
 
         You can uninstall one or multiple packages and **delete** their configuration
         files by using the :command:`apt purge` command:
@@ -175,8 +168,7 @@ Delete the configuration files
         
             sudo apt purge hello
 
-    .. tab-item:: apt-get
-        :sync: apt-get
+    .. group-tab:: apt-get
 
         You can uninstall one or multiple packages and **delete** their configuration
         files by using the :command:`apt-get purge` command:
@@ -192,8 +184,7 @@ Delete the configuration files
         
             sudo apt-get purge hello
 
-    .. tab-item:: dpkg
-        :sync: dpkg
+    .. group-tab:: dpkg
 
         You can uninstall one or multiple packages and **delete** their configuration
         files by using the :command:`dpkg --purge` command:
@@ -242,21 +233,15 @@ For example, to add the Launchpad PPA with the name ``hello`` of the Launchpad u
 
 Then, you can install, just as normal, the ``hello`` package contained in the PPA:
 
-.. tab-set::
+.. tabs::
 
-    .. tab-item:: apt
-        :sync: apt
+    .. code-tab:: bash apt
 
-        .. code-block:: bash
+        sudo apt install hello
 
-            sudo apt install hello
-
-    .. tab-item:: apt-get
-        :sync: apt-get
-
-        .. code-block:: bash
-
-            sudo apt-get install hello
+    .. code-tab:: bash apt-get
+        
+        sudo apt-get install hello
 
 See the :manpage:`add-apt-repository(1)` manual page for more details.
 
@@ -303,39 +288,27 @@ The steps to add the PPA are as follows:
 
 3. Update the package information:
    
-   .. tab-set::
+   .. tabs::
 
-      .. tab-item:: apt
-          :sync: apt
+       .. code-tab:: bash apt
   
-          .. code-block:: bash
+           sudo apt update
   
-              sudo apt update
-  
-      .. tab-item:: apt-get
-          :sync: apt-get
-  
-          .. code-block:: bash
-  
-              sudo apt-get update
+       .. code-tab:: bash apt-get
+            
+           sudo apt-get update
 
 4. Install the package from the PPA:
 
-   .. tab-set::
+   .. tabs::
 
-      .. tab-item:: apt
-          :sync: apt
+      .. code-tab:: bash apt
   
-          .. code-block:: bash
+          sudo apt install PACKAGE-NAME
   
-              sudo apt install PACKAGE-NAME
+      .. code-tab:: bash apt-get
   
-      .. tab-item:: apt-get
-          :sync: apt-get
-  
-          .. code-block:: bash
-  
-              sudo apt-get PACKAGE-NAME
+          sudo apt-get PACKAGE-NAME
 
 For example, here is the full script to add the Launchpad PPA named ``hello``
 of the user ``dviererbe`` and install the ``hello`` package from it.

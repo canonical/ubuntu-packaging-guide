@@ -11,7 +11,9 @@ support matrices, and so on.
    :titlesonly:
 
    debian-dir-overview
+   debian-policy
    architectures
+   filesystem-hierarchy-standard
    package-version-format
    launchpad-text-markup
    glossary

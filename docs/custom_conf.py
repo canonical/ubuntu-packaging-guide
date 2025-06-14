@@ -164,7 +164,7 @@ custom_linkcheck_anchors_ignore_for_url = []
 # not need to be added here: myst_parser, sphinx_copybutton, sphinx_design,
 # sphinx_reredirects, sphinxcontrib.jquery, sphinxext.opengraph
 custom_extensions = [
-    #'sphinx_tabs.tabs',
+    'sphinx_tabs.tabs',
     #'canonical.youtube-links',
     #'canonical.related-links',
     #'canonical.custom-rst-roles',
@@ -183,8 +183,8 @@ intersphinx_mapping = {'sru': ('https://canonical-sru-docs.readthedocs-hosted.co
 # sphinx-reredirects, sphinx-tabs, sphinxcontrib-jquery, sphinxext-opengraph
 custom_required_modules = [
     'sphinxcontrib-mermaid',
+    'watchfiles',
     ]
-
 
 # Add files or directories that should be excluded from processing.
 custom_excludes = [
