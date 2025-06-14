@@ -35,7 +35,7 @@ they are listed in :file:`debian/patches/series`, excluding lines starting with 
         
        quilt pop -a && rm -r .pc
 
-    **Note:** You can avoid removing ``.pc`` if it exists in the
+    You can avoid removing ``.pc`` if it exists in the
     ``.gitignore`` file, or if you can otherwise avoid it when running
     ``git add``.
 
