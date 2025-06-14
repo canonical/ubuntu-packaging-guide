@@ -81,6 +81,7 @@ if __name__ == "__main__":
         "sphinx-design",
         "sphinxcontrib-jquery",
         "watchfiles",
+        "sphinx-prompt",
     ]
     
     requirements.extend(custom_required_modules)
