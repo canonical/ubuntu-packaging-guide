@@ -170,6 +170,7 @@ custom_extensions = [
     #'canonical.custom-rst-roles',
     #'canonical.terminal-output'
     'sphinx.ext.intersphinx',
+    'sphinxcontrib.mermaid',
     ]
 
 intersphinx_mapping = {'sru': ('https://canonical-sru-docs.readthedocs-hosted.com/en/latest', None)}
@@ -181,6 +182,7 @@ intersphinx_mapping = {'sru': ('https://canonical-sru-docs.readthedocs-hosted.co
 # pyspelling, sphinx, sphinx-autobuild, sphinx-copybutton, sphinx-design,
 # sphinx-reredirects, sphinx-tabs, sphinxcontrib-jquery, sphinxext-opengraph
 custom_required_modules = [
+    'sphinxcontrib-mermaid',
     'watchfiles',
     ]
 
