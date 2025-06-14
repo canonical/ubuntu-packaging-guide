@@ -12,6 +12,7 @@ support matrices, and so on.
 
    debian-dir-overview
    architectures
+   filesystem-hierarchy-standard
    package-version-format
    launchpad-text-markup
    glossary
