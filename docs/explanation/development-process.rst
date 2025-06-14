@@ -65,7 +65,7 @@ milestones when these restrictions get enabled are called "freezes".
 During freezes, developers must request exceptions to approve changes. See 
 :doc:`how to request a freeze exception </how-to/request-freeze-exception>`.
 The release team usually posts the current Release Schedule as a Discourse
-article under the `"Release" topic <https://discourse.ubuntu.com/c/release/>`_.
+article under the `"Release" topic <https://discourse.ubuntu.com/c/project/release>`_.
 It shows the typical order and length of the various freezes.
 
 .. note::

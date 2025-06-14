@@ -15,5 +15,6 @@ support matrices, and so on.
    architectures
    filesystem-hierarchy-standard
    package-version-format
+   patchfile-headers
    launchpad-text-markup
    glossary

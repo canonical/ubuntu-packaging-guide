@@ -470,6 +470,13 @@ Glossary
     DEP
         Abbreviation for :term:`Debian Enhancement Proposal`
 
+    DEP 3
+        :term:`DEP` 3 is a specification from the :term:`Debian project <Debian>`
+        that defines
+
+        | See: :doc:`DEP 3 -- Patch file headers (reference article) </reference/patchfile-headers>`
+        | See also: :doc:`Patches (explanation article) </explanation/patches>`
+
     DEP 8
         :term:`DEP` 8 is a specification from the :term:`Debian project <Debian>`
         that defines a standardized framework for automated testing of
@@ -852,8 +859,14 @@ Glossary
     Merge Proposal
         *Work in Progress*
 
-    Micro Release Exception
-        See https://wiki.ubuntu.com/StableReleaseUpdates/MicroReleaseExceptions
+    Micro-Release Exception
+        In some cases, when :term:`upstream` fixes :term:`bugs <Bug>`, they do a new
+        "micro-release" instead of just sending :term:`patches <Patch>`. If all
+        of the changes are appropriate for an :term:`SRU`, then it is acceptable
+        (and usually easier) to just upload the complete new upstream micro-release
+        instead of backporting the individual patches.
+
+        See: :external+sru:ref:`New upstream microreleases (Ubuntu SRU Documentation) <reference-criteria-microreleases>`
 
     MIR
         Abbreviation for :term:`Main Inclusion Review`
@@ -878,7 +891,7 @@ Glossary
         Abbreviation for :term:`Merge Proposal`
 
     MRE
-        Abbreviation for :term:`Micro Release Exception`
+        Abbreviation for :term:`Micro-Release Exception`
 
     Multiverse
         A :term:`Component` of every :term:`Ubuntu` :ref:`ArchiveSeries` in the
@@ -981,7 +994,8 @@ Glossary
         up-to-date and reliable. *Patches* are essential for maintaining software
         integrity and security.
 
-        See also: `Patch (Wikipedia) <https://en.wikipedia.org/wiki/Patch_(computing)>`_
+        | See: :doc:`Patches (explanation) </explanation/patches>`
+        | See also: `Patch (Wikipedia) <https://en.wikipedia.org/wiki/Patch_(computing)>`_
 
     PCRE
         Abbreviation for :term:`Perl Compatible Regular Expressions`
@@ -1355,8 +1369,6 @@ Glossary
 
     Ubuntu ESM Team
         *Work in Progress*
-
-        See also: `Ubuntu ESM Team <https://launchpad.net/~ubuntu-esm-team>`_
 
     Ubuntu flavours
         *Ubuntu flavours* are :term:`Distributions <Distribution>` of the default :term:`Ubuntu`
