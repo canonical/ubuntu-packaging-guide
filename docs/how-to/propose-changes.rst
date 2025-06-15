@@ -244,13 +244,10 @@ Run package tests to check that your change doesn't introduce regressions. Ubunt
 - in a local virtual machine (VM)
 - through a :term:`Personal Package Archive` (PPA) on Launchpad
 - in a container
-- in the ``Canonistack`` cloud environment
 
 For local testing, use a VM or container. The `autopkgtest` tool builds test images and runs the tests in an isolated environment. Use this method when you want to debug failures or verify changes before uploading to a PPA. If your testbed needs to reboot or be isolated, use a VM or container as defined in the package’s ``debian/tests/control`` file.
 
 You can also use PPA-based method whenever possible. It produces results closest to what Launchpad runs for archive packages. After uploading your package to a PPA and building it, you can trigger tests using the ``PPA`` tool from ``ppa-dev-tools``. You will need special permissions to launch these tests. Ask for help in the ``#ubuntu-devel`` IRC channel if needed.
-
-Testing in Canonistack offers the most realistic test environment, as it mirrors the infrastructure used in the Ubuntu archive. It requires setup and access to Canonistack.
 
 To learn how to set up and run these test methods, see `Running package tests <https://github.com/canonical/ubuntu-maintainers-handbook/blob/main/PackageTests.md>`_.
 
