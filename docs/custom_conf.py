@@ -183,6 +183,7 @@ intersphinx_mapping = {
 custom_required_modules = [
     "sphinxcontrib-mermaid",
     "watchfiles",
+    "docutils",
 ]
 
 # Add files or directories that should be excluded from processing.
