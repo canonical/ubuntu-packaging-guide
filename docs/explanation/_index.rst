@@ -12,6 +12,7 @@ knowledge and become better at packaging and development.
 
    upstream-and-downstream
    package-model
+   patches
    development-process
    releases
    archive

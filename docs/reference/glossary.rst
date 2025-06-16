@@ -397,7 +397,12 @@ Glossary
         The date at which the details of a :term:`CVE` are to be publicly disclosed.
 
     Copyleft
-        *Work in Progress*
+        Licenses which implement copyleft grant certain freedoms to their works, under
+        the condition that these freedoms are preserved in all derivative works.
+
+        One famous example of copyleft is the :term:`GNU` :term:`General Public License`,
+        which gives its users :term:`Free Software` rights as long as equivalent
+        rights are maintained in modified distributions of said software.
 
     Copyright
         *Work in Progress*
@@ -464,6 +469,13 @@ Glossary
 
     DEP
         Abbreviation for :term:`Debian Enhancement Proposal`
+
+    DEP 3
+        :term:`DEP` 3 is a specification from the :term:`Debian project <Debian>`
+        that defines
+
+        | See: :doc:`DEP 3 -- Patch file headers (reference article) </reference/patchfile-headers>`
+        | See also: :doc:`Patches (explanation article) </explanation/patches>`
 
     DEP 8
         :term:`DEP` 8 is a specification from the :term:`Debian project <Debian>`
@@ -629,12 +641,31 @@ Glossary
         Abbreviation for :term:`Feature Request`
 
     Free and Open Source Software
-        *Work in Progress*
+        The term "Free and Open Source Software" encompasses both :term:`Free Software`
+        and :term:`Open Source Software`. In short, free and open-source software not
+        only makes its :term:`Source Code` publicly available, but also allows users to
+        use, distribute, modify, and distribute modified copies of the software free of
+        charge.
 
         See also: `Free and open-source software (Wikipedia) <https://en.wikipedia.org/wiki/Free_and_open-source_software>`_
 
     Free Software
-        *Work in Progress*
+        A common definition of Free Software is any software which guarantees the Free
+        Software Foundation's four essential freedoms:
+
+        - The freedom to run the program as you wish, for any purpose (freedom 0).
+        - The freedom to study how the program works, and change it so it does your
+          computing as you wish (freedom 1). This requires access to the source code.
+        - The freedom to redistribute copies of the original software program
+          (freedom 2).
+        - The freedom to distribute copies of your modified versions to others (freedom 3).
+          This also requires access to the source code.
+
+        The definition of free software has significant overlap with
+        :term:`Open Source Software`, so the two categories are often collectively
+        referred to as :term:`Free and Open Source Software`.
+
+        See also: `Free software (Wikipedia) <https://en.wikipedia.org/wiki/Free_software>`_, `FSF Four Freedoms <https://static.fsf.org/nosvn/posters/handout-four-freedoms.pdf>`_
 
     FTBFS
         Abbreviation for :term:`Failed to build from Source`
@@ -649,7 +680,13 @@ Glossary
         *Work in Progress*
 
     General Public License
-        *Work in Progress*
+        The :term:`GNU` General Public Licenses (GPL) are a set of :term:`Free Software`
+        licenses. They grant users the ability to use, study, modify, and distribute
+        the software and source code. Additionally, the GPLs are :term:`Copyleft`, so
+        any derivative works must be distributed with the same or requivalent freedoms.
+
+        Prominent projects which use a version of the GPL include :term:`git` and
+        :term:`Linux`.
 
     git
         *Work in Progress*
@@ -822,8 +859,14 @@ Glossary
     Merge Proposal
         *Work in Progress*
 
-    Micro Release Exception
-        See https://wiki.ubuntu.com/StableReleaseUpdates/MicroReleaseExceptions
+    Micro-Release Exception
+        In some cases, when :term:`upstream` fixes :term:`bugs <Bug>`, they do a new
+        "micro-release" instead of just sending :term:`patches <Patch>`. If all
+        of the changes are appropriate for an :term:`SRU`, then it is acceptable
+        (and usually easier) to just upload the complete new upstream micro-release
+        instead of backporting the individual patches.
+
+        See: :external+sru:ref:`New upstream microreleases (Ubuntu SRU Documentation) <reference-criteria-microreleases>`
 
     MIR
         Abbreviation for :term:`Main Inclusion Review`
@@ -848,7 +891,7 @@ Glossary
         Abbreviation for :term:`Merge Proposal`
 
     MRE
-        Abbreviation for :term:`Micro Release Exception`
+        Abbreviation for :term:`Micro-Release Exception`
 
     Multiverse
         A :term:`Component` of every :term:`Ubuntu` :ref:`ArchiveSeries` in the
@@ -902,7 +945,15 @@ Glossary
         *Work in Progress*
 
     Open Source Software
-        *Work in Progress*
+        Open source software is any software with a license that guarantees a certain
+        set of rights to users of the software: the rights to use, study, modify, and
+        distribute both the software and its source code for any purpose.
+
+        The definition of open source software has significant overlap with
+        :term:`Free Software`, so the two categories are often collectively
+        referred to as :term:`Free and Open Source Software`.
+
+        See also: `The Open Source Initiative's standard definition of Open Source <https://opensource.org/osd>`_
 
     Operating System
         An *operating system* (OS) is essential system software that manages computer
@@ -943,7 +994,8 @@ Glossary
         up-to-date and reliable. *Patches* are essential for maintaining software
         integrity and security.
 
-        See also: `Patch (Wikipedia) <https://en.wikipedia.org/wiki/Patch_(computing)>`_
+        | See: :doc:`Patches (explanation) </explanation/patches>`
+        | See also: `Patch (Wikipedia) <https://en.wikipedia.org/wiki/Patch_(computing)>`_
 
     PCRE
         Abbreviation for :term:`Perl Compatible Regular Expressions`
@@ -1148,7 +1200,10 @@ Glossary
         *Work in Progress*
 
     Source Code
-        *Work in Progress*
+        The source code of a program is a set of human-readable instructions written in
+        a programming language. Those instructions are later converted to machine code
+        to be directly executed by a computer. Generally, programmers study and modify
+        software by reading and editing the source code.
 
     Source Package
         A :term:`Debian` *source package* contains the :term:`Source` material used
@@ -1314,8 +1369,6 @@ Glossary
 
     Ubuntu ESM Team
         *Work in Progress*
-
-        See also: `Ubuntu ESM Team <https://launchpad.net/~ubuntu-esm-team>`_
 
     Ubuntu flavours
         *Ubuntu flavours* are :term:`Distributions <Distribution>` of the default :term:`Ubuntu`

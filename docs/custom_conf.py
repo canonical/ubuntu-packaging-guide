@@ -165,9 +165,15 @@ custom_extensions = [
     #'canonical.related-links',
     #'canonical.custom-rst-roles',
     #'canonical.terminal-output'
+<<<<<<< 2.0-preview
     "sphinx.ext.intersphinx",
     "sphinx-prompt",
 ]
+=======
+    'sphinx.ext.intersphinx',
+    'sphinxcontrib.mermaid',
+    ]
+>>>>>>> 2.0-preview
 
 intersphinx_mapping = {
     "sru": ("https://canonical-sru-docs.readthedocs-hosted.com/en/latest", None)
@@ -179,7 +185,10 @@ intersphinx_mapping = {
 # added here: canonical-sphinx-extensions, furo, linkify-it-py, myst-parser,
 # pyspelling, sphinx, sphinx-autobuild, sphinx-copybutton, sphinx-design,
 # sphinx-reredirects, sphinx-tabs, sphinxcontrib-jquery, sphinxext-opengraph
-custom_required_modules = []
+custom_required_modules = [
+    'sphinxcontrib-mermaid',
+    'watchfiles',
+    ]
 
 # Add files or directories that should be excluded from processing.
 custom_excludes = [

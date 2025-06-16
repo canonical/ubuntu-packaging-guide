@@ -131,7 +131,7 @@ When you now run :manpage:`ls(1)`:
 
 .. code:: bash
 
-    ls -1 debhelper_*
+    ls -1 hello_*
 
 you should see the following files:
 
