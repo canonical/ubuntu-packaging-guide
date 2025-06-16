@@ -2,7 +2,6 @@ import sys
 
 sys.path.append('./')
 from custom_conf import *
-from build_requirements import *
 
 # Configuration file for the Sphinx documentation builder.
 # You should not do any modifications to this file. Put your custom
@@ -22,28 +21,7 @@ extensions = [
     'sphinxcontrib.jquery',
 ]
 
-# Only add redirects extension if any redirects are specified.
-if AreRedirectsDefined():
-    extensions.append('sphinx_reredirects')
-
-# Only add myst extensions if any configuration is present.
-if IsMyStParserUsed():
-    extensions.append('myst_parser')
-
-    # Additional MyST syntax
-    myst_enable_extensions = [
-        'substitution',
-        'deflist',
-        'linkify'
-    ]
-    myst_enable_extensions.extend(custom_myst_extensions)
-
-# Only add Open Graph extension if any configuration is present.
-if IsOpenGraphConfigured():
-    extensions.append('sphinxext.opengraph')
-    
 extensions.extend(custom_extensions)
-extensions = DeduplicateExtensions(extensions)
 
 ### Configuration for extensions
 

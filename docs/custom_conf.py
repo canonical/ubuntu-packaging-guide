@@ -1,5 +1,10 @@
 import sys
-sys.path.append('/usr/lib/python3/dist-packages')
+
+from docutils.parsers.rst import roles
+from sphinx.util.docutils import SphinxRole
+from docutils import nodes
+
+sys.path.append("/usr/lib/python3/dist-packages")
 import datetime
 import distro_info
 
@@ -22,14 +27,14 @@ import distro_info
 ############################################################
 
 # Product name
-project = 'Ubuntu'
-author = 'Canonical Group Ltd.'
-version = '2.0-preview'
+project = "Ubuntu"
+author = "Canonical Group Ltd."
+version = "2.0-preview"
 
 # The title you want to display for the documentation in the sidebar.
 # You might want to include a version number here.
 # To not display any title, set this option to an empty string.
-html_title = project + ' documentation'
+html_title = project + " documentation"
 
 # The default value uses the current year as the copyright year.
 #
@@ -45,7 +50,7 @@ html_title = project + ' documentation'
 #   -H 'Accept: application/vnd.github.v3.raw' \
 #   https://api.github.com/repos/canonical/<REPO> | jq '.created_at'
 
-copyright = '%s, %s' % (datetime.date.today().year, author)
+copyright = "%s, %s" % (datetime.date.today().year, author)
 
 ## Open Graph configuration - defines what is displayed as a link preview
 ## when linking to the documentation from another website (see https://ogp.me/)
@@ -53,60 +58,51 @@ copyright = '%s, %s' % (datetime.date.today().year, author)
 # don't know yet)
 # NOTE: If no ogp_* variable is defined (e.g. if you remove this section) the
 # sphinxext.opengraph extension will be disabled.
-ogp_site_url = 'https://canonical-ubuntu-packaging-guide.readthedocs-hosted.com/'
+ogp_site_url = "https://canonical-ubuntu-packaging-guide.readthedocs-hosted.com/"
 # The documentation website name (usually the same as the product name)
-ogp_site_name = 'Ubuntu Packaging Guide'
+ogp_site_name = "Ubuntu Packaging Guide"
 # The URL of an image or logo that is used in the preview
-ogp_image = 'https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg'
+ogp_image = "https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg"
 
 # Update with the local path to the favicon for your product
 # (default is the circle of friends)
-html_favicon = '.sphinx/_static/favicon.png'
+html_favicon = ".sphinx/_static/favicon.png"
 
 # (Some settings must be part of the html_context dictionary, while others
 #  are on root level. Don't move the settings.)
 html_context = {
-
     # Change to the link to the website of your product (without "https://")
     # For example: "ubuntu.com/lxd" or "microcloud.is"
     # If there is no product website, edit the header template to remove the
     # link (see the readme for instructions).
-    'product_page': 'ubuntu.com',
-
+    "product_page": "ubuntu.com",
     # Add your product tag (the orange part of your logo, will be used in the
     # header) to ".sphinx/_static" and change the path here (start with "_static")
     # (default is the circle of friends)
-    'product_tag': '_static/tag.png',
-
+    "product_tag": "_static/tag.png",
     # Change to the discourse instance you want to be able to link to
     # using the :discourse: metadata at the top of a file
     # (use an empty value if you don't want to link)
-    'discourse': 'https://discourse.ubuntu.com',
-
+    "discourse": "https://discourse.ubuntu.com",
     # Change to the Mattermost channel you want to link to
     # (use an empty value if you don't want to link)
-    'mattermost': '',
-
+    "mattermost": "",
     # Change to the GitHub URL for your project
-    'github_url': 'https://github.com/canonical/ubuntu-packaging-guide',
-
+    "github_url": "https://github.com/canonical/ubuntu-packaging-guide",
     # Change to the branch for this version of the documentation
-    'github_version': version,
-
+    "github_version": version,
     # Change to the folder that contains the documentation
     # (usually "/" or "/docs/")
-    'github_folder': '/docs/',
-
+    "github_folder": "/docs/",
     # Change to an empty value if your GitHub repo doesn't have issues enabled.
     # This will disable the feedback button and the issue link in the footer.
-    'github_issues': 'enabled',
-
+    "github_issues": "enabled",
     # Controls the existence of Previous / Next buttons at the bottom of pages
     # Valid options: none, prev, next, both
     # You can override the default setting on a page-by-page basis by specifying
     # it as file-wide metadata at the top of the file, see
     # https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html
-    'sequential_nav': "none"
+    "sequential_nav": "none",
 }
 
 # If your project is on documentation.ubuntu.com, specify the project
@@ -131,7 +127,7 @@ redirects = {}
 
 # Links to ignore when checking links
 linkcheck_ignore = [
-    'http://127.0.0.1:8000',
+    "http://127.0.0.1:8000",
     r"https://bugs\.launchpad\.net/ubuntu/\+bug/2",
     r"https?://localhost.+",
     r"ftp:.+",
@@ -142,7 +138,7 @@ linkcheck_ignore = [
     r"jabber:noreply@launchpad\.net",
     r"http://www.example.com/.+",
     r"https://merges.ubuntu.com/.*",
-    ]
+]
 
 # Pages on which to ignore anchors
 # (This list will be appended to linkcheck_anchors_ignore_for_url)
@@ -156,24 +152,27 @@ custom_linkcheck_anchors_ignore_for_url = []
 ## Use them to extend the default functionality.
 
 # NOTE: Remove this variable to disable the MyST parser extensions.
-#custom_myst_extensions = []
+# custom_myst_extensions = []
 
-# Add custom Sphinx extensions as needed. 
+# Add custom Sphinx extensions as needed.
 # This array contains recommended extensions that should be used.
-# NOTE: The following extensions are handled automatically and do 
+# NOTE: The following extensions are handled automatically and do
 # not need to be added here: myst_parser, sphinx_copybutton, sphinx_design,
 # sphinx_reredirects, sphinxcontrib.jquery, sphinxext.opengraph
 custom_extensions = [
-    'sphinx_tabs.tabs',
+    "sphinx_tabs.tabs",
     #'canonical.youtube-links',
     #'canonical.related-links',
     #'canonical.custom-rst-roles',
     #'canonical.terminal-output'
-    'sphinx.ext.intersphinx',
-    'sphinxcontrib.mermaid',
-    ]
+    "sphinx.ext.intersphinx",
+    "sphinx-prompt",
+    "sphinxcontrib.mermaid",
+]
 
-intersphinx_mapping = {'sru': ('https://canonical-sru-docs.readthedocs-hosted.com/en/latest', None)}
+intersphinx_mapping = {
+    "sru": ("https://canonical-sru-docs.readthedocs-hosted.com/en/latest", None)
+}
 
 # Add custom required Python modules that must be added to the
 # .sphinx/requirements.txt file.
@@ -182,14 +181,15 @@ intersphinx_mapping = {'sru': ('https://canonical-sru-docs.readthedocs-hosted.co
 # pyspelling, sphinx, sphinx-autobuild, sphinx-copybutton, sphinx-design,
 # sphinx-reredirects, sphinx-tabs, sphinxcontrib-jquery, sphinxext-opengraph
 custom_required_modules = [
-    'sphinxcontrib-mermaid',
-    'watchfiles',
-    ]
+    "sphinxcontrib-mermaid",
+    "watchfiles",
+    "docutils",
+]
 
 # Add files or directories that should be excluded from processing.
 custom_excludes = [
-    'doc-cheat-sheet*',
-    ]
+    "doc-cheat-sheet*",
+]
 
 # Add CSS files (located in .sphinx/_static/)
 custom_html_css_files = []
@@ -199,9 +199,11 @@ custom_html_js_files = []
 
 ## The following settings override the default configuration.
 
-manpages_url = ("https://manpages.ubuntu.com/manpages/"
-                f"{distro_info.UbuntuDistroInfo().stable()}/en/"
-                "man{section}/{page}.{section}.html")
+manpages_url = (
+    "https://manpages.ubuntu.com/manpages/"
+    f"{distro_info.UbuntuDistroInfo().stable()}/en/"
+    "man{section}/{page}.{section}.html"
+)
 
 # Specify a reST string that is included at the end of each file.
 # If commented out, use the default (which pulls the reuse/links.txt
@@ -223,7 +225,7 @@ custom_tags = []
 ## Add any configuration that is not covered by the common conf.py file.
 
 # Define a :center: role that can be used to center the content of table cells.
-rst_prolog = '''
+rst_prolog = """
 .. role:: center
    :class: align-center
 
@@ -240,22 +242,45 @@ rst_prolog = '''
    If you are an experienced packager and would like to contribute, we would
    love for you to be involved! See :doc:`our contribution page </contribute>`
    for details of how to join in.
-'''
+"""
 
 # The root toctree document.
-root_doc = 'index'
+root_doc = "index"
 
 # Sphinx-copybutton config options:
 # 1) prompt to be stripped from copied code.
 # 2) Set to copy all lines (not just prompt lines) to ensure multiline snippets
 # can be copied even if they don't contain an EOF line.
-copybutton_prompt_text = '$ '
+copybutton_prompt_text = "$ "
 copybutton_only_copy_prompt_lines = False
+
+# Redefine the Sphinx 'command' role to behave/render like 'literal'
+
+
+class CommandRole(SphinxRole):
+    def run(self):
+        text = self.text
+        node = nodes.literal(text, text)
+        return [node], []
+
+
+def setup(app):
+    roles.register_local_role("command", CommandRole())
+
+
+# Define a custom role for package-name formatting
+def pkg_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    node = nodes.literal(rawtext, text)
+    return [node], []
+
+
+roles.register_local_role("pkg", pkg_role)
+
 
 # -- Options for EPUB output -------------------------------------------------
 
-epub_basename = 'ubuntu-packaging-guide'
-epub_show_urls = 'no'
+epub_basename = "ubuntu-packaging-guide"
+epub_show_urls = "no"
 
 # -- Options for PDF output --------------------------------------------------
 
@@ -271,24 +296,24 @@ latex_additional_files = [
     "./.sphinx/images/normal-page-footer.pdf",
 ]
 
-latex_engine = 'xelatex'
+latex_engine = "xelatex"
 latex_show_pagerefs = True
-latex_show_urls = 'footnote'
+latex_show_urls = "footnote"
 latex_documents = [
     (
         root_doc,
-        'ubuntu-packaging-guide.tex',
+        "ubuntu-packaging-guide.tex",
         html_title,
         author,
-        'manual',
+        "manual",
         True,
     ),
 ]
 latex_elements = {
-    'papersize': 'a4paper',
-    'pointsize': '11pt',
-    'fncychap': '',
-    'preamble': r'''
+    "papersize": "a4paper",
+    "pointsize": "11pt",
+    "fncychap": "",
+    "preamble": r"""
 %\usepackage{charter}
 %\usepackage[defaultsans]{lato}
 %\usepackage{inconsolata}
@@ -355,10 +380,10 @@ latex_elements = {
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 \setcounter{tocdepth}{1}
 \renewcommand\pagenumbering[1]{}
-''',
-    'sphinxsetup': 'verbatimwithframe=false, pre_border-radius=0pt, verbatimvisiblespace=\\phantom{}, verbatimcontinued=\\phantom{}',
-    'extraclassoptions': 'openany,oneside',
-    'maketitle': r'''
+""",
+    "sphinxsetup": "verbatimwithframe=false, pre_border-radius=0pt, verbatimvisiblespace=\\phantom{}, verbatimcontinued=\\phantom{}",
+    "extraclassoptions": "openany,oneside",
+    "maketitle": r"""
 \begin{titlepage}
 \begin{flushleft}
     \begin{tikzpicture}[remember picture,overlay]
@@ -402,5 +427,5 @@ latex_elements = {
       };
       \end{tikzpicture}
     }
-''',
+""",
 }
