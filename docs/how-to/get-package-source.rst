@@ -1,3 +1,5 @@
+.. _get-package-source:
+
 Get the source of a package
 ===========================
 
