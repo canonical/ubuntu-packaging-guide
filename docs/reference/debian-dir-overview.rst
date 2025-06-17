@@ -188,6 +188,8 @@ For further information, see the
 `control file section (Chapter 5) <policy-control_>`_ of the Debian Policy
 Manual.
 
+.. _the-copyright-file:
+
 The :file:`copyright` file
 --------------------------
 
