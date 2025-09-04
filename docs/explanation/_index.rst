@@ -23,3 +23,4 @@ knowledge and become better at packaging and development.
    transitions
    backports
    main-inclusion-review
+   maintscripts
