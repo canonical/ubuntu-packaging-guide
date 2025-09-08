@@ -83,8 +83,8 @@ Bug reports
 Another important tool regarding communication is bug reports. Whenever a
 defect is found in a package or piece of infrastructure, a bug report is
 filed in Launchpad. All information is collected in that report and its
-importance, status and assignee updated when necessary. This makes it an
-effective tool to stay on top of bugs in a package or project and organise
+importance, status, and assignee updated when necessary. This makes it an
+effective tool to stay on top of bugs in a package or project and organize
 the workload.
 
 Upstream
@@ -95,7 +95,7 @@ developers themselves. Most of it is written by developers of other Open
 Source projects and then integrated into Ubuntu. These projects are called
 "Upstreams", because their source code flows into Ubuntu, where we "just"
 integrate it. The relationship to Upstreams is critically important to Ubuntu.
-It is not just code that Ubuntu gets from Upstreams, but it is also that
+It is not just that Ubuntu gets code from Upstreams, but it is also that
 Upstreams get users, bug reports and patches from Ubuntu (and other
 distributions).
 
@@ -118,7 +118,7 @@ Distributed development
 
 Open Source Development happens in a distributed world with different goals
 and different areas of focus. For example there might be the case that a
-particular Upstream is interested in working on a new big feature while
+particular Upstream is interested in working on a big new feature while
 Ubuntu, because of the tight release schedule, is interested in shipping a
 solid version with just an additional bug fix. That is why we make use of
 "Distributed Development", where code is being worked on in various branches
